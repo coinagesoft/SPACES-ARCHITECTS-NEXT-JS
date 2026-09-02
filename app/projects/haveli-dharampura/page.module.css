@@ -1,0 +1,285 @@
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.1) 45%,
+    transparent 100%
+  );
+}
+
+.heroText {
+  position: absolute;
+  left: 24px;
+  bottom: 32px;
+  color: #fff;
+}
+
+.heroText h1 {
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.heroText p {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.9;
+  margin: 4px 0 0;
+}
+
+@media (min-width: 768px) {
+  .heroText {
+    left: 64px;
+  }
+}
+
+/* ---------- Details + description ---------- */
+.infoSection {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  padding: 56px 0;
+}
+
+@media (min-width: 768px) {
+  .infoSection {
+    grid-template-columns: 1fr 3fr;
+    gap: 56px;
+    padding: 80px 0;
+  }
+}
+
+.infoSidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  font-size: 12px;
+}
+
+.infoSidebar h3 {
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+}
+
+.infoSidebar dl {
+  margin: 0;
+  color: #525252;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.infoSidebar dl div {
+  margin-bottom: 4px;
+}
+
+.infoSidebar dt {
+  display: inline;
+  font-weight: 500;
+  color: #262626;
+}
+
+.infoSidebar dd {
+  display: inline;
+  margin: 0;
+}
+
+.infoSidebar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #525252;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.infoSidebar ul li {
+  margin-bottom: 8px;
+}
+
+.infoBody p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #404040;
+  text-align: justify;
+  margin: 0 0 24px;
+}
+
+.highlight {
+  color: #c1652f;
+}
+
+.pressLogos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 32px;
+  margin-top: 32px;
+  opacity: 0.8;
+}
+
+.pressLogos img {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+}
+
+/* ---------- Gallery ---------- */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 56px;
+}
+
+.galleryFull img {
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.galleryPair {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.galleryPair img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .gallery {
+    gap: 24px;
+    padding-bottom: 80px;
+  }
+  .galleryPair {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+}
+
+/* ---------- Elevation drawing ---------- */
+.elevation {
+  padding-bottom: 56px;
+}
+
+.elevation img {
+  width: 100%;
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .elevation {
+    padding-bottom: 80px;
+  }
+}
+
+/* ---------- Feature image + press ---------- */
+.pressSection {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+  padding-bottom: 56px;
+}
+
+.pressImage img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.pressText {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.pressText img {
+  height: 32px;
+  margin-bottom: 12px;
+  object-fit: contain;
+}
+
+.pressText p {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+  color: #404040;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .pressSection {
+    grid-template-columns: 2fr 1fr;
+    gap: 48px;
+    padding-bottom: 80px;
+  }
+}
+
+/* ---------- Share ---------- */
+.share {
+  text-align: center;
+  padding-bottom: 80px;
+}
+
+.share p {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 12px;
+  color: #737373;
+  margin: 0 0 16px;
+}
+
+.shareIcons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.shareIcons a {
+  color: #a3a3a3;
+  text-decoration: none;
+  font-size: 13px;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #d4d4d4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shareIcons a:hover {
+  color: #404040;
+  border-color: #404040;
+}
