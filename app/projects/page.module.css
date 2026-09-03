@@ -1,0 +1,120 @@
+.filterBar {
+    border-bottom: 1px solid #ececec;
+    margin-top: 92px;
+    /* clears the fixed SiteChrome top bar — adjust to match its actual height */
+}
+
+.filterNav {
+    display: flex;
+    align-items: center;
+    gap: 44px;
+    width: calc(100% - 120px);
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 0 22px;
+    overflow-x: auto;
+}
+
+.filterTab {
+    flex: 0 0 auto;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 4px 0;
+    cursor: pointer;
+    color: #1c1c1c;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.filterTab:hover {
+    color: #d97a1f;
+}
+
+.filterTabActive {
+    color: #d97a1f;
+}
+
+.gallery {
+    column-count: 2;
+    column-gap: 24px;
+    width: calc(100% - 120px);
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 24px 0 80px;
+}
+
+.tile {
+    display: block;
+    position: relative;
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    margin-bottom: 24px;
+    overflow: hidden;
+    background: #eee;
+}
+
+.tile img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform .5s ease;
+}
+
+.tile:hover img {
+    transform: scale(1.045);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, .55) 0%, rgba(0, 0, 0, 0) 55%);
+    opacity: 0;
+    transition: opacity .35s ease;
+}
+
+.tile:hover .overlay {
+    opacity: 1;
+}
+
+.overlayName {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .14em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+    .filterBar {
+        margin-top: 76px;
+    }
+    .filterNav {
+        width: calc(100% - 48px);
+        gap: 28px;
+    }
+    .gallery {
+        width: calc(100% - 48px);
+        column-gap: 16px;
+        padding: 16px 0 56px;
+    }
+    .tile {
+        margin-bottom: 16px;
+    }
+    .overlayName {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        column-count: 1;
+    }
+}
