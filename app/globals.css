@@ -29,12 +29,27 @@ body {
         @apply text-xs tracking-widest2 uppercase text-ink/80;
     }
     .site-container {
-        @apply mx-auto w-full max-w-site px-6 md:px-10;
+        @apply mx-auto w-full max-w-site px-6;
     }
     .btn-link {
-        @apply text-accent hover:underline underline-offset-4 transition;
+        @apply text-accent underline-offset-4 transition;
+    }
+    .btn-link:hover {
+        @apply underline;
     }
     .nav-link {
-        @apply text-3xl md:text-5xl tracking-wide text-ink hover:text-accent transition-colors;
+        @apply text-xl font-light leading-none tracking-[0.11em] uppercase text-ink transition-colors;
+    }
+    .nav-link:hover {
+        @apply text-accent;
+    }
+}
+
+@media (min-width: 768px) {
+    .site-container {
+        @apply px-10;
+    }
+    .nav-link {
+        @apply text-[1.75rem];
     }
 }
