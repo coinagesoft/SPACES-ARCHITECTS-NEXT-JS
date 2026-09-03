@@ -39,6 +39,11 @@ export const assets = {
     // ---- About / Studio page ----
     about: {
         heroImage: unsplash("photo-1497366216548-37526070297c", 1920, 900),
+        heroImages: [
+            unsplash("photo-1497366216548-37526070297c", 1200, 700),
+            unsplash("photo-1497366811353-6870744d04b2", 900, 700),
+            unsplash("photo-1600607687920-4e2a09cf159d", 1000, 700),
+        ],
         founderPhoto: unsplash("photo-1560250097-0b93528c311a", 900, 1100),
     },
 
