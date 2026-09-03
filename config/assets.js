@@ -18,6 +18,8 @@
  * ============================================================
  */
 
+import haveliDharampuraImage from "./assets/haveli dharmapura.webp";
+
 const unsplash = (id, w = 1600, h = 1000) =>
     `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&h=${h}&q=80`;
 
@@ -107,7 +109,7 @@ export const assets = {
     // ---- Projects / Blog grid page ----
     projects: [{
             id: "haveli-dharampura",
-            image: unsplash("photo-1517457373958-b7bdd4587205", 900, 900),
+            image: haveliDharampuraImage,
             name: "Haveli Dharampura",
             excerpt: "Delhi — Heritage Restoration & Hospitality",
         },
