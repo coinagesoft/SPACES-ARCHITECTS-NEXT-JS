@@ -37,7 +37,7 @@ export const site = {
             { label: "Expressions", href: "/projects" },
             { label: "Publication", href: "/blog" },
             { label: "Awards", href: "/awards" },
-            { label: "Contact", href: "/about#contact" },
+            { label: "Contact", href: "/contact" },
         ],
     ],
 
@@ -99,4 +99,32 @@ export const aboutCopy = {
         { name: "Studio Team", role: "Design & Visualisation" },
         { name: "Studio Team", role: "Project Management" },
     ],
+};
+
+export const contactCopy = {
+    heading: "Contact",
+    whatsapp: "+91 93110 13122",
+    emails: [
+        { label: "Career", value: "career@spacesarchitects-ka.com" },
+        { label: "Media", value: "admin@spacesarchitects-ka.com" },
+        { label: "Enquiry", value: "projects@spacesarchitects-ka.com" },
+    ],
+    purposeOptions: [
+        "Project Enquiry",
+        "Media & Press",
+        "Careers",
+        "General Enquiry",
+    ],
+    map: {
+        embedSrc:
+            "https://www.google.com/maps?q=A-21%2FA%2C+South+Extension+II%2C+New+Delhi%2C+Delhi+110049&output=embed",
+        directionsHref:
+            "https://www.google.com/maps/dir/?api=1&destination=A-21%2FA%2C+South+Extension+II%2C+New+Delhi%2C+Delhi+110049",
+        heading: "How to Get Here?",
+        lines: [
+            "Closest station is South Ex Metro.",
+            "The studio is just off South Ex Market Part 2.",
+        ],
+        directionsLabel: "Get Directions Here",
+    },
 };
