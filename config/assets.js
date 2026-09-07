@@ -19,6 +19,13 @@
  */
 
 import haveliDharampuraImage from "./assets/haveli dharmapura.webp";
+import haveliGallery1 from "./assets/Final-1-6.webp";
+import haveliGallery2 from "./assets/Final-2-6.webp";
+import haveliGallery3 from "./assets/Final-3-6.webp";
+import haveliGallery4 from "./assets/Final-4-6.webp";
+import haveliGallery6 from "./assets/Final-6-3.webp";
+import haveliGallery7 from "./assets/Final-7-2.webp";
+import haveliGallery8 from "./assets/Final-8-1.webp";
 
 const unsplash = (id, w = 1600, h = 1000) =>
     `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&h=${h}&q=80`;
@@ -191,6 +198,17 @@ export const assets = {
             excerpt: "How the studio selects and sequences materials to create warmth, texture and a sense of permanence.",
         },
     ],
+    // ---- Haveli Dharampura project page: hero + full photo gallery ----
+    haveliDharampura: {
+        hero: haveliDharampuraImage,
+        gallery: [
+            { type: "pair", images: [haveliGallery1, haveliGallery2] },
+            { type: "full", image: haveliGallery3 },
+            { type: "pair", images: [haveliGallery4, haveliGallery6] },
+            { type: "full", image: haveliGallery7 },
+            { type: "full", image: haveliGallery8 },
+        ],
+    },
 };
 
 export default assets;

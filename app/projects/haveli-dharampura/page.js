@@ -1,5 +1,7 @@
+import Image from "next/image";
 import SiteChrome from "@/components/SiteChrome";
 import Footer from "@/components/Footer";
+import { assets } from "@/config/assets";
 import styles from "./page.module.css";
 
 export const metadata = {
@@ -12,53 +14,33 @@ const details = {
   Location: "Old Delhi",
   Client: "Mr. Vijay Goel",
   Status: "Completed",
-  Team: "Ar. Rafiq Aggarwal, Pawan Sharma",
+  Team: "Ar. Kapil Aggarwal, Pawan Sharma",
 };
 
 const achievements = [
-  "UNESCO Asia Pacific Award for Cultural Heritage Conservation 2017",
-  "NDTV-Grohe Design & Architecture Awards 2017 — Heritage Architecture Jury Commendations",
+  "UNESCO Asia Pacific for Cultural Heritage Conservation 2017",
+  "NDTV-Grohe Design & Architecture Awards 2015 – Heritage Architecture (Jury Commendation)",
 ];
 
-const pressLogos = [
-  "/images/projects/haveli-dharampura/logo-unesco.png",
-  "/images/projects/haveli-dharampura/logo-architizer.png",
-  "/images/projects/haveli-dharampura/logo-heritage.png",
-  "/images/projects/haveli-dharampura/logo-archdaily.png",
-  "/images/projects/haveli-dharampura/logo-ndtv.png",
-];
+// Text-based press marks — no external logo files required.
+const pressMarks = ["UNESCO", "Architizer", "IIID", "ArchDaily", "NDTV"];
 
-// Gallery images in display order. "full" = full-width, "pair" = two side by side.
-const gallery = [
-  { type: "pair", images: ["gallery-01.jpg", "gallery-02.jpg"] },
-  { type: "full", image: "gallery-03-bw.jpg" },
-  { type: "pair", images: ["gallery-04.jpg", "gallery-05-section.jpg"] },
-  { type: "full", image: "gallery-06-floor-pattern.jpg" },
-  { type: "pair", images: ["gallery-07-stair.jpg", "gallery-08-bw.jpg"] },
-  { type: "pair", images: ["gallery-09-ceiling.jpg", "gallery-10-dining.jpg"] },
-  { type: "full", image: "gallery-11-dining-wide.jpg" },
-  { type: "pair", images: ["gallery-12-exterior-dusk.jpg", "gallery-13-diagram.jpg"] },
-  { type: "pair", images: ["gallery-14-entrance.jpg", "gallery-15-bw-courtyard.jpg"] },
-  { type: "pair", images: ["gallery-16-hall.jpg", "gallery-17-balcony.jpg"] },
-  { type: "full", image: "gallery-18-rooftop-pergola.jpg" },
-  { type: "pair", images: ["gallery-19-bedroom.jpg", "gallery-20-arch-corridor.jpg"] },
-].map((b) =>
-  b.type === "full"
-    ? { ...b, image: `/images/projects/haveli-dharampura/${b.image}` }
-    : { ...b, images: b.images.map((i) => `/images/projects/haveli-dharampura/${i}`) }
-);
+const gallery = assets.haveliDharampura.gallery;
 
 export default function HaveliDharampuraPage() {
   return (
     <>
       <main>
-        <SiteChrome />
+        <SiteChrome dark />
 
         {/* Hero */}
         <section className={styles.hero}>
-          <img
-            src="/images/projects/haveli-dharampura/hero.jpg"
+          <Image
+            src={assets.haveliDharampura.hero}
             alt="Haveli Dharampura"
+            fill
+            priority
+            sizes="100vw"
             className={styles.heroImage}
           />
           <div className={styles.heroOverlay} />
@@ -93,43 +75,47 @@ export default function HaveliDharampuraPage() {
 
           <div className={styles.infoBody}>
             <p>
-              The project in Dharampura is the first of its kind in the walled
-              city of Delhi, which aims at the{" "}
+              THE PROJECT IN DHARAMPURA IS THE FIRST OF ITS KIND IN THE WALLED
+              CITY OF DELHI WHICH AIMS IN THE{" "}
               <span className={styles.highlight}>
-                restoration &amp; rehabilitation of a 100-year-old haveli
+                RESTORATION &amp; REHABILITATION OF A 135-YEAR-OLD HAVELI
+                (BUILT-IN 1880)
               </span>{" "}
-              into a hospitality project with rooms, a spa, a museum, 2 shops
-              &amp; a restaurant. We started this project looking at a broken
-              structure that was declared an inhabitable space for living by
-              the government of Delhi, without any plans or drawings. We had
-              to develop a program even before starting the design, which
-              involved the building survey, to prepare measured drawings &amp;
-              structural repair &amp; strengthening of the building.
-            </p>
-            <p>
-              The redesign process involved a very elementary{" "}
+              INTO A HOSPITALITY PROJECT WITH 14 ROOMS, A SPA, A MUSEUM, 2
+              SHOPS &amp; A RESTAURANT. WE STARTED THIS PROJECT LOOKING AT A
+              BROKEN STRUCTURE THAT WAS DECLARED AN INHABITABLE SPACE FOR
+              LIVING BY THE GOVERNMENT OF DELHI. WITHOUT ANY PLANS OR
+              DRAWINGS, WE HAD TO DEVELOP A PROGRAM EVEN BEFORE STARTING THE
+              DESIGN WHICH INVOLVED THE BUILDING SURVEY, TO PREPARE MEASURED
+              DRAWINGS &amp; STRUCTURAL REPAIR &amp; STRENGTHENING OF THE
+              BUILDING.{" "}
               <span className={styles.highlight}>
-                two years of research on the whole urban fabric of Chandni
-                Chowk
-              </span>
-              . We were bound to amalgamate traditional architecture with
-              contemporary modern architecture to create an inviting space for
-              both Indians &amp; foreigners. We visited almost all the old
-              cities of India to understand the relevance of such a project
-              &amp; to collect a large number of skilled labor who understand
-              traditional architectural elements.{" "}
+                THE DESIGNING PROCESS INVOLVED A VERY ELABORATE 2 YEARS OF
+                RESEARCH ON THE WHOLE URBAN FABRIC OF CHANDNI CHOWK.
+              </span>{" "}
+              THE RESULTING SPACE HAD ELEMENTS FROM HINDU, MUGHAL, JAIN &amp;
+              RAJASTHAN&apos;S ARCHITECTURE. WE WERE BOUND TO AMALGAMATE
+              TRADITIONAL ARCHITECTURE WITH CONTEMPORARY MODERN ARCHITECTURE
+              TO CREATE AN INVITING SPACE FOR BOTH INDIANS &amp; FOREIGNERS.
+              WE VISITED ALMOST ALL THE OLD CITIES OF INDIA TO UNDERSTAND THE
+              RELEVANCE OF SUCH A PROJECT &amp; TO COLLECT A LARGE NUMBER OF
+              SKILLED LABOR WHO UNDERSTAND TRADITIONAL ARCHITECTURAL
+              ELEMENTS. WE REPLICATED ALMOST ALL THE ELEMENTS WHICH WERE USED
+              EARLIER, SOME OF THEM IN A MODERN WAY.{" "}
               <span className={styles.highlight}>
-                Every room or space has its own theme
-              </span>
-              , which reflects various flavors of architecture &amp; lies
-              rooted in Chandni Chowk. All furniture, lights &amp; artifacts
-              were designed especially for each and every space according to
-              its use.
+                EVERY ROOM OR SPACE HAS ITS OWN THEME WHICH REFLECTS VARIOUS
+                FLAVORS OF ARCHITECTURE &amp; LIVELIHOOD IN CHANDNI CHOWK.
+              </span>{" "}
+              ALL FURNITURE, LIGHTS &amp; ARTIFACTS WERE DESIGNED ESPECIALLY
+              FOR EACH AND EVERY SPACE ACCORDING TO ITS USE &amp; THE THEME
+              WAS TAKEN.
             </p>
 
             <div className={styles.pressLogos}>
-              {pressLogos.map((src) => (
-                <img key={src} src={src} alt="" />
+              {pressMarks.map((mark) => (
+                <span key={mark} className={styles.pressMark}>
+                  {mark}
+                </span>
               ))}
             </div>
           </div>
@@ -140,50 +126,30 @@ export default function HaveliDharampuraPage() {
           {gallery.map((block, i) =>
             block.type === "full" ? (
               <div key={i} className={styles.galleryFull}>
-                <img src={block.image} alt="" />
+                <Image
+                  src={block.image}
+                  alt="Haveli Dharampura"
+                  fill
+                  sizes="100vw"
+                  className={styles.galleryImg}
+                />
               </div>
             ) : (
               <div key={i} className={styles.galleryPair}>
                 {block.images.map((src, j) => (
-                  <img key={j} src={src} alt="" />
+                  <div key={j} className={styles.galleryPairItem}>
+                    <Image
+                      src={src}
+                      alt="Haveli Dharampura"
+                      fill
+                      sizes="(min-width: 768px) 48vw, 92vw"
+                      className={styles.galleryImg}
+                    />
+                  </div>
                 ))}
               </div>
             )
           )}
-        </section>
-
-        {/* Elevation drawing */}
-        <section className={`site-container ${styles.elevation}`}>
-          <img
-            src="/images/projects/haveli-dharampura/elevation-sketch.jpg"
-            alt="Elevation drawing"
-          />
-        </section>
-
-        {/* Feature image + press */}
-        <section className={`site-container ${styles.pressSection}`}>
-          <div className={styles.pressImage}>
-            <img
-              src="/images/projects/haveli-dharampura/feature-twilight.jpg"
-              alt="Haveli Dharampura courtyard"
-            />
-          </div>
-          <div className={styles.pressText}>
-            <div>
-              <img src="/images/projects/haveli-dharampura/logo-unesco.png" alt="UNESCO" />
-              <p>
-                UNESCO Bangkok announces the 2017 Asia-Pacific Awards for
-                Cultural Heritage Conservation.
-              </p>
-            </div>
-            <div>
-              <img src="/images/projects/haveli-dharampura/logo-ndtv.png" alt="NDTV" />
-              <p>
-                UNESCO Bangkok announces the 2017 Asia-Pacific Awards for
-                Cultural Heritage Conservation.
-              </p>
-            </div>
-          </div>
         </section>
 
         {/* Share */}
