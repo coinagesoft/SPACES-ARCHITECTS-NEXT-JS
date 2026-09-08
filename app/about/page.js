@@ -16,14 +16,14 @@ export default function AboutPage() {
           <Image src={assets.about.heroImage} alt="Studio interior" fill priority sizes="100vw" className="object-cover" />
         </div>
         <div className={styles.heroShade} />
-        <div className={styles.heroCaption}><h1>{aboutCopy.heroTitle}</h1></div>
+        <div className={`site-container ${styles.heroCaption}`}><h1>{aboutCopy.heroTitle}</h1></div>
       </section>
-      <section className={styles.intro}>
+      <section className={`site-container ${styles.intro}`}>
         <p className={styles.kicker}>{aboutCopy.kicker}</p>
         {aboutCopy.intro.map((paragraph) => <p key={paragraph} className={styles.bodyCopy}>{paragraph}</p>)}
         <p className={styles.quote}>{aboutCopy.quote}</p>
       </section>
-      <section className={styles.founder}>
+      <section className={`site-container ${styles.founder}`}>
         <div className={styles.founderImage}>
           <Image src={assets.about.founderPhoto} alt={aboutCopy.founder.name} fill sizes="(min-width: 768px) 30vw, 90vw" className="object-cover" />
         </div>
@@ -44,7 +44,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-      <section id="contact" className={styles.team}>
+      <section id="contact" className={`site-container ${styles.team}`}>
         <h2>Our Team</h2>
         <div className={styles.teamGrid}>
           {aboutCopy.team.map((member, index) => (
