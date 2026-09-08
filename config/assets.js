@@ -65,6 +65,16 @@ import featuredIn15 from "./assets/Home Page/15.png";
 import featuredIn16 from "./assets/Home Page/16.png";
 import featuredIn17 from "./assets/Home Page/17.png";
 import featuredIn18 from "./assets/Home Page/18.png";
+import awardMark1 from "./assets/awards/1.png";
+import awardMark2 from "./assets/awards/2.png";
+import awardMark3 from "./assets/awards/3.png";
+import awardMark4 from "./assets/awards/4.png";
+import awardMark5 from "./assets/awards/5.png";
+import awardMark6 from "./assets/awards/6.png";
+import awardMark7 from "./assets/awards/7.png";
+import awardMark8 from "./assets/awards/8.png";
+import awardMark9 from "./assets/awards/9.png";
+import awardMark10 from "./assets/awards/10.png";
 
 const unsplash = (id, w = 1600, h = 1000) =>
     `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&h=${h}&q=80`;
@@ -155,6 +165,20 @@ export const assets = {
         { name: "The Indian Express", image: featuredIn16 },
         { name: "Habitus Living", image: featuredIn17 },
         { name: "ABP Live", image: featuredIn18 },
+    ],
+
+    // ---- Awards page logos (kept in the artwork's supplied order) ----
+    awardMarks: [
+        { name: "ArchDaily", image: awardMark1 },
+        { name: "RTF", image: awardMark2 },
+        { name: "UNESCO", image: awardMark3 },
+        { name: "NDTV", image: awardMark4 },
+        { name: "World Architecture Community", image: awardMark5 },
+        { name: "Loop Design Awards", image: awardMark6 },
+        { name: "IIA", image: awardMark7 },
+        { name: "World Festival of Interiors", image: awardMark8 },
+        { name: "IIID", image: awardMark9 },
+        { name: "Architectural Digest", image: awardMark10 },
     ],
 
     // ---- Projects gallery page ----

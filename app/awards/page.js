@@ -54,8 +54,6 @@ const awards = [
   ],
 ];
 
-const marks = ["⌑", "rtf", "UNESCO", "NDTV", "WAC", "LOOP", "IIA", "Inside", "IIID", "AD"];
-
 function AwardColumn({ entries }) {
   return (
     <div className={styles.awardColumn}>
@@ -85,9 +83,15 @@ export default function AwardsPage() {
 
       <section className={styles.awardsContent}>
         <div className={styles.marks}>
-          {marks.map((mark, index) => (
-            <div key={mark} className={`${styles.mark} ${index === 1 ? styles.markRtf : ""} ${index === 2 ? styles.markUnesco : ""} ${index === 0 ? styles.markIcon : ""}`}>
-              {mark}
+          {assets.awardMarks.map((mark) => (
+            <div key={mark.name} className={styles.mark}>
+              <Image
+                src={mark.image}
+                alt={mark.name}
+                fill
+                sizes="(min-width: 768px) 10vw, 18vw"
+                className={styles.markImage}
+              />
             </div>
           ))}
         </div>
