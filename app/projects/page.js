@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import SiteChrome from "@/components/SiteChrome";
 import Footer from "@/components/Footer";
 import { assets } from "@/config/assets";
+import JustifiedGallery from "./JustifiedGallery";
 import styles from "./page.module.css";
 
 export const CATEGORIES = [
@@ -17,9 +17,7 @@ export const CATEGORIES = [
 
 export default function ProjectsPage() {
   const [active, setActive] = useState("all");
-  const projects = active === "all"
-    ? assets.projects
-    : assets.projects.filter((project) => project.category === active);
+  const gallery = assets.projectGallery;
 
   return (
     <main>
@@ -40,18 +38,7 @@ export default function ProjectsPage() {
       </div>
 
       <section className={styles.gallery}>
-        {projects.map((project) => (
-          <Link key={project.id} href={`/projects/${project.id}`} className={styles.tile}>
-            <img
-              src={typeof project.image === "string" ? project.image : project.image.src}
-              alt={project.name}
-              loading="lazy"
-            />
-            <div className={styles.overlay}>
-              <span className={styles.overlayName}>{project.name}</span>
-            </div>
-          </Link>
-        ))}
+        <JustifiedGallery items={gallery} targetRowHeight={320} gap={24} />
       </section>
       <Footer />
     </main>

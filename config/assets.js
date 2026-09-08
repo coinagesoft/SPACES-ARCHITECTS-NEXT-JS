@@ -19,6 +19,27 @@
  */
 
 import haveliDharampuraImage from "./assets/haveli dharmapura.webp";
+import projectImg1 from "./assets/projects/1.jpg";
+import projectImg2 from "./assets/projects/2.jpg";
+import projectImg3 from "./assets/projects/3.png";
+import projectImg4 from "./assets/projects/4.jpg";
+import projectImg5 from "./assets/projects/5.jpg";
+import projectImg6 from "./assets/projects/6.jpg";
+import projectImg7 from "./assets/projects/7.jpg";
+import projectImg8 from "./assets/projects/8.jpg";
+import projectImg9 from "./assets/projects/9.png";
+import projectImg10 from "./assets/projects/10.png";
+import projectImg11 from "./assets/projects/11.png";
+import projectImg12 from "./assets/projects/12.png";
+import projectImg13 from "./assets/projects/13.jpg";
+import projectImg14 from "./assets/projects/14.jpg";
+import projectImg15 from "./assets/projects/15.jpg";
+import projectImg16 from "./assets/projects/16.jpg";
+import projectImg17 from "./assets/projects/17.jpg";
+import projectImg18 from "./assets/projects/18.png";
+import projectImg19 from "./assets/projects/19.jpg";
+import projectImg20 from "./assets/projects/20.jpg";
+import projectImg21 from "./assets/projects/21.jpg";
 import haveliGallery1 from "./assets/Final-1-6.webp";
 import haveliGallery2 from "./assets/Final-2-6.webp";
 import haveliGallery3 from "./assets/Final-3-6.webp";
@@ -116,6 +137,40 @@ export const assets = {
         "The Indian Express",
         "Habitus Living",
         "ABP Live",
+    ],
+
+    // ---- Projects gallery page ----
+    // Numbered site photos (1.jpg … 21.jpg), in serial order.
+    // orientation: "landscape" | "portrait" — set this to match each photo's
+    // real shape. It doesn't affect whether gaps appear (the masonry CSS
+    // handles that automatically) — it's just a hook you can style against
+    // (see .portrait / .landscape in page.module.css) if you want, say,
+    // portrait shots to sit narrower, or landscape ones wider.
+    // span: "full" — optional. Set on any image to break it out to the full
+    // gallery width for one turn (like the occasional full-bleed shot on the
+    // Canva reference page). Leave it off for normal masonry images.
+    projectGallery: [
+        { file: "1.jpg", image: projectImg1, orientation: "landscape" },
+        { file: "2.jpg", image: projectImg2, orientation: "portrait" },
+        { file: "3.png", image: projectImg3, orientation: "portrait" },
+        { file: "4.jpg", image: projectImg4, orientation: "landscape" },
+        { file: "5.jpg", image: projectImg5, orientation: "landscape" },
+        { file: "6.jpg", image: projectImg6, orientation: "landscape" },
+        { file: "7.jpg", image: projectImg7, orientation: "portrait" },
+        { file: "8.jpg", image: projectImg8, orientation: "landscape" },
+        { file: "9.png", image: projectImg9, orientation: "portrait" },
+        { file: "10.png", image: projectImg10, orientation: "landscape" },
+        { file: "11.png", image: projectImg11, orientation: "portrait" },
+        { file: "12.png", image: projectImg12, orientation: "landscape" },
+        { file: "13.jpg", image: projectImg13, orientation: "portrait" },
+        { file: "14.jpg", image: projectImg14, orientation: "landscape" },
+        { file: "15.jpg", image: projectImg15, orientation: "landscape" },
+        { file: "16.jpg", image: projectImg16, orientation: "portrait" },
+        { file: "17.jpg", image: projectImg17, orientation: "landscape" },
+        { file: "18.png", image: projectImg18, orientation: "portrait" },
+        { file: "19.jpg", image: projectImg19, orientation: "landscape" },
+        { file: "20.jpg", image: projectImg20, orientation: "landscape" },
+        { file: "21.jpg", image: projectImg21, orientation: "portrait" },
     ],
 
     // ---- Projects / Blog grid page ----
