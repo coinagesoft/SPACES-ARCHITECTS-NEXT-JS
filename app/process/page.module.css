@@ -215,9 +215,9 @@
     line-height: 1;
 }
 
-@supports not (-webkit-text-stroke: 1px #d97a1f) {
+@supports not (-webkit-text-stroke: 1px #fea50b) {
     .stepNumber {
-        color: #d97a1f;
+        color: #fea50b;
         -webkit-text-stroke: 0;
     }
 }

@@ -74,7 +74,7 @@
   margin-top: 14px;
   font-size: 13px;
   font-weight: 500;
-  color: #d97a1f;
+  color: #fea50b;
   text-decoration: none;
 }
 
@@ -89,7 +89,7 @@
   font-size: 26px;
   font-weight: 500;
   letter-spacing: 0.02em;
-  color: #d97a1f;
+  color: #fea50b;
   text-transform: uppercase;
 }
 
@@ -152,7 +152,7 @@
 /* Active field: orange underline while focused */
 .field input:focus,
 .field select:focus {
-  border-color: #d97a1f;
+  border-color: #fea50b;
 }
 
 /* Invalid field: red underline + inline message once the user leaves it */
@@ -176,7 +176,7 @@
 }
 
 .phoneInput:focus-within {
-  border-color: #d97a1f;
+  border-color: #fea50b;
 }
 
 .phonePrefix {
@@ -204,8 +204,8 @@
 }
 
 .submit:hover {
-  background: #d97a1f;
-  border-color: #d97a1f;
+  background: #fea50b;
+  border-color: #fea50b;
   color: #fff;
 }
 
@@ -274,7 +274,7 @@
 }
 
 .emailValue:hover {
-  color: #d97a1f;
+  color: #fea50b;
   text-decoration: underline;
 }
 

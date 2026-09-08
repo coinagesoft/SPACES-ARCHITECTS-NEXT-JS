@@ -18,7 +18,7 @@ module.exports = {
         ink: "#1c1c1c",       // primary text
         muted: "#6f6f6f",     // secondary / body copy
         faint: "#a9a9a9",     // footer nav / disabled
-        accent: "#d97a1f",    // brand orange (@ka, links, CTAs)
+        accent: "#fea50b",    // brand orange (@ka, links, CTAs)
         paper: "#ffffff",     // page background
         line: "#e7e5e2",      // hairline dividers
       },

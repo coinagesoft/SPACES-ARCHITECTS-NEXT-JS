@@ -10,7 +10,7 @@ import { homeCopy } from "@/config/site";
 export default function HomePage() {
   return (
     <main>
-      <SiteChrome dark />
+      <SiteChrome dark home />
       <HeroSlider projects={assets.projects.slice(0, 4)} />
       <section className="site-container py-16 md:py-20 space-y-6 max-w-6xl">
         {homeCopy.intro.map((paragraph, index) => (

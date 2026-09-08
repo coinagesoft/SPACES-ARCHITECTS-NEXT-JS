@@ -62,7 +62,7 @@
 .kicker,
 .quote {
     margin: 0;
-    color: #d97a1f;
+    color: #fea50b;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: .08em;
@@ -110,7 +110,7 @@
 }
 
 .founderContent h2 span {
-    color: #d97a1f;
+    color: #fea50b;
 }
 
 .founderBio {
@@ -124,7 +124,7 @@
 
 .team h2 {
     margin: 0 0 28px;
-    color: #d97a1f;
+    color: #fea50b;
     font-size: 22px;
     font-weight: 400;
     letter-spacing: .22em;
