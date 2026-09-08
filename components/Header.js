@@ -42,7 +42,7 @@ export default function Header({
                   key={category.value}
                   type="button"
                   onClick={() => onProjectCategoryChange(category.value)}
-                  className={`whitespace-nowrap bg-transparent p-0 text-[10px] font-medium uppercase tracking-[0.22em] transition-colors ${
+                  className={`whitespace-nowrap bg-transparent p-0 text-[12px] font-medium uppercase tracking-[0.22em] transition-colors ${
                     isActive ? "text-accent" : "text-ink hover:text-accent"
                   }`}
                 >
