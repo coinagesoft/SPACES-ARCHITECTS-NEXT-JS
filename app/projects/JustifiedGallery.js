@@ -5,6 +5,11 @@ import styles from "./JustifiedGallery.module.css";
 
 const DEFAULT_ASPECT_RATIO = 4 / 3;
 
+// Fixed row layout requested for the projects gallery:
+// row sizes, in order, covering items 1-21 exactly:
+// 2, 3, 2, 2, 2, 2, 3, 2, 3
+const ROW_GROUPS = [2, 3, 2, 2, 2, 2, 3, 2, 3];
+
 function getAspectRatio(item) {
   const img = item.image;
   if (img && typeof img === "object" && img.width && img.height) {
@@ -17,61 +22,52 @@ function getSrc(item) {
   return typeof item.image === "string" ? item.image : item.image.src;
 }
 
-// Classic "justified gallery" packer — same idea Flickr/Google Photos use.
-// Walks the items IN ORDER, fills each row left-to-right, then scales every
-// image in that row to a shared height so the row lands exactly on the
-// container's right edge (no leftover gap, no cropping — aspect ratio is
-// preserved, only overall size changes slightly).
-function computeRows(items, containerWidth, targetRowHeight, gap) {
-  const rows = [];
-  let row = [];
-  let aspectSum = 0;
+// Fixed-row packer. Instead of greedily deciding row breaks from aspect
+// ratios, items are split into the exact row groups given by ROW_GROUPS
+// (falling back to a single trailing row of leftovers if items.length
+// doesn't match the configured groups). Each row is then scaled — same as
+// a justified gallery — so it spans the full container width edge to
+// edge, with every image keeping its own aspect ratio (no cropping, no
+// distortion, just a uniform per-row scale factor). That's what removes
+// any empty gaps in the grid.
+function groupItems(items, rowGroups) {
+  const groups = [];
+  let i = 0;
+  let g = 0;
+  while (i < items.length) {
+    const size = rowGroups[g] ?? rowGroups[rowGroups.length - 1] ?? 1;
+    groups.push(items.slice(i, i + size));
+    i += size;
+    g += 1;
+  }
+  return groups;
+}
 
-  const flushRow = (finalRow, isLastRow) => {
-    if (finalRow.length === 0) return;
-    const totalGap = gap * (finalRow.length - 1);
+function computeRows(items, containerWidth, targetRowHeight, gap, rowGroups) {
+  const rows = [];
+  const groups = groupItems(items, rowGroups);
+
+  groups.forEach((group, groupIndex) => {
+    const isLastRow = groupIndex === groups.length - 1;
+    const withAspect = group.map((item) => ({ ...item, aspectRatio: getAspectRatio(item) }));
+    const aspectSum = withAspect.reduce((sum, it) => sum + it.aspectRatio, 0);
+    const totalGap = gap * (withAspect.length - 1);
     const availableWidth = containerWidth - totalGap;
     let rowHeight = availableWidth / aspectSum;
     // Don't blow up a short trailing row (e.g. a single leftover image)
     // past the target height.
-    if (isLastRow) rowHeight = Math.min(rowHeight, targetRowHeight);
+    if (isLastRow && withAspect.length < (rowGroups[0] ?? 3)) {
+      rowHeight = Math.min(rowHeight, targetRowHeight);
+    }
     rows.push({
       height: rowHeight,
-      items: finalRow.map((it) => ({
+      items: withAspect.map((it) => ({
         ...it,
         renderWidth: it.aspectRatio * rowHeight,
       })),
     });
-  };
-
-  items.forEach((item) => {
-    const aspectRatio = getAspectRatio(item);
-
-    if (item.span === "full") {
-      flushRow(row, false);
-      row = [];
-      aspectSum = 0;
-      const rowHeight = Math.min(containerWidth / aspectRatio, targetRowHeight * 1.6);
-      rows.push({
-        height: rowHeight,
-        items: [{ ...item, aspectRatio, renderWidth: containerWidth }],
-        full: true,
-      });
-      return;
-    }
-
-    row.push({ ...item, aspectRatio });
-    aspectSum += aspectRatio;
-    const widthAtTarget = aspectSum * targetRowHeight + gap * (row.length - 1);
-
-    if (widthAtTarget >= containerWidth) {
-      flushRow(row, false);
-      row = [];
-      aspectSum = 0;
-    }
   });
 
-  flushRow(row, true);
   return rows;
 }
 
@@ -104,7 +100,7 @@ export default function JustifiedGallery({ items, targetRowHeight = 320, gap = 2
     return () => window.removeEventListener("resize", updateRowHeight);
   }, [targetRowHeight]);
 
-  const rows = containerWidth > 0 ? computeRows(items, containerWidth, rowHeight, gap) : [];
+  const rows = containerWidth > 0 ? computeRows(items, containerWidth, rowHeight, gap, ROW_GROUPS) : [];
 
   return (
     <div ref={containerRef} className={styles.gallery}>
