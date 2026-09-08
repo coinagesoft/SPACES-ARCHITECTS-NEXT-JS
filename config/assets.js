@@ -21,6 +21,14 @@
 import haveliDharampuraImage from "./assets/haveli dharmapura.webp";
 import aboutHeroImage from "./assets/About_hero.jpg";
 import kapilPhoto from "./assets/Kapil.jpg";
+import featuredProject1 from "./assets/Featured Project/1.jpg";
+import featuredProject2 from "./assets/Featured Project/2.jpg";
+import featuredProject3 from "./assets/Featured Project/3.jpg";
+import featuredProject4 from "./assets/Featured Project/4.jpg";
+import featuredNews1 from "./assets/Featured News/1.png";
+import featuredNews2 from "./assets/Featured News/2.png";
+import featuredNews3 from "./assets/Featured News/3.png";
+import featuredNews4 from "./assets/Featured News/4.png";
 import projectImg1 from "./assets/projects/1.jpg";
 import projectImg2 from "./assets/projects/2.jpg";
 import projectImg3 from "./assets/projects/3.png";
@@ -108,19 +116,19 @@ export const assets = {
     // ---- Featured Projects (home grid) ----
     featuredProjects: [{
             name: "Art House",
-            image: unsplash("photo-1600585154526-990dced4db0d", 700, 700),
+            image: featuredProject1,
         },
         {
             name: "House of Stepped Garden",
-            image: unsplash("photo-1600596542815-ffad4c1539a9", 700, 700),
+            image: featuredProject2,
         },
         {
             name: "Library House",
-            image: unsplash("photo-1600210492486-724fe5c67fb0", 700, 700),
+            image: featuredProject3,
         },
         {
             name: "Swatantra Residence",
-            image: unsplash("photo-1600607687920-4e2a09cf159d", 700, 700),
+            image: featuredProject4,
         },
     ],
 
@@ -128,22 +136,22 @@ export const assets = {
     featuredNews: [{
             name: "Dezeen Exclusive Feature",
             source: "Dezeen",
-            image: unsplash("photo-1524758631624-e2822e304c36", 700, 700),
+            image: featuredNews1,
         },
         {
             name: "Architectural Digest India Feature",
             source: "AD",
-            image: unsplash("photo-1600566753086-00f18fb6b3ea", 700, 700),
+            image: featuredNews2,
         },
         {
             name: "Gandhi Darshan Park Inauguration",
             source: "Press",
-            image: unsplash("photo-1529156069898-49953e39b3ac", 700, 700),
+            image: featuredNews3,
         },
         {
             name: "Golden Haveli Inauguration",
             source: "Press",
-            image: unsplash("photo-1517457373958-b7bdd4587205", 700, 700),
+            image: featuredNews4,
         },
     ],
 

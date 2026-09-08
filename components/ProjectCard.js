@@ -13,11 +13,11 @@ export default function ProjectCard({ id, image, name, excerpt }) {
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </div>
-      <h3 className="mt-4 text-sm md:text-base tracking-wide">{name}</h3>
+      <h3 className="mt-4 text-[10px] uppercase tracking-[0.14em] text-ink/80 md:text-[11px]">{name}</h3>
       {excerpt && (
         <>
           <p className="mt-2 text-xs text-faint leading-relaxed line-clamp-4">{excerpt}</p>
-          <span className="inline-block mt-2 text-xs uppercase tracking-widest2 text-accent">Read more</span>
+          <span className="inline-block mt-2 text-[10px] uppercase tracking-[0.14em] text-accent">Read more</span>
         </>
       )}
     </article>
