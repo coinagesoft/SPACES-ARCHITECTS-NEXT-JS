@@ -47,6 +47,24 @@ import haveliGallery4 from "./assets/Final-4-6.webp";
 import haveliGallery6 from "./assets/Final-6-3.webp";
 import haveliGallery7 from "./assets/Final-7-2.webp";
 import haveliGallery8 from "./assets/Final-8-1.webp";
+import featuredIn1 from "./assets/Home Page/1.png";
+import featuredIn2 from "./assets/Home Page/2.png";
+import featuredIn3 from "./assets/Home Page/3.png";
+import featuredIn4 from "./assets/Home Page/4.png";
+import featuredIn5 from "./assets/Home Page/5.png";
+import featuredIn6 from "./assets/Home Page/6.png";
+import featuredIn7 from "./assets/Home Page/7.png";
+import featuredIn8 from "./assets/Home Page/8.png";
+import featuredIn9 from "./assets/Home Page/9.png";
+import featuredIn10 from "./assets/Home Page/10.png";
+import featuredIn11 from "./assets/Home Page/11.png";
+import featuredIn12 from "./assets/Home Page/12.png";
+import featuredIn13 from "./assets/Home Page/13.png";
+import featuredIn14 from "./assets/Home Page/14.png";
+import featuredIn15 from "./assets/Home Page/15.png";
+import featuredIn16 from "./assets/Home Page/16.png";
+import featuredIn17 from "./assets/Home Page/17.png";
+import featuredIn18 from "./assets/Home Page/18.png";
 
 const unsplash = (id, w = 1600, h = 1000) =>
     `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&h=${h}&q=80`;
@@ -117,26 +135,26 @@ export const assets = {
         },
     ],
 
-    // ---- Featured In (press logo strip) — text-based marks, no external logo files needed ----
+    // ---- Featured In (press logo strip) ----
     featuredIn: [
-        "Dezeen",
-        "RTF",
-        "Beautiful Homes",
-        "AΔ",
-        "ArchDaily",
-        "NDTV",
-        "India Today",
-        "The Print",
-        "HT",
-        "TOI",
-        "AD",
-        "UIA",
-        "UNESCO",
-        "Architizer",
-        "Curly Tales",
-        "The Indian Express",
-        "Habitus Living",
-        "ABP Live",
+        { name: "Dezeen", image: featuredIn1 },
+        { name: "RTF", image: featuredIn2 },
+        { name: "Beautiful Homes", image: featuredIn3 },
+        { name: "AΔ", image: featuredIn4 },
+        { name: "ArchDaily", image: featuredIn5 },
+        { name: "NDTV", image: featuredIn6 },
+        { name: "India Today", image: featuredIn7 },
+        { name: "The Print", image: featuredIn8 },
+        { name: "HT", image: featuredIn9 },
+        { name: "TOI", image: featuredIn10 },
+        { name: "Architectural Digest", image: featuredIn11 },
+        { name: "UIA", image: featuredIn12 },
+        { name: "UNESCO", image: featuredIn13 },
+        { name: "Architizer", image: featuredIn14 },
+        { name: "Curly Tales", image: featuredIn15 },
+        { name: "The Indian Express", image: featuredIn16 },
+        { name: "Habitus Living", image: featuredIn17 },
+        { name: "ABP Live", image: featuredIn18 },
     ],
 
     // ---- Projects gallery page ----
