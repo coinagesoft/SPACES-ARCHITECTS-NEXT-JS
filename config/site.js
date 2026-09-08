@@ -76,21 +76,55 @@ export const aboutCopy = {
     heroTitle: "STUDIO",
     kicker: "WE DESIGN SPACES, WE CREATE STORIES. WE BUILT EXPERIENCE.",
     intro: [
-        "THE STUDIO FOUNDED BY KAPIL AGGARWAL IN 2000 BELIEVES ARCHITECTURE IS NOT ABOUT BUILDING BUT CREATING A SOUL AND EXPERIENCE THAT REMAIN WITH YOU.",
-        "AT SPACES ARCHITECTS, EVERY PROJECT BEGINS WITH CURIOSITY A DESIRE TO UNDERSTAND PEOPLE, ITS PLACE AND STORY WAITING TO UNFOLD. WE BELIEVE GREAT ARCHITECTURE EMERGES WHEN IMAGINATION MEETS CONTEXT, WHEN LIGHT, MATERIAL, LANDSCAPE, ART AND STRUCTURE COME TOGETHER WITH PURPOSE.",
-        "OUR STUDIO APPROACHES EACH COMMISSION AS AN UNIQUE NARRATIVE RATHER THAN PREDETERMINED STYLE. WE QUESTION THE OBVIOUS, EXPLORE THE UNEXPECTED AND ALLOW IDEAS TO EVOLVE THROUGH SKETCHES, MODELS AND MATERIAL, CONVERSATION AND COLLABORATION. THE RESULT IS ARCHITECTURE THAT IS EXPRESSIVE YET GROUNDED, CONTEMPORARY YET CONNECTED TO ITS CONTEXT.",
-        "WE DON'T SEEK TO CREATE A SIGNATURE STYLE. WE SEEK TO GIVE EVERY PLACE ITS OWN IDENTITY.",
+        "The studio founded by Kapil Aggarwal in 2000 believes architecture is not about building but creating a soul and experience that remain with you.",
+        "At Spaces Architects, every project begins with curiosity a desire to understand people, its place and story waiting to unfold. We believe great architecture emerges when imagination meets context, when light, material, landscape, art and structure come together with purpose.",
+        "Our Studio approaches each commission as an unique narrative rather than predetermined style. We question the obvious, explore the unexpected and allow ideas to evolve through sketches, models and material, conversation and collaboration. The result is architecture that is expressive yet grounded, contemporary yet connected to its context.",
+        "We don't seek to create a signature style. We seek to give every place its own identity.",
     ],
-    quote: 'SPACESARCHITECTS@KA "ARCHITECTURE WITH A SENSE OF PLACE, PURPOSE AND SOUL"',
+    quote: 'SPACESARCHITECTS@ka "Architecture with a sense of place, purpose and soul"',
     founder: {
         name: "Ar. Kapil Aggarwal",
         role: "Founder",
+        // Each paragraph is a list of segments. `highlight: true` renders
+        // that segment in the brand orange, matching the reference bio.
         bio: [
-            "Ar. Kapil Aggarwal, founder and principal architect of Spaces Architects@ka, is an architect, artist and storyteller whose practice is rooted in the belief that architecture should create an emotional connection between people, place and memory. After graduating from MIT, Manipal, in 1996, he founded the studio in 2000, bringing together his interests in fine art, design, materiality and architecture.",
-            "His work spans residences, institutions, workplaces, hospitality, interiors, landscapes and heritage, with a distinctive approach that allows every project to develop its own identity rather than follow a predetermined style. His contribution to the architectural and cultural fabric of Old Delhi and Shahjahanabad, particularly through the restoration of Haveli Dharampura, reflects his belief that heritage should not merely be preserved but brought back to life.",
-            "The project received the UNESCO Asia-Pacific Heritage Award for Cultural Heritage Conservation and brought renewed attention to the living traditions of the Walled City. His work has also received international recognition, including coverage by BBC World for Adharshila Vatika and Stylist Magazine, which featured his own studio among the world's coolest offices.",
-            "With 50+ national and international awards, seven World Architecture Festival finalist recognitions and 300+ media features, Kapil continues to explore architecture as a medium for creating meaningful experiences. He is also the author of the national bestseller Timeless Houses.",
-            "For him, architecture is ultimately about creating spaces with a sense of place, purpose, memory and soul.",
+            [
+                { text: "Ar. KAPIL AGGARWAL", highlight: true },
+                { text: " Founder and Principal Architect of " },
+                { text: "SPACES ARCHITECTS@KA", highlight: true },
+                {
+                    text: ", is an architect, artist and storyteller whose practice is rooted in the belief that architecture should create an emotional connection between people, place and memory. After graduating from MIT, Manipal, in 1996, he founded the studio in 2000, bringing together his interests in fine art, design, materiality and architecture.",
+                },
+            ],
+            [
+                {
+                    text: "His work spans residences, institutions, workplaces, hospitality, interiors, landscapes and heritage, with a distinctive approach that allows every project to develop its own identity rather than follow a predetermined style.",
+                },
+            ],
+            [
+                { text: "His contribution to the architectural and cultural fabric of " },
+                { text: "Old Delhi and Shahjahanabad", highlight: true },
+                { text: ", particularly through the restoration of " },
+                { text: "Haveli Dharampura", highlight: true },
+                {
+                    text: ", reflects his belief that heritage should not merely be preserved but brought back to life. The project received the ",
+                },
+                { text: "UNESCO Asia-Pacific Heritage Award for Cultural Heritage Conservation", highlight: true },
+                {
+                    text: " and brought renewed attention to the living traditions of the Walled City. His work has also received international recognition, including coverage by ",
+                },
+                { text: "BBC World for Adharshila Vatika and Stylist Magazine,", highlight: true },
+                { text: " which featured his own studio among the world's coolest offices." },
+            ],
+            [
+                { text: "Recognised among " },
+                { text: "AD50-the 50 most influential names in architecture and design,", highlight: true },
+                { text: " he has received " },
+                { text: "50+ national and international awards,", highlight: true },
+                {
+                    text: " along with seven World Architecture Festival finalist recognitions and 300+ media features. He continues to explore architecture as a medium for creating meaningful experiences and is also the author of the national bestseller Timeless Houses.",
+                },
+            ],
         ],
     },
     team: [

@@ -29,7 +29,19 @@ export default function AboutPage() {
         </div>
         <div className={styles.founderContent}>
           <h2>Founder: <span>{aboutCopy.founder.name}</span></h2>
-          <div className={styles.founderBio}>{aboutCopy.founder.bio.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+          <div className={styles.founderBio}>
+            {aboutCopy.founder.bio.map((paragraph, pIndex) => (
+              <p key={pIndex}>
+                {paragraph.map((segment, sIndex) => (
+                  segment.highlight ? (
+                    <span key={sIndex} className={styles.highlight}>{segment.text}</span>
+                  ) : (
+                    <span key={sIndex}>{segment.text}</span>
+                  )
+                ))}
+              </p>
+            ))}
+          </div>
         </div>
       </section>
       <section id="contact" className={styles.team}>

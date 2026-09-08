@@ -59,10 +59,9 @@
     gap: 20px;
 }
 
-.kicker,
-.quote {
+.kicker {
     margin: 0;
-    color: #fea50b;
+    color: #d97a1f;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: .08em;
@@ -70,15 +69,28 @@
     text-transform: uppercase;
 }
 
+.quote {
+    margin: 0;
+    color: #d97a1f;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .01em;
+    line-height: 1.6;
+}
+
 .bodyCopy,
 .founderBio p {
     margin: 0;
     color: #333;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 400;
-    letter-spacing: .03em;
-    line-height: 1.85;
-    text-transform: uppercase;
+    letter-spacing: .01em;
+    line-height: 1.8;
+}
+
+.highlight {
+    color: #d97a1f;
+    font-weight: 500;
 }
 
 .founder {
@@ -110,7 +122,7 @@
 }
 
 .founderContent h2 span {
-    color: #fea50b;
+    color: #d97a1f;
 }
 
 .founderBio {
@@ -124,7 +136,7 @@
 
 .team h2 {
     margin: 0 0 28px;
-    color: #fea50b;
+    color: #d97a1f;
     font-size: 22px;
     font-weight: 400;
     letter-spacing: .22em;
