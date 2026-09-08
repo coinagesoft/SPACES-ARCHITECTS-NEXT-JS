@@ -1,21 +1,55 @@
+.filterBar {
+    border-bottom: 1px solid #ececec;
+    margin-top: 92px;
+    /* clears the fixed SiteChrome top bar — adjust to match its actual height */
+}
+
+.filterNav {
+    display: flex;
+    align-items: center;
+    gap: 44px;
+    padding-top: 0;
+    padding-bottom: 22px;
+    overflow-x: auto;
+}
+
+.filterTab {
+    flex: 0 0 auto;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 4px 0;
+    cursor: pointer;
+    color: #1c1c1c;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.filterTab:hover {
+    color: #d97a1f;
+}
+
+.filterTabActive {
+    color: #d97a1f;
+}
+
 .gallery {
-    width: calc(100% - 228px);
-    max-width: 1240px;
-    margin: 0 auto;
-    padding: 0 0 80px;
-    margin-top: 156px;
+    padding-top: 24px;
+    padding-bottom: 80px;
 }
 
 @media (max-width: 767px) {
-    .gallery {
-        width: calc(100% - 96px);
-        padding: 0 0 56px;
-        margin-top: 112px;
+    .filterBar {
+        margin-top: 76px;
     }
-}
-
-@media (max-width: 480px) {
+    .filterNav {
+        gap: 28px;
+    }
     .gallery {
-        width: calc(100% - 48px);
+        padding-top: 16px;
+        padding-bottom: 56px;
     }
 }
