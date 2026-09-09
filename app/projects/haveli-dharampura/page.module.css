@@ -10,12 +10,22 @@
   object-fit: cover;
 }
 
-.heroText {
+/* Wraps heroText using the same .site-container class as the header and
+   every other section on this page (and every other page), so the
+   heading's left edge lines up exactly with the logo above it and the
+   body copy below it — at any viewport width, including screens wider
+   than max-w-site where a fixed left px value used to drift out of
+   alignment. */
+.heroTextWrap {
   position: absolute;
-  left: 24px;
+  left: 0;
+  right: 0;
   bottom: 32px;
-  color: #fff;
   z-index: 2;
+}
+
+.heroText {
+  color: #fff;
   /* No dark overlay panel anymore — just a soft shadow so the type stays
      readable over lighter parts of the photo. */
   text-shadow: 0 2px 16px rgba(0, 0, 0, 0.55);
@@ -36,14 +46,6 @@
   text-transform: uppercase;
   opacity: 0.9;
   margin: 4px 0 0;
-}
-
-@media (min-width: 768px) {
-  .heroText {
-    /* Matches .site-container's px-10 (40px) so this sits on the exact
-       same left edge as the header logo above it, like the Canva page. */
-    left: 40px;
-  }
 }
 
 /* ---------- Details + description ---------- */
@@ -159,31 +161,45 @@
   padding-bottom: 56px;
 }
 
-.galleryFull {
-  position: relative;
+/* "full" and "wide" are single, full-width shots with no neighbour to
+   match heights with, so they keep their own natural aspect ratio —
+   nothing cropped, nothing stretched. */
+.galleryImg {
+  display: block;
   width: 100%;
-  /* Matches the real photos' native ~3:2 ratio so object-fit: cover barely
-     needs to crop anything — was 21/9 before, which sliced off large chunks
-     top/bottom since the source photos are nowhere near that wide. */
-  aspect-ratio: 3 / 2;
-  overflow: hidden;
+  height: auto;
+}
+
+.galleryFull {
+  width: 100%;
+}
+
+/* "pair" and "split" images sit next to a partner and need to line up at
+   the same height (like the Canva layout). Each item below gets a
+   `--ratio` custom property (its own real width/height, computed in JS
+   from the image file) and uses CSS `aspect-ratio` to render at exactly
+   that ratio — so the image itself is never cropped or distorted.
+   On desktop, the row switches to flexbox with flex-basis 0 and
+   flex-grow set to that same ratio, which is the standard "justified
+   gallery row" trick: it divides the row's width between the images in
+   proportion to their own ratios, and since every image keeps its own
+   aspect-ratio, they all land at the exact same computed height — full
+   photos, edge to edge, nothing stretched. */
+.galleryImgFit {
+  object-fit: cover; /* box already matches the image's own ratio */
 }
 
 .galleryPair {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 16px;
 }
 
 .galleryPairItem {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: var(--ratio);
   overflow: hidden;
-}
-
-.galleryImg {
-  object-fit: cover;
 }
 
 /* Tall portrait beside a stack of two shots — matches the Canva page's
@@ -197,7 +213,7 @@
 .gallerySplitLarge {
   position: relative;
   width: 100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: var(--ratio);
   overflow: hidden;
 }
 
@@ -210,19 +226,15 @@
 .gallerySplitStackItem {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: var(--ratio);
   overflow: hidden;
 }
 
 /* Wide panoramic band — breaks out of the container to run edge-to-edge,
-   same as the single wide banner shot on the Canva page. Ratio matches
-   haveli_26.jpg's real ~2.46:1 shape almost exactly, so nothing gets cut. */
+   same as the single wide banner shot on the Canva page. */
 .galleryWide {
-  position: relative;
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  aspect-ratio: 2.46 / 1;
-  overflow: hidden;
 }
 
 @media (min-width: 768px) {
@@ -230,36 +242,48 @@
     gap: 24px;
     padding-bottom: 80px;
   }
+
   .galleryPair {
-    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
     gap: 24px;
   }
+  .galleryPairItem {
+    flex-grow: var(--ratio);
+    flex-shrink: 1;
+    flex-basis: 0%;
+  }
+
   .gallerySplit {
     flex-direction: row;
-    align-items: stretch;
+    align-items: flex-start;
     gap: 24px;
   }
   .gallerySplitLarge {
-    /* Keep a real aspect-ratio here (was "auto") — with next/image's fill
-       mode rendering as position:absolute, nothing else in this flex row
-       contributes intrinsic height, so "auto" collapsed the whole row to
-       0px. This is what actually establishes the row's height on desktop. */
-    flex: 1 1 50%;
-    aspect-ratio: 3 / 4;
+    flex-grow: var(--ratio);
+    flex-shrink: 1;
+    flex-basis: 0%;
   }
   .gallerySplitStack {
-    flex: 1 1 50%;
+    /* The stack is measured as one combined "virtual image" against
+       `large` (see stackCombinedRatio in page.js), so it takes its share
+       of the row's width the same way, then aspect-ratio gives it the
+       exact same height as `large`. */
+    flex-grow: var(--ratio);
+    flex-shrink: 1;
+    flex-basis: 0%;
+    aspect-ratio: var(--ratio);
     gap: 24px;
-    /* No explicit height needed: align-items: stretch on .gallerySplit
-       stretches this column to match .gallerySplitLarge's real height. */
   }
   .gallerySplitStackItem {
-    /* flex: 1 now has a real parent height (via the stretch above) to
-       divide between the two stacked items, instead of aspect-ratio: auto
-       collapsing each to 0px. */
-    flex: 1;
-    aspect-ratio: auto;
-    min-height: 0;
+    /* Column direction here, so flex-grow divides the stack's now-fixed
+       height between the two shots — proportional to 1/ratio, i.e. each
+       shot's own natural height at the stack's width — while each one's
+       own aspect-ratio (set above) keeps its width correct for that
+       height. Net result: both shots keep their real proportions and the
+       stack's total height matches `large` exactly. */
+    flex-grow: calc(1 / var(--ratio));
+    flex-shrink: 1;
+    flex-basis: 0%;
   }
 }
 

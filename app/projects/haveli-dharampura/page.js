@@ -25,6 +25,15 @@ const achievements = [
 const pressLogos = assets.haveliDharampura.pressLogos;
 const gallery = assets.haveliDharampura.gallery;
 
+// A static-imported image carries its real intrinsic width/height, so we
+// can size gallery rows the way a proper "justified" photo grid does:
+// every image in a row keeps its own aspect ratio, but each one's WIDTH
+// is scaled so they all land at exactly the same height, filling the row
+// edge-to-edge. flex-grow set to each image's own ratio (with flex-basis
+// 0) is what does that division — no crop, no stretch, just correct
+// per-image scaling, like the Canva page.
+const ratio = (img) => img.width / img.height;
+
 export default function HaveliDharampuraPage() {
   return (
     <>
@@ -41,9 +50,11 @@ export default function HaveliDharampuraPage() {
             sizes="100vw"
             className={styles.heroImage}
           />
-          <div className={styles.heroText}>
-            <h1>Haveli Dharampura</h1>
-            <p>Delhi</p>
+          <div className={`site-container ${styles.heroTextWrap}`}>
+            <div className={styles.heroText}>
+              <h1>Haveli Dharampura</h1>
+              <p>Delhi</p>
+            </div>
           </div>
         </section>
 
@@ -133,7 +144,6 @@ export default function HaveliDharampuraPage() {
                   <Image
                     src={block.image}
                     alt="Haveli Dharampura"
-                    fill
                     sizes="100vw"
                     className={styles.galleryImg}
                   />
@@ -147,7 +157,6 @@ export default function HaveliDharampuraPage() {
                   <Image
                     src={block.image}
                     alt="Haveli Dharampura"
-                    fill
                     sizes="100vw"
                     className={styles.galleryImg}
                   />
@@ -156,26 +165,42 @@ export default function HaveliDharampuraPage() {
             }
 
             if (block.type === "split") {
+              const largeRatio = ratio(block.large);
+              const stackRatios = block.stack.map(ratio);
+              // Treat the 2-item stack as one combined "virtual image" so
+              // it can be measured against `large` on equal footing — its
+              // combined ratio is what a single image spanning the same
+              // width and total (natural) stacked height would have.
+              const stackCombinedRatio =
+                1 / stackRatios.reduce((sum, r) => sum + 1 / r, 0);
+
               return (
                 <div key={i} className={styles.gallerySplit}>
-                  <div className={styles.gallerySplitLarge}>
+                  <div className={styles.gallerySplitLarge} style={{ "--ratio": largeRatio }}>
                     <Image
                       src={block.large}
                       alt="Haveli Dharampura"
                       fill
                       sizes="(min-width: 768px) 48vw, 92vw"
-                      className={styles.galleryImg}
+                      className={styles.galleryImgFit}
                     />
                   </div>
-                  <div className={styles.gallerySplitStack}>
+                  <div
+                    className={styles.gallerySplitStack}
+                    style={{ "--ratio": stackCombinedRatio }}
+                  >
                     {block.stack.map((src, j) => (
-                      <div key={j} className={styles.gallerySplitStackItem}>
+                      <div
+                        key={j}
+                        className={styles.gallerySplitStackItem}
+                        style={{ "--ratio": stackRatios[j] }}
+                      >
                         <Image
                           src={src}
                           alt="Haveli Dharampura"
                           fill
                           sizes="(min-width: 768px) 48vw, 92vw"
-                          className={styles.galleryImg}
+                          className={styles.galleryImgFit}
                         />
                       </div>
                     ))}
@@ -184,17 +209,23 @@ export default function HaveliDharampuraPage() {
               );
             }
 
-            // "pair" — two images side by side
+            // "pair" — two images side by side. Each image's width is
+            // proportional to its own aspect ratio, so both land at the
+            // exact same height, full row width, no crop, no stretch.
             return (
               <div key={i} className={styles.galleryPair}>
                 {block.images.map((src, j) => (
-                  <div key={j} className={styles.galleryPairItem}>
+                  <div
+                    key={j}
+                    className={styles.galleryPairItem}
+                    style={{ "--ratio": ratio(src) }}
+                  >
                     <Image
                       src={src}
                       alt="Haveli Dharampura"
                       fill
                       sizes="(min-width: 768px) 48vw, 92vw"
-                      className={styles.galleryImg}
+                      className={styles.galleryImgFit}
                     />
                   </div>
                 ))}
