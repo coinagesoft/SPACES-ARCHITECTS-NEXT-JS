@@ -28,14 +28,14 @@ export const site = {
         [
             { label: "Home", href: "/" },
             { label: "Projects", href: "/projects" },
-            { label: "News+Events", href: "/blog" },
+            { label: "News+Events", href: "/news-events" },
             { label: "Blog", href: "/blog" },
             { label: "About", href: "/about" },
         ],
         [
             { label: "Process", href: "/process" },
-            { label: "Expressions", href: "/projects" },
-            { label: "Publication", href: "/blog" },
+            { label: "Expressions", href: "/expressions" },
+            { label: "Publication", href: "/publications" },
             { label: "Awards", href: "/awards" },
             { label: "Contact", href: "/contact" },
         ],

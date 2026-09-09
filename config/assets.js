@@ -336,6 +336,41 @@ export const assets = {
             image: unsplash("photo-1600566753190-17f0baa2a6c3", 900, 700),
             excerpt: "How the studio selects and sequences materials to create warmth, texture and a sense of permanence.",
         },
+        {
+            id: "spaces-that-tell-stories",
+            title: "Spaces That Tell a Story",
+            date: "Feb 2026",
+            image: featuredNews1,
+            excerpt: "A closer look at how material, light and movement shape meaningful everyday experiences.",
+        },
+        {
+            id: "craft-of-detail",
+            title: "The Craft of Detail",
+            date: "Jan 2026",
+            image: featuredNews2,
+            excerpt: "The small decisions that bring character, clarity and longevity to a completed space.",
+        },
+        {
+            id: "designing-with-nature",
+            title: "Designing With Nature",
+            date: "Dec 2025",
+            image: featuredNews3,
+            excerpt: "Creating a closer connection between built space, landscape and the rhythms of life.",
+        },
+        {
+            id: "art-of-adaptation",
+            title: "The Art of Adaptation",
+            date: "Nov 2025",
+            image: featuredNews4,
+            excerpt: "How existing structures can be reimagined with care, purpose and a contemporary voice.",
+        },
+        {
+            id: "architecture-in-context",
+            title: "Architecture in Context",
+            date: "Oct 2025",
+            image: projectImg1,
+            excerpt: "Every project begins with its setting, its people and the possibilities held within both.",
+        },
     ],
     // ---- Haveli Dharampura project page: hero + full photo gallery ----
     // Gallery block order/shape mirrors the original Canva page section-by-
