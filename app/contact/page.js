@@ -102,7 +102,7 @@ export default function ContactPage() {
       <SiteChrome />
 
       <section className={styles.headerRow}>
-        <h1 className={styles.pageTitle}>{contactCopy.heading}</h1>
+        {/* <h1 className={styles.pageTitle}>{contactCopy.heading}</h1> */}
       </section>
 
       <section className={styles.grid}>

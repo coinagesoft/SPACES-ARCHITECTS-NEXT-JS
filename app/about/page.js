@@ -13,10 +13,21 @@ export default function AboutPage() {
       <SiteChrome dark />
       <section className={styles.hero}>
         <div className={styles.heroImage}>
-          <Image src={assets.about.heroImage} alt="Studio interior" fill priority sizes="100vw" className="object-cover" />
+          <Image
+            src={assets.about.heroImage}
+            alt="Studio interior"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
         </div>
+
         <div className={styles.heroShade} />
-        <div className={`site-container ${styles.heroCaption}`}><h1>{aboutCopy.heroTitle}</h1></div>
+
+        <div className={`site-container ${styles.heroCaption}`}>
+          <h1>{aboutCopy.heroTitle}</h1>
+        </div>
       </section>
       <section className={`site-container ${styles.intro}`}>
         <p className={styles.kicker}>{aboutCopy.kicker}</p>

@@ -59,9 +59,9 @@ export default function Header({
           aria-label="Open menu"
           className="flex shrink-0 flex-col items-end gap-[5px] p-2"
         >
-          <span className={`block h-[5px] w-8 rounded-sm ${home ? "bg-white" : "bg-accent"}`} />
-          <span className={`block h-[5px] w-8 rounded-sm ${home ? "bg-white" : "bg-accent"}`} />
-          <span className={`block h-[5px] w-8 rounded-sm ${home ? "bg-white" : "bg-accent"}`} />
+          <span className={`block h-[3px] w-8 rounded-sm ${home ? "bg-white" : "bg-accent"}`} />
+          <span className={`block h-[3px] w-8 rounded-sm ${home ? "bg-white" : "bg-accent"}`} />
+          <span className={`block h-[3px] w-8 rounded-sm ${home ? "bg-white" : "bg-accent"}`} />
         </button>
       </div>
     </header>

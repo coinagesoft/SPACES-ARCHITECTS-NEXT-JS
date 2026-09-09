@@ -9,16 +9,16 @@ export default function Footer() {
     <footer className="border-t border-line mt-16">
       <div className={`${footerContainer} py-9 md:py-10`}>
         <div className="flex flex-col gap-10 md:flex-row md:items-start">
-          <div className="grid grid-cols-2 gap-x-8 gap-y-8 md:w-[31rem] md:grid-cols-4 md:gap-x-6 md:gap-y-0">
+          <div className="grid grid-cols-2 gap-x-8 gap-y-8 md:w-[50rem] md:grid-cols-4 md:gap-x-14 md:gap-y-0">
             {site.footerColumns.map((col) => (
               <div key={col.title}>
-                <p className="mb-3 text-[10px] tracking-widest2 uppercase text-faint">
+                <p className="mb-3 text-[14px] tracking-widest2 uppercase text-faint">
                   {col.title}
                 </p>
                 <ul className="space-y-1">
                   {col.links.map((link) => (
                     <li key={link}>
-                      <span className="cursor-pointer text-[10px] leading-4 tracking-wide uppercase text-faint transition-colors hover:text-accent">
+                      <span className="cursor-pointer text-[12px] leading-4 tracking-wide uppercase text-faint transition-colors hover:text-accent">
                         {link}
                       </span>
                     </li>
@@ -28,8 +28,8 @@ export default function Footer() {
             ))}
           </div>
 
-          <div className="md:ml-auto md:mr-10 md:w-[8.5rem]">
-            <p className="mb-3 text-[10px] tracking-widest2 uppercase text-accent">
+          <div className="md:ml-auto md:mr-10 md:w-[12rem]">
+            <p className="mb-3 text-[14px] tracking-widest2 uppercase text-accent">
               Connect With Us
             </p>
             <NewsletterForm />
