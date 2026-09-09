@@ -1,9 +1,9 @@
 .topBar {
     display: flex;
     width: calc(100% - 208px);
-    max-width: 1160px;
+    max-width: 1300px;
     margin: 0 auto;
-    padding: 32px 0;
+    padding: 164px 0 0;
     align-items: center;
     justify-content: space-between;
 }
@@ -11,17 +11,16 @@
 .menuLayout {
     display: grid;
     width: calc(100% - 208px);
-    max-width: 1160px;
-    grid-template-columns: 540px minmax(0, 1fr);
-    column-gap: 46px;
+    max-width: 1300px;
+    grid-template-columns: 610px minmax(0, 1fr);
+    column-gap: 50px;
     margin: 0 auto;
-    padding: 48px 0 64px;
+    padding: 75px 0 80px;
 }
 
 .menuImage {
     position: relative;
     width: 100%;
-    max-width: 760px;
     aspect-ratio: 4 / 3;
     overflow: hidden;
 }
@@ -32,10 +31,10 @@
 
 .menuNavigation {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    column-gap: 64px;
+    grid-template-columns: 247px minmax(0, 1fr);
+    column-gap: 80px;
     align-content: start;
-    padding-top: 0;
+    padding-top: 58px;
     padding-left: 0;
     min-width: 0;
 }
@@ -43,7 +42,7 @@
 .menuColumn {
     display: flex;
     flex-direction: column;
-    gap: 3.45rem;
+    gap: 3rem;
 }
 
 @media (max-width: 1500px) {
@@ -52,17 +51,33 @@
         width: calc(100% - 208px);
     }
     .menuLayout {
-        grid-template-columns: minmax(420px, 540px) minmax(0, 1fr);
-        column-gap: 46px;
+        grid-template-columns: 610px minmax(0, 1fr);
+        column-gap: 50px;
     }
     .menuImage {
         max-width: none;
     }
     .menuNavigation {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        column-gap: 64px;
-        padding-top: 0;
+        grid-template-columns: 247px minmax(0, 1fr);
+        column-gap: 80px;
+        padding-top: 58px;
         padding-left: 0;
+    }
+}
+
+@media (max-width: 1300px) and (min-width: 768px) {
+    .topBar {
+        padding-top: 96px;
+    }
+    .menuLayout {
+        grid-template-columns: minmax(360px, 46%) minmax(0, 1fr);
+        column-gap: 40px;
+        padding-top: 56px;
+    }
+    .menuNavigation {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 40px;
+        padding-top: 36px;
     }
 }
 

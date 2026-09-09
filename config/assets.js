@@ -20,6 +20,7 @@
 
 import haveliDharampuraImage from "./assets/haveli dharmapura.webp";
 import aboutHeroImage from "./assets/About_hero.jpg";
+import menuImage from "./assets/menu/menu.jpg";
 import kapilPhoto from "./assets/Kapil.jpg";
 import featuredProject1 from "./assets/Featured Project/1.jpg";
 import featuredProject2 from "./assets/Featured Project/2.jpg";
@@ -129,7 +130,7 @@ export const assets = {
         heroImage: unsplash("photo-1600585154340-be6161a56a0c", 1920, 1080),
         heroTitle: "HOUSE OF STEPPED GARDEN",
         heroSubtitle: "KOCHI",
-        menuThumb: unsplash("photo-1600607687939-ce8a6c25118c", 900, 900),
+        menuThumb: menuImage,
     },
 
     // ---- About / Studio page ----
