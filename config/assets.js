@@ -346,10 +346,10 @@ export const assets = {
         hero: haveliHero,
         pressLogos: [
             { name: "UNESCO", image: haveliLogoUnesco },
-            { name: "NDTV-Grohe", image: haveliLogoNdtv },
-            { name: "ArchDaily", image: haveliLogoArchDaily },
             { name: "Architizer", image: haveliLogoArchitizer },
             { name: "IIID", image: haveliLogoIIID },
+            { name: "ArchDaily", image: haveliLogoArchDaily },
+            { name: "NDTV-Grohe", image: haveliLogoNdtv },
         ],
         gallery: [
             { type: "pair", images: [haveli1, haveli2] },
