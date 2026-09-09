@@ -21,21 +21,11 @@ export default function ProjectsPage() {
 
   return (
     <main>
-      <SiteChrome />
-      <div className={styles.filterBar}>
-        <nav className={`site-container ${styles.filterNav}`} aria-label="Project categories">
-          {CATEGORIES.map((category) => (
-            <button
-              key={category.value}
-              type="button"
-              onClick={() => setActive(category.value)}
-              className={`${styles.filterTab} ${active === category.value ? styles.filterTabActive : ""}`}
-            >
-              {category.label}
-            </button>
-          ))}
-        </nav>
-      </div>
+      <SiteChrome
+        projectCategories={CATEGORIES}
+        activeProjectCategory={active}
+        onProjectCategoryChange={setActive}
+      />
 
       <section className={`site-container ${styles.gallery}`}>
         <JustifiedGallery items={gallery} targetRowHeight={320} gap={24} />
