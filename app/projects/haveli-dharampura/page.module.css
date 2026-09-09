@@ -323,21 +323,25 @@
 }
 
 .recognitionImageWrap {
+  position: relative;
   width: 100%;
+  aspect-ratio: 1.588 / 1;
+  overflow: hidden;
 }
 
 .recognitionImage {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
 }
 
 .recognitionList {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 48px;
-  padding: 4px 0;
+  gap: 72px;
+  padding: 40px 0 76px;
 }
 
 .recognitionItem {
@@ -348,43 +352,56 @@
 
 .recognitionLogo {
   display: block;
+  align-self: center;
   width: auto;
-  height: 92px;
-  max-width: 230px;
+  height: 136px;
+  max-width: 290px;
   object-fit: contain;
   object-position: left center;
 }
 
 .recognitionItem:nth-child(2) .recognitionLogo {
-  height: 66px;
-  margin: 12px 0 14px;
+  height: 114px;
+  margin: 0 0 24px;
 }
 
 .recognitionItem p {
-  max-width: 270px;
-  margin: 20px 0 0;
+  max-width: 390px;
+  margin: 18px 0 0;
   color: #202020;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.14;
+  font-size: clamp(1.15rem, 1.55vw, 1.65rem);
+  font-weight: 700;
+  line-height: 1.12;
 }
 
 @media (min-width: 768px) {
   .recognition {
-    grid-template-columns: minmax(0, 2.15fr) minmax(240px, 0.85fr);
+    grid-template-columns: minmax(0, 2.5fr) minmax(340px, 0.9fr);
     align-items: stretch;
-    column-gap: clamp(48px, 7vw, 140px);
-    padding-bottom: 96px;
-  }
-
-  .recognitionList {
-    gap: 24px;
+    column-gap: clamp(56px, 5.85vw, 112px);
+    width: calc(100% - 80px);
+    max-width: 1686px;
+    margin-inline: auto;
+    padding: 0 0 96px;
   }
 }
 
 @media (max-width: 767px) {
   .recognition {
     padding-bottom: 52px;
+  }
+
+  .recognitionList {
+    gap: 48px;
+    padding: 0;
+  }
+
+  .recognitionLogo {
+    height: 92px;
+  }
+
+  .recognitionItem:nth-child(2) .recognitionLogo {
+    height: 66px;
   }
 
   .recognitionItem p {

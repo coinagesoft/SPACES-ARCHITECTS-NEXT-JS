@@ -126,7 +126,7 @@ export default function HaveliDharampuraPage() {
               WAS TAKEN.
             </p>
 
-            <div className={styles.pressLogos}>
+            <div className={styles.pressLogos} aria-label="Press and award recognition">
               {pressLogos.map((mark) => (
                 <span key={mark.name} className={styles.pressMark}>
                   <Image
