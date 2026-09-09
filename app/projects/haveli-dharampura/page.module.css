@@ -2,23 +2,12 @@
 .hero {
   position: relative;
   width: 100%;
-  height: 85vh;
+  height: 100vh;
   overflow: hidden;
 }
 
 .heroImage {
   object-fit: cover;
-}
-
-.heroOverlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0.1) 45%,
-    transparent 100%
-  );
 }
 
 .heroText {
@@ -27,6 +16,9 @@
   bottom: 32px;
   color: #fff;
   z-index: 2;
+  /* No dark overlay panel anymore — just a soft shadow so the type stays
+     readable over lighter parts of the photo. */
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.55);
 }
 
 .heroText h1 {
@@ -48,7 +40,9 @@
 
 @media (min-width: 768px) {
   .heroText {
-    left: 64px;
+    /* Matches .site-container's px-10 (40px) so this sits on the exact
+       same left edge as the header logo above it, like the Canva page. */
+    left: 40px;
   }
 }
 
@@ -138,6 +132,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: flex-end;
   gap: 32px;
   margin-top: 40px;
   padding-top: 32px;
@@ -145,11 +140,15 @@
 }
 
 .pressMark {
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #8a8a8a;
+  display: inline-flex;
+  align-items: center;
+}
+
+.pressMarkImg {
+  height: 32px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
 }
 
 /* ---------- Gallery ---------- */
@@ -163,7 +162,10 @@
 .galleryFull {
   position: relative;
   width: 100%;
-  aspect-ratio: 21 / 9;
+  /* Matches the real photos' native ~3:2 ratio so object-fit: cover barely
+     needs to crop anything — was 21/9 before, which sliced off large chunks
+     top/bottom since the source photos are nowhere near that wide. */
+  aspect-ratio: 3 / 2;
   overflow: hidden;
 }
 
@@ -184,6 +186,45 @@
   object-fit: cover;
 }
 
+/* Tall portrait beside a stack of two shots — matches the Canva page's
+   distinctive "one big + two small" gallery moment. */
+.gallerySplit {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.gallerySplitLarge {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+
+.gallerySplitStack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.gallerySplitStackItem {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+/* Wide panoramic band — breaks out of the container to run edge-to-edge,
+   same as the single wide banner shot on the Canva page. Ratio matches
+   haveli_26.jpg's real ~2.46:1 shape almost exactly, so nothing gets cut. */
+.galleryWide {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  aspect-ratio: 2.46 / 1;
+  overflow: hidden;
+}
+
 @media (min-width: 768px) {
   .gallery {
     gap: 24px;
@@ -192,6 +233,23 @@
   .galleryPair {
     grid-template-columns: 1fr 1fr;
     gap: 24px;
+  }
+  .gallerySplit {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 24px;
+  }
+  .gallerySplitLarge {
+    flex: 1 1 50%;
+    aspect-ratio: auto;
+  }
+  .gallerySplitStack {
+    flex: 1 1 50%;
+    gap: 24px;
+  }
+  .gallerySplitStackItem {
+    flex: 1;
+    aspect-ratio: auto;
   }
 }
 

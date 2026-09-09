@@ -50,13 +50,41 @@ import projectImg18 from "./assets/projects/18.png";
 import projectImg19 from "./assets/projects/19.jpg";
 import projectImg20 from "./assets/projects/20.jpg";
 import projectImg21 from "./assets/projects/21.jpg";
-import haveliGallery1 from "./assets/Final-1-6.webp";
-import haveliGallery2 from "./assets/Final-2-6.webp";
-import haveliGallery3 from "./assets/Final-3-6.webp";
-import haveliGallery4 from "./assets/Final-4-6.webp";
-import haveliGallery6 from "./assets/Final-6-3.webp";
-import haveliGallery7 from "./assets/Final-7-2.webp";
-import haveliGallery8 from "./assets/Final-8-1.webp";
+// ---- Haveli Dharampura — real project photography + press marks ----
+// (These match the original Canva site's photo order 1:1 — do not reorder.)
+import haveliHero from "./assets/projects/haveli/haveli_hero.jpg";
+import haveli1 from "./assets/projects/haveli/haveli_1.jpg";
+import haveli2 from "./assets/projects/haveli/haveli_2.jpg";
+import haveli3 from "./assets/projects/haveli/haveli_3.jpg";
+import haveli4 from "./assets/projects/haveli/haveli_4.jpg";
+import haveli5 from "./assets/projects/haveli/haveli_5.jpg";
+import haveli6 from "./assets/projects/haveli/haveli_6.jpg";
+import haveli7 from "./assets/projects/haveli/haveli_7.jpg";
+import haveli8 from "./assets/projects/haveli/haveli_8.jpg";
+import haveli9 from "./assets/projects/haveli/haveli_9.jpg";
+import haveli10 from "./assets/projects/haveli/haveli_10.jpg";
+import haveli11 from "./assets/projects/haveli/haveli_11.jpg";
+import haveli12 from "./assets/projects/haveli/haveli_12.jpg";
+import haveli13 from "./assets/projects/haveli/haveli_13.jpg";
+import haveli14 from "./assets/projects/haveli/haveli_14.jpg";
+import haveli15 from "./assets/projects/haveli/haveli_15.jpg";
+import haveli16 from "./assets/projects/haveli/haveli_16.jpg";
+import haveli17 from "./assets/projects/haveli/haveli_17.jpg";
+import haveli18 from "./assets/projects/haveli/haveli_18.jpg";
+import haveli19 from "./assets/projects/haveli/haveli_19.jpg";
+import haveli20 from "./assets/projects/haveli/haveli_20.jpg";
+import haveli21 from "./assets/projects/haveli/haveli_21.jpg";
+import haveli22 from "./assets/projects/haveli/haveli_22.jpg";
+import haveli23 from "./assets/projects/haveli/haveli_23.jpg";
+import haveli24 from "./assets/projects/haveli/haveli_24.jpg";
+import haveli25 from "./assets/projects/haveli/haveli_25.jpg";
+import haveli26 from "./assets/projects/haveli/haveli_26.jpg";
+import haveli27 from "./assets/projects/haveli/haveli_27.jpg";
+import haveliLogoUnesco from "./assets/projects/haveli/unesco.png";
+import haveliLogoNdtv from "./assets/projects/haveli/NDTV.png";
+import haveliLogoArchDaily from "./assets/projects/haveli/arch_daily.png";
+import haveliLogoArchitizer from "./assets/projects/haveli/architizer.png";
+import haveliLogoIIID from "./assets/projects/haveli/institute_of_indian.png";
 import featuredIn1 from "./assets/Home Page/1.png";
 import featuredIn2 from "./assets/Home Page/2.png";
 import featuredIn3 from "./assets/Home Page/3.png";
@@ -306,14 +334,35 @@ export const assets = {
         },
     ],
     // ---- Haveli Dharampura project page: hero + full photo gallery ----
+    // Gallery block order/shape mirrors the original Canva page section-by-
+    // section: alternating full-bleed landscape shots, side-by-side pairs,
+    // a "tall portrait beside two stacked shots" split, and one wide
+    // panoramic band near the end.
     haveliDharampura: {
-        hero: haveliDharampuraImage,
+        hero: haveliHero,
+        pressLogos: [
+            { name: "UNESCO", image: haveliLogoUnesco },
+            { name: "NDTV-Grohe", image: haveliLogoNdtv },
+            { name: "ArchDaily", image: haveliLogoArchDaily },
+            { name: "Architizer", image: haveliLogoArchitizer },
+            { name: "IIID", image: haveliLogoIIID },
+        ],
         gallery: [
-            { type: "pair", images: [haveliGallery1, haveliGallery2] },
-            { type: "full", image: haveliGallery3 },
-            { type: "pair", images: [haveliGallery4, haveliGallery6] },
-            { type: "full", image: haveliGallery7 },
-            { type: "full", image: haveliGallery8 },
+            { type: "pair", images: [haveli1, haveli2] },
+            { type: "full", image: haveli3 },
+            { type: "pair", images: [haveli4, haveli5] },
+            { type: "full", image: haveli6 },
+            { type: "split", large: haveli7, stack: [haveli8, haveli9] },
+            { type: "full", image: haveli10 },
+            { type: "pair", images: [haveli11, haveli12] },
+            { type: "split", large: haveli13, stack: [haveli14, haveli15] },
+            { type: "split", large: haveli16, stack: [haveli17, haveli18] },
+            { type: "split", large: haveli19, stack: [haveli20, haveli21] },
+            { type: "full", image: haveli22 },
+            { type: "full", image: haveli23 },
+            { type: "pair", images: [haveli24, haveli25] },
+            { type: "wide", image: haveli26 },
+            { type: "full", image: haveli27 },
         ],
     },
 };

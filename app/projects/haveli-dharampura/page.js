@@ -22,9 +22,7 @@ const achievements = [
   "NDTV-Grohe Design & Architecture Awards 2015 – Heritage Architecture (Jury Commendation)",
 ];
 
-// Text-based press marks — no external logo files required.
-const pressMarks = ["UNESCO", "Architizer", "IIID", "ArchDaily", "NDTV"];
-
+const pressLogos = assets.haveliDharampura.pressLogos;
 const gallery = assets.haveliDharampura.gallery;
 
 export default function HaveliDharampuraPage() {
@@ -43,7 +41,6 @@ export default function HaveliDharampuraPage() {
             sizes="100vw"
             className={styles.heroImage}
           />
-          <div className={styles.heroOverlay} />
           <div className={styles.heroText}>
             <h1>Haveli Dharampura</h1>
             <p>Delhi</p>
@@ -112,29 +109,83 @@ export default function HaveliDharampuraPage() {
             </p>
 
             <div className={styles.pressLogos}>
-              {pressMarks.map((mark) => (
-                <span key={mark} className={styles.pressMark}>
-                  {mark}
+              {pressLogos.map((mark) => (
+                <span key={mark.name} className={styles.pressMark}>
+                  <Image
+                    src={mark.image}
+                    alt={mark.name}
+                    className={styles.pressMarkImg}
+                  />
                 </span>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Gallery */}
+        {/* Gallery — mirrors the original Canva page's rhythm of full-bleed
+            shots, side-by-side pairs, a tall-portrait-beside-a-stack split,
+            and one wide panoramic band. */}
         <section className={`site-container ${styles.gallery}`}>
-          {gallery.map((block, i) =>
-            block.type === "full" ? (
-              <div key={i} className={styles.galleryFull}>
-                <Image
-                  src={block.image}
-                  alt="Haveli Dharampura"
-                  fill
-                  sizes="100vw"
-                  className={styles.galleryImg}
-                />
-              </div>
-            ) : (
+          {gallery.map((block, i) => {
+            if (block.type === "full") {
+              return (
+                <div key={i} className={styles.galleryFull}>
+                  <Image
+                    src={block.image}
+                    alt="Haveli Dharampura"
+                    fill
+                    sizes="100vw"
+                    className={styles.galleryImg}
+                  />
+                </div>
+              );
+            }
+
+            if (block.type === "wide") {
+              return (
+                <div key={i} className={styles.galleryWide}>
+                  <Image
+                    src={block.image}
+                    alt="Haveli Dharampura"
+                    fill
+                    sizes="100vw"
+                    className={styles.galleryImg}
+                  />
+                </div>
+              );
+            }
+
+            if (block.type === "split") {
+              return (
+                <div key={i} className={styles.gallerySplit}>
+                  <div className={styles.gallerySplitLarge}>
+                    <Image
+                      src={block.large}
+                      alt="Haveli Dharampura"
+                      fill
+                      sizes="(min-width: 768px) 48vw, 92vw"
+                      className={styles.galleryImg}
+                    />
+                  </div>
+                  <div className={styles.gallerySplitStack}>
+                    {block.stack.map((src, j) => (
+                      <div key={j} className={styles.gallerySplitStackItem}>
+                        <Image
+                          src={src}
+                          alt="Haveli Dharampura"
+                          fill
+                          sizes="(min-width: 768px) 48vw, 92vw"
+                          className={styles.galleryImg}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            }
+
+            // "pair" — two images side by side
+            return (
               <div key={i} className={styles.galleryPair}>
                 {block.images.map((src, j) => (
                   <div key={j} className={styles.galleryPairItem}>
@@ -148,8 +199,8 @@ export default function HaveliDharampuraPage() {
                   </div>
                 ))}
               </div>
-            )
-          )}
+            );
+          })}
         </section>
 
         {/* Share */}
