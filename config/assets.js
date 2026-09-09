@@ -113,6 +113,8 @@ import awardMark7 from "./assets/awards/7.png";
 import awardMark8 from "./assets/awards/8.png";
 import awardMark9 from "./assets/awards/9.png";
 import awardMark10 from "./assets/awards/10.png";
+import awardsFeature1 from "./assets/awards/feature1.jpg";
+import awardsFeature2 from "./assets/awards/feature2.jpg";
 
 const unsplash = (id, w = 1600, h = 1000) =>
     `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&h=${h}&q=80`;
@@ -218,6 +220,7 @@ export const assets = {
         { name: "IIID", image: awardMark9 },
         { name: "Architectural Digest", image: awardMark10 },
     ],
+    awardsFeatures: [awardsFeature1, awardsFeature2],
 
     // ---- Projects gallery page ----
     // Numbered site photos (1.jpg … 21.jpg), in serial order.
