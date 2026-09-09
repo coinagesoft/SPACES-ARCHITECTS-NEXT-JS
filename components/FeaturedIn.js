@@ -3,8 +3,8 @@ import { assets } from "@/config/assets";
 
 export default function FeaturedIn() {
   return (
-    <section className="site-container py-16 md:py-24">
-      <h2 className="mb-8 text-[20px] font-medium uppercase tracking-[0.16em] text-ink md:mb-10 md:text-[24px]">
+    <section className="site-container py-16 md:py-6">
+      <h2 className="mb-4 text-[24px] font-normal uppercase tracking-[0.16em] text-ink md:mb-4 md:text-[28px]">
         Featured In
       </h2>
       <div className="grid grid-cols-2 gap-x-5 gap-y-7 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-9 xl:grid-cols-10 md:gap-x-7 md:gap-y-9">

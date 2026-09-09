@@ -12,7 +12,7 @@ export default function NewsCard({ image, name }) {
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </div>
-      <p className="mt-3 text-[10px] leading-4 uppercase tracking-[0.14em] text-ink/80 md:text-[11px]">{name}</p>
+      <p className="mt-3 text-[14px] leading-4 uppercase tracking-[0.14em] text-ink/80 md:text-[14px]">{name}</p>
     </article>
   );
 }

@@ -47,7 +47,7 @@ export default function HomePage() {
     <main>
       <SiteChrome dark home />
       <HeroSlider projects={assets.projects.slice(0, 4)} />
-      <section className="site-container py-16 md:py-20">
+      <section className="site-container py-8 md:py-12">
         <div className="space-y-7">
           {homeCopy.intro.map((paragraph, index) => (
             <p key={index} className="text-[11px] uppercase leading-[1.65] tracking-[0.14em] text-[#7d7d7d] md:text-[12px]">
@@ -56,19 +56,19 @@ export default function HomePage() {
           ))}
         </div>
       </section>
-      <section className="site-container pb-16 md:pb-24">
-        <h2 className="mb-8 text-[20px] font-medium uppercase tracking-[0.16em] text-ink md:mb-10 md:text-[24px]">
+      <section className="site-container pb-8 md:pb-12">
+        <h2 className="mb-4 text-[20px] font-normal uppercase tracking-[0.16em] text-ink md:mb-4 md:text-[28px]">
           Featured Projects
         </h2>
-        <div className="grid grid-cols-2 gap-5 md:grid-cols-4 md:gap-7">
+        <div className="grid grid-cols-2 gap-5 md:grid-cols-4 md:gap-14">
           {assets.featuredProjects.map((project) => <ProjectCard key={project.name} {...project} />)}
         </div>
       </section>
-      <section className="site-container pb-16 md:pb-24">
-        <h2 className="mb-8 text-[20px] font-medium uppercase tracking-[0.16em] text-ink md:mb-10 md:text-[24px]">
+      <section className="site-container pb-8 md:pb-12">
+        <h2 className="mb-4 text-[24px] font-normal uppercase tracking-[0.16em] text-ink md:mb-4 md:text-[28px]">
           Featured News
         </h2>
-        <div className="grid grid-cols-2 gap-5 md:grid-cols-4 md:gap-7">
+        <div className="grid grid-cols-2 gap-5 md:grid-cols-4 md:gap-14">
           {assets.featuredNews.map((news) => <NewsCard key={news.name} {...news} />)}
         </div>
       </section>
