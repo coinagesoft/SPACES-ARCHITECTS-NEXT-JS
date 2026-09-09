@@ -240,16 +240,26 @@
     gap: 24px;
   }
   .gallerySplitLarge {
+    /* Keep a real aspect-ratio here (was "auto") — with next/image's fill
+       mode rendering as position:absolute, nothing else in this flex row
+       contributes intrinsic height, so "auto" collapsed the whole row to
+       0px. This is what actually establishes the row's height on desktop. */
     flex: 1 1 50%;
-    aspect-ratio: auto;
+    aspect-ratio: 3 / 4;
   }
   .gallerySplitStack {
     flex: 1 1 50%;
     gap: 24px;
+    /* No explicit height needed: align-items: stretch on .gallerySplit
+       stretches this column to match .gallerySplitLarge's real height. */
   }
   .gallerySplitStackItem {
+    /* flex: 1 now has a real parent height (via the stretch above) to
+       divide between the two stacked items, instead of aspect-ratio: auto
+       collapsing each to 0px. */
     flex: 1;
     aspect-ratio: auto;
+    min-height: 0;
   }
 }
 
