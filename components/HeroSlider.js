@@ -28,9 +28,8 @@ export default function HeroSlider({ projects }) {
                     fill
                     priority={index === 0}
                     sizes="100vw"
-                    className={`object-cover transition-opacity duration-1000 ${
-                        index === activeIndex ? "opacity-100" : "opacity-0"
-                    }`}
+                    className={`object-cover transition-opacity duration-1000 ${index === activeIndex ? "opacity-100" : "opacity-0"
+                        }`}
                 />
             ))}
 
@@ -41,7 +40,7 @@ export default function HeroSlider({ projects }) {
             <div className="absolute bottom-10 left-0 right-0 site-container">
                 <h1
                     key={activeProject.id}
-                    className="text-white text-xl md:text-2xl lg:text-3xl tracking-widest2 uppercase animate-[hero-title-in_700ms_ease-in-out]"
+                    className="text-white text-xl md:text-2xl lg:text-3xl font-light tracking-widest2 uppercase animate-[hero-title-in_700ms_ease-in-out]"
                 >
                     {activeProject.name}
                 </h1>
@@ -58,11 +57,10 @@ export default function HeroSlider({ projects }) {
                             index === activeIndex ? "true" : undefined
                         }
                         onClick={() => setActiveIndex(index)}
-                        className={`h-1 transition-all duration-300 ${
-                            index === activeIndex
+                        className={`h-1 transition-all duration-300 ${index === activeIndex
                                 ? "w-8 bg-white"
                                 : "w-4 bg-white/50"
-                        }`}
+                            }`}
                     />
                 ))}
             </div>

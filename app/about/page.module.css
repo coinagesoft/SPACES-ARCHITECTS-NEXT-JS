@@ -32,36 +32,40 @@
     right: 0;
     bottom: 40px;
     left: 0;
-    padding: 0 60px;
+    padding: 0 40px;
 }
 
 .heroCaption h1 {
     margin: 0;
     color: #fff;
-    font-size: 3rem;
+    font-size: 30px;
     font-weight: 300;
     letter-spacing: .18em;
     line-height: 1;
     text-transform: uppercase;
 }
 
-.intro,
-.founder,
-.team {
-    width: calc(100% - 120px);
-    max-width: 1500px;
-    margin: 0 auto;
+.intro {
+    padding-top: 70px;
+    padding-bottom: 44px;
+    display: grid;
+    gap: 5px;
 }
 
-.intro {
-    padding: 70px 0 44px;
+.founder {
     display: grid;
-    gap: 20px;
+    grid-template-columns: 380px minmax(0, 1fr);
+    column-gap: 48px;
+    padding-bottom: 56px;
+}
+
+.team {
+    padding-bottom: 48px;
 }
 
 .kicker {
     margin: 0;
-    color: #d97a1f;
+    color: #fea50b;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: .08em;
@@ -71,7 +75,7 @@
 
 .quote {
     margin: 0;
-    color: #d97a1f;
+    color: #fea50b;
     font-size: 15px;
     font-weight: 700;
     letter-spacing: .01em;
@@ -86,10 +90,11 @@
     font-weight: 400;
     letter-spacing: .01em;
     line-height: 1.8;
+    text-align: justify;
 }
 
 .highlight {
-    color: #d97a1f;
+    color: #fea50b;
     font-weight: 500;
 }
 
@@ -122,12 +127,12 @@
 }
 
 .founderContent h2 span {
-    color: #d97a1f;
+    color: #fea50b;
 }
 
 .founderBio {
     display: grid;
-    gap: 20px;
+    gap: 5px;
 }
 
 .team {
@@ -136,7 +141,7 @@
 
 .team h2 {
     margin: 0 0 28px;
-    color: #d97a1f;
+    color: #fea50b;
     font-size: 22px;
     font-weight: 400;
     letter-spacing: .22em;
@@ -186,11 +191,6 @@
     .heroCaption {
         padding: 0 24px;
         bottom: 24px;
-    }
-    .intro,
-    .founder,
-    .team {
-        width: calc(100% - 48px);
     }
     .intro {
         padding: 44px 0 32px;
