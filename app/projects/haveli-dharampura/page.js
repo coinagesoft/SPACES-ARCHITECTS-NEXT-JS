@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import SiteChrome from "@/components/SiteChrome";
 import Footer from "@/components/Footer";
 import { assets } from "@/config/assets";
@@ -24,6 +25,12 @@ const achievements = [
 
 const pressLogos = assets.haveliDharampura.pressLogos;
 const gallery = assets.haveliDharampura.gallery;
+const recognitionImage = gallery[gallery.length - 1].image;
+const recognitionItems = [
+  { logo: pressLogos[0], text: "UNESCO Bangkok Announces 2017 Asia-Pacific Awards for Cultural Heritage Conservation" },
+  { logo: pressLogos[4], text: "UNESCO Bangkok Announces 2017 Asia-Pacific Awards for Cultural Heritage Conservation" },
+];
+const moreProjects = assets.projects.filter((project) => project.id !== "haveli-dharampura").slice(0, 3);
 
 // A static-imported image carries its real intrinsic width/height, so we
 // can size gallery rows the way a proper "justified" photo grid does:
@@ -137,7 +144,7 @@ export default function HaveliDharampuraPage() {
             shots, side-by-side pairs, a tall-portrait-beside-a-stack split,
             and one wide panoramic band. */}
         <section className={`site-container ${styles.gallery}`}>
-          {gallery.map((block, i) => {
+          {gallery.slice(0, -1).map((block, i) => {
             if (block.type === "full") {
               return (
                 <div key={i} className={styles.galleryFull}>
@@ -193,7 +200,10 @@ export default function HaveliDharampuraPage() {
                       <div
                         key={j}
                         className={styles.gallerySplitStackItem}
-                        style={{ "--ratio": stackRatios[j] }}
+                        style={{
+                          "--ratio": stackRatios[j],
+                          "--height-weight": 1 / stackRatios[j],
+                        }}
                       >
                         <Image
                           src={src}
@@ -234,6 +244,31 @@ export default function HaveliDharampuraPage() {
           })}
         </section>
 
+        {/* Recognition — the final courtyard image sits alongside the two
+            publication/award callouts, matching the supplied reference. */}
+        <section className={`site-container ${styles.recognition}`}>
+          <div className={styles.recognitionImageWrap}>
+            <Image
+              src={recognitionImage}
+              alt="Haveli Dharampura courtyard"
+              sizes="(min-width: 768px) 62vw, 100vw"
+              className={styles.recognitionImage}
+            />
+          </div>
+          <div className={styles.recognitionList}>
+            {recognitionItems.map(({ logo, text }) => (
+              <article key={logo.name} className={styles.recognitionItem}>
+                <Image
+                  src={logo.image}
+                  alt={logo.name}
+                  className={styles.recognitionLogo}
+                />
+                <p>{text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
         {/* Share */}
         <section className={styles.share}>
           <p>Share</p>
@@ -241,7 +276,18 @@ export default function HaveliDharampuraPage() {
             <a href="#" aria-label="Facebook">f</a>
             <a href="#" aria-label="X">x</a>
             <a href="#" aria-label="LinkedIn">in</a>
-            <a href="#" aria-label="Email">@</a>
+            <a href="mailto:admin@spacesarchitects-ka.com" aria-label="Email">✉</a>
+          </div>
+        </section>
+
+        <section className={`site-container ${styles.moreSection}`}>
+          <p className={styles.moreHeading}>More</p>
+          <div className={styles.moreGrid}>
+            {moreProjects.map((project) => (
+              <Link key={project.id} href="/projects" className={styles.moreCard} aria-label={project.name}>
+                <Image src={project.image} alt={project.name} fill sizes="(min-width: 768px) 29vw, 90vw" className={styles.moreImage} />
+              </Link>
+            ))}
           </div>
         </section>
       </main>

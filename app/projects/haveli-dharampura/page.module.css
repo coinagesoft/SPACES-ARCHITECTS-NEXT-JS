@@ -20,32 +20,46 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 32px;
+  bottom: 40px;
   z-index: 2;
 }
 
 .heroText {
   color: #fff;
-  /* No dark overlay panel anymore — just a soft shadow so the type stays
-     readable over lighter parts of the photo. */
-  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.55);
 }
 
 .heroText h1 {
-  font-size: clamp(1.75rem, 4vw, 3rem);
-  font-weight: 600;
-  letter-spacing: 0.15em;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   line-height: 1.2;
   margin: 0;
 }
 
 .heroText p {
-  font-size: clamp(1.1rem, 2vw, 1.5rem);
-  letter-spacing: 0.15em;
+  font-size: 0.875rem;
+  font-weight: 300;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   opacity: 0.9;
   margin: 4px 0 0;
+}
+
+@media (min-width: 768px) {
+  .heroText h1 {
+    font-size: 1.5rem;
+  }
+
+  .heroText p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroText h1 {
+    font-size: 1.875rem;
+  }
 }
 
 /* ---------- Details + description ---------- */
@@ -53,48 +67,47 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 40px;
-  padding-top: 56px;
-  padding-bottom: 56px;
+  padding-top: 52px;
+  padding-bottom: 64px;
 }
 
 @media (min-width: 768px) {
   .infoSection {
-    grid-template-columns: 1fr 3fr;
-    gap: 56px;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    grid-template-columns: 370px minmax(0, 1fr);
+    gap: 100px;
   }
 }
 
 .infoSidebar {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 42px;
   font-size: 12px;
 }
 
 .infoSidebar h3 {
-  font-weight: 600;
-  letter-spacing: 0.15em;
+  font-weight: 500;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  margin: 0 0 12px;
+  margin: 0 0 13px;
 }
 
 .infoSidebar dl {
   margin: 0;
-  color: #525252;
+  color: #a0a0a0;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.14em;
+  line-height: 1.9;
 }
 
 .infoSidebar dl div {
-  margin-bottom: 4px;
+  margin-bottom: 1px;
 }
 
 .infoSidebar dt {
   display: inline;
   font-weight: 500;
-  color: #262626;
+  color: #1c1c1c;
 }
 
 .infoSidebar dd {
@@ -106,24 +119,26 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  color: #525252;
+  color: #666;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.12em;
+  line-height: 1.75;
 }
 
 .infoSidebar ul li {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .infoBody p {
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 1.9;
-  letter-spacing: 0.02em;
-  color: #404040;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.95;
+  letter-spacing: 0.13em;
+  color: #4f4f4f;
   text-align: justify;
   text-transform: uppercase;
   margin: 0 0 24px;
+
 }
 
 .highlight {
@@ -131,26 +146,35 @@
 }
 
 .pressLogos {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   align-items: center;
-  justify-content: flex-end;
-  gap: 32px;
-  margin-top: 40px;
-  padding-top: 32px;
-  border-top: 1px solid #e7e5e2;
+  gap: 28px;
+  margin-top: 56px;
 }
 
 .pressMark {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
 }
 
 .pressMarkImg {
-  height: 32px;
+  height: 44px;
   width: auto;
-  max-width: 160px;
+  max-width: 100%;
   object-fit: contain;
+}
+
+@media (max-width: 767px) {
+  .heroTextWrap {
+    bottom: 24px;
+  }
+
+  .pressLogos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 36px;
+  }
 }
 
 /* ---------- Gallery ---------- */
@@ -230,17 +254,17 @@
   overflow: hidden;
 }
 
-/* Wide panoramic band — breaks out of the container to run edge-to-edge,
-   same as the single wide banner shot on the Canva page. */
+/* Wide panoramic band — stays within the gallery container so it aligns
+   with the surrounding images and cannot create horizontal overflow. */
 .galleryWide {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
+  width: 100%;
+  max-width: 100%;
 }
 
 @media (min-width: 768px) {
   .gallery {
     gap: 24px;
-    padding-bottom: 80px;
+    padding-bottom: 64px;
   }
 
   .galleryPair {
@@ -281,46 +305,172 @@
        own aspect-ratio (set above) keeps its width correct for that
        height. Net result: both shots keep their real proportions and the
        stack's total height matches `large` exactly. */
-    flex-grow: calc(1 / var(--ratio));
+    /* CSS division (calc(1 / var(--ratio))) is not consistently supported
+       by browsers. The reciprocal is calculated in React and supplied as a
+       plain number, keeping every stack item at its natural proportion. */
+    flex-grow: var(--height-weight);
     flex-shrink: 1;
     flex-basis: 0%;
+  }
+}
+
+/* ---------- Recognition ---------- */
+.recognition {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  padding-bottom: 72px;
+}
+
+.recognitionImageWrap {
+  width: 100%;
+}
+
+.recognitionImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.recognitionList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 48px;
+  padding: 4px 0;
+}
+
+.recognitionItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.recognitionLogo {
+  display: block;
+  width: auto;
+  height: 92px;
+  max-width: 230px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.recognitionItem:nth-child(2) .recognitionLogo {
+  height: 66px;
+  margin: 12px 0 14px;
+}
+
+.recognitionItem p {
+  max-width: 270px;
+  margin: 20px 0 0;
+  color: #202020;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.14;
+}
+
+@media (min-width: 768px) {
+  .recognition {
+    grid-template-columns: minmax(0, 2.15fr) minmax(240px, 0.85fr);
+    align-items: stretch;
+    column-gap: clamp(48px, 7vw, 140px);
+    padding-bottom: 96px;
+  }
+
+  .recognitionList {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .recognition {
+    padding-bottom: 52px;
+  }
+
+  .recognitionItem p {
+    font-size: 14px;
   }
 }
 
 /* ---------- Share ---------- */
 .share {
   text-align: center;
-  padding-bottom: 80px;
+  padding-bottom: 56px;
 }
 
 .share p {
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.18em;
   font-size: 12px;
-  color: #737373;
-  margin: 0 0 16px;
+  color: #a9a9a9;
+  margin: 0 0 28px;
 }
 
 .shareIcons {
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: 32px;
 }
 
 .shareIcons a {
-  color: #a3a3a3;
+  color: #b0b0b0;
   text-decoration: none;
-  font-size: 13px;
-  width: 32px;
-  height: 32px;
-  border: 1px solid #d4d4d4;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
 }
 
 .shareIcons a:hover {
-  color: #404040;
-  border-color: #404040;
+  color: #fea50b;
+}
+
+/* ---------- More projects ---------- */
+.moreSection {
+  padding-bottom: 80px;
+}
+
+.moreHeading {
+  margin: 0 0 16px;
+  color: #a9a9a9;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.moreGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.moreCard {
+  position: relative;
+  display: block;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.moreImage {
+  object-fit: cover;
+  transition: transform 500ms;
+}
+
+.moreCard:hover .moreImage {
+  transform: scale(1.04);
+}
+
+@media (max-width: 767px) {
+  .share {
+    padding-bottom: 40px;
+  }
+
+  .moreSection {
+    padding-bottom: 56px;
+  }
+
+  .moreGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
