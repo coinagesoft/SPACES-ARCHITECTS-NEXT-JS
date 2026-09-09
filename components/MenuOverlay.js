@@ -13,7 +13,7 @@ export default function MenuOverlay({ open, onClose }) {
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto overflow-x-hidden bg-paper">
       <div className={styles.topBar}>
-        <span className="text-sm md:text-lg tracking-widest2 uppercase font-medium">
+        <span className="text-[1.05rem] md:text-[1.45rem] tracking-widest2 uppercase font-light">
           {site.name} <span className="text-accent">{site.handle}</span>
         </span>
         <button

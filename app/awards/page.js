@@ -103,9 +103,9 @@ export default function AwardsPage() {
       </section>
 
       <section className={styles.gallery}>
-        {["photo-1497366754035-f200968a6e72", "photo-1497366811353-6870744d04b2"].map((id, index) => (
-          <div key={id} className={styles.galleryImage}>
-            <Image src={`https://images.unsplash.com/${id}?auto=format&fit=crop&w=1200&h=1100&q=85`} alt={index === 0 ? "Architectural interior" : "Spaces Architects studio"} fill sizes="(min-width: 768px) 42vw, 86vw" className={styles.coverImage} />
+        {assets.awardsFeatures.map((image, index) => (
+          <div key={image.src} className={styles.galleryImage}>
+            <Image src={image} alt={index === 0 ? "Awards feature one" : "Awards feature two"} fill sizes="(min-width: 768px) 42vw, 86vw" className={styles.coverImage} />
           </div>
         ))}
       </section>

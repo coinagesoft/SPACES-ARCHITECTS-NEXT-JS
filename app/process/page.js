@@ -14,53 +14,65 @@ const PROCESS_STEPS = [
 export const metadata = { title: "Process - Spaces Architects@ka" };
 
 export default function ProcessPage() {
-    return ( <
-        main className = { styles.page } >
+    return (<
+        main className={styles.page} >
         <
-        SiteChrome / >
-        <
-        section className = { styles.header } >
-        <
-        h1 className = { styles.pageTitle } > Process < /h1> <
-        p className = { styles.intro } >
-        Welcome to Spaces Architects @ka, where we believe in designing spaces that are aesthetically pleasing and sustainable.Our approach incorporates technology, storytelling, and symbiosis to create innovative designs that exceed our clients ' expectations. <
-        /p> <
-        /section> <
-        section className = { styles.steps } > {
-            PROCESS_STEPS.map(([number, title, description, fileName]) => ( <
-                article className = { styles.step }
-                key = { number } >
-                <
-                div className = { styles.videoCard } >
-                <
-                video className = { styles.video }
-                src = { `/videos/process/${fileName}.mp4` }
-                poster = { `/images/process/${fileName}.jpg` }
-                controls preload = "metadata" /
+            SiteChrome />
+        <section className={`site-container ${styles.header}`}>
+            <h1 className={styles.pageTitle}>Process</h1>
+
+            <p className={styles.intro}>
+                Welcome to Spaces Architects @ka, where we believe in designing spaces
+                that are aesthetically pleasing and sustainable. Our approach
+                incorporates technology, storytelling, and symbiosis to create
+                innovative designs that exceed our clients' expectations.
+            </p>
+        </section>
+
+        <section className={`site-container ${styles.steps}`}>
+            {PROCESS_STEPS.map(([number, title, description, fileName]) => (
+                <article
+                    className={styles.step}
+                    key={number}
                 >
-                <
-                /div> <
-                div className = { styles.stepContent } >
-                <
-                span className = { styles.stepNumber } > { number } < /span> <
-                div >
-                <
-                h2 className = { styles.stepTitle } > { title } < /h2> <
-                p className = { styles.stepDescription } > { description } < /p> <
-                /div> <
-                /div> <
-                /article>
-            ))
-        } <
-        /section> <
-        section className = { styles.closing } >
-        <
-        p >
-        Spaces Architects @ka is dedicated to designing sustainable and functional spaces that reflect our clients ' vision. Our unique approach combines storytelling, symbiosis, and technology with traditional design tools to create meaningful architecture. <
-        /p> <
-        /section> <
-        Footer / >
-        <
-        /main>
-    );
+                    <div className={styles.videoCard}>
+                        <video
+                            className={styles.video}
+                            src={`/videos/process/${fileName}.mp4`}
+                            poster={`/images/process/${fileName}.jpg`}
+                            controls
+                            preload="metadata"
+                        />
+                    </div>
+
+                    <div className={styles.stepContent}>
+                        <span className={styles.stepNumber}>
+                            {number}
+                        </span>
+
+                        <div>
+                            <h2 className={styles.stepTitle}>
+                                {title}
+                            </h2>
+
+                            <p className={styles.stepDescription}>
+                                {description}
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            ))}
+        </section>
+
+        <section className={`site-container ${styles.closing}`}>
+            <p>
+                Spaces Architects @ka is dedicated to designing sustainable and
+                functional spaces that reflect our clients' vision. Our unique
+                approach combines storytelling, symbiosis, and technology with
+                traditional design tools to create meaningful architecture.
+            </p>
+        </section> <
+            Footer />
+        </main>
+        );
 }

@@ -20,6 +20,7 @@
 
 import haveliDharampuraImage from "./assets/haveli dharmapura.webp";
 import aboutHeroImage from "./assets/About_hero.jpg";
+import menuImage from "./assets/menu/menu.jpg";
 import kapilPhoto from "./assets/Kapil.jpg";
 import featuredProject1 from "./assets/Featured Project/1.jpg";
 import featuredProject2 from "./assets/Featured Project/2.jpg";
@@ -113,6 +114,8 @@ import awardMark7 from "./assets/awards/7.png";
 import awardMark8 from "./assets/awards/8.png";
 import awardMark9 from "./assets/awards/9.png";
 import awardMark10 from "./assets/awards/10.png";
+import awardsFeature1 from "./assets/awards/feature1.jpg";
+import awardsFeature2 from "./assets/awards/feature2.jpg";
 
 const unsplash = (id, w = 1600, h = 1000) =>
     `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&h=${h}&q=80`;
@@ -127,7 +130,7 @@ export const assets = {
         heroImage: unsplash("photo-1600585154340-be6161a56a0c", 1920, 1080),
         heroTitle: "HOUSE OF STEPPED GARDEN",
         heroSubtitle: "KOCHI",
-        menuThumb: unsplash("photo-1600607687939-ce8a6c25118c", 900, 900),
+        menuThumb: menuImage,
     },
 
     // ---- About / Studio page ----
@@ -218,6 +221,7 @@ export const assets = {
         { name: "IIID", image: awardMark9 },
         { name: "Architectural Digest", image: awardMark10 },
     ],
+    awardsFeatures: [awardsFeature1, awardsFeature2],
 
     // ---- Projects gallery page ----
     // Numbered site photos (1.jpg … 21.jpg), in serial order.
