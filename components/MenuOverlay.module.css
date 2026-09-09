@@ -3,7 +3,7 @@
     width: calc(100% - 208px);
     max-width: 1300px;
     margin: 0 auto;
-    padding: 164px 0 0;
+    padding: 100px 0 0;
     align-items: center;
     justify-content: space-between;
 }
@@ -15,7 +15,15 @@
     grid-template-columns: 610px minmax(0, 1fr);
     column-gap: 50px;
     margin: 0 auto;
-    padding: 75px 0 80px;
+    padding: 35px 0 35px;
+}
+
+.equalGapTop {
+  margin-bottom: 40px;
+}
+
+.equalGapBottom {
+  margin-bottom: 40px;
 }
 
 .menuImage {

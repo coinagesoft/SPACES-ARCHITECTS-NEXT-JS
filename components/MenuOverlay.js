@@ -12,7 +12,7 @@ export default function MenuOverlay({ open, onClose }) {
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto overflow-x-hidden bg-paper">
-      <div className={styles.topBar}>
+      <div className={`${styles.topBar} ${styles.equalGapTop}`}>
         <span className="text-[1.05rem] md:text-[1.45rem] tracking-widest2 uppercase font-light">
           {site.name} <span className="text-accent">{site.handle}</span>
         </span>
@@ -26,7 +26,7 @@ export default function MenuOverlay({ open, onClose }) {
         </button>
       </div>
 
-      <div className={styles.menuLayout}>
+      <div className={`${styles.menuLayout} ${styles.equalGapBottom}`}>
         <div className={styles.menuImage}>
           <Image
             src={assets.home.menuThumb}
