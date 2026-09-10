@@ -193,7 +193,8 @@
         bottom: 24px;
     }
     .intro {
-        padding: 44px 0 32px;
+        /* Match the shared site-container inset used by the hero and footer. */
+        padding: 44px 24px 32px;
     }
     .founder {
         grid-template-columns: 1fr;
@@ -201,6 +202,7 @@
     }
     .founderImage {
         max-width: 300px;
+        margin-inline: auto;
     }
     .founderContent h2 {
         font-size: 20px;

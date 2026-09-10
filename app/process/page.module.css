@@ -333,7 +333,8 @@
 
         width: 100%;
 
-        padding: 60px 0 44px;
+        /* Match the shared mobile inset used by the site header and footer. */
+        padding: 60px 24px 44px;
     }
 
     .steps,
