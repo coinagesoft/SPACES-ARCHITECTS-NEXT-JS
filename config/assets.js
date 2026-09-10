@@ -86,24 +86,58 @@ import haveliLogoNdtv from "./assets/projects/haveli/NDTV.png";
 import haveliLogoArchDaily from "./assets/projects/haveli/arch_daily.png";
 import haveliLogoArchitizer from "./assets/projects/haveli/architizer.png";
 import haveliLogoIIID from "./assets/projects/haveli/institute_of_indian.png";
-import featuredIn1 from "./assets/Home Page/1.png";
-import featuredIn2 from "./assets/Home Page/2.png";
-import featuredIn3 from "./assets/Home Page/3.png";
-import featuredIn4 from "./assets/Home Page/4.png";
-import featuredIn5 from "./assets/Home Page/5.png";
-import featuredIn6 from "./assets/Home Page/6.png";
-import featuredIn7 from "./assets/Home Page/7.png";
-import featuredIn8 from "./assets/Home Page/8.png";
-import featuredIn9 from "./assets/Home Page/9.png";
-import featuredIn10 from "./assets/Home Page/10.png";
-import featuredIn11 from "./assets/Home Page/11.png";
-import featuredIn12 from "./assets/Home Page/12.png";
-import featuredIn13 from "./assets/Home Page/13.png";
-import featuredIn14 from "./assets/Home Page/14.png";
-import featuredIn15 from "./assets/Home Page/15.png";
-import featuredIn16 from "./assets/Home Page/16.png";
-import featuredIn17 from "./assets/Home Page/17.png";
-import featuredIn18 from "./assets/Home Page/18.png";
+// ---- Home page Featured In logos ----
+import featuredInMgs from "./assets/Home Page logos/mgs.jpg";
+import featuredInSurface from "./assets/Home Page logos/surface.png";
+import featuredInNdtv from "./assets/Home Page logos/NDTV.webp";
+import featuredInDeccanHerald from "./assets/Home Page logos/deccanherald.png";
+import featuredInArchitecturalDigest from "./assets/Home Page logos/ad.png";
+import featuredInHindustanTimes from "./assets/Home Page logos/Hindustan_Times_logo.svg.webp";
+import featuredInSouthChinaMorningPost from "./assets/Home Page logos/southchina.png";
+import featuredInRethinkingTheFuture from "./assets/Home Page logos/Rethinking-the-future.png";
+import featuredInDivisare from "./assets/Home Page logos/divisare.png";
+import featuredInWow from "./assets/Home Page logos/wow.jpg";
+import featuredInTilesOfIndia from "./assets/Home Page logos/tilesofindia.png";
+import featuredInBuildofy from "./assets/Home Page logos/Buildofy.jpg";
+import featuredInAbpLive from "./assets/Home Page logos/ABP-LIVE.webp";
+import featuredInNewIndianExpress from "./assets/Home Page logos/newindianexpress.png";
+import featuredInHindustan from "./assets/Home Page logos/HD.jpeg";
+import featuredInVogue from "./assets/Home Page logos/vogue.png";
+import featuredInArchitizer from "./assets/Home Page logos/Architizer_Logo.png";
+import featuredInNewYorkTimes from "./assets/Home Page logos/new-york-times-logo.svg";
+import featuredInTimesOfIndia from "./assets/Home Page logos/TOI.png";
+import featuredInIndiaToday from "./assets/Home Page logos/indiatoday.png";
+import featuredInWorldArchitecture from "./assets/Home Page logos/worldarchitecture.png";
+import featuredInWfm from "./assets/Home Page logos/wfm.png";
+import featuredInEconomicTimes from "./assets/Home Page logos/The_Economic_Times.jpg";
+import featuredInTimeOfIndia from "./assets/Home Page logos/timeofindia.png";
+import featuredInSydneyMorningHerald from "./assets/Home Page logos/sidneymorning.png";
+import featuredInIndianExpress from "./assets/Home Page logos/indianexpress.jpg";
+import featuredInPioneer from "./assets/Home Page logos/thepioneer.png";
+import featuredInTelegraph from "./assets/Home Page logos/The-telegraph-logo.png";
+import featuredInHindu from "./assets/Home Page logos/thehindu.png";
+import featuredInDezeen from "./assets/Home Page logos/dezeen-magazine.jpg";
+import featuredInArchitecturalDigestMagazine from "./assets/Home Page logos/architectural-digest.png";
+import featuredInStir from "./assets/Home Page logos/stir.png";
+import featuredInFinancialTimes from "./assets/Home Page logos/financialtimes.jpg";
+import featuredInTraveller from "./assets/Home Page logos/traveller.png";
+import featuredInWac from "./assets/Home Page logos/WAC.svg";
+import featuredInElleDecor from "./assets/Home Page logos/elledecore.png";
+import featuredInCurlyTales from "./assets/Home Page logos/curlytales.jpeg";
+import featuredInIiid from "./assets/Home Page logos/iiid.jpg";
+import featuredInMint from "./assets/Home Page logos/mint.webp";
+import featuredInAsianPaints from "./assets/Home Page logos/asianpaints.png";
+import featuredInLoopDesignAwards from "./assets/Home Page logos/loopdesignaward.png";
+import featuredInThePrint from "./assets/Home Page logos/theprint.png";
+import featuredInWorldArchitectureNews from "./assets/Home Page logos/worldarchitecturenews.png";
+import featuredInBbc from "./assets/Home Page logos/BBC.png";
+import featuredInUnesco from "./assets/Home Page logos/UNISCO.webp";
+import featuredInGoodHomes from "./assets/Home Page logos/goodhomes.jpg";
+import featuredInIndiart from "./assets/Home Page logos/indiart.png";
+import featuredInArchitectsAndInteriorsIndia from "./assets/Home Page logos/architects and interiors india.png";
+import featuredInIndianInstituteOfArchitects from "./assets/Home Page logos/Indian_Institute_of_Architects_Logo.png";
+import featuredInArchDaily from "./assets/Home Page logos/ArchDaily.png";
+import featuredInClogo from "./assets/Home Page logos/clogo.png";
 import awardMark1 from "./assets/awards/1.png";
 import awardMark2 from "./assets/awards/2.png";
 import awardMark3 from "./assets/awards/3.png";
@@ -188,24 +222,57 @@ export const assets = {
 
     // ---- Featured In (press logo strip) ----
     featuredIn: [
-        { name: "Dezeen", image: featuredIn1 },
-        { name: "RTF", image: featuredIn2 },
-        { name: "Beautiful Homes", image: featuredIn3 },
-        { name: "AΔ", image: featuredIn4 },
-        { name: "ArchDaily", image: featuredIn5 },
-        { name: "NDTV", image: featuredIn6 },
-        { name: "India Today", image: featuredIn7 },
-        { name: "The Print", image: featuredIn8 },
-        { name: "HT", image: featuredIn9 },
-        { name: "TOI", image: featuredIn10 },
-        { name: "Architectural Digest", image: featuredIn11 },
-        { name: "UIA", image: featuredIn12 },
-        { name: "UNESCO", image: featuredIn13 },
-        { name: "Architizer", image: featuredIn14 },
-        { name: "Curly Tales", image: featuredIn15 },
-        { name: "The Indian Express", image: featuredIn16 },
-        { name: "Habitus Living", image: featuredIn17 },
-        { name: "ABP Live", image: featuredIn18 },
+        { name: "MGS Architecture", image: featuredInMgs },
+        { name: "Surface", image: featuredInSurface },
+        { name: "NDTV", image: featuredInNdtv },
+        { name: "Deccan Herald", image: featuredInDeccanHerald },
+        { name: "Architectural Digest", image: featuredInArchitecturalDigest },
+        { name: "Hindustan Times", image: featuredInHindustanTimes },
+        { name: "South China Morning Post", image: featuredInSouthChinaMorningPost },
+        { name: "Rethinking The Future", image: featuredInRethinkingTheFuture },
+        { name: "Divisare", image: featuredInDivisare },
+        { name: "WOW", image: featuredInWow },
+        { name: "Tiles of India", image: featuredInTilesOfIndia },
+        { name: "Buildofy", image: featuredInBuildofy },
+        { name: "ABP Live", image: featuredInAbpLive },
+        { name: "The New Indian Express", image: featuredInNewIndianExpress },
+        { name: "Hindustan", image: featuredInHindustan },
+        { name: "Vogue", image: featuredInVogue },
+        { name: "Architizer", image: featuredInArchitizer },
+        { name: "The New York Times", image: featuredInNewYorkTimes },
+        { name: "The Times of India", image: featuredInTimesOfIndia },
+        { name: "India Today", image: featuredInIndiaToday },
+        { name: "World Architecture", image: featuredInWorldArchitecture },
+        { name: "WFM", image: featuredInWfm },
+        { name: "The Economic Times", image: featuredInEconomicTimes },
+        { name: "Time of India", image: featuredInTimeOfIndia },
+        { name: "The Sydney Morning Herald", image: featuredInSydneyMorningHerald },
+        { name: "The Indian Express", image: featuredInIndianExpress },
+        { name: "The Pioneer", image: featuredInPioneer },
+        { name: "The Telegraph", image: featuredInTelegraph },
+        { name: "The Hindu", image: featuredInHindu },
+        { name: "Dezeen", image: featuredInDezeen },
+        { name: "Architectural Digest Magazine", image: featuredInArchitecturalDigestMagazine },
+        { name: "STIR", image: featuredInStir },
+        { name: "Financial Times", image: featuredInFinancialTimes },
+        { name: "Traveller", image: featuredInTraveller },
+        { name: "World Architecture Community", image: featuredInWac },
+        { name: "ELLE DECOR", image: featuredInElleDecor },
+        { name: "Curly Tales", image: featuredInCurlyTales },
+        { name: "IIID", image: featuredInIiid },
+        { name: "Mint", image: featuredInMint },
+        { name: "Asian Paints", image: featuredInAsianPaints },
+        { name: "Loop Design Awards", image: featuredInLoopDesignAwards },
+        { name: "ThePrint", image: featuredInThePrint },
+        { name: "World Architecture News", image: featuredInWorldArchitectureNews },
+        { name: "BBC", image: featuredInBbc },
+        { name: "UNESCO", image: featuredInUnesco },
+        { name: "GoodHomes", image: featuredInGoodHomes },
+        { name: "Indiart", image: featuredInIndiart },
+        { name: "Architects and Interiors India", image: featuredInArchitectsAndInteriorsIndia },
+        { name: "Indian Institute of Architects", image: featuredInIndianInstituteOfArchitects },
+        { name: "ArchDaily", image: featuredInArchDaily },
+        { name: "C Logo", image: featuredInClogo },
     ],
 
     // ---- Awards page logos (kept in the artwork's supplied order) ----

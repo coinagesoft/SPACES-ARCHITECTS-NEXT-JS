@@ -1,24 +1,43 @@
-import Image from "next/image";
 import { assets } from "@/config/assets";
+import styles from "./FeaturedIn.module.css";
+
+function LogoSet({ logos, hidden = false }) {
+  return logos.map((logo) => (
+    <div key={`${hidden ? "copy-" : ""}${logo.name}`} className={styles.logo} aria-hidden={hidden}>
+      <img
+        src={typeof logo.image === "string" ? logo.image : logo.image.src}
+        alt={hidden ? "" : logo.name}
+        className={styles.logoImage}
+      />
+    </div>
+  ));
+}
+
+function MarqueeRow({ logos, direction }) {
+  return (
+    <div className={styles.marquee}>
+      <div className={`${styles.track} ${direction === "right" ? styles.trackRight : styles.trackLeft}`}>
+        <LogoSet logos={logos} />
+        {/* An identical second set lets the animation loop without a jump. */}
+        <LogoSet logos={logos} hidden />
+      </div>
+    </div>
+  );
+}
 
 export default function FeaturedIn() {
+  const splitAt = Math.ceil(assets.featuredIn.length / 2);
+  const firstRow = assets.featuredIn.slice(0, splitAt);
+  const secondRow = assets.featuredIn.slice(splitAt);
+
   return (
-    <section className="site-container py-16 md:py-6">
-      <h2 className="mb-4 text-[24px] font-normal uppercase tracking-[0.16em] text-ink md:mb-4 md:text-[28px]">
+    <section className={`${styles.featuredIn} site-container`}>
+      <h2 className={styles.heading}>
         Featured In
       </h2>
-      <div className="grid grid-cols-2 gap-x-5 gap-y-7 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-9 xl:grid-cols-10 md:gap-x-7 md:gap-y-9">
-        {assets.featuredIn.map((logo) => (
-          <div key={logo.name} className="relative h-14 md:h-16">
-            <Image
-              src={logo.image}
-              alt={logo.name}
-              fill
-              sizes="(min-width: 1280px) 10vw, (min-width: 1024px) 11vw, (min-width: 768px) 16vw, (min-width: 640px) 22vw, 42vw"
-              className="object-contain"
-            />
-          </div>
-        ))}
+      <div className={styles.rows}>
+        <MarqueeRow logos={firstRow} direction="left" />
+        <MarqueeRow logos={secondRow} direction="right" />
       </div>
     </section>
   );
