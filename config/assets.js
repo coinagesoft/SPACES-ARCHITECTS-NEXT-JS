@@ -150,6 +150,12 @@ import awardMark9 from "./assets/awards/9.png";
 import awardMark10 from "./assets/awards/10.png";
 import awardsFeature1 from "./assets/awards/feature1.jpg";
 import awardsFeature2 from "./assets/awards/feature2.jpg";
+import processDesign from "./assets/process/Design-Process.mp4";
+import processStudio from "./assets/process/Designing-In-Studio.mp4";
+import processStorytelling from "./assets/process/Storytelling.mp4";
+import processSymbiosis from "./assets/process/Symbiosis.mp4";
+import processTechnology from "./assets/process/Innovative-Technology.mp4";
+import processModelMaking from "./assets/process/Model-Making.mp4";
 
 const unsplash = (id, w = 1600, h = 1000) =>
     `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&h=${h}&q=80`;
@@ -176,6 +182,16 @@ export const assets = {
             unsplash("photo-1600607687920-4e2a09cf159d", 1000, 700),
         ],
         founderPhoto: kapilPhoto,
+    },
+
+    // ---- Process page videos ----
+    process: {
+        design: processDesign,
+        studio: processStudio,
+        storytelling: processStorytelling,
+        symbiosis: processSymbiosis,
+        technology: processTechnology,
+        modelMaking: processModelMaking,
     },
 
     // ---- Featured Projects (home grid) ----

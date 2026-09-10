@@ -1,14 +1,15 @@
 import SiteChrome from "@/components/SiteChrome";
 import Footer from "@/components/Footer";
+import { assets } from "@/config/assets";
 import styles from "./page.module.css";
 
 const PROCESS_STEPS = [
-    ["01", "Our Design Process", "We take pride in our design process, which starts with understanding our clients' vision for the space and the story behind it. We then work collaboratively, leveraging the diverse skillsets of our team to create designs that look good and function well.", "01-design-process"],
-    ["02", "Studio Design", "Our studio reflects the way we work, with an open and inviting environment that promotes communication and the sharing of ideas. This enables our team of architects, designers, and engineers to work seamlessly together.", "02-studio-design"],
-    ["03", "Design Storytelling", "Every space has a story to tell. We start by understanding our clients, their needs, and their vision, then create a design narrative that gives meaning and purpose to the space.", "03-design-storytelling"],
-    ["04", "Symbiosis in Design", "We create designs that are beautiful, sustainable, and environmentally responsible. Our teams work collaboratively to incorporate sustainable technologies and practices into every project.", "04-symbiosis"],
-    ["05", "Innovative Technology", "The latest technology enhances our design process, allowing us to create designs that are more accurate, efficient, and innovative. Virtual Reality enables clients to experience their space before it is built.", "05-technology"],
-    ["06", "Sketching and Model Making", "Sketching helps us quickly visualize and iterate on ideas. Model making creates physical representations that help us understand spatial relationships and proportions.", "06-sketching"],
+    ["01", "Our Design Process", "We take pride in our design process, which starts with understanding our clients' vision for the space and the story behind it. We then work collaboratively, leveraging the diverse skillsets of our team to create designs that look good and function well.", assets.process.design],
+    ["02", "Studio Design", "Our studio reflects the way we work, with an open and inviting environment that promotes communication and the sharing of ideas. This enables our team of architects, designers, and engineers to work seamlessly together.", assets.process.studio],
+    ["03", "Design Storytelling", "Every space has a story to tell. We start by understanding our clients, their needs, and their vision, then create a design narrative that gives meaning and purpose to the space.", assets.process.storytelling],
+    ["04", "Symbiosis in Design", "We create designs that are beautiful, sustainable, and environmentally responsible. Our teams work collaboratively to incorporate sustainable technologies and practices into every project.", assets.process.symbiosis],
+    ["05", "Innovative Technology", "The latest technology enhances our design process, allowing us to create designs that are more accurate, efficient, and innovative. Virtual Reality enables clients to experience their space before it is built.", assets.process.technology],
+    ["06", "Sketching and Model Making", "Sketching helps us quickly visualize and iterate on ideas. Model making creates physical representations that help us understand spatial relationships and proportions.", assets.process.modelMaking],
 ];
 
 export const metadata = { title: "Process - Spaces Architects@ka" };
@@ -30,19 +31,20 @@ export default function ProcessPage() {
         </section>
 
         <section className={`site-container ${styles.steps}`}>
-            {PROCESS_STEPS.map(([number, title, description, fileName]) => (
+            {PROCESS_STEPS.map(([number, title, description, video]) => (
                 <article
                     className={styles.step}
                     key={number}
                 >
                     <div className={styles.videoCard}>
-                        <video
-                            className={styles.video}
-                            src={`/videos/process/${fileName}.mp4`}
-                            poster={`/images/process/${fileName}.jpg`}
-                            controls
-                            preload="metadata"
-                        />
+                        <div className={styles.videoFrame}>
+                            <video
+                                className={styles.video}
+                                src={video}
+                                controls
+                                preload="metadata"
+                            />
+                        </div>
                     </div>
 
                     <div className={styles.stepContent}>
