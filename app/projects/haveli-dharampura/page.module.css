@@ -166,6 +166,15 @@
   object-fit: contain;
 }
 
+/* The IIID, ArchDaily, and NDTV source marks have much more whitespace and
+   smaller artwork at the shared base height, so give those three a matching
+   visual weight without changing their proportions. */
+.pressMark:nth-child(3) .pressMarkImg,
+.pressMark:nth-child(4) .pressMarkImg,
+.pressMark:nth-child(5) .pressMarkImg {
+  height: 72px;
+}
+
 @media (max-width: 767px) {
   .heroTextWrap {
     bottom: 24px;
@@ -174,6 +183,12 @@
   .pressLogos {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     margin-top: 36px;
+  }
+
+  .pressMark:nth-child(3) .pressMarkImg,
+  .pressMark:nth-child(4) .pressMarkImg,
+  .pressMark:nth-child(5) .pressMarkImg {
+    height: 56px;
   }
 }
 
