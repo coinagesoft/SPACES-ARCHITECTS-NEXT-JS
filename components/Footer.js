@@ -39,7 +39,7 @@ export default function Footer() {
                   key={s.label}
                   href={s.href}
                   aria-label={s.label}
-                  className="text-[10px] tracking-wide text-faint transition-colors hover:text-accent"
+                  className="text-[14px] tracking-wide text-faint transition-colors hover:text-accent"
                 >
                   {s.label[0]}
                 </a>
