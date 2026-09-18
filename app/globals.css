@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes hero-title-in {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    font-family: var(--font-primary), Helvetica, Arial, sans-serif;
+}
+
+
+/* Shared type helpers used across pages to match the reference design's
+   wide-tracked, uppercase editorial style. */
+
+@layer components {
+    .eyebrow {
+        @apply text-xs tracking-widest2 uppercase text-ink/80;
+    }
+    .site-container {
+        @apply mx-auto w-full max-w-site px-6;
+    }
+    .btn-link {
+        @apply text-accent underline-offset-4 transition;
+    }
+    .btn-link:hover {
+        @apply underline;
+    }
+    .nav-link {
+        @apply text-xl font-light leading-none tracking-[0.11em] uppercase text-ink transition-colors;
+    }
+    .nav-link:hover {
+        @apply text-accent;
+    }
+}
+
+@media (min-width: 768px) {
+    .site-container {
+        @apply px-10;
+    }
+    .nav-link {
+        @apply text-[1.75rem];
+    }
+}

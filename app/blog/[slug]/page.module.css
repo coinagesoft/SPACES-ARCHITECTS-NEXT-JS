@@ -1,0 +1,98 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #4c332d;
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.heroShade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.03) 40%, rgba(0, 0, 0, 0.12) 100%);
+  pointer-events: none;
+}
+
+.article {
+  padding: 86px 24px 26px;
+}
+
+.articleInner {
+  width: min(100%, 80vw);
+  margin: 0 auto;
+}
+
+.kicker {
+  margin: 0 0 23px;
+  color: #fea50b;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.article h1 {
+  max-width: 100%;
+  margin: 0;
+  color: #1c1c1c;
+  font-size: clamp(28px, 3.2vw, 48px);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+
+.rule {
+  width: 55px;
+  height: 1px;
+  margin: 20px 0 16px;
+  background: #fea50b;
+}
+
+.body {
+  max-width: 100%;
+  margin: 0;
+  color: #A9A9A9;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.055em;
+  line-height: 1.45;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.body p {
+  margin: 0 0 20px;
+}
+
+.body p:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .article {
+    padding: 110px 40px 46px;
+  }
+}
+
+@media (max-width: 480px) {
+  .article {
+    padding-top: 62px;
+  }
+
+  .article h1 {
+    font-size: 26px;
+    letter-spacing: 0.06em;
+  }
+
+  .body {
+    font-size: 14px;
+    letter-spacing: 0.035em;
+    line-height: 1.45;
+  }
+}

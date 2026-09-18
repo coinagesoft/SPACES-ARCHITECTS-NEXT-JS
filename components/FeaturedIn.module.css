@@ -1,0 +1,92 @@
+.featuredIn {
+  padding-top: 56px;
+  padding-bottom: 72px;
+  overflow: hidden;
+}
+
+.heading {
+  margin: 0 0 26px;
+  color: #1f1f1f;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.rows {
+  display: grid;
+  gap: 26px;
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.trackLeft {
+  animation: marquee-left 42s linear infinite;
+}
+
+.trackRight {
+  animation: marquee-right 42s linear infinite;
+}
+
+.logo {
+  position: relative;
+  flex: 0 0 112px;
+  height: 58px;
+  margin-right: 28px;
+}
+
+.logoImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+@media (min-width: 768px) {
+  .featuredIn {
+    padding-top: 64px;
+    padding-bottom: 88px;
+  }
+
+  .heading {
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+
+  .rows {
+    gap: 30px;
+  }
+
+  .logo {
+    flex-basis: 140px;
+    height: 66px;
+    margin-right: 42px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trackLeft,
+  .trackRight {
+    animation-play-state: paused;
+  }
+}

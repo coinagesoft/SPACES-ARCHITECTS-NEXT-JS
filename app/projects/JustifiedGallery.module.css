@@ -1,0 +1,132 @@
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    width: 100%;
+}
+
+/* Two continuous, independent columns, fixed 1 : 2 width split — they
+   never reset or realign to each other, so there's never a forced gap
+   under whichever column happens to be shorter at any point. */
+.masonry {
+    display: flex;
+    gap: 34px;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.col1 {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+}
+
+.col2 {
+    flex: 2 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+}
+
+.tile {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    background: #eee;
+    width: 100%;
+}
+
+.tile img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform .5s ease;
+}
+
+/* Applied only to a MatchedTile once its partner's height has been
+   measured — crops to fill that exact height instead of using its own
+   natural ratio. */
+.tile img.crop {
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Applied to a FillTile's wrapper — makes it fill exactly the height
+   its flex row stretches it to (see FillTile in JustifiedGallery.js),
+   so it always ends flush with a stacked pair beside it, at any
+   viewport width. Harmless everywhere else: a percentage height with
+   no definite parent height just resolves as auto. */
+.tile.fill {
+    height: 100%;
+}
+
+.tile:hover img {
+    transform: scale(1.045);
+}
+
+.label {
+    position: absolute;
+    left: 20px;
+    bottom: 16px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+/* Rows shared by the Swatantra/Apartment 88 pair AND the justified-row
+   section (House of Stepped Garden onward) — every item's flex-grow is
+   set to its own real aspect ratio (in JS), so widths distribute
+   exactly proportionally and every item in the row comes out the same
+   height automatically, with zero cropping. */
+.row {
+    display: flex;
+    gap: 34px;
+    width: 100%;
+}
+
+.rowTile {
+    position: relative;
+    overflow: hidden;
+    background: #eee;
+    flex-basis: 0;
+    min-width: 0;
+}
+
+.rowTile img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform .5s ease;
+}
+
+.rowTile:hover img {
+    transform: scale(1.045);
+}
+
+@media (max-width: 767px) {
+    .gallery {
+        gap: 24px;
+    }
+    .masonry {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .col1,
+    .col2 {
+        gap: 24px;
+    }
+    .row {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .rowTile {
+        flex-grow: unset !important;
+    }
+}

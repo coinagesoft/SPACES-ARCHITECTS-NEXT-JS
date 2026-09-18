@@ -1,0 +1,441 @@
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.heroImage {
+  object-fit: cover;
+}
+
+/* Wraps heroText using the same .site-container class as the header and
+   every other section on this page (and every other page), so the
+   heading's left edge lines up exactly with the logo above it and the
+   body copy below it — at any viewport width, including screens wider
+   than max-w-site where a fixed left px value used to drift out of
+   alignment. */
+.heroTextWrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 40px;
+  z-index: 2;
+}
+
+.heroText {
+  color: #fff;
+}
+
+.heroText h1 {
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.heroText p {
+  font-size: 0.875rem;
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.9;
+  margin: 4px 0 0;
+}
+
+@media (min-width: 768px) {
+  .heroText h1 {
+    font-size: 1.5rem;
+  }
+
+  .heroText p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroText h1 {
+    font-size: 1.875rem;
+  }
+}
+
+/* ---------- Details + description ---------- */
+.infoSection {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  padding-top: 52px;
+  padding-bottom: 64px;
+}
+
+@media (min-width: 768px) {
+  .infoSection {
+    grid-template-columns: 370px minmax(0, 1fr);
+    gap: 100px;
+  }
+}
+
+.infoSidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+  font-size: 12px;
+}
+
+.infoSidebar h3 {
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 0 0 13px;
+}
+
+.infoSidebar dl {
+  margin: 0;
+  color: #a0a0a0;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  line-height: 1.9;
+}
+
+.infoSidebar dl div {
+  margin-bottom: 1px;
+}
+
+.infoSidebar dt {
+  display: inline;
+  font-weight: 500;
+  color: #1c1c1c;
+}
+
+.infoSidebar dd {
+  display: inline;
+  margin: 0;
+}
+
+.infoSidebar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  line-height: 1.75;
+}
+
+.infoSidebar ul li {
+  margin-bottom: 12px;
+}
+
+.infoBody p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.95;
+  letter-spacing: 0.13em;
+  color: #4f4f4f;
+  text-align: justify;
+  text-transform: uppercase;
+  margin: 0 0 24px;
+
+}
+
+.highlight {
+  color: #fea50b;
+}
+
+.pressLogos {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: center;
+  gap: 28px;
+  margin-top: 56px;
+}
+
+.pressMark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pressMarkImg {
+  height: 44px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* The IIID, ArchDaily, and NDTV source marks have much more whitespace and
+   smaller artwork at the shared base height, so give those three a matching
+   visual weight without changing their proportions. */
+.pressMark:nth-child(3) .pressMarkImg,
+.pressMark:nth-child(4) .pressMarkImg,
+.pressMark:nth-child(5) .pressMarkImg {
+  height: 72px;
+}
+
+@media (max-width: 767px) {
+  .heroTextWrap {
+    bottom: 24px;
+  }
+
+  .pressLogos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 36px;
+  }
+
+  .pressMark:nth-child(3) .pressMarkImg,
+  .pressMark:nth-child(4) .pressMarkImg,
+  .pressMark:nth-child(5) .pressMarkImg {
+    height: 56px;
+  }
+}
+
+/* ---------- Gallery ---------- */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 56px;
+}
+
+/* "full" and "wide" are single, full-width shots with no neighbour to
+   match heights with, so they keep their own natural aspect ratio —
+   nothing cropped, nothing stretched. */
+.galleryImg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.galleryFull {
+  width: 100%;
+}
+
+.galleryImgFit {
+  object-fit: cover;
+}
+
+/* Pair: two equal-sized columns on desktop */
+.galleryPair {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.galleryPairItem {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+/* Triple: three equal-sized columns on desktop */
+.galleryTriple {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.galleryTripleItem {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .gallery {
+    gap: 24px;
+    padding-bottom: 64px;
+  }
+
+  .galleryPair {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .galleryTriple {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+/* ---------- Recognition ---------- */
+.recognition {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  padding-bottom: 72px;
+}
+
+.recognitionImageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.588 / 1;
+  overflow: hidden;
+}
+
+.recognitionImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recognitionList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 72px;
+  padding: 40px 0 76px;
+}
+
+.recognitionItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.recognitionLogo {
+  display: block;
+  align-self: center;
+  width: auto;
+  height: 136px;
+  max-width: 290px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.recognitionItem:nth-child(2) .recognitionLogo {
+  height: 114px;
+  margin: 0 0 24px;
+}
+
+.recognitionItem p {
+  max-width: 390px;
+  margin: 18px 0 0;
+  color: #202020;
+  font-size: clamp(1.15rem, 1.55vw, 1.65rem);
+  font-weight: 700;
+  line-height: 1.12;
+}
+
+@media (min-width: 768px) {
+  .recognition {
+    grid-template-columns: minmax(0, 2.5fr) minmax(340px, 0.9fr);
+    align-items: stretch;
+    column-gap: clamp(56px, 5.85vw, 112px);
+    width: calc(100% - 80px);
+    max-width: 1686px;
+    margin-inline: auto;
+    padding: 0 0 96px;
+  }
+}
+
+@media (max-width: 767px) {
+  .recognition {
+    padding-bottom: 52px;
+  }
+
+  .recognitionList {
+    gap: 48px;
+    padding: 0;
+  }
+
+  .recognitionLogo {
+    height: 92px;
+  }
+
+  .recognitionItem:nth-child(2) .recognitionLogo {
+    height: 66px;
+  }
+
+  .recognitionItem p {
+    font-size: 14px;
+  }
+}
+
+/* ---------- Share ---------- */
+.share {
+  text-align: center;
+  padding-bottom: 56px;
+}
+
+.share p {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 12px;
+  color: #a9a9a9;
+  margin: 0 0 28px;
+}
+
+.shareIcons {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.shareIcons a {
+  color: #b0b0b0;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.shareIcons a:hover {
+  color: #fea50b;
+}
+
+/* ---------- More projects ---------- */
+.moreSection {
+  padding-bottom: 80px;
+}
+
+.moreHeading {
+  margin: 0 0 16px;
+  color: #a9a9a9;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.moreGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.moreCard {
+  position: relative;
+  display: block;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.moreImage {
+  object-fit: cover;
+  transition: transform 500ms;
+}
+
+.moreCard:hover .moreImage {
+  transform: scale(1.04);
+}
+
+@media (max-width: 767px) {
+  .share {
+    padding-bottom: 40px;
+  }
+
+  .moreSection {
+    padding-bottom: 56px;
+  }
+
+  .moreGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
