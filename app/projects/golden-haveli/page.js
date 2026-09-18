@@ -1,5 +1,6 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { assetImage, assetUrl } from "@/config/assets";
+
 const hero = assetImage("projects/GOLDEN-HAVELL/cover/Hero Image.webp");
 const construction1 = assetImage("projects/GOLDEN-HAVELL/3_4/construction/1.webp");
 const construction2 = assetImage("projects/GOLDEN-HAVELL/3_4/construction/2.webp");
@@ -35,7 +36,33 @@ const old5 = assetImage("projects/GOLDEN-HAVELL/3_4/old/5.webp");
 const old6 = assetImage("projects/GOLDEN-HAVELL/3_4/old/6.webp");
 const old7 = assetImage("projects/GOLDEN-HAVELL/3_4/old/7.webp");
 const old8 = assetImage("projects/GOLDEN-HAVELL/3_4/old/8.webp");
+
 export const metadata = { title: "Golden Haveli — Spaces Architects@ka" };
+
 export default function GoldenHaveliPage() {
-  return <ProjectDetailPage title="Golden Haveli" location="Old Delhi" hero={hero} photos={[construction1, construction2, new1, new2, new3, new4, new5, new6, new7, new8, new9, new10, new11, new12, new13, new14, new15, new16, new17, new18, new19, new20, new21, new22, new23, new24, old1, old2, old3, old4, old5, old6, old7, old8]} details={{ Project: "Golden Haveli", Location: "Old Delhi", Client: "Mr. Vijay Goel", Status: "Completed" }} description={["At the heart of Chandni Chowk, Golden Haveli is the restoration of a 1906 residential-cum-commercial haveli and a revival of Old Delhi’s cultural memory. After decades of deterioration, the century-old structure was transformed into a heritage hotel.", "The three-storey haveli retains its Mughal architectural language through sandstone carving, facade jaalis, cusped arches, stained glass, floral motifs and stone columns arranged around a central courtyard. Original materials and traditional craftsmanship preserve its historic details and spatial character.", "The courtyard was reimagined as an open-to-sky social heart, while themed rooms, a quiet upper lounge and terrace views reconnect the haveli with Chandni Chowk. The restoration also extends into the surrounding alleys through revived Mughal-inspired murals, colours and motifs."]} />;
+  return (
+    <ProjectDetailPage
+      title="Golden Haveli"
+      location="Old Delhi"
+      hero={hero}
+      photos={[
+        construction1, construction2,
+        new1, new2, new3, new4, new5, new6, new7, new8, new9, new10,
+        new11, new12, new13, new14, new15, new16, new17, new18, new19, new20,
+        new21, new22, new23, new24,
+        old1, old2, old3, old4, old5, old6, old7, old8,
+      ]}
+      details={{
+        Project: "Golden Haveli",
+        Location: "Old Delhi",
+        Client: "Mr. Vijay Goel",
+        Status: "Completed",
+      }}
+      description={[
+        "At the heart of Chandni Chowk, Golden Haveli is the restoration of a 1906 residential-cum-commercial haveli and a revival of Old Delhi's cultural memory. After decades of deterioration, the century-old structure was transformed into a heritage hotel.",
+        "The three-storey haveli retains its Mughal architectural language through sandstone carving, facade jaalis, cusped arches, stained glass, floral motifs and stone columns arranged around a central courtyard. Original materials and traditional craftsmanship preserve its historic details and spatial character.",
+        "The courtyard was reimagined as an open-to-sky social heart, while themed rooms, a quiet upper lounge and terrace views reconnect the haveli with Chandni Chowk. The restoration also extends into the surrounding alleys through revived Mughal-inspired murals, colours and motifs.",
+      ]}
+    />
+  );
 }

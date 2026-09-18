@@ -20,7 +20,7 @@ import styles from "./JustifiedGallery.module.css";
 // layout-timing flakiness.
 // ---------------------------------------------------------------------
 
-// Real aspect ratios (widt/ height), measured from the source files.
+// Real aspect ratios (width / height), measured from the source files.
 const RATIOS = {
   "Swatantra Residence": 0.574,
   "Apartment 88": 0.598,
