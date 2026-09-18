@@ -7,7 +7,7 @@ import styles from "./page.module.css";
 
 export const metadata = { title: "Blog — Spaces Architects@ka" };
 
-// Listing copy is intentionally separate from `assets.blog`: detail-page
+// Listing copy is intentionally separate from `asets.blog`: detail-page
 // headings and article content continue to use the original editorial copy.
 const listingCopy = {
   "a-legacy-restored": {
