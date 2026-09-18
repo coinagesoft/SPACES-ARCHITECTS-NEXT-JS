@@ -1,6 +1,6 @@
 // Same host config/assets.js builds URLs from — keep these in sync.
 // Override via NEXT_PUBLIC_ASSET_BASE_URL in .env.local for local/staging media servers.
-const ASSET_BASE_URL = process.env.NEXT_PUBLIC_ASSET_BASE_URL || "http://187.126.112.147";
+const ASSET_BASE_URL = process.env.NEXT_PUBLIC_ASSET_BASE_URL || "https://assets.spacesarchitects-ka.com";
 const assetHost = new URL(ASSET_BASE_URL);
 
 /** @type {import('next').NextConfig} */
@@ -12,7 +12,7 @@ const nextConfig = {
       { protocol: "https", hostname: "fastly.picsum.photos" },
       {
         protocol: assetHost.protocol.replace(":", ""), // "http" or "https"
-        hostname: assetHost.hostname, // e.g. "187.126.112.147"
+        hostname: assetHost.hostname, // e.g. "assets.spacesarchitects-ka.com"
         ...(assetHost.port ? { port: assetHost.port } : {}),
         pathname: "/assets/**",
       },
