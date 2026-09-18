@@ -21,8 +21,8 @@
 import assetManifest from "./asset-manifest.json";
 
 // Base URL of the media server that serves everything under /assets.
-// Override with NEXT_PUBLIC_ASSET_BASE_URL in .env.local for local/staging use.
-const ASSET_BASE_URL = (process.env.NEXT_PUBLIC_ASSET_BASE_URL || "http://187.126.112.147").replace(/\/$/, "");
+// Override with NEXT_PUBLIC_ASSET_BASE_URL in .env.local for local/staging us.
+const ASSET_BASE_URL = (process.env.NEXT_PUBLIC_ASSET_BASE_URL || "https://assets.spacesarchitects-ka.com").replace(/\/$/, "");
 
 export function assetUrl(relPath) {
     const encoded = relPath.split("/").map(encodeURIComponent).join("/");
