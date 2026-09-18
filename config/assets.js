@@ -428,14 +428,14 @@ export const assets = {
 
     // ---- Featured Projects (home-page carousel) ----
     featuredProjects: [
-        { name: "Art House", image: artHouse },
-        { name: "House of Stepped Garden", image: houseOfSteppedGarden },
-        { name: "Haveli Dharampura", image: haveliDharampura },
-        { name: "The Heritage Park", image: heritagePark },
-        { name: "Golden Haveli", image: goldenHaveli },
-        { name: "Library House", image: libraryHouse },
-        { name: "Swatantra Residence", image: swatantraResidence },
-        { name: "House of Dancing Screen", image: houseOfDancingScreen },
+        { id: "art-house", href: "/projects/art-house", name: "Art House", image: artHouse },
+        { id: "house-of-stepped-garden", href: "/projects/house-of-stepped-garden", name: "House of Stepped Garden", image: houseOfSteppedGarden },
+        { id: "haveli-dharampura", href: "/projects/haveli-dharampura", name: "Haveli Dharampura", image: haveliDharampura },
+        { id: "heritage-park", href: "/projects/heritage-park", name: "The Heritage Park", image: heritagePark },
+        { id: "golden-haveli", href: "/projects/golden-haveli", name: "Golden Haveli", image: goldenHaveli },
+        { id: "library-house", href: "/projects/library-house", name: "Library House", image: libraryHouse },
+        { id: "swatantra-residence", href: "/projects/swatantra-residence", name: "Swatantra Residence", image: swatantraResidence },
+        { id: "house-of-dancing-screens", href: "/projects/house-of-dancing-screens", name: "House of Dancing Screen", image: houseOfDancingScreen },
     ],
 
     // ---- Featured News (home-page carousel) ----

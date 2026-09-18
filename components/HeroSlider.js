@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function HeroSlider({ projects }) {
@@ -38,12 +39,17 @@ export default function HeroSlider({ projects }) {
 
             {/* Hero title */}
             <div className="absolute bottom-10 left-0 right-0 site-container">
-                <h1
-                    key={activeProject.id}
-                    className="text-white text-xl md:text-2xl lg:text-3xl font-light tracking-widest2 uppercase animate-[hero-title-in_700ms_ease-in-out]"
+                <Link
+                    href={`/projects/${activeProject.id}`}
+                    className="inline-block transition-opacity duration-200 hover:opacity-80"
                 >
-                    {activeProject.name}
-                </h1>
+                    <h1
+                        key={activeProject.id}
+                        className="text-white text-xl md:text-2xl lg:text-3xl font-light tracking-widest2 uppercase animate-[hero-title-in_700ms_ease-in-out]"
+                    >
+                        {activeProject.name}
+                    </h1>
+                </Link>
             </div>
 
         </section>

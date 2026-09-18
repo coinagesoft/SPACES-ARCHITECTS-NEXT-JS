@@ -40,6 +40,16 @@ const nextConfig = {
         destination: "/projects/house-of-blue-courtyard",
         permanent: true,
       },
+      {
+        source: "/projects/the-heritage-park",
+        destination: "/projects/heritage-park",
+        permanent: true,
+      },
+      {
+        source: "/projects/house-of-dancing-screen",
+        destination: "/projects/house-of-dancing-screens",
+        permanent: true,
+      },
     ];
   },
 };
