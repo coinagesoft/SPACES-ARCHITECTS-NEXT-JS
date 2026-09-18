@@ -4,7 +4,7 @@
     "ignoreDeprecations": "6.0",
     "paths": {
       "@/*": ["./*"],
-      "@/assets": ["./assets.js"],
+     "@/assets": ["./config/assets.js"],
       "@/assets/*": ["./public/assets/*"],
       "@/public/assets": ["./public/assets/index.js"],
       "@/public/assets/*": ["./public/assets/*"]

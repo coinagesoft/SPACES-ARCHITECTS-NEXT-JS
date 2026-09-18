@@ -3,7 +3,7 @@
 import { useState } from "react";
 import SiteChrome from "@/components/SiteChrome";
 import Footer from "@/components/Footer";
-import { assets } from "@/assets";
+// import { assets } from "@/assets";
 import JustifiedGallery from "./JustifiedGallery";
 import styles from "./page.module.css";
 
