@@ -22,7 +22,7 @@ body {
 
 
 /* Shared type helpers used across pages to match the reference design's
-   wide-tracked, uppercase editorial style. /
+   wide-tracked, uppercase editorial style. */
 
 @layer components {
     .eyebrow {
