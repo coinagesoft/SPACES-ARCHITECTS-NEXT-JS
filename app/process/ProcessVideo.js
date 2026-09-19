@@ -16,7 +16,11 @@ export default function ProcessVideo({ video }) {
                 className={styles.video}
                 src={video}
                 controls={showControls}
-                preload="metadata"
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
             />
         </div>
     );

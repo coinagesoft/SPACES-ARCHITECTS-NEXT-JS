@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import SiteChrome from "@/components/SiteChrome";
 import Footer from "@/components/Footer";
 import { assets } from "@/assets";
@@ -6,6 +7,14 @@ import { aboutCopy } from "@/config/site";
 import styles from "./page.module.css";
 
 export const metadata = { title: "Studio — Spaces Architects@ka" };
+
+// Same photos/paths as the /team page — first 4 only, shown as a preview row here.
+const featuredTeam = [
+  { src: "/assets/Team/0. POOJA AGGARWAL - SENIOR INTERIOR DESIGNER.webp", name: "Pooja Aggarwal", role: "Senior Interior Designer" },
+  { src: "/assets/Team/1_Pawan Sharma_Senior Associate Architect.webp", name: "Pawan Sharma", role: "Senior Associate Architect" },
+  { src: "/assets/Team/2_Aruj Saxena_Associate Architect.webp", name: "Aruj Saxena", role: "Associate Architect" },
+  { src: "/assets/Team/3_Vikrant Singh_Associate Architect.webp", name: "Vikrant Singh", role: "Associate Architect" },
+];
 
 export default function AboutPage() {
   return (
@@ -58,12 +67,24 @@ export default function AboutPage() {
       <section id="contact" className={`site-container ${styles.team}`}>
         <h2>Our Team</h2>
         <div className={styles.teamGrid}>
-          {aboutCopy.team.map((member, index) => (
-            <div key={`${member.role}-${index}`} className={styles.teamMember}>
-              <div className={styles.teamImage} />
-              <p>{member.name}</p><p>{member.role}</p>
+          {featuredTeam.map((member, index) => (
+            <div key={`${member.name}-${index}`} className={styles.teamMember}>
+              <div className={styles.teamImage}>
+                <Image
+                  src={member.src}
+                  alt={member.name}
+                  fill
+                  sizes="(min-width: 768px) 25vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+              <p>{member.name}</p>
+              <p>{member.role}</p>
             </div>
           ))}
+        </div>
+        <div className={styles.moreWrap}>
+          <Link href="/teams" className={styles.moreLink}>Meet the full team →</Link>
         </div>
       </section>
       <Footer />
