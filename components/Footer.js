@@ -17,10 +17,13 @@ export default function Footer() {
                 </p>
                 <ul className="space-y-1">
                   {col.links.map((link) => (
-                    <li key={link}>
-                      <span className="cursor-pointer text-[12px] leading-4 tracking-wide uppercase text-faint transition-colors hover:text-accent">
-                        {link}
-                      </span>
+                    <li key={link.label}>
+                      <Link
+                        href={link.href}
+                        className="block text-[12px] leading-4 tracking-wide uppercase text-faint transition-colors hover:text-accent"
+                      >
+                        {link.label}
+                      </Link>
                     </li>
                   ))}
                 </ul>

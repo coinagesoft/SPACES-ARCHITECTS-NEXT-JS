@@ -1,0 +1,99 @@
+/* Category view (everything except "All Projects").
+   Same look as the original grid: same gaps, hover zoom and labels. */
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    width: 100%;
+    animation: galleryFadeIn 0.45s ease both;
+}
+
+@keyframes galleryFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Every item's flex-grow is set to its own aspect ratio (in JS), so
+   widths distribute proportionally and every photo in a row comes out
+   the same height, with zero cropping. */
+.row {
+    display: flex;
+    gap: 34px;
+    width: 100%;
+}
+
+.rowTile {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    background: #eee;
+    flex-basis: 0;
+    min-width: 0;
+}
+
+.rowTile img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.rowTile:hover img {
+    transform: scale(1.045);
+}
+
+/* Invisible filler at the end of an under-filled last row. */
+.rowGhost {
+    flex-basis: 0;
+    min-width: 0;
+}
+
+.label {
+    position: absolute;
+    left: 20px;
+    bottom: 16px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+.empty {
+    padding: 96px 0;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    color: #888;
+}
+
+@media (max-width: 767px) {
+    .gallery {
+        gap: 24px;
+    }
+    .row {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .rowTile {
+        flex-grow: unset !important;
+    }
+    .rowGhost {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gallery {
+        animation: none;
+    }
+}

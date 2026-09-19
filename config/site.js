@@ -41,22 +41,44 @@ export const site = {
         ],
     ],
 
-    // Four-column footer navigation
+    // Four-column footer navigation aligned to the project page's category structure
     footerColumns: [{
             title: "Architecture",
-            links: ["All", "Hospitality", "Institutional", "Corporate", "Culture", "Mixed-use", "Homes"],
+            links: [
+                { label: "Residential", href: "/projects?category=architecture/residential" },
+                { label: "Adaptive Reuse", href: "/projects?category=architecture/adaptive-reuse" },
+                { label: "Institutional", href: "/projects?category=architecture/institutional" },
+                { label: "Hospitality", href: "/projects?category=architecture/hospitality" },
+                { label: "Cultural", href: "/projects?category=architecture/cultural" },
+                { label: "Commercial", href: "/projects?category=architecture/commercial" },
+                { label: "Landscape", href: "/projects?category=architecture/landscape" },
+            ],
         },
         {
             title: "Interiors",
-            links: ["All", "Leisure", "Homes", "Hotels", "F&B", "Brand Experiences", "Retail"],
+            links: [
+                { label: "Apartments", href: "/projects?category=interior/apartments" },
+                { label: "Offices", href: "/projects?category=interior/offices" },
+                { label: "Commercial", href: "/projects?category=interior/commercial" },
+            ],
         },
         {
             title: "News and Views",
-            links: ["All", "Featured In", "Awards", "Events", "Blog"],
+            links: [
+                { label: "Awards", href: "/awards" },
+                { label: "Publications", href: "/publications" },
+                { label: "News & Events", href: "/news-events" },
+                { label: "Blogs", href: "/blog" },
+            ],
         },
         {
             title: "About",
-            links: ["Spaces Architects@ka", "Team", "Clients", "Values", "Careers", "Contact"],
+            links: [
+                { label: "Spaces Architects@ka", href: "/about" },
+                { label: "Team", href: "/about" },
+                { label: "Process", href: "/process" },
+                { label: "Contact", href: "/contact" },
+            ],
         },
     ],
 
