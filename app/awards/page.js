@@ -83,17 +83,22 @@ export default function AwardsPage() {
 
       <section className={styles.awardsContent}>
         <div className={styles.marks}>
-          {assets.awardMarks.map((mark) => (
-            <div key={mark.name} className={styles.mark}>
-              <Image
-                src={mark.image}
-                alt={mark.name}
-                fill
-                sizes="(min-width: 768px) 10vw, 18vw"
-                className={styles.markImage}
-              />
-            </div>
-          ))}
+          <div className={styles.marksTrack}>
+            {[...assets.awardMarks, ...assets.awardMarks].map((mark, index) => (
+              <div
+                key={`${mark.name}-${index}`}
+                className={styles.mark}
+              >
+                <Image
+                  src={mark.image}
+                  alt={mark.name}
+                  fill
+                  sizes="120px"
+                  className={styles.markImage}
+                />
+              </div>
+            ))}
+          </div>
         </div>
 
         <h1 className={styles.heading}>Awards</h1>
