@@ -161,10 +161,17 @@
 }
 
 .teamImage {
+    position: relative;
     width: 100%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 3 / 4;
     margin-bottom: 12px;
     background: #e9e7e4;
+    overflow: hidden;
+}
+
+.teamImage :global(img) {
+    object-fit: cover;
+    object-position: top;
 }
 
 .teamMember p {
@@ -181,6 +188,25 @@
     font-size: 11px;
     letter-spacing: .08em;
     text-transform: uppercase;
+}
+
+.moreWrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 28px;
+}
+
+.moreLink {
+    color: #fea50b;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    /* text-decoration: underline; */
+    /* text-underline-offset: 3px; */
+}
+
+.moreLink:hover {
+    color: #7D7D7D;
 }
 
 @media (max-width: 767px) {
@@ -209,5 +235,8 @@
     }
     .teamGrid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .moreWrap {
+        margin-top: 20px;
     }
 }

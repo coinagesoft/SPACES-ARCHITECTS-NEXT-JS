@@ -75,7 +75,7 @@ export const site = {
             title: "About",
             links: [
                 { label: "Spaces Architects@ka", href: "/about" },
-                { label: "Team", href: "/about" },
+                { label: "Team", href: "/teams" },
                 { label: "Process", href: "/process" },
                 { label: "Contact", href: "/contact" },
             ],
