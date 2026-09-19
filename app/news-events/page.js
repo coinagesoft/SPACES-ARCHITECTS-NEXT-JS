@@ -16,10 +16,10 @@ export const metadata = { title: "News + Events — Spaces Architects@ka" };
 // ============================================================
 
 // ---- Project images ----
-const haveliDharampura = assetImage("projects/haveli/haveli_4.jpg");
+const haveliDharampura = assetImage("projects/haveli/haveli_1.jpg");
 const goldenHaveli = assetImage("projects/GOLDEN-HAVELL/3_4/new/1.webp");
 const heritagePark = assetImage("projects/HERITAGE-PARK/photographs/edited 1.webp");
-const chartilalGoelHeritagePark = assetImage("projects/HERITAGE-PARK/cover/Hero Image.webp");;
+const chartilalGoelHeritagePark = heritagePark;
 const slenderHouse = assetImage("projects/Slender-House/photographs/1. Building elevation.webp");
 const ashrayaResidence = assetImage("projects/ASHRAYA-RESIDENCE/3_4/1.webp");
 const krishasResidence = assetImage("projects/KRISHAS-RESIDENCE/3_4/1.webp");
@@ -29,15 +29,13 @@ const lahoriGateMuseum = assetImage("projects/LAHORI-GATE-MUSEUM/3_4/1.webp");
 const swatantraResidence = assetImage("projects/SWATANTRA-RESIDENCE/PHOTOGRAPH/1 Elevation (2).jpg");
 const timelessHouses = assetImage("Featured News/featured-by-timeless-houses-magazine .png");
 const unesco = assetImage("Home Page logos/UNISCO.webp");
-import forbesIndiaDesign2019 from "@/assets/News-Event/forbesIndiaDesign2019.jpg";
-import wadeAsiaJury from "@/assets/News-Event/wadeAsia.webp";
-import journeyWithCj from "@/assets/News-Event/youtube.webp";
+
 // ---- Podcast / events / jury: no project folder exists yet ----
 // Upload a 1.webp into each of these folders on the media server
 // (same pattern as the project images) and they will show up.
-// const journeyWithCj = assetImage("projects/JOURNEY-WITH-CJ/3_4/1.webp");
-// const forbesIndiaDesign2019 = assetImage("projects/FORBES-INDIA-DESIGN-2019/3_4/1.webp");
-// const wadeAsiaJury = assetImage("projects/WADE-ASIA-JURY/3_4/1.webp");
+const journeyWithCj = assetImage("projects/JOURNEY-WITH-CJ/3_4/1.webp");
+const forbesIndiaDesign2019 = assetImage("projects/FORBES-INDIA-DESIGN-2019/3_4/1.webp");
+const wadeAsiaJury = assetImage("projects/WADE-ASIA-JURY/3_4/1.webp");
 const matecia = assetImage("projects/MATECIA/3_4/1.webp");
 
 // ---- Cards (same order as the sheet) ----
@@ -87,7 +85,7 @@ const newsCards = [
   { title: "Lahori Gate Museum", source: "The Times of India", image: lahoriGateMuseum, href: "https://timesofindia.indiatimes.com/city/delhi/lahori-gate-museum-to-showcase-chandni-chowk-heritage/amp_articleshow/120388787.cms" },
   { title: "UNESCO", source: "The Times of India", image: unesco, href: "https://timesofindia.indiatimes.com/travel/india/travel-guide/unesco-recognises-7-indian-conservation-efforts/amp_guideshow/61485258.cms" },
   // No link in the sheet yet — shown as a plain (non-clickable) card.
-  // { title: "MATECIA", source: "Event", image: matecia, href: null },
+  { title: "MATECIA", source: "Event", image: matecia, href: null },
 
   { title: "Chartilal Goel Heritage Park", source: "Hindustan Times", image: chartilalGoelHeritagePark, href: "https://www.hindustantimes.com/cities/delhi-news/heritage-park-opens-in-walled-city-101647815631624-amp.html" },
   { title: "Swatantra Residence", source: "Financial Times", image: swatantraResidence, href: "https://www.ft.com/content/3bc01f86-ad16-4901-8782-42a91f9a72ea" },

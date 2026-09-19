@@ -2,11 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import SiteChrome from "@/components/SiteChrome";
 import Footer from "@/components/Footer";
-import { assets } from "@/assets";
 import { aboutCopy } from "@/config/site";
 import styles from "./page.module.css";
 
 export const metadata = { title: "Studio — Spaces Architects@ka" };
+
+// Page images served straight from /public/assets — same style as the team photos below.
+const heroImage = "/assets/About_hero.jpg";
+const founderPhoto = "/assets/Kapil.jpg";
 
 // Same photos/paths as the /team page — first 4 only, shown as a preview row here.
 const featuredTeam = [
@@ -23,7 +26,7 @@ export default function AboutPage() {
       <section className={styles.hero}>
         <div className={styles.heroImage}>
           <Image
-            src={assets.about.heroImage}
+            src={heroImage}
             alt="Studio interior"
             fill
             priority
@@ -45,7 +48,7 @@ export default function AboutPage() {
       </section>
       <section className={`site-container ${styles.founder}`}>
         <div className={styles.founderImage}>
-          <Image src={assets.about.founderPhoto} alt={aboutCopy.founder.name} fill sizes="(min-width: 768px) 30vw, 90vw" className="object-cover" />
+          <Image src={founderPhoto} alt={aboutCopy.founder.name} fill sizes="(min-width: 768px) 30vw, 90vw" className="object-cover" />
         </div>
         <div className={styles.founderContent}>
           <h2>Founder: <span>{aboutCopy.founder.name}</span></h2>
