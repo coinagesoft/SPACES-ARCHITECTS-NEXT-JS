@@ -1,7 +1,8 @@
 /* Header + hover mega menu for the Projects page.
    Look follows the Canva mock: wide-tracked uppercase labels, orange for
    the active item, light-grey lists that drop under Architecture /
-   Interior / Adaptive Reuse. */
+   Interior / Adaptive Reuse. On mobile the same menu is reachable via a
+   separate "Categories" button that opens a slide-in drawer. */
 
 .header {
     --pm-h: 96px;
@@ -50,7 +51,8 @@
 .label,
 .sub,
 .groupLabel,
-.burger {
+.burger,
+.categoriesToggle {
     appearance: none;
     background: none;
     border: 0;
@@ -129,6 +131,7 @@
 
 .sub {
     display: block;
+    width: 100%;
     line-height: var(--pm-row);
     font-size: 12px;
     font-weight: 400;
@@ -178,14 +181,49 @@
 .sub:focus-visible,
 .groupLabel:focus-visible,
 .burger:focus-visible,
+.categoriesToggle:focus-visible,
 .logo:focus-visible {
     outline: 2px solid var(--pm-accent);
     outline-offset: 4px;
 }
 
-/* ---------- mobile toggle + drawer (hidden on desktop) ---------- */
+/* ---------- mobile controls (categories toggle + burger) ---------- */
+.mobileControls {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto; /* never shrink — both icons must always stay visible */
+    gap: 6px;
+}
+
+/* Separate from .burger (which opens the site's main MenuOverlay) — this
+   one opens the project-category drawer. Hidden on desktop since the
+   categories are already visible in .nav there. */
+.categoriesToggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    color: var(--pm-ink);
+    /* border: 1px solid rgba(0, 0, 0, 0.16); */
+    border-radius: 999px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.categoriesIcon {
+    display: block;
+}
+
+.categoriesToggle[aria-expanded="true"] {
+    color: var(--pm-accent);
+    border-color: var(--pm-accent);
+}
+
 .burger {
     display: flex;
+    flex: 0 0 auto;
     flex-direction: column;
     align-items: flex-end;
     gap: 5px;
@@ -201,28 +239,58 @@
     border-radius: 999px;
 }
 
-.burger[aria-expanded="true"] span:nth-child(1),
-.burger[aria-expanded="true"] span:nth-child(2),
-.burger[aria-expanded="true"] span:nth-child(3) {
-    transform: none;
+/* ---------- mobile categories drawer ---------- */
+.backdrop,
+.backdropOpen {
+    position: fixed;
+    inset: 0;
+    z-index: 150;
+    background: rgba(0, 0, 0, 0.35);
+    transition: opacity 0.22s ease, visibility 0s linear 0.22s;
+}
+
+.backdrop {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.backdropOpen {
     opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity 0.22s ease;
 }
 
 .drawer {
-    display: none;
-}
-
-.drawerOpen {
-    display: block;
     position: fixed;
     top: var(--pm-h);
     right: 0;
-    width: min(420px, 100vw);
+    z-index: 200;
+    width: min(420px, 86vw);
     max-height: calc(100vh - var(--pm-h));
     overflow-y: auto;
     background: #fff;
     padding: 4px 24px 48px;
     box-shadow: -18px 22px 44px -30px rgba(0, 0, 0, 0.25);
+    transform: translateX(100%);
+    transition: transform 0.28s ease;
+}
+
+.drawerOpen {
+    transform: translateX(0);
+}
+
+/* mobileMenuSide="left" — same panel, opens from the other edge */
+.drawerLeft {
+    right: auto;
+    left: 0;
+    box-shadow: 18px 22px 44px -30px rgba(0, 0, 0, 0.25);
+    transform: translateX(-100%);
+}
+
+.drawerLeft.drawerOpen {
+    transform: translateX(0);
 }
 
 .group {
@@ -231,7 +299,10 @@
 }
 
 .groupLabel {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
     width: 100%;
     padding: 14px 0 8px;
     font-size: 12px;
@@ -242,10 +313,26 @@
     color: var(--pm-ink);
 }
 
+.chevron {
+    flex: 0 0 auto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--pm-muted);
+}
+
 .groupList {
     margin: 0;
-    padding: 0 0 4px;
+    padding: 0;
     list-style: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+}
+
+.groupListOpen {
+    max-height: 480px;
+    padding: 0 0 4px;
 }
 
 @media (max-width: 1023px) {
@@ -258,17 +345,18 @@
         display: none;
     }
 
+    .bar {
+        gap: 12px; /* desktop uses 40px, which pushes the burger off-screen */
+    }
+
     .logo {
         font-size: 14px;
         letter-spacing: 0.16em;
+        min-width: 0;
     }
 
-    .drawerOpen {
-        left: 0;
-        right: 0;
-        width: 100%;
-        bottom: 0;
-        max-height: calc(100vh - var(--pm-h));
+    .categoriesToggle {
+        display: inline-flex;
     }
 
     .sub {
@@ -276,9 +364,46 @@
     }
 }
 
+/* phones ~400px wide and below: scale the logo so logo + 2 icons always fit */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 12px;
+        letter-spacing: 0.12em;
+    }
+}
+
+/* very small phones (320–360px) */
+@media (max-width: 360px) {
+    .bar {
+        gap: 8px;
+    }
+
+    .logo {
+        font-size: 11px;
+        letter-spacing: 0.1em;
+    }
+
+    .categoriesToggle {
+        width: 36px;
+        height: 36px;
+    }
+
+    .burger {
+        padding: 6px;
+    }
+
+    .burger span {
+        width: 28px;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     .drop,
     .band,
+    .drawer,
+    .backdrop,
+    .backdropOpen,
+    .groupList,
     .burger span {
         transition: none;
     }

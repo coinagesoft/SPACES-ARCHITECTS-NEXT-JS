@@ -84,8 +84,14 @@
         flex-direction: column;
         gap: 24px;
     }
+    /* Rows stack vertically here. The desktop rule `flex-basis: 0` would
+       become a HEIGHT of 0 in a column, and because .rowTile has
+       overflow: hidden its min-height is 0 too — every tile collapsed and
+       the screen went blank. Use natural height instead. `!important`
+       beats the inline flex-grow set from JS. */
     .rowTile {
-        flex-grow: unset !important;
+        flex: 0 0 auto !important;
+        width: 100%;
     }
     .rowGhost {
         display: none;
