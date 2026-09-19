@@ -51,10 +51,6 @@
     "width": 1599,
     "height": 1066
   },
-  "blogs/ Architecture-in-Motion.png": {
-    "width": 440,
-    "height": 440
-  },
   "blogs/6x18.png": {
     "width": 668,
     "height": 668
@@ -411,6 +407,22 @@
     "width": 800,
     "height": 599
   },
+  "News-Event/forbesIndiaDesign2019.jpg": {
+    "width": 700,
+    "height": 525
+  },
+  "News-Event/wadeAsia.webp": {
+    "width": 1200,
+    "height": 1200
+  },
+  "News-Event/wadeAsiaJury.svg": {
+    "width": 1220,
+    "height": 285
+  },
+  "News-Event/youtube.webp": {
+    "width": 1200,
+    "height": 1200
+  },
   "projects/1.jpg": {
     "width": 1066,
     "height": 1599
@@ -502,54 +514,6 @@
   "projects/ALAYA RESIDENCE.jpg": {
     "width": 740,
     "height": 489
-  },
-  "projects/ALAYA-RESIDENCE/3_4/1_300dpi.webp": {
-    "width": 4000,
-    "height": 3000
-  },
-  "projects/ALAYA-RESIDENCE/3_4/2_300dpi.webp": {
-    "width": 4000,
-    "height": 3000
-  },
-  "projects/ALAYA-RESIDENCE/3_4/3_300dpi.webp": {
-    "width": 4000,
-    "height": 3000
-  },
-  "projects/ALAYA-RESIDENCE/3_4/4_300dpi.webp": {
-    "width": 4000,
-    "height": 3000
-  },
-  "projects/ALAYA-RESIDENCE/3_4/5_300dpi.webp": {
-    "width": 4000,
-    "height": 3000
-  },
-  "projects/ALAYA-RESIDENCE/3_4/6_300dpi.webp": {
-    "width": 3000,
-    "height": 4000
-  },
-  "projects/ALAYA-RESIDENCE/3_4/7_300dpi.webp": {
-    "width": 4000,
-    "height": 3000
-  },
-  "projects/ALAYA-RESIDENCE/3_4/8_300dpi.webp": {
-    "width": 3000,
-    "height": 4000
-  },
-  "projects/ALAYA-RESIDENCE/3_4/9_300dpi.webp": {
-    "width": 4000,
-    "height": 3000
-  },
-  "projects/ALAYA-RESIDENCE/3_4/HERO_300dpi.webp": {
-    "width": 4000,
-    "height": 3000
-  },
-  "projects/ALAYA-RESIDENCE/cover/COVER.webp": {
-    "width": 5000,
-    "height": 4000
-  },
-  "projects/ALAYA-RESIDENCE/cover/HERO.webp": {
-    "width": 3300,
-    "height": 2358
   },
   "projects/AMG OFFICE.jpg": {
     "width": 418,
@@ -695,109 +659,105 @@
     "width": 862,
     "height": 1225
   },
-  "projects/ARCHITECTS-OFFICE/3_4/1.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/10.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/11.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/12.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/13.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/14.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/15.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/2.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/3.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/4.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/5.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/6.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/7.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/8.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/9.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/section-1.webp": {
-    "width": 2152,
-    "height": 621
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/section-2.webp": {
-    "width": 2122,
-    "height": 630
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/section-hand-sketch.webp": {
-    "width": 2400,
-    "height": 1698
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/sketch-showing-ceiling-element.webp": {
-    "width": 699,
-    "height": 668
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/sketch_(4).webp": {
-    "width": 727,
-    "height": 1000
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/sketch_(5).webp": {
-    "width": 727,
-    "height": 1000
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/_ArchitectΓÇÖs Office.webp": {
-    "width": 1304,
-    "height": 979
-  },
-  "projects/ARCHITECTS-OFFICE/cover/COVER IMAGE.webp": {
-    "width": 7360,
-    "height": 4912
-  },
-  "projects/ARCHITECTS-OFFICE/cover/HERO IMAGE.webp": {
-    "width": 939,
-    "height": 1675
-  },
   "projects/ARCHITECTΓÇÖS OFFICE.png": {
     "width": 862,
     "height": 1225
   },
-  "projects/ARCHITECT’S OFFICE.png": {
-    "width": 862,
-    "height": 1225
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/1.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/10.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/11.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/12.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/13.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/14.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/15.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/2.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/3.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/4.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/5.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/6.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/7.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/8.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/9.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/section-1.webp": {
+    "width": 2152,
+    "height": 621
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/section-2.webp": {
+    "width": 2122,
+    "height": 630
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/section-hand-sketch.webp": {
+    "width": 2400,
+    "height": 1698
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/sketch-showing-ceiling-element.webp": {
+    "width": 699,
+    "height": 668
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/sketch_(4).webp": {
+    "width": 727,
+    "height": 1000
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/sketch_(5).webp": {
+    "width": 727,
+    "height": 1000
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/_ArchitectΓÇÖs Office.webp": {
+    "width": 1304,
+    "height": 979
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/cover/COVER IMAGE.webp": {
+    "width": 7360,
+    "height": 4912
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/cover/HERO IMAGE.webp": {
+    "width": 939,
+    "height": 1675
   },
   "projects/ART HOUSE.jpg": {
     "width": 1065,
@@ -1118,70 +1078,6 @@
   "projects/COLOR-BOX-OFFICE/cover/hero.webp": {
     "width": 1920,
     "height": 1080
-  },
-  "projects/COLOR-COURT/3_4/1.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/COLOR-COURT/3_4/10.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/COLOR-COURT/3_4/11.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/COLOR-COURT/3_4/12.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/COLOR-COURT/3_4/13.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/COLOR-COURT/3_4/14.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/COLOR-COURT/3_4/2.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/COLOR-COURT/3_4/3.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/COLOR-COURT/3_4/4.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/COLOR-COURT/3_4/5.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/COLOR-COURT/3_4/6.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/COLOR-COURT/3_4/7.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/COLOR-COURT/3_4/8.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/COLOR-COURT/3_4/9.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/COLOR-COURT/cover/Cover Image.webp": {
-    "width": 8256,
-    "height": 5504
-  },
-  "projects/COLOR-COURT/cover/HERO.webp": {
-    "width": 1093,
-    "height": 1439
   },
   "projects/COLOR-DIALOGUE/3_4/1.webp": {
     "width": 4800,
@@ -1991,114 +1887,6 @@
     "width": 696,
     "height": 400
   },
-  "projects/HOUSE-OF-CURVES/3_4/1.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/HOUSE-OF-CURVES/3_4/10.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/HOUSE-OF-CURVES/3_4/11.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/HOUSE-OF-CURVES/3_4/12.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/HOUSE-OF-CURVES/3_4/13.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/HOUSE-OF-CURVES/3_4/14.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/HOUSE-OF-CURVES/3_4/15.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/HOUSE-OF-CURVES/3_4/16.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/HOUSE-OF-CURVES/3_4/17.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/HOUSE-OF-CURVES/3_4/18.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/HOUSE-OF-CURVES/3_4/19.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/HOUSE-OF-CURVES/3_4/2.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/HOUSE-OF-CURVES/3_4/20.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/HOUSE-OF-CURVES/3_4/3.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/HOUSE-OF-CURVES/3_4/4.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/HOUSE-OF-CURVES/3_4/5.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/HOUSE-OF-CURVES/3_4/6.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/HOUSE-OF-CURVES/3_4/7.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/HOUSE-OF-CURVES/3_4/8.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/HOUSE-OF-CURVES/3_4/9.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/HOUSE-OF-CURVES/3_4/SKECTH.webp": {
-    "width": 1536,
-    "height": 1136
-  },
-  "projects/HOUSE-OF-CURVES/3_4/sketches house of curves_page-0001(1).webp": {
-    "width": 2550,
-    "height": 1943
-  },
-  "projects/HOUSE-OF-CURVES/3_4/sketches house of curves_page-0001.webp": {
-    "width": 2550,
-    "height": 1943
-  },
-  "projects/HOUSE-OF-CURVES/3_4/sketches house of curves_page-0002(1).webp": {
-    "width": 2550,
-    "height": 1682
-  },
-  "projects/HOUSE-OF-CURVES/3_4/sketches house of curves_page-0002.webp": {
-    "width": 2550,
-    "height": 1682
-  },
-  "projects/HOUSE-OF-CURVES/cover/COVER.webp": {
-    "width": 1130,
-    "height": 1392
-  },
-  "projects/HOUSE-OF-CURVES/cover/HERO.webp": {
-    "width": 6000,
-    "height": 8000
-  },
   "projects/HOUSE-OF-DANCING-SCREENS/cover/COVER.webp": {
     "width": 8256,
     "height": 5698
@@ -2739,105 +2527,9 @@
     "width": 502,
     "height": 753
   },
-  "projects/KRISHAS-RESIDENCE/3_4/1.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/KRISHAS-RESIDENCE/3_4/10.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/KRISHAS-RESIDENCE/3_4/2.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/KRISHAS-RESIDENCE/3_4/3.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/KRISHAS-RESIDENCE/3_4/4.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/KRISHAS-RESIDENCE/3_4/5.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/KRISHAS-RESIDENCE/3_4/6.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/KRISHAS-RESIDENCE/3_4/7.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/KRISHAS-RESIDENCE/3_4/8.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/KRISHAS-RESIDENCE/3_4/9.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/KRISHAS-RESIDENCE/cover/COVER.webp": {
-    "width": 7360,
-    "height": 4912
-  },
-  "projects/KRISHAS-RESIDENCE/cover/HERO.webp": {
-    "width": 4912,
-    "height": 7360
-  },
   "projects/LAHORI GATE MUSEUM.png": {
     "width": 370,
     "height": 515
-  },
-  "projects/LAHORI-GATE-MUSEUM/3_4/1.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/LAHORI-GATE-MUSEUM/3_4/10.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/LAHORI-GATE-MUSEUM/3_4/11.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/LAHORI-GATE-MUSEUM/3_4/12.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/LAHORI-GATE-MUSEUM/3_4/2.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/LAHORI-GATE-MUSEUM/3_4/3.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/LAHORI-GATE-MUSEUM/3_4/4.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/LAHORI-GATE-MUSEUM/3_4/5.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/LAHORI-GATE-MUSEUM/3_4/6.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/LAHORI-GATE-MUSEUM/3_4/7.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/LAHORI-GATE-MUSEUM/3_4/8.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/LAHORI-GATE-MUSEUM/3_4/9.webp": {
-    "width": 4800,
-    "height": 3600
   },
   "projects/LAHORI-GATE-MUSEUM/cover/Cover Image.webp": {
     "width": 1920,
@@ -2954,70 +2646,6 @@
   "projects/LEGEND-VENEER-EXHIBITION-DELHI/photographs/BHA_2012.webp": {
     "width": 8256,
     "height": 5504
-  },
-  "projects/LEGEND-VENNER-EXHIBITION-MUMBAI/3_4/1.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/LEGEND-VENNER-EXHIBITION-MUMBAI/3_4/10.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/LEGEND-VENNER-EXHIBITION-MUMBAI/3_4/11.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/LEGEND-VENNER-EXHIBITION-MUMBAI/3_4/12.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/LEGEND-VENNER-EXHIBITION-MUMBAI/3_4/13.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/LEGEND-VENNER-EXHIBITION-MUMBAI/3_4/14.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/LEGEND-VENNER-EXHIBITION-MUMBAI/3_4/2.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/LEGEND-VENNER-EXHIBITION-MUMBAI/3_4/3.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/LEGEND-VENNER-EXHIBITION-MUMBAI/3_4/4.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/LEGEND-VENNER-EXHIBITION-MUMBAI/3_4/5.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/LEGEND-VENNER-EXHIBITION-MUMBAI/3_4/6.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/LEGEND-VENNER-EXHIBITION-MUMBAI/3_4/7.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/LEGEND-VENNER-EXHIBITION-MUMBAI/3_4/8.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/LEGEND-VENNER-EXHIBITION-MUMBAI/3_4/9.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/LEGEND-VENNER-EXHIBITION-MUMBAI/cover/Cover Image.webp": {
-    "width": 7360,
-    "height": 4508
-  },
-  "projects/LEGEND-VENNER-EXHIBITION-MUMBAI/cover/Hero Image.webp": {
-    "width": 4550,
-    "height": 7258
   },
   "projects/LIBRARY HOUSE.jpg": {
     "width": 1571,
@@ -3182,54 +2810,6 @@
   "projects/SCREEN HOUSE.jpg": {
     "width": 514,
     "height": 668
-  },
-  "projects/SCREEN-HOUSE/3_4/1.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/SCREEN-HOUSE/3_4/10.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/SCREEN-HOUSE/3_4/11.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/SCREEN-HOUSE/3_4/12.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/SCREEN-HOUSE/3_4/2.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/SCREEN-HOUSE/3_4/3.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/SCREEN-HOUSE/3_4/4.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/SCREEN-HOUSE/3_4/5.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/SCREEN-HOUSE/3_4/6.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/SCREEN-HOUSE/3_4/7.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/SCREEN-HOUSE/3_4/8.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/SCREEN-HOUSE/3_4/9.webp": {
-    "width": 3600,
-    "height": 4800
   },
   "projects/SCREEN-HOUSE/cover/COVER.webp": {
     "width": 8256,
@@ -3551,46 +3131,6 @@
     "width": 515,
     "height": 739
   },
-  "projects/STUDIO-ELEMENT/3_4/1.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/STUDIO-ELEMENT/3_4/2.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/STUDIO-ELEMENT/3_4/3.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/STUDIO-ELEMENT/3_4/4.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/STUDIO-ELEMENT/3_4/5.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/STUDIO-ELEMENT/3_4/6.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/STUDIO-ELEMENT/3_4/7.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/STUDIO-ELEMENT/3_4/8.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/STUDIO-ELEMENT/cover/Cover Image.webp": {
-    "width": 1536,
-    "height": 1024
-  },
-  "projects/STUDIO-ELEMENT/cover/Hero Image.webp": {
-    "width": 4480,
-    "height": 6720
-  },
   "projects/SWATANTRA RESIDENCE.jpg": {
     "width": 900,
     "height": 1567
@@ -3719,62 +3259,6 @@
     "width": 710,
     "height": 807
   },
-  "projects/THE-BLUE-COURTYARD/3_4/1.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/THE-BLUE-COURTYARD/3_4/10.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/THE-BLUE-COURTYARD/3_4/11.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/THE-BLUE-COURTYARD/3_4/12.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/THE-BLUE-COURTYARD/3_4/2.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/THE-BLUE-COURTYARD/3_4/3.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/THE-BLUE-COURTYARD/3_4/4.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/THE-BLUE-COURTYARD/3_4/5.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/THE-BLUE-COURTYARD/3_4/6.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/THE-BLUE-COURTYARD/3_4/7.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/THE-BLUE-COURTYARD/3_4/8.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/THE-BLUE-COURTYARD/3_4/9.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/THE-BLUE-COURTYARD/cover/cover.webp": {
-    "width": 1206,
-    "height": 1098
-  },
-  "projects/THE-BLUE-COURTYARD/cover/hero (1).webp": {
-    "width": 967,
-    "height": 1280
-  },
   "projects/THECANVAS.jpg": {
     "width": 609,
     "height": 445
@@ -3782,66 +3266,6 @@
   "projects/TILES AND KITCHEN SHOWROOM.png": {
     "width": 504,
     "height": 741
-  },
-  "projects/TILES-AND-KITCHEN-SHOWROOM/3_4/1.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/TILES-AND-KITCHEN-SHOWROOM/3_4/10.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/TILES-AND-KITCHEN-SHOWROOM/3_4/11.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/TILES-AND-KITCHEN-SHOWROOM/3_4/12.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/TILES-AND-KITCHEN-SHOWROOM/3_4/13.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/TILES-AND-KITCHEN-SHOWROOM/3_4/2.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/TILES-AND-KITCHEN-SHOWROOM/3_4/3.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/TILES-AND-KITCHEN-SHOWROOM/3_4/4.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/TILES-AND-KITCHEN-SHOWROOM/3_4/5.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/TILES-AND-KITCHEN-SHOWROOM/3_4/6.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/TILES-AND-KITCHEN-SHOWROOM/3_4/7.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/TILES-AND-KITCHEN-SHOWROOM/3_4/8.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/TILES-AND-KITCHEN-SHOWROOM/3_4/9.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/TILES-AND-KITCHEN-SHOWROOM/cover/COVER IMAGE.webp": {
-    "width": 5624,
-    "height": 3736
-  },
-  "projects/TILES-AND-KITCHEN-SHOWROOM/cover/HERO IMAGE.webp": {
-    "width": 3736,
-    "height": 5624
   },
   "projects/TOY BANK MUSEUM.jpg": {
     "width": 800,
@@ -3894,5 +3318,81 @@
   "projects/VEYA-APARTMENT/photographs/9.webp": {
     "width": 8256,
     "height": 5504
+  },
+  "Team/0. POOJA AGGARWAL - SENIOR INTERIOR DESIGNER.webp": {
+    "width": 1200,
+    "height": 1600
+  },
+  "Team/10_Prajwal_intern.webp": {
+    "width": 1200,
+    "height": 1600
+  },
+  "Team/11_Shabad_intern.webp": {
+    "width": 1200,
+    "height": 1600
+  },
+  "Team/12_Arvind Kumar_Senior Site Associate.webp": {
+    "width": 4000,
+    "height": 5600
+  },
+  "Team/16_Dharmendra_Senior Site Engineer.webp": {
+    "width": 4000,
+    "height": 5600
+  },
+  "Team/17_Praveen Sharma_Senior Site Engineer.webp": {
+    "width": 4000,
+    "height": 5600
+  },
+  "Team/18_Veena Negi_Senior Account Executive.webp": {
+    "width": 4000,
+    "height": 5600
+  },
+  "Team/19_Manoj Kumar_Senior Admin.webp": {
+    "width": 1200,
+    "height": 1600
+  },
+  "Team/1_Pawan Sharma_Senior Associate Architect.webp": {
+    "width": 4000,
+    "height": 5600
+  },
+  "Team/20_Lalit Bhaiya_Senior Admin.webp": {
+    "width": 4000,
+    "height": 5600
+  },
+  "Team/21_Sanjay Bhaiya_Admin.webp": {
+    "width": 4000,
+    "height": 5600
+  },
+  "Team/2_Aruj Saxena_Associate Architect.webp": {
+    "width": 4000,
+    "height": 5600
+  },
+  "Team/3_Vikrant Singh_Associate Architect.webp": {
+    "width": 4000,
+    "height": 5600
+  },
+  "Team/4_Payal Patnaik_ARCHITECT.webp": {
+    "width": 1200,
+    "height": 1600
+  },
+  "Team/6_Nishtha Dhamija_ARCHITECT.webp": {
+    "width": 1200,
+    "height": 1600
+  },
+  "Team/7_Aachal_Intern.webp": {
+    "width": 1200,
+    "height": 1600
+  },
+  "Team/8_Archit_intern.webp": {
+    "width": 1200,
+    "height": 1600
+  },
+  "Team/8_Chavi_intern.webp": {
+    "width": 1200,
+    "height": 1600
+  },
+  "Team/9_Hemant_intern.webp": {
+    "width": 1200,
+    "height": 1600
   }
 }
