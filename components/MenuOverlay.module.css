@@ -94,6 +94,7 @@
         width: calc(100% - 48px);
         padding: 24px 0;
     }
+
     .menuLayout {
         width: calc(100% - 48px);
         display: flex !important;
@@ -101,16 +102,35 @@
         gap: 44px;
         padding: 24px 0 64px;
     }
+
     .menuImage {
         max-width: none !important;
         flex-basis: auto !important;
     }
+
     .menuNavigation {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        column-gap: 35px;
         padding-top: 0;
-        column-gap: 16px;
+        min-width: 0;
     }
+
     .menuColumn {
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
         gap: 2.25rem;
+    }
+
+    .menuColumn :global(.nav-link) {
+        display: block;
+        min-width: 0;
+        max-width: 100%;
+        white-space: normal; 
+        overflow-wrap: anywhere;
+        word-break: normal;
+        line-height: 1.4;
     }
 }
