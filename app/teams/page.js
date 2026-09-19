@@ -48,8 +48,8 @@ const teamMembers = [
   { image: praveenSharma, name: "Praveen Sharma", role: "Senior Site Engineer" },
   { image: veenaNegi, name: "Veena Negi", role: "Senior Account Executive" },
   { image: manojKumar, name: "Manoj Kumar", role: "Senior Admin" },
-  { image: lalitBhaiya, name: "Lalit Bhaiya", role: "Senior Admin" },
-  { image: sanjayBhaiya, name: "Sanjay Bhaiya", role: "Admin" },
+  { image: lalitBhaiya, name: "Lalit", role: "Senior Admin" },
+  { image: sanjayBhaiya, name: "Sanjay", role: "Admin" },
 ];
 
 export default function TeamPage() {

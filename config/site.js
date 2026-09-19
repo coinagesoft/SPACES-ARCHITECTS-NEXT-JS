@@ -17,9 +17,9 @@ export const site = {
     },
 
     social: [
-        { label: "Facebook", href: "#" },
-        { label: "X", href: "#" },
-        { label: "LinkedIn", href: "#" },
+        { label: "Instagram", href: "https://www.instagram.com/spacesarchitects.ka/" },
+        { label: "X", href: "https://x.com/SpacesArch_ka" },
+        { label: "LinkedIn", href: "https://www.linkedin.com/company/spaces-architects-ka/" },
         { label: "Email", href: "mailto:admin@spacesarchitects-ka.com" },
     ],
 

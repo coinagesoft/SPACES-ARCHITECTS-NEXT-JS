@@ -110,11 +110,12 @@ export default function ContactPage() {
         <div className={styles.mapCol}>
           <div className={styles.mapFrame}>
             <iframe
-              src={contactCopy.map.embedSrc}
-              title="Studio location map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1752.0454223641548!2d77.22036241141095!3d28.567034662446495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce25cca8c9ae1%3A0xbd62109e44ae6a27!2sSpaces%20Architects%20%40ka!5e0!3m2!1sen!2sin!4v1789816409256!5m2!1sen!2sin"
+              title="Spaces Architects @ka location"
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
+              referrerPolicy="strict-origin-when-cross-origin"
               className={styles.map}
+              allowFullScreen
             />
           </div>
 

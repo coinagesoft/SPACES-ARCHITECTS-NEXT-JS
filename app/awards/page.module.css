@@ -73,12 +73,39 @@
 ========================= */
 
 .marks {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  gap: 16px;
-  align-items: center;
+  width: 100%;
+  overflow: hidden;
   padding-bottom: 28px;
   border-bottom: 1px solid #e5e5e5;
+}
+
+.marksTrack {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: awardsLogoScroll 25s linear infinite;
+}
+
+.mark {
+  position: relative;
+  width: 120px;
+  height: 70px;
+  flex: 0 0 120px;
+  margin-right: 45px;
+}
+
+.markImage {
+  object-fit: contain;
+}
+
+@keyframes awardsLogoScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .mark {

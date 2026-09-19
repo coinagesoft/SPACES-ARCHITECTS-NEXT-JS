@@ -60,6 +60,10 @@ const goldenHaveli = assetImage("Featured Project/GOLDEN-HAVELLI.png");
 const libraryHouse = assetImage("Featured Project/library-house.png");
 const swatantraResidence = assetImage("Featured Project/swatantra-residence.jpg");
 const houseOfDancingScreen = assetImage("Featured Project/house-of-DANCING-SCREEN.png");
+const artHouseHero = assetImage("projects/ART_HOUSE/cover/HERO.webp");
+const houseOfSteppedGardenHero = assetImage("projects/HOUSE-OF-STEPPED-GARDEN/cover/hero image.webp");
+const libraryHouseHero = assetImage("projects/LIBRARY-HOUSE/cover/hero image.webp");
+const swatantraCover = assetImage("projects/SWATANTRA-RESIDENCE/COVER IMAGE/cover.jpg");
 const dezeenFeature = assetImage("Featured News/dezeen-exclusive-feature.png");
 const architecturalDigestFeature = assetImage("Featured News/architectural-digest-india-feature.png");
 const gandhiDarshanInauguration = assetImage("Featured News/gandhi-darshan-park-inaugration.png");
@@ -151,7 +155,7 @@ const galFuidicOffice = assetImage("projects/FUIDIC OFFICE.jpg");
 const galGuptasResidence = assetImage("projects/GUPTAS RESIDENCE.jpg");
 const galHouseAroundATree = assetImage("projects/HOUSE AROUND A TREE.png");
 const galJainsResidence = assetImage("projects/JAINS RESIDENCE.jpg");
-const galSaativkMarbleShowroom = assetImage("projects/SAATIVK MARBLE SHOWROOM.jpg");
+const galSaatvikMarbleShowroom = assetImage("projects/SAATIVK MARBLE SHOWROOM.jpg");
 const galTheCanvas = assetImage("projects/THECANVAS.jpg");
 const galSethisResidence = assetImage("projects/SETHIS RESIDENCE.png");
 const galSobhtiResidence = assetImage("projects/SOBHTI RESIDENCE.jpg");
@@ -399,7 +403,7 @@ export const assets = {
 
     // ---- Home page ----
     home: {
-        heroImage: unsplash("photo-1600585154340-be6161a56a0c", 1920, 1080),
+        heroImage: houseOfSteppedGardenHero,
         heroTitle: "HOUSE OF STEPPED GARDEN",
         heroSubtitle: "KOCHI",
         menuThumb: menuImage,
@@ -605,8 +609,8 @@ export const assets = {
         { file: "GUPTA#U2019S RESIDENCE.jpg", name: "Gupta's Residence", image: galGuptasResidence, orientation: "portrait" },
         { file: "HOUSE AROUND A TREE.png", name: "House Around a Tree", image: galHouseAroundATree, orientation: "landscape" },
         { file: "JAIN#U2019S RESIDENCE.jpg", name: "Jain's Residence", image: galJainsResidence, orientation: "landscape" },
-        { file: "SAATIVK MARBLE SHOWROOM.jpg", name: "Saativk Marble Showroom", image: galSaativkMarbleShowroom, orientation: "portrait" },
-        { file: "THECANVAS.jpg", name: "TheCanvas", image: galTheCanvas, orientation: "landscape" },
+        { file: "SAATVIK MARBLE SHOWROOM.jpg", name: "Saatvik Marble Showroom", image: galSaatvikMarbleShowroom, orientation: "portrait" },
+        { file: "THECANVAS.jpg", name: "The Canvas", image: galTheCanvas, orientation: "landscape" },
         { file: "SETHI#U2019S RESIDENCE.png", name: "Sethi's Residence", image: galSethisResidence, orientation: "portrait" },
         { file: "SOBHTI RESIDENCE.jpg", name: "Sobhti Residence", image: galSobhtiResidence, orientation: "landscape" },
         { file: "HANSGROHE SHOWROOM.png", name: "Hansgrohe Showroom", image: galHansgroheShowroom, orientation: "landscape" },
@@ -630,7 +634,7 @@ export const assets = {
     // ---- Projects / Blog grid page ----
     projects: [{
         id: "haveli-dharampura",
-        image: haveliDharampuraImage,
+        image: haveliHero,
         name: "Haveli Dharampura",
         excerpt: "Delhi — Heritage Restoration & Hospitality",
     },
@@ -638,49 +642,49 @@ export const assets = {
         id: "art-house",
         name: "Art House",
         excerpt: "A residence conceived around a sculptural steel staircase, where art, light and landscape shape every threshold.",
-        image: unsplash("photo-1600585154526-990dced4db0d", 900, 900),
+        image: artHouseHero,
     },
     {
         id: "house-of-stepped-garden",
         name: "House of Stepped Garden",
         excerpt: "Terraced greenery cascades down the facade of this Kochi home, blurring the line between architecture and landscape.",
-        image: unsplash("photo-1600596542815-ffad4c1539a9", 900, 900),
+        image: houseOfSteppedGardenHero,
     },
     {
         id: "library-house",
         name: "Library House",
         excerpt: "Timber joinery and quiet reading nooks define a home built around the ritual of books and natural light.",
-        image: unsplash("photo-1600210492486-724fe5c67fb0", 900, 900),
+        image: libraryHouseHero,
     },
     {
         id: "swatantra-residence",
         name: "Swatantra Residence",
         excerpt: "An interior of warm wood and soft daylight, designed as a series of intimate, memory-laden living moments.",
-        image: unsplash("photo-1600607687920-4e2a09cf159d", 900, 900),
+        image: swatantraCover,
     },
     {
-        id: "sectional-study",
-        name: "Sectional Study",
-        excerpt: "A hand-drawn section illustrates the vertical choreography of light, stair and courtyard across four levels.",
-        image: unsplash("photo-1600210491892-03d54c0aaf87", 900, 900),
+        id: "heritage-park",
+        name: "The Heritage Park",
+        excerpt: "A public realm project giving Old Delhi back its open space, weaving heritage and community.",
+        image: heritagePark,
     },
     {
-        id: "heritage-textile-room",
-        name: "Heritage Textile Room",
-        excerpt: "A restored interior where patterned textiles and vintage lighting speak to the building's layered history.",
-        image: unsplash("photo-1616486338812-3dadae4b4ace", 900, 900),
+        id: "golden-haveli",
+        name: "Golden Haveli",
+        excerpt: "Restoring the memory of Chandni Chowk with hand-finished details and traditional proportions.",
+        image: goldenHaveli,
     },
     {
-        id: "courtyard-veranda",
-        name: "Courtyard Veranda",
-        excerpt: "A resident pauses at the veranda's edge, framed by timber louvres and a canopy of overhanging trees.",
-        image: unsplash("photo-1600566752355-35792bedcfea", 900, 900),
+        id: "apartment-88",
+        name: "Apartment 88",
+        excerpt: "A refined residential interior balancing warmth, texture and contemporary craftsmanship.",
+        image: apartment88Hero,
     },
     {
-        id: "marble-living-room",
-        name: "Marble Living Room",
-        excerpt: "Book-matched marble and a restrained material palette bring a quiet monumentality to the living space.",
-        image: unsplash("photo-1615873968403-89e068629265", 900, 900),
+        id: "house-of-dancing-screens",
+        name: "House of Dancing Screens",
+        excerpt: "Dynamic perforated screens modulate daylight and privacy across a sculpted residential facade.",
+        image: houseOfDancingScreen,
     },
     ],
 

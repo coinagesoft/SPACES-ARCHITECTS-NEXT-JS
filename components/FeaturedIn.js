@@ -3,11 +3,33 @@ import styles from "./FeaturedIn.module.css";
 
 function LogoSet({ logos, hidden = false }) {
   return logos.map((logo) => (
-    <div key={`${hidden ? "copy-" : ""}${logo.name}`} className={styles.logo} aria-hidden={hidden}>
+    <div
+      key={`${hidden ? "copy-" : ""}${logo.name}`}
+      className={styles.logo}
+      aria-hidden={hidden}
+      // Inline styles are a deliberate safety net: they apply regardless of
+      // whether the CSS Module stylesheet has loaded/matched correctly, so a
+      // logo can never render at its oversized natural dimensions.
+      style={{
+        position: "relative",
+        flex: "0 0 var(--logo-basis, 112px)",
+        width: "var(--logo-basis, 112px)",
+        maxWidth: "var(--logo-basis, 112px)",
+        height: "var(--logo-height, 58px)",
+        marginRight: "var(--logo-gap, 28px)",
+        overflow: "hidden",
+      }}
+    >
       <img
         src={typeof logo.image === "string" ? logo.image : logo.image.src}
         alt={hidden ? "" : logo.name}
         className={styles.logoImage}
+        style={{
+          display: "block",
+          width: "100%",
+          height: "100%",
+          objectFit: "contain",
+        }}
       />
     </div>
   ));

@@ -1,12 +1,13 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import SiteChrome from "@/components/SiteChrome";
 import Footer from "@/components/Footer";
 import HeroSlider from "@/components/HeroSlider";
 import FeaturedCarousel from "@/components/FeaturedCarousel";
 import FeaturedIn from "@/components/FeaturedIn";
 import { assets } from "@/assets";
+import { assetImage } from "@/config/assets";
 import { homeCopy } from "@/config/site";
 
 // Full phrases that should be highlighted, exactly as they appear in the copy.
@@ -51,6 +52,18 @@ const SNAP_LOCK_MS = 900;
 // Minimum wheel/touch delta before we treat it as an intentional scroll gesture.
 const SCROLL_THRESHOLD = 8;
 
+const mobileHeroPortraits = {
+  "haveli-dharampura": assetImage("projects/haveli/haveli_1.jpg"),
+  "art-house": assetImage("projects/ART_HOUSE/3_4/2.webp"),
+  "house-of-stepped-garden": assetImage("projects/HOUSE-OF-STEPPED-GARDEN/photographs/2 (12).webp"),
+  "library-house": assetImage("projects/LIBRARY-HOUSE/photographs/BHA_2853.webp"),
+};
+
+const homeHeroProjects = assets.projects.slice(0, 4).map((project) => ({
+  ...project,
+  mobileImage: mobileHeroPortraits[project.id] ?? project.image,
+}));
+
 export default function HomePage() {
   // Order the scroll-jack will step through, one section per scroll:
   //   1st scroll -> introRef (paragraph section)
@@ -71,20 +84,26 @@ export default function HomePage() {
   const featuredInRef = useRef(null);
   const footerRef = useRef(null);
 
-  const sections = [introRef, projectsRef, newsRef, featuredInRef, footerRef];
+  const sections = useMemo(
+    () => [introRef, projectsRef, newsRef, featuredInRef, footerRef],
+    []
+  );
 
   const stepRef = useRef(0); // 0 = top/hero, 1..sections.length = which section we've snapped to
   const isLockedRef = useRef(false); // true while a snap animation is in flight
   const unlockedRef = useRef(false); // true once user has scrolled past the last section
-  const touchStartYRef = useRef(0);
 
   useEffect(() => {
+    // Only enable section-wise scroll-jacking on desktop view (>= 768px).
+    // On mobile view (< 768px), keep normal native browser scrolling without hijacking.
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
+
     const scrollToStep = (step) => {
       isLockedRef.current = true;
       if (step === 0) {
         window.scrollTo({ top: 0, behavior: "smooth" });
       } else {
-        const target = sections[step - 1].current;
+        const target = sections[step - 1]?.current;
         target?.scrollIntoView({ behavior: "smooth", block: "start" });
       }
       window.setTimeout(() => {
@@ -93,6 +112,7 @@ export default function HomePage() {
     };
 
     const handleDelta = (delta, e) => {
+      if (!mediaQuery.matches) return; // Keep normal scrolling on mobile view
       if (unlockedRef.current) return; // past the last section, let native scrolling take over
       if (Math.abs(delta) < SCROLL_THRESHOLD) return;
       if (isLockedRef.current) {
@@ -113,8 +133,6 @@ export default function HomePage() {
             unlockedRef.current = true;
           }
         }
-        // if already at the last defined step, fall through and let it unlock
-        // naturally on the next gesture via unlockedRef above.
       } else {
         if (stepRef.current > 0) {
           e.preventDefault();
@@ -124,36 +142,52 @@ export default function HomePage() {
       }
     };
 
-    const handleWheel = (e) => handleDelta(e.deltaY, e);
-
-    const handleTouchStart = (e) => {
-      touchStartYRef.current = e.touches[0].clientY;
+    const handleWheel = (e) => {
+      if (!mediaQuery.matches) return;
+      handleDelta(e.deltaY, e);
     };
 
-    const handleTouchMove = (e) => {
-      const currentY = e.touches[0].clientY;
-      const delta = touchStartYRef.current - currentY; // swipe up => positive => scroll down
-      handleDelta(delta, e);
-      if (Math.abs(delta) >= SCROLL_THRESHOLD) {
-        touchStartYRef.current = currentY;
+    const attachWheel = () => {
+      window.addEventListener("wheel", handleWheel, { passive: false });
+    };
+
+    const detachWheel = () => {
+      window.removeEventListener("wheel", handleWheel);
+    };
+
+    if (mediaQuery.matches) {
+      attachWheel();
+    }
+
+    const handleMediaChange = (e) => {
+      detachWheel();
+      if (e.matches) {
+        attachWheel();
+      } else {
+        isLockedRef.current = false;
       }
     };
 
-    window.addEventListener("wheel", handleWheel, { passive: false });
-    window.addEventListener("touchstart", handleTouchStart, { passive: true });
-    window.addEventListener("touchmove", handleTouchMove, { passive: false });
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener("change", handleMediaChange);
+    } else {
+      mediaQuery.addListener(handleMediaChange);
+    }
 
     return () => {
-      window.removeEventListener("wheel", handleWheel);
-      window.removeEventListener("touchstart", handleTouchStart);
-      window.removeEventListener("touchmove", handleTouchMove);
+      detachWheel();
+      if (mediaQuery.removeEventListener) {
+        mediaQuery.removeEventListener("change", handleMediaChange);
+      } else {
+        mediaQuery.removeListener(handleMediaChange);
+      }
     };
   }, [sections]);
 
   return (
     <main>
       <SiteChrome dark home />
-      <HeroSlider projects={assets.projects.slice(0, 4)} />
+      <HeroSlider projects={homeHeroProjects} />
       <section ref={introRef} className="site-container py-8 md:py-12">
         <div className="space-y-7">
           {homeCopy.intro.map((paragraph, index) => (
