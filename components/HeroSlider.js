@@ -31,7 +31,7 @@ export default function HeroSlider({ projects }) {
     const activeProject = projects[activeIndex];
 
     return (
-        <section className="relative w-full h-screen min-h-screen overflow-hidden">
+        <section className="relative w-full h-screen min-h-screen overflow-hidden md:h-screen md:min-h-screen max-md:h-[90vh] max-md:min-h-[80vh]">
             {projects.map((project, index) => {
                 const imageSrc = isMobile ? project.mobileImage ?? project.image : project.image;
 
