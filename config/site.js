@@ -8,7 +8,7 @@
 export const site = {
     name: "SPACES ARCHITECTS",
     handle: "@ka",
-    tagline: "Architecture with a sense of place, purpose and soul",
+    tagline: "Best Architect in Delhi — Crafting Spaces That Are Experienced, Felt and Remembered.",
 
     contact: {
         phones: ["+91 11 4310 8540", "+91 11 3568 3993"],
