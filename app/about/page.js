@@ -2,21 +2,27 @@ import Image from "next/image";
 import Link from "next/link";
 import SiteChrome from "@/components/SiteChrome";
 import Footer from "@/components/Footer";
+import { assetImage } from "@/assets";
 import { aboutCopy } from "@/config/site";
 import styles from "./page.module.css";
 
 export const metadata = { title: "Studio — Spaces Architects@ka" };
 
-// Page images served straight from /public/assets — same style as the team photos below.
-const heroImage = "/assets/About_hero.jpg";
-const founderPhoto = "/assets/Kapil.jpg";
+// ---- Page images (served from the media server via assetImage) ----
+const heroImage = assetImage("About_hero.jpg");
+const founderPhoto = assetImage("Kapil.jpg");
 
-// Same photos/paths as the /team page — first 4 only, shown as a preview row here.
+// ---- Team photos — same files as the /teams page, first 4 only ----
+const poojaAggarwal = assetImage("Team/0. POOJA AGGARWAL - SENIOR INTERIOR DESIGNER.webp");
+const pawanSharma = assetImage("Team/1_Pawan Sharma_Senior Associate Architect.webp");
+const arujSaxena = assetImage("Team/2_Aruj Saxena_Associate Architect.webp");
+const vikrantSingh = assetImage("Team/3_Vikrant Singh_Associate Architect.webp");
+
 const featuredTeam = [
-  { src: "/assets/Team/0. POOJA AGGARWAL - SENIOR INTERIOR DESIGNER.webp", name: "Pooja Aggarwal", role: "Senior Interior Designer" },
-  { src: "/assets/Team/1_Pawan Sharma_Senior Associate Architect.webp", name: "Pawan Sharma", role: "Senior Associate Architect" },
-  { src: "/assets/Team/2_Aruj Saxena_Associate Architect.webp", name: "Aruj Saxena", role: "Associate Architect" },
-  { src: "/assets/Team/3_Vikrant Singh_Associate Architect.webp", name: "Vikrant Singh", role: "Associate Architect" },
+  { src: poojaAggarwal, name: "Pooja Aggarwal", role: "Senior Interior Designer" },
+  { src: pawanSharma, name: "Pawan Sharma", role: "Senior Associate Architect" },
+  { src: arujSaxena, name: "Aruj Saxena", role: "Associate Architect" },
+  { src: vikrantSingh, name: "Vikrant Singh", role: "Associate Architect" },
 ];
 
 export default function AboutPage() {

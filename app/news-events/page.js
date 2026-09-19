@@ -33,10 +33,10 @@ const unesco = assetImage("Home Page logos/UNISCO.webp");
 // ---- Podcast / events / jury: no project folder exists yet ----
 // Upload a 1.webp into each of these folders on the media server
 // (same pattern as the project images) and they will show up.
-const journeyWithCj = assetImage("projects/JOURNEY-WITH-CJ/3_4/1.webp");
-const forbesIndiaDesign2019 = assetImage("projects/FORBES-INDIA-DESIGN-2019/3_4/1.webp");
-const wadeAsiaJury = assetImage("projects/WADE-ASIA-JURY/3_4/1.webp");
-const matecia = assetImage("projects/MATECIA/3_4/1.webp");
+const journeyWithCj = assetImage("News-Event/youtube.webp");
+const forbesIndiaDesign2019 = assetImage("News-Event/forbesIndiaDesign2019.jpg");
+const wadeAsiaJury = assetImage("News-Event/wadeAsia.webp");
+// const matecia = assetImage("News/MATECIA/3_4/1.webp");
 
 // ---- Cards (same order as the sheet) ----
 // title  = Project column
@@ -85,7 +85,7 @@ const newsCards = [
   { title: "Lahori Gate Museum", source: "The Times of India", image: lahoriGateMuseum, href: "https://timesofindia.indiatimes.com/city/delhi/lahori-gate-museum-to-showcase-chandni-chowk-heritage/amp_articleshow/120388787.cms" },
   { title: "UNESCO", source: "The Times of India", image: unesco, href: "https://timesofindia.indiatimes.com/travel/india/travel-guide/unesco-recognises-7-indian-conservation-efforts/amp_guideshow/61485258.cms" },
   // No link in the sheet yet — shown as a plain (non-clickable) card.
-  { title: "MATECIA", source: "Event", image: matecia, href: null },
+  // { title: "MATECIA", source: "Event", image: matecia, href: null },
 
   { title: "Chartilal Goel Heritage Park", source: "Hindustan Times", image: chartilalGoelHeritagePark, href: "https://www.hindustantimes.com/cities/delhi-news/heritage-park-opens-in-walled-city-101647815631624-amp.html" },
   { title: "Swatantra Residence", source: "Financial Times", image: swatantraResidence, href: "https://www.ft.com/content/3bc01f86-ad16-4901-8782-42a91f9a72ea" },
