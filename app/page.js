@@ -52,17 +52,63 @@ const SNAP_LOCK_MS = 900;
 // Minimum wheel/touch delta before we treat it as an intentional scroll gesture.
 const SCROLL_THRESHOLD = 8;
 
-const mobileHeroPortraits = {
-  "haveli-dharampura": assetImage("projects/haveli/haveli_1.jpg"),
-  "art-house": assetImage("projects/ART_HOUSE/3_4/2.webp"),
-  "house-of-stepped-garden": assetImage("projects/HOUSE-OF-STEPPED-GARDEN/photographs/2 (12).webp"),
-  "library-house": assetImage("projects/LIBRARY-HOUSE/photographs/BHA_2853.webp"),
-};
-
-const homeHeroProjects = assets.projects.slice(0, 4).map((project) => ({
-  ...project,
-  mobileImage: mobileHeroPortraits[project.id] ?? project.image,
-}));
+const homeHeroProjects = [
+  {
+    id: "haveli-dharampura",
+    name: "Haveli Dharampura",
+    image: assetImage("projects/haveli/haveli_27.jpg"),
+  },
+  {
+    id: "art-house",
+    name: "Art House",
+    image: assetImage("projects/ART_HOUSE/3_4/26.webp"),
+  },
+  {
+    id: "house-of-stepped-garden",
+    name: "House of Stepped Garden",
+    image: assetImage("projects/HOUSE-OF-STEPPED-GARDEN/photographs/5(11).webp"),
+  },
+  {
+    id: "library-house",
+    name: "Library House",
+    image: assetImage("projects/LIBRARY-HOUSE/photographs/BHA_3042.webp"),
+  },
+  {
+    id: "golden-haveli",
+    name: "Golden Haveli",
+    image: assetImage("projects/GOLDEN-HAVELL/3_4/new/17.webp"),
+  },
+  {
+    id: "heritage-park",
+    name: "Heritage Park",
+    image: assetImage("projects/HERITAGE-PARK/cover/Cover Image.webp"),
+  },
+  {
+    id: "swatantra-residence",
+    name: "Swatantra Residence",
+    image: assetImage("projects/SWATANTRA-RESIDENCE/PHOTOGRAPH/5. Ground Living Room (5).jpg"),
+  },
+  {
+    id: "house-of-dancing-screens",
+    name: "House of Dancing Screens",
+    image: assetImage("projects/HOUSE-OF-DANCING-SCREENS/photographs/BHA_1648.webp"),
+  },
+  {
+    id: "step-maze",
+    name: "Step Maze",
+    image: assetImage("projects/STEP-MAZE/photographs/6.Staircase Lobby.webp"),
+  },
+  {
+    id: "slender-house",
+    name: "Slender House",
+    image: assetImage("projects/Slender-House/photographs/15. Entrance (Second Floor).webp"),
+  },
+  {
+    id: "Intersext-showroom",
+    name: "Intersext Showroom",
+    image: assetImage("projects/INTERSEXT-SHOWROOM/photographs/4 Facade with its context 2.webp"),
+  },
+];
 
 export default function HomePage() {
   // Order the scroll-jack will step through, one section per scroll:
