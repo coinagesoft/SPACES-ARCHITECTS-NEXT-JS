@@ -7,6 +7,7 @@ import HeroSlider from "@/components/HeroSlider";
 import FeaturedCarousel from "@/components/FeaturedCarousel";
 import FeaturedIn from "@/components/FeaturedIn";
 import { assets } from "@/assets";
+import { assetImage } from "@/config/assets";
 import { homeCopy } from "@/config/site";
 
 // Full phrases that should be highlighted, exactly as they appear in the copy.
@@ -50,6 +51,18 @@ const SNAP_LOCK_MS = 900;
 
 // Minimum wheel/touch delta before we treat it as an intentional scroll gesture.
 const SCROLL_THRESHOLD = 8;
+
+const mobileHeroPortraits = {
+  "haveli-dharampura": assetImage("projects/haveli/haveli_1.jpg"),
+  "art-house": assetImage("projects/ART_HOUSE/3_4/2.webp"),
+  "house-of-stepped-garden": assetImage("projects/HOUSE-OF-STEPPED-GARDEN/photographs/2 (12).webp"),
+  "library-house": assetImage("projects/LIBRARY-HOUSE/photographs/BHA_2853.webp"),
+};
+
+const homeHeroProjects = assets.projects.slice(0, 4).map((project) => ({
+  ...project,
+  mobileImage: mobileHeroPortraits[project.id] ?? project.image,
+}));
 
 export default function HomePage() {
   // Order the scroll-jack will step through, one section per scroll:
@@ -174,7 +187,7 @@ export default function HomePage() {
   return (
     <main>
       <SiteChrome dark home />
-      <HeroSlider projects={assets.projects.slice(0, 4)} />
+      <HeroSlider projects={homeHeroProjects} />
       <section ref={introRef} className="site-container py-8 md:py-12">
         <div className="space-y-7">
           {homeCopy.intro.map((paragraph, index) => (
