@@ -51,10 +51,6 @@
     "width": 1599,
     "height": 1066
   },
-  "blogs/ Architecture-in-Motion.png": {
-    "width": 440,
-    "height": 440
-  },
   "blogs/6x18.png": {
     "width": 668,
     "height": 668
@@ -943,109 +939,105 @@
     "width": 862,
     "height": 1225
   },
-  "projects/ARCHITECTS-OFFICE/3_4/1.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/10.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/11.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/12.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/13.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/14.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/15.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/2.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/3.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/4.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/5.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/6.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/7.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/8.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/9.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/section-1.webp": {
-    "width": 2152,
-    "height": 621
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/section-2.webp": {
-    "width": 2122,
-    "height": 630
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/section-hand-sketch.webp": {
-    "width": 2400,
-    "height": 1698
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/sketch-showing-ceiling-element.webp": {
-    "width": 699,
-    "height": 668
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/sketch_(4).webp": {
-    "width": 727,
-    "height": 1000
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/sketch_(5).webp": {
-    "width": 727,
-    "height": 1000
-  },
-  "projects/ARCHITECTS-OFFICE/3_4/_ArchitectΓÇÖs Office.webp": {
-    "width": 1304,
-    "height": 979
-  },
-  "projects/ARCHITECTS-OFFICE/cover/COVER IMAGE.webp": {
-    "width": 7360,
-    "height": 4912
-  },
-  "projects/ARCHITECTS-OFFICE/cover/HERO IMAGE.webp": {
-    "width": 939,
-    "height": 1675
-  },
   "projects/ARCHITECTΓÇÖS OFFICE.png": {
     "width": 862,
     "height": 1225
   },
-  "projects/ARCHITECT’S OFFICE.png": {
-    "width": 862,
-    "height": 1225
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/1.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/10.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/11.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/12.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/13.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/14.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/15.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/2.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/3.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/4.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/5.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/6.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/7.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/8.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/9.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/section-1.webp": {
+    "width": 2152,
+    "height": 621
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/section-2.webp": {
+    "width": 2122,
+    "height": 630
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/section-hand-sketch.webp": {
+    "width": 2400,
+    "height": 1698
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/sketch-showing-ceiling-element.webp": {
+    "width": 699,
+    "height": 668
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/sketch_(4).webp": {
+    "width": 727,
+    "height": 1000
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/sketch_(5).webp": {
+    "width": 727,
+    "height": 1000
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/3_4/_ArchitectΓÇÖs Office.webp": {
+    "width": 1304,
+    "height": 979
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/cover/COVER IMAGE.webp": {
+    "width": 7360,
+    "height": 4912
+  },
+  "projects/ARCHITECTΓÇÖS-OFFICE/cover/HERO IMAGE.webp": {
+    "width": 939,
+    "height": 1675
   },
   "projects/ART HOUSE.jpg": {
     "width": 1065,
@@ -4111,57 +4103,57 @@
     "width": 502,
     "height": 753
   },
-  "projects/KRISHAS RESIDENCE.jpg": {
-    "width": 502,
-    "height": 753
-  },
-  "projects/KRISHAS-RESIDENCE/3_4/1.webp": {
+  "projects/KRISHAGÇÖS-RESIDENCE/3_4/1.webp": {
     "width": 4800,
     "height": 3600
   },
-  "projects/KRISHAS-RESIDENCE/3_4/10.webp": {
+  "projects/KRISHAGÇÖS-RESIDENCE/3_4/10.webp": {
     "width": 4800,
     "height": 3600
   },
-  "projects/KRISHAS-RESIDENCE/3_4/2.webp": {
+  "projects/KRISHAGÇÖS-RESIDENCE/3_4/2.webp": {
     "width": 3600,
     "height": 4800
   },
-  "projects/KRISHAS-RESIDENCE/3_4/3.webp": {
+  "projects/KRISHAGÇÖS-RESIDENCE/3_4/3.webp": {
     "width": 3600,
     "height": 4800
   },
-  "projects/KRISHAS-RESIDENCE/3_4/4.webp": {
+  "projects/KRISHAGÇÖS-RESIDENCE/3_4/4.webp": {
     "width": 4800,
     "height": 3600
   },
-  "projects/KRISHAS-RESIDENCE/3_4/5.webp": {
+  "projects/KRISHAGÇÖS-RESIDENCE/3_4/5.webp": {
     "width": 4800,
     "height": 3600
   },
-  "projects/KRISHAS-RESIDENCE/3_4/6.webp": {
+  "projects/KRISHAGÇÖS-RESIDENCE/3_4/6.webp": {
     "width": 4800,
     "height": 3600
   },
-  "projects/KRISHAS-RESIDENCE/3_4/7.webp": {
+  "projects/KRISHAGÇÖS-RESIDENCE/3_4/7.webp": {
     "width": 4800,
     "height": 3600
   },
-  "projects/KRISHAS-RESIDENCE/3_4/8.webp": {
+  "projects/KRISHAGÇÖS-RESIDENCE/3_4/8.webp": {
     "width": 3600,
     "height": 4800
   },
-  "projects/KRISHAS-RESIDENCE/3_4/9.webp": {
+  "projects/KRISHAGÇÖS-RESIDENCE/3_4/9.webp": {
     "width": 3600,
     "height": 4800
   },
-  "projects/KRISHAS-RESIDENCE/cover/COVER.webp": {
+  "projects/KRISHAGÇÖS-RESIDENCE/cover/COVER.webp": {
     "width": 7360,
     "height": 4912
   },
-  "projects/KRISHAS-RESIDENCE/cover/HERO.webp": {
+  "projects/KRISHAGÇÖS-RESIDENCE/cover/HERO.webp": {
     "width": 4912,
     "height": 7360
+  },
+  "projects/KRISHAS RESIDENCE.jpg": {
+    "width": 502,
+    "height": 753
   },
   "projects/LAHORI GATE MUSEUM.png": {
     "width": 370,
