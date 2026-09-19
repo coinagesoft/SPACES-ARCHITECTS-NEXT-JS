@@ -9,6 +9,7 @@
     --pm-ink: #111;
     --pm-muted: #9a9a9a;
     --pm-row: 28px; /* height of one dropdown row — the backdrop is sized from it */
+    --pm-drop-shift: 24px; /* pulls the dropdown UP toward the menu labels (bigger = smaller top gap) */
 
     position: fixed;
     top: 0;
@@ -18,7 +19,6 @@
     box-sizing: border-box;
     height: var(--pm-h);
     background: #fff;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .bar {
@@ -107,7 +107,7 @@
 /* ---------- dropdown lists ---------- */
 .drop {
     position: absolute;
-    top: 100%;
+    top: calc(100% - var(--pm-drop-shift));
     left: 0;
     z-index: 1;
     margin: 0;
@@ -148,14 +148,15 @@
     color: var(--pm-accent);
 }
 
-/* White strip behind the open dropdown. Height = rows × row-height. */
+/* White strip behind the open dropdown. Height = rows × row-height (minus the
+   amount the dropdown was pulled up, so the bottom spacing stays the same). */
 .band {
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
     z-index: 1;
-    height: calc(var(--rows, 0) * var(--pm-row) + 44px);
+    height: calc(var(--rows, 0) * var(--pm-row) + 44px - var(--pm-drop-shift));
     background: #fff;
     box-shadow: 0 22px 32px -26px rgba(0, 0, 0, 0.3);
     opacity: 0;
