@@ -129,7 +129,7 @@ export default function ArtHousePage() {
 
           <div className={styles.infoBody}>
             <p>
-              SET IN THE URBAN CONTEXT OF DELHI, THE FAÇADE DESIGN REFLECTS A MODERN
+              SET IN THE URBAN CONTEXT OF DELHI, THE FACADE DESIGN REFLECTS A MODERN
               AND CLIMATE-RESPONSIVE APPROACH TAILORED TO THE CITY&apos;S INTENSE
               SEASONAL VARIATIONS. IT FEATURES A THOUGHTFUL INTERPLAY OF{" "}
               <span className={styles.highlight}>

@@ -50,8 +50,8 @@ const RATIOS = {
   "Poetic House": 1.452,
   "Fuidic Office": 0.889,
   "Gupta's Residence": 0.788,
-  "Saativk Marble Showroom": 0.497,
-  TheCanvas: 1.369,
+  "Saatvik Marble Showroom": 0.497,
+  "The Canvas": 1.369,
   "Sethi's Residence": 0.704,
   "Sobhti Residence": 1.279,
   "Concrete House": 0.872,
@@ -138,9 +138,9 @@ const PROJECT_ROUTES = {
   "Fuidic Office": "/projects/fuidic-office",
   "Gupta's Residence": "/projects/guptas-residence",
   "House Around a Tree": "/projects/house-around-a-tree",
-  "Saativk Marble Showroom": "/projects/saativk-marble-showroom",
+  "Saatvik Marble Showroom": "/projects/saativk-marble-showroom",
   "Jain's Residence": "/projects/jains-residence",
-  "TheCanvas": "/projects/thecanvas",
+  "The Canvas": "/projects/thecanvas",
   "Sethi's Residence": "/projects/sethis-residence",
   "Sobhti Residence": "/projects/sobhti-residence",
   "Hansgrohe Showroom": "/projects/hansgrohe-showroom",
@@ -538,14 +538,14 @@ export default function JustifiedGallery({ items }) {
 
       <Tile item={findItem(items, "House Around a Tree")} />
 
-      {/* Saativk Marble Showroom (site-plan graphic) beside a stacked
-          pair — Jain's Residence over TheCanvas — matching the Canva
+      {/* Saatvik Marble Showroom (site-plan graphic) beside a stacked
+          pair — Jain's Residence over The Canvas — matching the Canva
           reference exactly. No alignItems override here (defaults to
-          stretch), so Saativk's FillTile fills exactly the stack's
+          stretch), so Saatvik's FillTile fills exactly the stack's
           height and always ends flush with it. */}
       <div className={styles.row}>
         <div style={{ flex: "1.4 1 0", minWidth: 0 }}>
-          <FillTile item={findItem(items, "Saativk Marble Showroom")} />
+          <FillTile item={findItem(items, "Saatvik Marble Showroom")} />
         </div>
         <div
           style={{
@@ -557,7 +557,7 @@ export default function JustifiedGallery({ items }) {
           }}
         >
           <Tile item={findItem(items, "Jain's Residence")} />
-          <Tile item={findItem(items, "TheCanvas")} />
+          <Tile item={findItem(items, "The Canvas")} />
         </div>
       </div>
 

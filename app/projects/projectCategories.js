@@ -154,7 +154,7 @@ const CATEGORY_PROJECTS = {
     "Palette Apartment",
     "Pattern Play",
     "Solance Apartment",
-    "TheCanvas",
+    "The Canvas",
     "Veya Apartment",
   ],
 
@@ -182,7 +182,7 @@ const CATEGORY_PROJECTS = {
     "Legend Veneer Exhibition - Delhi",
     "Legend Venner Exhibition - Mumbai",
     "Marble City Exhibition Stall",
-    "Saativk Marble Showroom",
+    "Saatvik Marble Showroom",
     "Tiles and Kitchen Showroom",
     "Tiles & Kitchen Showroom",
   ],
