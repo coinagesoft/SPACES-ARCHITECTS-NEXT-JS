@@ -131,7 +131,14 @@ export default function Footer() {
             <p className="text-center">{site.contact.address}</p>
           </div>
 
-          <p className="md:justify-self-end">Designed by —</p>
+          <a
+            href="https://www.coinagesoft.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="md:justify-self-end text-faint transition-colors hover:text-accent"
+          >
+            Designed by — Coinagesoft
+          </a>
         </div>
       </div>
 
