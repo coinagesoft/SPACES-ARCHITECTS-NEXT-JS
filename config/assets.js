@@ -155,7 +155,7 @@ const galFuidicOffice = assetImage("projects/FUIDIC OFFICE.jpg");
 const galGuptasResidence = assetImage("projects/GUPTAS RESIDENCE.jpg");
 const galHouseAroundATree = assetImage("projects/HOUSE AROUND A TREE.png");
 const galJainsResidence = assetImage("projects/JAINS RESIDENCE.jpg");
-const galSaativkMarbleShowroom = assetImage("projects/SAATIVK MARBLE SHOWROOM.jpg");
+const galSaatvikMarbleShowroom = assetImage("projects/SAATIVK MARBLE SHOWROOM.jpg");
 const galTheCanvas = assetImage("projects/THECANVAS.jpg");
 const galSethisResidence = assetImage("projects/SETHIS RESIDENCE.png");
 const galSobhtiResidence = assetImage("projects/SOBHTI RESIDENCE.jpg");
@@ -609,8 +609,8 @@ export const assets = {
         { file: "GUPTA#U2019S RESIDENCE.jpg", name: "Gupta's Residence", image: galGuptasResidence, orientation: "portrait" },
         { file: "HOUSE AROUND A TREE.png", name: "House Around a Tree", image: galHouseAroundATree, orientation: "landscape" },
         { file: "JAIN#U2019S RESIDENCE.jpg", name: "Jain's Residence", image: galJainsResidence, orientation: "landscape" },
-        { file: "SAATIVK MARBLE SHOWROOM.jpg", name: "Saativk Marble Showroom", image: galSaativkMarbleShowroom, orientation: "portrait" },
-        { file: "THECANVAS.jpg", name: "TheCanvas", image: galTheCanvas, orientation: "landscape" },
+        { file: "SAATVIK MARBLE SHOWROOM.jpg", name: "Saatvik Marble Showroom", image: galSaatvikMarbleShowroom, orientation: "portrait" },
+        { file: "THECANVAS.jpg", name: "The Canvas", image: galTheCanvas, orientation: "landscape" },
         { file: "SETHI#U2019S RESIDENCE.png", name: "Sethi's Residence", image: galSethisResidence, orientation: "portrait" },
         { file: "SOBHTI RESIDENCE.jpg", name: "Sobhti Residence", image: galSobhtiResidence, orientation: "landscape" },
         { file: "HANSGROHE SHOWROOM.png", name: "Hansgrohe Showroom", image: galHansgroheShowroom, orientation: "landscape" },
