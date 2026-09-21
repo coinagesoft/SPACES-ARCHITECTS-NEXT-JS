@@ -104,8 +104,8 @@ const homeHeroProjects = [
     image: assetImage("projects/Slender-House/photographs/15. Entrance (Second Floor).webp"),
   },
   {
-    id: "Intersext-showroom",
-    name: "Intersext Showroom",
+    id: "Intersekt-showroom",
+    name: "Intersekt Showroom",
     image: assetImage("projects/INTERSEXT-SHOWROOM/photographs/4 Facade with its context 2.webp"),
   },
 ];
