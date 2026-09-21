@@ -396,6 +396,9 @@ const processModelMaking = assetUrl("process/Model-Making.mp4");
 const unsplash = (id, w = 1600, h = 1000) =>
     `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&h=${h}&q=80`;
 
+const intersektCover = assetImage("projects/INTERSEXT-SHOWROOM/cover/COVER IMAGE.webp");
+const ashrayaCover = assetImage("projects/ASHRAYA-RESIDENCE/cover/COVER.webp");
+
 export const assets = {
     // ---- Brand ----
     logoText: "SPACES ARCHITECTS",
@@ -440,6 +443,10 @@ export const assets = {
         { id: "library-house", href: "/projects/library-house", name: "Library House", image: libraryHouse },
         { id: "swatantra-residence", href: "/projects/swatantra-residence", name: "Swatantra Residence", image: swatantraResidence },
         { id: "house-of-dancing-screens", href: "/projects/house-of-dancing-screens", name: "House of Dancing Screen", image: houseOfDancingScreen },
+        { id: "slender-house", href: "/projects/slender-house", name: "Slender House", image: slenderHero },
+        { id: "step-maze", href: "/projects/step-maze", name: "Step Maze", image: stepMazeCover },
+        { id: "intersext-showroom", href: "/projects/intersext-showroom", name: "Intersekt", image: intersektCover },
+        { id: "ashraya-residence", href: "/projects/ashraya-residence", name: "Ashraya Residence", image: ashrayaCover },
     ],
 
     // ---- Featured News (home-page carousel) ----
