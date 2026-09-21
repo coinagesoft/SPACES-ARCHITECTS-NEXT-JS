@@ -97,6 +97,7 @@ const PROJECT_ROUTES = {
   "Color Dialogue": "/projects/color-dialogue",
   "Colour Dialogue": "/projects/color-dialogue",
   "J House": "/projects/j-house",
+  "Intersekt Showroom": "/projects/intersext-showroom",
   "Intersext Showroom": "/projects/intersext-showroom",
   "Legend Veneer Exhibition - Delhi": "/projects/legend-veneer-exhibition-delhi",
   "Astra Heights": "/projects/astra-heights",
@@ -134,6 +135,7 @@ const PROJECT_ROUTES = {
   "Bhimtal Resort": "/projects/bhimtal-resort",
   "Brick House": "/projects/brick-house",
   "Bandikui Railway Station": "/projects/bandikui-railway-station",
+  "Extension of Heritage Park": "/projects/heritage-park-extension",
   "Heritage Park Extension": "/projects/heritage-park-extension",
   "Fuidic Office": "/projects/fuidic-office",
   "Gupta's Residence": "/projects/guptas-residence",
@@ -370,7 +372,7 @@ export default function JustifiedGallery({ items }) {
           then the mirrored big-tile/stacked-pair pattern twice more. */}
       <div className={styles.row}>
         <div style={{ flex: "2.1 1 0", minWidth: 0 }}>
-          <FillTile item={findItem(items, "Intersext Showroom")} />
+          <FillTile item={findItem(items, "Intersekt Showroom") || findItem(items, "Intersext Showroom")} />
         </div>
         <div
           style={{
@@ -528,7 +530,7 @@ export default function JustifiedGallery({ items }) {
           }}
         >
           <Tile item={findItem(items, "Bandikui Railway Station")} />
-          <Tile item={findItem(items, "Heritage Park Extension")} />
+          <Tile item={findItem(items, "Extension of Heritage Park") || findItem(items, "Heritage Park Extension")} />
         </div>
       </div>
 
@@ -604,7 +606,7 @@ export default function JustifiedGallery({ items }) {
         items={[findItem(items, "Shri Vrinda Hotel"), findItem(items, "Dispensary Sonipat")]}
       />
 
-      <Tile item={findItem(items, "Gurdeep ji Ka Ghar")} />
+      <Tile item={findItem(items, "The Garden House") || findItem(items, "Gurdeep ji Ka Ghar")} />
 
       <JustifiedRow
         items={[

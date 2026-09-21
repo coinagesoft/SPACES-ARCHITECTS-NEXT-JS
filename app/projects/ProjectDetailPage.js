@@ -7,7 +7,7 @@ import buildProjectGallery from "./buildProjectGallery";
 
 const ratio = (image) => (image?.width && image?.height ? image.width / image.height : 1);
 
-export default function ProjectDetailPage({ title, location, hero, photos = [], details, description }) {
+export default function ProjectDetailPage({ title, location, hero, photos = [], details, description = [] }) {
   const gallery = buildProjectGallery(photos.filter(Boolean));
 
   return (

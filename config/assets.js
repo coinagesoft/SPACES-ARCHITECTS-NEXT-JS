@@ -566,7 +566,7 @@ export const assets = {
         { file: "J HOUSE.jpg", name: "J House", image: galJHouse, orientation: "landscape" },
         // ---- Continuation of the Canva reference page, picking up right
         // after J House (same photos, same order, same names). ----
-        { file: "INTERSEXT SHOWROOM.png", name: "Intersext Showroom", image: galIntersextShowroom, orientation: "portrait" },
+        { file: "INTERSEKT SHOWROOM.png", name: "Intersekt Showroom", image: galIntersextShowroom, orientation: "portrait" },
         { file: "LEGEND VENEER EXHIBITION - DELHI.jpg", name: "Legend Veneer Exhibition - Delhi", image: galLegendVeneerExhibition, orientation: "portrait" },
         { file: "ASTRA HEIGHTS.png", name: "Astra Heights", image: galAstraHeights, orientation: "portrait" },
         { file: "GOLDEN HAVELLI.jpg", name: "Golden Haveli", image: galGoldenHaveli, orientation: "landscape" },
@@ -604,7 +604,7 @@ export const assets = {
         { file: "BHIMTAL RESORT.png", name: "Bhimtal Resort", image: galBhimtalResort, orientation: "landscape" },
         { file: "BRICK HOUSE.png", name: "Brick House", image: galBrickHouse, orientation: "portrait" },
         { file: "BANDIKUI RAILWAY STATION.png", name: "Bandikui Railway Station", image: galBandikuiRailwayStation, orientation: "landscape" },
-        { file: "HERITAGE PARK EXTENSION.jpg", name: "Heritage Park Extension", image: galHeritageParkExtension, orientation: "landscape" },
+        { file: "HERITAGE PARK EXTENSION.jpg", name: "Extension of Heritage Park", image: galHeritageParkExtension, orientation: "landscape" },
         { file: "FUIDIC OFFICE.jpg", name: "Fuidic Office", image: galFuidicOffice, orientation: "portrait" },
         { file: "GUPTA#U2019S RESIDENCE.jpg", name: "Gupta's Residence", image: galGuptasResidence, orientation: "portrait" },
         { file: "HOUSE AROUND A TREE.png", name: "House Around a Tree", image: galHouseAroundATree, orientation: "landscape" },
@@ -625,7 +625,7 @@ export const assets = {
         { file: "SANCTUM HOUSE.jpg", name: "Sanctum House", image: galSanctumHouse, orientation: "landscape" },
         { file: "SHRI VRINDA HOTEL.png", name: "Shri Vrinda Hotel", image: galShriVrindaHotel, orientation: "portrait" },
         { file: "DISPENSARY SONIPAT.png", name: "Dispensary Sonipat", image: galDispensarySonipat, orientation: "portrait" },
-        { file: "GURDEEP JI KA GHAR.png", name: "Gurdeep ji Ka Ghar", image: galGurdeepJiKaGhar, orientation: "landscape" },
+        { file: "GURDEEP JI KA GHAR.png", name: "The Garden House", image: galGurdeepJiKaGhar, orientation: "landscape" },
         { file: "RASA FARMHOUSE.jpg", name: "Rasa Farmhouse", image: galRasaFarmhouse, orientation: "landscape" },
         { file: "MARBLE CITY EXHIBITION STALL.jpg", name: "Marble City Exhibition Stall", image: galMarbleCityExhibitionStall, orientation: "portrait" },
         { file: "THE URBAN NEST.jpg", name: "The Urban Nest", image: galTheUrbanNest, orientation: "portrait" },
