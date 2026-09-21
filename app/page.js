@@ -7,6 +7,7 @@ import HeroSlider from "@/components/HeroSlider";
 import FeaturedCarousel from "@/components/FeaturedCarousel";
 import FeaturedIn from "@/components/FeaturedIn";
 import { assets } from "@/assets";
+import { assetImage } from "@/config/assets";
 import { homeCopy } from "@/config/site";
 
 // Full phrases that should be highlighted, exactly as they appear in the copy.
@@ -50,6 +51,64 @@ const SNAP_LOCK_MS = 900;
 
 // Minimum wheel/touch delta before we treat it as an intentional scroll gesture.
 const SCROLL_THRESHOLD = 8;
+
+const homeHeroProjects = [
+  {
+    id: "haveli-dharampura",
+    name: "Haveli Dharampura",
+    image: assetImage("projects/haveli/haveli_27.jpg"),
+  },
+  {
+    id: "art-house",
+    name: "Art House",
+    image: assetImage("projects/ART_HOUSE/3_4/26.webp"),
+  },
+  {
+    id: "house-of-stepped-garden",
+    name: "House of Stepped Garden",
+    image: assetImage("projects/HOUSE-OF-STEPPED-GARDEN/photographs/5(11).webp"),
+  },
+  {
+    id: "library-house",
+    name: "Library House",
+    image: assetImage("projects/LIBRARY-HOUSE/photographs/BHA_3042.webp"),
+  },
+  {
+    id: "golden-haveli",
+    name: "Golden Haveli",
+    image: assetImage("projects/GOLDEN-HAVELL/3_4/new/17.webp"),
+  },
+  {
+    id: "heritage-park",
+    name: "Heritage Park",
+    image: assetImage("projects/HERITAGE-PARK/cover/Cover Image.webp"),
+  },
+  {
+    id: "swatantra-residence",
+    name: "Swatantra Residence",
+    image: assetImage("projects/SWATANTRA-RESIDENCE/PHOTOGRAPH/5. Ground Living Room (5).jpg"),
+  },
+  {
+    id: "house-of-dancing-screens",
+    name: "House of Dancing Screens",
+    image: assetImage("projects/HOUSE-OF-DANCING-SCREENS/photographs/BHA_1648.webp"),
+  },
+  {
+    id: "step-maze",
+    name: "Step Maze",
+    image: assetImage("projects/STEP-MAZE/photographs/6.Staircase Lobby.webp"),
+  },
+  {
+    id: "slender-house",
+    name: "Slender House",
+    image: assetImage("projects/Slender-House/photographs/15. Entrance (Second Floor).webp"),
+  },
+  {
+    id: "Intersext-showroom",
+    name: "Intersext Showroom",
+    image: assetImage("projects/INTERSEXT-SHOWROOM/photographs/4 Facade with its context 2.webp"),
+  },
+];
 
 export default function HomePage() {
   // Order the scroll-jack will step through, one section per scroll:
@@ -174,7 +233,7 @@ export default function HomePage() {
   return (
     <main>
       <SiteChrome dark home />
-      <HeroSlider projects={assets.projects.slice(0, 4)} />
+      <HeroSlider projects={homeHeroProjects} />
       <section ref={introRef} className="site-container py-8 md:py-12">
         <div className="space-y-7">
           {homeCopy.intro.map((paragraph, index) => (

@@ -6,6 +6,17 @@ import { useEffect, useState } from "react";
 
 export default function HeroSlider({ projects }) {
     const [activeIndex, setActiveIndex] = useState(0);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia("(max-width: 767px)");
+
+        const updateIsMobile = () => setIsMobile(mediaQuery.matches);
+        updateIsMobile();
+
+        mediaQuery.addEventListener?.("change", updateIsMobile);
+        return () => mediaQuery.removeEventListener?.("change", updateIsMobile);
+    }, []);
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -20,19 +31,22 @@ export default function HeroSlider({ projects }) {
     const activeProject = projects[activeIndex];
 
     return (
-        <section className="relative w-full h-screen min-h-screen overflow-hidden">
-            {projects.map((project, index) => (
-                <Image
-                    key={project.id}
-                    src={project.image}
-                    alt={project.name}
-                    fill
-                    priority={index === 0}
-                    sizes="100vw"
-                    className={`object-cover transition-opacity duration-1000 ${index === activeIndex ? "opacity-100" : "opacity-0"
-                        }`}
-                />
-            ))}
+        <section className="relative w-full h-screen min-h-screen overflow-hidden md:h-screen md:min-h-screen max-md:h-[90vh] max-md:min-h-[80vh]">
+            {projects.map((project, index) => {
+                const imageSrc = isMobile ? project.mobileImage ?? project.image : project.image;
+
+                return (
+                    <Image
+                        key={project.id}
+                        src={imageSrc}
+                        alt={project.name}
+                        fill
+                        priority={index === 0}
+                        sizes="100vw"
+                        className={`object-cover transition-opacity duration-1000 ${index === activeIndex ? "opacity-100" : "opacity-0"}`}
+                    />
+                );
+            })}
 
             {/* Dark overlay */}
             <div className="absolute inset-0 bg-black/20" />
