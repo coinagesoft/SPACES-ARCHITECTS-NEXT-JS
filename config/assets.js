@@ -23,10 +23,12 @@ import assetManifest from "./asset-manifest.json";
 // Base URL of the media server that serves everything under /assets.
 // Override with NEXT_PUBLIC_ASSET_BASE_URL in .env.local for local/staging us.
 const ASSET_BASE_URL = (process.env.NEXT_PUBLIC_ASSET_BASE_URL || "https://assets.spacesarchitects-ka.com").replace(/\/$/, "");
+const ASSET_VERSION = process.env.NEXT_PUBLIC_ASSET_VERSION || `v${new Date().toISOString().slice(0, 10)}`;
 
 export function assetUrl(relPath) {
     const encoded = relPath.split("/").map(encodeURIComponent).join("/");
-    return `${ASSET_BASE_URL}/assets/${encoded}`;
+    const url = `${ASSET_BASE_URL}/assets/${encoded}`;
+    return `${url}?v=${encodeURIComponent(ASSET_VERSION)}`;
 }
 
 // Returns an object shaped like next/image's StaticImageData ({ src, width,
@@ -75,7 +77,7 @@ const timelessHousesFeature = assetImage("Featured News/featured-by-timeless-hou
 const financialTimesFeature = assetImage("Featured News/featured-by-financial-times.png");
 const indexplusPanel = assetImage("Featured News/panellist-in-indexplus-design-debate.png");
 const archelloFeature = assetImage("Featured News/featured-by-archello.png");
-const designAsiaFeature = assetImage("Featured News/featured-by-DESIGN-ASIA-MAGAZINE.png");
+const designAsiaFeature = assetImage("Featured News/wadeasia.webp");
 const blogLegacyRestored = assetImage("blogs/A-Legacy-Restored.png");
 const blogPauseInWalledCity = assetImage("blogs/A-Pause-in-the-Walled-City.png");
 const blogHouseLandscape = assetImage("blogs/House-Becomes-a-Landscape.png");
