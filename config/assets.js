@@ -451,7 +451,7 @@ export const assets = {
         { name: "Featured by Habitus Living titled 'A House That Follows the Sun in Kochi'", source: "Habitus Living", image: habitusLivingFeature },
         { name: "Featured by Rethinking the Future as one of the top architecture firms", source: "Rethinking the Future", image: rethinkingFeature },
         { name: "Golden Haveli Inauguration", source: "Press", image: goldenHaveliInauguration },
-        { name: "Featured by Timeless Houses Magazine", source: "Timeless Houses", image: timelessHousesFeature },
+        { name: "Featured by Timeless Houses Magazine, Authored by kapil aggarwal", source: "Timeless Houses", image: timelessHousesFeature },
         { name: "Featured by Financial Times as the 15 dreamiest homes on earth", source: "Financial Times", image: financialTimesFeature },
         { name: "Panellist in Indexplus design debate: Designing for Density", source: "Indexplus", image: indexplusPanel },
         { name: "Featured by Archello as one of the top 25 architecture firms", source: "Archello", image: archelloFeature },

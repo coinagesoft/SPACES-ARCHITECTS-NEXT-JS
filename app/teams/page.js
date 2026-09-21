@@ -31,7 +31,7 @@ const sanjayBhaiya = assetImage("Team/21_Sanjay Bhaiya_Admin.webp");
 
 // ---- Team members (same order as before) ----
 const teamMembers = [
-  { image: poojaAggarwal, name: "Pooja Aggarwal", role: "Senior Interior Designer" },
+  { image: poojaAggarwal, name: "Pooja Aggarwal", role: "Cofounder" },
   { image: pawanSharma, name: "Pawan Sharma", role: "Senior Associate Architect" },
   { image: arujSaxena, name: "Aruj Saxena", role: "Associate Architect" },
   { image: vikrantSingh, name: "Vikrant Singh", role: "Associate Architect" },

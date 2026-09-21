@@ -37,7 +37,7 @@
     font-size: clamp(15px, 1.5vw, 21px);
     font-weight: 600;
     letter-spacing: 0.24em;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     text-decoration: none;
     white-space: nowrap;
     color: var(--pm-ink);
