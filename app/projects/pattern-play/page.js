@@ -7,66 +7,57 @@ import { assets } from "@/assets";
 import styles from "./page.module.css";
 import { assetImage } from "@/config/assets";
 
-// Hero image from JAIPUR-RESIDENCE/cover
-const heroImage = assetImage("projects/JAIPUR-RESIDENCE/cover/COVER.webp");
-// Project photographs from JAIPUR-RESIDENCE/photographs
-// Sizes (from the asset manifest):
-//   landscape 1280x850: img1, img2, img5, img6, img9, img14, img15
-//   landscape 1280x771: img11
-//   portrait  637x960 : img4, img7, img12, img16, img17
-//   portrait  other   : img3 (717x960), img8 (683x960), img10 (626x960), img13 (769x960)
-const img1 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0001.webp");
-const img2 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0003.webp");
-const img3 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0004.webp");
-const img4 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0005.webp");
-const img5 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0006.webp");
-const img6 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0007.webp");
-const img7 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0013.webp");
-const img8 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0014.webp");
-const img9 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0019.webp");
-const img10 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0020.webp");
-const img11 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0024.webp");
-const img12 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0025.webp");
-const img13 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0026.webp");
-const img14 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0027.webp");
-const img15 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0038.webp");
-const img16 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0042.webp");
-const img17 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0046.webp");
+// Hero image from PATTERN-PLAY/cover
+// (the file in the folder is named "COVER (1)" — rename it to COVER.webp
+//  and update this path if you'd rather not keep the "(1)")
+const heroImage = assetImage("projects/PATTERN-PLAY/cover/COVER (1).webp");
+// Project photographs from PATTERN-PLAY/3_4
+const img1 = assetImage("projects/PATTERN-PLAY/3_4/1.webp");
+const img2 = assetImage("projects/PATTERN-PLAY/3_4/2.webp");
+const img3 = assetImage("projects/PATTERN-PLAY/3_4/3.webp");
+const img4 = assetImage("projects/PATTERN-PLAY/3_4/4.webp");
+const img5 = assetImage("projects/PATTERN-PLAY/3_4/5.webp");
+const img6 = assetImage("projects/PATTERN-PLAY/3_4/6.webp");
+const img7 = assetImage("projects/PATTERN-PLAY/3_4/7.webp");
+const img8 = assetImage("projects/PATTERN-PLAY/3_4/8.webp");
+const img9 = assetImage("projects/PATTERN-PLAY/3_4/9.webp");
+const img10 = assetImage("projects/PATTERN-PLAY/3_4/10.webp");
+const img11 = assetImage("projects/PATTERN-PLAY/3_4/11.webp");
 
 export const metadata = {
-  title: "Jaipur Residence — Spaces Architects@ka",
+  title: "Pattern Play — Spaces Architects@ka",
 };
 
 // All content for this project lives right here — edit freely.
+// TODO: fill in the real project details and text.
 const details = {
-  Project: "Jaipur Residence",
-  Location: "Jaipur, Rajasthan",
-  Client: "Mrs. Malu",
-  Status: "Completed",
+  Project: "Pattern Play",
+  Location: "TBC",
+  Client: "TBC",
+  Status: "TBC",
 };
 
 const ratio = (img) => img.width / img.height;
 
+// Sizes (from the asset manifest):
+//   portrait  3600x4800: img1, img2, img4, img5, img9, img10
+//   landscape 4800x3600: img3, img6, img7, img8, img11
+//
 // Layout rules (same as the Screen House reference):
-// - "pair" only uses portraits with identical width/height.
+// - "pair" only uses images with identical width/height.
 // - "split" = one portrait (large) + two landscape images stacked beside it.
 // - "full" is landscape only (no full-width portraits).
-// - Pair 8 mixes 626x960 and 637x960 (under 2% apart), so both boxes share
-//   one ratio via `ratio` to keep the row perfectly aligned.
 const gallery = [
-  { type: "split", large: img3, stack: [img1, img2] },
-  { type: "pair", images: [img4, img7] },
-  { type: "full", image: img6 },
-  { type: "split-reverse", large: img13, stack: [img11, img5] },
-  { type: "pair", images: [img12, img16] },
-  { type: "full", image: img15 },
-  { type: "split", large: img8, stack: [img9, img14] },
-  { type: "pair", images: [img10, img17], ratio: 0.658 },
+  { type: "split", large: img1, stack: [img3, img6] },
+  { type: "pair", images: [img2, img4] },
+  { type: "full", image: img7 },
+  { type: "split-reverse", large: img5, stack: [img8, img11] },
+  { type: "pair", images: [img9, img10] },
 ];
 
-const moreProjects = assets.projects.filter((project) => project.id !== "jaipur-residence").slice(0, 3);
+const moreProjects = assets.projects.filter((project) => project.id !== "pattern-play").slice(0, 3);
 
-export default function JaipurResidencePage() {
+export default function PatternPlayPage() {
   return (
     <>
       <main>
@@ -76,12 +67,12 @@ export default function JaipurResidencePage() {
           className={styles.hero}
           imageClassName={styles.heroImage}
           src={heroImage}
-          alt="Jaipur Residence"
+          alt="Pattern Play"
         >
           <div className={`site-container ${styles.heroTextWrap}`}>
             <div className={styles.heroText}>
-              <h1>Jaipur Residence</h1>
-              <p>Jaipur, Rajasthan</p>
+              <h1>Pattern Play</h1>
+              <p>{details.Location}</p>
             </div>
           </div>
         </ParallaxHeroImage>
@@ -103,40 +94,8 @@ export default function JaipurResidencePage() {
 
           <div className={styles.infoBody}>
             <p>
-              Set in Jaipur, this residence brings together{" "}
-              <span className={styles.highlight}>
-                Rajasthani heritage and contemporary expression
-              </span>
-              , weaving carved{" "}
-              <span className={styles.highlight}>
-                jaalis, arches and ethnic motifs
-              </span>{" "}
-              into a modern spatial language. The lower levels retain a sense of
-              warmth and tradition, while the upper floor takes a deliberate
-              departure for the young son, adopting a{" "}
-              <span className={styles.highlight}>
-                bold black-and-white palette
-              </span>{" "}
-              that gives the home a more youthful and individual character.
-            </p>
-
-            <p>
-              The interiors continue this dialogue through contrasting moods. A
-              warm, neutral formal living room combines plush furnishings,
-              filtered daylight and a cascading chandelier, while the kitchen
-              introduces a sleek monochrome language with high-gloss finishes
-              and a seamless connection to the dining space. Above, the
-              son&apos;s lounge embraces geometric lighting, circular mirrors
-              and contemporary furniture, creating an energetic counterpoint to
-              the heritage-inspired spaces below.
-            </p>
-
-            <p>
-              A landscaped terrace garden crowns the residence, bringing nature
-              into the composition and completing its{" "}
-              <span className={styles.highlight}>
-                balance of tradition, individuality and contemporary living.
-              </span>
+              Project description goes here. Wrap the phrases that should be orange like{" "}
+              <span className={styles.highlight}>this</span>.
             </p>
           </div>
         </section>
@@ -149,7 +108,7 @@ export default function JaipurResidencePage() {
                 <div key={i} className={styles.galleryFull}>
                   <Image
                     src={block.image}
-                    alt="Jaipur Residence"
+                    alt="Pattern Play"
                     sizes="100vw"
                     className={styles.galleryImg}
                   />
@@ -170,7 +129,7 @@ export default function JaipurResidencePage() {
                   >
                     <Image
                       src={block.large}
-                      alt="Jaipur Residence"
+                      alt="Pattern Play"
                       fill
                       sizes="(min-width: 768px) 48vw, 100vw"
                       className={styles.galleryImgFit}
@@ -185,7 +144,7 @@ export default function JaipurResidencePage() {
                       >
                         <Image
                           src={src}
-                          alt="Jaipur Residence"
+                          alt="Pattern Play"
                           fill
                           sizes="(min-width: 768px) 48vw, 100vw"
                           className={styles.galleryImgFit}
@@ -207,7 +166,7 @@ export default function JaipurResidencePage() {
                   >
                     <Image
                       src={src}
-                      alt="Jaipur Residence"
+                      alt="Pattern Play"
                       fill
                       sizes="(min-width: 768px) 48vw, 100vw"
                       className={styles.galleryImgFit}

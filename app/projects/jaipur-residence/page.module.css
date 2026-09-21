@@ -200,9 +200,9 @@
   padding-bottom: 56px;
 }
 
-/* "full" and "wide" are single, full-width shots with no neighbour to
-   match heights with, so they keep their own natural aspect ratio —
-   nothing cropped, nothing stretched. */
+/* "full" is a single, full-width shot with no neighbour to match heights
+   with, so it keeps its own natural aspect ratio — nothing cropped,
+   nothing stretched. */
 .galleryImg {
   display: block;
   width: 100%;
@@ -213,8 +213,13 @@
   width: 100%;
 }
 
+/* "pair" and "split" images sit next to a partner and need to line up at
+   the same height. Each item gets a `--ratio` custom property (its own
+   real width/height, computed in JS from the asset manifest) and uses CSS
+   `aspect-ratio` to render at exactly that ratio, so the image is never
+   distorted. */
 .galleryImgFit {
-  object-fit: cover;
+  object-fit: cover; /* box already matches the image's own ratio */
 }
 
 /* Pair: two equal-sized columns on desktop */
@@ -227,7 +232,7 @@
 .galleryPairItem {
   position: relative;
   width: 100%;
-  aspect-ratio: 1280 / 850;
+  aspect-ratio: var(--ratio, 4 / 3);
   overflow: hidden;
 }
 
@@ -241,7 +246,34 @@
 .galleryTripleItem {
   position: relative;
   width: 100%;
-  aspect-ratio: 2 / 3;
+  aspect-ratio: var(--ratio, 3 / 4);
+  overflow: hidden;
+}
+
+/* 3-Image Split Grid (1 large + 2 stacked) */
+.gallerySplit {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.gallerySplitLarge {
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--ratio, 3 / 4);
+  overflow: hidden;
+}
+
+.gallerySplitStack {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.gallerySplitStackItem {
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--ratio, 4 / 3);
   overflow: hidden;
 }
 
@@ -259,6 +291,39 @@
   .galleryTriple {
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+  }
+
+  .gallerySplit {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: stretch;
+  }
+
+  .gallerySplitReverse .gallerySplitLarge {
+    order: 2;
+  }
+
+  .gallerySplitReverse .gallerySplitStack {
+    order: 1;
+  }
+
+  .gallerySplitLarge {
+    aspect-ratio: var(--ratio, 3 / 4);
+    width: 100%;
+  }
+
+  .gallerySplitStack {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 24px;
+    height: 100%;
+  }
+
+  .gallerySplitStackItem {
+    aspect-ratio: auto;
+    width: 100%;
+    height: 100%;
   }
 }
 

@@ -7,66 +7,51 @@ import { assets } from "@/assets";
 import styles from "./page.module.css";
 import { assetImage } from "@/config/assets";
 
-// Hero image from JAIPUR-RESIDENCE/cover
-const heroImage = assetImage("projects/JAIPUR-RESIDENCE/cover/COVER.webp");
-// Project photographs from JAIPUR-RESIDENCE/photographs
-// Sizes (from the asset manifest):
-//   landscape 1280x850: img1, img2, img5, img6, img9, img14, img15
-//   landscape 1280x771: img11
-//   portrait  637x960 : img4, img7, img12, img16, img17
-//   portrait  other   : img3 (717x960), img8 (683x960), img10 (626x960), img13 (769x960)
-const img1 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0001.webp");
-const img2 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0003.webp");
-const img3 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0004.webp");
-const img4 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0005.webp");
-const img5 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0006.webp");
-const img6 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0007.webp");
-const img7 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0013.webp");
-const img8 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0014.webp");
-const img9 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0019.webp");
-const img10 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0020.webp");
-const img11 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0024.webp");
-const img12 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0025.webp");
-const img13 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0026.webp");
-const img14 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0027.webp");
-const img15 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0038.webp");
-const img16 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0042.webp");
-const img17 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0046.webp");
-
+// Hero image from GLULAM-SHOWROOM/cover
+const heroImage = assetImage("projects/GLULAM-SHOWROOM/cover/Cover Image.webp");
+// Project photographs from GLULAM-SHOWROOM/3_4
+const img1 = assetImage("projects/GLULAM-SHOWROOM/3_4/1.webp");
+const img2 = assetImage("projects/GLULAM-SHOWROOM/3_4/2.webp");
+const img3 = assetImage("projects/GLULAM-SHOWROOM/3_4/3.webp");
+const img4 = assetImage("projects/GLULAM-SHOWROOM/3_4/4.webp");
+const img5 = assetImage("projects/GLULAM-SHOWROOM/3_4/5.webp");
+const img6 = assetImage("projects/GLULAM-SHOWROOM/3_4/6.webp");
+const img7 = assetImage("projects/GLULAM-SHOWROOM/3_4/7.webp");
+const img8 = assetImage("projects/GLULAM-SHOWROOM/3_4/8.webp");
+const img9 = assetImage("projects/GLULAM-SHOWROOM/3_4/9.webp");
+const img10 = assetImage("projects/GLULAM-SHOWROOM/3_4/10.webp");
+const img11 = assetImage("projects/GLULAM-SHOWROOM/3_4/11.webp");
+const img12 = assetImage("projects/GLULAM-SHOWROOM/3_4/12.webp");
+const img13 = assetImage("projects/GLULAM-SHOWROOM/3_4/13.webp");
+const img14 = assetImage("projects/GLULAM-SHOWROOM/3_4/14.webp");
 export const metadata = {
-  title: "Jaipur Residence — Spaces Architects@ka",
+  title: "Glulam Showroom — Spaces Architects@ka",
 };
 
 // All content for this project lives right here — edit freely.
 const details = {
-  Project: "Jaipur Residence",
-  Location: "Jaipur, Rajasthan",
-  Client: "Mrs. Malu",
+  Project: "Glulam Showroom",
+  Location: "New Delhi",
+  Client: "Mr. Hardeep Gill",
   Status: "Completed",
 };
 
 const ratio = (img) => img.width / img.height;
 
-// Layout rules (same as the Screen House reference):
-// - "pair" only uses portraits with identical width/height.
-// - "split" = one portrait (large) + two landscape images stacked beside it.
-// - "full" is landscape only (no full-width portraits).
-// - Pair 8 mixes 626x960 and 637x960 (under 2% apart), so both boxes share
-//   one ratio via `ratio` to keep the row perfectly aligned.
 const gallery = [
   { type: "split", large: img3, stack: [img1, img2] },
-  { type: "pair", images: [img4, img7] },
-  { type: "full", image: img6 },
-  { type: "split-reverse", large: img13, stack: [img11, img5] },
-  { type: "pair", images: [img12, img16] },
-  { type: "full", image: img15 },
-  { type: "split", large: img8, stack: [img9, img14] },
-  { type: "pair", images: [img10, img17], ratio: 0.658 },
+  { type: "pair", images: [img5, img8] },
+  { type: "full", image: img4 },
+  { type: "pair", images: [img6, img7] },
+  { type: "pair", images: [img9, img11] },
+  { type: "full", image: img10 },
+  { type: "pair", images: [img13, img14] },
+  { type: "full", image: img12 },
 ];
 
-const moreProjects = assets.projects.filter((project) => project.id !== "jaipur-residence").slice(0, 3);
+const moreProjects = assets.projects.filter((project) => project.id !== "glulam-showroom").slice(0, 3);
 
-export default function JaipurResidencePage() {
+export default function GlulamShowroomPage() {
   return (
     <>
       <main>
@@ -76,12 +61,12 @@ export default function JaipurResidencePage() {
           className={styles.hero}
           imageClassName={styles.heroImage}
           src={heroImage}
-          alt="Jaipur Residence"
+          alt="Glulam Showroom"
         >
           <div className={`site-container ${styles.heroTextWrap}`}>
             <div className={styles.heroText}>
-              <h1>Jaipur Residence</h1>
-              <p>Jaipur, Rajasthan</p>
+              <h1>Glulam Showroom</h1>
+              <p>New Delhi</p>
             </div>
           </div>
         </ParallaxHeroImage>
@@ -103,40 +88,27 @@ export default function JaipurResidencePage() {
 
           <div className={styles.infoBody}>
             <p>
-              Set in Jaipur, this residence brings together{" "}
-              <span className={styles.highlight}>
-                Rajasthani heritage and contemporary expression
-              </span>
-              , weaving carved{" "}
-              <span className={styles.highlight}>
-                jaalis, arches and ethnic motifs
-              </span>{" "}
-              into a modern spatial language. The lower levels retain a sense of
-              warmth and tradition, while the upper floor takes a deliberate
-              departure for the young son, adopting a{" "}
-              <span className={styles.highlight}>
-                bold black-and-white palette
-              </span>{" "}
-              that gives the home a more youthful and individual character.
+              A{" "}
+              <span className={styles.highlight}>2,500 sq. ft. showroom</span>{" "}
+              and experience centre was designed to introduce the Indian market to the quality of imported, primarily{" "}
+              <span className={styles.highlight}>Canadian timber</span>{" "}
+              and the technology behind its production. Central to the experience is{" "}
+              <span className={styles.highlight}>Glulam Technology</span>
+              , which bonds individual high-strength, kiln-dried timber sections into precise, durable components. The space was conceived not simply to display the products, but to{" "}
+              <span className={styles.highlight}>educate visitors</span>{" "}
+              about their material quality, performance and possibilities.
             </p>
 
             <p>
-              The interiors continue this dialogue through contrasting moods. A
-              warm, neutral formal living room combines plush furnishings,
-              filtered daylight and a cascading chandelier, while the kitchen
-              introduces a sleek monochrome language with high-gloss finishes
-              and a seamless connection to the dining space. Above, the
-              son&apos;s lounge embraces geometric lighting, circular mirrors
-              and contemporary furniture, creating an energetic counterpoint to
-              the heritage-inspired spaces below.
+              To place the wood itself at the centre of attention, the interiors adopt a deliberately{" "}
+              <span className={styles.highlight}>restrained palette of wood and concrete</span>
+              . Doors and windows line the building&rsquo;s perimeter, creating a continuous material display, while a central meeting room anchors the plan. A waiting area, conference room and display bedroom complete the programme, with the bedroom featuring custom wooden flooring, a{" "}
+              <span className={styles.highlight}>slimline sliding door</span>
+              , ceiling artwork and a world map tracing the countries from which the products are sourced.
             </p>
 
             <p>
-              A landscaped terrace garden crowns the residence, bringing nature
-              into the composition and completing its{" "}
-              <span className={styles.highlight}>
-                balance of tradition, individuality and contemporary living.
-              </span>
+              A small outdoor green area extends the experience, demonstrating the material&rsquo;s performance in external conditions. The result is a tactile showroom where technology, craftsmanship and material become the architecture itself.
             </p>
           </div>
         </section>
@@ -149,7 +121,7 @@ export default function JaipurResidencePage() {
                 <div key={i} className={styles.galleryFull}>
                   <Image
                     src={block.image}
-                    alt="Jaipur Residence"
+                    alt="Glulam Showroom"
                     sizes="100vw"
                     className={styles.galleryImg}
                   />
@@ -170,7 +142,7 @@ export default function JaipurResidencePage() {
                   >
                     <Image
                       src={block.large}
-                      alt="Jaipur Residence"
+                      alt="Glulam Showroom"
                       fill
                       sizes="(min-width: 768px) 48vw, 100vw"
                       className={styles.galleryImgFit}
@@ -185,7 +157,7 @@ export default function JaipurResidencePage() {
                       >
                         <Image
                           src={src}
-                          alt="Jaipur Residence"
+                          alt="Glulam Showroom"
                           fill
                           sizes="(min-width: 768px) 48vw, 100vw"
                           className={styles.galleryImgFit}
@@ -203,11 +175,11 @@ export default function JaipurResidencePage() {
                   <div
                     key={j}
                     className={styles.galleryPairItem}
-                    style={{ "--ratio": block.ratio ?? ratio(src) }}
+                    style={{ "--ratio": ratio(src) }}
                   >
                     <Image
                       src={src}
-                      alt="Jaipur Residence"
+                      alt="Glulam Showroom"
                       fill
                       sizes="(min-width: 768px) 48vw, 100vw"
                       className={styles.galleryImgFit}

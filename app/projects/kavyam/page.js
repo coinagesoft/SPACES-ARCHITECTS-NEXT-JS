@@ -7,66 +7,62 @@ import { assets } from "@/assets";
 import styles from "./page.module.css";
 import { assetImage } from "@/config/assets";
 
-// Hero image from JAIPUR-RESIDENCE/cover
-const heroImage = assetImage("projects/JAIPUR-RESIDENCE/cover/COVER.webp");
-// Project photographs from JAIPUR-RESIDENCE/photographs
-// Sizes (from the asset manifest):
-//   landscape 1280x850: img1, img2, img5, img6, img9, img14, img15
-//   landscape 1280x771: img11
-//   portrait  637x960 : img4, img7, img12, img16, img17
-//   portrait  other   : img3 (717x960), img8 (683x960), img10 (626x960), img13 (769x960)
-const img1 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0001.webp");
-const img2 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0003.webp");
-const img3 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0004.webp");
-const img4 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0005.webp");
-const img5 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0006.webp");
-const img6 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0007.webp");
-const img7 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0013.webp");
-const img8 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0014.webp");
-const img9 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0019.webp");
-const img10 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0020.webp");
-const img11 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0024.webp");
-const img12 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0025.webp");
-const img13 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0026.webp");
-const img14 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0027.webp");
-const img15 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0038.webp");
-const img16 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0042.webp");
-const img17 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0046.webp");
-
+// Hero image from KAVYAM/cover
+const heroImage = assetImage("projects/KAVYAM/cover/cover.webp");
+// Project photographs from KAVYAM/3_4
+const img1 = assetImage("projects/KAVYAM/3_4/1.webp");
+const img2 = assetImage("projects/KAVYAM/3_4/2.webp");
+const img3 = assetImage("projects/KAVYAM/3_4/3.webp");
+const img4 = assetImage("projects/KAVYAM/3_4/4.webp");
+const img5 = assetImage("projects/KAVYAM/3_4/5.webp");
+const img6 = assetImage("projects/KAVYAM/3_4/6.webp");
+const img7 = assetImage("projects/KAVYAM/3_4/7.webp");
+const img8 = assetImage("projects/KAVYAM/3_4/8.webp");
+const img9 = assetImage("projects/KAVYAM/3_4/9.webp");
+const img10 = assetImage("projects/KAVYAM/3_4/10.webp");
+const img11 = assetImage("projects/KAVYAM/3_4/11.webp");
+const img12 = assetImage("projects/KAVYAM/3_4/12.webp");
+const img13 = assetImage("projects/KAVYAM/3_4/13.webp");
+const img14 = assetImage("projects/KAVYAM/3_4/14.webp");
+const img15 = assetImage("projects/KAVYAM/3_4/15.webp");
+const img16 = assetImage("projects/KAVYAM/3_4/16.webp");
+const img17 = assetImage("projects/KAVYAM/3_4/17.webp");
+const img18 = assetImage("projects/KAVYAM/3_4/18.webp");
+const img19 = assetImage("projects/KAVYAM/3_4/19.webp");
+const img20 = assetImage("projects/KAVYAM/3_4/20.webp");
+const img21 = assetImage("projects/KAVYAM/3_4/21.webp");
+const img22 = assetImage("projects/KAVYAM/3_4/22.webp");
 export const metadata = {
-  title: "Jaipur Residence — Spaces Architects@ka",
+  title: "Kavyam — Spaces Architects@ka",
 };
 
 // All content for this project lives right here — edit freely.
 const details = {
-  Project: "Jaipur Residence",
-  Location: "Jaipur, Rajasthan",
-  Client: "Mrs. Malu",
+  Project: "Kavyam",
+  Location: "New Delhi",
+  Client: "Mr. D.K. Sharma",
   Status: "Completed",
+  Awards: "IIID Design Excellence Awards 2017 – Runner up in Residential Single Dwelling Category",
 };
 
 const ratio = (img) => img.width / img.height;
 
-// Layout rules (same as the Screen House reference):
-// - "pair" only uses portraits with identical width/height.
-// - "split" = one portrait (large) + two landscape images stacked beside it.
-// - "full" is landscape only (no full-width portraits).
-// - Pair 8 mixes 626x960 and 637x960 (under 2% apart), so both boxes share
-//   one ratio via `ratio` to keep the row perfectly aligned.
 const gallery = [
-  { type: "split", large: img3, stack: [img1, img2] },
-  { type: "pair", images: [img4, img7] },
-  { type: "full", image: img6 },
-  { type: "split-reverse", large: img13, stack: [img11, img5] },
-  { type: "pair", images: [img12, img16] },
+  { type: "split", large: img1, stack: [img6, img7] },
+  { type: "pair", images: [img2, img3] },
+  { type: "full", image: img8 },
+  { type: "split-reverse", large: img4, stack: [img13, img14] },
+  { type: "pair", images: [img5, img9] },
   { type: "full", image: img15 },
-  { type: "split", large: img8, stack: [img9, img14] },
-  { type: "pair", images: [img10, img17], ratio: 0.658 },
+  { type: "split", large: img10, stack: [img16, img17] },
+  { type: "pair", images: [img11, img12] },
+  { type: "split-reverse", large: img18, stack: [img20, img22] },
+  { type: "pair", images: [img19, img21] },
 ];
 
-const moreProjects = assets.projects.filter((project) => project.id !== "jaipur-residence").slice(0, 3);
+const moreProjects = assets.projects.filter((project) => project.id !== "kavyam").slice(0, 3);
 
-export default function JaipurResidencePage() {
+export default function KavyamPage() {
   return (
     <>
       <main>
@@ -76,12 +72,12 @@ export default function JaipurResidencePage() {
           className={styles.hero}
           imageClassName={styles.heroImage}
           src={heroImage}
-          alt="Jaipur Residence"
+          alt="Kavyam"
         >
           <div className={`site-container ${styles.heroTextWrap}`}>
             <div className={styles.heroText}>
-              <h1>Jaipur Residence</h1>
-              <p>Jaipur, Rajasthan</p>
+              <h1>Kavyam</h1>
+              <p>New Delhi</p>
             </div>
           </div>
         </ParallaxHeroImage>
@@ -103,40 +99,23 @@ export default function JaipurResidencePage() {
 
           <div className={styles.infoBody}>
             <p>
-              Set in Jaipur, this residence brings together{" "}
-              <span className={styles.highlight}>
-                Rajasthani heritage and contemporary expression
-              </span>
-              , weaving carved{" "}
-              <span className={styles.highlight}>
-                jaalis, arches and ethnic motifs
-              </span>{" "}
-              into a modern spatial language. The lower levels retain a sense of
-              warmth and tradition, while the upper floor takes a deliberate
-              departure for the young son, adopting a{" "}
-              <span className={styles.highlight}>
-                bold black-and-white palette
-              </span>{" "}
-              that gives the home a more youthful and individual character.
+              Conceived as a fusion of Indian and modern architecture, this single-family residence brings traditional elements into{" "}
+              <span className={styles.highlight}>dialogue with contemporary materials and detailing</span>
+              . The façade combines a{" "}
+              <span className={styles.highlight}>brick jaali with MS louvers, Epay wood and tensile roofing</span>
+              , creating a layered expression of heritage and modernity.
             </p>
 
             <p>
-              The interiors continue this dialogue through contrasting moods. A
-              warm, neutral formal living room combines plush furnishings,
-              filtered daylight and a cascading chandelier, while the kitchen
-              introduces a sleek monochrome language with high-gloss finishes
-              and a seamless connection to the dining space. Above, the
-              son&apos;s lounge embraces geometric lighting, circular mirrors
-              and contemporary furniture, creating an energetic counterpoint to
-              the heritage-inspired spaces below.
+              Inside, custom-designed wallpapers, furniture and artefacts extend the concept into a cohesive interior language. Large double- and triple-height atriums form the spatial core, establishing{" "}
+              <span className={styles.highlight}>visual connections across floors</span>
+              , while carefully positioned openings draw abundant natural light and ventilation throughout the home.
             </p>
 
             <p>
-              A landscaped terrace garden crowns the residence, bringing nature
-              into the composition and completing its{" "}
-              <span className={styles.highlight}>
-                balance of tradition, individuality and contemporary living.
-              </span>
+              The result is a residence where{" "}
+              <span className={styles.highlight}>Indian architectural character meets contemporary openness</span>
+              , creating a distinctive yet cohesive family home.
             </p>
           </div>
         </section>
@@ -149,7 +128,7 @@ export default function JaipurResidencePage() {
                 <div key={i} className={styles.galleryFull}>
                   <Image
                     src={block.image}
-                    alt="Jaipur Residence"
+                    alt="Kavyam"
                     sizes="100vw"
                     className={styles.galleryImg}
                   />
@@ -170,7 +149,7 @@ export default function JaipurResidencePage() {
                   >
                     <Image
                       src={block.large}
-                      alt="Jaipur Residence"
+                      alt="Kavyam"
                       fill
                       sizes="(min-width: 768px) 48vw, 100vw"
                       className={styles.galleryImgFit}
@@ -185,7 +164,7 @@ export default function JaipurResidencePage() {
                       >
                         <Image
                           src={src}
-                          alt="Jaipur Residence"
+                          alt="Kavyam"
                           fill
                           sizes="(min-width: 768px) 48vw, 100vw"
                           className={styles.galleryImgFit}
@@ -203,11 +182,11 @@ export default function JaipurResidencePage() {
                   <div
                     key={j}
                     className={styles.galleryPairItem}
-                    style={{ "--ratio": block.ratio ?? ratio(src) }}
+                    style={{ "--ratio": ratio(src) }}
                   >
                     <Image
                       src={src}
-                      alt="Jaipur Residence"
+                      alt="Kavyam"
                       fill
                       sizes="(min-width: 768px) 48vw, 100vw"
                       className={styles.galleryImgFit}

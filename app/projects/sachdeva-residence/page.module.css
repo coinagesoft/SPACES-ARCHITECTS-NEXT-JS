@@ -200,9 +200,9 @@
   padding-bottom: 56px;
 }
 
-/* "full" is a single, full-width shot with no neighbour to match heights
-   with, so it keeps its own natural aspect ratio — nothing cropped,
-   nothing stretched. */
+/* "full" and "wide" are single, full-width shots with no neighbour to
+   match heights with, so they keep their own natural aspect ratio —
+   nothing cropped, nothing stretched. */
 .galleryImg {
   display: block;
   width: 100%;
@@ -214,10 +214,16 @@
 }
 
 /* "pair" and "split" images sit next to a partner and need to line up at
-   the same height. Each item gets a `--ratio` custom property (its own
-   real width/height, computed in JS from the asset manifest) and uses CSS
-   `aspect-ratio` to render at exactly that ratio, so the image is never
-   distorted. */
+   the same height (like the Canva layout). Each item below gets a
+   `--ratio` custom property (its own real width/height, computed in JS
+   from the image file) and uses CSS `aspect-ratio` to render at exactly
+   that ratio — so the image itself is never cropped or distorted.
+   On desktop, the row switches to flexbox with flex-basis 0 and
+   flex-grow set to that same ratio, which is the standard "justified
+   gallery row" trick: it divides the row's width between the images in
+   proportion to their own ratios, and since every image keeps its own
+   aspect-ratio, they all land at the exact same computed height — full
+   photos, edge to edge, nothing stretched. */
 .galleryImgFit {
   object-fit: cover; /* box already matches the image's own ratio */
 }

@@ -7,56 +7,50 @@ import { assets } from "@/assets";
 import styles from "./page.module.css";
 import { assetImage } from "@/config/assets";
 
-// Hero image from ASHRAYA-RESIDENCE/cover
-const heroImage = assetImage("projects/ASHRAYA-RESIDENCE/cover/COVER.webp");
-// Project photographs from ASHRAYA-RESIDENCE/3_4
-// Sizes (from the asset manifest):
-//   landscape 4800x3600: img1, img4, img5, img6, img9, img11, img13
-//   portrait  3600x4800: img2, img3, img7, img8, img10, img12
-const img1 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/1.webp");
-const img2 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/2.webp");
-const img3 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/3.webp");
-const img4 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/4.webp");
-const img5 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/5.webp");
-const img6 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/6.webp");
-const img7 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/7.webp");
-const img8 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/8.webp");
-const img9 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/9.webp");
-const img10 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/10.webp");
-const img11 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/11.webp");
-const img12 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/12.webp");
-const img13 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/13.webp");
+// Hero image from projects/ARAVALI-FARMHOUSE/cover
+const heroImage = assetImage("projects/ARAVALI-FARMHOUSE/cover/COVER.webp");
+// Project photographs from projects/ARAVALI-FARMHOUSE/3_4
+const img1 = assetImage("projects/ARAVALI-FARMHOUSE/3_4/1.webp");
+const img2 = assetImage("projects/ARAVALI-FARMHOUSE/3_4/2.webp");
+const img3 = assetImage("projects/ARAVALI-FARMHOUSE/3_4/3.webp");
+const img4 = assetImage("projects/ARAVALI-FARMHOUSE/3_4/4.webp");
+const img5 = assetImage("projects/ARAVALI-FARMHOUSE/3_4/5.webp");
+const img6 = assetImage("projects/ARAVALI-FARMHOUSE/3_4/6.webp");
+const img7 = assetImage("projects/ARAVALI-FARMHOUSE/3_4/7.webp");
+const img8 = assetImage("projects/ARAVALI-FARMHOUSE/3_4/8.webp");
+const img9 = assetImage("projects/ARAVALI-FARMHOUSE/3_4/9.webp");
+const img10 = assetImage("projects/ARAVALI-FARMHOUSE/3_4/10.webp");
+const img11 = assetImage("projects/ARAVALI-FARMHOUSE/3_4/11.webp");
+const img12 = assetImage("projects/ARAVALI-FARMHOUSE/3_4/12.webp");
 
 export const metadata = {
-  title: "Ashraya Residence — Spaces Architects@ka",
+  title: "Aravali Farmhouse — Spaces Architects@ka",
 };
 
 // All content for this project lives right here — edit freely.
 const details = {
-  Project: "Ashraya Residence",
-  Location: "New Delhi",
-  Client: "Mr. Kalra",
+  Project: "Aravali Farmhouse",
+  Location: "Gurgaon",
+  Client: "Mr. Jan",
   Status: "Completed",
 };
 
 const ratio = (img) => img.width / img.height;
 
-// Layout rules (same as the Screen House reference):
-// - "pair" only uses images with identical width/height.
-// - "split" = one portrait (large) + two landscape images stacked beside it.
-// - "full" is landscape only (no full-width portraits).
 const gallery = [
-  { type: "split", large: img2, stack: [img1, img5] },
-  { type: "pair", images: [img3, img7] },
+  { type: "full", image: img1 },
+  { type: "pair", images: [img2, img3] },
   { type: "full", image: img4 },
-  { type: "split-reverse", large: img8, stack: [img6, img9] },
-  { type: "pair", images: [img10, img12] },
-  { type: "pair", images: [img11, img13] },
+  { type: "pair", images: [img5, img6] },
+  { type: "pair", images: [img7, img8] },
+  { type: "full", image: img9 },
+  { type: "pair", images: [img10, img11] },
+  { type: "full", image: img12 },
 ];
 
-const moreProjects = assets.projects.filter((project) => project.id !== "ashraya-residence").slice(0, 3);
+const moreProjects = assets.projects.filter((project) => project.id !== "aravali-farmhouse").slice(0, 3);
 
-export default function AshrayaResidencePage() {
+export default function AravaliFarmhousePage() {
   return (
     <>
       <main>
@@ -66,12 +60,12 @@ export default function AshrayaResidencePage() {
           className={styles.hero}
           imageClassName={styles.heroImage}
           src={heroImage}
-          alt="Ashraya Residence"
+          alt="Aravali Farmhouse"
         >
           <div className={`site-container ${styles.heroTextWrap}`}>
             <div className={styles.heroText}>
-              <h1>Ashraya Residence</h1>
-              <p>New Delhi</p>
+              <h1>Aravali Farmhouse</h1>
+              <p>Gurgaon</p>
             </div>
           </div>
         </ParallaxHeroImage>
@@ -93,28 +87,15 @@ export default function AshrayaResidencePage() {
 
           <div className={styles.infoBody}>
             <p>
-              Set on a <span className={styles.highlight}>600-square-yard</span> plot, this
-              single-family residence is shaped by the client&apos;s deep affinity for Indian art,
-              reflected in its planning, architecture and{" "}
-              <span className={styles.highlight}>material palette.</span> Rather than maximising the
-              footprint, the design responds to the sun path, placing the built mass strategically
-              within the site.
+              Set within a 2.1-acre corner site in the Aravalli Hills of Gurgaon, the farmhouse was conceived as a <span className={styles.highlight}>private retreat</span> for a Belgian diplomatic couple, with distinct accommodation for guests. Responding closely to the natural contours of the site, the building is organized across two levels, with the primary living spaces and master suite above and three guest bedrooms below.
             </p>
 
             <p>
-              A <span className={styles.highlight}>10-foot-wide rear setback</span> is retained as a
-              breathing edge, drawing natural light and air into the house. The planning unfolds along{" "}
-              <span className={styles.highlight}>two intersecting axes:</span> the horizontal axis
-              establishes <span className={styles.highlight}>cross-ventilation and movement</span>,
-              while the vertical axis connects the different levels and spaces into a{" "}
-              <span className={styles.highlight}>cohesive whole.</span>
+              The architecture is defined by <span className={styles.highlight}>simple geometric forms</span>, each corresponding to a specific function and creating a seamless transition between private and semi-private spaces. The swimming pool forms the heart of the composition, visually and physically connected to the master bedroom, living, dining and kitchen. <span className={styles.highlight}>Curved and rectilinear volumes</span> frame the pool and landscape, while carefully choreographed arrival sequences reveal the building gradually along the contours of the site.
             </p>
 
             <p>
-              With <span className={styles.highlight}>four bedrooms and a guest room</span>{" "}
-              accommodated within the brief, the residence balances functional requirements with{" "}
-              <span className={styles.highlight}>climate-responsive planning</span>, allowing light,
-              air and Indian spatial sensibilities to shape the home.
+              The farmhouse is an outward-looking composition where <span className={styles.highlight}>architecture, landscape and geometry</span> come together to create an intimate yet expansive living experience.
             </p>
           </div>
         </section>
@@ -127,7 +108,7 @@ export default function AshrayaResidencePage() {
                 <div key={i} className={styles.galleryFull}>
                   <Image
                     src={block.image}
-                    alt="Ashraya Residence"
+                    alt="Aravali Farmhouse"
                     sizes="100vw"
                     className={styles.galleryImg}
                   />
@@ -148,7 +129,7 @@ export default function AshrayaResidencePage() {
                   >
                     <Image
                       src={block.large}
-                      alt="Ashraya Residence"
+                      alt="Aravali Farmhouse"
                       fill
                       sizes="(min-width: 768px) 48vw, 100vw"
                       className={styles.galleryImgFit}
@@ -163,7 +144,7 @@ export default function AshrayaResidencePage() {
                       >
                         <Image
                           src={src}
-                          alt="Ashraya Residence"
+                          alt="Aravali Farmhouse"
                           fill
                           sizes="(min-width: 768px) 48vw, 100vw"
                           className={styles.galleryImgFit}
@@ -185,7 +166,7 @@ export default function AshrayaResidencePage() {
                   >
                     <Image
                       src={src}
-                      alt="Ashraya Residence"
+                      alt="Aravali Farmhouse"
                       fill
                       sizes="(min-width: 768px) 48vw, 100vw"
                       className={styles.galleryImgFit}
@@ -212,7 +193,12 @@ export default function AshrayaResidencePage() {
           <p className={styles.moreHeading}>More</p>
           <div className={styles.moreGrid}>
             {moreProjects.map((project) => (
-              <Link key={project.id} href="/projects" className={styles.moreCard} aria-label={project.name}>
+              <Link
+                key={project.id}
+                href={`/projects/${project.id}`}
+                className={styles.moreCard}
+                aria-label={project.name}
+              >
                 <Image src={project.image} alt={project.name} fill sizes="(min-width: 768px) 29vw, 90vw" className={styles.moreImage} />
               </Link>
             ))}

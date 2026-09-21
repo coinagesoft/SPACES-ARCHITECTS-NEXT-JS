@@ -7,66 +7,64 @@ import { assets } from "@/assets";
 import styles from "./page.module.css";
 import { assetImage } from "@/config/assets";
 
-// Hero image from JAIPUR-RESIDENCE/cover
-const heroImage = assetImage("projects/JAIPUR-RESIDENCE/cover/COVER.webp");
-// Project photographs from JAIPUR-RESIDENCE/photographs
-// Sizes (from the asset manifest):
-//   landscape 1280x850: img1, img2, img5, img6, img9, img14, img15
-//   landscape 1280x771: img11
-//   portrait  637x960 : img4, img7, img12, img16, img17
-//   portrait  other   : img3 (717x960), img8 (683x960), img10 (626x960), img13 (769x960)
-const img1 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0001.webp");
-const img2 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0003.webp");
-const img3 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0004.webp");
-const img4 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0005.webp");
-const img5 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0006.webp");
-const img6 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0007.webp");
-const img7 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0013.webp");
-const img8 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0014.webp");
-const img9 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0019.webp");
-const img10 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0020.webp");
-const img11 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0024.webp");
-const img12 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0025.webp");
-const img13 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0026.webp");
-const img14 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0027.webp");
-const img15 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0038.webp");
-const img16 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0042.webp");
-const img17 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0046.webp");
-
+// Hero image from HOUSE-OF-HUES/cover
+const heroImage = assetImage("projects/HOUSE-OF-HUES/cover/COVER.webp");
+// Project photographs from HOUSE-OF-HUES/3_4
+const img1 = assetImage("projects/HOUSE-OF-HUES/3_4/1.webp");
+const img2 = assetImage("projects/HOUSE-OF-HUES/3_4/2.webp");
+const img3 = assetImage("projects/HOUSE-OF-HUES/3_4/3.webp");
+const img4 = assetImage("projects/HOUSE-OF-HUES/3_4/4.webp");
+const img5 = assetImage("projects/HOUSE-OF-HUES/3_4/5.webp");
+const img6 = assetImage("projects/HOUSE-OF-HUES/3_4/6.webp");
+const img7 = assetImage("projects/HOUSE-OF-HUES/3_4/7.webp");
+const img8 = assetImage("projects/HOUSE-OF-HUES/3_4/8.webp");
+const img9 = assetImage("projects/HOUSE-OF-HUES/3_4/9.webp");
+const img10 = assetImage("projects/HOUSE-OF-HUES/3_4/10.webp");
+const img11 = assetImage("projects/HOUSE-OF-HUES/3_4/11.webp");
+const img12 = assetImage("projects/HOUSE-OF-HUES/3_4/12.webp");
+const img13 = assetImage("projects/HOUSE-OF-HUES/3_4/13.webp");
+const img14 = assetImage("projects/HOUSE-OF-HUES/3_4/14.webp");
+const img15 = assetImage("projects/HOUSE-OF-HUES/3_4/15.webp");
+const img16 = assetImage("projects/HOUSE-OF-HUES/3_4/16.webp");
+const img17 = assetImage("projects/HOUSE-OF-HUES/3_4/17.webp");
+const img18 = assetImage("projects/HOUSE-OF-HUES/3_4/18.webp");
+const img19 = assetImage("projects/HOUSE-OF-HUES/3_4/19.webp");
+const img20 = assetImage("projects/HOUSE-OF-HUES/3_4/20.webp");
+const img21 = assetImage("projects/HOUSE-OF-HUES/3_4/21.webp");
+const img22 = assetImage("projects/HOUSE-OF-HUES/3_4/22.webp");
+const img23 = assetImage("projects/HOUSE-OF-HUES/3_4/23.webp");
+const img24 = assetImage("projects/HOUSE-OF-HUES/3_4/24.webp");
+const img25 = assetImage("projects/HOUSE-OF-HUES/3_4/25.webp");
 export const metadata = {
-  title: "Jaipur Residence — Spaces Architects@ka",
+  title: "House of Hues — Spaces Architects@ka",
 };
 
 // All content for this project lives right here — edit freely.
 const details = {
-  Project: "Jaipur Residence",
-  Location: "Jaipur, Rajasthan",
-  Client: "Mrs. Malu",
+  Project: "House of Hues",
+  Location: "New Delhi",
+  Client: "Mr. Vipul Jain",
   Status: "Completed",
 };
 
 const ratio = (img) => img.width / img.height;
 
-// Layout rules (same as the Screen House reference):
-// - "pair" only uses portraits with identical width/height.
-// - "split" = one portrait (large) + two landscape images stacked beside it.
-// - "full" is landscape only (no full-width portraits).
-// - Pair 8 mixes 626x960 and 637x960 (under 2% apart), so both boxes share
-//   one ratio via `ratio` to keep the row perfectly aligned.
 const gallery = [
-  { type: "split", large: img3, stack: [img1, img2] },
-  { type: "pair", images: [img4, img7] },
-  { type: "full", image: img6 },
-  { type: "split-reverse", large: img13, stack: [img11, img5] },
-  { type: "pair", images: [img12, img16] },
-  { type: "full", image: img15 },
-  { type: "split", large: img8, stack: [img9, img14] },
-  { type: "pair", images: [img10, img17], ratio: 0.658 },
+  { type: "split", large: img1, stack: [img4, img5] },
+  { type: "pair", images: [img2, img3] },
+  { type: "split-reverse", large: img6, stack: [img7, img12] },
+  { type: "pair", images: [img8, img9] },
+  { type: "split", large: img10, stack: [img13, img15] },
+  { type: "pair", images: [img11, img14] },
+  { type: "split-reverse", large: img16, stack: [img18, img19] },
+  { type: "pair", images: [img17, img21] },
+  { type: "split", large: img22, stack: [img20, img24] },
+  { type: "pair", images: [img23, img25] },
 ];
 
-const moreProjects = assets.projects.filter((project) => project.id !== "jaipur-residence").slice(0, 3);
+const moreProjects = assets.projects.filter((project) => project.id !== "house-of-hues").slice(0, 3);
 
-export default function JaipurResidencePage() {
+export default function HouseOfHuesPage() {
   return (
     <>
       <main>
@@ -76,12 +74,12 @@ export default function JaipurResidencePage() {
           className={styles.hero}
           imageClassName={styles.heroImage}
           src={heroImage}
-          alt="Jaipur Residence"
+          alt="House of Hues"
         >
           <div className={`site-container ${styles.heroTextWrap}`}>
             <div className={styles.heroText}>
-              <h1>Jaipur Residence</h1>
-              <p>Jaipur, Rajasthan</p>
+              <h1>House of Hues</h1>
+              <p>New Delhi</p>
             </div>
           </div>
         </ParallaxHeroImage>
@@ -103,40 +101,26 @@ export default function JaipurResidencePage() {
 
           <div className={styles.infoBody}>
             <p>
-              Set in Jaipur, this residence brings together{" "}
-              <span className={styles.highlight}>
-                Rajasthani heritage and contemporary expression
-              </span>
-              , weaving carved{" "}
-              <span className={styles.highlight}>
-                jaalis, arches and ethnic motifs
-              </span>{" "}
-              into a modern spatial language. The lower levels retain a sense of
-              warmth and tradition, while the upper floor takes a deliberate
-              departure for the young son, adopting a{" "}
-              <span className={styles.highlight}>
-                bold black-and-white palette
-              </span>{" "}
-              that gives the home a more youthful and individual character.
+              Pattern Play is a{" "}
+              <span className={styles.highlight}>3 BHK apartment</span>{" "}
+              that explores pattern, colour, texture and material as a cohesive design language.{" "}
+              <span className={styles.highlight}>Bold geometric upholstery, graphic rugs, patterned cabinetry and expressive artwork</span>{" "}
+              bring rhythm and personality to the interiors, while recurring colours create continuity across spaces.
             </p>
 
             <p>
-              The interiors continue this dialogue through contrasting moods. A
-              warm, neutral formal living room combines plush furnishings,
-              filtered daylight and a cascading chandelier, while the kitchen
-              introduces a sleek monochrome language with high-gloss finishes
-              and a seamless connection to the dining space. Above, the
-              son&apos;s lounge embraces geometric lighting, circular mirrors
-              and contemporary furniture, creating an energetic counterpoint to
-              the heritage-inspired spaces below.
+              A warm palette of{" "}
+              <span className={styles.highlight}>natural wood, marble, textured walls, brass, metal and layered fabrics</span>{" "}
+              balances the stronger patterns. Fluted timber and linear wall details introduce subtle repetition, while curved furniture and architectural elements soften the geometry.
             </p>
 
             <p>
-              A landscaped terrace garden crowns the residence, bringing nature
-              into the composition and completing its{" "}
-              <span className={styles.highlight}>
-                balance of tradition, individuality and contemporary living.
-              </span>
+              Each room carries its own character from the vibrant turquoise and mustard accents in the living areas to the deeper blue of the bedroom yet remains connected through a consistent material and colour palette.
+            </p>
+
+            <p>
+              The result is a playful, layered home where{" "}
+              <span className={styles.highlight}>pattern is not merely decorative, but becomes an integral part of the interior architecture.</span>
             </p>
           </div>
         </section>
@@ -149,7 +133,7 @@ export default function JaipurResidencePage() {
                 <div key={i} className={styles.galleryFull}>
                   <Image
                     src={block.image}
-                    alt="Jaipur Residence"
+                    alt="House of Hues"
                     sizes="100vw"
                     className={styles.galleryImg}
                   />
@@ -170,7 +154,7 @@ export default function JaipurResidencePage() {
                   >
                     <Image
                       src={block.large}
-                      alt="Jaipur Residence"
+                      alt="House of Hues"
                       fill
                       sizes="(min-width: 768px) 48vw, 100vw"
                       className={styles.galleryImgFit}
@@ -185,7 +169,7 @@ export default function JaipurResidencePage() {
                       >
                         <Image
                           src={src}
-                          alt="Jaipur Residence"
+                          alt="House of Hues"
                           fill
                           sizes="(min-width: 768px) 48vw, 100vw"
                           className={styles.galleryImgFit}
@@ -203,11 +187,11 @@ export default function JaipurResidencePage() {
                   <div
                     key={j}
                     className={styles.galleryPairItem}
-                    style={{ "--ratio": block.ratio ?? ratio(src) }}
+                    style={{ "--ratio": ratio(src) }}
                   >
                     <Image
                       src={src}
-                      alt="Jaipur Residence"
+                      alt="House of Hues"
                       fill
                       sizes="(min-width: 768px) 48vw, 100vw"
                       className={styles.galleryImgFit}

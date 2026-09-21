@@ -7,56 +7,58 @@ import { assets } from "@/assets";
 import styles from "./page.module.css";
 import { assetImage } from "@/config/assets";
 
-// Hero image from ASHRAYA-RESIDENCE/cover
-const heroImage = assetImage("projects/ASHRAYA-RESIDENCE/cover/COVER.webp");
-// Project photographs from ASHRAYA-RESIDENCE/3_4
-// Sizes (from the asset manifest):
-//   landscape 4800x3600: img1, img4, img5, img6, img9, img11, img13
-//   portrait  3600x4800: img2, img3, img7, img8, img10, img12
-const img1 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/1.webp");
-const img2 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/2.webp");
-const img3 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/3.webp");
-const img4 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/4.webp");
-const img5 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/5.webp");
-const img6 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/6.webp");
-const img7 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/7.webp");
-const img8 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/8.webp");
-const img9 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/9.webp");
-const img10 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/10.webp");
-const img11 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/11.webp");
-const img12 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/12.webp");
-const img13 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/13.webp");
+// Hero image from projects/NOCC-OFFICE/cover
+const heroImage = assetImage("projects/NOCC-OFFICE/cover/COVER IMAGE.webp");
+// Project photographs from projects/NOCC-OFFICE/3_4
+const img1 = assetImage("projects/NOCC-OFFICE/3_4/1.webp");
+const img1b = assetImage("projects/NOCC-OFFICE/3_4/1(1).webp");
+const img2 = assetImage("projects/NOCC-OFFICE/3_4/2.webp");
+const img2b = assetImage("projects/NOCC-OFFICE/3_4/2(1).webp");
+const img3 = assetImage("projects/NOCC-OFFICE/3_4/3.webp");
+const img3b = assetImage("projects/NOCC-OFFICE/3_4/3(1).webp");
+const img4 = assetImage("projects/NOCC-OFFICE/3_4/4.webp");
+const img5 = assetImage("projects/NOCC-OFFICE/3_4/5.webp");
+const img6 = assetImage("projects/NOCC-OFFICE/3_4/6.webp");
+const img7 = assetImage("projects/NOCC-OFFICE/3_4/7.webp");
+const img8 = assetImage("projects/NOCC-OFFICE/3_4/8.webp");
+const img9 = assetImage("projects/NOCC-OFFICE/3_4/9.webp");
+const img10 = assetImage("projects/NOCC-OFFICE/3_4/10.webp");
+const img11 = assetImage("projects/NOCC-OFFICE/3_4/11.webp");
+const img12 = assetImage("projects/NOCC-OFFICE/3_4/12.webp");
+const img14 = assetImage("projects/NOCC-OFFICE/3_4/14.webp");
+const img15 = assetImage("projects/NOCC-OFFICE/3_4/15.webp");
+const img16 = assetImage("projects/NOCC-OFFICE/3_4/16.webp");
 
 export const metadata = {
-  title: "Ashraya Residence — Spaces Architects@ka",
+  title: "NOCC Office — Spaces Architects@ka",
 };
 
 // All content for this project lives right here — edit freely.
 const details = {
-  Project: "Ashraya Residence",
+  Project: "NOCC Office",
   Location: "New Delhi",
-  Client: "Mr. Kalra",
+  Client: "NIIT Technologies",
   Status: "Completed",
 };
 
 const ratio = (img) => img.width / img.height;
 
-// Layout rules (same as the Screen House reference):
-// - "pair" only uses images with identical width/height.
-// - "split" = one portrait (large) + two landscape images stacked beside it.
-// - "full" is landscape only (no full-width portraits).
 const gallery = [
-  { type: "split", large: img2, stack: [img1, img5] },
-  { type: "pair", images: [img3, img7] },
-  { type: "full", image: img4 },
-  { type: "split-reverse", large: img8, stack: [img6, img9] },
-  { type: "pair", images: [img10, img12] },
-  { type: "pair", images: [img11, img13] },
+  { type: "full", image: img1 },
+  { type: "pair", images: [img4, img5] },
+  { type: "split", large: img2b, stack: [img6, img7] },
+  { type: "full", image: img8 },
+  { type: "pair", images: [img9, img10] },
+  { type: "split-reverse", large: img3, stack: [img11, img12] },
+  { type: "full", image: img14 },
+  { type: "pair", images: [img15, img16] },
+  { type: "pair", images: [img1b, img3b] },
+  { type: "full", image: img2 },
 ];
 
-const moreProjects = assets.projects.filter((project) => project.id !== "ashraya-residence").slice(0, 3);
+const moreProjects = assets.projects.filter((project) => project.id !== "nocc-office").slice(0, 3);
 
-export default function AshrayaResidencePage() {
+export default function NoccOfficePage() {
   return (
     <>
       <main>
@@ -66,11 +68,11 @@ export default function AshrayaResidencePage() {
           className={styles.hero}
           imageClassName={styles.heroImage}
           src={heroImage}
-          alt="Ashraya Residence"
+          alt="NOCC Office"
         >
           <div className={`site-container ${styles.heroTextWrap}`}>
             <div className={styles.heroText}>
-              <h1>Ashraya Residence</h1>
+              <h1>NOCC Office</h1>
               <p>New Delhi</p>
             </div>
           </div>
@@ -93,28 +95,15 @@ export default function AshrayaResidencePage() {
 
           <div className={styles.infoBody}>
             <p>
-              Set on a <span className={styles.highlight}>600-square-yard</span> plot, this
-              single-family residence is shaped by the client&apos;s deep affinity for Indian art,
-              reflected in its planning, architecture and{" "}
-              <span className={styles.highlight}>material palette.</span> Rather than maximising the
-              footprint, the design responds to the sun path, placing the built mass strategically
-              within the site.
+              The brief called for a <span className={styles.highlight}>creative, open office</span> with large glass panels and a <span className={styles.highlight}>youthful, vibrant ambience</span>. The concept evolved through abstract shapes, geometric forms, panels and pastel shades, creating a spatial experience revealed progressively along the corridor.
             </p>
 
             <p>
-              A <span className={styles.highlight}>10-foot-wide rear setback</span> is retained as a
-              breathing edge, drawing natural light and air into the house. The planning unfolds along{" "}
-              <span className={styles.highlight}>two intersecting axes:</span> the horizontal axis
-              establishes <span className={styles.highlight}>cross-ventilation and movement</span>,
-              while the vertical axis connects the different levels and spaces into a{" "}
-              <span className={styles.highlight}>cohesive whole.</span>
+              Multiple views were created beyond partitions to visually connect the spaces and reinforce the open-office character. A <span className={styles.highlight}>green pastel egg-shaped meeting room</span> intersects a rectangular meeting room positioned at <span className={styles.highlight}>45 degrees</span>, creating a dynamic geometric composition. The former contrasts with the latter’s <span className={styles.highlight}>dark teak cladding</span>, while its front is finished in mirror-effect laminate with transparent circular glass elements, creating an <span className={styles.highlight}>optical illusion</span> along the approach from the entrance.
             </p>
 
             <p>
-              With <span className={styles.highlight}>four bedrooms and a guest room</span>{" "}
-              accommodated within the brief, the residence balances functional requirements with{" "}
-              <span className={styles.highlight}>climate-responsive planning</span>, allowing light,
-              air and Indian spatial sensibilities to shape the home.
+              The design was developed through <span className={styles.highlight}>multiple stages of refinement</span>, with geometry, colour and material working together to define a youthful and interconnected workplace.
             </p>
           </div>
         </section>
@@ -127,7 +116,7 @@ export default function AshrayaResidencePage() {
                 <div key={i} className={styles.galleryFull}>
                   <Image
                     src={block.image}
-                    alt="Ashraya Residence"
+                    alt="NOCC Office"
                     sizes="100vw"
                     className={styles.galleryImg}
                   />
@@ -148,7 +137,7 @@ export default function AshrayaResidencePage() {
                   >
                     <Image
                       src={block.large}
-                      alt="Ashraya Residence"
+                      alt="NOCC Office"
                       fill
                       sizes="(min-width: 768px) 48vw, 100vw"
                       className={styles.galleryImgFit}
@@ -163,7 +152,7 @@ export default function AshrayaResidencePage() {
                       >
                         <Image
                           src={src}
-                          alt="Ashraya Residence"
+                          alt="NOCC Office"
                           fill
                           sizes="(min-width: 768px) 48vw, 100vw"
                           className={styles.galleryImgFit}
@@ -185,7 +174,7 @@ export default function AshrayaResidencePage() {
                   >
                     <Image
                       src={src}
-                      alt="Ashraya Residence"
+                      alt="NOCC Office"
                       fill
                       sizes="(min-width: 768px) 48vw, 100vw"
                       className={styles.galleryImgFit}
@@ -212,7 +201,12 @@ export default function AshrayaResidencePage() {
           <p className={styles.moreHeading}>More</p>
           <div className={styles.moreGrid}>
             {moreProjects.map((project) => (
-              <Link key={project.id} href="/projects" className={styles.moreCard} aria-label={project.name}>
+              <Link
+                key={project.id}
+                href={`/projects/${project.id}`}
+                className={styles.moreCard}
+                aria-label={project.name}
+              >
                 <Image src={project.image} alt={project.name} fill sizes="(min-width: 768px) 29vw, 90vw" className={styles.moreImage} />
               </Link>
             ))}

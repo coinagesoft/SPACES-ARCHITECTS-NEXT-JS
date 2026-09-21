@@ -7,66 +7,44 @@ import { assets } from "@/assets";
 import styles from "./page.module.css";
 import { assetImage } from "@/config/assets";
 
-// Hero image from JAIPUR-RESIDENCE/cover
-const heroImage = assetImage("projects/JAIPUR-RESIDENCE/cover/COVER.webp");
-// Project photographs from JAIPUR-RESIDENCE/photographs
-// Sizes (from the asset manifest):
-//   landscape 1280x850: img1, img2, img5, img6, img9, img14, img15
-//   landscape 1280x771: img11
-//   portrait  637x960 : img4, img7, img12, img16, img17
-//   portrait  other   : img3 (717x960), img8 (683x960), img10 (626x960), img13 (769x960)
-const img1 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0001.webp");
-const img2 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0003.webp");
-const img3 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0004.webp");
-const img4 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0005.webp");
-const img5 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0006.webp");
-const img6 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0007.webp");
-const img7 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0013.webp");
-const img8 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0014.webp");
-const img9 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0019.webp");
-const img10 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0020.webp");
-const img11 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0024.webp");
-const img12 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0025.webp");
-const img13 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0026.webp");
-const img14 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0027.webp");
-const img15 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0038.webp");
-const img16 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0042.webp");
-const img17 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0046.webp");
-
+// Hero image from SACHDEVA-FARMHOUSE/cover
+const heroImage = assetImage("projects/SACHDEVA-FARMHOUSE/cover/COVER.webp");
+// Project photographs from SACHDEVA-FARMHOUSE/3_4
+const img1 = assetImage("projects/SACHDEVA-FARMHOUSE/3_4/1.webp");
+const img2 = assetImage("projects/SACHDEVA-FARMHOUSE/3_4/2.webp");
+const img3 = assetImage("projects/SACHDEVA-FARMHOUSE/3_4/3.webp");
+const img4 = assetImage("projects/SACHDEVA-FARMHOUSE/3_4/4.webp");
+const img5 = assetImage("projects/SACHDEVA-FARMHOUSE/3_4/5.webp");
+const img6 = assetImage("projects/SACHDEVA-FARMHOUSE/3_4/6.webp");
+const img7 = assetImage("projects/SACHDEVA-FARMHOUSE/3_4/7.webp");
+const img8 = assetImage("projects/SACHDEVA-FARMHOUSE/3_4/8.webp");
+const img9 = assetImage("projects/SACHDEVA-FARMHOUSE/3_4/9.webp");
+const img10 = assetImage("projects/SACHDEVA-FARMHOUSE/3_4/10.webp");
 export const metadata = {
-  title: "Jaipur Residence — Spaces Architects@ka",
+  title: "Sachdeva Farmhouse — Spaces Architects@ka",
 };
 
 // All content for this project lives right here — edit freely.
 const details = {
-  Project: "Jaipur Residence",
-  Location: "Jaipur, Rajasthan",
-  Client: "Mrs. Malu",
+  Project: "Sachdeva Residence",
+  Location: "New Delhi",
+  Client: "Mr. Himanshu Sachdeva",
   Status: "Completed",
 };
 
 const ratio = (img) => img.width / img.height;
 
-// Layout rules (same as the Screen House reference):
-// - "pair" only uses portraits with identical width/height.
-// - "split" = one portrait (large) + two landscape images stacked beside it.
-// - "full" is landscape only (no full-width portraits).
-// - Pair 8 mixes 626x960 and 637x960 (under 2% apart), so both boxes share
-//   one ratio via `ratio` to keep the row perfectly aligned.
 const gallery = [
-  { type: "split", large: img3, stack: [img1, img2] },
-  { type: "pair", images: [img4, img7] },
-  { type: "full", image: img6 },
-  { type: "split-reverse", large: img13, stack: [img11, img5] },
-  { type: "pair", images: [img12, img16] },
-  { type: "full", image: img15 },
-  { type: "split", large: img8, stack: [img9, img14] },
-  { type: "pair", images: [img10, img17], ratio: 0.658 },
+  { type: "split", large: img5, stack: [img1, img2] },
+  { type: "pair", images: [img6, img7] },
+  { type: "full", image: img3 },
+  { type: "pair", images: [img4, img8] },
+  { type: "pair", images: [img9, img10] },
 ];
 
-const moreProjects = assets.projects.filter((project) => project.id !== "jaipur-residence").slice(0, 3);
+const moreProjects = assets.projects.filter((project) => project.id !== "sachdeva-farmhouse").slice(0, 3);
 
-export default function JaipurResidencePage() {
+export default function SachdevaFarmhousePage() {
   return (
     <>
       <main>
@@ -76,12 +54,12 @@ export default function JaipurResidencePage() {
           className={styles.hero}
           imageClassName={styles.heroImage}
           src={heroImage}
-          alt="Jaipur Residence"
+          alt="Sachdeva Farmhouse"
         >
           <div className={`site-container ${styles.heroTextWrap}`}>
             <div className={styles.heroText}>
-              <h1>Jaipur Residence</h1>
-              <p>Jaipur, Rajasthan</p>
+              <h1>Sachdeva Farmhouse</h1>
+              <p>New Delhi</p>
             </div>
           </div>
         </ParallaxHeroImage>
@@ -103,40 +81,31 @@ export default function JaipurResidencePage() {
 
           <div className={styles.infoBody}>
             <p>
-              Set in Jaipur, this residence brings together{" "}
-              <span className={styles.highlight}>
-                Rajasthani heritage and contemporary expression
-              </span>
-              , weaving carved{" "}
-              <span className={styles.highlight}>
-                jaalis, arches and ethnic motifs
-              </span>{" "}
-              into a modern spatial language. The lower levels retain a sense of
-              warmth and tradition, while the upper floor takes a deliberate
-              departure for the young son, adopting a{" "}
-              <span className={styles.highlight}>
-                bold black-and-white palette
-              </span>{" "}
-              that gives the home a more youthful and individual character.
+              Set within a{" "}
+              <span className={styles.highlight}>3-acre</span>{" "}
+              landscape, the farmhouse draws from tropical architecture to create a{" "}
+              <span className={styles.highlight}>sequence of interconnected spaces</span>{" "}
+              gathered around a central courtyard and pool. The layout places bedrooms and living spaces around this green heart, while the gym, spa and home theatre complete the enclosure, creating varied architectural compositions from every side.
             </p>
 
             <p>
-              The interiors continue this dialogue through contrasting moods. A
-              warm, neutral formal living room combines plush furnishings,
-              filtered daylight and a cascading chandelier, while the kitchen
-              introduces a sleek monochrome language with high-gloss finishes
-              and a seamless connection to the dining space. Above, the
-              son&apos;s lounge embraces geometric lighting, circular mirrors
-              and contemporary furniture, creating an energetic counterpoint to
-              the heritage-inspired spaces below.
+              The journey into the house is deliberately choreographed. A{" "}
+              <span className={styles.highlight}>cantilevered zinc-clad entrance</span>{" "}
+              block establishes a distinctive arrival, opening into a double-height lobby framed by natural light, garden views and a sculptural staircase.{" "}
+              <span className={styles.highlight}>Rough Indian stone, backlit glass and timber</span>{" "}
+              introduce texture and drama, while carefully designed transitions create a sense of anticipation as one moves through the house.
             </p>
 
             <p>
-              A landscaped terrace garden crowns the residence, bringing nature
-              into the composition and completing its{" "}
-              <span className={styles.highlight}>
-                balance of tradition, individuality and contemporary living.
-              </span>
+              The pool court becomes the{" "}
+              <span className={styles.highlight}>experiential centre</span>
+              , transforming with the changing daylight. Lowered wellness spaces lead upward to a terrace garden and party space, extending the journey between levels and landscape.
+            </p>
+
+            <p>
+              Developed through{" "}
+              <span className={styles.highlight}>extensive scale-model studies, material exploration and detailed junctions</span>
+              , the farmhouse is an exercise in form, movement and atmosphere—where architecture is experienced as a gradual unfolding rather than a single composition.
             </p>
           </div>
         </section>
@@ -149,7 +118,7 @@ export default function JaipurResidencePage() {
                 <div key={i} className={styles.galleryFull}>
                   <Image
                     src={block.image}
-                    alt="Jaipur Residence"
+                    alt="Sachdeva Farmhouse"
                     sizes="100vw"
                     className={styles.galleryImg}
                   />
@@ -170,7 +139,7 @@ export default function JaipurResidencePage() {
                   >
                     <Image
                       src={block.large}
-                      alt="Jaipur Residence"
+                      alt="Sachdeva Farmhouse"
                       fill
                       sizes="(min-width: 768px) 48vw, 100vw"
                       className={styles.galleryImgFit}
@@ -185,7 +154,7 @@ export default function JaipurResidencePage() {
                       >
                         <Image
                           src={src}
-                          alt="Jaipur Residence"
+                          alt="Sachdeva Farmhouse"
                           fill
                           sizes="(min-width: 768px) 48vw, 100vw"
                           className={styles.galleryImgFit}
@@ -203,11 +172,11 @@ export default function JaipurResidencePage() {
                   <div
                     key={j}
                     className={styles.galleryPairItem}
-                    style={{ "--ratio": block.ratio ?? ratio(src) }}
+                    style={{ "--ratio": ratio(src) }}
                   >
                     <Image
                       src={src}
-                      alt="Jaipur Residence"
+                      alt="Sachdeva Farmhouse"
                       fill
                       sizes="(min-width: 768px) 48vw, 100vw"
                       className={styles.galleryImgFit}
