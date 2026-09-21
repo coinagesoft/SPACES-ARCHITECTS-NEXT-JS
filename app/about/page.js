@@ -12,7 +12,7 @@ export const metadata = { title: "Studio — Spaces Architects@ka" };
 const heroImage = assetImage("About_hero.jpg");
 const founderPhoto = assetImage("Kapil.jpg");
 
-// ---- Team photos — same files as the /teams page, first 4 only ----
+// ---- Team photos — keep the About page to four featured members only ----
 const poojaAggarwal = assetImage("Team/0. POOJA AGGARWAL - SENIOR INTERIOR DESIGNER.webp");
 const pawanSharma = assetImage("Team/1_Pawan Sharma_Senior Associate Architect.webp");
 const arujSaxena = assetImage("Team/2_Aruj Saxena_Associate Architect.webp");
