@@ -37,7 +37,7 @@
     font-size: clamp(15px, 1.5vw, 21px);
     font-weight: 600;
     letter-spacing: 0.24em;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     text-decoration: none;
     white-space: nowrap;
     color: var(--pm-ink);
@@ -364,6 +364,13 @@
     }
 }
 
+/* mobile phones (< 768px): reduce burger width to match Header.js */
+@media (max-width: 767px) {
+    .burger span {
+        width: 24px;
+    }
+}
+
 /* phones ~400px wide and below: scale the logo so logo + 2 icons always fit */
 @media (max-width: 480px) {
     .logo {
@@ -393,7 +400,7 @@
     }
 
     .burger span {
-        width: 28px;
+        width: 24px;
     }
 }
 

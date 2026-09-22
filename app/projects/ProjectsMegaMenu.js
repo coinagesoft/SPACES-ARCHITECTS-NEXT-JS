@@ -83,7 +83,7 @@ export default function ProjectsMegaMenu({ active = "all", onChange, mobileMenuS
     >
       <div className={`site-container ${styles.bar}`}>
         <Link href="/" className={styles.logo} onMouseEnter={() => setOpenKey(null)}>
-          SPACES ARCHITECTS <span>@KA</span>
+          SPACES ARCHITECTS <span>@ka</span>
         </Link>
 
         {/* ---------- desktop nav ---------- */}

@@ -5,11 +5,14 @@ import Footer from "@/components/Footer";
 import ParallaxHeroImage from "@/components/ParallaxHeroImage";
 import { assets } from "@/assets";
 import styles from "./page.module.css";
-import { assetImage, assetUrl } from "@/config/assets";
+import { assetImage } from "@/config/assets";
 
 // Hero image from ASHRAYA-RESIDENCE/cover
 const heroImage = assetImage("projects/ASHRAYA-RESIDENCE/cover/COVER.webp");
 // Project photographs from ASHRAYA-RESIDENCE/3_4
+// Sizes (from the asset manifest):
+//   landscape 4800x3600: img1, img4, img5, img6, img9, img11, img13
+//   portrait  3600x4800: img2, img3, img7, img8, img10, img12
 const img1 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/1.webp");
 const img2 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/2.webp");
 const img3 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/3.webp");
@@ -23,6 +26,7 @@ const img10 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/10.webp");
 const img11 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/11.webp");
 const img12 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/12.webp");
 const img13 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/13.webp");
+
 export const metadata = {
   title: "Ashraya Residence — Spaces Architects@ka",
 };
@@ -35,25 +39,22 @@ const details = {
   Status: "Completed",
 };
 
+const ratio = (img) => img.width / img.height;
+
+// Layout rules (same as the Screen House reference):
+// - "pair" only uses images with identical width/height.
+// - "split" = one portrait (large) + two landscape images stacked beside it.
+// - "full" is landscape only (no full-width portraits).
 const gallery = [
-  { type: "pair", images: [img1, img5] },
+  { type: "split", large: img2, stack: [img1, img5] },
+  { type: "pair", images: [img3, img7] },
   { type: "full", image: img4 },
-  { type: "triple", images: [img2, img3, img7] },
-  { type: "pair", images: [img6, img9] },
-  { type: "triple", images: [img8, img10, img12] },
+  { type: "split-reverse", large: img8, stack: [img6, img9] },
+  { type: "pair", images: [img10, img12] },
   { type: "pair", images: [img11, img13] },
 ];
 
 const moreProjects = assets.projects.filter((project) => project.id !== "ashraya-residence").slice(0, 3);
-
-// A static-imported image carries its real intrinsic width/height, so we
-// can size gallery rows the way a proper "justified" photo grid does:
-// every image in a row keeps its own aspect ratio, but each one's WIDTH
-// is scaled so they all land at exactly the same height, filling the row
-// edge-to-edge. flex-grow set to each image's own ratio (with flex-basis
-// 0) is what does that division — no crop, no stretch, just correct
-// per-image scaling, like the Canva page.
-const ratio = (img) => img.width / img.height;
 
 export default function AshrayaResidencePage() {
   return (
@@ -117,6 +118,7 @@ export default function AshrayaResidencePage() {
             </p>
           </div>
         </section>
+
         {/* Gallery */}
         <section className={`site-container ${styles.gallery}`}>
           {gallery.map((block, i) => {
@@ -133,20 +135,42 @@ export default function AshrayaResidencePage() {
               );
             }
 
-            if (block.type === "triple") {
+            if (block.type === "split" || block.type === "split-reverse") {
+              const isReverse = block.type === "split-reverse";
               return (
-                <div key={i} className={styles.galleryTriple}>
-                  {block.images.map((src, j) => (
-                    <div key={j} className={styles.galleryTripleItem}>
-                      <Image
-                        src={src}
-                        alt="Ashraya Residence"
-                        fill
-                        sizes="(min-width: 768px) 32vw, 100vw"
-                        className={styles.galleryImgFit}
-                      />
-                    </div>
-                  ))}
+                <div
+                  key={i}
+                  className={`${styles.gallerySplit} ${isReverse ? styles.gallerySplitReverse : ""}`}
+                >
+                  <div
+                    className={styles.gallerySplitLarge}
+                    style={{ "--ratio": ratio(block.large) }}
+                  >
+                    <Image
+                      src={block.large}
+                      alt="Ashraya Residence"
+                      fill
+                      sizes="(min-width: 768px) 48vw, 100vw"
+                      className={styles.galleryImgFit}
+                    />
+                  </div>
+                  <div className={styles.gallerySplitStack}>
+                    {block.stack.map((src, j) => (
+                      <div
+                        key={j}
+                        className={styles.gallerySplitStackItem}
+                        style={{ "--ratio": ratio(src) }}
+                      >
+                        <Image
+                          src={src}
+                          alt="Ashraya Residence"
+                          fill
+                          sizes="(min-width: 768px) 48vw, 100vw"
+                          className={styles.galleryImgFit}
+                        />
+                      </div>
+                    ))}
+                  </div>
                 </div>
               );
             }
@@ -154,7 +178,11 @@ export default function AshrayaResidencePage() {
             return (
               <div key={i} className={styles.galleryPair}>
                 {block.images.map((src, j) => (
-                  <div key={j} className={styles.galleryPairItem}>
+                  <div
+                    key={j}
+                    className={styles.galleryPairItem}
+                    style={{ "--ratio": ratio(src) }}
+                  >
                     <Image
                       src={src}
                       alt="Ashraya Residence"

@@ -101,7 +101,7 @@ export default function Footer() {
       <div className={footerContainer}>
         <div className="grid gap-5 border-t border-line py-6 text-[10px] text-faint md:grid-cols-[1fr_auto_1fr] md:items-start">
           <div>
-            <div className="text-xl font-medium tracking-widest2 uppercase text-ink">
+            <div className="text-xl font-medium tracking-widest2  text-ink">
               {site.name} <span className="text-accent">{site.handle}</span>
             </div>
             <p className="mt-2">© {new Date().getFullYear()} by {site.name}{site.handle}</p>
@@ -131,7 +131,14 @@ export default function Footer() {
             <p className="text-center">{site.contact.address}</p>
           </div>
 
-          <p className="md:justify-self-end">Designed by —</p>
+          <a
+            href="https://www.coinagesoft.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="md:justify-self-end text-faint transition-colors hover:text-accent"
+          >
+            Designed by — Coinagesoft
+          </a>
         </div>
       </div>
 

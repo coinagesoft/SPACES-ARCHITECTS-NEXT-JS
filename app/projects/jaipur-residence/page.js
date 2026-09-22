@@ -5,11 +5,16 @@ import Footer from "@/components/Footer";
 import ParallaxHeroImage from "@/components/ParallaxHeroImage";
 import { assets } from "@/assets";
 import styles from "./page.module.css";
-import { assetImage, assetUrl } from "@/config/assets";
+import { assetImage } from "@/config/assets";
 
 // Hero image from JAIPUR-RESIDENCE/cover
 const heroImage = assetImage("projects/JAIPUR-RESIDENCE/cover/COVER.webp");
 // Project photographs from JAIPUR-RESIDENCE/photographs
+// Sizes (from the asset manifest):
+//   landscape 1280x850: img1, img2, img5, img6, img9, img14, img15
+//   landscape 1280x771: img11
+//   portrait  637x960 : img4, img7, img12, img16, img17
+//   portrait  other   : img3 (717x960), img8 (683x960), img10 (626x960), img13 (769x960)
 const img1 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0001.webp");
 const img2 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0003.webp");
 const img3 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0004.webp");
@@ -27,6 +32,7 @@ const img14 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0027.webp");
 const img15 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0038.webp");
 const img16 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0042.webp");
 const img17 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0046.webp");
+
 export const metadata = {
   title: "Jaipur Residence — Spaces Architects@ka",
 };
@@ -39,15 +45,23 @@ const details = {
   Status: "Completed",
 };
 
+const ratio = (img) => img.width / img.height;
+
+// Layout rules (same as the Screen House reference):
+// - "pair" only uses portraits with identical width/height.
+// - "split" = one portrait (large) + two landscape images stacked beside it.
+// - "full" is landscape only (no full-width portraits).
+// - Pair 8 mixes 626x960 and 637x960 (under 2% apart), so both boxes share
+//   one ratio via `ratio` to keep the row perfectly aligned.
 const gallery = [
-  { type: "pair", images: [img1, img2] },
-  { type: "full", image: img5 },
-  { type: "triple", images: [img3, img4, img7] },
-  { type: "pair", images: [img6, img9] },
-  { type: "triple", images: [img8, img10, img12] },
-  { type: "full", image: img11 },
-  { type: "pair", images: [img14, img15] },
-  { type: "triple", images: [img13, img16, img17] },
+  { type: "split", large: img3, stack: [img1, img2] },
+  { type: "pair", images: [img4, img7] },
+  { type: "full", image: img6 },
+  { type: "split-reverse", large: img13, stack: [img11, img5] },
+  { type: "pair", images: [img12, img16] },
+  { type: "full", image: img15 },
+  { type: "split", large: img8, stack: [img9, img14] },
+  { type: "pair", images: [img10, img17], ratio: 0.658 },
 ];
 
 const moreProjects = assets.projects.filter((project) => project.id !== "jaipur-residence").slice(0, 3);
@@ -126,6 +140,7 @@ export default function JaipurResidencePage() {
             </p>
           </div>
         </section>
+
         {/* Gallery */}
         <section className={`site-container ${styles.gallery}`}>
           {gallery.map((block, i) => {
@@ -142,20 +157,42 @@ export default function JaipurResidencePage() {
               );
             }
 
-            if (block.type === "triple") {
+            if (block.type === "split" || block.type === "split-reverse") {
+              const isReverse = block.type === "split-reverse";
               return (
-                <div key={i} className={styles.galleryTriple}>
-                  {block.images.map((src, j) => (
-                    <div key={j} className={styles.galleryTripleItem}>
-                      <Image
-                        src={src}
-                        alt="Jaipur Residence"
-                        fill
-                        sizes="(min-width: 768px) 32vw, 100vw"
-                        className={styles.galleryImgFit}
-                      />
-                    </div>
-                  ))}
+                <div
+                  key={i}
+                  className={`${styles.gallerySplit} ${isReverse ? styles.gallerySplitReverse : ""}`}
+                >
+                  <div
+                    className={styles.gallerySplitLarge}
+                    style={{ "--ratio": ratio(block.large) }}
+                  >
+                    <Image
+                      src={block.large}
+                      alt="Jaipur Residence"
+                      fill
+                      sizes="(min-width: 768px) 48vw, 100vw"
+                      className={styles.galleryImgFit}
+                    />
+                  </div>
+                  <div className={styles.gallerySplitStack}>
+                    {block.stack.map((src, j) => (
+                      <div
+                        key={j}
+                        className={styles.gallerySplitStackItem}
+                        style={{ "--ratio": ratio(src) }}
+                      >
+                        <Image
+                          src={src}
+                          alt="Jaipur Residence"
+                          fill
+                          sizes="(min-width: 768px) 48vw, 100vw"
+                          className={styles.galleryImgFit}
+                        />
+                      </div>
+                    ))}
+                  </div>
                 </div>
               );
             }
@@ -163,7 +200,11 @@ export default function JaipurResidencePage() {
             return (
               <div key={i} className={styles.galleryPair}>
                 {block.images.map((src, j) => (
-                  <div key={j} className={styles.galleryPairItem}>
+                  <div
+                    key={j}
+                    className={styles.galleryPairItem}
+                    style={{ "--ratio": block.ratio ?? ratio(src) }}
+                  >
                     <Image
                       src={src}
                       alt="Jaipur Residence"

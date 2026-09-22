@@ -17,21 +17,22 @@ const payalPatnaik = assetImage("Team/4_Payal Patnaik_ARCHITECT.webp");
 const nishthaDhamija = assetImage("Team/6_Nishtha Dhamija_ARCHITECT.webp");
 const aachal = assetImage("Team/7_Aachal_Intern.webp");
 const archit = assetImage("Team/8_Archit_intern.webp");
-const chavi = assetImage("Team/8_Chavi_intern.webp");
-const hemant = assetImage("Team/9_Hemant_intern.webp");
-const prajwal = assetImage("Team/10_Prajwal_intern.webp");
-const shabad = assetImage("Team/11_Shabad_intern.webp");
-const arvindKumar = assetImage("Team/12_Arvind Kumar_Senior Site Associate.webp");
-const dharmendra = assetImage("Team/16_Dharmendra_Senior Site Engineer.webp");
-const praveenSharma = assetImage("Team/17_Praveen Sharma_Senior Site Engineer.webp");
-const veenaNegi = assetImage("Team/18_Veena Negi_Senior Account Executive.webp");
+const chavi = assetImage("Team/9_Chavi_intern.webp");
+const hemant = assetImage("Team/10_Hemant_intern.webp");
+const prajwal = assetImage("Team/11_Prajwal_intern.webp");
+const shabad = assetImage("Team/12_Shabad_intern.webp");
+const arvindKumar = assetImage("Team/13_Arvind Kumar_Senior Site Associate.webp");
+const dharmendra = assetImage("Team/14_Dharmendra_Senior Site Engineer.webp");
+const praveenSharma = assetImage("Team/15_Praveen Sharma_Senior Site Engineer.webp");
+const ajayJaiswal = assetImage("Team/16_Ajay Jaiswal_Artist.webp");
+const veenaNegi = assetImage("Team/17_Veena Negi_Senior_Account_Executive.webp");
+const lalitBhaiya = assetImage("Team/18_Lalit_Senior Admin.webp");
 const manojKumar = assetImage("Team/19_Manoj Kumar_Senior Admin.webp");
-const lalitBhaiya = assetImage("Team/20_Lalit Bhaiya_Senior Admin.webp");
-const sanjayBhaiya = assetImage("Team/21_Sanjay Bhaiya_Admin.webp");
+const sanjayBhaiya = assetImage("Team/20_Sanjay_admin.webp");
 
 // ---- Team members (same order as before) ----
 const teamMembers = [
-  { image: poojaAggarwal, name: "Pooja Aggarwal", role: "Senior Interior Designer" },
+  { image: poojaAggarwal, name: "Pooja Aggarwal", role: "Cofounder" },
   { image: pawanSharma, name: "Pawan Sharma", role: "Senior Associate Architect" },
   { image: arujSaxena, name: "Aruj Saxena", role: "Associate Architect" },
   { image: vikrantSingh, name: "Vikrant Singh", role: "Associate Architect" },
@@ -46,9 +47,10 @@ const teamMembers = [
   { image: arvindKumar, name: "Arvind Kumar", role: "Senior Site Associate" },
   { image: dharmendra, name: "Dharmendra", role: "Senior Site Engineer" },
   { image: praveenSharma, name: "Praveen Sharma", role: "Senior Site Engineer" },
+  { image: ajayJaiswal, name: "Ajay Jaiswal", role: "Artist" },
   { image: veenaNegi, name: "Veena Negi", role: "Senior Account Executive" },
-  { image: manojKumar, name: "Manoj Kumar", role: "Senior Admin" },
   { image: lalitBhaiya, name: "Lalit", role: "Senior Admin" },
+  { image: manojKumar, name: "Manoj Kumar", role: "Senior Admin" },
   { image: sanjayBhaiya, name: "Sanjay", role: "Admin" },
 ];
 

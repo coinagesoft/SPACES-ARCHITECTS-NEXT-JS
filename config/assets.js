@@ -23,10 +23,12 @@ import assetManifest from "./asset-manifest.json";
 // Base URL of the media server that serves everything under /assets.
 // Override with NEXT_PUBLIC_ASSET_BASE_URL in .env.local for local/staging us.
 const ASSET_BASE_URL = (process.env.NEXT_PUBLIC_ASSET_BASE_URL || "https://assets.spacesarchitects-ka.com").replace(/\/$/, "");
+const ASSET_VERSION = process.env.NEXT_PUBLIC_ASSET_VERSION || `v${new Date().toISOString().slice(0, 10)}`;
 
 export function assetUrl(relPath) {
     const encoded = relPath.split("/").map(encodeURIComponent).join("/");
-    return `${ASSET_BASE_URL}/assets/${encoded}`;
+    const url = `${ASSET_BASE_URL}/assets/${encoded}`;
+    return `${url}?v=${encodeURIComponent(ASSET_VERSION)}`;
 }
 
 // Returns an object shaped like next/image's StaticImageData ({ src, width,
@@ -75,7 +77,7 @@ const timelessHousesFeature = assetImage("Featured News/featured-by-timeless-hou
 const financialTimesFeature = assetImage("Featured News/featured-by-financial-times.png");
 const indexplusPanel = assetImage("Featured News/panellist-in-indexplus-design-debate.png");
 const archelloFeature = assetImage("Featured News/featured-by-archello.png");
-const designAsiaFeature = assetImage("Featured News/featured-by-DESIGN-ASIA-MAGAZINE.png");
+const designAsiaFeature = assetImage("Featured News/wadeasia.webp");
 const blogLegacyRestored = assetImage("blogs/A-Legacy-Restored.png");
 const blogPauseInWalledCity = assetImage("blogs/A-Pause-in-the-Walled-City.png");
 const blogHouseLandscape = assetImage("blogs/House-Becomes-a-Landscape.png");
@@ -396,6 +398,9 @@ const processModelMaking = assetUrl("process/Model-Making.mp4");
 const unsplash = (id, w = 1600, h = 1000) =>
     `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&h=${h}&q=80`;
 
+const intersektCover = assetImage("projects/INTERSEXT-SHOWROOM/cover/COVER IMAGE.webp");
+const ashrayaCover = assetImage("projects/ASHRAYA-RESIDENCE/cover/COVER.webp");
+
 export const assets = {
     // ---- Brand ----
     logoText: "SPACES ARCHITECTS",
@@ -440,6 +445,10 @@ export const assets = {
         { id: "library-house", href: "/projects/library-house", name: "Library House", image: libraryHouse },
         { id: "swatantra-residence", href: "/projects/swatantra-residence", name: "Swatantra Residence", image: swatantraResidence },
         { id: "house-of-dancing-screens", href: "/projects/house-of-dancing-screens", name: "House of Dancing Screen", image: houseOfDancingScreen },
+        { id: "slender-house", href: "/projects/slender-house", name: "Slender House", image: slenderHero },
+        { id: "step-maze", href: "/projects/step-maze", name: "Step Maze", image: stepMazeCover },
+        { id: "intersext-showroom", href: "/projects/intersext-showroom", name: "Intersekt", image: intersektCover },
+        { id: "ashraya-residence", href: "/projects/ashraya-residence", name: "Ashraya Residence", image: ashrayaCover },
     ],
 
     // ---- Featured News (home-page carousel) ----
@@ -451,7 +460,7 @@ export const assets = {
         { name: "Featured by Habitus Living titled 'A House That Follows the Sun in Kochi'", source: "Habitus Living", image: habitusLivingFeature },
         { name: "Featured by Rethinking the Future as one of the top architecture firms", source: "Rethinking the Future", image: rethinkingFeature },
         { name: "Golden Haveli Inauguration", source: "Press", image: goldenHaveliInauguration },
-        { name: "Featured by Timeless Houses Magazine", source: "Timeless Houses", image: timelessHousesFeature },
+        { name: "Timeless Houses authored by Kapil Aggarwal", source: "Timeless Houses", image: timelessHousesFeature },
         { name: "Featured by Financial Times as the 15 dreamiest homes on earth", source: "Financial Times", image: financialTimesFeature },
         { name: "Panellist in Indexplus design debate: Designing for Density", source: "Indexplus", image: indexplusPanel },
         { name: "Featured by Archello as one of the top 25 architecture firms", source: "Archello", image: archelloFeature },
@@ -566,7 +575,7 @@ export const assets = {
         { file: "J HOUSE.jpg", name: "J House", image: galJHouse, orientation: "landscape" },
         // ---- Continuation of the Canva reference page, picking up right
         // after J House (same photos, same order, same names). ----
-        { file: "INTERSEXT SHOWROOM.png", name: "Intersext Showroom", image: galIntersextShowroom, orientation: "portrait" },
+        { file: "INTERSEKT SHOWROOM.png", name: "Intersekt Showroom", image: galIntersextShowroom, orientation: "portrait" },
         { file: "LEGEND VENEER EXHIBITION - DELHI.jpg", name: "Legend Veneer Exhibition - Delhi", image: galLegendVeneerExhibition, orientation: "portrait" },
         { file: "ASTRA HEIGHTS.png", name: "Astra Heights", image: galAstraHeights, orientation: "portrait" },
         { file: "GOLDEN HAVELLI.jpg", name: "Golden Haveli", image: galGoldenHaveli, orientation: "landscape" },
@@ -604,7 +613,7 @@ export const assets = {
         { file: "BHIMTAL RESORT.png", name: "Bhimtal Resort", image: galBhimtalResort, orientation: "landscape" },
         { file: "BRICK HOUSE.png", name: "Brick House", image: galBrickHouse, orientation: "portrait" },
         { file: "BANDIKUI RAILWAY STATION.png", name: "Bandikui Railway Station", image: galBandikuiRailwayStation, orientation: "landscape" },
-        { file: "HERITAGE PARK EXTENSION.jpg", name: "Heritage Park Extension", image: galHeritageParkExtension, orientation: "landscape" },
+        { file: "HERITAGE PARK EXTENSION.jpg", name: "Extension of Heritage Park", image: galHeritageParkExtension, orientation: "landscape" },
         { file: "FUIDIC OFFICE.jpg", name: "Fuidic Office", image: galFuidicOffice, orientation: "portrait" },
         { file: "GUPTA#U2019S RESIDENCE.jpg", name: "Gupta's Residence", image: galGuptasResidence, orientation: "portrait" },
         { file: "HOUSE AROUND A TREE.png", name: "House Around a Tree", image: galHouseAroundATree, orientation: "landscape" },
@@ -625,7 +634,7 @@ export const assets = {
         { file: "SANCTUM HOUSE.jpg", name: "Sanctum House", image: galSanctumHouse, orientation: "landscape" },
         { file: "SHRI VRINDA HOTEL.png", name: "Shri Vrinda Hotel", image: galShriVrindaHotel, orientation: "portrait" },
         { file: "DISPENSARY SONIPAT.png", name: "Dispensary Sonipat", image: galDispensarySonipat, orientation: "portrait" },
-        { file: "GURDEEP JI KA GHAR.png", name: "Gurdeep ji Ka Ghar", image: galGurdeepJiKaGhar, orientation: "landscape" },
+        { file: "GURDEEP JI KA GHAR.png", name: "The Garden House", image: galGurdeepJiKaGhar, orientation: "landscape" },
         { file: "RASA FARMHOUSE.jpg", name: "Rasa Farmhouse", image: galRasaFarmhouse, orientation: "landscape" },
         { file: "MARBLE CITY EXHIBITION STALL.jpg", name: "Marble City Exhibition Stall", image: galMarbleCityExhibitionStall, orientation: "portrait" },
         { file: "THE URBAN NEST.jpg", name: "The Urban Nest", image: galTheUrbanNest, orientation: "portrait" },

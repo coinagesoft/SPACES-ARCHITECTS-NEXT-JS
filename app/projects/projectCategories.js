@@ -106,7 +106,6 @@ const CATEGORY_PROJECTS = {
     "Brick House",
     "The Garden House",
     "The Urban Nest",
-    "Gurdeep ji Ka Ghar", // not in a Drive folder — filed here as a house
   ],
 
   // 4. ADAPTIVE REUSE
@@ -132,11 +131,11 @@ const CATEGORY_PROJECTS = {
     "Bandikui Railway Station",
     "Dispensary Sonipat",
     "The Stepwell",
-    "Heritage Park Extension",
+    "Extension of Heritage Park",
   ],
 
   // 3. COMMERCIAL → ARCHITECTURAL
-  "architecture/commercial": ["Intersext Showroom", "Stonex India Building"],
+  "architecture/commercial": ["Intersekt Showroom", "Stonex India Building"],
 
   // 5. LANDSCAPE
   "architecture/landscape": ["Gandhi Darshan Park", "Heritage Park"],
