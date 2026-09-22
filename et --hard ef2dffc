@@ -1,0 +1,39 @@
+[33m7b68ee2[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: commit: changes
+[33m5be788b[m HEAD@{1}: pull origin main: Merge made by the 'ort' strategy.
+[33mef2dffc[m HEAD@{2}: commit: chnages
+[33m2cd271e[m HEAD@{3}: pull origin main: Merge made by the 'ort' strategy.
+[33m07edcae[m HEAD@{4}: commit: Changes
+[33ma286f0a[m HEAD@{5}: commit: tjs
+[33m3ccce98[m HEAD@{6}: commit (merge): changes
+[33m9cad5e0[m HEAD@{7}: commit: tjs
+[33md11c693[m HEAD@{8}: commit: Corrections
+[33m1683a54[m HEAD@{9}: pull origin main: Merge made by the 'ort' strategy.
+[33m25e3c34[m HEAD@{10}: pull origin main: Merge made by the 'ort' strategy.
+[33m5a2b5b3[m HEAD@{11}: commit: Changes
+[33mf8c341e[m HEAD@{12}: pull origin main: Fast-forward
+[33m8f6ec4b[m HEAD@{13}: commit: tjs
+[33mb083660[m HEAD@{14}: pull origin main: Merge made by the 'ort' strategy.
+[33m4c48fb2[m HEAD@{15}: commit: Changes
+[33m197ff35[m HEAD@{16}: commit: Changes
+[33ma70ff32[m HEAD@{17}: commit: Changes
+[33m30340d5[m HEAD@{18}: commit: changes
+[33m77445f7[m HEAD@{19}: commit: tej
+[33m8f1bc21[m HEAD@{20}: pull origin main: Fast-forward
+[33m4cd92cd[m HEAD@{21}: commit: Changes
+[33m49d02e5[m HEAD@{22}: commit: publication
+[33ma0d8d00[m HEAD@{23}: pull origin main: Merge made by the 'ort' strategy.
+[33mef90ced[m HEAD@{24}: commit: news-event
+[33m8e8b9ca[m HEAD@{25}: pull origin main: Fast-forward
+[33m9a40230[m HEAD@{26}: pull origin main: Fast-forward
+[33mae56e13[m HEAD@{27}: commit: Update asset manifest
+[33m91dba41[m HEAD@{28}: commit: tej
+[33m8355052[m HEAD@{29}: commit: tej
+[33mbcf5670[m HEAD@{30}: commit: changes
+[33m5ba05b2[m HEAD@{31}: pull origin main: Fast-forward
+[33ma473e79[m HEAD@{32}: pull origin main: Fast-forward
+[33m54bf932[m HEAD@{33}: reset: moving to origin/main
+[33mc9fad83[m HEAD@{34}: pull origin main: Merge made by the 'ort' strategy.
+[33m7888cdf[m HEAD@{35}: commit: Changes
+[33mac1adb8[m HEAD@{36}: reset: moving to HEAD
+[33mac1adb8[m HEAD@{37}: Branch: renamed refs/heads/master to refs/heads/main
+[33mac1adb8[m HEAD@{39}: commit (initial): tjsNew
