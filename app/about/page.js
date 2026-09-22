@@ -19,7 +19,7 @@ const arujSaxena = assetImage("Team/2_Aruj Saxena_Associate Architect.webp");
 const vikrantSingh = assetImage("Team/3_Vikrant Singh_Associate Architect.webp");
 
 const featuredTeam = [
-  { src: poojaAggarwal, name: "Pooja Aggarwal", role: "Senior Interior Designer" },
+  { src: poojaAggarwal, name: "Pooja Aggarwal", role: "Cofounder" },
   { src: pawanSharma, name: "Pawan Sharma", role: "Senior Associate Architect" },
   { src: arujSaxena, name: "Aruj Saxena", role: "Associate Architect" },
   { src: vikrantSingh, name: "Vikrant Singh", role: "Associate Architect" },
