@@ -1,0 +1,45 @@
+.moreSection {
+  padding-bottom: 80px;
+}
+
+.moreHeading {
+  margin: 0 0 16px;
+  color: #a9a9a9;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.moreGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.moreCard {
+  position: relative;
+  display: block;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.moreImage {
+  object-fit: cover;
+  transition: transform 500ms;
+}
+
+.moreCard:hover .moreImage {
+  transform: scale(1.04);
+}
+
+@media (max-width: 767px) {
+  .moreSection {
+    padding-bottom: 56px;
+  }
+
+  .moreGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

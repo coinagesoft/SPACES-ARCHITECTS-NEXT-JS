@@ -464,7 +464,7 @@ export const assets = {
         { name: "Featured by Financial Times as the 15 dreamiest homes on earth", source: "Financial Times", image: financialTimesFeature },
         { name: "Panellist in Indexplus design debate: Designing for Density", source: "Indexplus", image: indexplusPanel },
         { name: "Featured by Archello as one of the top 25 architecture firms", source: "Archello", image: archelloFeature },
-        { name: "Featured by Design Asia Magazine as top 10 architectural firm", source: "Design Asia", image: designAsiaFeature },
+        // { name: "Featured by Design Asia Magazine as top 10 architectural firm", source: "Design Asia", image: designAsiaFeature },
     ],
 
     // ---- Featured In (press logo strip) ----

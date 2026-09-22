@@ -101,7 +101,7 @@ export default function Footer() {
       <div className={footerContainer}>
         <div className="grid gap-5 border-t border-line py-6 text-[10px] text-faint md:grid-cols-[1fr_auto_1fr] md:items-start">
           <div>
-            <div className="text-xl font-medium tracking-widest2  text-ink">
+            <div className="text-base md:text-[1.33rem] font-medium tracking-widest2 text-ink">
               {site.name} <span className="text-accent">{site.handle}</span>
             </div>
             <p className="mt-2">© {new Date().getFullYear()} by {site.name}{site.handle}</p>

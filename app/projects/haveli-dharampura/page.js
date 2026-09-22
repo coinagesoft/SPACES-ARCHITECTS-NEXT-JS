@@ -4,6 +4,7 @@ import SiteChrome from "@/components/SiteChrome";
 import Footer from "@/components/Footer";
 import { assets } from "@/assets";
 import styles from "./page.module.css";
+import MoreProjects from "@/components/MoreProjects";
 
 export const metadata = {
   title: "Haveli Dharampura — Spaces Architects@ka",
@@ -30,7 +31,7 @@ const recognitionItems = [
   { logo: pressLogos[0], text: "UNESCO Bangkok Announces 2017 Asia-Pacific Awards for Cultural Heritage Conservation" },
   { logo: pressLogos[4], text: "UNESCO Bangkok Announces 2017 Asia-Pacific Awards for Cultural Heritage Conservation" },
 ];
-const moreProjects = assets.projects.filter((project) => project.id !== "haveli-dharampura").slice(0, 3);
+// const moreProjects = assets.projects.filter((project) => project.id !== "haveli-dharampura").slice(0, 3);
 
 // A static-imported image carries its real intrinsic width/height, so we
 // can size gallery rows the way a proper "justified" photo grid does:
@@ -280,16 +281,7 @@ export default function HaveliDharampuraPage() {
           </div>
         </section>
 
-        <section className={`site-container ${styles.moreSection}`}>
-          <p className={styles.moreHeading}>More</p>
-          <div className={styles.moreGrid}>
-            {moreProjects.map((project) => (
-              <Link key={project.id} href="/projects" className={styles.moreCard} aria-label={project.name}>
-                <Image src={project.image} alt={project.name} fill sizes="(min-width: 768px) 29vw, 90vw" className={styles.moreImage} />
-              </Link>
-            ))}
-          </div>
-        </section>
+        <MoreProjects currentId="haveli-dharampura" />
       </main>
 
       <Footer />
