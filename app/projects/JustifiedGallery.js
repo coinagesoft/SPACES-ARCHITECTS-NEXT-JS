@@ -217,6 +217,17 @@ function Tile({ item }) {
   );
 }
 
+// A plain image with no link, no hover-zoom, and no name label — used
+// for the signature graphic, which isn't a clickable project.
+function StaticImage({ item }) {
+  if (!item) return null;
+  return (
+    <div className={styles.staticImage}>
+      <img src={getSrc(item)} alt={item.name || item.file} loading="lazy" />
+    </div>
+  );
+}
+
 // A col2 tile whose height is locked (via CSS aspect-ratio) to match
 // its col1 partner exactly.
 function MatchedTile({ item }) {
@@ -669,14 +680,28 @@ export default function JustifiedGallery({ items }) {
         ]}
       />
 
-      <JustifiedRow
-        items={[
-          findItem(items, "The Urban Nest"),
-          findItem(items, "Marble City Exhibition Stall"),
-        ]}
-      />
-
-      <Tile item={findItem(items, "")} />
+      {/* The Urban Nest beside the "Creating SPACES which becomes part of
+          people's life" signature graphic. The row stretches (default
+          align-items) so the right column matches The Urban Nest's full
+          height, and that column centers the signature graphic within it
+          — bigger and vertically centered, rather than pinned small to
+          the top. */}
+      <div className={styles.row}>
+        <div style={{ flex: "1.7 1 0", minWidth: 0 }}>
+          <Tile item={findItem(items, "The Urban Nest")} />
+        </div>
+        <div
+          style={{
+            flex: "1 1 0",
+            minWidth: 0,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <StaticImage item={findItem(items, "Project Font")} />
+        </div>
+      </div>
     </div>
   );
 }

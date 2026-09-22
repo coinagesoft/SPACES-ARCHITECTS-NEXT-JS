@@ -78,6 +78,25 @@
     text-transform: uppercase;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
     pointer-events: none;
+    opacity: 0;
+    transition: opacity .25s ease;
+}
+
+.tile:hover .label,
+.rowTile:hover .label {
+    opacity: 1;
+}
+
+/* The signature graphic isn't a project — no hover zoom, no name label. */
+.staticImage {
+    display: block;
+    width: 100%;
+}
+
+.staticImage img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 /* Rows shared by the Swatantra/Apartment 88 pair AND the justified-row

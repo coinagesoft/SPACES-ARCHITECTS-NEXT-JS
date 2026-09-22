@@ -177,6 +177,10 @@ const galGurdeepJiKaGhar = assetImage("projects/GURDEEP JI KA GHAR.png");
 const galRasaFarmhouse = assetImage("projects/RASA FARMHOUSE.jpg");
 const galMarbleCityExhibitionStall = assetImage("projects/MARBLE CITY EXHIBITION STALL.jpg");
 const galTheUrbanNest = assetImage("projects/THE URBAN NEST.jpg");
+// Handwritten "Creating SPACES which becomes part of people's life" signature
+// graphic — sits beside The Urban Nest at the very end of the gallery, same
+// as on the Canva reference page.
+const galProjectFont = assetImage("projects/project font.png");
 // ---- Haveli Dharampura — real project photography + press marks ----
 // (These match the original Canva site's photo order 1:1 — do not reorder.)
 const haveliHero = assetImage("projects/haveli/haveli_hero.jpg");
@@ -638,6 +642,7 @@ export const assets = {
         { file: "RASA FARMHOUSE.jpg", name: "Rasa Farmhouse", image: galRasaFarmhouse, orientation: "landscape" },
         { file: "MARBLE CITY EXHIBITION STALL.jpg", name: "Marble City Exhibition Stall", image: galMarbleCityExhibitionStall, orientation: "portrait" },
         { file: "THE URBAN NEST.jpg", name: "The Urban Nest", image: galTheUrbanNest, orientation: "portrait" },
+        { file: "project font.png", name: "Project Font", image: galProjectFont, orientation: "landscape" },
     ],
 
     // ---- Projects / Blog grid page ----
