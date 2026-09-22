@@ -33,6 +33,41 @@
   transform: scale(1.04);
 }
 
+/* Name overlay — hidden by default, fades up on hover, matching the
+   site's uppercase/tracked label treatment used elsewhere (e.g. Share,
+   press marks, nav labels). */
+.moreOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.15) 45%,
+    rgba(0, 0, 0, 0) 75%
+  );
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 350ms ease, transform 350ms ease;
+}
+
+.moreCard:hover .moreOverlay,
+.moreCard:focus-visible .moreOverlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.moreName {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
 @media (max-width: 767px) {
   .moreSection {
     padding-bottom: 56px;
@@ -41,5 +76,17 @@
   .moreGrid {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+
+  /* On touch devices hover doesn't exist — show the name permanently
+     so it isn't hidden behind an unreachable hover state. */
+  .moreOverlay {
+    opacity: 1;
+    transform: translateY(0);
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.55) 0%,
+      rgba(0, 0, 0, 0) 65%
+    );
   }
 }

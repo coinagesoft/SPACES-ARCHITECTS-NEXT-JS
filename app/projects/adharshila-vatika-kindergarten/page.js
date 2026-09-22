@@ -30,9 +30,11 @@ const coverPhoto2 = assetImage("projects/ADHARSHILA-VATIKA-KINDERGARTEN/cover/HE
 const Orange = ({ children }) => <span style={{ color: "#C1591C" }}>{children}</span>;
 
 export const metadata = { title: "Adharshila Vatika Kindergarten — Spaces Architects@ka" };
+import MoreProjects from "@/components/MoreProjects";
 export default function AdharshilaVatikaKindergartenPage() {
   return (
     <ProjectDetailPage
+     currentId="adharshila-vatika-kindergarten"
       title="Adharshila Vatika Kindergarten"
       location="New Delhi"
       hero={hero}

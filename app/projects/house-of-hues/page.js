@@ -1,9 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
 import SiteChrome from "@/components/SiteChrome";
 import Footer from "@/components/Footer";
+import MoreProjects from "@/components/MoreProjects";
 import ParallaxHeroImage from "@/components/ParallaxHeroImage";
-import { assets } from "@/assets";
 import styles from "./page.module.css";
 import { assetImage } from "@/config/assets";
 
@@ -61,8 +60,6 @@ const gallery = [
   { type: "split", large: img22, stack: [img20, img24] },
   { type: "pair", images: [img23, img25] },
 ];
-
-const moreProjects = assets.projects.filter((project) => project.id !== "house-of-hues").slice(0, 3);
 
 export default function HouseOfHuesPage() {
   return (
@@ -207,23 +204,14 @@ export default function HouseOfHuesPage() {
         <section className={styles.share}>
           <p>Share</p>
           <div className={styles.shareIcons}>
-            <a href="#" aria-label="Facebook">f</a>
-            <a href="#" aria-label="X">x</a>
-            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="https://www.instagram.com/spacesarchitects.ka/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">ig</a>
+            <a href="https://x.com/SpacesArch_ka" aria-label="X" target="_blank" rel="noopener noreferrer">x</a>
+            <a href="https://www.linkedin.com/company/spaces-architects-ka/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">in</a>
             <a href="mailto:admin@spacesarchitects-ka.com" aria-label="Email">✉</a>
           </div>
         </section>
 
-        <section className={`site-container ${styles.moreSection}`}>
-          <p className={styles.moreHeading}>More</p>
-          <div className={styles.moreGrid}>
-            {moreProjects.map((project) => (
-              <Link key={project.id} href="/projects" className={styles.moreCard} aria-label={project.name}>
-                <Image src={project.image} alt={project.name} fill sizes="(min-width: 768px) 29vw, 90vw" className={styles.moreImage} />
-              </Link>
-            ))}
-          </div>
-        </section>
+        <MoreProjects currentId="house-of-hues" />
       </main>
 
       <Footer />

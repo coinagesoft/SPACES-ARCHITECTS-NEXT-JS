@@ -1,9 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
 import SiteChrome from "@/components/SiteChrome";
 import Footer from "@/components/Footer";
 import ParallaxHeroImage from "@/components/ParallaxHeroImage";
-import { assets } from "@/assets";
+import MoreProjects from "@/components/MoreProjects";
 import styles from "./page.module.css";
 import { assetImage } from "@/config/assets";
 
@@ -47,8 +46,6 @@ const gallery = [
   { type: "pair", images: [img10, img11] },
   { type: "full", image: img12 },
 ];
-
-const moreProjects = assets.projects.filter((project) => project.id !== "aravali-farmhouse").slice(0, 3);
 
 export default function AravaliFarmhousePage() {
   return (
@@ -189,21 +186,7 @@ export default function AravaliFarmhousePage() {
           </div>
         </section>
 
-        <section className={`site-container ${styles.moreSection}`}>
-          <p className={styles.moreHeading}>More</p>
-          <div className={styles.moreGrid}>
-            {moreProjects.map((project) => (
-              <Link
-                key={project.id}
-                href={`/projects/${project.id}`}
-                className={styles.moreCard}
-                aria-label={project.name}
-              >
-                <Image src={project.image} alt={project.name} fill sizes="(min-width: 768px) 29vw, 90vw" className={styles.moreImage} />
-              </Link>
-            ))}
-          </div>
-        </section>
+        <MoreProjects currentId="aravali-farmhouse" />
       </main>
 
       <Footer />

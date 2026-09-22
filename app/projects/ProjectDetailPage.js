@@ -2,12 +2,13 @@ import Image from "next/image";
 import SiteChrome from "@/components/SiteChrome";
 import Footer from "@/components/Footer";
 import ParallaxHeroImage from "@/components/ParallaxHeroImage";
+import MoreProjects from "@/components/MoreProjects";
 import styles from "./slender-house/page.module.css";
 import buildProjectGallery from "./buildProjectGallery";
 
 const ratio = (image) => (image?.width && image?.height ? image.width / image.height : 1);
 
-export default function ProjectDetailPage({ title, location, hero, photos = [], details, description = [] }) {
+export default function ProjectDetailPage({ currentId, title, location, hero, photos = [], details, description = [] }) {
   const gallery = buildProjectGallery(photos.filter(Boolean));
 
   return (
@@ -72,6 +73,8 @@ export default function ProjectDetailPage({ title, location, hero, photos = [], 
             <a href="#" aria-label="LinkedIn">in</a><a href="mailto:admin@spacesarchitects-ka.com" aria-label="Email">✉</a>
           </div>
         </section>
+
+        <MoreProjects currentId={currentId} />
       </main>
       <Footer />
     </>

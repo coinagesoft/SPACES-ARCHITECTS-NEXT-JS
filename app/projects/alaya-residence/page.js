@@ -16,6 +16,7 @@ export const metadata = { title: "Alaya Residence — Spaces Architects@ka" };
 export default function AlayaResidencePage() {
   return (
     <ProjectDetailPage
+     currentId="alaya-residence"
       title="Alaya Residence"
       location="Gurugram, Haryana"
       hero={hero}

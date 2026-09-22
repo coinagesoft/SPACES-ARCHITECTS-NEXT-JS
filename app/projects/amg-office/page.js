@@ -4,6 +4,7 @@ import SiteChrome from "@/components/SiteChrome";
 import Footer from "@/components/Footer";
 import ParallaxHeroImage from "@/components/ParallaxHeroImage";
 import { assets } from "@/assets";
+import MoreProjects from "@/components/MoreProjects";
 import styles from "./page.module.css";
 import { assetImage } from "@/config/assets";
 
@@ -50,7 +51,7 @@ const gallery = [
   { type: "pair", images: [plans, section] },
 ];
 
-const moreProjects = assets.projects.filter((project) => project.id !== "amg-office").slice(0, 3);
+// const moreProjects = assets.projects.filter((project) => project.id !== "amg-office").slice(0, 3);
 
 export default function AmgOfficePage() {
   return (
@@ -198,14 +199,14 @@ export default function AmgOfficePage() {
         <section className={styles.share}>
           <p>Share</p>
           <div className={styles.shareIcons}>
-            <a href="#" aria-label="Facebook">f</a>
-            <a href="#" aria-label="X">x</a>
-            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="https://www.instagram.com/spacesarchitects.ka/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">ig</a>
+            <a href="https://x.com/SpacesArch_ka" aria-label="X" target="_blank" rel="noopener noreferrer">x</a>
+            <a href="https://www.linkedin.com/company/spaces-architects-ka/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">in</a>
             <a href="mailto:admin@spacesarchitects-ka.com" aria-label="Email">✉</a>
           </div>
         </section>
 
-        <section className={`site-container ${styles.moreSection}`}>
+        {/* <section className={`site-container ${styles.moreSection}`}>
           <p className={styles.moreHeading}>More</p>
           <div className={styles.moreGrid}>
             {moreProjects.map((project) => (
@@ -219,7 +220,8 @@ export default function AmgOfficePage() {
               </Link>
             ))}
           </div>
-        </section>
+        </section> */}
+        <MoreProjects currentId="amg-office" />
       </main>
 
       <Footer />

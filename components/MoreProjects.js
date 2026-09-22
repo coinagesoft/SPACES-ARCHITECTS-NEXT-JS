@@ -34,21 +34,24 @@ export default function MoreProjects({ currentId, count = 3 }) {
       <p className={styles.moreHeading}>More</p>
       <div className={styles.moreGrid}>
         {moreProjects.map((project) => (
-          <Link
-            key={project.id}
-            href={`/projects/${project.id}`}
-            className={styles.moreCard}
-            aria-label={project.name}
-          >
-            <Image
-              src={project.image}
-              alt={project.name}
-              fill
-              sizes="(min-width: 768px) 29vw, 90vw"
-              className={styles.moreImage}
-            />
-          </Link>
-        ))}
+  <Link
+    key={project.id}
+    href={`/projects/${project.id}`}
+    className={styles.moreCard}
+    aria-label={project.name}
+  >
+    <Image
+      src={project.image}
+      alt={project.name}
+      fill
+      sizes="(min-width: 768px) 29vw, 90vw"
+      className={styles.moreImage}
+    />
+    <span className={styles.moreOverlay}>
+      <span className={styles.moreName}>{project.name}</span>
+    </span>
+  </Link>
+))}
       </div>
     </section>
   );
