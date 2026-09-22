@@ -106,6 +106,15 @@
     transition: transform .5s ease;
 }
 
+/* Applied only to a JustifiedRow item using ROW_WIDTH_OVERRIDE — the
+   rowTile div gets an explicit aspect-ratio (inline style) instead of
+   sizing from the image's own natural ratio, so this crops the image
+   to fill that box instead of stretching height to it. */
+.rowTile img.crop {
+    height: 100%;
+    object-fit: cover;
+}
+
 .rowTile:hover img {
     transform: scale(1.045);
 }
