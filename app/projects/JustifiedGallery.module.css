@@ -5,7 +5,7 @@
     width: 100%;
 }
 
-/* Two continuous, independent columns, fixed 1 : 2 width split — they
+/* Two continuous, independent columns, fixed 1 : 2 width split â€” they
    never reset or realign to each other, so there's never a forced gap
    under whichever column happens to be shorter at any point. */
 .masonry {
@@ -47,14 +47,14 @@
 }
 
 /* Applied only to a MatchedTile once its partner's height has been
-   measured — crops to fill that exact height instead of using its own
+   measured â€” crops to fill that exact height instead of using its own
    natural ratio. */
 .tile img.crop {
     height: 100%;
     object-fit: cover;
 }
 
-/* Applied to a FillTile's wrapper — makes it fill exactly the height
+/* Applied to a FillTile's wrapper â€” makes it fill exactly the height
    its flex row stretches it to (see FillTile in JustifiedGallery.js),
    so it always ends flush with a stacked pair beside it, at any
    viewport width. Harmless everywhere else: a percentage height with
@@ -81,7 +81,7 @@
 }
 
 /* Rows shared by the Swatantra/Apartment 88 pair AND the justified-row
-   section (House of Stepped Garden onward) — every item's flex-grow is
+   section (House of Stepped Garden onward) â€” every item's flex-grow is
    set to its own real aspect ratio (in JS), so widths distribute
    exactly proportionally and every item in the row comes out the same
    height automatically, with zero cropping. */

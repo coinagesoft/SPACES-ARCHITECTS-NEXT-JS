@@ -67,9 +67,22 @@ const RATIOS = {
 
 // col2 photos that need to match a col1 partner's height: display
 // aspect-ratio = 2 × the col1 partner's real ratio.
+//
+// Heritage Park is the one exception: on the live page its column
+// (Haveli Dharampura + the Swatantra/Apartment 88 row) ends higher up
+// than col1's (Slender House + Floating Courtyard House), so Art House
+// and Heritage Park both start a bit higher than Palette Apartment and
+// Step Maze do. The 2× formula still gives Heritage Park the *same
+// height* as Step Maze — but starting from a higher point, that lands
+// its bottom edge short of Step Maze's. Measured directly off the live
+// page, Step Maze's bottom sits ~85px below Heritage Park's own bottom
+// at that same starting point, so Heritage Park needs a taller display
+// ratio than the plain 2× formula gives it to close that gap — this is
+// a manually-tuned value, not derived from the formula. Art House is
+// untouched.
 const MATCHED_ASPECT = {
   "Art House": 2 * RATIOS["Palette Apartment"], // 1.458
-  "Heritage Park": 2 * RATIOS["Step Maze"], // 1.61
+  "Heritage Park": 1.263, // manually increased so its bottom reaches Step Maze's bottom
 };
 
 // MatchedTile projects that should link out to their own detail page.
@@ -288,22 +301,63 @@ const ROW_ROUTES = {
   "Express Office": "/projects/express-office",
 };
 
+// Manual width overrides for JustifiedRow items whose natural,
+// ratio-based width would misalign with a same-column tile sitting in
+// a different, independently justified row (nothing links two rows'
+// widths automatically). House of Dancing Screens is left as the
+// reference (its own natural ratio, 184px wide / right edge at 848px
+// on the reference screenshot); every other left-column item below is
+// tuned to land at that same 184px / 848px right edge, solved from
+// pixel measurements taken directly off the live page (not just the
+// RATIOS table, which only got within ~4px):
+//   content width available in a 3-item row: 544px
+//   content width available in a 2-item row: 557px
+//   House of Sculpted Screens: x / (x + 0.612 + 0.674) = 184/544 -> 0.657
+//   Color Box Office:          already 184px at its natural ratio (0.704 still applies from the RATIOS-based estimate, keeps its match)
+//   Veya Apartment:             x / (x + 0.687 + 0.704) = 184/544 -> 0.711
+//   Color Dialogue:             already 184px at 0.723
+// Both flex-grow (width share) and display aspect-ratio (crop target)
+// are set to this same value, so — by the same "flex-grow == own
+// aspect ratio keeps every row item the same height" trick the rest of
+// JustifiedRow relies on — each still lands at exactly its own row's
+// height, just narrower than its real photo ratio would give it, with
+// the small resulting crop handled by object-fit: cover. Express
+// Office, Gandhi Darshan Park, Ashraya Residence, Jaipur Residence,
+// Architect's Office and J House are untouched.
+const ROW_WIDTH_OVERRIDE = {
+  "House of Sculpted Screens": 0.657,
+  "Color Box Office": 0.704,
+  "Veya Apartment": 0.711,
+  "Color Dialogue": 0.723,
+};
+
 // A row of 2+ tiles that all share one height, purely via CSS
-// (flex-grow set to each photo's real aspect ratio). No JS
-// measurement, no cropping.
+// (flex-grow set to each photo's real aspect ratio, or a manual
+// ROW_WIDTH_OVERRIDE value for the rare item that needs to match a
+// column width instead). No JS measurement.
 function JustifiedRow({ items }) {
   return (
     <div className={styles.row}>
       {items.map((item) => {
         if (!item) return null;
 
+        const override = item.name ? ROW_WIDTH_OVERRIDE[item.name] : undefined;
+
         const content = (
           <>
-            <img src={getSrc(item)} alt={item.name || item.file} loading="lazy" />
+            <img
+              src={getSrc(item)}
+              alt={item.name || item.file}
+              loading="lazy"
+              className={override ? styles.crop : undefined}
+            />
             <Label item={item} />
           </>
         );
-        const style = { flexGrow: RATIOS[item.name] || 1 };
+        const style = {
+          flexGrow: override ?? RATIOS[item.name] ?? 1,
+          ...(override ? { aspectRatio: override } : {}),
+        };
 
         const route = item?.name ? ROW_ROUTES[item.name] || PROJECT_ROUTES[item.name] : undefined;
 
@@ -615,7 +669,14 @@ export default function JustifiedGallery({ items }) {
         ]}
       />
 
-      <Tile item={findItem(items, "The Urban Nest")} />
+      <JustifiedRow
+        items={[
+          findItem(items, "The Urban Nest"),
+          findItem(items, "Marble City Exhibition Stall"),
+        ]}
+      />
+
+      <Tile item={findItem(items, "")} />
     </div>
   );
 }
