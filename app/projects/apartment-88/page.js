@@ -3,51 +3,26 @@ import SiteChrome from "@/components/SiteChrome";
 import Footer from "@/components/Footer";
 import ParallaxHeroImage from "@/components/ParallaxHeroImage";
 import MoreProjects from "@/components/MoreProjects";
-import styles from "./page.module.css";
-import { assetImage } from "@/config/assets";
-
-// Hero image from projects/ARAVALI-FARMHOUSE/cover
-const heroImage = assetImage("projects/ARAVALI-FARMHOUSE/cover/COVER.webp");
-// Project photographs from projects/ARAVALI-FARMHOUSE/3_4
-const img1 = assetImage("projects/ARAVALI-FARMHOUSE/3_4/1.webp");
-const img2 = assetImage("projects/ARAVALI-FARMHOUSE/3_4/2.webp");
-const img3 = assetImage("projects/ARAVALI-FARMHOUSE/3_4/3.webp");
-const img4 = assetImage("projects/ARAVALI-FARMHOUSE/3_4/4.webp");
-const img5 = assetImage("projects/ARAVALI-FARMHOUSE/3_4/5.webp");
-const img6 = assetImage("projects/ARAVALI-FARMHOUSE/3_4/6.webp");
-const img7 = assetImage("projects/ARAVALI-FARMHOUSE/3_4/7.webp");
-const img8 = assetImage("projects/ARAVALI-FARMHOUSE/3_4/8.webp");
-const img9 = assetImage("projects/ARAVALI-FARMHOUSE/3_4/9.webp");
-const img10 = assetImage("projects/ARAVALI-FARMHOUSE/3_4/10.webp");
-const img11 = assetImage("projects/ARAVALI-FARMHOUSE/3_4/11.webp");
-const img12 = assetImage("projects/ARAVALI-FARMHOUSE/3_4/12.webp");
+import { assets } from "@/assets";
+import buildProjectGallery from "../buildProjectGallery";
+import styles from "../slender-house/page.module.css";
 
 export const metadata = {
-  title: "Aravali Farmhouse — Spaces Architects@ka",
+  title: "Apartment 88 — Spaces Architects@ka",
 };
 
-// All content for this project lives right here — edit freely.
 const details = {
-  Project: "Aravali Farmhouse",
-  Location: "Gurgaon",
-  Client: "Mr. Jan",
+  Project: "Apartment 88",
+  Location: "New Delhi",
+  Client: "Mr. Ajay Wadhwa",
   Status: "Completed",
 };
 
-const ratio = (img) => img.width / img.height;
+const photos = assets.apartment88.gallery.filter(Boolean);
+const gallery = buildProjectGallery(photos);
+const ratio = (image) => (image && image.width && image.height ? image.width / image.height : 1);
 
-const gallery = [
-  { type: "full", image: img1 },
-  { type: "pair", images: [img2, img3] },
-  { type: "full", image: img4 },
-  { type: "pair", images: [img5, img6] },
-  { type: "pair", images: [img7, img8] },
-  { type: "full", image: img9 },
-  { type: "pair", images: [img10, img11] },
-  { type: "full", image: img12 },
-];
-
-export default function AravaliFarmhousePage() {
+export default function Apartment88Page() {
   return (
     <>
       <main>
@@ -56,20 +31,19 @@ export default function AravaliFarmhousePage() {
         <ParallaxHeroImage
           className={styles.hero}
           imageClassName={styles.heroImage}
-          src={heroImage}
-          alt="Aravali Farmhouse"
+          src={assets.apartment88.hero}
+          alt="Apartment 88"
         >
           <div className={`site-container ${styles.heroTextWrap}`}>
             <div className={styles.heroText}>
-              <h1>Aravali Farmhouse</h1>
-              <p>Gurgaon</p>
+              <h1>Apartment 88</h1>
+              <p>New Delhi</p>
             </div>
           </div>
         </ParallaxHeroImage>
 
-        {/* Details + description */}
         <section className={`site-container ${styles.infoSection}`}>
-          <div className={styles.infoSidebar}>
+          <aside className={styles.infoSidebar}>
             <div>
               <h3>Project Details</h3>
               <dl>
@@ -80,72 +54,73 @@ export default function AravaliFarmhousePage() {
                 ))}
               </dl>
             </div>
-          </div>
+          </aside>
 
           <div className={styles.infoBody}>
             <p>
-              Set within a 2.1-acre corner site in the Aravalli Hills of Gurgaon, the farmhouse was conceived as a <span className={styles.highlight}>private retreat</span> for a Belgian diplomatic couple, with distinct accommodation for guests. Responding closely to the natural contours of the site, the building is organized across two levels, with the primary living spaces and master suite above and three guest bedrooms below.
+              Created for residents who are <span className={styles.highlight}>art enthusiasts and singers</span>, Apartment 88 moves
+              beyond conventional minimalism to create a residence that is <span className={styles.highlight}>personal, artistic and
+              immersive.</span> Working within the existing structure, each space was reimagined as part of a continuous journey,
+              with everything from lighting to artwork <span className={styles.highlight}>individually customised</span> to reflect the
+              residents&apos; personalities.
             </p>
-
             <p>
-              The architecture is defined by <span className={styles.highlight}>simple geometric forms</span>, each corresponding to a specific function and creating a seamless transition between private and semi-private spaces. The swimming pool forms the heart of the composition, visually and physically connected to the master bedroom, living, dining and kitchen. <span className={styles.highlight}>Curved and rectilinear volumes</span> frame the pool and landscape, while carefully choreographed arrival sequences reveal the building gradually along the contours of the site.
+              A subtle <span className={styles.highlight}>grey palette</span> establishes a calm foundation, punctuated by vivid accents
+              in furniture, artwork and artefacts. Natural light fills the living room, complemented by a <span className={styles.highlight}>warm
+              wooden ceiling</span>, while a rich blue wall with yellow-grey furniture brings energy to the sitting area. Artwork
+              becomes an integral part of the composition, transforming walls into curated visual moments.
             </p>
-
             <p>
-              The farmhouse is an outward-looking composition where <span className={styles.highlight}>architecture, landscape and geometry</span> come together to create an intimate yet expansive living experience.
+              The corridor extends this artistic language through <span className={styles.highlight}>concrete brick tiles arranged in
+              patterns</span>, creating continuity along the passage. A wall clock adds a <span className={styles.highlight}>playful sense of
+              timelessness</span>, while a black-and-white sketch depicting urban life forms a striking backdrop to the dining area.
+              Decorative pendant lights further enrich the spaces.
+            </p>
+            <p>
+              The ceilings are treated with equal attention, with each bedroom receiving a distinct design. A particularly expressive
+              circular ceiling artwork becomes an unusual focal point, while a passionate red bedroom wall introduces a <span className={styles.highlight}>playful,
+              quirky character.</span> Apartment 88 ultimately brings together <span className={styles.highlight}>art, individuality and
+              tranquillity</span>, transforming a familiar apartment typology into a home that feels deeply personal to its residents.
             </p>
           </div>
         </section>
 
-        {/* Gallery */}
-        <section className={`site-container ${styles.gallery}`}>
-          {gallery.map((block, i) => {
-            if (block.type === "full") {
+        <section className={`site-container ${styles.gallery}`} aria-label="Apartment 88 gallery">
+          {gallery.map((block, index) => {
+            if (block.type === "masonry") {
               return (
-                <div key={i} className={styles.galleryFull}>
-                  <Image
-                    src={block.image}
-                    alt="Aravali Farmhouse"
-                    sizes="100vw"
-                    className={styles.galleryImg}
-                  />
+                <div key={index} className={styles.galleryMasonry}>
+                  {block.images.map((image) => (
+                    <div key={image.src} className={styles.galleryMasonryItem}>
+                      <Image src={image} alt="Apartment 88" sizes="(min-width: 768px) 48vw, 92vw" className={styles.galleryImg} />
+                    </div>
+                  ))}
                 </div>
               );
             }
 
-            if (block.type === "split" || block.type === "split-reverse") {
-              const isReverse = block.type === "split-reverse";
+            if (block.type === "full") {
               return (
-                <div
-                  key={i}
-                  className={`${styles.gallerySplit} ${isReverse ? styles.gallerySplitReverse : ""}`}
-                >
-                  <div
-                    className={styles.gallerySplitLarge}
-                    style={{ "--ratio": ratio(block.large) }}
-                  >
-                    <Image
-                      src={block.large}
-                      alt="Aravali Farmhouse"
-                      fill
-                      sizes="(min-width: 768px) 48vw, 100vw"
-                      className={styles.galleryImgFit}
-                    />
+                <div key={index} className={styles.galleryFull}>
+                  <Image src={block.image} alt="Apartment 88" sizes="100vw" className={styles.galleryImg} />
+                </div>
+              );
+            }
+
+            if (block.type === "split") {
+              const largeRatio = ratio(block.large);
+              const stackRatios = block.stack.map(ratio);
+              const stackCombinedRatio = 1 / stackRatios.reduce((sum, currentRatio) => sum + 1 / currentRatio, 0);
+
+              return (
+                <div key={index} className={styles.gallerySplit}>
+                  <div className={styles.gallerySplitLarge} style={{ "--ratio": largeRatio }}>
+                    <Image src={block.large} alt="Apartment 88" fill sizes="(min-width: 768px) 48vw, 92vw" className={styles.galleryImgFit} />
                   </div>
-                  <div className={styles.gallerySplitStack}>
-                    {block.stack.map((src, j) => (
-                      <div
-                        key={j}
-                        className={styles.gallerySplitStackItem}
-                        style={{ "--ratio": ratio(src) }}
-                      >
-                        <Image
-                          src={src}
-                          alt="Aravali Farmhouse"
-                          fill
-                          sizes="(min-width: 768px) 48vw, 100vw"
-                          className={styles.galleryImgFit}
-                        />
+                  <div className={styles.gallerySplitStack} style={{ "--ratio": stackCombinedRatio }}>
+                    {block.stack.map((image, stackIndex) => (
+                      <div key={image.src} className={styles.gallerySplitStackItem} style={{ "--ratio": stackRatios[stackIndex], "--height-weight": 1 / stackRatios[stackIndex] }}>
+                        <Image src={image} alt="Apartment 88" fill sizes="(min-width: 768px) 48vw, 92vw" className={styles.galleryImgFit} />
                       </div>
                     ))}
                   </div>
@@ -154,20 +129,10 @@ export default function AravaliFarmhousePage() {
             }
 
             return (
-              <div key={i} className={styles.galleryPair}>
-                {block.images.map((src, j) => (
-                  <div
-                    key={j}
-                    className={styles.galleryPairItem}
-                    style={{ "--ratio": ratio(src) }}
-                  >
-                    <Image
-                      src={src}
-                      alt="Aravali Farmhouse"
-                      fill
-                      sizes="(min-width: 768px) 48vw, 100vw"
-                      className={styles.galleryImgFit}
-                    />
+              <div key={index} className={styles.galleryPair}>
+                {block.images.map((image) => (
+                  <div key={image.src} className={styles.galleryPairItem} style={{ "--ratio": ratio(image) }}>
+                    <Image src={image} alt="Apartment 88" fill sizes="(min-width: 768px) 48vw, 92vw" className={styles.galleryImgFit} />
                   </div>
                 ))}
               </div>
@@ -175,7 +140,6 @@ export default function AravaliFarmhousePage() {
           })}
         </section>
 
-        {/* Share */}
         <section className={styles.share}>
           <p>Share</p>
           <div className={styles.shareIcons}>
@@ -186,9 +150,8 @@ export default function AravaliFarmhousePage() {
           </div>
         </section>
 
-        <MoreProjects currentId="aravali-farmhouse" />
+        <MoreProjects currentId="apartment-88" />
       </main>
-
       <Footer />
     </>
   );
