@@ -619,5 +619,5 @@ export default function JustifiedGallery({ items }) {
     </div>
   );
 }
-// Shared with CategoryGallery.js (category views reuse the same ratios + routes).
+
 export { RATIOS, PROJECT_ROUTES, ROW_ROUTES, MATCHED_ROUTES };

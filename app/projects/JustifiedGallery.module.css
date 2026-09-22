@@ -126,8 +126,7 @@
         flex-direction: column;
         gap: 24px;
     }
-    /* Same fix as CategoryGallery: in a column, flex-basis: 0 collapses
-       the overflow:hidden tiles to zero height. */
+  
     .rowTile {
         flex: 0 0 auto !important;
         width: 100%;
