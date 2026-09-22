@@ -19,6 +19,7 @@ export const metadata = { title: "The Poetic House — Spaces Architects@ka" };
 export default function ThePoeticHousePage() {
   return (
     <ProjectDetailPage
+      currentId="the-poetic-house"
       title="The Poetic House"
       location="Noida, Uttar Pradesh"
       hero={hero}
@@ -33,6 +34,30 @@ export default function ThePoeticHousePage() {
         Client: "Mr. Bansal",
         Status: "Ongoing",
       }}
+      description={[
+        <>
+          Set within a quiet residential enclave of Noida, The Garden House
+          is conceived as a contemporary residence shaped by its lush
+          landscape and the{" "}
+          <span style={{ color: "#fea50b" }}>
+            desire to bring nature into the everyday experience of the home
+          </span>
+          . Rather than treating the garden as a peripheral element, the
+          design integrates it into the architecture through planted
+          terraces, generous planters and carefully framed openings.
+        </>,
+        <>
+          <span style={{ color: "#fea50b" }}>
+            Softly curved forms give the residence a sculptural character,
+            while the entrance staircase becomes a vertical passage of
+            light, air and landscape.
+          </span>{" "}
+          Its staggered openings facilitate cross-ventilation while drawing
+          daylight into the upper levels, creating a sense of porosity
+          within the otherwise solid composition.
+        </>,
+        "The architecture balances weight with openness and enclosure with permeability, allowing the residence to sit quietly within its green surroundings while maintaining a distinct formal identity.",
+      ]}
     />
   );
 }

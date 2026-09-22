@@ -71,10 +71,7 @@ export default function HouseOfSculptedScreensPage() {
           </div>
         </section>
 
-        {/* Details — no description copy has been provided for this
-            project yet, so the info section currently shows just the
-            sidebar. Drop paragraphs into infoBody the same way the other
-            project pages do once copy is ready. */}
+        {/* Details + description */}
         <section className={`site-container ${styles.infoSection}`}>
           <div className={styles.infoSidebar}>
             <div>
@@ -89,7 +86,43 @@ export default function HouseOfSculptedScreensPage() {
             </div>
           </div>
 
-          <div className={styles.infoBody} />
+          <div className={styles.infoBody}>
+            <p>
+              <strong>House of Sculpted Screens</strong> is a contemporary
+              Delhi residence shaped by fluid forms, sculpted arches and
+              custom-crafted timber screens. The façade replaces rigid
+              geometry with organic curves, creating deep openings, planted
+              balconies and shaded pockets that bring landscape into the
+              architecture.
+            </p>
+
+            <p>
+              A defining feature is the{" "}
+              <strong>undulating timber screen</strong>, designed as a
+              series of curved vertical fins that provide privacy and solar
+              control while becoming a sculptural element of the façade. The
+              contrast between pale textured surfaces, warm timber and lush
+              greenery creates a tactile, contemporary character.
+            </p>
+
+            <p>
+              And perhaps the most personal expression of the project came
+              from the client himself. After the completion of the house,
+              he asked the architect for a signature and chose to have it
+              inscribed on the façade. More than an architectural detail, it
+              became a deeply meaningful gesture of trust, an
+              acknowledgement that the home represents not only a physical
+              space, but also a shared creative journey.
+            </p>
+
+            <p>
+              <strong>
+                The house explores how form, craft, light and landscape can
+                come together to create an architecture that feels both
+                expressive and deeply personal.
+              </strong>
+            </p>
+          </div>
         </section>
 
         {/* Gallery */}

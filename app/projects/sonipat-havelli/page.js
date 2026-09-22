@@ -21,6 +21,7 @@ export const metadata = { title: "Sonipat Haveli — Spaces Architects@ka" };
 export default function SonipatHaveliPage() {
   return (
     <ProjectDetailPage
+      currentId="sonipat-haveli"
       title="Sonipat Haveli"
       location="Sonipat, Haryana"
       hero={hero}
@@ -35,6 +36,39 @@ export default function SonipatHaveliPage() {
         Client: "Mr. Vijay Goel",
         Status: "Completed",
       }}
+      description={[
+        <>
+          Haveli is a{" "}
+          <span style={{ color: "#fea50b" }}>
+            300-year-old heritage haveli
+          </span>{" "}
+          in Sonipat, Haryana, carefully conserved and adapted for
+          contemporary use as{" "}
+          <span style={{ color: "#fea50b" }}>a lodge and village museum</span>
+          . The restoration retains its traditional Lakhori brick
+          construction, lime mortar, stone columns, carved arches, timber
+          beams and decorative balconies.
+        </>,
+        <>
+          Designed as a self-contained rural dwelling, the haveli
+          demonstrates the{" "}
+          <span style={{ color: "#fea50b" }}>
+            climate-responsive wisdom of traditional Indian architecture
+          </span>
+          , with thick walls providing natural insulation and courtyards
+          bringing light and ventilation into the home. Its interiors
+          preserve the materiality and atmosphere of rural Haryana through
+          exposed brick, timber, traditional crafts and vernacular objects.
+        </>,
+        <>
+          Today, the restored haveli serves as a living record of{" "}
+          <span style={{ color: "#fea50b" }}>
+            Haryana&apos;s rural heritage and everyday village life
+          </span>
+          , allowing its architecture, craftsmanship and cultural memory to
+          continue in use rather than remain frozen as a monument.
+        </>,
+      ]}
     />
   );
 }

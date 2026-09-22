@@ -42,7 +42,7 @@ export const metadata = {
 const details = {
   Project: "House of Hues",
   Location: "New Delhi",
-  Client: "Mr. Vipul Jain",
+  Client: "Mr. Pramod",
   Status: "Completed",
 };
 
@@ -98,26 +98,56 @@ export default function HouseOfHuesPage() {
 
           <div className={styles.infoBody}>
             <p>
-              Pattern Play is a{" "}
-              <span className={styles.highlight}>3 BHK apartment</span>{" "}
-              that explores pattern, colour, texture and material as a cohesive design language.{" "}
-              <span className={styles.highlight}>Bold geometric upholstery, graphic rugs, patterned cabinetry and expressive artwork</span>{" "}
-              bring rhythm and personality to the interiors, while recurring colours create continuity across spaces.
+              <span className={styles.highlight}>House of Hues</span> is a
+              contemporary residence conceived as a study in colour, texture
+              and natural light. Rather than treating colour as an applied
+              layer, the design integrates it into the architecture through
+              a restrained palette of terracotta, warm wood, concrete, ivory
+              and deep, muted tones.
             </p>
 
             <p>
-              A warm palette of{" "}
-              <span className={styles.highlight}>natural wood, marble, textured walls, brass, metal and layered fabrics</span>{" "}
-              balances the stronger patterns. Fluted timber and linear wall details introduce subtle repetition, while curved furniture and architectural elements soften the geometry.
+              The house balances a strong architectural expression with a
+              calm, tactile interior.{" "}
+              <span className={styles.highlight}>
+                Exposed concrete surfaces and earthy terracotta planes
+                establish a grounded material language, while timber
+                elements soften the composition
+              </span>
+              . Arched openings and carefully framed apertures introduce a
+              recurring geometric motif, creating moments where sunlight,
+              shadow and colour become part of the architecture.
             </p>
 
             <p>
-              Each room carries its own character from the vibrant turquoise and mustard accents in the living areas to the deeper blue of the bedroom yet remains connected through a consistent material and colour palette.
+              Inside, the palette shifts subtly from room to room. Neutral
+              bedrooms are layered with textured fabrics and warm finishes,
+              while deeper blue and earthy accents bring character to the
+              living spaces. Bespoke furniture, patterned textiles and
+              curated artwork add richness without overpowering the
+              architectural framework.
             </p>
 
             <p>
-              The result is a playful, layered home where{" "}
-              <span className={styles.highlight}>pattern is not merely decorative, but becomes an integral part of the interior architecture.</span>
+              Landscape and daylight are integral to the experience. Green
+              pockets, planted courtyards and large openings bring nature
+              deep into the house, while filtered sunlight creates
+              constantly changing patterns across the walls and floors. The
+              result is a home that feels expressive yet composed where{" "}
+              <span className={styles.highlight}>
+                colour, material and light work together to create a
+                distinctly contemporary Indian residence
+              </span>
+              .
+            </p>
+
+            <p>
+              It is ultimately an exploration of how a restrained
+              architectural palette can still produce a{" "}
+              <span className={styles.highlight}>
+                home rich in warmth, personality and visual rhythm
+              </span>
+              .
             </p>
           </div>
         </section>

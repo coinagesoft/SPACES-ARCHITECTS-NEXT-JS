@@ -28,12 +28,11 @@ export const metadata = {
 };
 
 // All content for this project lives right here — edit freely.
-// TODO: fill in the real project details and text.
 const details = {
   Project: "Pattern Play",
-  Location: "TBC",
-  Client: "TBC",
-  Status: "TBC",
+  Location: "New Delhi",
+  Client: "Mr. Vipul Jain",
+  Status: "Completed",
 };
 
 const ratio = (img) => img.width / img.height;
@@ -91,8 +90,43 @@ export default function PatternPlayPage() {
 
           <div className={styles.infoBody}>
             <p>
-              Project description goes here. Wrap the phrases that should be orange like{" "}
-              <span className={styles.highlight}>this</span>.
+              Pattern Play is a{" "}
+              <span className={styles.highlight}>3 BHK apartment</span> that
+              explores pattern, colour, texture and material as a cohesive
+              design language.{" "}
+              <span className={styles.highlight}>
+                Bold geometric upholstery, graphic rugs, patterned cabinetry
+                and expressive artwork
+              </span>{" "}
+              bring rhythm and personality to the interiors, while recurring
+              colours create continuity across spaces.
+            </p>
+
+            <p>
+              A warm palette of{" "}
+              <span className={styles.highlight}>
+                natural wood, marble, textured walls, brass, metal and
+                layered fabrics
+              </span>{" "}
+              balances the stronger patterns. Fluted timber and linear wall
+              details introduce subtle repetition, while curved furniture
+              and architectural elements soften the geometry.
+            </p>
+
+            <p>
+              Each room carries its own character from the vibrant
+              turquoise and mustard accents in the living areas to the
+              deeper blue of the bedroom yet remains connected through a
+              consistent material and colour palette.
+            </p>
+
+            <p>
+              The result is a playful, layered home where{" "}
+              <span className={styles.highlight}>
+                pattern is not merely decorative, but becomes an integral
+                part of the interior architecture
+              </span>
+              .
             </p>
           </div>
         </section>

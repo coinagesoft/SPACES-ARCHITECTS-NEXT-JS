@@ -82,32 +82,34 @@ export default function HouseOfBlueCourtyardPage() {
 
           <div className={styles.infoBody}>
             <p>
-              Conceived around an expansive central void, the residence
-              establishes an{" "}
+              Located in Vasant Kunj, Blue Courtyard House is conceived
+              around the idea of a private courtyard as the home&apos;s
+              central spatial and visual anchor.{" "}
               <span className={styles.highlight}>
-                interplay between architecture, landscape, and open skies
+                The architecture turns inward, creating a sequence of open
+                and enclosed spaces where sky, landscape and daylight become
+                part of the interior experience
               </span>
-              . A bold contemporary geometry defines the exterior, where deep
-              overhangs, cantilevered planes, and lush vertical greens create a{" "}
-              <span className={styles.highlight}>
-                sheltered sanctuary in the urban fabric of Vasant Kunj
-              </span>
-              .
+              . Large, glazed openings blur the edges between the courtyard
+              and the living spaces, while planted ledges and open-to-sky
+              volumes introduce a sense of permeability throughout the
+              house.
             </p>
 
             <p>
-              The signature open courtyard serves as a{" "}
+              The interiors follow a{" "}
               <span className={styles.highlight}>
-                vertical frame to the sky
+                quiet contemporary palette of warm neutrals, timber and
+                stone, punctuated by sculptural furniture, bespoke lighting
+                and carefully composed artwork
               </span>
-              , drawing daylight deep into the interior and fostering a seamless
-              connection between indoor living areas and the outdoor greens.
-              Expansive glazing, warm wooden soffits, and restrained neutral
-              volumes come together to produce an atmosphere of{" "}
-              <span className={styles.highlight}>
-                serenity, spaciousness, and modern refinement
-              </span>
-              .
+              . A striking mosaic feature in the bathroom and layered
+              geometric wall treatments add moments of expression against
+              the restrained material backdrop. Across the residence, the
+              design balances openness with intimacy, using the courtyard
+              not simply as an outdoor space, but as a recurring
+              architectural element that connects the home to light, air
+              and nature.
             </p>
           </div>
         </section>
