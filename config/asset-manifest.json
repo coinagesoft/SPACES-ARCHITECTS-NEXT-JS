@@ -1367,6 +1367,10 @@
     "width": 600,
     "height": 688
   },
+  "projects/CONCRETE-HOUSE/1.webp": {
+    "width": 3600,
+    "height": 4800
+  },
   "projects/CUBIX OFFICE.jpg": {
     "width": 473,
     "height": 654
@@ -2247,6 +2251,42 @@
     "width": 696,
     "height": 400
   },
+  "projects/HOUSE-IN-HARMONY/3_4/1.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/HOUSE-IN-HARMONY/3_4/2.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/HOUSE-IN-HARMONY/3_4/3.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/HOUSE-IN-HARMONY/3_4/4.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/HOUSE-IN-HARMONY/3_4/5.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/HOUSE-IN-HARMONY/3_4/6.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/HOUSE-IN-HARMONY/3_4/7.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/HOUSE-IN-HARMONY/cover/COVER.webp": {
+    "width": 4262,
+    "height": 2235
+  },
+  "projects/HOUSE-IN-HARMONY/cover/HERO.webp": {
+    "width": 1893,
+    "height": 2235
+  },
   "projects/HOUSE-OF-CURVES/3_4/1.webp": {
     "width": 4800,
     "height": 3600
@@ -2714,6 +2754,30 @@
   "projects/HOUSE-OF-STEPPED-GARDEN/photographs/final section copy.webp": {
     "width": 8000,
     "height": 3500
+  },
+  "projects/HOUSE-ON-HILL/3_4/1.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/HOUSE-ON-HILL/3_4/2.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/HOUSE-ON-HILL/3_4/3.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/HOUSE-ON-HILL/3_4/4.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/HOUSE-ON-HILL/cover/COVER.webp": {
+    "width": 1774,
+    "height": 887
+  },
+  "projects/HOUSE-ON-HILL/cover/HERO.webp": {
+    "width": 1774,
+    "height": 887
   },
   "projects/IMELDA-INC/3_4/1.webp": {
     "width": 3600,
@@ -3695,6 +3759,46 @@
     "width": 528,
     "height": 799
   },
+  "projects/MARMO-HOME-OFFICE/3_4/1.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/MARMO-HOME-OFFICE/3_4/2.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/MARMO-HOME-OFFICE/3_4/3.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/MARMO-HOME-OFFICE/3_4/4.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/MARMO-HOME-OFFICE/3_4/5.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/MARMO-HOME-OFFICE/3_4/6.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/MARMO-HOME-OFFICE/3_4/7.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/MARMO-HOME-OFFICE/3_4/8.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/MARMO-HOME-OFFICE/cover/COVER.webp": {
+    "width": 7360,
+    "height": 4912
+  },
+  "projects/MARMO-HOME-OFFICE/cover/HERO.webp": {
+    "width": 4912,
+    "height": 6594
+  },
   "projects/NOCC OFFICE.png": {
     "width": 799,
     "height": 533
@@ -4370,6 +4474,46 @@
   "projects/SOLANCE APARTMENT.jpg": {
     "width": 527,
     "height": 738
+  },
+  "projects/SOLANCE-APARTMENT/3_4/1.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/SOLANCE-APARTMENT/3_4/2.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/SOLANCE-APARTMENT/3_4/3.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/SOLANCE-APARTMENT/3_4/4.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/SOLANCE-APARTMENT/3_4/5.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/SOLANCE-APARTMENT/3_4/6.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/SOLANCE-APARTMENT/3_4/7.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/SOLANCE-APARTMENT/3_4/8.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/SOLANCE-APARTMENT/cover/COVER.webp": {
+    "width": 8256,
+    "height": 5504
+  },
+  "projects/SOLANCE-APARTMENT/cover/HERO.webp": {
+    "width": 5504,
+    "height": 8256
   },
   "projects/SONIPAT HAVELLI.png": {
     "width": 569,
