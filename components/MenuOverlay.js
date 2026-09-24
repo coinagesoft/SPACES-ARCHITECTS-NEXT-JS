@@ -13,9 +13,9 @@ export default function MenuOverlay({ open, onClose }) {
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto overflow-x-hidden bg-paper">
       <div className={`${styles.topBar} ${styles.equalGapTop}`}>
-        <span className="text-base md:text-[1.33rem] tracking-widest2 font-medium">
-          {site.name} <span className="text-accent">{site.handle}</span>
-        </span>
+       <span className="text-base md:text-[1.33rem] tracking-widest2 font-medium text-[#6b6b6b]">
+  {site.name} <span className="text-accent">{site.handle}</span>
+</span>
         <button
           type="button"
           onClick={onClose}

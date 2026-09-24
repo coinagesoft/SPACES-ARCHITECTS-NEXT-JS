@@ -62,13 +62,20 @@ export default function Footer() {
                 <ul className="space-y-1">
                   {col.links.map((link) => (
                     <li key={link.label}>
-                      <Link
-                        href={link.href}
-                        className="block text-[12px] leading-4 tracking-wide uppercase text-faint transition-colors hover:text-accent"
-                      >
-                        {link.label}
-                      </Link>
-                    </li>
+  <Link
+    href={link.href}
+    className="block text-[12px] leading-4 tracking-wide uppercase text-faint transition-colors hover:text-accent"
+  >
+    {link.label.includes("@ka") ? (
+      <>
+        {link.label.replace("@ka", "")}
+        <span className="normal-case">@ka</span>
+      </>
+    ) : (
+      link.label
+    )}
+  </Link>
+</li>
                   ))}
                 </ul>
               </div>
@@ -101,7 +108,7 @@ export default function Footer() {
       <div className={footerContainer}>
         <div className="grid gap-5 border-t border-line py-6 text-[10px] text-faint md:grid-cols-[1fr_auto_1fr] md:items-start">
           <div>
-            <div className="text-base md:text-[1.33rem] font-medium tracking-widest2 text-ink">
+            <div className="text-base md:text-[1.33rem] font-medium tracking-widest2 text-[#6b6b6b]">
               {site.name} <span className="text-accent">{site.handle}</span>
             </div>
             <p className="mt-2">© {new Date().getFullYear()} by {site.name}{site.handle}</p>

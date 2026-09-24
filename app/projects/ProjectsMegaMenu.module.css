@@ -40,7 +40,7 @@
     /* text-transform: uppercase; */
     text-decoration: none;
     white-space: nowrap;
-    color: var(--pm-ink);
+   color: #6b6b6b;
 }
 
 .logo span {

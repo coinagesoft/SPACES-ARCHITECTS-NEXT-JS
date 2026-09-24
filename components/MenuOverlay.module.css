@@ -124,13 +124,15 @@
         gap: 2.25rem;
     }
 
-    .menuColumn :global(.nav-link) {
-        display: block;
-        min-width: 0;
-        max-width: 100%;
-        white-space: normal; 
-        overflow-wrap: anywhere;
-        word-break: normal;
-        line-height: 1.4;
-    }
+   .menuColumn :global(.nav-link) {
+    display: block;
+    min-width: 0;
+    max-width: 100%;
+    font-size: clamp(0.95rem, 4.2vw, 1.25rem);
+    letter-spacing: 0.05em;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
+    line-height: 1.4;
+}
 }
