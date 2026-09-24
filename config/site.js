@@ -82,7 +82,7 @@ export const site = {
         },
     ],
 
-    footerNote: "Built with Next.js",
+    // footerNote: "Built with Next.js",
 };
 
 export const homeCopy = {
