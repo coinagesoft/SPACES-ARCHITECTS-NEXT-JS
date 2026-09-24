@@ -62,20 +62,20 @@ export default function Footer() {
                 <ul className="space-y-1">
                   {col.links.map((link) => (
                     <li key={link.label}>
-  <Link
-    href={link.href}
-    className="block text-[12px] leading-4 tracking-wide uppercase text-faint transition-colors hover:text-accent"
-  >
-    {link.label.includes("@ka") ? (
-      <>
-        {link.label.replace("@ka", "")}
-        <span className="normal-case">@ka</span>
-      </>
-    ) : (
-      link.label
-    )}
-  </Link>
-</li>
+                      <Link
+                        href={link.href}
+                        className="block text-[12px] leading-4 tracking-wide uppercase text-faint transition-colors hover:text-accent"
+                      >
+                        {link.label.includes("@ka") ? (
+                          <>
+                            {link.label.replace("@ka", "")}
+                            <span className="normal-case">@ka</span>
+                          </>
+                        ) : (
+                          link.label
+                        )}
+                      </Link>
+                    </li>
                   ))}
                 </ul>
               </div>
