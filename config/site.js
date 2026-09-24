@@ -113,7 +113,7 @@ export const aboutCopy = {
             [
                 { text: "Ar. KAPIL AGGARWAL", highlight: true },
                 { text: " Founder and Principal Architect of " },
-                { text: "SPACES ARCHITECTS@KA", highlight: true },
+                { text: "SPACES ARCHITECTS@ka", highlight: true },
                 {
                     text: ", is an architect, artist and storyteller whose practice is rooted in the belief that architecture should create an emotional connection between people, place and memory. After graduating from MIT, Manipal, in 1996, he founded the studio in 2000, bringing together his interests in fine art, design, materiality and architecture.",
                 },
