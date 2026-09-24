@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function NewsCard({ image, name, href = "/news-events", landscape = false }) {
+export default function NewsCard({ image, name, href = "/news-events", landscape = false , fit = "cover", position = "center",}) {
   const content = (
     <article className="group cursor-pointer">
       <div className={`relative w-full ${landscape ? "aspect-[4/3]" : "aspect-square"} overflow-hidden bg-line`}>
@@ -10,6 +10,7 @@ export default function NewsCard({ image, name, href = "/news-events", landscape
           alt={name}
           fill
           sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+          style={{ objectFit: fit, objectPosition: position }}
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </div>
