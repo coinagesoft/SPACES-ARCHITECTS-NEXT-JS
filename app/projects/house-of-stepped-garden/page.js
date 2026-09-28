@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import MoreProjects from "@/components/MoreProjects";
 import styles from "./page.module.css";
 import { assetImage, assetUrl } from "@/config/assets";
+import ShareIcons from "@/components/ShareIcons";
 
 // Hero — this project's cover is a video, not a still image.
 const coverVideo = assetUrl("projects/HOUSE-OF-STEPPED-GARDEN/cover/COVER.mp4");
@@ -286,10 +287,7 @@ export default function HouseOfSteppedGardenPage() {
         <section className={styles.share}>
           <p>Share</p>
           <div className={styles.shareIcons}>
-            <a href="https://www.instagram.com/spacesarchitects.ka/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">ig</a>
-            <a href="https://x.com/SpacesArch_ka" aria-label="X" target="_blank" rel="noopener noreferrer">x</a>
-            <a href="https://www.linkedin.com/company/spaces-architects-ka/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">in</a>
-            <a href="mailto:admin@spacesarchitects-ka.com" aria-label="Email">✉</a>
+            <ShareIcons />
           </div>
         </section>
 

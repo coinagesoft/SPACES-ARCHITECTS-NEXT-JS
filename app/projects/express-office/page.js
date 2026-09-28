@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import MoreProjects from "@/components/MoreProjects";
 import styles from "./page.module.css";
 import { assetImage, assetUrl } from "@/config/assets";
+import ShareIcons from "@/components/ShareIcons";
 
 const heroImage = assetImage("projects/EXPRESS-OFFICE/cover/Cover Image.webp");
 const photo1 = assetImage("projects/EXPRESS-OFFICE/3_4/1.webp");
@@ -220,15 +221,7 @@ export default function ExpressOfficePage() {
           <p>Share</p>
 
           <div className={styles.shareIcons}>
-            <a href="https://www.instagram.com/spacesarchitects.ka/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">ig</a>
-            <a href="https://x.com/SpacesArch_ka" aria-label="X" target="_blank" rel="noopener noreferrer">x</a>
-            <a href="https://www.linkedin.com/company/spaces-architects-ka/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">in</a>
-            <a
-              href="mailto:admin@spacesarchitects-ka.com"
-              aria-label="Email"
-            >
-              ✉
-            </a>
+            <ShareIcons />
           </div>
         </section>
 

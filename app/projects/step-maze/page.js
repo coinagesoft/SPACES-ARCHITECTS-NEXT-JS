@@ -4,6 +4,7 @@ import SiteChrome from "@/components/SiteChrome";
 import Footer from "@/components/Footer";
 import { assets } from "@/assets";
 import styles from "./page.module.css";
+import ShareIcons from "@/components/ShareIcons";
 
 export const metadata = {
   title: "The Step Maze House — Spaces Architects@ka",
@@ -230,15 +231,7 @@ export default function StepMazeHousePage() {
           <p>Share</p>
 
           <div className={styles.shareIcons}>
-            <a href="#" aria-label="Facebook">f</a>
-            <a href="#" aria-label="X">x</a>
-            <a href="#" aria-label="LinkedIn">in</a>
-            <a
-              href="mailto:admin@spacesarchitects-ka.com"
-              aria-label="Email"
-            >
-              ✉
-            </a>
+            <ShareIcons />
           </div>
         </section>
 

@@ -237,20 +237,20 @@ export default function HomePage() {
       <section ref={introRef} className="site-container py-8 md:py-12">
         <div className="space-y-7">
           {homeCopy.intro.map((paragraph, index) => (
-            <p key={index} className="text-[11px] uppercase leading-[1.65] tracking-[0.14em] text-[#7d7d7d] md:text-[12px]">
+            <p key={index} className="text-[11px] uppercase leading-[1.65] tracking-[0.14em] text-[#545454] md:text-[12px]">
               {renderIntroParagraph(paragraph)}
             </p>
           ))}
         </div>
       </section>
       <section ref={projectsRef} className="site-container pb-14 md:pb-20">
-        <h2 className="mb-4 text-[20px] font-normal uppercase tracking-[0.16em] text-ink md:mb-4 md:text-[28px]">
+        <h2 className="mb-4 text-[20px] font-normal uppercase tracking-[0.16em] text-[#000000] md:mb-4 md:text-[28px]">
           Featured Projects
         </h2>
         <FeaturedCarousel items={assets.featuredProjects} type="project" />
       </section>
       <section ref={newsRef} className="site-container pb-8 md:pb-12">
-        <h2 className="mb-4 text-[24px] font-normal uppercase tracking-[0.16em] text-ink md:mb-4 md:text-[28px]">
+        <h2 className="mb-4 text-[24px] font-normal uppercase tracking-[0.16em] text-[#000000] md:mb-4 md:text-[28px]">
           Featured News
         </h2>
         <FeaturedCarousel items={assets.featuredNews} type="news" />

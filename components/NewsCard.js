@@ -14,7 +14,7 @@ export default function NewsCard({ image, name, href = "/news-events", landscape
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </div>
-      <p className="mt-3 text-[14px] leading-4 uppercase tracking-[0.14em] text-ink/80 transition-colors duration-300 group-hover:text-ink md:text-[14px]">{name}</p>
+      <p className="mt-3 text-[14px] leading-4 uppercase tracking-[0.14em] text-[#545454] md:text-[14px]">{name}</p>
     </article>
   );
 

@@ -5,6 +5,7 @@ import ParallaxHeroImage from "@/components/ParallaxHeroImage";
 import MoreProjects from "@/components/MoreProjects";
 import styles from "./page.module.css";
 import { assetImage, assetUrl } from "@/config/assets";
+import ShareIcons from "@/components/ShareIcons";
 
 // Hero image from ARCHITECTS-OFFICE/cover
 const heroImage = assetImage("projects/ARCHITECTS-OFFICE/cover/COVER IMAGE.webp");
@@ -251,10 +252,7 @@ export default function ArchitectsOfficePage() {
         <section className={styles.share}>
           <p>Share</p>
           <div className={styles.shareIcons}>
-            <a href="https://www.instagram.com/spacesarchitects.ka/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">ig</a>
-            <a href="https://x.com/SpacesArch_ka" aria-label="X" target="_blank" rel="noopener noreferrer">x</a>
-            <a href="https://www.linkedin.com/company/spaces-architects-ka/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">in</a>
-            <a href="mailto:admin@spacesarchitects-ka.com" aria-label="Email">✉</a>
+            <ShareIcons />
           </div>
         </section>
 

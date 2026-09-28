@@ -108,6 +108,7 @@
 .infoSidebar dd {
   display: inline;
   margin: 0;
+  color: #949494;
 }
 
 .infoBody p {
@@ -115,7 +116,7 @@
   font-weight: 400;
   line-height: 1.95;
   letter-spacing: 0.13em;
-  color: #4f4f4f;
+  color: #7d7d7d;
   text-transform: uppercase;
   text-align: justify;
   margin: 0 0 24px;

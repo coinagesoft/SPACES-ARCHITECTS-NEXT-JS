@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { assets } from "@/assets";
 import styles from "./page.module.css";
 import { assetImage, assetUrl } from "@/config/assets";
+import ShareIcons from "@/components/ShareIcons";
 
 // Hero image from STONEX-INDIA-BUILDING/cover
 const heroImage = assetImage("projects/STONEX-INDIA-BUILDING/cover/Cover Image.webp");
@@ -246,10 +247,7 @@ export default function StonexIndiaBuildingPage() {
         <section className={styles.share}>
           <p>Share</p>
           <div className={styles.shareIcons}>
-            <a href="#" aria-label="Facebook">f</a>
-            <a href="#" aria-label="X">x</a>
-            <a href="#" aria-label="LinkedIn">in</a>
-            <a href="mailto:admin@spacesarchitects-ka.com" aria-label="Email">✉</a>
+            <ShareIcons />
           </div>
         </section>
 
