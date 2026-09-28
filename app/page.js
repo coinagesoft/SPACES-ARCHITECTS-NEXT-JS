@@ -174,7 +174,7 @@ export default function HomePage() {
           stepRef.current += 1;
           scrollToStep(stepRef.current);
           if (stepRef.current === sections.length) {
-            // Reached the footer stop — release control so the user can keep
+            // Reached the footer stop — release control so the ser can keep
             // scrolling normally past the end of the page.
             unlockedRef.current = true;
           }
