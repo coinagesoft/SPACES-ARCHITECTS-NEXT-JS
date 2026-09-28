@@ -15,7 +15,7 @@ export default function NewsletterForm() {
         type="submit"
         className="mt-1 self-start border-b border-line px-3 py-1 text-[10px] tracking-widest2 uppercase transition-colors hover:border-accent hover:text-accent"
       >
-        Join
+        JOIN US
       </button>
     </form>
   );

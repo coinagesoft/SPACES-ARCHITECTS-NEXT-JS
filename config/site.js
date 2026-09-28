@@ -42,7 +42,8 @@ export const site = {
     ],
 
     // Four-column footer navigation aligned to the project page's category structure
-    footerColumns: [{
+       footerColumns: [
+        {
             title: "Architecture",
             links: [
                 { label: "Residential", href: "/projects?category=architecture/residential" },
@@ -63,18 +64,16 @@ export const site = {
             ],
         },
         {
-            title: "News and Views",
             links: [
                 { label: "Awards", href: "/awards" },
-                { label: "Publications", href: "/publications" },
+                { label: "Publication", href: "/publications" },
                 { label: "News & Events", href: "/news-events" },
                 { label: "Blogs", href: "/blog" },
             ],
         },
         {
-            title: "About",
             links: [
-                { label: "Spaces Architects@ka", href: "/about" },
+                { label: "About Us", href: "/about" },
                 { label: "Team", href: "/teams" },
                 { label: "Process", href: "/process" },
                 { label: "Contact", href: "/contact" },

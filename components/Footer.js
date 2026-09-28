@@ -1,50 +1,63 @@
 import Link from "next/link";
 import { site } from "@/config/site";
-import NewsletterForm from "./NewsletterForm";
 import { SocialIcon } from "./SocialIcon";
 
-export default function Footer() {
-  const footerContainer = "site-container";
+const container = "site-container";
+const topSection = "site-container py-9 md:py-10";
+const bottomBar =
+  "site-container flex flex-wrap items-center justify-between gap-4 py-3 text-[10px] tracking-wide uppercase";
 
+const mainHeading =
+  "mb-[21px] whitespace-nowrap text-[14px] leading-4 tracking-[0.12em] uppercase text-muted md:tracking-widest2";
+const subLink =
+  "block text-[12px] leading-4 tracking-wide uppercase text-faint transition-colors hover:text-accent";
+const mainLink =
+  "block whitespace-nowrap text-[14px] leading-4 tracking-[0.12em] uppercase text-muted transition-colors hover:text-accent md:tracking-widest2";
+const ctaLink =
+  "inline-block border-b border-line pb-1 text-[14px] leading-4 tracking-widest2 uppercase text-accent transition-colors hover:border-accent";
+
+export default function Footer() {
   return (
     <footer className="border-t border-line mt-16">
-      <div className={`${footerContainer} py-9 md:py-10`}>
+      <div className={topSection}>
+        <p className="mb-6 text-[14px] leading-4 tracking-widest2 uppercase text-accent">
+          Quick Link
+        </p>
+
         <div className="flex flex-col gap-10 md:flex-row md:items-start">
-          <div className="grid grid-cols-2 gap-x-8 gap-y-8 md:w-[50rem] md:grid-cols-4 md:gap-x-14 md:gap-y-0">
-            {site.footerColumns.map((col) => (
-              <div key={col.title}>
-                <p className="mb-3 text-[14px] tracking-widest2 uppercase text-faint">
-                  {col.title}
-                </p>
-                <ul className="space-y-1">
-                  {col.links.map((link) => (
-                    <li key={link.label}>
-                      <Link
-                        href={link.href}
-                        className="block text-[12px] leading-4 tracking-wide uppercase text-faint transition-colors hover:text-accent"
-                      >
-                        {link.label.includes("@ka") ? (
-                          <>
-                            {link.label.replace("@ka", "")}
-                            <span className="normal-case">@ka</span>
-                          </>
-                        ) : (
-                          link.label
-                        )}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+          <div className="grid grid-cols-2 gap-x-4 gap-y-8 md:w-[50rem] md:grid-cols-4 md:gap-x-14 md:gap-y-0">
+            {site.footerColumns.map((col, i) => (
+              <div key={col.title || i}>
+                {col.title ? (
+                  <>
+                    <p className={mainHeading}>{col.title}</p>
+                    <ul className="space-y-[7px]">
+                      {col.links.map((link) => (
+                        <li key={link.label}>
+                          <Link href={link.href} className={subLink}>
+                            {link.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                ) : (
+                  <ul className="space-y-[21px]">
+                    {col.links.map((link) => (
+                      <li key={link.label}>
+                        <Link href={link.href} className={mainLink}>
+                          {link.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             ))}
           </div>
 
           <div className="md:ml-auto md:mr-10 md:w-[12rem]">
-            <p className="mb-3 text-[14px] tracking-widest2 uppercase text-accent">
-              Connect With Us
-            </p>
-            <NewsletterForm />
-            <div className="mt-4 flex gap-4">
+            <div className="flex gap-6">
               {site.social.map((s) => (
                 <a
                   key={s.label}
@@ -58,17 +71,33 @@ export default function Footer() {
                 </a>
               ))}
             </div>
+
+            <ul className="mt-8 space-y-4">
+              <li>
+                <Link href="/contact" className={ctaLink}>
+                  Get in Touch
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className={ctaLink}>
+                  Join Us
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
 
-      <div className={footerContainer}>
+      <div className={container}>
         <div className="grid gap-5 border-t border-line py-6 text-[10px] text-faint md:grid-cols-[1fr_auto_1fr] md:items-start">
           <div>
             <div className="text-base md:text-[1.33rem] font-medium tracking-widest2 text-[#6b6b6b]">
               {site.name} <span className="text-accent">{site.handle}</span>
             </div>
-            <p className="mt-2">© {new Date().getFullYear()} by {site.name}{site.handle}</p>
+            <p className="mt-2">
+              © {new Date().getFullYear()} by {site.name}
+              {site.handle}
+            </p>
           </div>
 
           <div className="flex flex-col items-start gap-2 md:items-center">
@@ -88,7 +117,7 @@ export default function Footer() {
             </div>
             <p className="text-center">
               {site.contact.phones.join(" / ")}{" "}
-              <a href={`mailto:${site.contact.email}`} className="underline">
+              <a href={"mailto:" + site.contact.email} className="underline">
                 {site.contact.email}
               </a>
             </p>
@@ -107,7 +136,7 @@ export default function Footer() {
       </div>
 
       <div className="bg-ink text-white">
-        <div className={`${footerContainer} flex flex-wrap items-center justify-between gap-4 py-3 text-[10px] tracking-wide uppercase`}>
+        <div className={bottomBar}>
           <div className="flex gap-6">
             <Link href="#" className="hover:text-accent transition-colors">
               Terms &amp; Support
