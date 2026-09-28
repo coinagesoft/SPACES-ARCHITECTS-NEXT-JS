@@ -171,6 +171,7 @@ const PROJECT_ROUTES = {
   "Rasa Farmhouse": "/projects/rasa-farmhouse",
   "Marble City Exhibition Stall": "/projects/marble-city-exhibition-stall",
   "The Urban Nest": "/projects/the-urban-nest",
+  "The Garden House": "/projects/the-garden-house",
 };
 
 function findItem(items, name) {
