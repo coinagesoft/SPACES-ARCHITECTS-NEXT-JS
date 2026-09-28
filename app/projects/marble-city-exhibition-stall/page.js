@@ -7,7 +7,7 @@ const photo2 = assetImage("projects/MARBLE-CITY-EXHIBITION-STALL/3_4/2.webp");
 const photo3 = assetImage("projects/MARBLE-CITY-EXHIBITION-STALL/3_4/3.webp");
 const photo4 = assetImage("projects/MARBLE-CITY-EXHIBITION-STALL/3_4/4.webp");
 const photo5 = assetImage("projects/MARBLE-CITY-EXHIBITION-STALL/3_4/5.webp");
-const photo6 = assetImage("projects/MARBLE-CITY-EXHIBITION-STALL/3_4/6.webp");
+// const photo6 = assetImage("projects/MARBLE-CITY-EXHIBITION-STALL/3_4/6.webp");
 const photo7 = assetImage("projects/MARBLE-CITY-EXHIBITION-STALL/3_4/7.webp");
 const Orange = ({ children }) => <span style={{ color: "#C1591C" }}>{children}</span>;
 
@@ -20,7 +20,7 @@ export default function MarbleCityExhibitionStallPage() {
       title="Marble City Exhibition Stall"
       location="New Delhi"
       hero={hero}
-      photos={[photo1, photo2, photo3, photo4, photo5, photo6, photo7]}
+      photos={[photo1, photo2, photo3, photo4, photo5, photo7]}
       details={{
         Project: "Marble City ID Stall",
         Location: "New Delhi",
