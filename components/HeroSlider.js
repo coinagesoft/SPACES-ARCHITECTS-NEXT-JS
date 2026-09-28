@@ -18,21 +18,31 @@ export default function HeroSlider({ projects }) {
         return () => mediaQuery.removeEventListener?.("change", updateIsMobile);
     }, []);
 
+    // Mobile shows only the slides that have a dedicated mobileImage.
+    // Desktop keeps the full list. If no slide has a mobileImage, mobile uses the full list too.
+    const mobileSlides = projects.filter((project) => project.mobileImage);
+    const slides =
+        isMobile && mobileSlides.length > 0 ? mobileSlides : projects;
+
+    useEffect(() => {
+        setActiveIndex(0);
+    }, [isMobile]);
+
     useEffect(() => {
         const timer = setInterval(() => {
             setActiveIndex(
-                (currentIndex) => (currentIndex + 1) % projects.length
+                (currentIndex) => (currentIndex + 1) % slides.length
             );
         }, 6000);
 
         return () => clearInterval(timer);
-    }, [projects.length]);
+    }, [slides.length]);
 
-    const activeProject = projects[activeIndex];
+    const activeProject = slides[activeIndex] ?? slides[0];
 
     return (
         <section className="relative w-full h-screen min-h-screen overflow-hidden md:h-screen md:min-h-screen max-md:h-[90vh] max-md:min-h-[80vh]">
-            {projects.map((project, index) => {
+            {slides.map((project, index) => {
                 const imageSrc = isMobile ? project.mobileImage ?? project.image : project.image;
 
                 return (

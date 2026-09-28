@@ -52,46 +52,55 @@ const SNAP_LOCK_MS = 900;
 // Minimum wheel/touch delta before we treat it as an intentional scroll gesture.
 const SCROLL_THRESHOLD = 8;
 
+
 const homeHeroProjects = [
   {
     id: "haveli-dharampura",
     name: "Haveli Dharampura",
     image: assetImage("projects/haveli/haveli_27.jpg"),
+    mobileImage: assetImage("homeBanner/HAVELI DHARAMPURA.webp"),
   },
   {
     id: "art-house",
     name: "Art House",
     image: assetImage("projects/ART_HOUSE/3_4/26.webp"),
+    mobileImage: assetImage("homeBanner/ART HOUSE.webp"),
   },
   {
     id: "house-of-stepped-garden",
     name: "House of Stepped Garden",
     image: assetImage("projects/HOUSE-OF-STEPPED-GARDEN/photographs/5(11).webp"),
+    mobileImage: assetImage("homeBanner/HOUSE OF STEPPED GARDEN.webp"),
   },
   {
     id: "library-house",
     name: "Library House",
     image: assetImage("projects/LIBRARY-HOUSE/photographs/BHA_3042.webp"),
+    mobileImage: assetImage("homeBanner/LIBRARY HOUSE.webp"),
   },
   {
     id: "golden-haveli",
     name: "Golden Haveli",
     image: assetImage("projects/GOLDEN-HAVELL/3_4/new/17.webp"),
+    mobileImage: assetImage("homeBanner/GOLDEN HAVELI.webp"),
   },
   {
     id: "heritage-park",
     name: "Heritage Park",
     image: assetImage("projects/HERITAGE-PARK/cover/Cover Image.webp"),
+    mobileImage: assetImage("homeBanner/HERITAGE PARK.webp"),
   },
   {
     id: "swatantra-residence",
     name: "Swatantra Residence",
     image: assetImage("projects/SWATANTRA-RESIDENCE/PHOTOGRAPH/5. Ground Living Room (5).jpg"),
+    mobileImage: assetImage("homeBanner/SWATANTRA RESIDENCE.webp"),
   },
   {
     id: "house-of-dancing-screens",
     name: "House of Dancing Screens",
     image: assetImage("projects/HOUSE-OF-DANCING-SCREENS/photographs/BHA_1648.webp"),
+    mobileImage: assetImage("homeBanner/HOUSE OF DANCING SCREENS.webp"),
   },
   {
     id: "step-maze",
@@ -107,6 +116,7 @@ const homeHeroProjects = [
     id: "Intersekt-showroom",
     name: "Intersekt Showroom",
     image: assetImage("projects/INTERSEXT-SHOWROOM/photographs/4 Facade with its context 2.webp"),
+    mobileImage: assetImage("homeBanner/INTERSEKT SHOWROOM.webp"),
   },
 ];
 
