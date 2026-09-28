@@ -183,6 +183,18 @@ function getSrc(item) {
   return typeof item.image === "string" ? item.image : item.image.src;
 }
 
+// Gives each <img> its intrinsic size up front so the tile keeps its height
+// before the image loads. Without this, unloaded lazy images collapse and the
+// page is too short when the browser tries to restore the scroll position.
+function dims(item) {
+  const img = item?.image;
+  if (img && typeof img === "object" && img.width && img.height) {
+    return { width: img.width, height: img.height };
+  }
+  const r = RATIOS[item?.name];
+  return r ? { width: 1000, height: Math.round(1000 / r) } : {};
+}
+
 function Label({ item }) {
   return item?.name ? <span className={styles.label}>{item.name}</span> : null;
 }
@@ -192,7 +204,7 @@ function Tile({ item }) {
   if (!item) return null;
   const content = (
     <>
-      <img src={getSrc(item)} alt={item.name || item.file} loading="lazy" />
+      <img src={getSrc(item)} alt={item.name || item.file} loading="lazy" {...dims(item)} />
       <Label item={item} />
     </>
   );
@@ -224,7 +236,7 @@ function StaticImage({ item }) {
   if (!item) return null;
   return (
     <div className={styles.staticImage}>
-      <img src={getSrc(item)} alt={item.name || item.file} loading="lazy" />
+      <img src={getSrc(item)} alt={item.name || item.file} loading="lazy" {...dims(item)} />
     </div>
   );
 }
@@ -240,6 +252,7 @@ function MatchedTile({ item }) {
         src={getSrc(item)}
         alt={item.name || item.file}
         loading="lazy"
+        {...dims(item)}
         className={aspectRatio ? styles.crop : undefined}
       />
       <Label item={item} />
@@ -284,6 +297,7 @@ function FillTile({ item }) {
         src={getSrc(item)}
         alt={item.name || item.file}
         loading="lazy"
+        {...dims(item)}
         className={styles.crop}
       />
       <Label item={item} />
@@ -361,6 +375,7 @@ function JustifiedRow({ items }) {
               src={getSrc(item)}
               alt={item.name || item.file}
               loading="lazy"
+              {...dims(item)}
               className={override ? styles.crop : undefined}
             />
             <Label item={item} />

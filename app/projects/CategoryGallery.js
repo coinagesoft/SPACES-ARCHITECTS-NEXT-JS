@@ -32,6 +32,12 @@ function getRatio(item) {
   return 1;
 }
 
+// Reserve each image's height before it loads (keeps page height stable so
+// scroll position restores correctly when coming back from a project).
+function dims(item) {
+  return { width: 1000, height: Math.round(1000 / getRatio(item)) };
+}
+
 function getRoute(item) {
   return PROJECT_ROUTES[item.name] || ROW_ROUTES[item.name] || MATCHED_ROUTES[item.name];
 }
@@ -73,7 +79,7 @@ function Row({ items, ghost }) {
         const route = getRoute(item);
         const content = (
           <>
-            <img src={getSrc(item)} alt={item.name || item.file} loading="lazy" />
+            <img src={getSrc(item)} alt={item.name || item.file} loading="lazy" {...dims(item)} />
             <span className={styles.label}>{item.name}</span>
           </>
         );
