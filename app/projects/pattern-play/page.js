@@ -5,6 +5,7 @@ import MoreProjects from "@/components/MoreProjects";
 import ParallaxHeroImage from "@/components/ParallaxHeroImage";
 import styles from "./page.module.css";
 import { assetImage } from "@/config/assets";
+import ShareIcons from "@/components/ShareIcons";
 
 // Hero image from PATTERN-PLAY/cover
 // (the file in the folder is named "COVER (1)" — rename it to COVER.webp
@@ -213,10 +214,7 @@ export default function PatternPlayPage() {
         <section className={styles.share}>
           <p>Share</p>
           <div className={styles.shareIcons}>
-            <a href="https://www.instagram.com/spacesarchitects.ka/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">ig</a>
-            <a href="https://x.com/SpacesArch_ka" aria-label="X" target="_blank" rel="noopener noreferrer">x</a>
-            <a href="https://www.linkedin.com/company/spaces-architects-ka/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">in</a>
-            <a href="mailto:admin@spacesarchitects-ka.com" aria-label="Email">✉</a>
+            <ShareIcons />
           </div>
         </section>
 

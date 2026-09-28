@@ -5,6 +5,7 @@ import ParallaxHeroImage from "@/components/ParallaxHeroImage";
 import MoreProjects from "@/components/MoreProjects";
 import styles from "./page.module.css";
 import { assetImage } from "@/config/assets";
+import ShareIcons from "@/components/ShareIcons";
 
 // Hero image from projects/ARAVALI-FARMHOUSE/cover
 const heroImage = assetImage("projects/ARAVALI-FARMHOUSE/cover/COVER.webp");
@@ -179,10 +180,7 @@ export default function AravaliFarmhousePage() {
         <section className={styles.share}>
           <p>Share</p>
           <div className={styles.shareIcons}>
-            <a href="#" aria-label="Facebook">f</a>
-            <a href="#" aria-label="X">x</a>
-            <a href="#" aria-label="LinkedIn">in</a>
-            <a href="mailto:admin@spacesarchitects-ka.com" aria-label="Email">✉</a>
+            <ShareIcons />
           </div>
         </section>
 

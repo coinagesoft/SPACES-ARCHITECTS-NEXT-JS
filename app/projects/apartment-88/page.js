@@ -6,6 +6,7 @@ import MoreProjects from "@/components/MoreProjects";
 import { assets } from "@/assets";
 import buildProjectGallery from "../buildProjectGallery";
 import styles from "../slender-house/page.module.css";
+import ShareIcons from "@/components/ShareIcons";
 
 export const metadata = {
   title: "Apartment 88 — Spaces Architects@ka",
@@ -143,10 +144,7 @@ export default function Apartment88Page() {
         <section className={styles.share}>
           <p>Share</p>
           <div className={styles.shareIcons}>
-            <a href="https://www.instagram.com/spacesarchitects.ka/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">ig</a>
-            <a href="https://x.com/SpacesArch_ka" aria-label="X" target="_blank" rel="noopener noreferrer">x</a>
-            <a href="https://www.linkedin.com/company/spaces-architects-ka/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">in</a>
-            <a href="mailto:admin@spacesarchitects-ka.com" aria-label="Email">✉</a>
+            <ShareIcons />
           </div>
         </section>
 

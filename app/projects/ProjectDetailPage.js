@@ -5,6 +5,7 @@ import ParallaxHeroImage from "@/components/ParallaxHeroImage";
 import MoreProjects from "@/components/MoreProjects";
 import styles from "./slender-house/page.module.css";
 import buildProjectGallery from "./buildProjectGallery";
+import ShareIcons from "@/components/ShareIcons";
 
 const ratio = (image) => (image?.width && image?.height ? image.width / image.height : 1);
 
@@ -69,8 +70,7 @@ export default function ProjectDetailPage({ currentId, title, location, hero, ph
         <section className={styles.share}>
           <p>Share</p>
           <div className={styles.shareIcons}>
-            <a href="#" aria-label="Facebook">f</a><a href="#" aria-label="X">x</a>
-            <a href="#" aria-label="LinkedIn">in</a><a href="mailto:admin@spacesarchitects-ka.com" aria-label="Email">✉</a>
+            <ShareIcons />
           </div>
         </section>
 

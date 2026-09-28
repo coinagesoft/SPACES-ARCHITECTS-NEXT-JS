@@ -13,7 +13,7 @@ export default function ProjectCard({ id, href, image, name, excerpt, landscape 
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </div>
-      <h3 className="mt-4 text-[14px] uppercase tracking-[0.14em] text-ink/80 transition-colors duration-300 group-hover:text-ink md:text-[14px]">{name}</h3>
+      <h3 className="mt-4 text-[14px] uppercase tracking-[0.14em] text-[#545454] md:text-[14px]">{name}</h3>
       {excerpt && (
         <>
           <p className="mt-2 text-xs text-faint leading-relaxed line-clamp-4">{excerpt}</p>
