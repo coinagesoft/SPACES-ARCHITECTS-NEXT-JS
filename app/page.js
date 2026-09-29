@@ -254,13 +254,13 @@ export default function HomePage() {
         </div>
       </section>
       <section ref={projectsRef} className="site-container pb-14 md:pb-20">
-        <h2 className="mb-4 text-[20px] font-normal uppercase tracking-[0.16em] text-[#000000] md:mb-4 md:text-[28px]">
+        <h2 className="mb-4 text-[20px] font-normal uppercase tracking-[0.16em] text-[#6B6B6B] md:mb-4 md:text-[28px]">
           Featured Projects
         </h2>
         <FeaturedCarousel items={assets.featuredProjects} type="project" />
       </section>
       <section ref={newsRef} className="site-container pb-8 md:pb-12">
-        <h2 className="mb-4 text-[24px] font-normal uppercase tracking-[0.16em] text-[#000000] md:mb-4 md:text-[28px]">
+        <h2 className="mb-4 text-[24px] font-normal uppercase tracking-[0.16em] text-[#6B6B6B] md:mb-4 md:text-[28px]">
           Featured News
         </h2>
         <FeaturedCarousel items={assets.featuredNews} type="news" />

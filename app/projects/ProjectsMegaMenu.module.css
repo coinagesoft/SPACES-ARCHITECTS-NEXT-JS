@@ -7,7 +7,7 @@
 .header {
     --pm-h: 96px;
     --pm-accent: #f59f2f;
-    --pm-ink: #111;
+    --pm-ink: #6b6b6b;
     --pm-muted: #9a9a9a;
     --pm-row: 28px; /* height of one dropdown row — the backdrop is sized from it */
     --pm-drop-shift: 24px; /* pulls the dropdown UP toward the menu labels (bigger = smaller top gap) */

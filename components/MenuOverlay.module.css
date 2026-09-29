@@ -53,6 +53,15 @@
     gap: 3rem;
 }
 
+/* Menu link colour (menu overlay only) */
+.menuColumn :global(.nav-link) {
+    color: #6b6b6b;
+}
+
+.menuColumn :global(.nav-link:hover) {
+    color: #fea50b;
+}
+
 @media (max-width: 1500px) {
     .topBar,
     .menuLayout {

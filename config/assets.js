@@ -78,6 +78,11 @@ const financialTimesFeature = assetImage("Featured News/featured-by-financial-ti
 const indexplusPanel = assetImage("Featured News/WhatsApp Image.jpeg");
 const archelloFeature = assetImage("Featured News/featured-by-archello.png");
 const designAsiaFeature = assetImage("Featured News/wadeasia.webp");
+const concreteHouseAgraFeature = assetImage("Featured News/concrete-house-agra.webp");
+const modernHouseDancingScreensFeature = assetImage("Featured News/modern-house-dancing-screens.webp");
+const designEssentiaFeature = assetImage("Featured News/design-essentia-india-april-june-2023.webp");
+const slenderHouse6x18Feature = assetImage("Featured News/6x18-slender-house-spaces-architects.webp");
+const urbanNestWafFeature = assetImage("Featured News/the-urban-nest-waf-highly-commended-2022.webp");
 const blogLegacyRestored = assetImage("blogs/A-Legacy-Restored.png");
 const blogPauseInWalledCity = assetImage("blogs/A-Pause-in-the-Walled-City.png");
 const blogHouseLandscape = assetImage("blogs/House-Becomes-a-Landscape.png");
@@ -456,19 +461,24 @@ export const assets = {
     ],
 
     // ---- Featured News (home-page carousel) ----
-    featuredNews: [
-        { name: "Dezeen Exclusive Feature", source: "Dezeen", image: dezeenFeature },
-        { name: "Architectural Digest India Feature", source: "AD", image: architecturalDigestFeature },
-        { name: "Gandhi Darshan Park Inauguration", source: "Press", image: gandhiDarshanInauguration },
-        { name: "Heritage Park Inauguration", source: "Press", image: heritageParkInauguration },
-        { name: "Featured by Habitus Living titled 'A House That Follows the Sun in Kochi'", source: "Habitus Living", image: habitusLivingFeature },
-        { name: "Featured by Rethinking the Future as one of the top architecture firms", source: "Rethinking the Future", image: rethinkingFeature },
-        { name: "Golden Haveli Inauguration", source: "Press", image: goldenHaveliInauguration },
-        { name: "Timeless Houses authored by Kapil Aggarwal", source: "Timeless Houses", image: timelessHousesFeature },
-        { name: "Featured by Financial Times as the 15 dreamiest homes on earth", source: "Financial Times", image: financialTimesFeature },
+      featuredNews: [
+        { name: "Dezeen Exclusive Feature", source: "Dezeen", image: dezeenFeature, href: "https://www.dezeen.com/2026/05/29/art-house-new-delhi-residence-intense-customisation/" },
+        { name: "Architectural Digest India Feature", source: "AD", image: architecturalDigestFeature, href: "https://www.architecturaldigest.in/story/this-34500-square-foot-kochi-home-is-full-of-stepped-gardens-terraces-and-courtyards-spaces-architects-ka/" },
+        { name: "Gandhi Darshan Park Inauguration", source: "Press", image: gandhiDarshanInauguration, href: "https://www.hindustantimes.com/photos/news/president-murmu-unveils-12-feet-high-statue-of-mahatma-gandhi-at-gandhi-vatika-101693818208295.html" },
+        { name: "Heritage Park Inauguration", source: "Press", image: heritageParkInauguration, href: "https://www.aninews.in/news/national/general-news/president-kovind-inaugurates-charti-lal-goel-heritage-park-in-old-delhi20220320233252/" },
+        { name: "Featured by Habitus Living titled 'A House That Follows the Sun in Kochi'", source: "Habitus Living", image: habitusLivingFeature, href: "https://www.habitusliving.com/projects/house-of-stepped-gardens-spaces-architects" },
+        { name: "Featured by Rethinking the Future as one of the top architecture firms", source: "Rethinking the Future", image: rethinkingFeature, href: "https://www.re-thinkingthefuture.com/article/best-architects-in-delhi-ncr/" },
+        { name: "Golden Haveli Inauguration", source: "Press", image: goldenHaveliInauguration, href: "https://www.architectandinteriorsindia.com/news/take-in-chandni-chowk-views-from-the-golden-haveli-with-eam-s-jaishankar" },
+        { name: "Timeless Houses authored by Kapil Aggarwal", source: "Timeless Houses", image: timelessHousesFeature, href: "https://www.stirworld.com/think-books-and-movies-book-release-timeless-houses-promoting-diversity-in-architecture" },
+        { name: "Featured by Financial Times as the 15 dreamiest homes on earth", source: "Financial Times", image: financialTimesFeature, href: "https://www.ft.com/content/3bc01f86-ad16-4901-8782-42a91f9a72ea" },
         { name: "Panellist in Indexplus design debate: Designing for Density", source: "Indexplus", image: indexplusPanel },
         { name: "Featured by Archello as one of the top 25 architecture firms", source: "Archello", image: archelloFeature },
-        // { name: "Featured by Design Asia Magazine as top 10 architectural firm", source: "Design Asia", image: designAsiaFeature },
+        { name: "Architectural House in Concrete Near the Taj Mahal", source: "AD Magazine France", image: concreteHouseAgraFeature, href: "https://www.admagazine.fr/article/maison-architecte-beton-taj-mahal" },
+        { name: "Modern House with Dancing Screens", source: "ArchDaily", image: modernHouseDancingScreensFeature, href: "https://www.archdaily.com/1020102/the-house-of-dancing-screens-spaces-architects-at-ka" },
+        { name: "Design Essentia India – April–June 2023", source: "Design Essentia", image: designEssentiaFeature, href: "https://designessentiamagazine.com/de-apr-jun-2023-edition/" },
+        { name: "6X18 Slender House – Spaces Architects", source: "Instagram", image: slenderHouse6x18Feature, href: "https://www.instagram.com/reel/DAYmKZgPxCf/" },
+        { name: "The Urban Nest – WAF Highly Commended 2022", source: "World Architecture Festival", image: urbanNestWafFeature },
+        // { name: "Featured by Design Asia Magazine as top 10 architectural firm", source: "Design Asia", image: designAsiaFeature, href: "https://designasiamagazine.com/top-10-architecture-firms-in-delhi/" },
     ],
 
     // ---- Featured In (press logo strip) ----

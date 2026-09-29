@@ -138,7 +138,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="bg-ink text-white">
+      <div className="text-white" style={{ backgroundColor: "#1f1f1f" }}>
         <div className={bottomBar}>
           <div className="flex gap-6">
             <Link href="#" className="hover:text-accent transition-colors">

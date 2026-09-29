@@ -15,7 +15,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ink: "#1c1c1c",       // primary text
+        ink: "#6b6b6b",       // primary text
         muted: "#6f6f6f",     // secondary / body copy
         faint: "#a9a9a9",     // footer nav / disabled
         accent: "#fea50b",    // brand orange (@ka, links, CTAs)
