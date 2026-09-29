@@ -41,7 +41,11 @@ export default function HeroSlider({ projects }) {
     const activeProject = slides[activeIndex] ?? slides[0];
 
     return (
-        <section className="relative w-full h-screen min-h-screen overflow-hidden md:h-screen md:min-h-screen max-md:h-[100dvh] max-md:min-h-[100dvh]">
+        <section
+            className="relative block w-full h-screen min-h-screen overflow-hidden"
+            // Mobile only: fill exactly the visible screen (address bar shown or hidden).
+            style={isMobile ? { height: "100dvh", minHeight: "100dvh" } : undefined}
+        >
             {slides.map((project, index) => {
                 const imageSrc = isMobile ? project.mobileImage ?? project.image : project.image;
 
