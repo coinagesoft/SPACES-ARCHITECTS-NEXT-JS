@@ -43,8 +43,8 @@ export default function HeroSlider({ projects }) {
     return (
         <section
             className="relative block w-full h-screen min-h-screen overflow-hidden"
-            // Mobile only: fill exactly the visible screen (address bar shown or hidden).
-            style={isMobile ? { height: "100dvh", minHeight: "100dvh" } : undefined}
+            // Mobile only: hero is 110vh tall.
+            style={isMobile ? { height: "110vh", minHeight: "110vh" } : undefined}
         >
             {slides.map((project, index) => {
                 const imageSrc = isMobile ? project.mobileImage ?? project.image : project.image;
@@ -65,8 +65,11 @@ export default function HeroSlider({ projects }) {
             {/* Dark overlay */}
             <div className="absolute inset-0 bg-black/20" />
 
-            {/* Hero title */}
-            <div className="absolute bottom-10 left-0 right-0 site-container">
+            {/* Hero title (on mobile, lifted by the extra 10vh so it stays on the first screen) */}
+            <div
+                className="absolute bottom-10 left-0 right-0 site-container"
+                style={isMobile ? { bottom: "calc(10vh + 2.5rem)" } : undefined}
+            >
                 <Link
                     href={`/projects/${activeProject.id}`}
                     className="inline-block transition-opacity duration-200 hover:opacity-80"
