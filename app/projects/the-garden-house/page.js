@@ -6,7 +6,7 @@ const photo1 = assetImage("projects/THE GARDEN HOUSE/3_4/1.webp");
 const photo2 = assetImage("projects/THE GARDEN HOUSE/3_4/2.webp");
 const photo3 = assetImage("projects/THE GARDEN HOUSE/3_4/3.webp");
 const photo4 = assetImage("projects/THE GARDEN HOUSE/3_4/4.webp");
-const Orange = ({ children }) => <span style={{ color: "#C1591C" }}>{children}</span>;
+const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
 export const metadata = { title: "The Garden House — Spaces Architects@ka" };
 

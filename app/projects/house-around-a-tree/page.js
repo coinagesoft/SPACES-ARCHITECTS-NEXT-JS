@@ -28,7 +28,7 @@ const photo27 = assetImage("projects/HOUSE-AROUND-A-TREE/3_4/27.webp");
 const photo28 = assetImage("projects/HOUSE-AROUND-A-TREE/3_4/28.webp");
 const coverPhoto1 = assetImage("projects/HOUSE-AROUND-A-TREE/cover/COVER.webp");
 const coverPhoto2 = assetImage("projects/HOUSE-AROUND-A-TREE/cover/HERO.webp");
-const Orange = ({ children }) => <span style={{ color: "#C1591C" }}>{children}</span>;
+const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
 export const metadata = { title: "The House around a Tree — Spaces Architects@ka" };
 export default function TheHouseAroundATreePage() {

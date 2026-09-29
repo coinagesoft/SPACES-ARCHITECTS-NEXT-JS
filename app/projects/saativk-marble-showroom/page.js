@@ -17,7 +17,7 @@ const photo13 = assetImage("projects/SAATIVK-MARBLE-SHOWROOM/3_4/13.webp");
 const photo14 = assetImage("projects/SAATIVK-MARBLE-SHOWROOM/3_4/14.webp");
 const photo15 = assetImage("projects/SAATIVK-MARBLE-SHOWROOM/3_4/15.webp");
 const coverPhoto1 = assetImage("projects/SAATIVK-MARBLE-SHOWROOM/cover/COVER.webp");
-const Orange = ({ children }) => <span style={{ color: "#C1591C" }}>{children}</span>;
+const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
 export const metadata = { title: "Satvik Marble Showroom — Spaces Architects@ka" };
 export default function SatvikMarbleShowroomPage() {

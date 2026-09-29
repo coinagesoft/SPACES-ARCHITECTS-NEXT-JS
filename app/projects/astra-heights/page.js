@@ -10,7 +10,7 @@ const photo6 = assetImage("projects/ASTRA-HEIGHTS/3_4/6.webp");
 const photo7 = assetImage("projects/ASTRA-HEIGHTS/3_4/7.webp");
 const photo8 = assetImage("projects/ASTRA-HEIGHTS/3_4/8.webp");
 const photo9 = assetImage("projects/ASTRA-HEIGHTS/3_4/9.webp");
-const Orange = ({ children }) => <span style={{ color: "#C1591C" }}>{children}</span>;
+const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
 export const metadata = { title: "Astra Heights — Spaces Architects@ka" };
 export default function AstraHeightsPage() {

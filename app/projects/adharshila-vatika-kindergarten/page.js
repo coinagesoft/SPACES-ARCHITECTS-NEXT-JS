@@ -27,7 +27,7 @@ const akhilBakhshi161 = assetImage("projects/ADHARSHILA-VATIKA-KINDERGARTEN/3_4/
 const child1 = assetImage("projects/ADHARSHILA-VATIKA-KINDERGARTEN/3_4/child_1.webp");
 const child2 = assetImage("projects/ADHARSHILA-VATIKA-KINDERGARTEN/3_4/child_2.webp");
 const coverPhoto2 = assetImage("projects/ADHARSHILA-VATIKA-KINDERGARTEN/cover/HERO IMAGE.webp");
-const Orange = ({ children }) => <span style={{ color: "#C1591C" }}>{children}</span>;
+const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
 export const metadata = { title: "Adharshila Vatika Kindergarten — Spaces Architects@ka" };
 import MoreProjects from "@/components/MoreProjects";

@@ -12,7 +12,7 @@ const photo8 = assetImage("projects/TOY-BANK-MUSEUM/3_4/8.webp");
 const photo9 = assetImage("projects/TOY-BANK-MUSEUM/3_4/9.webp");
 const photo10 = assetImage("projects/TOY-BANK-MUSEUM/3_4/10.webp");
 const heroPhoto = assetImage("projects/TOY-BANK-MUSEUM/cover/HERO.webp");
-const Orange = ({ children }) => <span style={{ color: "#C1591C" }}>{children}</span>;
+const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
 export const metadata = { title: "Toybank Museum — Spaces Architects@ka" };
 export default function ToybankMuseumPage() {

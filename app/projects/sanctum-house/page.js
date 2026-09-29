@@ -16,7 +16,7 @@ const photo11 = assetImage("projects/SANCTUM-HOUSE/3_4/11.webp");
 const photo12 = assetImage("projects/SANCTUM-HOUSE/3_4/12.webp");
 const photo13 = assetImage("projects/SANCTUM-HOUSE/3_4/13.webp");
 const heroPhoto = assetImage("projects/SANCTUM-HOUSE/cover/HERO.webp");
-const Orange = ({ children }) => <span style={{ color: "#C1591C" }}>{children}</span>;
+const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
 export const metadata = { title: "Sanctum House — Spaces Architects@ka" };
 

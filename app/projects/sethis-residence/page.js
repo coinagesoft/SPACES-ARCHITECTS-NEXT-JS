@@ -14,7 +14,7 @@ const photo10 = assetImage("projects/SETHIS-RESIDENCE/3_4/10.webp");
 const photo11 = assetImage("projects/SETHIS-RESIDENCE/3_4/11.webp");
 const photo12 = assetImage("projects/SETHIS-RESIDENCE/3_4/12.webp");
 const heroPhoto = assetImage("projects/SETHIS-RESIDENCE/cover/HERO.webp");
-const Orange = ({ children }) => <span style={{ color: "#C1591C" }}>{children}</span>;
+const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
 export const metadata = { title: "Sethi's Residence — Spaces Architects@ka" };
 export default function SethisResidencePage() {

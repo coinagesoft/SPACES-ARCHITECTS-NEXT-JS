@@ -9,7 +9,7 @@ const photo4 = assetImage("projects/MARBLE-CITY-EXHIBITION-STALL/3_4/4.webp");
 const photo5 = assetImage("projects/MARBLE-CITY-EXHIBITION-STALL/3_4/5.webp");
 // const photo6 = assetImage("projects/MARBLE-CITY-EXHIBITION-STALL/3_4/6.webp");
 const photo7 = assetImage("projects/MARBLE-CITY-EXHIBITION-STALL/3_4/7.webp");
-const Orange = ({ children }) => <span style={{ color: "#C1591C" }}>{children}</span>;
+const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
 export const metadata = { title: "Marble City Exhibition Stall — Spaces Architects@ka" };
 

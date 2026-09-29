@@ -14,7 +14,7 @@ const photo10 = assetImage("projects/FUIDIC-OFFICE/3_4/10.webp");
 const photo11 = assetImage("projects/FUIDIC-OFFICE/3_4/11.webp");
 const photo12 = assetImage("projects/FUIDIC-OFFICE/3_4/12.webp");
 const coverPhoto1 = assetImage("projects/FUIDIC-OFFICE/cover/Cover Image.webp");
-const Orange = ({ children }) => <span style={{ color: "#C1591C" }}>{children}</span>;
+const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
 export const metadata = { title: "Fluidic Office — Spaces Architects@ka" };
 export default function FluidicOfficePage() {

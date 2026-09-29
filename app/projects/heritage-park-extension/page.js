@@ -13,7 +13,7 @@ const photo6 = assetImage("projects/HERITAGE-PARK-EXTENSION/3_4/6.webp");
 const photo7 = assetImage("projects/HERITAGE-PARK-EXTENSION/3_4/7.webp");
 const photo8 = assetImage("projects/HERITAGE-PARK-EXTENSION/3_4/8.webp");
 const coverPhoto1 = assetImage("projects/HERITAGE-PARK-EXTENSION/cover/COVER.webp");
-const Orange = ({ children }) => <span style={{ color: "#C1591C" }}>{children}</span>;
+const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
 export const metadata = { title: "Extension of Heritage Park — Spaces Architects@ka" };
 export default function ExtensionOfHeritageParkPage() {

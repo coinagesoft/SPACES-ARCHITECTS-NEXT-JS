@@ -17,7 +17,7 @@ const photo14 = assetImage("projects/JAINS-RESIDENCE/3_4/14.webp");
 const photo15 = assetImage("projects/JAINS-RESIDENCE/3_4/15.webp");
 const photo16 = assetImage("projects/JAINS-RESIDENCE/3_4/16.webp");
 const heroPhoto = assetImage("projects/JAINS-RESIDENCE/cover/HERO.webp");
-const Orange = ({ children }) => <span style={{ color: "#C1591C" }}>{children}</span>;
+const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
 export const metadata = { title: "Jain's Residence — Spaces Architects@ka" };
 export default function JainsResidencePage() {

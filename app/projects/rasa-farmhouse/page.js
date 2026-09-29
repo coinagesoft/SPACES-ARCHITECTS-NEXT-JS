@@ -11,7 +11,7 @@ const photo6 = assetImage("projects/RASA-FARMHOUSE/photographs/Final (6).webp");
 const photo7 = assetImage("projects/RASA-FARMHOUSE/photographs/Final (7).webp");
 const photo8 = assetImage("projects/RASA-FARMHOUSE/photographs/Final (8).webp");
 const photo9 = assetImage("projects/RASA-FARMHOUSE/photographs/Final (9).webp");
-const Orange = ({ children }) => <span style={{ color: "#C1591C" }}>{children}</span>;
+const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
 export const metadata = { title: "Rasa Farmhouse — Spaces Architects@ka" };
 

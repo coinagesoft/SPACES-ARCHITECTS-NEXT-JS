@@ -8,7 +8,7 @@ const photo4 = assetImage("projects/BANDIKUI-RAILWAY-STATION/3_4/4.webp");
 const photo5 = assetImage("projects/BANDIKUI-RAILWAY-STATION/3_4/5.webp");
 const photo6 = assetImage("projects/BANDIKUI-RAILWAY-STATION/3_4/6.webp");
 const coverPhoto2 = assetImage("projects/BANDIKUI-RAILWAY-STATION/cover/HERO.webp");
-const Orange = ({ children }) => <span style={{ color: "#C1591C" }}>{children}</span>;
+const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
 export const metadata = { title: "Bandikui Railway Station — Spaces Architects@ka" };
 export default function BandikuiRailwayStationPage() {

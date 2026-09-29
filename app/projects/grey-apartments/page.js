@@ -23,7 +23,7 @@ const photo20 = assetImage("projects/GREY-APARTMENTS/3_4/20.webp");
 const photo21 = assetImage("projects/GREY-APARTMENTS/3_4/21.webp");
 const photo22 = assetImage("projects/GREY-APARTMENTS/3_4/22.webp");
 const coverPhoto1 = assetImage("projects/GREY-APARTMENTS/cover/COVER.webp");
-const Orange = ({ children }) => <span style={{ color: "#C1591C" }}>{children}</span>;
+const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
 export const metadata = { title: "Grey Apartment — Spaces Architects@ka" };
 export default function GreyApartmentPage() {

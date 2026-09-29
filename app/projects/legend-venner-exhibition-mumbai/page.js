@@ -15,7 +15,7 @@ const photo11 = assetImage("projects/LEGEND-VENNER-EXHIBITION-MUMBAI/3_4/11.webp
 const photo12 = assetImage("projects/LEGEND-VENNER-EXHIBITION-MUMBAI/3_4/12.webp");
 const photo13 = assetImage("projects/LEGEND-VENNER-EXHIBITION-MUMBAI/3_4/13.webp");
 const photo14 = assetImage("projects/LEGEND-VENNER-EXHIBITION-MUMBAI/3_4/14.webp");
-const Orange = ({ children }) => <span style={{ color: "#C1591C" }}>{children}</span>;
+const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
 export const metadata = { title: "Legend Veneer Exhibition Stall — Spaces Architects@ka" };
 export default function LegendVeneerExhibitionMumbaiPage() {

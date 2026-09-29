@@ -15,7 +15,7 @@ const photo11 = assetImage("projects/COLOR-COURT/3_4/11.webp");
 const photo12 = assetImage("projects/COLOR-COURT/3_4/12.webp");
 const photo13 = assetImage("projects/COLOR-COURT/3_4/13.webp");
 const photo14 = assetImage("projects/COLOR-COURT/3_4/14.webp");
-const Orange = ({ children }) => <span style={{ color: "#C1591C" }}>{children}</span>;
+const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
 export const metadata = { title: "The Colour Court — Spaces Architects@ka" };
 export default function ColourCourtPage() {

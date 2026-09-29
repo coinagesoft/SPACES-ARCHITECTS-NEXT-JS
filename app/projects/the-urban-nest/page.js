@@ -13,7 +13,7 @@ const photo7 = assetImage("projects/THE-URBAN-NEST/3_4/7.webp");
 const photo8 = assetImage("projects/THE-URBAN-NEST/3_4/8.webp");
 const photo9 = assetImage("projects/THE-URBAN-NEST/3_4/9.webp");
 const photo10 = assetImage("projects/THE-URBAN-NEST/3_4/10.webp");
-const Orange = ({ children }) => <span style={{ color: "#C1591C" }}>{children}</span>;
+const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
 export const metadata = { title: "The Urban Nest — Spaces Architects@ka" };
 

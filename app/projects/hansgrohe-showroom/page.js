@@ -14,7 +14,7 @@ const photo10 = assetImage("projects/HANSGROHE-SHOWROOM/3_4/10.webp");
 const photo11 = assetImage("projects/HANSGROHE-SHOWROOM/3_4/11.webp");
 const photo12 = assetImage("projects/HANSGROHE-SHOWROOM/3_4/12.webp");
 const heroPhoto = assetImage("projects/HANSGROHE-SHOWROOM/cover/HERO.webp");
-const Orange = ({ children }) => <span style={{ color: "#C1591C" }}>{children}</span>;
+const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
 export const metadata = { title: "Hansgrohe Showroom — Spaces Architects@ka" };
 export default function HansgroheShowroomPage() {

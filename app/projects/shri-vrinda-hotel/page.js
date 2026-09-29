@@ -20,7 +20,7 @@ const photo15 = assetImage("projects/SHRI-VRINDA-HOTEL/3_4/15.webp");
 const photo16 = assetImage("projects/SHRI-VRINDA-HOTEL/3_4/16.webp");
 const photo17 = assetImage("projects/SHRI-VRINDA-HOTEL/3_4/17.webp");
 const photo18 = assetImage("projects/SHRI-VRINDA-HOTEL/3_4/18.webp");
-const Orange = ({ children }) => <span style={{ color: "#C1591C" }}>{children}</span>;
+const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
 export const metadata = { title: "Shri Vrinda Hotel — Spaces Architects@ka" };
 

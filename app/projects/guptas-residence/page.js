@@ -14,7 +14,7 @@ const photo11 = assetImage("projects/GUPTAS-RESIDENCE/3_4/11.webp");
 const photo12 = assetImage("projects/GUPTAS-RESIDENCE/3_4/12.webp");
 const coverPhoto1 = assetImage("projects/GUPTAS-RESIDENCE/cover/COVER (LANDSCAPE CUT).webp");
 const coverPhoto2 = assetImage("projects/GUPTAS-RESIDENCE/cover/HERO.webp");
-const Orange = ({ children }) => <span style={{ color: "#C1591C" }}>{children}</span>;
+const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
 export const metadata = { title: "Gupta's Residence — Spaces Architects@ka" };
 export default function GuptasResidencePage() {

@@ -7,6 +7,8 @@ const topSection = "site-container py-9 md:py-10";
 const bottomBar =
   "site-container flex flex-wrap items-center justify-between gap-4 py-3 text-[10px] tracking-wide uppercase";
 
+const topHeading =
+  "mb-6 text-[14px] leading-4 tracking-widest2 uppercase text-muted";
 const mainHeading =
   "mb-[21px] whitespace-nowrap text-[14px] leading-4 tracking-[0.12em] uppercase text-muted md:tracking-widest2";
 const subLink =
@@ -20,43 +22,51 @@ export default function Footer() {
   return (
     <footer className="border-t border-line mt-16">
       <div className={topSection}>
-        <p className="mb-6 text-[14px] leading-4 tracking-widest2 uppercase text-accent">
-          Quick Link
-        </p>
-
         <div className="flex flex-col gap-10 md:flex-row md:items-start">
-          <div className="grid grid-cols-2 gap-x-4 gap-y-8 md:w-[50rem] md:grid-cols-4 md:gap-x-14 md:gap-y-0">
-            {site.footerColumns.map((col, i) => (
-              <div key={col.title || i}>
-                {col.title ? (
-                  <>
-                    <p className={mainHeading}>{col.title}</p>
-                    <ul className="space-y-[7px]">
+          {/* Left: Quick Link + link columns */}
+          <div>
+            <p className={topHeading}>
+              <span className="text-accent">Quick</span> Link
+            </p>
+
+            <div className="grid grid-cols-2 gap-x-4 gap-y-8 md:w-[50rem] md:grid-cols-4 md:gap-x-14 md:gap-y-0">
+              {site.footerColumns.map((col, i) => (
+                <div key={col.title || i}>
+                  {col.title ? (
+                    <>
+                      <p className={mainHeading}>{col.title}</p>
+                      <ul className="space-y-[7px]">
+                        {col.links.map((link) => (
+                          <li key={link.label}>
+                            <Link href={link.href} className={subLink}>
+                              {link.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  ) : (
+                    <ul className="space-y-[21px]">
                       {col.links.map((link) => (
                         <li key={link.label}>
-                          <Link href={link.href} className={subLink}>
+                          <Link href={link.href} className={mainLink}>
                             {link.label}
                           </Link>
                         </li>
                       ))}
                     </ul>
-                  </>
-                ) : (
-                  <ul className="space-y-[21px]">
-                    {col.links.map((link) => (
-                      <li key={link.label}>
-                        <Link href={link.href} className={mainLink}>
-                          {link.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            ))}
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
 
+          {/* Right: Follow Us + icons + Get in Touch */}
           <div className="md:ml-auto md:mr-10 md:w-[12rem]">
+            <p className="mb-6 text-[14px] leading-4 tracking-widest2 uppercase text-accent">
+              Follow Us
+            </p>
+
             <div className="flex gap-6">
               {site.social.map((s) => (
                 <a
@@ -72,18 +82,11 @@ export default function Footer() {
               ))}
             </div>
 
-            <ul className="mt-8 space-y-4">
-              <li>
-                <Link href="/contact" className={ctaLink}>
-                  Get in Touch
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className={ctaLink}>
-                  Join Us
-                </Link>
-              </li>
-            </ul>
+            <div className="mt-8">
+              <Link href="/contact" className={ctaLink}>
+                Get in Touch
+              </Link>
+            </div>
           </div>
         </div>
       </div>

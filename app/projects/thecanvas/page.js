@@ -13,7 +13,7 @@ const photo9 = assetImage("projects/THECANVAS/3_4/9.webp");
 const photo10 = assetImage("projects/THECANVAS/3_4/10.webp");
 const photo11 = assetImage("projects/THECANVAS/3_4/11.webp");
 const heroPhoto = assetImage("projects/THECANVAS/cover/HERO.webp");
-const Orange = ({ children }) => <span style={{ color: "#C1591C" }}>{children}</span>;
+const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
 export const metadata = { title: "The Canvas — Spaces Architects@ka" };
 export default function TheCanvasPage() {

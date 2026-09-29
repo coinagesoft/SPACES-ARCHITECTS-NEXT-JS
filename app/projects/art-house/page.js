@@ -11,7 +11,7 @@ const photoNumbers = [
 ];
 const photos = photoNumbers.map((n) => assetImage("projects/ART_HOUSE/3_4/" + n + ".webp"));
 
-const Orange = ({ children }) => <span style={{ color: "#C1591C" }}>{children}</span>;
+const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
 export const metadata = { title: "Art House — Spaces Architects@ka" };
 

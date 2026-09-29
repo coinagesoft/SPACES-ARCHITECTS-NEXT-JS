@@ -11,7 +11,7 @@ const photo6 = assetImage("projects/SOLANCE-APARTMENT/3_4/6.webp");
 const photo7 = assetImage("projects/SOLANCE-APARTMENT/3_4/7.webp");
 const photo8 = assetImage("projects/SOLANCE-APARTMENT/3_4/8.webp");
 const heroPhoto = assetImage("projects/SOLANCE-APARTMENT/cover/HERO.webp");
-const Orange = ({ children }) => <span style={{ color: "#C1591C" }}>{children}</span>;
+const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
 export const metadata = { title: "Solance Apartment — Spaces Architects@ka" };
 

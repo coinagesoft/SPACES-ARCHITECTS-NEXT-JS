@@ -22,7 +22,7 @@ const photo19 = assetImage("projects/HOUSE-OF-CURVES/3_4/19.webp");
 const photo20 = assetImage("projects/HOUSE-OF-CURVES/3_4/20.webp");
 const coverPhoto1 = assetImage("projects/HOUSE-OF-CURVES/cover/COVER.webp");
 const coverPhoto2 = assetImage("projects/HOUSE-OF-CURVES/cover/HERO.webp");
-const Orange = ({ children }) => <span style={{ color: "#C1591C" }}>{children}</span>;
+const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
 export const metadata = { title: "House of Curves — Spaces Architects@ka" };
 export default function HouseOfCurvesPage() {

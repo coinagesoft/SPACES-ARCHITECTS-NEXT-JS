@@ -10,7 +10,7 @@ const photo6 = assetImage("projects/ALAYA-RESIDENCE/3_4/6_300dpi.webp");
 const photo7 = assetImage("projects/ALAYA-RESIDENCE/3_4/7_300dpi.webp");
 const photo8 = assetImage("projects/ALAYA-RESIDENCE/3_4/8_300dpi.webp");
 const photo9 = assetImage("projects/ALAYA-RESIDENCE/3_4/9_300dpi.webp");
-const Orange = ({ children }) => <span style={{ color: "#C1591C" }}>{children}</span>;
+const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
 export const metadata = { title: "Alaya Residence — Spaces Architects@ka" };
 export default function AlayaResidencePage() {
