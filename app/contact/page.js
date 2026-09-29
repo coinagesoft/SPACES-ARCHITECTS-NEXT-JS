@@ -15,6 +15,7 @@ const initialForm = {
   designation: "",
   message: "",
   purpose: "",
+  website: "", // honeypot: hidden from real visitors, bots tend to fill it
 };
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -55,7 +56,8 @@ export default function ContactPage() {
   const [form, setForm] = useState(initialForm);
   const [errors, setErrors] = useState({});
   const [touched, setTouched] = useState({});
-  const [status, setStatus] = useState("idle"); // idle | sent
+  const [status, setStatus] = useState("idle"); // idle | sending | sent | error
+  const [serverError, setServerError] = useState("");
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -71,8 +73,10 @@ export default function ContactPage() {
     setErrors((prev) => ({ ...prev, [name]: validateField(name, value) }));
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
+    if (status === "sending") return;
+
     const validationErrors = validateAll(form);
     setErrors(validationErrors);
     setTouched(
@@ -84,13 +88,32 @@ export default function ContactPage() {
       return;
     }
 
-    // No backend is wired up yet — replace this with an API call
-    // (e.g. POST to /api/contact) once you have somewhere to send it.
-    console.log("Contact form submitted:", form);
-    setStatus("sent");
-    setForm(initialForm);
-    setTouched({});
-    setErrors({});
+    setStatus("sending");
+    setServerError("");
+
+    try {
+      // The API route (app/api/contact/route.js) emails the enquiry.
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok || !result.ok) {
+        setServerError(result.error || "Something went wrong. Please try again.");
+        setStatus("error");
+        return;
+      }
+
+      setStatus("sent");
+      setForm(initialForm);
+      setTouched({});
+      setErrors({});
+    } catch {
+      setServerError("Network error. Please check your connection and try again.");
+      setStatus("error");
+    }
   }
 
   function fieldClass(name) {
@@ -265,14 +288,32 @@ export default function ContactPage() {
               )}
             </div>
 
-            <button type="submit" className={styles.submit}>
-              Submit
+            {/* Honeypot (spam trap): invisible to visitors, do not remove */}
+            <input
+              type="text"
+              name="website"
+              value={form.website}
+              onChange={handleChange}
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+              style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }}
+            />
+
+            <button type="submit" className={styles.submit} disabled={status === "sending"}>
+              {status === "sending" ? "Sending..." : "Submit"}
             </button>
 
             {status === "sent" && (
               <p className={styles.successNote} role="status">
                 Thanks — we&apos;ve received your message and will be in
                 touch shortly.
+              </p>
+            )}
+
+            {status === "error" && (
+              <p className={styles.errorText} role="alert">
+                {serverError}
               </p>
             )}
           </form>

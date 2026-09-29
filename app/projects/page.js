@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useState } from "react";
 import Footer from "@/components/Footer";
 import { assets } from "@/assets";
 import JustifiedGallery from "./JustifiedGallery"; // original hand-built grid ("All Projects")
@@ -11,8 +11,13 @@ import styles from "./page.module.css";
 
 const SCROLL_KEY = "projects-scroll";
 
+// useLayoutEffect runs before the browser paints (no flash of the page top).
+// On the server it doesn't exist, so fall back to useEffect there.
+const useIsoLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect;
+
 export default function ProjectsPage() {
   const [active, setActive] = useState("all");
+  const [restoring, setRestoring] = useState(false);
   const gallery = assets.projectGallery;
 
   const syncActiveCategory = useCallback(() => {
@@ -61,29 +66,44 @@ export default function ProjectsPage() {
     return () => document.removeEventListener("click", onClick, true);
   }, []);
 
-  // ...and put them back there when they return.
-  useEffect(() => {
+  // ...and put them back there when they return: instantly, before paint,
+  // with the gallery hidden until the position is restored (no visible scrolling).
+  useIsoLayoutEffect(() => {
     let saved = null;
     try {
       saved = JSON.parse(sessionStorage.getItem(SCROLL_KEY));
     } catch (e) {}
-    sessionStorage.removeItem(SCROLL_KEY);
 
     // ignore missing or stale (older than 10 minutes) positions
-    if (!saved || Date.now() - saved.t > 10 * 60 * 1000) return;
+    if (!saved || Date.now() - saved.t > 10 * 60 * 1000) {
+      sessionStorage.removeItem(SCROLL_KEY);
+      return;
+    }
 
     const previous = window.history.scrollRestoration;
     window.history.scrollRestoration = "manual";
+    setRestoring(true);
 
     let tries = 0;
     let timer;
+
+    const finish = () => {
+      // only clear the saved position once we are done (React Strict Mode
+      // runs this effect twice in dev, so it must survive the first run)
+      sessionStorage.removeItem(SCROLL_KEY);
+      setRestoring(false);
+    };
+
     const restore = () => {
-      window.scrollTo(0, saved.y);
+      // "instant" overrides the site's `scroll-behavior: smooth`
+      window.scrollTo({ top: saved.y, left: 0, behavior: "instant" });
       tries += 1;
-      // keep trying until the page is tall enough to reach the saved spot
-      if (Math.abs(window.scrollY - saved.y) > 4 && tries < 40) {
-        timer = window.setTimeout(restore, 50);
+      if (Math.abs(window.scrollY - saved.y) <= 4 || tries >= 40) {
+        finish();
+        return;
       }
+      // page not tall enough yet (gallery still laying out): try again shortly
+      timer = window.setTimeout(restore, 50);
     };
     restore();
 
@@ -107,7 +127,10 @@ export default function ProjectsPage() {
     <main>
       <ProjectsMegaMenu active={active} onChange={handleCategoryChange} />
 
-      <section className={`site-container ${styles.gallery}`}>
+      <section
+        className={`site-container ${styles.gallery}`}
+        style={{ visibility: restoring ? "hidden" : "visible" }}
+      >
         {active === "all" ? (
           <JustifiedGallery items={gallery} />
         ) : (
