@@ -1,15 +1,8 @@
-import Image from "next/image";
-import SiteChrome from "@/components/SiteChrome";
-import Footer from "@/components/Footer";
-import MoreProjects from "@/components/MoreProjects";
-import ParallaxHeroImage from "@/components/ParallaxHeroImage";
-import styles from "./page.module.css";
+import ProjectDetailPage from "../ProjectDetailPage";
 import { assetImage } from "@/config/assets";
-import ShareIcons from "@/components/ShareIcons";
 
-// Hero image from projects/THE-STEPWELL/cover
-const heroImage = assetImage("projects/THE-STEPWELL/cover/COVER.webp");
-// Project photographs from projects/THE-STEPWELL/3_4
+const hero = assetImage("projects/THE-STEPWELL/cover/COVER.webp");
+
 const img1 = assetImage("projects/THE-STEPWELL/3_4/1.webp");
 const img2 = assetImage("projects/THE-STEPWELL/3_4/2.webp");
 const img3 = assetImage("projects/THE-STEPWELL/3_4/3.webp");
@@ -27,180 +20,52 @@ const img14 = assetImage("projects/THE-STEPWELL/3_4/14.webp");
 const img15 = assetImage("projects/THE-STEPWELL/3_4/15.webp");
 const img16 = assetImage("projects/THE-STEPWELL/3_4/16.webp");
 
-export const metadata = {
-  title: "The Stepwell — Spaces Architects@ka",
-};
+const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-// All content for this project lives right here — edit freely.
-const details = {
-  Project: "Oval – The Stepwell",
-  Location: "Rajasthan",
-  Client: "Ministry of Culture",
-  Status: "Conceptual",
-};
-
-const ratio = (img) => img.width / img.height;
-
-const gallery = [
-  { type: "full", image: img1 },
-  { type: "pair", images: [img2, img3] },
-  { type: "full", image: img4 },
-  { type: "pair", images: [img5, img6] },
-  { type: "split", large: img16, stack: [img7, img8] },
-  { type: "full", image: img9 },
-  { type: "pair", images: [img10, img11] },
-  { type: "pair", images: [img12, img13] },
-  { type: "pair", images: [img14, img15] },
-];
+export const metadata = { title: "The Stepwell — Spaces Architects@ka" };
 
 export default function TheStepwellPage() {
   return (
-    <>
-      <main>
-        <SiteChrome dark />
-
-        <ParallaxHeroImage
-          className={styles.hero}
-          imageClassName={styles.heroImage}
-          src={heroImage}
-          alt="The Stepwell"
-        >
-          <div className={`site-container ${styles.heroTextWrap}`}>
-            <div className={styles.heroText}>
-              <h1>The Stepwell</h1>
-              <p>Rajasthan</p>
-            </div>
-          </div>
-        </ParallaxHeroImage>
-
-        {/* Details + description */}
-        <section className={`site-container ${styles.infoSection}`}>
-          <div className={styles.infoSidebar}>
-            <div>
-              <h3>Project Details</h3>
-              <dl>
-                {Object.entries(details).map(([label, value]) => (
-                  <div key={label}>
-                    <dt>{label}:</dt> <dd>{value}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
-          </div>
-
-          <div className={styles.infoBody}>
-            <p>
-              India’s architectural identity is deeply rooted in its heritage, yet the deterioration and inaccessibility of historic structures threaten this cultural continuity. The Oval draws inspiration from <span className={styles.highlight}>Rajasthan and Gujarat’s stepwells</span>, recognising their historic role in community building, cultural exchange, and supporting flora and fauna, while reinterpreting their essence through a contemporary, sustainable lens.
-            </p>
-
-            <p>
-              Inspired by the stepped geometry of traditional stepwells, the design creates a <span className={styles.highlight}>fluid play of levels</span> that naturally divides the expansive space into multiple functions without creating a sense of enclosure. The resulting sequence of levels and spaces offers varied public experiences while creating opportunities for <span className={styles.highlight}>tourism, cultural engagement and economic growth</span> through museums, galleries and public functions.
-            </p>
-
-            <p>
-              The form generates distinctive <span className={styles.highlight}>frustum-like curves</span>, conceived as a canvas for light and sound shows. Designed as a public destination, the Oval incorporates an open-air theatre, courtyard, museums, galleries, sky-viewing deck, inner stepwell seating and cafeteria. A <span className={styles.highlight}>central glass lift</span> becomes a viewing element, offering a <span className={styles.highlight}>360-degree dynamic view</span> of the vertical vista.
-            </p>
-
-            <p>
-              A restrained material palette combines the traditional character of <span className={styles.highlight}>sandstone and water</span> with the contemporary language of concrete and green architecture. Water and vegetation further enhance the atmosphere and experience.
-            </p>
-
-            <p>
-              The Oval is envisioned as a <span className={styles.highlight}>contemporary revival of the stepwell</span>, transforming its architectural and cultural legacy into an accessible public destination while widening the horizons for tourism and reconnecting contemporary India with its heritage.
-            </p>
-          </div>
-        </section>
-
-        {/* Gallery */}
-        <section className={`site-container ${styles.gallery}`}>
-          {gallery.map((block, i) => {
-            if (block.type === "full") {
-              return (
-                <div key={i} className={styles.galleryFull}>
-                  <Image
-                    src={block.image}
-                    alt="The Stepwell"
-                    sizes="100vw"
-                    className={styles.galleryImg}
-                  />
-                </div>
-              );
-            }
-
-            if (block.type === "split" || block.type === "split-reverse") {
-              const isReverse = block.type === "split-reverse";
-              return (
-                <div
-                  key={i}
-                  className={`${styles.gallerySplit} ${isReverse ? styles.gallerySplitReverse : ""}`}
-                >
-                  <div
-                    className={styles.gallerySplitLarge}
-                    style={{ "--ratio": ratio(block.large) }}
-                  >
-                    <Image
-                      src={block.large}
-                      alt="The Stepwell"
-                      fill
-                      sizes="(min-width: 768px) 48vw, 100vw"
-                      className={styles.galleryImgFit}
-                    />
-                  </div>
-                  <div className={styles.gallerySplitStack}>
-                    {block.stack.map((src, j) => (
-                      <div
-                        key={j}
-                        className={styles.gallerySplitStackItem}
-                        style={{ "--ratio": ratio(src) }}
-                      >
-                        <Image
-                          src={src}
-                          alt="The Stepwell"
-                          fill
-                          sizes="(min-width: 768px) 48vw, 100vw"
-                          className={styles.galleryImgFit}
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              );
-            }
-
-            return (
-              <div key={i} className={styles.galleryPair}>
-                {block.images.map((src, j) => (
-                  <div
-                    key={j}
-                    className={styles.galleryPairItem}
-                    style={{ "--ratio": ratio(src) }}
-                  >
-                    <Image
-                      src={src}
-                      alt="The Stepwell"
-                      fill
-                      sizes="(min-width: 768px) 48vw, 100vw"
-                      className={styles.galleryImgFit}
-                    />
-                  </div>
-                ))}
-              </div>
-            );
-          })}
-        </section>
-
-        {/* Share */}
-        <section className={styles.share}>
-          <p>Share</p>
-          <div className={styles.shareIcons}>
-            <ShareIcons />
-          </div>
-        </section>
-
-        <MoreProjects currentId="the-stepwell" />
-      </main>
-
-      <Footer />
-    </>
+    <ProjectDetailPage
+      currentId="the-stepwell"
+      title="The Stepwell"
+      location="Rajasthan"
+      hero={hero}
+      // Same order as the old gallery array
+      photos={[
+        img1,
+        img2, img3,
+        img4,
+        img5, img6,
+        img16, img7, img8,
+        img9,
+        img10, img11,
+        img12, img13,
+        img14, img15,
+      ]}
+      details={{
+        Project: "Oval – The Stepwell",
+        Location: "Rajasthan",
+        Client: "Ministry of Culture",
+        Status: "Conceptual",
+      }}
+      description={[
+        <>
+          India’s architectural identity is deeply rooted in its heritage, yet the deterioration and inaccessibility of historic structures threaten this cultural continuity. The Oval draws inspiration from <Orange>Rajasthan and Gujarat’s stepwells</Orange>, recognising their historic role in community building, cultural exchange, and supporting flora and fauna, while reinterpreting their essence through a contemporary, sustainable lens.
+        </>,
+        <>
+          Inspired by the stepped geometry of traditional stepwells, the design creates a <Orange>fluid play of levels</Orange> that naturally divides the expansive space into multiple functions without creating a sense of enclosure. The resulting sequence of levels and spaces offers varied public experiences while creating opportunities for <Orange>tourism, cultural engagement and economic growth</Orange> through museums, galleries and public functions.
+        </>,
+        <>
+          The form generates distinctive <Orange>frustum-like curves</Orange>, conceived as a canvas for light and sound shows. Designed as a public destination, the Oval incorporates an open-air theatre, courtyard, museums, galleries, sky-viewing deck, inner stepwell seating and cafeteria. A <Orange>central glass lift</Orange> becomes a viewing element, offering a <Orange>360-degree dynamic view</Orange> of the vertical vista.
+        </>,
+        <>
+          A restrained material palette combines the traditional character of <Orange>sandstone and water</Orange> with the contemporary language of concrete and green architecture. Water and vegetation further enhance the atmosphere and experience.
+        </>,
+        <>
+          The Oval is envisioned as a <Orange>contemporary revival of the stepwell</Orange>, transforming its architectural and cultural legacy into an accessible public destination while widening the horizons for tourism and reconnecting contemporary India with its heritage.
+        </>,
+      ]}
+    />
   );
 }

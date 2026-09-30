@@ -1,17 +1,9 @@
-import Image from "next/image";
-import SiteChrome from "@/components/SiteChrome";
-import Footer from "@/components/Footer";
-import MoreProjects from "@/components/MoreProjects";
-import ParallaxHeroImage from "@/components/ParallaxHeroImage";
-import styles from "./page.module.css";
+import ProjectDetailPage from "../ProjectDetailPage";
 import { assetImage } from "@/config/assets";
-import ShareIcons from "@/components/ShareIcons";
 
-// Hero image from PATTERN-PLAY/cover
-// (the file in the folder is named "COVER (1)" — rename it to COVER.webp
-//  and update this path if you'd rather not keep the "(1)")
-const heroImage = assetImage("projects/PATTERN-PLAY/cover/COVER (1).webp");
-// Project photographs from PATTERN-PLAY/3_4
+// The file in the folder is named "COVER (1)", so the path keeps the "(1)"
+const hero = assetImage("projects/PATTERN-PLAY/cover/COVER (1).webp");
+
 const img1 = assetImage("projects/PATTERN-PLAY/3_4/1.webp");
 const img2 = assetImage("projects/PATTERN-PLAY/3_4/2.webp");
 const img3 = assetImage("projects/PATTERN-PLAY/3_4/3.webp");
@@ -24,204 +16,45 @@ const img9 = assetImage("projects/PATTERN-PLAY/3_4/9.webp");
 const img10 = assetImage("projects/PATTERN-PLAY/3_4/10.webp");
 const img11 = assetImage("projects/PATTERN-PLAY/3_4/11.webp");
 
-export const metadata = {
-  title: "Pattern Play — Spaces Architects@ka",
-};
+const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-// All content for this project lives right here — edit freely.
-const details = {
-  Project: "Pattern Play",
-  Location: "New Delhi",
-  Client: "Mr. Vipul Jain",
-  Status: "Completed",
-};
-
-const ratio = (img) => img.width / img.height;
-
-// Sizes (from the asset manifest):
-//   portrait  3600x4800: img1, img2, img4, img5, img9, img10
-//   landscape 4800x3600: img3, img6, img7, img8, img11
-//
-// Layout rules (same as the Screen House reference):
-// - "pair" only uses images with identical width/height.
-// - "split" = one portrait (large) + two landscape images stacked beside it.
-// - "full" is landscape only (no full-width portraits).
-const gallery = [
-  { type: "split", large: img1, stack: [img3, img6] },
-  { type: "pair", images: [img2, img4] },
-  { type: "full", image: img7 },
-  { type: "split-reverse", large: img5, stack: [img8, img11] },
-  { type: "pair", images: [img9, img10] },
-];
+export const metadata = { title: "Pattern Play — Spaces Architects@ka" };
 
 export default function PatternPlayPage() {
   return (
-    <>
-      <main>
-        <SiteChrome dark />
-
-        <ParallaxHeroImage
-          className={styles.hero}
-          imageClassName={styles.heroImage}
-          src={heroImage}
-          alt="Pattern Play"
-        >
-          <div className={`site-container ${styles.heroTextWrap}`}>
-            <div className={styles.heroText}>
-              <h1>Pattern Play</h1>
-              <p>{details.Location}</p>
-            </div>
-          </div>
-        </ParallaxHeroImage>
-
-        {/* Details + description */}
-        <section className={`site-container ${styles.infoSection}`}>
-          <div className={styles.infoSidebar}>
-            <div>
-              <h3>Project Details</h3>
-              <dl>
-                {Object.entries(details).map(([label, value]) => (
-                  <div key={label}>
-                    <dt>{label}:</dt> <dd>{value}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
-          </div>
-
-          <div className={styles.infoBody}>
-            <p>
-              Pattern Play is a{" "}
-              <span className={styles.highlight}>3 BHK apartment</span> that
-              explores pattern, colour, texture and material as a cohesive
-              design language.{" "}
-              <span className={styles.highlight}>
-                Bold geometric upholstery, graphic rugs, patterned cabinetry
-                and expressive artwork
-              </span>{" "}
-              bring rhythm and personality to the interiors, while recurring
-              colours create continuity across spaces.
-            </p>
-
-            <p>
-              A warm palette of{" "}
-              <span className={styles.highlight}>
-                natural wood, marble, textured walls, brass, metal and
-                layered fabrics
-              </span>{" "}
-              balances the stronger patterns. Fluted timber and linear wall
-              details introduce subtle repetition, while curved furniture
-              and architectural elements soften the geometry.
-            </p>
-
-            <p>
-              Each room carries its own character from the vibrant
-              turquoise and mustard accents in the living areas to the
-              deeper blue of the bedroom yet remains connected through a
-              consistent material and colour palette.
-            </p>
-
-            <p>
-              The result is a playful, layered home where{" "}
-              <span className={styles.highlight}>
-                pattern is not merely decorative, but becomes an integral
-                part of the interior architecture
-              </span>
-              .
-            </p>
-          </div>
-        </section>
-
-        {/* Gallery */}
-        <section className={`site-container ${styles.gallery}`}>
-          {gallery.map((block, i) => {
-            if (block.type === "full") {
-              return (
-                <div key={i} className={styles.galleryFull}>
-                  <Image
-                    src={block.image}
-                    alt="Pattern Play"
-                    sizes="100vw"
-                    className={styles.galleryImg}
-                  />
-                </div>
-              );
-            }
-
-            if (block.type === "split" || block.type === "split-reverse") {
-              const isReverse = block.type === "split-reverse";
-              return (
-                <div
-                  key={i}
-                  className={`${styles.gallerySplit} ${isReverse ? styles.gallerySplitReverse : ""}`}
-                >
-                  <div
-                    className={styles.gallerySplitLarge}
-                    style={{ "--ratio": ratio(block.large) }}
-                  >
-                    <Image
-                      src={block.large}
-                      alt="Pattern Play"
-                      fill
-                      sizes="(min-width: 768px) 48vw, 100vw"
-                      className={styles.galleryImgFit}
-                    />
-                  </div>
-                  <div className={styles.gallerySplitStack}>
-                    {block.stack.map((src, j) => (
-                      <div
-                        key={j}
-                        className={styles.gallerySplitStackItem}
-                        style={{ "--ratio": ratio(src) }}
-                      >
-                        <Image
-                          src={src}
-                          alt="Pattern Play"
-                          fill
-                          sizes="(min-width: 768px) 48vw, 100vw"
-                          className={styles.galleryImgFit}
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              );
-            }
-
-            return (
-              <div key={i} className={styles.galleryPair}>
-                {block.images.map((src, j) => (
-                  <div
-                    key={j}
-                    className={styles.galleryPairItem}
-                    style={{ "--ratio": block.ratio ?? ratio(src) }}
-                  >
-                    <Image
-                      src={src}
-                      alt="Pattern Play"
-                      fill
-                      sizes="(min-width: 768px) 48vw, 100vw"
-                      className={styles.galleryImgFit}
-                    />
-                  </div>
-                ))}
-              </div>
-            );
-          })}
-        </section>
-
-        {/* Share */}
-        <section className={styles.share}>
-          <p>Share</p>
-          <div className={styles.shareIcons}>
-            <ShareIcons />
-          </div>
-        </section>
-
-        <MoreProjects currentId="pattern-play" />
-      </main>
-
-      <Footer />
-    </>
+    <ProjectDetailPage
+      currentId="pattern-play"
+      title="Pattern Play"
+      location="New Delhi"
+      hero={hero}
+      // Same order as the old gallery array
+      photos={[
+        img1, img3, img6,
+        img2, img4,
+        img7,
+        img5, img8, img11,
+        img9, img10,
+      ]}
+      details={{
+        Project: "Pattern Play",
+        Location: "New Delhi",
+        Client: "Mr. Vipul Jain",
+        Status: "Completed",
+      }}
+      description={[
+        <>
+          Pattern Play is a <Orange>3 BHK apartment</Orange> that explores pattern, colour, texture and material as a cohesive design language. <Orange>Bold geometric upholstery, graphic rugs, patterned cabinetry and expressive artwork</Orange> bring rhythm and personality to the interiors, while recurring colours create continuity across spaces.
+        </>,
+        <>
+          A warm palette of <Orange>natural wood, marble, textured walls, brass, metal and layered fabrics</Orange> balances the stronger patterns. Fluted timber and linear wall details introduce subtle repetition, while curved furniture and architectural elements soften the geometry.
+        </>,
+        <>
+          Each room carries its own character from the vibrant turquoise and mustard accents in the living areas to the deeper blue of the bedroom yet remains connected through a consistent material and colour palette.
+        </>,
+        <>
+          The result is a playful, layered home where <Orange>pattern is not merely decorative, but becomes an integral part of the interior architecture</Orange>.
+        </>,
+      ]}
+    />
   );
 }
