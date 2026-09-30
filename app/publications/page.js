@@ -1,6 +1,7 @@
 import Image from "next/image";
 import SiteChrome from "@/components/SiteChrome";
 import Footer from "@/components/Footer";
+import MagazineGallery from "@/components/MagazineGallery";
 import { assetImage } from "@/assets";
 import styles from "../blog/page.module.css";
 
@@ -175,6 +176,97 @@ const publicationCards = [
   { title: "Apartment 88", source: "Good Homes India", image: apartment88, href: "https://www.goodhomes.co.in/home-decor/home-tours/the-emergence-of-a-brand-new-trend-unfolds-with-this-artistic-home-7940.amp" },
 ];
 
+// ---- Magazines (click a cover to view the content image) ----
+const MAG_BASE = "https://assets.spacesarchitects-ka.com/assets/magazine";
+const magazines = [
+  { title: "The Design Source", cover: `${MAG_BASE}/cover/1.webp`, content: `${MAG_BASE}/content/1.webp` },
+  { title: "IIA Awards", cover: `${MAG_BASE}/cover/2.webp`, content: `${MAG_BASE}/content/2.webp` },
+  { title: "Inside Outside", cover: `${MAG_BASE}/cover/3.webp`, content: `${MAG_BASE}/content/3.webp` },
+  { title: "Home and Design Trends", cover: `${MAG_BASE}/cover/4.webp`, content: `${MAG_BASE}/content/4.webp` },
+  { title: "India Today Home", cover: `${MAG_BASE}/cover/5.webp`, content: `${MAG_BASE}/content/5.webp` },
+  { title: "Indian Architect & Builder", cover: `${MAG_BASE}/cover/6.webp`, content: `${MAG_BASE}/content/6.webp` },
+  { title: "Home and Design Trends", cover: `${MAG_BASE}/cover/7.webp`, content: `${MAG_BASE}/content/7.webp` },
+  { title: "MGS Architecture", cover: `${MAG_BASE}/cover/8.webp`, content: `${MAG_BASE}/content/8.webp` },
+  { title: "Design Today", cover: `${MAG_BASE}/cover/9.webp`, content: `${MAG_BASE}/content/9.webp` },
+  { title: "Inside Outside", cover: `${MAG_BASE}/cover/10.webp`, content: `${MAG_BASE}/content/10.webp` },
+  { title: "The Design Source", cover: `${MAG_BASE}/cover/11.webp`, content: `${MAG_BASE}/content/11.webp` },
+  { title: "Inside Outside", cover: `${MAG_BASE}/cover/12.webp`, content: `${MAG_BASE}/content/12.webp` },
+  { title: "Interiors India", cover: `${MAG_BASE}/cover/13.webp`, content: `${MAG_BASE}/content/13.webp` },
+  { title: "Architecture + Design", cover: `${MAG_BASE}/cover/14.webp`, content: `${MAG_BASE}/content/14.webp` },
+  { title: "Home and Design Trends", cover: `${MAG_BASE}/cover/15.webp`, content: `${MAG_BASE}/content/15.webp` },
+  { title: "Interiors India", cover: `${MAG_BASE}/cover/16.webp`, content: `${MAG_BASE}/content/16.webp` },
+  { title: "Society Interiors", cover: `${MAG_BASE}/cover/17.webp`, content: `${MAG_BASE}/content/17.webp` },
+  { title: "Home and Design Trends", cover: `${MAG_BASE}/cover/18.webp`, content: `${MAG_BASE}/content/18.webp` },
+  { title: "Show Flat", cover: `${MAG_BASE}/cover/19.webp`, content: `${MAG_BASE}/content/19.webp` },
+  { title: "The Design Source", cover: `${MAG_BASE}/cover/20.webp`, content: `${MAG_BASE}/content/20.webp` },
+  { title: "Inside Outside", cover: `${MAG_BASE}/cover/21.webp`, content: `${MAG_BASE}/content/21.webp` },
+  { title: "Interiors India", cover: `${MAG_BASE}/cover/22.webp`, content: `${MAG_BASE}/content/22.webp` },
+  { title: "Home and Design Trends", cover: `${MAG_BASE}/cover/23.webp`, content: `${MAG_BASE}/content/23.webp` },
+  { title: "Architecture Update", cover: `${MAG_BASE}/cover/24.webp`, content: `${MAG_BASE}/content/24.webp` },
+  { title: "Architecture + Design", cover: `${MAG_BASE}/cover/25.webp`, content: `${MAG_BASE}/content/25.webp` },
+  { title: "IFJ", cover: `${MAG_BASE}/cover/26.webp`, content: `${MAG_BASE}/content/26.webp` },
+  { title: "India Mondo", cover: `${MAG_BASE}/cover/27.webp`, content: `${MAG_BASE}/content/27.webp` },
+  { title: "Design Today", cover: `${MAG_BASE}/cover/28.webp`, content: `${MAG_BASE}/content/28.webp` },
+  { title: "The Design Source", cover: `${MAG_BASE}/cover/29.webp`, content: `${MAG_BASE}/content/29.webp` },
+  { title: "Architecture + Design", cover: `${MAG_BASE}/cover/30.webp`, content: `${MAG_BASE}/content/30.webp` },
+  { title: "Architecture + Design", cover: `${MAG_BASE}/cover/31.webp`, content: `${MAG_BASE}/content/31.webp` },
+  { title: "Good Homes India", cover: `${MAG_BASE}/cover/32.webp`, content: `${MAG_BASE}/content/32.webp` },
+  { title: "The Ideal Home and Garden", cover: `${MAG_BASE}/cover/33.webp`, content: `${MAG_BASE}/content/33.webp` },
+  { title: "Inside Outside", cover: `${MAG_BASE}/cover/34.webp`, content: `${MAG_BASE}/content/34.webp` },
+  { title: "The Design Source", cover: `${MAG_BASE}/cover/35.webp`, content: `${MAG_BASE}/content/35.webp` },
+  { title: "Surfaces Reporter", cover: `${MAG_BASE}/cover/36.webp`, content: `${MAG_BASE}/content/36.webp` },
+  { title: "Insite", cover: `${MAG_BASE}/cover/37.webp`, content: `${MAG_BASE}/content/37.webp` },
+  { title: "Architecture Update", cover: `${MAG_BASE}/cover/38.webp`, content: `${MAG_BASE}/content/38.webp` },
+  { title: "Home Review", cover: `${MAG_BASE}/cover/39.webp`, content: `${MAG_BASE}/content/39.webp` },
+  { title: "Insite", cover: `${MAG_BASE}/cover/40.webp`, content: `${MAG_BASE}/content/40.webp` },
+  { title: "India Today Home", cover: `${MAG_BASE}/cover/41.webp`, content: `${MAG_BASE}/content/41.webp` },
+  { title: "India Mondo", cover: `${MAG_BASE}/cover/42.webp`, content: `${MAG_BASE}/content/42.webp` },
+  { title: "IFJ Plus", cover: `${MAG_BASE}/cover/43.webp`, content: `${MAG_BASE}/content/43.webp` },
+  { title: "The Design Source", cover: `${MAG_BASE}/cover/44.webp`, content: `${MAG_BASE}/content/44.webp` },
+  { title: "The Design Source", cover: `${MAG_BASE}/cover/45.webp`, content: `${MAG_BASE}/content/45.webp` },
+  { title: "Home Review", cover: `${MAG_BASE}/cover/46.webp`, content: `${MAG_BASE}/content/46.webp` },
+  { title: "Society Interiors", cover: `${MAG_BASE}/cover/47.webp`, content: `${MAG_BASE}/content/47.webp` },
+  { title: "Interiors and Decor", cover: `${MAG_BASE}/cover/48.webp`, content: `${MAG_BASE}/content/48.webp` },
+  { title: "Better Interiors", cover: `${MAG_BASE}/cover/49.webp`, content: `${MAG_BASE}/content/49.webp` },
+  { title: "Step Maze House", cover: `${MAG_BASE}/cover/50.webp`, content: `${MAG_BASE}/content/50.webp` },
+  { title: "MGS Architecture", cover: `${MAG_BASE}/cover/51.webp`, content: `${MAG_BASE}/content/51.webp` },
+  { title: "Home and Design Trends", cover: `${MAG_BASE}/cover/52.webp`, content: `${MAG_BASE}/content/52.webp` },
+  { title: "The Design Story", cover: `${MAG_BASE}/cover/53.webp`, content: `${MAG_BASE}/content/53.webp` },
+  { title: "Architecture Update", cover: `${MAG_BASE}/cover/54.webp`, content: `${MAG_BASE}/content/54.webp` },
+  { title: "Home and Design Trends", cover: `${MAG_BASE}/cover/55.webp`, content: `${MAG_BASE}/content/55.webp` },
+  { title: "Inside Outside", cover: `${MAG_BASE}/cover/56.webp`, content: `${MAG_BASE}/content/56.webp` },
+  { title: "Society Interiors", cover: `${MAG_BASE}/cover/57.webp`, content: `${MAG_BASE}/content/57.webp` },
+  { title: "Architecture Update", cover: `${MAG_BASE}/cover/58.webp`, content: `${MAG_BASE}/content/58.webp` },
+  { title: "The Design Story", cover: `${MAG_BASE}/cover/59.webp`, content: `${MAG_BASE}/content/59.webp` },
+  { title: "Architectural Digest", cover: `${MAG_BASE}/cover/60.webp`, content: `${MAG_BASE}/content/60.webp` },
+  { title: "World Architecture Festival", cover: `${MAG_BASE}/cover/61.webp`, content: `${MAG_BASE}/content/61.webp` },
+  { title: "Design Detail", cover: `${MAG_BASE}/cover/62.webp`, content: `${MAG_BASE}/content/62.webp` },
+  { title: "Insite", cover: `${MAG_BASE}/cover/63.webp`, content: `${MAG_BASE}/content/63.webp` },
+  { title: "Design Detail", cover: `${MAG_BASE}/cover/64.webp`, content: `${MAG_BASE}/content/64.webp` },
+  { title: "Surfaces Reporter", cover: `${MAG_BASE}/cover/65.webp`, content: `${MAG_BASE}/content/65.webp` },
+  { title: "India Today Home", cover: `${MAG_BASE}/cover/66.webp`, content: `${MAG_BASE}/content/66.webp` },
+  { title: "Architecture + Design", cover: `${MAG_BASE}/cover/67.webp`, content: `${MAG_BASE}/content/67.webp` },
+  { title: "Home and Design Trends", cover: `${MAG_BASE}/cover/68.webp`, content: `${MAG_BASE}/content/68.webp` },
+  { title: "Design Today", cover: `${MAG_BASE}/cover/69.webp`, content: `${MAG_BASE}/content/69.webp` },
+  { title: "Home Review", cover: `${MAG_BASE}/cover/70.webp`, content: `${MAG_BASE}/content/70.webp` },
+  { title: "Architecture + Design", cover: `${MAG_BASE}/cover/71.webp`, content: `${MAG_BASE}/content/71.webp` },
+  { title: "Architectural Digest", cover: `${MAG_BASE}/cover/72.webp`, content: `${MAG_BASE}/content/72.webp` },
+  { title: "Insite", cover: `${MAG_BASE}/cover/73.webp`, content: `${MAG_BASE}/content/73.webp` },
+  { title: "Interiors India", cover: `${MAG_BASE}/cover/74.webp`, content: `${MAG_BASE}/content/74.webp` },
+  { title: "Home Review", cover: `${MAG_BASE}/cover/75.webp`, content: `${MAG_BASE}/content/75.webp` },
+  { title: "Design Today", cover: `${MAG_BASE}/cover/76.webp`, content: `${MAG_BASE}/content/76.webp` },
+  { title: "Society Interiors", cover: `${MAG_BASE}/cover/77.webp`, content: `${MAG_BASE}/content/77.webp` },
+  { title: "Design Today", cover: `${MAG_BASE}/cover/78.webp`, content: `${MAG_BASE}/content/78.webp` },
+  { title: "MGS Architecture", cover: `${MAG_BASE}/cover/79.webp`, content: `${MAG_BASE}/content/79.webp` },
+  { title: "Better Interiors", cover: `${MAG_BASE}/cover/80.webp`, content: `${MAG_BASE}/content/80.webp` },
+  { title: "Surfaces Reporter", cover: `${MAG_BASE}/cover/81.webp`, content: `${MAG_BASE}/content/81.webp` },
+  { title: "Forbes India", cover: `${MAG_BASE}/cover/82.webp`, content: `${MAG_BASE}/content/82.webp` },
+  { title: "Surfaces Reporter", cover: `${MAG_BASE}/cover/83.webp`, content: `${MAG_BASE}/content/83.webp` },
+  { title: "Insite", cover: `${MAG_BASE}/cover/84.webp`, content: `${MAG_BASE}/content/84.webp` },
+  { title: "Interiors India", cover: `${MAG_BASE}/cover/85.webp`, content: `${MAG_BASE}/content/85.webp` },
+  { title: "The Design Source", cover: `${MAG_BASE}/cover/86.webp`, content: `${MAG_BASE}/content/86.webp` },
+];
+
 export default function PublicationsPage() {
   return (
     <main>
@@ -219,6 +311,8 @@ export default function PublicationsPage() {
             );
           })}
         </div>
+
+        <MagazineGallery magazines={magazines} />
       </section>
 
       <Footer />
