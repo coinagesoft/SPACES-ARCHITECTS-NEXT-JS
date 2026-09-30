@@ -37,10 +37,18 @@ export async function POST(request) {
     email: clean(body.email, 200),
     phone: clean(body.phone, 30),
     company: clean(body.company, 200),
-    designation: clean(body.designation, 200),
+    designation: clean(body.designation ?? body.Designation ?? body.role ?? body.title ?? body.position ?? "", 200),
     message: clean(body.message, 3000),
     purpose: clean(body.purpose, 200),
   };
+
+  console.log("[contact] Processing enquiry:", {
+    name: `${data.firstName} ${data.lastName}`,
+    email: data.email,
+    company: data.company,
+    designation: data.designation,
+    purpose: data.purpose,
+  });
 
   // Same rules as the form on the page (never trust the browser alone).
   if (!data.firstName) return bad("First name is required.");
