@@ -1,0 +1,98 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 28px 35px;
+    margin-top: 72px;
+}
+
+.card {
+    display: block;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    text-align: left;
+    text-transform: uppercase;
+    cursor: pointer;
+    font: inherit;
+}
+
+.imageWrap {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    background: #e7e5e2;
+}
+
+.image {
+    object-fit: cover;
+    transition: transform 500ms;
+}
+
+.card:hover .image {
+    transform: scale(1.05);
+}
+
+.title {
+    margin: 27px 0 0;
+    color: #1c1c1c;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    line-height: 1.35;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+    background: rgba(0, 0, 0, 0.88);
+    overflow-y: auto;
+}
+
+.viewer {
+    max-width: 1100px;
+    max-height: 100%;
+    margin: auto;
+}
+
+.contentImage {
+    display: block;
+    max-width: 100%;
+    max-height: calc(100vh - 80px);
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.close {
+    position: fixed;
+    top: 16px;
+    right: 24px;
+    z-index: 1001;
+    border: 0;
+    background: none;
+    color: #fff;
+    font-size: 40px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+@media (max-width: 1023px) {
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 32px;
+    }
+}
+
+@media (max-width: 767px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
