@@ -1,0 +1,300 @@
+/* Header for the Publications page — styled like the Projects page header
+   (ProjectsMegaMenu): fixed white bar, wide-tracked uppercase labels,
+   orange for the active item. On mobile the same items open in a slide-in
+   drawer. */
+
+.header {
+    --pm-h: 96px;
+    --pm-accent: #f59f2f;
+    --pm-ink: #6b6b6b;
+    --pm-muted: #9a9a9a;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-sizing: border-box;
+    height: var(--pm-h);
+    background: #fff;
+}
+
+.bar {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* ---------- logo ---------- */
+.logo {
+    font-size: clamp(15px, 1.5vw, 21px);
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #6b6b6b;
+}
+
+.logo span {
+    color: var(--pm-accent);
+}
+
+/* ---------- shared button reset ---------- */
+.label,
+.groupLabel,
+.burger,
+.categoriesToggle {
+    appearance: none;
+    background: none;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+/* ---------- desktop nav ---------- */
+.nav {
+    height: 100%;
+}
+
+.list {
+    display: flex;
+    height: 100%;
+    gap: clamp(26px, 3.4vw, 60px);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.label {
+    display: inline-block;
+    padding: 8px 0;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    color: var(--pm-ink);
+    transition: color 0.2s ease;
+}
+
+.label:hover {
+    color: var(--pm-accent);
+}
+
+/* active item */
+.on {
+    color: var(--pm-accent);
+}
+
+.label:focus-visible,
+.groupLabel:focus-visible,
+.burger:focus-visible,
+.categoriesToggle:focus-visible,
+.logo:focus-visible {
+    outline: 2px solid var(--pm-accent);
+    outline-offset: 4px;
+}
+
+/* ---------- mobile controls (sections toggle + burger) ---------- */
+.mobileControls {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto; /* never shrink — both icons must always stay visible */
+    gap: 6px;
+}
+
+/* Opens the sections drawer; hidden on desktop (the menu is in the bar there) */
+.categoriesToggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    color: var(--pm-ink);
+    border-radius: 999px;
+    transition: color 0.2s ease;
+}
+
+.categoriesIcon {
+    display: block;
+}
+
+.categoriesToggle[aria-expanded="true"] {
+    color: var(--pm-accent);
+}
+
+.burger {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.burger span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: var(--pm-accent);
+    border-radius: 999px;
+}
+
+/* ---------- mobile sections drawer ---------- */
+.backdrop,
+.backdropOpen {
+    position: fixed;
+    inset: 0;
+    z-index: 150;
+    background: rgba(0, 0, 0, 0.35);
+    transition: opacity 0.22s ease, visibility 0s linear 0.22s;
+}
+
+.backdrop {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.backdropOpen {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity 0.22s ease;
+}
+
+.drawer {
+    position: fixed;
+    top: var(--pm-h);
+    right: 0;
+    z-index: 200;
+    width: min(420px, 86vw);
+    max-height: calc(100vh - var(--pm-h));
+    overflow-y: auto;
+    background: #fff;
+    padding: 4px 24px 32px;
+    box-shadow: -18px 22px 44px -30px rgba(0, 0, 0, 0.25);
+    transform: translateX(100%);
+    transition: transform 0.28s ease;
+}
+
+.drawerOpen {
+    transform: translateX(0);
+}
+
+.group {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 6px 0 10px;
+}
+
+.groupLabel {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 14px 0 8px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--pm-ink);
+}
+
+.subOn,
+.subOn:hover {
+    color: var(--pm-accent);
+}
+
+/* ---------- section wrappers on the page ---------- */
+/* Stop just below the fixed header when jumping to a section */
+.anchor {
+    scroll-margin-top: 120px;
+}
+
+@media (max-width: 1023px) {
+    .header {
+        --pm-h: 72px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .bar {
+        gap: 12px; /* desktop uses 40px, which pushes the burger off-screen */
+    }
+
+    .logo {
+        font-size: 14px;
+        letter-spacing: 0.16em;
+        min-width: 0;
+    }
+
+    .categoriesToggle {
+        display: inline-flex;
+    }
+
+    .anchor {
+        scroll-margin-top: 96px;
+    }
+}
+
+/* phones ~400px wide and below: scale the logo so logo + 2 icons always fit */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 12px;
+        letter-spacing: 0.12em;
+    }
+}
+
+/* very small phones (320–360px) */
+@media (max-width: 360px) {
+    .bar {
+        gap: 8px;
+    }
+
+    .logo {
+        font-size: 11px;
+        letter-spacing: 0.1em;
+    }
+
+    .categoriesToggle {
+        width: 36px;
+        height: 36px;
+    }
+
+    .burger {
+        padding: 6px;
+    }
+
+    .burger span {
+        width: 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .drawer,
+    .backdrop,
+    .backdropOpen,
+    .burger span {
+        transition: none;
+    }
+}

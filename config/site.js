@@ -21,6 +21,7 @@ export const site = {
         { label: "X", href: "https://x.com/SpacesArch_ka" },
         { label: "LinkedIn", href: "https://www.linkedin.com/company/spaces-architects-ka/" },
         { label: "Email", href: "mailto:admin@spacesarchitects-ka.com" },
+        { label: "YouTube", href: "https://www.youtube.com/@spacesarchitects.ka1" },
     ],
 
     // Two-column primary navigation shown in the full-screen menu overlay

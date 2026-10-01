@@ -16,7 +16,7 @@ const subLink =
 const mainLink =
   "block whitespace-nowrap text-[14px] leading-4 tracking-[0.12em] uppercase text-muted transition-colors hover:text-accent md:tracking-widest2";
 const ctaLink =
-  "inline-block border-b border-line pb-1 text-[14px] leading-4 tracking-widest2 uppercase text-accent transition-colors hover:border-accent";
+  "inline-block  pb-1 text-[14px] leading-4 tracking-widest2 uppercase text-accent transition-colors hover:border-accent";
 
 export default function Footer() {
   return (
@@ -26,7 +26,7 @@ export default function Footer() {
           {/* Left: Quick Link + link columns */}
           <div>
             <p className={topHeading}>
-              <span className="text-accent">Quick</span> Link
+              <span className="text-accent">Quick Link</span> 
             </p>
 
             <div className="grid grid-cols-2 gap-x-4 gap-y-8 md:w-[50rem] md:grid-cols-4 md:gap-x-14 md:gap-y-0">

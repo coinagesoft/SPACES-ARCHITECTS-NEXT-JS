@@ -51,7 +51,7 @@ export default function HeroSlider({ projects }) {
 
                 return (
                     <Image
-                        key={project.id}
+                        key={`${project.id}-${index}`}
                         src={imageSrc}
                         alt={project.name}
                         fill
@@ -72,7 +72,7 @@ export default function HeroSlider({ projects }) {
                     className="inline-block transition-opacity duration-200 hover:opacity-80"
                 >
                     <h1
-                        key={activeProject.id}
+                        key={`${activeProject.id}-${activeIndex}`}
                         className="text-white text-xl md:text-2xl lg:text-3xl font-light tracking-widest2 uppercase animate-[hero-title-in_700ms_ease-in-out]"
                     >
                         {activeProject.name}
