@@ -70,6 +70,7 @@ export const site = {
                 { label: "Publication", href: "/publications" },
                 { label: "News & Events", href: "/news-events" },
                 { label: "Blogs", href: "/blog" },
+                   { label: "Testimonials", href: "/testimonials" },
             ],
         },
         {
@@ -78,6 +79,7 @@ export const site = {
                 { label: "Team", href: "/teams" },
                 { label: "Process", href: "/process" },
                 { label: "Contact", href: "/contact" },
+                { label: "FAQ", href: "/faq" },
             ],
         },
     ],

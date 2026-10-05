@@ -2,13 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import SiteChrome from "@/components/SiteChrome";
 import Footer from "@/components/Footer";
-import { assets } from "@/assets";
+import { blogPosts } from "@/config/blogs";
 import styles from "./page.module.css";
 
 export const metadata = { title: "Blog — Spaces Architects@ka" };
 
-// Listing copy is intentionally separate from `asets.blog`: detail-page
-// headings and article content continue to use the original editorial copy.
+// Listing copy for the 8 original posts is kept separate from the article
+// text (detail pages use the longer editorial titles). The 5 newer posts
+// carry their own `listing` copy in config/blogs.js.
 const listingCopy = {
   "a-legacy-restored": {
     title: "A Legacy Restored",
@@ -51,12 +52,12 @@ export default function BlogPage() {
 
       <section className={styles.blogListing}>
         <div className={styles.blogGrid}>
-          {assets.blog.map((post) => {
-            const card = listingCopy[post.id] || post;
+          {blogPosts.map((post) => {
+            const card = listingCopy[post.id] || post.listing || post;
 
             return (
               <article key={post.id} className={styles.blogCard}>
-                <Link href={`/blog/${post.id}`} className={styles.cardLink}>
+                <Link href={`/blog/${post.id}`} className={`${styles.cardLink} ${styles.postLink}`}>
                   <div className={styles.imageWrap}>
                     <Image
                       src={post.image}
@@ -68,7 +69,10 @@ export default function BlogPage() {
                   </div>
                   <h2 className={styles.title}>{card.title}</h2>
                   <p className={styles.excerpt}>{card.excerpt}</p>
-                  <span className={styles.readMore}>Read more</span>
+                  <div className={styles.postFooter}>
+                    <span className={styles.postReadMore}>Read more</span>
+                    {post.date && <time className={styles.date}>{post.date}</time>}
+                  </div>
                 </Link>
               </article>
             );

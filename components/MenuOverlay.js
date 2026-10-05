@@ -9,7 +9,7 @@ import styles from "./MenuOverlay.module.css";
 
 // Menu items listed here are shown as plain text (not clickable) for now.
 // Remove a label from this list to make it a normal link again.
-const DISABLED_ITEMS = ["Expressions"];
+const DISABLED_ITEMS = [];
 
 export default function MenuOverlay({ open, onClose }) {
   if (!open) return null;

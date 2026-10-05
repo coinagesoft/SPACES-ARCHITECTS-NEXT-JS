@@ -11,6 +11,7 @@ import MenuOverlay from "./MenuOverlay";
 export default function SiteChrome({
   dark = false,
   home = false,
+  sticky = false,
   projectCategories,
   activeProjectCategory,
   onProjectCategoryChange,
@@ -22,6 +23,7 @@ export default function SiteChrome({
       <Header
         dark={dark && !open}
         home={home}
+        sticky={sticky}
         onMenuOpen={() => setOpen(true)}
         projectCategories={projectCategories}
         activeProjectCategory={activeProjectCategory}

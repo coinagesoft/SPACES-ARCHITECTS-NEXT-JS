@@ -62,6 +62,37 @@
     line-height: 1.4;
 }
 
+/* ---------- blog listing only (read more + date row) ---------- */
+.postLink {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.postFooter {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 8px;
+}
+
+.postReadMore {
+    color: #6B6B6B;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    line-height: 1.4;
+}
+
+.date {
+    color: #1c1c1c;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    line-height: 1.4;
+    white-space: nowrap;
+}
+
 @media (max-width: 1023px) {
     .blogListing {
         padding: 112px 40px 80px;

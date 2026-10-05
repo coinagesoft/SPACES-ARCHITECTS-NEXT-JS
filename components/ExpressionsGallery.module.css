@@ -1,0 +1,167 @@
+/* Expressions page — image grid + details viewer.
+   The header uses PublicationsChrome.module.css (same look as Publications). */
+
+.listing {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 125px 40px 112px;
+    min-height: 100vh;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 36px 35px;
+    animation: gridIn 350ms ease;
+}
+
+@keyframes gridIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.card {
+    display: block;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    font: inherit;
+}
+
+.imageWrap {
+    position: relative;
+    display: block;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    background: #e7e5e2;
+}
+
+.image {
+    object-fit: cover;
+    transition: transform 500ms;
+}
+
+.card:hover .image {
+    transform: scale(1.05);
+}
+
+.card:focus-visible {
+    outline: 2px solid #f59f2f;
+    outline-offset: 4px;
+}
+
+/* ---------- details viewer ---------- */
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 56px 24px;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.viewer {
+    max-width: 1280px;
+    max-height: 100%;
+    margin: auto;
+}
+
+.detailImage {
+    display: block;
+    max-width: 100%;
+    max-height: calc(100vh - 112px);
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+    animation: gridIn 250ms ease;
+}
+
+.close,
+.arrow {
+    position: fixed;
+    z-index: 1001;
+    border: 0;
+    background: none;
+    color: #fff;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.close:hover,
+.arrow:hover {
+    color: #f59f2f;
+}
+
+.close {
+    top: 14px;
+    right: 24px;
+    font-size: 40px;
+}
+
+.arrow {
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 12px 16px;
+    font-size: 56px;
+}
+
+.prev {
+    left: 8px;
+}
+
+.next {
+    right: 8px;
+}
+
+@media (max-width: 1023px) {
+    .listing {
+        padding: 112px 40px 80px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 28px;
+    }
+}
+
+@media (max-width: 767px) {
+    .listing {
+        padding: 96px 20px 56px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px 16px;
+    }
+
+    .overlay {
+        padding: 56px 8px;
+    }
+
+    .arrow {
+        font-size: 44px;
+        padding: 8px 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .grid,
+    .detailImage {
+        animation: none;
+    }
+
+    .image {
+        transition: none;
+    }
+}

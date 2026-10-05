@@ -6,11 +6,14 @@ import { site } from "@/config/site";
 /**
  * Top bar: logo on the left, hamburger trigger on the right.
  * `dark` = light text for use over a photographic hero (home/about heroes).
+ * `sticky` = the bar stays fixed at the top (white background) while the
+ *            page scrolls. Used on the FAQ and Testimonials pages only.
  * `onMenuOpen` toggles the full-screen MenuOverlay rendered by the page.
  */
 export default function Header({
   dark = false,
   home = false,
+  sticky = false,
   onMenuOpen,
   projectCategories,
   activeProjectCategory,
@@ -20,7 +23,11 @@ export default function Header({
   const projectHeader = Boolean(projectCategories);
 
   return (
-    <header className={`absolute top-0 left-0 right-0 z-30 ${textColor}`}>
+    <header
+      className={`${
+        sticky ? "fixed z-40 bg-white" : "absolute z-30"
+      } top-0 left-0 right-0 ${textColor}`}
+    >
       <div className="site-container flex items-center justify-between gap-6 py-6 md:py-8">
         <Link
           href="/"
