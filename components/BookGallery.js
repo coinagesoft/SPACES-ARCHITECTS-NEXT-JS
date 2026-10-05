@@ -10,8 +10,8 @@ import styles from "./BookGallery.module.css";
 //   cover   – image shown in the grid
 //   content – one image (string) OR several images (array of strings)
 //             shown when the cover is clicked; several are stacked
-//             top-to-bottom in the scrollable viewer.
-//             Leave it out for a plain, non-clickable cover.
+//             top-to-bottom in the scrollable viewer
+//             Leave it out for a plain, non-clickable cover
 const toList = (content) =>
   Array.isArray(content) ? content.filter(Boolean) : content ? [content] : [];
 
