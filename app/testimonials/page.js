@@ -15,14 +15,14 @@ export const metadata = { title: "Testimonials — Spaces Architects@ka" };
 //  readers / search) — it is not shown on the page.
 //  To add one later: upload the next number and add a line.
 // ============================================================
-const FOLDER = "testimonial";
+const FOLDER = "Testimonials";
 
 const testimonials = [
-  { file: "1.jpg", name: "Ashraya Residence" },
-  { file: "2.jpg", name: "House of Sculpted Screens" },
-  { file: "3.jpg", name: "House of Stepped Gardens" },
-  { file: "4.jpg", name: "Screen House" },
-  { file: "5.jpg", name: "Swatantra Residence" },
+  { file: "Ashraya residence.jpg", name: "Ashraya Residence" },
+  { file: "House of sculpted screens.jpg", name: "House of Sculpted Screens" },
+  { file: "house of stepped house.jpg", name: "House of Stepped Gardens" },
+  { file: "Screen.jpg", name: "Screen House" },
+  { file: "Swatantra Residence.jpg", name: "Swatantra Residence" },
 ].map(({ file, name }) => ({
   src: assetUrl(`${FOLDER}/${file}`),
   alt: `Client testimonial — ${name}`,
