@@ -33,6 +33,15 @@
     transform: scale(1.05);
 }
 
+/* cover with no content image: not clickable */
+.cardStatic {
+    cursor: default;
+}
+
+.cardStatic:hover .image {
+    transform: none;
+}
+
 .title {
     margin: 27px 0 0;
     color: #1c1c1c;
@@ -55,8 +64,10 @@
 }
 
 .viewer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
     max-width: 1100px;
-    max-height: 100%;
     margin: auto;
 }
 

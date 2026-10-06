@@ -4,7 +4,18 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "./MagazineGallery.module.css";
 
-export default function MagazineGallery({ magazines }) {
+// Magazines grid on /publications.
+//
+// Each magazine: { title, cover, content }
+//   cover   – image shown in the grid
+//   content – one image (string) OR several images (array of strings)
+//             shown when the cover is clicked; several are stacked
+//             top-to-bottom in the scrollable viewer
+//             Leave it out for a plain, non-clickable cover
+const toList = (content) =>
+  Array.isArray(content) ? content.filter(Boolean) : content ? [content] : [];
+
+export default function MagazineGallery({ magazines = [] }) {
   const [active, setActive] = useState(null);
 
   useEffect(() => {
@@ -19,32 +30,50 @@ export default function MagazineGallery({ magazines }) {
     };
   }, [active]);
 
+  const activeImages = active ? toList(active.content) : [];
+
   return (
     <>
       <div className={styles.grid}>
-        {magazines.map((mag, index) => (
-          <button
-            key={`${mag.title}-${index}`}
-            type="button"
-            className={styles.card}
-            onClick={() => setActive(mag)}
-            aria-label={`Open ${mag.title}`}
-          >
-            <div className={styles.imageWrap}>
-              <Image
-                src={mag.cover}
-                alt={mag.title}
-                fill
-                sizes="(min-width: 1024px) 274px, (min-width: 768px) 42vw, 100vw"
-                className={styles.image}
-              />
+        {magazines.map((mag, index) => {
+          const clickable = toList(mag.content).length > 0;
+          const inner = (
+            <>
+              <div className={styles.imageWrap}>
+                <Image
+                  src={mag.cover}
+                  alt={mag.title}
+                  fill
+                  sizes="(min-width: 1024px) 274px, (min-width: 768px) 42vw, 100vw"
+                  className={styles.image}
+                />
+              </div>
+              <h2 className={styles.title}>{mag.title}</h2>
+            </>
+          );
+
+          return clickable ? (
+            <button
+              key={`${mag.title}-${index}`}
+              type="button"
+              className={styles.card}
+              onClick={() => setActive(mag)}
+              aria-label={`Open ${mag.title}`}
+            >
+              {inner}
+            </button>
+          ) : (
+            <div
+              key={`${mag.title}-${index}`}
+              className={`${styles.card} ${styles.cardStatic}`}
+            >
+              {inner}
             </div>
-            <h2 className={styles.title}>{mag.title}</h2>
-          </button>
-        ))}
+          );
+        })}
       </div>
 
-      {active && (
+      {active && activeImages.length > 0 && (
         <div
           className={styles.overlay}
           role="dialog"
@@ -61,8 +90,15 @@ export default function MagazineGallery({ magazines }) {
             ×
           </button>
           <div className={styles.viewer} onClick={(e) => e.stopPropagation()}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={active.content} alt={active.title} className={styles.contentImage} />
+            {activeImages.map((src, i) => (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                key={src}
+                src={src}
+                alt={activeImages.length > 1 ? `${active.title} — page ${i + 1}` : active.title}
+                className={styles.contentImage}
+              />
+            ))}
           </div>
         </div>
       )}

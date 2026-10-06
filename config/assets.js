@@ -351,7 +351,7 @@ const featuredInAbpLive = assetImage("Home Page logos/ABP-LIVE.webp");
 const featuredInNewIndianExpress = assetImage("Home Page logos/newindianexpress.png");
 const featuredInHindustan = assetImage("Home Page logos/HD.jpeg");
 const featuredInVogue = assetImage("Home Page logos/vogue.png");
-const featuredInArchitizer = assetImage("Home Page logos/Architizer_Logo.png");
+// const featuredInArchitizer = assetImage("Home Page logos/Architizer_Logo.png");
 const featuredInNewYorkTimes = assetImage("Home Page logos/new-york-times-logo.svg");
 const featuredInTimesOfIndia = assetImage("Home Page logos/TOI.png");
 const featuredInIndiaToday = assetImage("Home Page logos/indiatoday.png");
@@ -384,7 +384,7 @@ const featuredInGoodHomes = assetImage("Home Page logos/goodhomes.jpg");
 const featuredInIndiart = assetImage("Home Page logos/indiart.png");
 const featuredInArchitectsAndInteriorsIndia = assetImage("Home Page logos/architects and interiors india.png");
 const featuredInIndianInstituteOfArchitects = assetImage("Home Page logos/Indian_Institute_of_Architects_Logo.png");
-const featuredInArchDaily = assetImage("Home Page logos/ArchDaily.png");
+// const featuredInArchDaily = assetImage("Home Page logos/ArchDaily.png");
 const featuredInClogo = assetImage("Home Page logos/clogo.png");
 const awardMark1 = assetImage("awards/1.png");
 const awardMark2 = assetImage("awards/2.png");
@@ -499,7 +499,7 @@ export const assets = {
         { name: "The New Indian Express", image: featuredInNewIndianExpress },
         { name: "Hindustan", image: featuredInHindustan },
         { name: "Vogue", image: featuredInVogue },
-        { name: "Architizer", image: featuredInArchitizer },
+        // { name: "Architizer", image: featuredInArchitizer },
         { name: "The New York Times", image: featuredInNewYorkTimes },
         { name: "The Times of India", image: featuredInTimesOfIndia },
         { name: "India Today", image: featuredInIndiaToday },
@@ -532,7 +532,7 @@ export const assets = {
         { name: "Indiart", image: featuredInIndiart },
         { name: "Architects and Interiors India", image: featuredInArchitectsAndInteriorsIndia },
         { name: "Indian Institute of Architects", image: featuredInIndianInstituteOfArchitects },
-        { name: "ArchDaily", image: featuredInArchDaily },
+        // { name: "ArchDaily", image: featuredInArchDaily },
         { name: "C Logo", image: featuredInClogo },
     ],
 
