@@ -33,6 +33,8 @@ export default function SonipatHaveliPage() {
       details={{
         Project: "Sonipat Haveli",
         Location: "Sonipat, Haryana",
+        "Plot Area": "1,800 sq. ft.",
+        "Built-up Area": "2,000 sq. ft.",
         Client: "Mr. Vijay Goel",
         Status: "Completed",
       }}

@@ -24,7 +24,9 @@ export default function BhimtalResortPage() {
       details={{
         Project: "Bhimtal Resort",
         Location: "Bhimtal, Uttarakhand",
-        Client: "Mr. Himanshu Sachdeva",
+        "Plot Area": "7,000 sq. ft.",
+        "Built-up Area": "8,000 sq. ft.",
+        Client: "Arjun Aggarwal",
         Status: "Completed",
       }}
       description={[

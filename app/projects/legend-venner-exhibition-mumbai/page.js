@@ -28,6 +28,7 @@ export default function LegendVeneerExhibitionMumbaiPage() {
       details={{
         Project: "Legends Veneer Exhibition Stall",
         Location: "Mumbai, Maharashtra",
+        "Built-up Area": "2,000 sq. ft.",
         Client: "Legend Veneers",
         Status: "Completed",
       }}

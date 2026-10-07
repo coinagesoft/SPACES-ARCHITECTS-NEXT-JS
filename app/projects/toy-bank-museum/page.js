@@ -19,7 +19,7 @@ export default function ToybankMuseumPage() {
   return (
     <ProjectDetailPage
       title="Toybank Museum"
-      location="CP, New Delhi"
+      location="ITO, New Delhi"
       hero={hero}
       photos={[
         photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8,
@@ -28,9 +28,11 @@ export default function ToybankMuseumPage() {
       ]}
       details={{
         Project: "Toybank Museum",
-        Location: "CP, New Delhi",
+        Location: "ITO, New Delhi",
+        "Plot Area": "10,000 sq. ft.",
+        "Built-up Area": "40,000 sq. ft.",
         Client: "Mr. Vijay Goel",
-        Status: "Completed",
+        Status: "On-Going",
       }}
       description={[
         <>

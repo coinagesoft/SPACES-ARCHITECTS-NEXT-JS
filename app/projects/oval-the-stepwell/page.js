@@ -49,6 +49,17 @@ export default function TheStepwellPage() {
         Client: "Ministry of Culture",
         Status: "Conceptual",
       }}
+      awards={[
+        "World Architecture Awards – Winner, 36th Cycle, 2020",
+        "Rethinking the Future Awards – Second Award, Cultural (Concept), 2020",
+        "WAF 2022 – Finalist/Shortlisted, Future Project: Culture, 2022",
+      ]}
+      publications={[
+        "The Hindu",
+        "World Architecture Community",
+        "Rethinking the Future",
+        "World Architecture Festival",
+      ]}
       description={[
         <>
           India’s architectural identity is deeply rooted in its heritage, yet the deterioration and inaccessibility of historic structures threaten this cultural continuity. The Oval draws inspiration from <Orange>Rajasthan and Gujarat’s stepwells</Orange>, recognising their historic role in community building, cultural exchange, and supporting flora and fauna, while reinterpreting their essence through a contemporary, sustainable lens.

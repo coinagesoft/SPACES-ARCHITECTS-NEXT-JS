@@ -24,6 +24,7 @@ export default function MarbleCityExhibitionStallPage() {
       details={{
         Project: "Marble City ID Stall",
         Location: "New Delhi",
+        "Built-up Area": "1,500 sq. ft.",
         Client: "Marble City",
         Status: "Completed",
       }}

@@ -31,6 +31,8 @@ export default function SethisResidencePage() {
       details={{
         Project: "Sethi's Residence",
         Location: "Gurgaon, Haryana",
+        "Plot Area": "3,200 sq. ft.",
+        "Built-up Area": "8,000 sq. ft.",
         Client: "Mr. Sethi",
         Status: "On-Going",
       }}

@@ -31,6 +31,8 @@ export default function DispensarySonipatPage() {
       details={{
         Project: "Dispensary",
         Location: "Sonipat",
+        "Plot Area": "1,400 sq. ft.",
+        "Built-up Area": "3,500 sq. ft.",
         Client: "Mr. Vijay Goel",
         Status: "Completed",
       }}

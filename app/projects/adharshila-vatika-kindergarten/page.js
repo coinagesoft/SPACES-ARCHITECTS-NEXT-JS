@@ -49,15 +49,29 @@ export default function AdharshilaVatikaKindergartenPage() {
       details={{
         Project: "Adharshila Vatika Kindergarten",
         Location: "New Delhi",
+        "Plot Area": "10,000 sq. ft.",
+        "Built-up Area": "15,000 sq. ft.",
         Client: "Mr. Vijay Goel",
         Status: "Completed",
       }}
       awards={[
-        "Designshare Awards 2008 — Winner",
-        "World Architecture Community Awards 2009 — Winner",
-        "WAN Colours in Architecture Awards 2011 — Longlist",
-        "CELE Compedium of Exemplary Education Facilities — Selected",
-        "Archidesign Awards 2007 — Best Interior Design (Northern Region)",
+        "ArchiDesign Awards – Best Interior Design, Northern Region, 2007",
+        "DesignShare Awards USA – Merit Award, 2008",
+        "World Architecture Community Awards Winner, 2009",
+        "WAN Colours in Architecture – Longlisted, 2011",
+        "CELE Compendium of Exemplary Education Facilities | Paris | Selected",
+      ]}
+      publications={[
+        "Design Today",
+        "Society Interiors",
+        "Eden for Boys & Girls",
+        "BBC",
+        "School Construction News",
+        "Architecture of Early Childhood",
+        "Archikey",
+        "Best Education Degree",
+        "International New Architecture",
+        "Atlas of World Architecture",
       ]}
       description={[
         <>

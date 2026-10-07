@@ -31,6 +31,7 @@ export default function FluidicOfficePage() {
       details={{
         Project: "Fluidic Office",
         Location: "Noida, Uttar Pradesh",
+        "Built-up Area": "5,000 sq. ft.",
         Client: "Express Builders",
         Status: "Completed",
       }}

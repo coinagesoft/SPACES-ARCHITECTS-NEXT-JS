@@ -35,6 +35,8 @@ export default function SanctumHousePage() {
       details={{
         Project: "The Sanctum House",
         Location: "Aligarh, Uttar Pradesh",
+        "Plot Area": "6,300 sq. ft.",
+        "Built-up Area": "10,000 sq. ft.",
         Client: "Mr. Mudit Goel",
         Status: "Ongoing",
       }}

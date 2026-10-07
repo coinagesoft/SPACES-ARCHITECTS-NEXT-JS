@@ -38,6 +38,7 @@ export default function PatternPlayPage() {
       details={{
         Project: "Pattern Play",
         Location: "New Delhi",
+        "Built-up Area": "2,100 sq. ft.",
         Client: "Mr. Vipul Jain",
         Status: "Completed",
       }}

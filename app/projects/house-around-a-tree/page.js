@@ -47,6 +47,8 @@ export default function TheHouseAroundATreePage() {
       details={{
         Project: "The House around a Tree",
         Location: "Vasant Vihar, New Delhi",
+        "Plot Area": "20,000 sq. ft.",
+        "Built-up Area": "45,000 sq. ft.",
         Client: "Mr. Pushp Jain",
         Status: "Completed",
       }}

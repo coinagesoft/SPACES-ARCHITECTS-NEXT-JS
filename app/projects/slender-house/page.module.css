@@ -131,13 +131,12 @@
 }
 
 .infoBody p {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 400;
   line-height: 1.95;
   letter-spacing: 0.13em;
   color: #7d7d7d;
   text-align: justify;
-  text-transform: uppercase;
   margin: 0 0 24px;
 
 }
@@ -515,5 +514,32 @@
   .moreGrid {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+}
+
+/* Left info column: scrolls on its own when the lists are long, so the page
+   doesn't get a big empty gap beside the description. */
+.infoSidebar {
+  font-size: 13px;
+}
+
+@media (min-width: 768px) {
+  .infoSidebar {
+    align-self: start;
+    max-height: 560px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding-right: 18px;
+    scrollbar-width: thin;
+    scrollbar-color: #c9c9c9 transparent;
+  }
+
+  .infoSidebar::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .infoSidebar::-webkit-scrollbar-thumb {
+    background: #c9c9c9;
+    border-radius: 4px;
   }
 }

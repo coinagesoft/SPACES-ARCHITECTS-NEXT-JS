@@ -55,9 +55,18 @@ export default function GoldenHaveliPage() {
       details={{
         Project: "Golden Haveli",
         Location: "Old Delhi",
+        "Plot Area": "1,600 sq. ft.",
+        "Built-up Area": "6,000 sq. ft.",
         Client: "Mr. Vijay Goel",
         Status: "Completed",
       }}
+      publications={[
+        "Archello",
+        "Hindustan Times",
+        "Times of India",
+        "Design Magazine",
+        "Architects and Interiors India",
+      ]}
       description={[
         "At the heart of Chandni Chowk, Golden Haveli is the restoration of a 1906 residential-cum-commercial haveli and a revival of Old Delhi's cultural memory. After decades of deterioration, the century-old structure was transformed into a heritage hotel.",
         "The three-storey haveli retains its Mughal architectural language through sandstone carving, facade jaalis, cusped arches, stained glass, floral motifs and stone columns arranged around a central courtyard. Original materials and traditional craftsmanship preserve its historic details and spatial character.",

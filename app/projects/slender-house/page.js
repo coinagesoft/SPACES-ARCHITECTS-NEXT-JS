@@ -18,12 +18,36 @@ export default function SlenderHousePage() {
       photos={photos}
       details={{
         Project: "6 X 18 Slender House",
-        "Completion Year": "2024",
-        Area: "6550 sq. ft.",
         Location: "New Delhi",
+        "Plot Area": "1,200 sq. ft.",
+        "Built-up Area": "6,550 sq. ft.",
         Client: "Mr. Malhotra",
         Status: "Completed",
+        "Completion Year": "2024",
       }}
+      awards={[
+        "WAF Finalist – Completed House/Villa, Urban/Suburban | 2024",
+        "Inside World Festival of Interiors Finalist – 2024",
+        "WA Award Winner – Cycle 51, 2024",
+      ]}
+      publications={[
+        "ArchDaily",
+        "Archilovers",
+        "Archiproducts",
+        "Archiportale",
+        "Arkitera",
+        "World Architecture",
+        "Amazing Architecture",
+        "Archinect",
+        "The Architects’ Diary",
+        "Surfaces Reporter",
+        "Tatler Asia",
+        "DBZ / Bauzeitung",
+        "Apple Podcast",
+        "RTF",
+        "ArchiPanic",
+        "Ideal House",
+      ]}
       description={[
         <>
           Conceived around the philosophy of <Orange>“less is more,”</Orange> Slender House transforms a modest footprint into a vertically connected family home. Staggered cut-outs and strategically placed skylights punctuate the volume, bringing daylight, cross-ventilation and visual connections across its compact profile, even at the cost of usable floor area.

@@ -39,9 +39,23 @@ export default function TheScreenHousePage() {
       details={{
         Project: "The Screen House",
         Location: "New Delhi",
+        "Plot Area": "2,250 sq. ft.",
+        "Built-up Area": "7,000 sq. ft.",
         Client: "Mr. Shashi Dawar",
         Status: "Completed",
       }}
+      awards={[
+        "World Architecture Community Awards | Winner – Cycle 37, 2021",
+        "ArchDaily Building of the Year Candidate – Houses, 2021",
+      ]}
+      publications={[
+        "ArchDaily",
+        "Amazing Architecture",
+        "e-architect",
+        "World Architecture",
+        "Volzero",
+        "Buildofy",
+      ]}
       description={[
         <>
           Designed for a <Orange>family of six</Orange>, including two children, this contemporary residence balances a simple architectural expression with an <Orange>open, interconnected way of living</Orange>. Distributed across four levels, the middle floors accommodate the family’s private spaces, while the stilt and upper levels are dedicated to recreation.

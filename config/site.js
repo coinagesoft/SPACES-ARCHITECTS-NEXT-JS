@@ -88,12 +88,12 @@ export const site = {
 };
 
 export const homeCopy = {
-    intro: [
-        "SPACES ARCHITECTS@KA IS AN ARCHITECTURE AND DESIGN PRACTICE DRIVEN BY A BELIEF THAT THE MOST MEMORABLE SPACES ARE NOT SIMPLY BUILT THEY ARE EXPERIENCED, FELT AND REMEMBERED. THE STUDIO APPROACHES EVERY PROJECT AS AN EMOTIONAL JOURNEY, BEGINNING WITH THE CHARACTER OF A PLACE AND THE ASPIRATIONS OF THE PEOPLE WHO WILL INHABIT IT, AND EVOLVING THROUGH LIGHT, LANDSCAPE, MATERIAL, CRAFT AND MOVEMENT INTO SPACES WITH A DISTINCT IDENTITY.",
-        "FROM CONTEMPORARY RESIDENCES AND WORKPLACES TO HOSPITALITY, INSTITUTIONS AND SENSITIVE HERITAGE PROJECTS, THE PRACTICE EXPLORES THE DIALOGUE BETWEEN TRADITION AND MODERNITY, FUNCTIONALITY AND EMOTION, PERMANENCE AND CHANGE. ITS WORK SEEKS TO CREATE MOMENTS OF DISCOVERY: THE FIRST GLIMPSE OF A COURTYARD, THE WARMTH OF NATURAL LIGHT ACROSS STONE, THE QUIETNESS OF A PRIVATE CORNER, OR THE MEMORY CREATED AROUND A SHARED SPACE.",
-        "THIS PHILOSOPHY HAS TRANSLATED INTO A DIVERSE PORTFOLIO RECOGNISED BY LEADING ARCHITECTURE AND DESIGN PLATFORMS, WITH PROJECTS FEATURED BY ARCHDAILY, ARCHITECTURAL DIGEST, UNESCO, WORLD ARCHITECTURE COMMUNITY AND OTHERS.",
-        "AT SPACES ARCHITECTS@KA, ARCHITECTURE IS ULTIMATELY ABOUT PEOPLE THEIR MEMORIES, RITUALS, ASPIRATIONS AND EVERYDAY EXPERIENCES. EACH PROJECT IS CONCEIVED AS A STORY, CAREFULLY SHAPED FROM ITS CONTEXT AND CRAFTED TO BECOME MORE MEANINGFUL WITH TIME. THE RESULT IS ARCHITECTURE THAT IS NOT MERELY SEEN, BUT DEEPLY FELT.",
-    ],
+  intro: [
+    "SPACES ARCHITECTS@ka is an architecture and design practice driven by a belief that the most memorable spaces are not simply built they are experienced, felt and remembered. The studio approaches every project as an emotional journey, beginning with the character of a place and the aspirations of the people who will inhabit it, and evolving through light, landscape, material, craft and movement into spaces with a distinct identity.",
+    "From contemporary residences and workplaces to hospitality, institutions and sensitive heritage projects, the practice explores the dialogue between tradition and modernity, functionality and emotion, permanence and change. Its work seeks to create moments of discovery: the first glimpse of a courtyard, the warmth of natural light across stone, the quietness of a private corner, or the memory created around a shared space.",
+    "This philosophy has translated into a diverse portfolio recognised by leading architecture and design platforms, with projects featured by ArchDaily, Architectural Digest, UNESCO, World Architecture Community and others.",
+    "At Spaces Architects@ka, architecture is ultimately about people their memories, rituals, aspirations and everyday experiences. Each project is conceived as a story, carefully shaped from its context and crafted to become more meaningful with time. The result is architecture that is not merely seen, but deeply felt.",
+],
 };
 
 export const aboutCopy = {

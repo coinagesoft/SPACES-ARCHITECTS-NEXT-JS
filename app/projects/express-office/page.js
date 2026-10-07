@@ -41,6 +41,7 @@ export default function ExpressOfficePage() {
       details={{
         Project: "Express Office",
         Location: "Noida, Uttar Pradesh",
+        "Built-up Area": "4,500 sq. ft.",
         Client: "Express Builders",
         Status: "Completed",
       }}

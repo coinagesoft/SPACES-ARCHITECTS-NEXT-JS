@@ -39,6 +39,8 @@ export default function HouseOfCurvesPage() {
       details={{
         Project: "House of Curves",
         Location: "Agra, Uttar Pradesh",
+        "Plot Area": "6,300 sq. ft.",
+        "Built-up Area": "18,000 sq. ft.",
         Client: "Mr. Amit Agrawal",
         Status: "Completed",
       }}

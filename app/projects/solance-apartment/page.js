@@ -29,6 +29,7 @@ export default function SolanceApartmentPage() {
       details={{
         Project: "Solance Apartment",
         Location: "Noida, Uttar Pradesh",
+        "Built-up Area": "2,000 sq. ft.",
         Client: "Mr. Vinay Goel",
         Status: "Completed",
       }}

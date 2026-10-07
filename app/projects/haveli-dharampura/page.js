@@ -15,14 +15,27 @@ export const metadata = {
 const details = {
   Project: "Haveli Dharampura",
   Location: "Old Delhi",
+  "Plot Area": "5,400 sq. ft.",
+  "Built-up Area": "11,000 sq. ft.",
   Client: "Mr. Vijay Goel",
   Status: "Completed",
   Team: "Ar. Kapil Aggarwal, Pawan Sharma",
 };
 
 const achievements = [
-  "UNESCO Asia Pacific for Cultural Heritage Conservation 2017",
+  "2017 UNESCO Asia-Pacific Award for Cultural Heritage Conservation",
+  "2nd World Annual International Travel Awards – Best Heritage Property in Delhi",
   "NDTV-Grohe Design & Architecture Awards 2015 – Heritage Architecture (Jury Commendation)",
+];
+
+const publications = [
+  "Divisare",
+  "The Merit List",
+  "Style",
+  "Architects and Interiors India",
+  "The Design Theory",
+  "In Habitat",
+  "The Telegraph",
 ];
 
 const pressLogos = assets.haveliDharampura.pressLogos;
@@ -88,44 +101,52 @@ export default function HaveliDharampuraPage() {
                 ))}
               </ul>
             </div>
+            <div>
+              <h3>Publications:</h3>
+              <ul>
+                {publications.map((p) => (
+                  <li key={p}>{p}</li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           <div className={styles.infoBody}>
             <p>
-              THE PROJECT IN DHARAMPURA IS THE FIRST OF ITS KIND IN THE WALLED
-              CITY OF DELHI WHICH AIMS IN THE{" "}
+              The project in Dharampura is the first of its kind in the Walled
+              City of Delhi which aims in the{" "}
               <span className={styles.highlight}>
-                RESTORATION &amp; REHABILITATION OF A 135-YEAR-OLD HAVELI
-                (BUILT-IN 1880)
+                restoration &amp; rehabilitation of a 135-year-old haveli
+                (built-in 1880)
               </span>{" "}
-              INTO A HOSPITALITY PROJECT WITH 14 ROOMS, A SPA, A MUSEUM, 2
-              SHOPS &amp; A RESTAURANT. WE STARTED THIS PROJECT LOOKING AT A
-              BROKEN STRUCTURE THAT WAS DECLARED AN INHABITABLE SPACE FOR
-              LIVING BY THE GOVERNMENT OF DELHI. WITHOUT ANY PLANS OR
-              DRAWINGS, WE HAD TO DEVELOP A PROGRAM EVEN BEFORE STARTING THE
-              DESIGN WHICH INVOLVED THE BUILDING SURVEY, TO PREPARE MEASURED
-              DRAWINGS &amp; STRUCTURAL REPAIR &amp; STRENGTHENING OF THE
-              BUILDING.{" "}
+              into a hospitality project with 14 rooms, a spa, a museum, 2
+              shops &amp; a restaurant. We started this project looking at a
+              broken structure that was declared an inhabitable space for
+              living by the Government of Delhi. Without any plans or
+              drawings, we had to develop a program even before starting the
+              design which involved the building survey, to prepare measured
+              drawings &amp; structural repair &amp; strengthening of the
+              building.{" "}
               <span className={styles.highlight}>
-                THE DESIGNING PROCESS INVOLVED A VERY ELABORATE 2 YEARS OF
-                RESEARCH ON THE WHOLE URBAN FABRIC OF CHANDNI CHOWK.
+                The designing process involved a very elaborate 2 years of
+                research on the whole urban fabric of Chandni Chowk.
               </span>{" "}
-              THE RESULTING SPACE HAD ELEMENTS FROM HINDU, MUGHAL, JAIN &amp;
-              RAJASTHAN&apos;S ARCHITECTURE. WE WERE BOUND TO AMALGAMATE
-              TRADITIONAL ARCHITECTURE WITH CONTEMPORARY MODERN ARCHITECTURE
-              TO CREATE AN INVITING SPACE FOR BOTH INDIANS &amp; FOREIGNERS.
-              WE VISITED ALMOST ALL THE OLD CITIES OF INDIA TO UNDERSTAND THE
-              RELEVANCE OF SUCH A PROJECT &amp; TO COLLECT A LARGE NUMBER OF
-              SKILLED LABOR WHO UNDERSTAND TRADITIONAL ARCHITECTURAL
-              ELEMENTS. WE REPLICATED ALMOST ALL THE ELEMENTS WHICH WERE USED
-              EARLIER, SOME OF THEM IN A MODERN WAY.{" "}
+              The resulting space had elements from Hindu, Mughal, Jain &amp;
+              Rajasthan&apos;s architecture. We were bound to amalgamate
+              traditional architecture with contemporary modern architecture
+              to create an inviting space for both Indians &amp; foreigners.
+              We visited almost all the old cities of India to understand the
+              relevance of such a project &amp; to collect a large number of
+              skilled labor who understand traditional architectural
+              elements. We replicated almost all the elements which were used
+              earlier, some of them in a modern way.{" "}
               <span className={styles.highlight}>
-                EVERY ROOM OR SPACE HAS ITS OWN THEME WHICH REFLECTS VARIOUS
-                FLAVORS OF ARCHITECTURE &amp; LIVELIHOOD IN CHANDNI CHOWK.
+                Every room or space has its own theme which reflects various
+                flavors of architecture &amp; livelihood in Chandni Chowk.
               </span>{" "}
-              ALL FURNITURE, LIGHTS &amp; ARTIFACTS WERE DESIGNED ESPECIALLY
-              FOR EACH AND EVERY SPACE ACCORDING TO ITS USE &amp; THE THEME
-              WAS TAKEN.
+              All furniture, lights &amp; artifacts were designed especially
+              for each and every space according to its use &amp; the theme
+              was taken.
             </p>
 
             <div className={styles.pressLogos} aria-label="Press and award recognition">

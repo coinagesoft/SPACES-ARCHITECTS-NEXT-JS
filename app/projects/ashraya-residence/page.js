@@ -40,6 +40,8 @@ export default function AshrayaResidencePage() {
       details={{
         Project: "Ashraya Residence",
         Location: "New Delhi",
+        "Plot Area": "5,400 sq. ft.",
+        "Built-up Area": "12,000 sq. ft.",
         Client: "Mr. Kalra",
         Status: "Completed",
       }}

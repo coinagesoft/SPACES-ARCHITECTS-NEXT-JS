@@ -31,6 +31,8 @@ export default function ThePoeticHousePage() {
       details={{
         Project: "The Poetic House",
         Location: "Noida, Uttar Pradesh",
+        "Plot Area": "2,700 sq. ft.",
+        "Built-up Area": "6,000 sq. ft.",
         Client: "Mr. Bansal",
         Status: "Ongoing",
       }}

@@ -69,9 +69,11 @@ export default function ProjectDetailPage({
   location,
   hero,
   photos = [],
-  details, 
+  details = {},
   heroVideo,
   awards = [],
+  publications = [],
+  recognition,
   description = [],
 }) {
   const gallery = buildProjectGallery(photos.filter(Boolean));
@@ -139,6 +141,24 @@ export default function ProjectDetailPage({
         {awards.map((a) => (
           <li key={a}>{a}</li>
         ))}
+      </ul>
+    </div>
+  )}
+  {publications.length > 0 && (
+    <div>
+      <h3>Publications:</h3>
+      <ul>
+        {publications.map((p) => (
+          <li key={p}>{p}</li>
+        ))}
+      </ul>
+    </div>
+  )}
+  {recognition && (
+    <div>
+      <h3>Recognition:</h3>
+      <ul>
+        <li>{recognition}</li>
       </ul>
     </div>
   )}

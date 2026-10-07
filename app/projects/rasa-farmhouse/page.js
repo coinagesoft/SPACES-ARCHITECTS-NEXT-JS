@@ -29,8 +29,10 @@ export default function RasaFarmhousePage() {
       details={{
         Project: "Rasa Farmhouse",
         Location: "New Delhi",
-        Client: "—",
-        Status: "—",
+        "Plot Area": "1 acre",
+        "Built-up Area": "20,000 sq. ft.",
+        Client: "Mr. Jain",
+        Status: "On-Going",
       }}
       description={[
         <>

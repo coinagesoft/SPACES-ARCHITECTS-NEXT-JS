@@ -19,6 +19,8 @@ export default function FloatingCourtyardPage() {
       details={{
         Project: "Floating Courtyard",
         Location: "Agra",
+        "Plot Area": "8,000 sq. ft.",
+        "Built-up Area": "16,000 sq. ft.",
         Client: "Mr. Mohan Aggarwal",
         Status: "On-Going",
       }}

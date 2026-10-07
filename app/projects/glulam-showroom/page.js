@@ -43,6 +43,7 @@ export default function GlulamShowroomPage() {
       details={{
         Project: "Glulam Showroom",
         Location: "New Delhi",
+        "Built-up Area": "2,500 sq. ft.",
         Client: "Mr. Hardeep Gill",
         Status: "Completed",
       }}

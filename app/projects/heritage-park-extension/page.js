@@ -30,6 +30,7 @@ export default function ExtensionOfHeritageParkPage() {
       details={{
         Project: "Extension of Heritage Park",
         Location: "Chandni Chowk, Old Delhi",
+        "Plot Area": "2.87 acres",
         Client: "MCD",
         Status: "Ongoing",
       }}

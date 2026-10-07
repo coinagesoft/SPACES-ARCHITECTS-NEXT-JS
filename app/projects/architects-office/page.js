@@ -44,14 +44,21 @@ export default function ArchitectsOfficePage() {
       details={{
         Project: "Architect's Office",
         Location: "South Extension, New Delhi",
+        "Built-up Area": "1,500 sq. ft.",
         Status: "Completed",
       }}
       awards={[
-        "World Inside Festival 2014 – Shortlisted in Office Category",
-        "World Interior News Awards 2014 – Shortlisted",
-        "IIA Awards 2015 – Shortlisted in Interior projects category",
-        "World Architecture Community Awards 2020 35th cycle – Winner for Spaces Architects@KA Studio Publications",
-        "Custom Made Office –II",
+        "World Inside Festival 2014 | Shortlisted – Office Category",
+        "World Interiors News Awards 2014 | Shortlisted / Longlisted – Office Category",
+        "IIA Awards 2015 | Shortlisted – Interior Projects Category",
+        "World Architecture Community Awards | 35th Cycle | Winner – Interior Design Realised",
+      ]}
+      publications={[
+        "ArchDaily",
+        "Arch2O",
+        "Contemporist",
+        "Asian Paints Beautiful Homes",
+        "Architizer",
       ]}
       description={[
         <>

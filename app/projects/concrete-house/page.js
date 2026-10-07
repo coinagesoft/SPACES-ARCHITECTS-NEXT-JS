@@ -18,6 +18,8 @@ export default function ConcreteHousePage() {
       details={{
         Project: "Concrete House",
         Location: "Kamla Nagar, Agra",
+        "Plot Area": "3,000 sq. ft.",
+        "Built-up Area": "8,000 sq. ft.",
         Client: "Mr. Abhishek",
         Status: "Ongoing",
       }}

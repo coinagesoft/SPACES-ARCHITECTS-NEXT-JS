@@ -36,9 +36,21 @@ export default function SachdevaFarmhousePage() {
       details={{
         Project: "Sachdeva Residence",
         Location: "New Delhi",
+        "Plot Area": "2.5 acres",
+        "Built-up Area": "25,000 sq. ft.",
         Client: "Mr. Himanshu Sachdeva",
         Status: "Completed",
       }}
+      awards={[
+        "World Architecture Community Awards | 18th Cycle | Winner",
+        "IIID Anchor Awards 2013 | Single Dwelling – North, East & Central Region",
+      ]}
+      publications={[
+        "Architecture + Design",
+        "ArchDaily",
+        "ArchDaily Brasil",
+        "MGS Architecture",
+      ]}
       description={[
         <>
           Set within a <Orange>3-acre</Orange> landscape, the farmhouse draws from tropical architecture to create a <Orange>sequence of interconnected spaces</Orange> gathered around a central courtyard and pool. The layout places bedrooms and living spaces around this green heart, while the gym, spa and home theatre complete the enclosure, creating varied architectural compositions from every side.

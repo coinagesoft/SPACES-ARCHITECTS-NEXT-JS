@@ -56,6 +56,8 @@ export default function HouseOfHuesPage() {
       details={{
         Project: "House of Hues",
         Location: "New Delhi",
+        "Plot Area": "2,700 sq. ft.",
+        "Built-up Area": "8,000 sq. ft.",
         Client: "Mr. Pramod",
         Status: "Completed",
       }}

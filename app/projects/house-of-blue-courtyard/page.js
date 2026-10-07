@@ -40,6 +40,8 @@ export default function HouseOfBlueCourtyardPage() {
       details={{
         Project: "House of Blue Courtyard",
         Location: "Vasant Kunj, New Delhi",
+        "Plot Area": "10,000 sq. ft.",
+        "Built-up Area": "18,000 sq. ft.",
         Client: "Mr. Amit Talwar",
         Status: "Completed",
       }}

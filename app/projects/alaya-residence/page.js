@@ -24,6 +24,8 @@ export default function AlayaResidencePage() {
       details={{
         Project: "Alaya Residence",
         Location: "Gurugram, Haryana",
+        "Plot Area": "4,500 sq. ft.",
+        "Built-up Area": "12,000 sq. ft.",
         Client: "Mr. Manish Madan",
         Status: "Completed",
       }}

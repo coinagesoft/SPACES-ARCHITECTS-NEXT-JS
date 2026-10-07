@@ -49,9 +49,18 @@ export default function NoccOfficePage() {
       details={{
         Project: "NOCC Office",
         Location: "New Delhi",
+        "Built-up Area": "10,000 sq. ft.",
         Client: "NIIT Technologies",
         Status: "Completed",
       }}
+      awards={[
+        "IAD Awards 2009 | Best Interior Designer Merchandise – 3rd Position",
+        "Archidesign Awards 2010 | National Level – Office Category",
+        "Architects & Interiors India Awards 2010 | National Level – Office Category – Runner-up",
+      ]}
+      publications={[
+        "Inside Outside | May 2010",
+      ]}
       description={[
         <>
           The brief called for a <Orange>creative, open office</Orange> with large glass panels and a <Orange>youthful, vibrant ambience</Orange>. The concept evolved through abstract shapes, geometric forms, panels and pastel shades, creating a spatial experience revealed progressively along the corridor.

@@ -28,6 +28,7 @@ export default function ColourCourtPage() {
       details={{
         Project: "The Colour Court",
         Location: "Noida, Uttar Pradesh",
+        "Built-up Area": "6,000 sq. ft.",
         Status: "Completed (2019)",
       }}
       description={[

@@ -32,9 +32,16 @@ export default function StepMazeHousePage() {
       details={{
         Project: "The Step Maze House",
         Location: "Model Town, New Delhi",
+        "Plot Area": "2,400 sq. ft.",
+        "Built-up Area": "8,600 sq. ft.",
         Client: "Mr. Malhotra",
         Status: "Completed",
       }}
+      publications={[
+        "Amazing Architecture",
+        "e-architect",
+        "Buildofy",
+      ]}
       description={[
         <>
           Set on a <Orange>trapezium-shaped corner plot in Delhi</Orange>, Step Maze is a residence for a family of five and their dog, shaped by its dual street frontage. The planning uses the two open sides to draw in natural light, breeze and views, while louvers and brick jaalis provide privacy and shade without closing the house off from its surroundings.

@@ -30,8 +30,9 @@ export default function TheCanvasPage() {
       details={{
         Project: "The Canvas",
         Location: "New Delhi",
+        "Built-up Area": "6,000 sq. ft.",
         Client: "Mr. Pranav Goel",
-        Status: "On-Going",
+        Status: "Completed",
       }}
       description={[
         <>

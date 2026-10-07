@@ -31,9 +31,15 @@ export default function TheUrbanNestPage() {
       details={{
         Project: "The Urban Nest",
         Location: "New Delhi",
+        "Plot Area": "35,000 sq. ft.",
+        "Built-up Area": "1.25 lakh sq. ft.",
         Client: "Express Builders",
-        Status: "Conceptual",
+        Status: "Future",
       }}
+      awards={[
+        "WAF 2022 – Highly Commended, Future Project: Residential",
+        "Loop Design Awards – Winner, 2023",
+      ]}
       description={[
         <>
           Conceived as a <Orange>response to the mental and emotional pressures of student life,</Orange> The Urban Nest reimagines the conventional hostel as a <Orange>place of refuge, interaction and growth.</Orange> Located within an educational hub, the project challenges the monotony of dormitory architecture by ensuring no two floor levels are identical, creating a constantly changing spatial experience for its residents.

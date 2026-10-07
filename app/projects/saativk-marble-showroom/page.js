@@ -24,7 +24,7 @@ export default function SatvikMarbleShowroomPage() {
   return (
     <ProjectDetailPage
       title="Satvik Marble Showroom"
-      location=""
+      location="Noida"
       hero={coverPhoto1}
       photos={[
          photo2, photo3, photo4, photo5, photo6, photo7, photo8,
@@ -33,9 +33,10 @@ export default function SatvikMarbleShowroomPage() {
       ]}
       details={{
         Project: "Satvik Showroom",
-        Location: "",
-        Client: "",
-        Status: "Completed",
+        Location: "Noida",
+        "Built-up Area": "10,000 sq. ft.",
+        Client: "Mr. Prabhat",
+        Status: "On-Going",
       }}
       description={[
         <>

@@ -28,6 +28,7 @@ export default function MarmoHomeOfficePage() {
       details={{
         Project: "Marmo Home Office",
         Location: "New Delhi",
+        "Built-up Area": "5,000 sq. ft.",
         Client: "Mr. Raman Arora",
         Status: "Completed",
       }}

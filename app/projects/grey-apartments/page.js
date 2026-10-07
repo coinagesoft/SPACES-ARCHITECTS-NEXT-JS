@@ -41,7 +41,7 @@ export default function GreyApartmentPage() {
       details={{
         Project: "Grey Apartment",
         Location: "Gurugram, Haryana",
-        "Square Footage": "1500 sq.ft.",
+        "Built-up Area": "2,000 sq. ft.",
         Client: "Rocky Malik",
       }}
       description={[

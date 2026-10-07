@@ -34,7 +34,7 @@ export default function GandhiDarshanParkPage() {
       details={{
         Project: "Gandhi Darshan Park",
         Location: "Raj Ghat, New Delhi",
-        Client: "Mr. Vijay Goel",
+        Client: "Gandhi Darshan",
         Status: "Completed",
       }}
       description={[

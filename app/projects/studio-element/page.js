@@ -34,6 +34,7 @@ export default function StudioElementPage() {
       details={{
         Project: "Studio Element",
         Location: "New Delhi",
+        "Built-up Area": "1,800 sq. ft.",
         Client: "Pramod Builders",
         Status: "Completed",
       }}

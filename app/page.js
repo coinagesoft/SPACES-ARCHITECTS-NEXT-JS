@@ -10,8 +10,8 @@ import { homeCopy } from "@/config/site";
 // Full phrases that should be highlighted, exactly as they appear in the copy.
 // Order matters if one phrase could be a substring of another (longest first).
 const HIGHLIGHT_PHRASES = [
-  "EMOTIONAL JOURNEY, BEGINNING WITH THE CHARACTER OF A PLACE AND THE ASPIRATIONS",
-  "ARCHDAILY, ARCHITECTURAL DIGEST, UNESCO, WORLD ARCHITECTURE COMMUNITY",
+  "emotional journey, beginning with the character of a place and the aspirations",
+  "ArchDaily, Architectural Digest, UNESCO, World Architecture Community",
 ];
 
 function escapeRegExp(str) {
@@ -135,14 +135,23 @@ export default function HomePage() {
       <SiteChrome dark home />
       <HeroSlider projects={homeHeroProjects} />
       <section className="site-container py-8 md:py-12">
-        <div className="space-y-7">
-          {homeCopy.intro.map((paragraph, index) => (
-            <p key={index} className="text-[11px] uppercase leading-[1.65] tracking-[0.14em] text-[#545454] md:text-[12px]">
-              {renderIntroParagraph(paragraph)}
-            </p>
-          ))}
-        </div>
-      </section>
+  <div className="mb-6 flex justify-center">
+    <h2 className="text-center text-[14px] font-medium tracking-[0.16em] text-[#6b6b6b] md:text-[16px]">
+      Architecture That is Experienced, Felt and Remembered.
+    </h2>
+  </div>
+
+  <div className="space-y-7">
+    {homeCopy.intro.map((paragraph, index) => (
+      <p
+        key={index}
+        className="text-[11px] leading-[1.65] tracking-[0.14em] text-[#6b6b6b] md:text-[14px]"
+      >
+        {renderIntroParagraph(paragraph)}
+      </p>
+    ))}
+  </div>
+</section>
       <section className="site-container pb-14 md:pb-20">
         <h2 className="mb-4 text-[20px] font-normal uppercase tracking-[0.16em] text-[#6B6B6B] md:mb-4 md:text-[28px]">
           Featured Projects

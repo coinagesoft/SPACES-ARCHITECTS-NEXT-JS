@@ -39,9 +39,17 @@ export default function LahoriGateMuseumPage() {
       details={{
         Project: "Lahori Gate Museum",
         Location: "Old Delhi",
-        Client: "Mr. Vijay Goel",
+        Client: "MCD",
         Status: "Completed",
       }}
+      publications={[
+        "Times of India",
+        "Hindustan Times",
+        "The Architecture & Planning News",
+        "Tehelka",
+        "Dainik Jagran",
+        "Young Intach",
+      ]}
       description={[
         <>
           Located in the historic fabric of Chandni Chowk, the Museum restores and reimagines a century-old structure as an immersive journey through the cultural memory of Old Delhi. The project preserves the architectural character of the building while transforming it into a space for experiencing the many layers of <Orange>Chandni Chowk’s history, traditions and everyday life</Orange>.

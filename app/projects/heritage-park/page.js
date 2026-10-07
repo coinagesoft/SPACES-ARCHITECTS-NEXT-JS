@@ -47,9 +47,26 @@ export default function HeritageParkPage() {
       details={{
         Project: "Heritage Park",
         Location: "Chandni Chowk, Old Delhi",
+        "Site Area": "1.83 acres",
         Client: "MCD",
         Status: "Completed",
       }}
+      awards={[
+        "IIA Award for Heritage – Winner, 2022",
+      ]}
+      publications={[
+        "Hindustan Times",
+        "The Indian Express",
+        "Times of India",
+        "India Today",
+        "The New Indian Express",
+        "The Print / ANI",
+        "ABP Live",
+        "NDTV",
+        "Curly Tales",
+        "Rashtrapati Bhawan",
+      ]}
+      recognition={"The Heritage Park is the Mughal Garden of Chandni Chowk – Ex Hon’ble President Shri Ram Nath Kovind"}
       description={[
         <>
           Set opposite the Red Fort in the heart of Old Delhi, Heritage Park is a landscape redevelopment conceived as a <Orange>contemporary escape rooted in the city&apos;s history</Orange>. Framed by panoramic views of the Red Fort and Jama Masjid, the park brings together <Orange>Mughal and Hindu architectural influences</Orange> through a distinctly vernacular material language.

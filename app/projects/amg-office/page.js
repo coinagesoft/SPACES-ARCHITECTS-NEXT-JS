@@ -41,6 +41,7 @@ export default function AmgOfficePage() {
       details={{
         Project: "AMG Office",
         Location: "New Delhi",
+        "Built-up Area": "1,500 sq. ft.",
         Client: "Mr. Mohit Gupta",
         Status: "Completed",
       }}

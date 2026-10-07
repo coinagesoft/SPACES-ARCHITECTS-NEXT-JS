@@ -31,6 +31,8 @@ export default function GuptasResidencePage() {
       details={{
         Project: "Gupta's Residence",
         Location: "New Delhi",
+        "Plot Area": "2,700 sq. ft.",
+        "Built-up Area": "8,000 sq. ft.",
         Client: "Mr. Sanjay Gupta",
         Status: "Completed",
       }}

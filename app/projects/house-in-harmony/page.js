@@ -28,8 +28,9 @@ export default function HouseInHarmonyPage() {
       details={{
         Project: "The House in Harmony",
         Location: "New Delhi",
+        "Built-up Area": "4,500 sq. ft.",
         Client: "Mr. Charanjit Arora",
-        Status: "On-Going",
+        Status: "Completed",
       }}
       description={[
         <>

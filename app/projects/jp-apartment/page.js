@@ -39,6 +39,7 @@ export default function JpApartmentPage() {
       details={{
         Project: "JP Apartment",
         Location: "Noida, Uttar Pradesh",
+        "Built-up Area": "2,000 sq. ft.",
         Client: "Pawar Residence",
         Status: "Completed",
       }}
