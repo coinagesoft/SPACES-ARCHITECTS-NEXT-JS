@@ -11,7 +11,7 @@
 // ---------------------------------------------------------------------
 
 // Where the "Expressions" link in the header goes. Change if your route differs.
-export const EXPRESSIONS_HREF = "/publications";
+export const EXPRESSIONS_HREF = "/expressions";
 
 // ---------------------------------------------------------------------
 // Header menu

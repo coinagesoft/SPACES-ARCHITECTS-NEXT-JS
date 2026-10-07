@@ -298,3 +298,83 @@
         transition: none;
     }
 }
+
+
+/* ---------- Web cards on mobile (smaller 2-column grid) ---------- */
+@media (max-width: 767px) {
+    .webGrid.webGrid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px 12px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .webGrid article {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+    }
+
+    /* the image box inside each card link */
+    .webGrid article a > div:first-child,
+    .webGrid article > div > div:first-child {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding-bottom: 0;
+        aspect-ratio: 4 / 3;
+    }
+
+    .webGrid article h2 {
+        font-size: 13px;
+        line-height: 1.3;
+        margin-top: 8px;
+    }
+
+    .webGrid article p {
+        font-size: 11px;
+        line-height: 1.3;
+    }
+
+    .webGrid article span {
+        font-size: 10px;
+    }
+}
+
+/* ---------- Magazines + Books on mobile (same as Web cards) ---------- */
+@media (max-width: 767px) {
+    /* the grid container inside MagazineGallery / BookGallery */
+    .galleryWrap [class*="grid" i] {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px 12px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    /* each cover card */
+    .galleryWrap [class*="grid" i] > * {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+    }
+
+    .galleryWrap [class*="grid" i] img {
+        width: 100%;
+        height: auto;
+    }
+
+    .galleryWrap [class*="grid" i] h2,
+    .galleryWrap [class*="grid" i] h3 {
+        font-size: 13px;
+        line-height: 1.3;
+        margin-top: 8px;
+    }
+
+    .galleryWrap [class*="grid" i] p,
+    .galleryWrap [class*="grid" i] span {
+        font-size: 11px;
+        line-height: 1.3;
+    }
+}

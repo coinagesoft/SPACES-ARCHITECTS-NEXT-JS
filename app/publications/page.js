@@ -447,7 +447,7 @@ export default function PublicationsPage() {
 
       <section id="all" className={styles.blogListing} aria-label="Publications">
         {/* Web cards use the original blog-card size (square image box, cover-cropped). */}
-        <div id="web" className={`${styles.blogGrid} ${chromeStyles.anchor}`}>
+       <div id="web" className={`${styles.blogGrid} ${chromeStyles.webGrid} ${chromeStyles.anchor}`}>
           {publicationCards.map((card, index) => {
             const content = (
               <>
@@ -486,13 +486,13 @@ export default function PublicationsPage() {
           })}
         </div>
 
-        <div id="magazines" className={chromeStyles.anchor}>
-          <MagazineGallery magazines={magazines} />
-        </div>
+       <div id="magazines" className={`${chromeStyles.anchor} ${chromeStyles.galleryWrap}`}>
+  <MagazineGallery magazines={magazines} />
+</div>
 
-        <div id="books" className={chromeStyles.anchor}>
-          <BookGallery books={books} />
-        </div>
+<div id="books" className={`${chromeStyles.anchor} ${chromeStyles.galleryWrap}`}>
+  <BookGallery books={books} />
+</div>
       </section>
 
       <Footer />
