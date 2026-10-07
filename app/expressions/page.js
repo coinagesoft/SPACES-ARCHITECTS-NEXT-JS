@@ -22,7 +22,7 @@ const categories = [
   { value: "lights", label: "Lights", folder: "LIGHTS", count: 28 },
   { value: "artwork", label: "Artwork", folder: "ARTWORK", count: 15 },
   { value: "furniture", label: "Furniture", folder: "FURNITURE", count: 11 },
-  { value: "sculpture", label: "Sculpture", folder: "SCULPTURE", count: 9 },
+  { value: "sculpture", label: "Sculpture", folder: "SCULPTURE", count: 10 },
 ];
 
 // Menu shown in the header (ALL first)
