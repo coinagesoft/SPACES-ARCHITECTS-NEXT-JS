@@ -1,7 +1,7 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { assetImage } from "@/config/assets";
 
-const hero = assetImage("projects/THE-URBAN-NEST/cover/COVER.webp");
+const hero = assetImage("projects/THE-URBAN-NEST/cover/COVER.png");
 const photo0 = assetImage("projects/THE-URBAN-NEST/3_4/0.webp");
 const photo1 = assetImage("projects/THE-URBAN-NEST/3_4/1.webp");
 const photo2 = assetImage("projects/THE-URBAN-NEST/3_4/2.webp");

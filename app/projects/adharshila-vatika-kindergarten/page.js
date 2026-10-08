@@ -42,9 +42,9 @@ export default function AdharshilaVatikaKindergartenPage() {
         photo00, photo01, photo02, photo03, photo4, photo04, photo05, photo06,
         photo07, photo08, photo09, photo10, photo11, photo12,
         akhilBakhshi33, akhilBakhshi40, akhilBakhshi87, akhilBakhshi103,
-        akhilBakhshi117, akhilBakhshi131, akhilBakhshi132, akhilBakhshi144, akhilBakhshi161,
+        akhilBakhshi117, akhilBakhshi131, akhilBakhshi132,  akhilBakhshi161,
         child1, child2,
-        coverPhoto2,
+        
       ]}
       details={{
         Project: "Adharshila Vatika Kindergarten",

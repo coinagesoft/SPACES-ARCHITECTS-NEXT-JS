@@ -1,5 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
-import { assetImage, assetUrl } from "@/config/assets";
+import { assetImage } from "@/config/assets";
 const hero = assetImage("projects/BRICK-HOUSE/cover/COVER.webp");
 const photo1 = assetImage("projects/BRICK-HOUSE/3_4/1.webp");
 const photo2 = assetImage("projects/BRICK-HOUSE/3_4/2.webp");
@@ -16,11 +16,13 @@ const photo12 = assetImage("projects/BRICK-HOUSE/3_4/12.webp");
 const photo13 = assetImage("projects/BRICK-HOUSE/3_4/13.webp");
 const photo14 = assetImage("projects/BRICK-HOUSE/3_4/14.webp");
 const coverPhoto2 = assetImage("projects/BRICK-HOUSE/cover/HERO.webp");
+const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
 export const metadata = { title: "The Brick House — Spaces Architects@ka" };
 export default function TheBrickHousePage() {
   return (
     <ProjectDetailPage
+      currentId="brick-house"
       title="The Brick House"
       location="New Delhi"
       hero={hero}
@@ -37,16 +39,16 @@ export default function TheBrickHousePage() {
       }}
       description={[
         <>
-          Designed as a contemporary family residence, the house brings together bold architectural forms, warm materials, and an abundance of greenery. The defining feature is a <strong>triple-height living space</strong>, visually and spatially connecting three floors while creating a dramatic sense of volume and openness.
+          Designed as a contemporary family residence, the house brings together bold architectural forms, warm materials, and an abundance of greenery. The defining feature is a <Orange>triple-height living space</Orange>, visually and spatially connecting three floors while creating a dramatic sense of volume and openness.
         </>,
         <>
           The interiors continue this vertical connection through layered living spaces, a sculptural staircase, and carefully framed views. Warm wood, textured stone, terracotta tones, and soft neutral finishes create a refined yet inviting atmosphere. Large openings and carefully placed greenery blur the boundary between indoors and outdoors.
         </>,
         <>
-          At the upper level, an <strong>expansive terrace garden</strong> becomes an extension of the living spaces, offering a private retreat with landscaped areas, seating, and an open connection to the sky. The façade combines curved brick volumes, dark textured surfaces, and vertical timber elements, giving the residence a strong yet welcoming identity.
+          At the upper level, an <Orange>expansive terrace garden</Orange> becomes an extension of the living spaces, offering a private retreat with landscaped areas, seating, and an open connection to the sky. The façade combines curved brick volumes, dark textured surfaces, and vertical timber elements, giving the residence a strong yet welcoming identity.
         </>,
         <>
-          Overall, the design is conceived as a <strong>vertical home where architecture, light, greenery, and family life come together across every level.</strong>
+          Overall, the design is conceived as a <Orange>vertical home where architecture, light, greenery, and family life come together across every level.</Orange>
         </>,
       ]}
     />

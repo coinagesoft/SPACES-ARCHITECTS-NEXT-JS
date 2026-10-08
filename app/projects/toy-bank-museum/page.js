@@ -32,7 +32,7 @@ export default function ToybankMuseumPage() {
         "Plot Area": "10,000 sq. ft.",
         "Built-up Area": "40,000 sq. ft.",
         Client: "Mr. Vijay Goel",
-        Status: "On-Going",
+        Status: "Ongoing",
       }}
       description={[
         <>

@@ -164,7 +164,7 @@ const galHouseAroundATree = assetImage("projects/HOUSE AROUND A TREE.png");
 const galJainsResidence = assetImage("projects/JAINS RESIDENCE.jpg");
 const galSaatvikMarbleShowroom = assetImage("projects/SAATIVK MARBLE SHOWROOM.jpg");
 const galTheCanvas = assetImage("projects/THECANVAS.jpg");
-const galSethisResidence = assetImage("projects/SETHIS RESIDENCE.png");
+const galSethisResidence = assetImage("projects/SETHIS-RESIDENCE/cover/HERO.png");
 const galSobhtiResidence = assetImage("projects/SOBHTI RESIDENCE.jpg");
 const galHansgroheShowroom = assetImage("projects/HANSGROHE SHOWROOM.png");
 // ---- Continuation of the Canva reference page — Toy Bank Museum
