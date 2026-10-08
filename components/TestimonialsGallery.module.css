@@ -1,4 +1,4 @@
-/* Testimonials — image wall + full-size preview.
+/* Testimonials — image grid + full-size preview.
    Images keep their own proportions (nothing is cropped). */
 
 .listing {
@@ -9,21 +9,24 @@
   min-height: 70vh;
 }
 
+/* real grid: always 3 equal columns, filled left to right, row by row */
 .grid {
-  column-count: 3;
-  column-gap: 35px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 35px;
+  align-items: start;
 }
 
 .card {
   display: block;
   width: 100%;
-  margin: 0 0 35px;
+  min-width: 0;
+  margin: 0;
   padding: 0;
   border: 0;
   background: #e7e5e2;
   cursor: zoom-in;
   overflow: hidden;
-  break-inside: avoid;
 }
 
 .image {
@@ -124,12 +127,8 @@
   }
 
   .grid {
-    column-count: 2;
-    column-gap: 28px;
-  }
-
-  .card {
-    margin-bottom: 28px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
   }
 }
 
@@ -139,11 +138,8 @@
   }
 
   .grid {
-    column-count: 1;
-  }
-
-  .card {
-    margin-bottom: 24px;
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   .overlay {

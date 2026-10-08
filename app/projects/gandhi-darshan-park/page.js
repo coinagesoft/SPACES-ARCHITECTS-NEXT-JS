@@ -38,6 +38,40 @@ export default function GandhiDarshanParkPage() {
         Status: "Completed",
       }}
       description={[
+        // Tagline shown as a pull-quote (inline styles keep the shared page styles untouched)
+        <span
+          style={{
+            display: "block",
+            borderLeft: "2px solid #FEA50B",
+            padding: "6px 0 6px 28px",
+            margin: "0 0 20px",
+            textAlign: "left",
+          }}
+        >
+          <span
+            style={{
+              display: "block",
+              color: "#FEA50B",
+              fontSize: "18px",
+              fontWeight: 300,
+              lineHeight: 1.5,
+              letterSpacing: "0.1em",
+            }}
+          >
+            &ldquo;From South Africa&apos;s former president Nelson Mandela to Civil Rights activist Martin Luther King Jr. to US&apos; former president Barack Obama accepted that Mahatma Gandhi&apos;s path of non-violence is the path of global development,&rdquo;
+          </span>
+          <span
+            style={{
+              display: "block",
+              marginTop: "16px",
+              color: "#7d7d7d",
+              fontSize: "13px",
+              letterSpacing: "0.18em",
+            }}
+          >
+            ~ President Droupadi Murmu
+          </span>
+        </span>,
         <>
           An extension of Gandhi Smriti near Rajghat, Gandhi Darshan Park translates Mahatma <Orange>Gandhi&apos;s principles of simplicity, non-violence and harmony with nature</Orange> into a contemplative <Orange>public landscape</Orange>. Conceived as a place to pause, reflect and connect with his philosophy, the park uses landscape and symbolism to make his legacy accessible across generations.
         </>,

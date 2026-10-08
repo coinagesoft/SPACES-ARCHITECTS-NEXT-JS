@@ -68,6 +68,40 @@ export default function HeritageParkPage() {
       ]}
       recognition={"The Heritage Park is the Mughal Garden of Chandni Chowk – Ex Hon’ble President Shri Ram Nath Kovind"}
       description={[
+        // Tagline shown as a pull-quote (inline styles keep the shared page styles untouched)
+        <span
+          style={{
+            display: "block",
+            borderLeft: "2px solid #FEA50B",
+            padding: "6px 0 6px 28px",
+            margin: "0 0 20px",
+            textAlign: "left",
+          }}
+        >
+          <span
+            style={{
+              display: "block",
+              color: "#FEA50B",
+              fontSize: "clamp(16px, 2.2vw, 18px)",
+              fontWeight: 300,
+              lineHeight: 1.5,
+              letterSpacing: "0.1em",
+            }}
+          >
+            &ldquo;Heritage Park is the Mughal Garden of Old Delhi&rdquo;
+          </span>
+          <span
+            style={{
+              display: "block",
+              marginTop: "16px",
+              color: "#7d7d7d",
+              fontSize: "13px",
+              letterSpacing: "0.18em",
+            }}
+          >
+            ~ President Ram Nath Kovind
+          </span>
+        </span>,
         <>
           Set opposite the Red Fort in the heart of Old Delhi, Heritage Park is a landscape redevelopment conceived as a <Orange>contemporary escape rooted in the city&apos;s history</Orange>. Framed by panoramic views of the Red Fort and Jama Masjid, the park brings together <Orange>Mughal and Hindu architectural influences</Orange> through a distinctly vernacular material language.
         </>,

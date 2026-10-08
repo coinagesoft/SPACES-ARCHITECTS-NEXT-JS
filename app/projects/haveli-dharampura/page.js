@@ -41,9 +41,12 @@ const publications = [
 const pressLogos = assets.haveliDharampura.pressLogos;
 const gallery = assets.haveliDharampura.gallery;
 const recognitionImage = gallery[gallery.length - 1].image;
+// Look logos up by name (not array position) so reordering/adding press logos
+// never changes which logos appear in the Recognition section.
+const pressLogo = (name) => pressLogos.find((logo) => logo.name === name);
 const recognitionItems = [
-  { logo: pressLogos[0], text: "UNESCO Bangkok Announces 2017 Asia-Pacific Awards for Cultural Heritage Conservation" },
-  { logo: pressLogos[4], text: "UNESCO Bangkok Announces 2017 Asia-Pacific Awards for Cultural Heritage Conservation" },
+  { logo: pressLogo("UNESCO"), text: "UNESCO Bangkok Announces 2017 Asia-Pacific Awards for Cultural Heritage Conservation" },
+  { logo: pressLogo("NDTV-Grohe"), text: "UNESCO Bangkok Announces 2017 Asia-Pacific Awards for Cultural Heritage Conservation" },
 ];
 // const moreProjects = assets.projects.filter((project) => project.id !== "haveli-dharampura").slice(0, 3);
 

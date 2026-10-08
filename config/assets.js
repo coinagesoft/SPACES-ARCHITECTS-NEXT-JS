@@ -216,6 +216,11 @@ const haveli24 = assetImage("projects/haveli/haveli_24.jpg");
 const haveli25 = assetImage("projects/haveli/haveli_25.jpg");
 const haveli26 = assetImage("projects/haveli/haveli_26.jpg");
 const haveli27 = assetImage("projects/haveli/haveli_27.jpg");
+// Replacement images for former haveli_3, haveli_8, haveli_14 and haveli_17.
+const haveliNew1 = assetImage("projects/haveli/new1.webp");
+const haveliNew2 = assetImage("projects/haveli/new2.webp");
+const haveliNew3 = assetImage("projects/haveli/new3.webp");
+const haveliNew4 = assetImage("projects/haveli/new4.webp");
 const haveli255 = assetImage("projects/haveli/255.jpg");
 const haveliLogoUnesco = assetImage("projects/haveli/unesco.png");
 const haveliLogoNdtv = assetImage("projects/haveli/NDTV.png");
@@ -289,6 +294,7 @@ const slender15 = assetImage("projects/Slender-House/photographs/15. Entrance (S
 const slender16 = assetImage("projects/Slender-House/photographs/16. Skylight (Second Floor).webp");
 const slender17 = assetImage("projects/Slender-House/photographs/17. Master Bedroom (Second Floor).webp");
 const slender18 = assetImage("projects/Slender-House/photographs/18. Study (Second Floor).webp");
+const slender19 = assetImage("projects/Slender-House/photographs/model.webp");
 // ---- Swatantra Residence — supplied cover and project photography ----
 const swatantraHero = assetImage("projects/SWATANTRA-RESIDENCE/COVER IMAGE/hero.jpg");
 const swatantra1 = assetImage("projects/SWATANTRA-RESIDENCE/PHOTOGRAPH/1 Elevation (2).jpg");
@@ -853,15 +859,15 @@ export const assets = {
         ],
         gallery: [
             { type: "pair", images: [haveli1, haveli2] },
-            { type: "full", image: haveli3 },
+            { type: "full", image: haveliNew1 },
             { type: "pair", images: [haveli4, haveli5] },
             { type: "full", image: haveli6 },
-            { type: "split", large: haveli7, stack: [haveli8, haveli9] },
+            { type: "split", large: haveli7, stack: [haveliNew2, haveli9] },
             { type: "full", image: haveli10 },
             { type: "pair", images: [haveli11, haveli12] },
             { type: "wide", image: haveli255 },
-            { type: "split", large: haveli13, stack: [haveli14, haveli15] },
-            { type: "split", large: haveli16, stack: [haveli17, haveli18] },
+            { type: "split", large: haveli13, stack: [haveliNew3, haveli15] },
+            { type: "split", large: haveli16, stack: [haveliNew4, haveli18] },
             { type: "split", large: haveli19, stack: [haveli20, haveli21] },
             // Full-width landscape
             {
@@ -905,7 +911,7 @@ export const assets = {
         gallery: [
             slender1, slender2, slender3, slender4, slender5, slender6,
             slender7, slender8, slender9, slender10, slender11, slender12,
-            slender15, slender16, slender17, slender18,
+            slender15, slender16, slender17, slender18, slender19,
         ],
     },
     swatantraResidence: {

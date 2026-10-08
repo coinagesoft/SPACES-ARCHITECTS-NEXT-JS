@@ -1,5 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
-import { assetImage, assetUrl } from "@/config/assets";
+import { assetImage } from "@/config/assets";
 const hero = assetImage("projects/INTERSEXT-SHOWROOM/cover/HERO IMAGE.webp");
 const photo1 = assetImage("projects/INTERSEXT-SHOWROOM/photographs/1 Juxtaposed tile blocks protruding out depecting the concept of natural weathering of stones.webp");
 const photo2 = assetImage("projects/INTERSEXT-SHOWROOM/photographs/1 Transition from daylight to dark interiors.webp");
@@ -21,9 +21,53 @@ const photo17 = assetImage("projects/INTERSEXT-SHOWROOM/photographs/6 Open centr
 const photo18 = assetImage("projects/INTERSEXT-SHOWROOM/photographs/7 Customised abstract MS discussion tables.webp");
 const photo19 = assetImage("projects/INTERSEXT-SHOWROOM/photographs/8 Dark interiors with spots of light over tiles to create a feeling of being in a museum.webp");
 const photo20 = assetImage("projects/INTERSEXT-SHOWROOM/photographs/8 Landscape design created using water jet cut tiles.webp");
+const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
+
 export const metadata = { title: "Intersekt Tiles Showroom — Spaces Architects@ka" };
+
 export default function IntersextShowroomPage() {
-  return <ProjectDetailPage title="Intersekt Tiles Showroom" location="Okhla, New Delhi" hero={hero} photos={[photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10, photo11, photo12, photo13, photo14, photo15, photo16, photo17, photo18, photo19, photo20]} details={{ Project: "Intersekt Tiles Showroom", Location: "Okhla, New Delhi", "Site Area": "1000 sq. mtr", "Built-up Area": "30,000 sq. ft.", Client: "Mr. Raman Arora", Status: "Completed" }}
- awards={["World Architecture Community Awards | WA Award – Cycle 39 | Winner"]}
- publications={["Architectural Digest India", "MGS Architecture", "e-Architect", "Architizer", "World Architecture Community", "Led Linear", "Grupo MCI"]} description={["This project transforms a warehouse, used for over 15 years, into a tile showroom, office and experience centre. Structural strengthening prepared the heavily loaded building for its new life.", "Conceived as a museum of tiles rather than a conventional retail space, the design tests the material across floors, walls, ceilings, installations, furniture and lighting. The facade expresses the natural weathering of stone through layered, juxtaposed volumes clad in large-format slim tiles.", "A double-height arrival space connects the showroom levels. Inside, display cassettes, dark tiled partitions, focused lighting and material mock-ups turn the building into an immersive environment for discovering tile beyond the conventional surface."]} />;
+  return (
+    <ProjectDetailPage
+      currentId="intersext-showroom"
+      title="Intersekt Tiles Showroom"
+      location="Okhla, New Delhi"
+      hero={hero}
+      photos={[
+        photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10,
+        photo11, photo12, photo13, photo14, photo15, photo16, photo17, photo18, photo19, photo20,
+      ]}
+      details={{
+        Project: "Intersekt Tiles Showroom",
+        Location: "Okhla, New Delhi",
+        "Site Area": "1000 sq. mtr",
+        "Built-up Area": "30,000 sq. ft.",
+        Client: "Mr. Raman Arora",
+        Status: "Completed",
+      }}
+      awards={["World Architecture Community Awards | WA Award – Cycle 39 | Winner"]}
+      publications={[
+        "Architectural Digest India",
+        "MGS Architecture",
+        "e-Architect",
+        "Architizer",
+        "World Architecture Community",
+        "Led Linear",
+        "Grupo MCI",
+      ]}
+      description={[
+        <>
+          The project transformed one of two identical buildings, previously used as warehouses for over <Orange>15 years</Orange>, into a <Orange>tile showroom, office and experience centre</Orange>. The scope extended across the façade, landscape and interiors, while extensive structural strengthening—including <Orange>micro-concreting, epoxy grouting, FRP wraps</Orange> and additional columns—prepared the heavily loaded structure for its new life.
+        </>,
+        <>
+          With three generations of experience in the tile industry, the client envisioned the showroom as a <Orange>museum of tiles</Orange> rather than a conventional retail space. The design therefore explores the material beyond its familiar role as a surface finish, testing its application across <Orange>floors, walls, ceilings, hanging installations, artefacts, sculptures, furniture and lighting</Orange>. The space becomes both a display and an educational experience, demonstrating tiles as a versatile, economical, maintainable and sustainable alternative to natural stone.
+        </>,
+        <>
+          The façade draws from the natural weathering of stone, expressed through layered and <Orange>juxtaposed volumes</Orange> clad in large-format <Orange>8 ft × 4 ft slim tiles</Orange>. A sharply articulated corner tests the material through extreme angles and joints, while a <Orange>6 ft × 8 ft glass box projects</Orange> above the entrance as a sculptural connection between exterior and interior. This language continues into the landscape through <Orange>abstract tiled blocks, water-jet-cut patterns, grass inlays, sculptures, a water body and integrated seating</Orange>.
+        </>,
+        <>
+          Inside, a portion of the existing RCC slab was removed to create a <Orange>double-height arrival space</Orange>, visually connecting the two showroom levels. Large suspended lights, an oversized tile-clad reception desk and a backlit concept sketch establish the project&apos;s identity from the entrance.
+        </>,
+      ]}
+    />
+  );
 }

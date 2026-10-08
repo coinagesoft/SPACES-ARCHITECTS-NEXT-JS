@@ -166,12 +166,10 @@
   object-fit: contain;
 }
 
-/* The IIID, ArchDaily, and NDTV source marks have much more whitespace and
-   smaller artwork at the shared base height, so give those three a matching
-   visual weight without changing their proportions. */
-.pressMark:nth-child(3) .pressMarkImg,
-.pressMark:nth-child(4) .pressMarkImg,
-.pressMark:nth-child(5) .pressMarkImg {
+/* Every mark after UNESCO (IIID, NDTV, Divisare, Tiles of India) has more
+   whitespace / smaller artwork at the shared base height, so give them a
+   matching visual weight without changing their proportions. */
+.pressMark:nth-child(n + 2) .pressMarkImg {
   height: 72px;
 }
 
@@ -185,9 +183,7 @@
     margin-top: 36px;
   }
 
-  .pressMark:nth-child(3) .pressMarkImg,
-  .pressMark:nth-child(4) .pressMarkImg,
-  .pressMark:nth-child(5) .pressMarkImg {
+  .pressMark:nth-child(n + 2) .pressMarkImg {
     height: 56px;
   }
 }

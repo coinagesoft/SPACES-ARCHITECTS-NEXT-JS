@@ -1,5 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
-import { assetImage, assetUrl } from "@/config/assets";
+import { assetImage } from "@/config/assets";
 const hero = assetImage("projects/J-HOUSE/cover/COVER(1).webp");
 const photo1 = assetImage("projects/J-HOUSE/photographs/01 Elevation.webp");
 const photo2 = assetImage("projects/J-HOUSE/photographs/02 Elevation Detail.webp");
@@ -28,10 +28,47 @@ const photo24 = assetImage("projects/J-HOUSE/photographs/24 Family lounge.webp")
 const photo25 = assetImage("projects/J-HOUSE/photographs/25 Evening view of the house.webp");
 const photo26 = assetImage("projects/J-HOUSE/photographs/Final render.webp");
 const photo27 = assetImage("projects/J-HOUSE/photographs/J House Elevation.webp");
+const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
+
 export const metadata = { title: "J House — Spaces Architects@ka" };
 
 export default function JHousePage() {
-  return <ProjectDetailPage title="J House" location="New Delhi" hero={hero} photos={[photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10, photo11, photo12, photo13, photo14, photo15, photo16, photo17, photo18, photo19, photo20, photo21, photo22, photo23, photo24, photo25, photo26, photo27]} details={{ Project: "J House", Location: "New Delhi", "Plot Area": "1,600 sq. ft.", "Built-up Area": "6,000 sq. ft.", Client: "Mr. Vikas Jain", Status: "Completed" }}
- awards={["ArchDaily Building of the Year Candidate – House, 2019"]}
- publications={["ArchDaily", "ArchitectureLive!", "Archishots", "Volzero"]} description={["J House is a contemporary weekend home in Delhi, conceived as a simple yet distinctive family retreat. Set on an 1,800 sq. ft. plot and spanning approximately 5,000 sq. ft. across three levels, the residence explores an Indian modern architectural language through openness, connectivity and a restrained material palette.", "Open spaces and visual connections allow natural light and air to move through the house, while carefully positioned louvers and screens maintain privacy. The predominantly monochromatic interiors are punctuated by vibrant artwork and furniture.", "Carved-out volumes create terraces and intimate semi-private outdoor spaces. Custom timber and metal screens filter views, light and shadow, while the staircase, large glazed surfaces, wooden louvers and cantilevered roof define a home where privacy and openness coexist."]} />;
+  return (
+    <ProjectDetailPage
+      currentId="j-house"
+      title="J House"
+      location="New Delhi"
+      hero={hero}
+      photos={[
+        photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9,
+        photo10, photo11, photo12, photo13, photo14, photo15, photo16, photo17,
+        photo18, photo19, photo20, photo21, photo22, photo23, photo24, photo25,
+        photo26, photo27,
+      ]}
+      details={{
+        Project: "J House",
+        Location: "New Delhi",
+        "Plot Area": "1,600 sq. ft.",
+        "Built-up Area": "6,000 sq. ft.",
+        Client: "Mr. Vikas Jain",
+        Status: "Completed",
+      }}
+      awards={["ArchDaily Building of the Year Candidate – House, 2019"]}
+      publications={["ArchDaily", "ArchitectureLive!", "Archishots", "Volzero"]}
+      description={[
+        <>
+          J House is a contemporary weekend home in Delhi, conceived as a simple yet distinctive family retreat. Set on an <Orange>1,800 sq. ft. plot</Orange> and spanning approximately 5,000 sq. ft. across three levels, the residence explores an Indian modern architectural language through <Orange>openness, connectivity and a restrained material palette.</Orange>
+        </>,
+        <>
+          Open spaces and visual connections allow natural light and air to move through the house, while an outward-looking planning strategy maintains privacy through carefully positioned louvers and screens. The interiors remain <Orange>predominantly monochromatic</Orange>, with vibrant artwork and furniture introducing moments of colour.
+        </>,
+        <>
+          The façade is driven by the functions within. Carved-out volumes create a series of terraces, extending the interior experience while forming intimate, semi-private outdoor spaces. <Orange>Custom-designed timber and metal screens</Orange> filter views, light and shadow, while the staircase becomes a defining vertical feature of the composition.
+        </>,
+        <>
+          Large glazed surfaces, shaded by wooden louvers and an abstract cantilevered roof, further articulate the façade. The result is a <Orange>home where privacy and openness coexist</Orange>, creating a contemporary family retreat shaped by light, movement and everyday interaction.
+        </>,
+      ]}
+    />
+  );
 }

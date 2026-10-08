@@ -141,7 +141,7 @@ export default function HomePage() {
     </h2>
   </div>
 
-  <div className="space-y-7">
+  <div className="space-y-3">
     {homeCopy.intro.map((paragraph, index) => (
       <p
         key={index}

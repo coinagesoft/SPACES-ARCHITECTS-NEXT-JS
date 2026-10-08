@@ -1,5 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
-import { assetImage, assetUrl } from "@/config/assets";
+import { assetImage } from "@/config/assets";
 
 const hero = assetImage("projects/GOLDEN-HAVELL/cover/Hero Image.webp");
 const construction1 = assetImage("projects/GOLDEN-HAVELL/3_4/construction/1.webp");
@@ -37,11 +37,14 @@ const old6 = assetImage("projects/GOLDEN-HAVELL/3_4/old/6.webp");
 const old7 = assetImage("projects/GOLDEN-HAVELL/3_4/old/7.webp");
 const old8 = assetImage("projects/GOLDEN-HAVELL/3_4/old/8.webp");
 
+const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
+
 export const metadata = { title: "Golden Haveli — Spaces Architects@ka" };
 
 export default function GoldenHaveliPage() {
   return (
     <ProjectDetailPage
+      currentId="golden-haveli"
       title="Golden Haveli"
       location="Old Delhi"
       hero={hero}
@@ -68,9 +71,53 @@ export default function GoldenHaveliPage() {
         "Architects and Interiors India",
       ]}
       description={[
-        "At the heart of Chandni Chowk, Golden Haveli is the restoration of a 1906 residential-cum-commercial haveli and a revival of Old Delhi's cultural memory. After decades of deterioration, the century-old structure was transformed into a heritage hotel.",
-        "The three-storey haveli retains its Mughal architectural language through sandstone carving, facade jaalis, cusped arches, stained glass, floral motifs and stone columns arranged around a central courtyard. Original materials and traditional craftsmanship preserve its historic details and spatial character.",
-        "The courtyard was reimagined as an open-to-sky social heart, while themed rooms, a quiet upper lounge and terrace views reconnect the haveli with Chandni Chowk. The restoration also extends into the surrounding alleys through revived Mughal-inspired murals, colours and motifs.",
+        // Tagline shown as a pull-quote (inline styles keep the shared page styles untouched)
+        <span
+          key="tagline"
+          style={{
+            display: "block",
+            borderLeft: "2px solid #FEA50B",
+            padding: "6px 0 6px 28px",
+            margin: "0 0 20px",
+            textAlign: "left",
+          }}
+        >
+          <span
+            style={{
+              display: "block",
+              color: "#FEA50B",
+              fontSize: "18px",
+              fontWeight: 300,
+              lineHeight: 1.5,
+              letterSpacing: "0.1em",
+            }}
+          >
+            &ldquo;Promoting our culture &amp; heritage, generating tourism and expanding employment go hand in hand&rdquo;
+          </span>
+          <span
+            style={{
+              display: "block",
+              marginTop: "16px",
+              color: "#7d7d7d",
+              fontSize: "13px",
+              letterSpacing: "0.18em",
+            }}
+          >
+            ~ External Affairs Minister S Jaishankar
+          </span>
+        </span>,
+        <>
+          At the heart of Chandni Chowk, Golden Haveli is a restoration of a <Orange>1906 residential-cum-commercial haveli</Orange>, once a <Orange>host to Mahatma Gandhi</Orange>, and a revival of the cultural memory of Old Delhi. After decades of deterioration, the century-old structure was transformed into a <Orange>heritage hotel</Orange>, preserving its architectural character while making its history accessible to a new generation.
+        </>,
+        <>
+          The three-storey haveli retains its <Orange>Mughal architectural language</Orange>, with intricate sandstone carving, façade jaalis, cusped arches, stained glass, floral motifs and stone columns arranged around a central courtyard. The restoration relied on <Orange>original materials and traditional craftsmanship</Orange>, carefully retaining the building&apos;s historic details and spatial character.
+        </>,
+        <>
+          The courtyard was reimagined as an open-to-sky social heart, reconnecting the haveli with the energy of Chandni Chowk. Individually themed rooms across the ground and first floors draw from traditional hues, while the second-floor lounge offers a quieter retreat. Above, the terrace opens to sweeping views of Chandni Chowk&apos;s alleys and Jama Masjid, transforming an introverted heritage home into a <Orange>place of contemplation</Orange>.
+        </>,
+        <>
+          The restoration extended beyond the haveli to its surrounding alleys, where local artisans revived Mughal-inspired murals, colours and motifs, revitalising the larger urban fabric. Golden Haveli thus becomes more than a restored building—it is a <Orange>living fragment of Old Delhi&apos;s history</Orange>, where architecture, craftsmanship and cultural memory continue to coexist.
+        </>,
       ]}
     />
   );

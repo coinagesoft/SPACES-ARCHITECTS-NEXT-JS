@@ -80,24 +80,28 @@ const publicationCards = [
   { title: "Adharshila Vatika Kindergarten", source: "BBC", image: webCover("11.Adharshila Vatika Kindergarten_bbc.webp"), href: "http://www.bbc.com/news/business-14975270" },
   // #12
   { title: "Screen House", source: "BUILDOFY", image: webCover("12.Screen House_buildofy.webp"), href: "https://www.buildofy.com/projects/screen-house-new-delhi-spaces-architects-ka" },
+   { title: "The Art House", source: "archdaily", image: webCover("19.The Art House_archdaily.webp"), href: "https://www.archdaily.com/1092365/the-art-house-spaces-architects-at-ka?ad_medium=office_landing&ad_name=article" },
   // #13
   { title: "J House", source: "BUILDOFY", image: webCover("13.J House_buildofy.webp"), href: "https://www.buildofy.com/projects/j-house-new-delhi-spaces-ka" },
   // #14
   { title: "The House of Dancing Screens", source: "BUILDOFY", image: webCover("14.The House of Dancing Screens_buildofy.webp"), href: "https://www.buildofy.com/projects/the-house-of-dancing-screens-ambala-haryana" },
   // #15
-  { title: "Step Maze House", source: "BUILDOFY", image: webCover("15.Step Maze House_buildofy.webp"), href: "https://www.buildofy.com/projects/step-maze-house-model-town-new-delhi" },
+  
   // #16
+  { title: "Slender House", source: "archdaily", image: webCover("18.Slender House_archdaily.webp"), href: "https://www.archdaily.com/1014110/6-x-18-slender-house-spaces-architects-at-ka" },
+
   { title: "Slender House", source: "BUILDOFY", image: webCover("16.Slender House_buildofy.webp"), href: "https://www.buildofy.com/projects/slender-house-new-delhi" },
   // #17
-  { title: "Library House", source: "BUILDOFY", image: webCover("17.Library House_buildofy.webp"), href: "https://www.buildofy.com/projects/library-house-gurugram-haryana" },
+  
   // #18
-  { title: "Slender House", source: "archdaily", image: webCover("18.Slender House_archdaily.webp"), href: "https://www.archdaily.com/1014110/6-x-18-slender-house-spaces-architects-at-ka" },
+  
   // #19
-  { title: "The Art House", source: "archdaily", image: webCover("19.The Art House_archdaily.webp"), href: "https://www.archdaily.com/1092365/the-art-house-spaces-architects-at-ka?ad_medium=office_landing&ad_name=article" },
+ 
   // #20
   { title: "The House of Dancing Screens", source: "archdaily", image: webCover("20.The House of Dancing Screens_archdaily.webp"), href: "https://www.archdaily.com/1020102/the-house-of-dancing-screens-spaces-architects-at-ka?ad_medium=office_landing&ad_name=article" },
   // #21
   { title: "Swatantra Residence", source: "archdaily", image: webCover("21.Swatantra Residence_archdaily.webp"), href: "https://www.archdaily.com/997398/swantantra-residence-spaces-architects-at-ka?ad_medium=office_landing&ad_name=article" },
+  { title: "Step Maze House", source: "BUILDOFY", image: webCover("15.Step Maze House_buildofy.webp"), href: "https://www.buildofy.com/projects/step-maze-house-model-town-new-delhi" },
   // #22
   { title: "The Screen House", source: "archdaily", image: webCover("22.The Screen House_archdaily.webp"), href: "https://www.archdaily.com/935817/the-screen-house-spaces-architects-at-ka?ad_medium=office_landing&ad_name=article" },
   // #23
@@ -240,7 +244,7 @@ const publicationCards = [
   // #89
   // { title: "Book-Timeless Houses", source: "", image: timelessHouses, href: null },
   // #90
-  { title: "Article about Kapil Sir", source: "AsiaBizToday", image: webCover("90. Article about Kapil Sir_asiabiztoday.webp"), href: "https://www.asiabiztoday.com/tag/spaces-architectska/" },
+  { title: "Article about the Architect", source: "AsiaBizToday", image: webCover("90. Article about Kapil Sir_asiabiztoday.webp"), href: "https://www.asiabiztoday.com/tag/spaces-architectska/" },
   // #91
   // { title: "Golden Haveli", source: "Architect and Interiors India", image: goldenHaveli, href: "https://www.architectandinteriorsindia.com/projects/step-back-in-time-to-relive-golden-havelis-splendor-in-chandni-chowk" },
   // #92
@@ -262,7 +266,7 @@ const publicationCards = [
   // #100
   { title: "J House", source: "ARCHITECTURE LIVE", image: webCover("100. J House_architecturelive.webp"), href: "https://architecture.live/j-house-new-delhi-by-spaces-kapil-aggarwal/" },
   // #101
-  { title: "Article about Kapil Sir", source: "WFM Media", image: webCover("101. Article about Kapil Sir_wfmmedia.webp"), href: "https://wfmmedia.com/writer/ar-kapil-aggarwal/" },
+  { title: "Article about the Architect", source: "WFM Media", image: webCover("101. Article about Kapil Sir_wfmmedia.webp"), href: "https://wfmmedia.com/writer/ar-kapil-aggarwal/" },
   // #102
   // { title: "Swatantra Residence", source: "Divisare", image: swatantraResidence, href: "https://divisare.com/authors/2144789333-spaces-architects-ka" },
   // No portal and no link in the sheet — shown as a plain (non-clickable) card.
@@ -271,7 +275,7 @@ const publicationCards = [
   // #104
   // { title: "SM House", source: "Archilovers", image: stepMazeHouse, href: "https://www.archilovers.com/projects/346757/sm-house.html" },
   // #105
-  { title: "Article about Kapil Sir", source: "MGS Architecture", image: webCover("105. Article about Kapil Sir_MGS Architecture.webp"), href: "https://www.mgsarchitecture.in/architecture-design/architects-interior-designers/spaces-architects-ka-exploring-spaces.html" },
+  { title: "Article about the Architect", source: "MGS Architecture", image: webCover("105. Article about Kapil Sir_MGS Architecture.webp"), href: "https://www.mgsarchitecture.in/architecture-design/architects-interior-designers/spaces-architects-ka-exploring-spaces.html" },
   // #106
   { title: "Slender House", source: "Architects Diary", image: slenderHouse, href: "https://thearchitectsdiary.com/tag/kapil-aggarwal/" },
   // #107
@@ -310,7 +314,7 @@ const magazines = [
   { title: "Inside Outside", cover: magCover("10. INSIDE OUTSIDE.webp"), content: magPage("10. INSIDE OUTSIDE.webp") },
   { title: "The Design Source", cover: magCover("11.DESIGN SOURCE.webp") },  // no content image yet
   { title: "Inside Outside", cover: magCover("12.INSIDE OUTSIDE.webp"), content: magPage("12.INSIDE OUTSIDE.webp") },
-  { title: "CW Interiors", cover: magCover("13. CW INTERIORS.webp"), content: magPage("13. CW INTERIORS.webp") },
+  { title: "Interiors", cover: magCover("13. CW INTERIORS.webp"), content: magPage("13. CW INTERIORS.webp") },
   { title: "Architecture + Design", cover: magCover("14. ARCHITECTURE + DESIGN.webp"), content: magPage("14. ARCHITECTURE + DESIGN.webp") },
   { title: "Home and Design Trends", cover: magCover("15. HOME TRENDS.webp"), content: magPage("15. HOME TRENDS.webp") },
   { title: "CW Interiors", cover: magCover("16.CW INTERIORS.webp"), content: magPage("16.CW INTERIORS.webp") },
@@ -407,7 +411,7 @@ const books = [
   { title: "Schools by Sibylle Kramer", cover: bookCover("9. SCHOOLS by sibylle kramer.webp"), content: bookPage("9. SCHOOLS by sibylle kramer.webp") },
   { title: "IIID 2013", cover: bookCover("10. IIID 2013.webp"), content: bookPage("10. IIID 2013.webp") },
   { title: "IIID 2017", cover: bookCover("11. IIID 2017.webp"), content: bookPage("11. IIID 2017.webp") },
-  { title: "S1 Residences", cover: bookCover("12. S1 RESIDENCES.webp"), content: bookPage("12. S1 RESIDENCES.webp") },
+  { title: "91 Residences", cover: bookCover("12. S1 RESIDENCES.webp"), content: bookPage("12. S1 RESIDENCES.webp") },
   { title: "FOAID 2022", cover: bookCover("13. FOAID 2022.webp"), content: bookPage("13. FOAID 2022.webp") },
   { title: "Inspired", cover: bookCover("14. INSPIRED.webp"), content: [bookPage("14. INSPIRED.webp"), bookPage("14(2).webp")] },
   { title: "IIA Awards", cover: bookCover("15. IIA AWARDS.webp"), content: bookPage("15. IIA AWARDS.webp") },
@@ -416,7 +420,7 @@ const books = [
   { title: "A+C", cover: bookCover("18.webp"), content: [bookPage("18.webp"), bookPage("18(2).webp")] },
   { title: "Custom Office", cover: bookCover("19.CUSTOM OFFICE.webp"), content: bookPage("19. CUSTOM OFFICE.webp") },
   { title: "FOAID 2018", cover: bookCover("20. FOAID 2018.webp"), content: bookPage("20. FOAID 2018.webp") },
-  { title: "S1 Residences", cover: bookCover("21. S1 RESIDENCES.webp"), content: bookPage("21. S1 RESIDENCES.webp") },
+  { title: "91 Residences", cover: bookCover("21. S1 RESIDENCES.webp"), content: bookPage("21. S1 RESIDENCES.webp") },
   { title: "Fifty Five", cover: bookCover("22. FIFTY FIVE.webp") },  // no content image yet
   { title: "IIID 2016", cover: bookCover("23.IIID 2016.webp"), content: bookPage("23. IIID 2016.webp") },
   { title: "IIID 2020", cover: bookCover("24. IIID 2020.webp"), content: bookPage("24. IIID 2020.webp") },

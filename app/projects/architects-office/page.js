@@ -18,6 +18,10 @@ const img12 = assetImage("projects/ARCHITECTS-OFFICE/3_4/12.webp");
 const img13 = assetImage("projects/ARCHITECTS-OFFICE/3_4/13.webp");
 const img14 = assetImage("projects/ARCHITECTS-OFFICE/3_4/14.webp");
 const img15 = assetImage("projects/ARCHITECTS-OFFICE/3_4/15.webp");
+const section1 = assetImage("projects/ARCHITECTS-OFFICE/3_4/section-1.webp");
+const section2 = assetImage("projects/ARCHITECTS-OFFICE/3_4/section-2.webp");
+const sketch4 = assetImage("projects/ARCHITECTS-OFFICE/3_4/sketch_(4).webp");
+const sketch5 = assetImage("projects/ARCHITECTS-OFFICE/3_4/sketch_(5).webp");
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
@@ -40,6 +44,8 @@ export default function ArchitectsOfficePage() {
         img10, img11,
         img12, img13,
         img8, img15,
+        section1, section2,
+        sketch4, sketch5,
       ]}
       details={{
         Project: "Architect's Office",
