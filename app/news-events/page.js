@@ -84,7 +84,7 @@ const items = [
   cut("40.goldenhaveli", "Golden Haveli"),
   cut("41.theurbannest", "The Urban Nest"),
   cut("42.lahorigatehaveli", "Lahori Gate Museum", { source: "The Times of India", href: "https://timesofindia.indiatimes.com/city/delhi/lahori-gate-museum-to-showcase-chandni-chowk-heritage/amp_articleshow/120388787.cms" }),
-  cut("43.heritagepark", "Heritage Park"),
+  // 43.heritagepark removed
   cut("44.heritagepark", "Heritage Park"),
   cut("48.haeritagepark", "Heritage Park"),
   cut("50.lahorigatehaveli", "Lahori Gate Museum"),
