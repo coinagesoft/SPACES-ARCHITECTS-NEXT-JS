@@ -1,7 +1,7 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { assetImage } from "@/config/assets";
 
-const hero = assetImage("projects/HOUSE-OF-CURVES/cover/HERO.webp");
+const hero = assetImage("projects/HOUSE-OF-CURVES/cover/COVER.webp");
 const p1 = assetImage("projects/HOUSE-OF-CURVES/3_4/1.webp");
 const p2 = assetImage("projects/HOUSE-OF-CURVES/3_4/2.webp");
 const p3 = assetImage("projects/HOUSE-OF-CURVES/3_4/3.webp");

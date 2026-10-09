@@ -146,10 +146,11 @@
 }
 
 .pressLogos {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  gap: 28px;
+  gap: 28px 64px;
   margin-top: 56px;
 }
 
@@ -179,7 +180,7 @@
   }
 
   .pressLogos {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px 32px;
     margin-top: 36px;
   }
 

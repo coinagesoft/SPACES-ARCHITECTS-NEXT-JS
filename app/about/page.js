@@ -44,7 +44,7 @@ export default function AboutPage() {
         <div className={styles.heroShade} />
 
         <div className={`site-container ${styles.heroCaption}`}>
-          <h1>{aboutCopy.heroTitle}</h1>
+          <h1 >{aboutCopy.heroTitle}</h1>
         </div>
       </section>
       <section className={`site-container ${styles.intro}`}>

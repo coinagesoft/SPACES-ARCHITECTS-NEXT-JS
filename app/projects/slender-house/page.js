@@ -47,6 +47,8 @@ export default function SlenderHousePage() {
         "RTF",
         "ArchiPanic",
         "Ideal House",
+        "Financial Times",
+        "Buildofy Project eBook",
       ]}
       description={[
         <>

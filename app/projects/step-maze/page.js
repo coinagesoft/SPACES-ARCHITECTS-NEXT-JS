@@ -1,8 +1,14 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { assets } from "@/assets";
+import { assetImage } from "@/config/assets";
 
 const hero = assets.stepMazeHouse.hero;
 const g = assets.stepMazeHouse.gallery;
+
+// New model images — defined here in the project page only
+const model1n = assetImage("projects/STEP-MAZE/photographs/1n.webp");
+const model2n = assetImage("projects/STEP-MAZE/photographs/2n.webp");
+const model3n = assetImage("projects/STEP-MAZE/photographs/3n.webp");
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
@@ -28,6 +34,7 @@ export default function StepMazeHousePage() {
         g[16],
         g[13], g[15],
         g[17],
+        model1n, model3n, model2n,
       ]}
       details={{
         Project: "The Step Maze House",

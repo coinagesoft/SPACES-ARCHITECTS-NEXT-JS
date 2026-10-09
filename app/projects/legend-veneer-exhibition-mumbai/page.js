@@ -21,6 +21,7 @@ export const metadata = { title: "Legend Veneer Exhibition Stall — Spaces Arch
 export default function LegendVeneerExhibitionMumbaiPage() {
   return (
     <ProjectDetailPage
+      currentId="legend-veneer-exhibition-mumbai"
       title="Legend Veneer Exhibition Stall"
       location="Mumbai, Maharashtra"
       hero={hero}

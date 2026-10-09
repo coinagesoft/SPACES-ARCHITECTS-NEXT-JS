@@ -5724,11 +5724,91 @@
   "projects/HOUSE-OF-CURVES/3_4/terrace 5.webp": {
     "width": 1086,
     "height": 1448
+  }, "projects/SONIPAT-HAVELI/3_4/1.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/SONIPAT-HAVELI/3_4/10.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/SONIPAT-HAVELI/3_4/12.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/SONIPAT-HAVELI/3_4/13.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/SONIPAT-HAVELI/3_4/14.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/SONIPAT-HAVELI/3_4/2 (2).webp": {
+    "width": 3800,
+    "height": 4600
+  },
+  "projects/SONIPAT-HAVELI/3_4/2.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/SONIPAT-HAVELI/3_4/3.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/SONIPAT-HAVELI/3_4/4.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/SONIPAT-HAVELI/3_4/6.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/SONIPAT-HAVELI/3_4/7.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/SONIPAT-HAVELI/3_4/8.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/SONIPAT-HAVELI/3_4/9.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/SONIPAT-HAVELI/3_4/CENTRAL COURTYARD.webp": {
+    "width": 3800,
+    "height": 4600
+  },
+
+"projects/GOLDEN-HAVELL/old/1.webp": {
+    "width": 4600,
+    "height": 3800
+  },
+  "projects/GOLDEN-HAVELL/old/2.webp": {
+    "width": 4600,
+    "height": 3800
+  },
+  "projects/GOLDEN-HAVELL/old/3.webp": {
+    "width": 3800,
+    "height": 4600
+  },
+   "projects/STEP-MAZE/photographs/1n.webp": {
+    "width": 1086,
+    "height": 1448
+  },
+  "projects/STEP-MAZE/photographs/2n.webp": {
+    "width": 1448,
+    "height": 1086
+  },
+  "projects/STEP-MAZE/photographs/3n.webp": {
+    "width": 1086,
+    "height": 1254
   }
 
-
-
 }
+
+
 
 
 

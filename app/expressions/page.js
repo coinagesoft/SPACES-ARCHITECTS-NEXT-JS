@@ -14,14 +14,16 @@ export const metadata = { title: "Expressions — Spaces Architects@ka" };
 //
 //  To add pieces later: upload cover/<n>.webp + details/<n>.webp and
 //  raise that category's `count` below.
+//  To hide a piece (e.g. its image is missing), add its number to that
+//  category's `skip` list below.
 // ============================================================
 
 const FOLDER = "EXPRESSIONS";
 
 const categories = [
   { value: "lights", label: "Lights", folder: "LIGHTS", count: 28 },
-  { value: "artwork", label: "Artwork", folder: "ARTWORK", count: 15 },
-  { value: "furniture", label: "Furniture", folder: "FURNITURE", count: 11 },
+  { value: "artwork", label: "Artwork", folder: "ARTWORK", count: 18 },
+  { value: "furniture", label: "Furniture", folder: "FURNITURE", count: 15, skip: [11] },
   { value: "sculpture", label: "Sculpture", folder: "SCULPTURE", count: 10 },
 ];
 
@@ -30,9 +32,10 @@ const menuItems = [{ value: "all", label: "All" }, ...categories.map(({ value, l
 
 // ---------- build every piece ----------
 function buildItems() {
-  return categories.flatMap(({ value, label, folder, count }) =>
-    Array.from({ length: count }, (_, i) => {
-      const n = i + 1;
+  return categories.flatMap(({ value, label, folder, count, skip = [] }) =>
+    Array.from({ length: count }, (_, i) => i + 1)
+      .filter((n) => !skip.includes(n))
+      .map((n) => {
       return {
         id: `${value}-${n}`,
         category: value,

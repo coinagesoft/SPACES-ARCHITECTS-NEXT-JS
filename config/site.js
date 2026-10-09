@@ -98,10 +98,10 @@ export const homeCopy = {
 
 export const aboutCopy = {
     heroTitle: "STUDIO",
-    kicker: "WE DESIGN SPACES, WE CREATE STORIES. WE BUILT EXPERIENCE.",
+    kicker: "We Design Spaces, We create Stories, We build Experiences",
     intro: [
-        "The studio founded by Kapil Aggarwal in 2000 believes architecture is not about building but creating a soul and experience that remain with you.",
-        "At Spaces Architects, every project begins with curiosity a desire to understand people, its place and story waiting to unfold. We believe great architecture emerges when imagination meets context, when light, material, landscape, art and structure come together with purpose.",
+        
+       "The studio founded by Kapil Aggarwal in 2000 believes architecture is not about building but creating a soul and experience that remain with you. At Spaces Architects, every project begins with curiosity a desire to understand people, its place and story waiting to unfold. We believe great architecture emerges when imagination meets context, when light, material, landscape, art and structure come together with purpose.",
         "Our Studio approaches each commission as an unique narrative rather than predetermined style. We question the obvious, explore the unexpected and allow ideas to evolve through sketches, models and material, conversation and collaboration. The result is architecture that is expressive yet grounded, contemporary yet connected to its context.",
         "We don't seek to create a signature style. We seek to give every place its own identity.",
     ],

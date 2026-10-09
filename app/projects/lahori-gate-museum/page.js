@@ -14,7 +14,6 @@ const img8 = assetImage("projects/LAHORI-GATE-MUSEUM/3_4/8.webp");
 const img9 = assetImage("projects/LAHORI-GATE-MUSEUM/3_4/9.webp");
 const img10 = assetImage("projects/LAHORI-GATE-MUSEUM/3_4/10.webp");
 const img11 = assetImage("projects/LAHORI-GATE-MUSEUM/3_4/11.webp");
-const img12 = assetImage("projects/LAHORI-GATE-MUSEUM/3_4/12.webp");
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
@@ -34,7 +33,6 @@ export default function LahoriGateMuseumPage() {
         img6,
         img2, img5, img9,
         img10, img11,
-        img12,
       ]}
       details={{
         Project: "Lahori Gate Museum",

@@ -90,7 +90,7 @@ const blogTimeHeldDetail = assetImage("blogs/Time-Held-in-Detail.png");
 const blogArchitectureArt = assetImage("blogs/Architecture-as-Art.png");
 const blogArchitectureMotion = assetImage("blogs/ Architecture-in-Motion.png");
 const blog6x18 = assetImage("blogs/6x18.png");
-const blogCourtyard = assetImage("blogs/The-Courtyard.png");
+const blogCourtyard = assetImage("blogs/Courtyard.webp");
 const projectImg1 = assetImage("projects/1.jpg");
 // ---- Projects gallery page — the 7 named project photos, matching the
 // original Canva reference page 1:1 (same photos, same order, same names). ----
@@ -133,7 +133,8 @@ const galStudioElement = assetImage("projects/STUDIO ELEMENT.png");
 // ---- Continuation of the Canva reference page — Alaya Residence
 // through House of Hues. ----
 const galAlayaResidence = assetImage("projects/ALAYA RESIDENCE.jpg");
-const galLegendVennerExhibitionMumbai = assetImage("projects/LEGEND VENNER EXHIBITION MUMBAI.jpg");
+const galLegendVeneerExhibitionMumbai = assetImage("projects/LEGEND VENNER EXHIBITION MUMBAI.jpg");
+const galLegendVennerExhibitionMumbai = galLegendVeneerExhibitionMumbai;
 const galKrishasResidence = assetImage("projects/KRISHAS RESIDENCE.jpg");
 const galColorCourt = assetImage("projects/COLOR COURT.png");
 const galHouseOfCurves = assetImage("projects/HOUSE OF CURVES.jpg");
@@ -158,7 +159,8 @@ const galBhimtalResort = assetImage("projects/BHIMTAL RESORT.png");
 const galBrickHouse = assetImage("projects/BRICK HOUSE.png");
 const galBandikuiRailwayStation = assetImage("projects/BANDIKUI RAILWAY STATION.png");
 const galHeritageParkExtension = assetImage("projects/HERITAGE PARK EXTENSION.jpg");
-const galFuidicOffice = assetImage("projects/FUIDIC OFFICE.jpg");
+const galFluidicOffice = assetImage("projects/FUIDIC OFFICE.jpg");
+const galFuidicOffice = galFluidicOffice;
 const galGuptasResidence = assetImage("projects/GUPTAS RESIDENCE.jpg");
 const galHouseAroundATree = assetImage("projects/HOUSE AROUND A TREE.png");
 const galJainsResidence = assetImage("projects/JAINS RESIDENCE.jpg");
@@ -224,8 +226,6 @@ const haveliNew4 = assetImage("projects/haveli/new4.webp");
 const haveli255 = assetImage("projects/haveli/255.jpg");
 const haveliLogoUnesco = assetImage("projects/haveli/unesco.png");
 const haveliLogoNdtv = assetImage("projects/haveli/NDTV.png");
-const haveliLogoArchDaily = assetImage("projects/haveli/arch_daily.png");
-const haveliLogoArchitizer = assetImage("projects/haveli/architizer.png");
 const haveliLogoIIID = assetImage("projects/haveli/institute_of_indian.png");
 const haveli77 = assetImage("projects/haveli/77.jpg");
 const haveli144 = assetImage("projects/haveli/144.jpg");
@@ -609,7 +609,7 @@ export const assets = {
         // ---- Continuation of the Canva reference page — Alaya
         // Residence through House of Hues. ----
         { file: "ALAYA RESIDENCE.jpg", name: "Alaya Residence", image: galAlayaResidence, orientation: "portrait" },
-        { file: "LEGEND VENNER EXHIBITION - MUMBAI.jpg", name: "Legend Venner Exhibition - Mumbai", image: galLegendVennerExhibitionMumbai, orientation: "portrait" },
+        { file: "LEGEND VENEER EXHIBITION - MUMBAI.jpg", name: "Legend Veneer Exhibition - Mumbai", image: galLegendVeneerExhibitionMumbai, orientation: "portrait" },
         { file: "KRISHA'S RESIDENCE.jpg", name: "Krisha's Residence", image: galKrishasResidence, orientation: "portrait" },
         { file: "COLOR COURT.png", name: "Color Court", image: galColorCourt, orientation: "portrait" },
         { file: "HOUSE OF CURVES.jpg", name: "House of Curves", image: galHouseOfCurves, orientation: "portrait" },
@@ -634,7 +634,7 @@ export const assets = {
         { file: "BRICK HOUSE.png", name: "Brick House", image: galBrickHouse, orientation: "portrait" },
         { file: "BANDIKUI RAILWAY STATION.png", name: "Bandikui Railway Station", image: galBandikuiRailwayStation, orientation: "landscape" },
         { file: "HERITAGE PARK EXTENSION.jpg", name: "Extension of Heritage Park", image: galHeritageParkExtension, orientation: "landscape" },
-        { file: "FUIDIC OFFICE.jpg", name: "Fuidic Office", image: galFuidicOffice, orientation: "portrait" },
+        { file: "FLUIDIC OFFICE.jpg", name: "Fluidic Office", image: galFluidicOffice, orientation: "portrait" },
         { file: "GUPTA#U2019S RESIDENCE.jpg", name: "Gupta's Residence", image: galGuptasResidence, orientation: "portrait" },
         { file: "HOUSE AROUND A TREE.png", name: "House Around a Tree", image: galHouseAroundATree, orientation: "landscape" },
         { file: "JAIN#U2019S RESIDENCE.jpg", name: "Jain's Residence", image: galJainsResidence, orientation: "landscape" },
@@ -852,9 +852,7 @@ export const assets = {
         hero: haveliHero,
         pressLogos: [
             { name: "UNESCO", image: haveliLogoUnesco },
-            { name: "Architizer", image: haveliLogoArchitizer },
             { name: "IIID", image: haveliLogoIIID },
-            { name: "ArchDaily", image: haveliLogoArchDaily },
             { name: "NDTV-Grohe", image: haveliLogoNdtv },
         ],
         gallery: [

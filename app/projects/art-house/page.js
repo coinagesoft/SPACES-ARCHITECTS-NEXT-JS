@@ -41,6 +41,9 @@ export default function ArtHousePage() {
         "Interni Deco",
         "e-architect",
         "ArchDaily China",
+        "HomeWorldDesign",
+        "ARTFEED",
+        "Amazing Architecture",
       ]}
       description={[
         <>

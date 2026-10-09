@@ -50,6 +50,16 @@ const nextConfig = {
         destination: "/projects/house-of-dancing-screens",
         permanent: true,
       },
+      {
+        source: "/projects/fuidic-office",
+        destination: "/projects/fluidic-office",
+        permanent: true,
+      },
+      {
+        source: "/projects/legend-venner-exhibition-mumbai",
+        destination: "/projects/legend-veneer-exhibition-mumbai",
+        permanent: true,
+      },
     ];
   },
 };

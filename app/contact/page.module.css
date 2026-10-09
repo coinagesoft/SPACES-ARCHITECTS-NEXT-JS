@@ -244,6 +244,16 @@
   color: #6B6B6B;
 }
 
+.whatsappLink {
+  color: #6B6B6B;
+  text-decoration: none;
+}
+
+.whatsappLink:hover {
+  color: #fea50b;
+  text-decoration: underline;
+}
+
 .emailLabel {
   margin: 0 0 8px;
   font-size: 13px;

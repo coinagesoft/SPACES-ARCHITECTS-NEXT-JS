@@ -289,6 +289,57 @@ const publicationCards = [
   { title: "Apartment 88", source: "Good Homes India", image: webCover("110. Apartment 88_goodhomesindia.webp"), href: "https://www.goodhomes.co.in/home-decor/home-tours/the-emergence-of-a-brand-new-trend-unfolds-with-this-artistic-home-7940.amp" },
 ];
 
+// ---- Spread the cards out ----
+// The sheet lists cards grouped by portal, so e.g. several BUILDOFY / Archello /
+// ArchDaily cards would sit side by side. This shuffles the list once (with a
+// FIXED seed, so the order is the same on every load and the server and browser
+// always agree) and then makes sure no two neighbouring cards share the same
+// portal. Cards of the same project are also kept apart where possible.
+// To get a different (but still stable) arrangement, change SHUFFLE_SEED.
+const SHUFFLE_SEED = 2026;
+
+function spreadBySource(cards, seed = SHUFFLE_SEED) {
+  // small seeded random generator (mulberry32)
+  let a = seed >>> 0;
+  const random = () => {
+    a = (a + 0x6d2b79f5) >>> 0;
+    let t = a;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+
+  // Fisher-Yates shuffle (on a copy)
+  const pool = [...cards];
+  for (let i = pool.length - 1; i > 0; i--) {
+    const j = Math.floor(random() * (i + 1));
+    [pool[i], pool[j]] = [pool[j], pool[i]];
+  }
+
+  const src = (card) => (card.source || "").trim().toLowerCase();
+  const ttl = (card) => (card.title || "").trim().toLowerCase();
+
+  const result = [];
+  while (pool.length) {
+    const prev = result[result.length - 1];
+    const prev2 = result[result.length - 2];
+    const ok = (card, strict) =>
+      !prev ||
+      (src(card) !== src(prev) &&
+        (!strict || (ttl(card) !== ttl(prev) && !(prev2 && src(card) === src(prev2)))));
+
+    // best: different portal AND different project AND not the same portal as 2 back;
+    // then: different portal; last resort: whatever is left.
+    let index = pool.findIndex((card) => ok(card, true));
+    if (index === -1) index = pool.findIndex((card) => ok(card, false));
+    if (index === -1) index = 0;
+    result.push(pool.splice(index, 1)[0]);
+  }
+  return result;
+}
+
+const displayCards = spreadBySource(publicationCards);
+
 // ---- Magazines (click a cover to view the content image(s)) ----
 // Files live in  .../assets/MAGAZINE_new/COVER  and  .../assets/MAGAZINE_new/internal
 // File names are the ORIGINAL names, e.g.
@@ -452,7 +503,7 @@ export default function PublicationsPage() {
       <section id="all" className={styles.blogListing} aria-label="Publications">
         {/* Web cards use the original blog-card size (square image box, cover-cropped). */}
        <div id="web" className={`${styles.blogGrid} ${chromeStyles.webGrid} ${chromeStyles.anchor}`}>
-          {publicationCards.map((card, index) => {
+          {displayCards.map((card, index) => {
             const content = (
               <>
                 <div className={styles.imageWrap}>

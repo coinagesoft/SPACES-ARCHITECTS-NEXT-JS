@@ -59,7 +59,7 @@ const homeHeroProjects = [
     id: "house-of-stepped-garden",
     name: "House of Stepped Garden",
     image: assetImage("home page slider/PC/3. HOUSE OF STEPPED GARDEN.webp"),
-    mobileImage: assetImage("home page slider/MOBILE/3. HOUSE OF STEPPED GARDEN.webp"),
+    mobileImage: assetImage("home page slider/MOBILE/House of stepped garden.webp"),
   },
   {
     id: "house-of-dancing-screens",
@@ -79,18 +79,18 @@ const homeHeroProjects = [
     image: assetImage("home page slider/PC/6. GOLDEN HAVELI.webp"),
     mobileImage: assetImage("home page slider/MOBILE/6.GOLDEN HAVELI.webp"),
   },
-  {
-    id: "house-of-stepped-garden",
-    name: "House of Stepped Garden",
-    image: assetImage("home page slider/PC/7. HOUSE OF STEPPED GARDEN.webp"),
-    mobileImage: assetImage("home page slider/MOBILE/HOUSE OF STEPPED GARDEN.webp"),
-  },
-  {
-    id: "art-house",
-    name: "Art House",
-    image: assetImage("home page slider/PC/8. ARTHOUSE 2.webp"),
-    mobileImage: assetImage("home page slider/MOBILE/ART HOUSE.webp"),
-  },
+  // {
+  //   id: "house-of-stepped-garden",
+  //   name: "House of Stepped Garden",
+  //   image: assetImage("home page slider/PC/7. HOUSE OF STEPPED GARDEN.webp"),
+  //   mobileImage: assetImage("home page slider/MOBILE/HOUSE OF STEPPED GARDEN.webp"),
+  // },
+  // {
+  //   id: "art-house",
+  //   name: "Art House",
+  //   image: assetImage("home page slider/PC/8. ARTHOUSE 2.webp"),
+  //   mobileImage: assetImage("home page slider/MOBILE/ART HOUSE.webp"),
+  // },
   {
     id: "swatantra-residence",
     name: "Swatantra Residence",
@@ -109,12 +109,12 @@ const homeHeroProjects = [
     image: assetImage("home page slider/PC/11. LIBRARY HOUSE.webp"),
     mobileImage: assetImage("home page slider/MOBILE/7. LIBRARY HOUSE.webp"),
   },
-  {
-    id: "house-of-stepped-garden",
-    name: "House of Stepped Garden",
-    image: assetImage("home page slider/PC/12. HOUSE OF STEPPED GARDEN.webp"),
-    mobileImage: assetImage("home page slider/MOBILE/HOUSE OF STEPPED GARDEN.webp"),
-  },
+  // {
+  //   id: "house-of-stepped-garden",
+  //   name: "House of Stepped Garden",
+  //   image: assetImage("home page slider/PC/12. HOUSE OF STEPPED GARDEN.webp"),
+  //   mobileImage: assetImage("home page slider/MOBILE/HOUSE OF STEPPED GARDEN.webp"),
+  // },
   {
     id: "slender-house",
     name: "Slender House",
@@ -137,7 +137,7 @@ export default function HomePage() {
       <section className="site-container py-8 md:py-12">
   <div className="mb-6 flex justify-center">
     <h2 className="text-center text-[14px] font-medium tracking-[0.16em] text-[#6b6b6b] md:text-[16px]">
-      Architecture That is Experienced, Felt and Remembered.
+      Architecture that is Experienced, Felt and Remembered
     </h2>
   </div>
 

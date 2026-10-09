@@ -48,7 +48,7 @@ const RATIOS = {
   "Sonipat Havelli": 0.737,
   "Grey Apartments": 0.752,
   "Poetic House": 1.452,
-  "Fuidic Office": 0.889,
+  "Fluidic Office": 0.889,
   "Gupta's Residence": 0.788,
   "Saatvik Marble Showroom": 0.497,
   "The Canvas": 1.369,
@@ -126,7 +126,8 @@ const PROJECT_ROUTES = {
   "Tiles & Kitchen Showroom": "/projects/tiles-and-kitchen-showroom",
   "Studio Element": "/projects/studio-element",
   "Alaya Residence": "/projects/alaya-residence",
-  "Legend Venner Exhibition - Mumbai": "/projects/legend-venner-exhibition-mumbai",
+  "Legend Veneer Exhibition - Mumbai": "/projects/legend-veneer-exhibition-mumbai",
+  "Legend Venner Exhibition - Mumbai": "/projects/legend-veneer-exhibition-mumbai",
   "Krisha's Residence": "/projects/krishas-residence",
   "Color Court": "/projects/color-court",
   "House of Curves": "/projects/house-of-curves",
@@ -150,7 +151,7 @@ const PROJECT_ROUTES = {
   "Bandikui Railway Station": "/projects/bandikui-railway-station",
   "Extension of Heritage Park": "/projects/heritage-park-extension",
   "Heritage Park Extension": "/projects/heritage-park-extension",
-  "Fuidic Office": "/projects/fuidic-office",
+  "Fluidic Office": "/projects/fluidic-office",
   "Gupta's Residence": "/projects/guptas-residence",
   "House Around a Tree": "/projects/house-around-a-tree",
   "Saatvik Marble Showroom": "/projects/saativk-marble-showroom",
@@ -516,7 +517,7 @@ export default function JustifiedGallery({ items }) {
           <Tile item={findItem(items, "Alaya Residence")} />
         </div>
         <div style={{ flex: "1 1 0", minWidth: 0 }}>
-          <Tile item={findItem(items, "Legend Venner Exhibition - Mumbai")} />
+          <Tile item={findItem(items, "Legend Veneer Exhibition - Mumbai")} />
         </div>
       </div>
 
@@ -616,7 +617,7 @@ export default function JustifiedGallery({ items }) {
       </div>
 
       <JustifiedRow
-        items={[findItem(items, "Fuidic Office"), findItem(items, "Gupta's Residence")]}
+        items={[findItem(items, "Fluidic Office"), findItem(items, "Gupta's Residence")]}
       />
 
       <Tile item={findItem(items, "House Around a Tree")} />

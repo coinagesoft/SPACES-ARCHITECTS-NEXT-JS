@@ -28,14 +28,9 @@ const new21 = assetImage("projects/GOLDEN-HAVELL/3_4/new/21.webp");
 const new22 = assetImage("projects/GOLDEN-HAVELL/3_4/new/22.webp");
 const new23 = assetImage("projects/GOLDEN-HAVELL/3_4/new/23.webp");
 const new24 = assetImage("projects/GOLDEN-HAVELL/3_4/new/24.webp");
-const old1 = assetImage("projects/GOLDEN-HAVELL/3_4/old/1.webp");
-const old2 = assetImage("projects/GOLDEN-HAVELL/3_4/old/2.webp");
-const old3 = assetImage("projects/GOLDEN-HAVELL/3_4/old/3.webp");
-const old4 = assetImage("projects/GOLDEN-HAVELL/3_4/old/4.webp");
-const old5 = assetImage("projects/GOLDEN-HAVELL/3_4/old/5.webp");
-const old6 = assetImage("projects/GOLDEN-HAVELL/3_4/old/6.webp");
-const old7 = assetImage("projects/GOLDEN-HAVELL/3_4/old/7.webp");
-const old8 = assetImage("projects/GOLDEN-HAVELL/3_4/old/8.webp");
+const old1 = assetImage("projects/GOLDEN-HAVELL/old/1.webp");
+const old2 = assetImage("projects/GOLDEN-HAVELL/old/2.webp");
+const old3 = assetImage("projects/GOLDEN-HAVELL/old/3.webp");
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
@@ -53,7 +48,7 @@ export default function GoldenHaveliPage() {
         new1, new2, new3, new4, new5, new6, new7, new8, new9, new10,
         new11, new12, new13, new14, new15, new16, new17, new18, new19, new20,
         new21, new22, new23, new24,
-        old1, old2, old3, old4, old5, old6, old7, old8,
+        old1, old2, old3,
       ]}
       details={{
         Project: "Golden Haveli",

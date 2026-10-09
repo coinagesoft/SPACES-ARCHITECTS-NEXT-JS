@@ -53,6 +53,7 @@ export default function IntersextShowroomPage() {
         "World Architecture Community",
         "Led Linear",
         "Grupo MCI",
+        "Amazing Architecture",
       ]}
       description={[
         <>

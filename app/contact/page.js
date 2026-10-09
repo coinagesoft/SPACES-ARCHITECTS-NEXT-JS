@@ -320,7 +320,7 @@ export default function ContactPage() {
 
           <div className={styles.studioInfo}>
             <p className={styles.studioName}>
-              {site.name} {site.handle}
+              {site.name} <span style={{ color: "#fea50b" }}>{site.handle}</span>
             </p>
             <p className={styles.address}>{site.contact.address}</p>
 
