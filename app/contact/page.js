@@ -325,7 +325,15 @@ export default function ContactPage() {
             <p className={styles.address}>{site.contact.address}</p>
 
             <p className={styles.whatsapp}>
-              Whatsapp: {contactCopy.whatsapp}
+              Whatsapp:{" "}
+              <a
+                href={`https://wa.me/${contactCopy.whatsapp.replace(/\D/g, "")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.emailValue}
+              >
+                {contactCopy.whatsapp}
+              </a>
             </p>
 
             <p className={styles.emailLabel}>Email:</p>

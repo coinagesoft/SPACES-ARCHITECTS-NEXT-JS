@@ -83,12 +83,20 @@ const RATIOS = {
 const MATCHED_ASPECT = {
   "Art House": 2 * RATIOS["Palette Apartment"], // 1.458
   "Heritage Park": 1.263, // manually increased so its bottom reaches Step Maze's bottom
+  "Intersekt Showroom": 0.842,
+  "Intersext Showroom": 0.842,
+  "Alaya Residence": 1.454,
+  "Aravali Farmhouse": 1.259,
 };
 
 // MatchedTile projects that should link out to their own detail page.
 const MATCHED_ROUTES = {
   "Art House": "/projects/art-house",
   "Heritage Park": "/projects/heritage-park",
+  "Intersekt Showroom": "/projects/intersext-showroom",
+  "Intersext Showroom": "/projects/intersext-showroom",
+  "Alaya Residence": "/projects/alaya-residence",
+  "Aravali Farmhouse": "/projects/aravali-farmhouse",
 };
 
 const PROJECT_ROUTES = {
@@ -454,7 +462,7 @@ export default function JustifiedGallery({ items }) {
           then the mirrored big-tile/stacked-pair pattern twice more. */}
       <div className={styles.row}>
         <div style={{ flex: "2.1 1 0", minWidth: 0 }}>
-          <FillTile item={findItem(items, "Intersekt Showroom") || findItem(items, "Intersext Showroom")} />
+          <MatchedTile item={findItem(items, "Intersekt Showroom") || findItem(items, "Intersext Showroom")} />
         </div>
         <div
           style={{
@@ -512,9 +520,9 @@ export default function JustifiedGallery({ items }) {
 
       {/* Third block — Alaya Residence through House of Hues, again
           following the Canva reference row-by-row. */}
-      <div className={styles.row} style={{ alignItems: "flex-start" }}>
+      <div className={styles.row}>
         <div style={{ flex: "2.1 1 0", minWidth: 0 }}>
-          <Tile item={findItem(items, "Alaya Residence")} />
+          <MatchedTile item={findItem(items, "Alaya Residence")} />
         </div>
         <div style={{ flex: "1 1 0", minWidth: 0 }}>
           <Tile item={findItem(items, "Legend Veneer Exhibition - Mumbai")} />
@@ -570,9 +578,9 @@ export default function JustifiedGallery({ items }) {
 
       <Tile item={findItem(items, "The Stepwell")} />
 
-      <div className={styles.row} style={{ alignItems: "flex-start" }}>
+      <div className={styles.row}>
         <div style={{ flex: "2.1 1 0", minWidth: 0 }}>
-          <Tile item={findItem(items, "Aravali Farmhouse")} />
+          <MatchedTile item={findItem(items, "Aravali Farmhouse")} />
         </div>
         <div style={{ flex: "1 1 0", minWidth: 0 }}>
           <Tile item={findItem(items, "House of Hues")} />
