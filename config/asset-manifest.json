@@ -1,4 +1,6 @@
-{
+ 
+
+  {
   "About_hero.jpg": {
     "width": 2399,
     "height": 1601
@@ -5817,6 +5819,76 @@
   "projects/TOY-BANK-MUSEUM/3_4/model image 3.webp": {
     "width": 1536,
     "height": 2048
+  },
+
+  "projects/HERITAGE-PARK/3_4/1. potrait.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/HERITAGE-PARK/3_4/10.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/HERITAGE-PARK/3_4/11.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/HERITAGE-PARK/3_4/12 full bleed.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/HERITAGE-PARK/3_4/13.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/HERITAGE-PARK/3_4/14.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/HERITAGE-PARK/3_4/15.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/HERITAGE-PARK/3_4/16.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/HERITAGE-PARK/3_4/17 full bleed.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/HERITAGE-PARK/3_4/2. potrait.webp": {
+    "width": 3600,
+    "height": 4800
+  },
+  "projects/HERITAGE-PARK/3_4/3.webp": {
+    "width": 4600,
+    "height": 3800
+  },
+  "projects/HERITAGE-PARK/3_4/4.webp": {
+    "width": 4600,
+    "height": 3800
+  },
+  "projects/HERITAGE-PARK/3_4/5.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/HERITAGE-PARK/3_4/6.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/HERITAGE-PARK/3_4/7 full bleed.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/HERITAGE-PARK/3_4/8.webp": {
+    "width": 4800,
+    "height": 3600
+  },
+  "projects/HERITAGE-PARK/3_4/9.webp": {
+    "width": 4800,
+    "height": 3600
   }
+
 
 }

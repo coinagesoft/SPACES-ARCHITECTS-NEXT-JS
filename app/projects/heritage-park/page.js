@@ -1,24 +1,157 @@
-import ProjectDetailPage from "../ProjectDetailPage";
+import Image from "next/image";
+import SiteChrome from "@/components/SiteChrome";
+import Footer from "@/components/Footer";
+import ParallaxHeroImage from "@/components/ParallaxHeroImage";
+import MoreProjects from "@/components/MoreProjects";
+import ShareIcons from "@/components/ShareIcons";
+import styles from "../slender-house/page.module.css";
 import { assetImage } from "@/config/assets";
 
 const hero = assetImage("projects/HERITAGE-PARK/cover/Cover Image.webp");
 
-const img1 = assetImage("projects/HERITAGE-PARK/photographs/edited 1.webp");
-const img2 = assetImage("projects/HERITAGE-PARK/photographs/edited 2.webp");
-const img3 = assetImage("projects/HERITAGE-PARK/photographs/edited 3.webp");
-const img4 = assetImage("projects/HERITAGE-PARK/photographs/edited 4.webp");
-const img5 = assetImage("projects/HERITAGE-PARK/photographs/edited 5.webp");
-const img6 = assetImage("projects/HERITAGE-PARK/photographs/edited 6.webp");
-const img7 = assetImage("projects/HERITAGE-PARK/photographs/EDITED 7.webp");
-const img8 = assetImage("projects/HERITAGE-PARK/photographs/EDITED 8.webp");
-const img9 = assetImage("projects/HERITAGE-PARK/photographs/EDITED 9.webp");
-const img10 = assetImage("projects/HERITAGE-PARK/photographs/EDITED 10.webp");
-const img11 = assetImage("projects/HERITAGE-PARK/photographs/EDITED 11.webp");
-const img12 = assetImage("projects/HERITAGE-PARK/photographs/EDITED 12.webp");
-const img14 = assetImage("projects/HERITAGE-PARK/photographs/edited 14.webp");
-const axonometricView = assetImage("projects/HERITAGE-PARK/photographs/AXONOMETRIC VIEW.webp");
-const formDevelopmentDiagram = assetImage("projects/HERITAGE-PARK/photographs/FORM DEVELOPMENT DIAGRAM (3).webp");
-const panorama = assetImage("projects/HERITAGE-PARK/photographs/Panorama-1 .webp");
+const img1 = assetImage("projects/HERITAGE-PARK/3_4/1. potrait.webp");
+const img2 = assetImage("projects/HERITAGE-PARK/3_4/2. potrait.webp");
+const img3 = assetImage("projects/HERITAGE-PARK/3_4/3.webp");
+const img4 = assetImage("projects/HERITAGE-PARK/3_4/4.webp");
+const img5 = assetImage("projects/HERITAGE-PARK/3_4/5.webp");
+const img6 = assetImage("projects/HERITAGE-PARK/3_4/6.webp");
+const img7 = assetImage("projects/HERITAGE-PARK/3_4/7 full bleed.webp");
+const img8 = assetImage("projects/HERITAGE-PARK/3_4/8.webp");
+const img9 = assetImage("projects/HERITAGE-PARK/3_4/9.webp");
+const img10 = assetImage("projects/HERITAGE-PARK/3_4/10.webp");
+const img11 = assetImage("projects/HERITAGE-PARK/3_4/11.webp");
+const img12 = assetImage("projects/HERITAGE-PARK/3_4/12 full bleed.webp");
+const img13 = assetImage("projects/HERITAGE-PARK/3_4/13.webp");
+const img14 = assetImage("projects/HERITAGE-PARK/3_4/14.webp");
+const img15 = assetImage("projects/HERITAGE-PARK/3_4/15.webp");
+const img16 = assetImage("projects/HERITAGE-PARK/3_4/16.webp");
+const img17 = assetImage("projects/HERITAGE-PARK/3_4/17 full bleed.webp");
+
+const ratio = (image) => (image?.width && image?.height ? image.width / image.height : 1);
+
+// Local copy of the shared project page, used only by Heritage Park so its gallery
+// can follow the file names (pairs + "full bleed" rows) without touching the shared
+// ProjectDetailPage. Markup and classes are identical to the shared page.
+function HeritageDetail({
+  currentId,
+  title,
+  location,
+  hero,
+  galleryRows = [],
+  details = {},
+  awards = [],
+  publications = [],
+  recognition,
+  description = [],
+}) {
+  return (
+    <>
+      <main>
+        <SiteChrome dark />
+
+        <ParallaxHeroImage
+          className={styles.hero}
+          imageClassName={styles.heroImage}
+          src={hero}
+          alt={title}
+        >
+          <div className={`site-container ${styles.heroTextWrap}`}>
+            <div className={styles.heroText}>
+              <h1>{title}</h1>
+              {location && <p>{location}</p>}
+            </div>
+          </div>
+        </ParallaxHeroImage>
+
+        <section className={`site-container ${styles.infoSection}`}>
+          <aside className={styles.infoSidebar}>
+            <div>
+              <h3>Project Details</h3>
+              <dl>
+                {Object.entries(details).map(([label, value]) => (
+                  <div key={label}>
+                    <dt>{label}:</dt> <dd>{value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+            {awards.length > 0 && (
+              <div>
+                <h3>Awards:</h3>
+                <ul>
+                  {awards.map((a) => (
+                    <li key={a}>{a}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {publications.length > 0 && (
+              <div>
+                <h3>Publications:</h3>
+                <ul>
+                  {publications.map((p) => (
+                    <li key={p}>{p}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {recognition && (
+              <div>
+                <h3>Recognition:</h3>
+                <ul>
+                  <li>{recognition}</li>
+                </ul>
+              </div>
+            )}
+          </aside>
+          <div className={styles.infoBody}>
+            {description.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
+        </section>
+
+        <section className={`site-container ${styles.gallery}`} aria-label={`${title} gallery`}>
+          {galleryRows.map((row, index) =>
+            row.type === "full" ? (
+              <div key={row.image.src} className={styles.galleryFull}>
+                <Image src={row.image} alt={title} sizes="100vw" className={styles.galleryImg} />
+              </div>
+            ) : (
+              <div key={index} className={styles.galleryPair}>
+                {row.images.map((image) => (
+                  <div
+                    key={image.src}
+                    className={styles.galleryPairItem}
+                    style={{ "--ratio": ratio(image) }}
+                  >
+                    <Image
+                      src={image}
+                      alt={title}
+                      fill
+                      sizes="(min-width: 768px) 48vw, 92vw"
+                      className={styles.galleryImgFit}
+                    />
+                  </div>
+                ))}
+              </div>
+            )
+          )}
+        </section>
+
+        <section className={styles.share}>
+          <p>Share</p>
+          <div className={styles.shareIcons}>
+            <ShareIcons />
+          </div>
+        </section>
+
+        <MoreProjects currentId={currentId} />
+      </main>
+      <Footer />
+    </>
+  );
+}
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
@@ -26,23 +159,24 @@ export const metadata = { title: "Heritage Park — Spaces Architects@ka" };
 
 export default function HeritageParkPage() {
   return (
-    <ProjectDetailPage
+    <HeritageDetail
       currentId="heritage-park"
       title="Heritage Park"
       location="Old Delhi"
       hero={hero}
-      // Same order as the old gallery array
-      photos={[
-        img2, img3,
-        img1,
-        axonometricView, formDevelopmentDiagram,
-        img6,
-        img4, img7,
-        img8, img9, img10,
-        img11,
-        img12, img14,
-        img5,
-        panorama,
+      // Layout follows the file names: the two portraits first as a pair,
+      // "full bleed" images full width, everything else in pairs.
+      galleryRows={[
+        { type: "pair", images: [img1, img2] },
+        { type: "pair", images: [img3, img4] },
+        { type: "pair", images: [img5, img6] },
+        { type: "full", image: img7 },
+        { type: "pair", images: [img8, img9] },
+        { type: "pair", images: [img10, img11] },
+        { type: "full", image: img12 },
+        { type: "pair", images: [img13, img14] },
+        { type: "pair", images: [img15, img16] },
+        { type: "full", image: img17 },
       ]}
       details={{
         Project: "Heritage Park",

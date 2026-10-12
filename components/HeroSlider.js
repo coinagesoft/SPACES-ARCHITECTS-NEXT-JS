@@ -1,8 +1,37 @@
 "use client";
 
-import Image from "next/image";
+import { getImageProps } from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+
+// Renders one slide as <picture>: phones get the dedicated mobile photo and
+// desktops get the desktop photo, decided by the browser from the media query.
+// Previously the server HTML always preloaded the desktop image and the mobile
+// image was only swapped in after hydration, so phones downloaded both.
+function SlideImage({ project, isActive, eager }) {
+    const common = {
+        alt: project.name,
+        fill: true,
+        sizes: "100vw",
+        priority: eager,
+        className: `object-cover transition-opacity duration-1000 ${isActive ? "opacity-100" : "opacity-0"}`,
+    };
+
+    const desktop = getImageProps({ ...common, src: project.image });
+    const mobile = project.mobileImage
+        ? getImageProps({ ...common, src: project.mobileImage })
+        : null;
+
+    return (
+        <picture>
+            {mobile && (
+                <source media="(max-width: 767px)" srcSet={mobile.props.srcSet} sizes="100vw" />
+            )}
+            {/* eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text */}
+            <img {...desktop.props} />
+        </picture>
+    );
+}
 
 export default function HeroSlider({ projects }) {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -55,17 +84,12 @@ export default function HeroSlider({ projects }) {
                 const nextIndex = (activeIndex + 1) % total;
                 if (index !== activeIndex && index !== prevIndex && index !== nextIndex) return null;
 
-                const imageSrc = isMobile ? project.mobileImage ?? project.image : project.image;
-
                 return (
-                    <Image
+                    <SlideImage
                         key={`${project.id}-${index}`}
-                        src={imageSrc}
-                        alt={project.name}
-                        fill
-                        priority={index === 0 || index === activeIndex}
-                        sizes="100vw"
-                        className={`object-cover transition-opacity duration-1000 ${index === activeIndex ? "opacity-100" : "opacity-0"}`}
+                        project={project}
+                        isActive={index === activeIndex}
+                        eager={index === 0 || index === activeIndex}
                     />
                 );
             })}

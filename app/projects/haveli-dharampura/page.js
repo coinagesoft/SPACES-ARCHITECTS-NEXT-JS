@@ -73,6 +73,8 @@ function PressLogoSet({ logos, hidden = false }) {
         src={typeof logo.image === "string" ? logo.image : logo.image.src}
         alt={hidden ? "" : logo.name}
         className={styles.pressLogoImg}
+        loading="lazy"
+        decoding="async"
       />
     </div>
   ));

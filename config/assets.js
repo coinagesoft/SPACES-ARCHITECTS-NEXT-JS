@@ -165,7 +165,7 @@ const galSobhtiResidence = assetImage("projects/SOBHTI RESIDENCE.jpg");
 const galHansgroheShowroom = assetImage("projects/HANSGROHE SHOWROOM.png");
 // ---- Continuation of the Canva reference page — Toy Bank Museum
 // through The Urban Nest. ----
-const galToyBankMuseum = assetImage("projects/TOY BANK MUSEUM.jpg");
+const galToyBankMuseum = assetImage("projects/ToyBank.webp");
 const galConcreteHouse = assetImage("projects/CONCRETE HOUSE.png");
 const galHouseOnHill = assetImage("projects/HOUSE ON HILL.png");
 const galHouseInHarmony = assetImage("projects/HOUSE IN HARMONY.jpg");

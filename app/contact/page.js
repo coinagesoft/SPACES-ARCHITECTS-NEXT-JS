@@ -326,12 +326,11 @@ export default function ContactPage() {
 
             <p className={styles.whatsapp}>
               Phone:{" "}
-              <a href="tel:+911143108540" className={styles.emailValue}>
-                +91 11 4310 8540
-              </a>
-              {" / "}
-              <a href="tel:01135683993" className={styles.emailValue}>
-                011 3568 3993
+              <a
+                href={`tel:+91${contactCopy.phone.replace(/\D/g, "").replace(/^0/, "")}`}
+                className={styles.emailValue}
+              >
+                {contactCopy.phone}
               </a>
             </p>
 

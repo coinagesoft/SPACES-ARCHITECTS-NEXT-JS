@@ -51,7 +51,6 @@ function AlignedMasonry({ images, title }) {
                   src={image}
                   alt={title}
                   fill
-                  priority={rowIndex === 0}
                   sizes="(min-width: 768px) 48vw, 92vw"
                   style={{ objectFit: "cover" }}
                 />
