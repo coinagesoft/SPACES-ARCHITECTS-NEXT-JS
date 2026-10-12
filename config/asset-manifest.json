@@ -5293,46 +5293,7 @@
     "width": 800,
     "height": 610
   },
-  "projects/TOY-BANK-MUSEUM/3_4/1.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/TOY-BANK-MUSEUM/3_4/10.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/TOY-BANK-MUSEUM/3_4/2.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/TOY-BANK-MUSEUM/3_4/3.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/TOY-BANK-MUSEUM/3_4/4.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/TOY-BANK-MUSEUM/3_4/5.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/TOY-BANK-MUSEUM/3_4/6.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/TOY-BANK-MUSEUM/3_4/7.webp": {
-    "width": 4800,
-    "height": 3600
-  },
-  "projects/TOY-BANK-MUSEUM/3_4/8.webp": {
-    "width": 3600,
-    "height": 4800
-  },
-  "projects/TOY-BANK-MUSEUM/3_4/9.webp": {
-    "width": 3600,
-    "height": 4800
-  },
+ 
   "projects/TOY-BANK-MUSEUM/cover/COVER.webp": {
     "width": 1434,
     "height": 1097
@@ -5804,14 +5765,58 @@
   "projects/STEP-MAZE/photographs/3n.webp": {
     "width": 1086,
     "height": 1254
+  },
+  "projects/TOY-BANK-MUSEUM/3_4/0.webp": {
+    "width": 1086,
+    "height": 1448
+  },
+  "projects/TOY-BANK-MUSEUM/3_4/1.webp": {
+    "width": 1448,
+    "height": 1086
+  },
+  "projects/TOY-BANK-MUSEUM/3_4/2.webp": {
+    "width": 1448,
+    "height": 1086
+  },
+  "projects/TOY-BANK-MUSEUM/3_4/3.webp": {
+    "width": 1448,
+    "height": 1086
+  },
+  "projects/TOY-BANK-MUSEUM/3_4/4.webp": {
+    "width": 2048,
+    "height": 1536
+  },
+  "projects/TOY-BANK-MUSEUM/3_4/5.webp": {
+    "width": 1448,
+    "height": 1086
+  },
+  "projects/TOY-BANK-MUSEUM/3_4/6.webp": {
+    "width": 1448,
+    "height": 1086
+  },
+  "projects/TOY-BANK-MUSEUM/3_4/7.webp": {
+    "width": 1448,
+    "height": 1086
+  },
+  "projects/TOY-BANK-MUSEUM/3_4/8.webp": {
+    "width": 1086,
+    "height": 1448
+  },
+  "projects/TOY-BANK-MUSEUM/3_4/9.webp": {
+    "width": 1086,
+    "height": 1448
+  },
+  "projects/TOY-BANK-MUSEUM/3_4/model image 1.webp": {
+    "width": 2048,
+    "height": 1536
+  },
+  "projects/TOY-BANK-MUSEUM/3_4/model image 2.webp": {
+    "width": 1536,
+    "height": 2048
+  },
+  "projects/TOY-BANK-MUSEUM/3_4/model image 3.webp": {
+    "width": 1536,
+    "height": 2048
   }
 
 }
-
-
-
-
-
-
-
-

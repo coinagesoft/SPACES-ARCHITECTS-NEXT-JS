@@ -51,6 +51,8 @@
     font-size: 12px;
     letter-spacing: 0.08em;
     line-height: 1.85;
+    /* description in normal (lowercase) letters; the title stays uppercase from .blogCard */
+    text-transform: none;
 }
 
 .readMore {

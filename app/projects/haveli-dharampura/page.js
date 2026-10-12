@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import SiteChrome from "@/components/SiteChrome";
 import Footer from "@/components/Footer";
 import { assets } from "@/assets";
@@ -46,9 +45,8 @@ const recognitionImage = gallery[gallery.length - 1].image;
 const pressLogo = (name) => pressLogos.find((logo) => logo.name === name);
 const recognitionItems = [
   { logo: pressLogo("UNESCO"), text: "UNESCO Bangkok Announces 2017 Asia-Pacific Awards for Cultural Heritage Conservation" },
-  { logo: pressLogo("NDTV-Grohe"), text: "UNESCO Bangkok Announces 2017 Asia-Pacific Awards for Cultural Heritage Conservation" },
+  { logo: pressLogo("NDTV-Grohe"), text: "NDTV-Grohe Design & Architecture Awards 2015 – Heritage Architecture (Jury Commendation)" },
 ];
-// const moreProjects = assets.projects.filter((project) => project.id !== "haveli-dharampura").slice(0, 3);
 
 // A static-imported image carries its real intrinsic width/height, so we
 // can size gallery rows the way a proper "justified" photo grid does:
@@ -58,6 +56,27 @@ const recognitionItems = [
 // 0) is what does that division — no crop, no stretch, just correct
 // per-image scaling, like the Canva page.
 const ratio = (img) => img.width / img.height;
+
+// Auto-scrolling press logos, local to this project page. The logos are
+// repeated so one set is always wider than the screen (no gaps in the loop).
+const PRESS_REPEAT = 4;
+
+function PressLogoSet({ logos, hidden = false }) {
+  const items = Array.from({ length: PRESS_REPEAT }, () => logos).flat();
+  return items.map((logo, i) => (
+    <div
+      key={`${hidden ? "copy-" : ""}${i}-${logo.name}`}
+      className={styles.pressLogo}
+      aria-hidden={hidden}
+    >
+      <img
+        src={typeof logo.image === "string" ? logo.image : logo.image.src}
+        alt={hidden ? "" : logo.name}
+        className={styles.pressLogoImg}
+      />
+    </div>
+  ));
+}
 
 export default function HaveliDharampuraPage() {
   return (
@@ -152,16 +171,12 @@ export default function HaveliDharampuraPage() {
               was taken.
             </p>
 
-            <div className={styles.pressLogos} aria-label="Press and award recognition">
-              {pressLogos.map((mark) => (
-                <span key={mark.name} className={styles.pressMark}>
-                  <Image
-                    src={mark.image}
-                    alt={mark.name}
-                    className={styles.pressMarkImg}
-                  />
-                </span>
-              ))}
+            <div className={styles.pressMarquee} aria-label="Press and award recognition">
+              <div className={styles.pressTrack}>
+                <PressLogoSet logos={pressLogos} />
+                {/* identical second set lets the loop restart without a jump */}
+                <PressLogoSet logos={pressLogos} hidden />
+              </div>
             </div>
           </div>
         </section>

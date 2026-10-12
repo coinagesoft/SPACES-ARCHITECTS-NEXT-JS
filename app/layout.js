@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={primaryFont.variable}>
       <body className="bg-paper text-ink font-sans antialiased">
         {children}
-        <WhatsAppButton />
+      
       </body>
     </html>
   );

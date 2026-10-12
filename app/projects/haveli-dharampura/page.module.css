@@ -82,7 +82,7 @@
   display: flex;
   flex-direction: column;
   gap: 42px;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .infoSidebar h3 {
@@ -138,54 +138,77 @@
   color: #7d7d7d;
   text-align: justify;
   margin: 0 0 24px;
-
 }
 
 .highlight {
   color: #fea50b;
 }
 
-.pressLogos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 28px 64px;
-  margin-top: 56px;
-}
-
-.pressMark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.pressMarkImg {
-  height: 44px;
-  width: auto;
-  max-width: 100%;
-  object-fit: contain;
-}
-
-/* Every mark after UNESCO (IIID, NDTV, Divisare, Tiles of India) has more
-   whitespace / smaller artwork at the shared base height, so give them a
-   matching visual weight without changing their proportions. */
-.pressMark:nth-child(n + 2) .pressMarkImg {
-  height: 72px;
-}
-
 @media (max-width: 767px) {
   .heroTextWrap {
     bottom: 24px;
   }
+}
 
-  .pressLogos {
-    gap: 20px 32px;
-    margin-top: 36px;
+/* ---------- Press logos (auto slider) ---------- */
+/* Same logo box as the home page "Featured In" strip. */
+.pressMarquee {
+  --logo-basis: 112px;
+  --logo-height: 58px;
+  --logo-gap: 28px;
+
+  width: 100%;
+  min-width: 0;
+  margin-top: 36px;
+  overflow: hidden;
+}
+
+.pressTrack {
+  display: flex;
+  flex-shrink: 0;
+  width: max-content;
+  animation: press-marquee 40s linear infinite;
+  will-change: transform;
+}
+
+.pressMarquee:hover .pressTrack {
+  animation-play-state: paused;
+}
+
+.pressLogo {
+  position: relative;
+  flex: 0 0 var(--logo-basis);
+  width: var(--logo-basis);
+  height: var(--logo-height);
+  margin-right: var(--logo-gap);
+  overflow: hidden;
+}
+
+.pressLogoImg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@keyframes press-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (min-width: 768px) {
+  .pressMarquee {
+    --logo-basis: 140px;
+    --logo-height: 66px;
+    --logo-gap: 42px;
+
+    margin-top: 56px;
   }
+}
 
-  .pressMark:nth-child(n + 2) .pressMarkImg {
-    height: 56px;
+@media (prefers-reduced-motion: reduce) {
+  .pressTrack {
+    animation-play-state: paused;
   }
 }
 
@@ -453,63 +476,14 @@
   color: #fea50b;
 }
 
-/* ---------- More projects ---------- */
-.moreSection {
-  padding-bottom: 80px;
-}
-
-.moreHeading {
-  margin: 0 0 16px;
-  color: #a9a9a9;
-  font-size: 12px;
-  letter-spacing: 0.18em;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.moreGrid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 32px;
-}
-
-.moreCard {
-  position: relative;
-  display: block;
-  aspect-ratio: 1;
-  overflow: hidden;
-}
-
-.moreImage {
-  object-fit: cover;
-  transition: transform 500ms;
-}
-
-.moreCard:hover .moreImage {
-  transform: scale(1.04);
-}
-
 @media (max-width: 767px) {
   .share {
     padding-bottom: 40px;
-  }
-
-  .moreSection {
-    padding-bottom: 56px;
-  }
-
-  .moreGrid {
-    grid-template-columns: 1fr;
-    gap: 20px;
   }
 }
 
 /* Left info column: scrolls on its own when the lists are long, so the page
    doesn't get a big empty gap beside the description. */
-.infoSidebar {
-  font-size: 13px;
-}
-
 @media (min-width: 768px) {
   .infoSidebar {
     align-self: start;

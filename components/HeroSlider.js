@@ -20,9 +20,11 @@ export default function HeroSlider({ projects }) {
 
     // Mobile shows only the slides that have a dedicated mobileImage.
     // Desktop keeps the full list. If no slide has a mobileImage, mobile uses the full list too.
+    // Desktop shows only slides that have a desktop `image` (mobile-only slides are skipped).
     const mobileSlides = projects.filter((project) => project.mobileImage);
+    const desktopSlides = projects.filter((project) => project.image);
     const slides =
-        isMobile && mobileSlides.length > 0 ? mobileSlides : projects;
+        isMobile && mobileSlides.length > 0 ? mobileSlides : desktopSlides;
 
     useEffect(() => {
         setActiveIndex(0);
