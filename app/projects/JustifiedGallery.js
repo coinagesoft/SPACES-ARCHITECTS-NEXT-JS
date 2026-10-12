@@ -208,7 +208,7 @@ function dims(item) {
 // Tile photo. Uses next/image so the browser downloads a resized copy that
 // fits the tile instead of the multi-megapixel original.
 const GALLERY_SIZES = "(min-width: 1024px) 40vw, (min-width: 768px) 45vw, 100vw";
-function GalleryImg({ item, className }) {
+function GalleryImg({ item, className, priority = false }) {
   const d = dims(item);
   return (
     <Image
@@ -217,6 +217,7 @@ function GalleryImg({ item, className }) {
       width={d.width || 1000}
       height={d.height || 1000}
       sizes={GALLERY_SIZES}
+      priority={priority}
       className={className}
     />
   );
@@ -227,11 +228,11 @@ function Label({ item }) {
 }
 
 // Natural-ratio tile — no crop, height follows its own real aspect ratio.
-function Tile({ item }) {
+function Tile({ item, priority = false }) {
   if (!item) return null;
   const content = (
     <>
-      <GalleryImg item={item} />
+      <GalleryImg item={item} priority={priority} />
       <Label item={item} />
     </>
   );
@@ -242,6 +243,7 @@ function Tile({ item }) {
     return (
       <Link
         href={route}
+        prefetch={true}
         className={styles.tile}
         aria-label={`View ${item.name} project`}
       >
@@ -270,12 +272,12 @@ function StaticImage({ item }) {
 
 // A col2 tile whose height is locked (via CSS aspect-ratio) to match
 // its col1 partner exactly.
-function MatchedTile({ item }) {
+function MatchedTile({ item, priority = false }) {
   if (!item) return null;
   const aspectRatio = MATCHED_ASPECT[item.name];
   const content = (
     <>
-      <GalleryImg item={item} className={aspectRatio ? styles.crop : undefined} />
+      <GalleryImg item={item} priority={priority} className={aspectRatio ? styles.crop : undefined} />
       <Label item={item} />
     </>
   );
@@ -286,6 +288,7 @@ function MatchedTile({ item }) {
     return (
       <Link
         href={route}
+        prefetch={true}
         className={styles.tile}
         style={aspectRatio ? { aspectRatio } : undefined}
         aria-label={`View ${item.name} project`}
@@ -308,20 +311,20 @@ function MatchedTile({ item }) {
 // stacked pair and needs to end exactly flush with the stack's bottom
 // edge at any viewport width, not just approximately (unlike a fixed
 // CSS aspect-ratio, which can only target one specific width).
-function FillTile({ item }) {
+function FillTile({ item, priority = false }) {
   if (!item) return null;
 
   const route = item?.name ? PROJECT_ROUTES[item.name] : undefined;
   const content = (
     <>
-      <GalleryImg item={item} className={styles.crop} />
+      <GalleryImg item={item} priority={priority} className={styles.crop} />
       <Label item={item} />
     </>
   );
 
   if (route) {
     return (
-      <Link href={route} className={`${styles.tile} ${styles.fill}`} aria-label={`View ${item.name} project`}>
+      <Link href={route} prefetch={true} className={`${styles.tile} ${styles.fill}`} aria-label={`View ${item.name} project`}>
         {content}
       </Link>
     );
@@ -401,6 +404,7 @@ function JustifiedRow({ items }) {
           return (
             <Link
               href={route}
+              prefetch={true}
               className={styles.rowTile}
               style={style}
               aria-label={`View ${item.name} project`}
@@ -438,13 +442,13 @@ export default function JustifiedGallery({ items }) {
     <div className={styles.gallery}>
       <div className={styles.masonry}>
         <div className={styles.col1}>
-          <Tile item={findItem(items, "Slender House")} />
-          <Tile item={findItem(items, "Floating Courtyard House")} />
+          <Tile item={findItem(items, "Slender House")} priority={true} />
+          <Tile item={findItem(items, "Floating Courtyard House")} priority={true} />
           <Tile item={findItem(items, "Palette Apartment")} />
           <Tile item={findItem(items, "Step Maze")} />
         </div>
         <div className={styles.col2}>
-          <Tile item={findItem(items, "Haveli Dharampura")} />
+          <Tile item={findItem(items, "Haveli Dharampura")} priority={true} />
           <JustifiedRow items={[swatantra, apartment88]} />
           <MatchedTile item={findItem(items, "Art House")} />
           <MatchedTile item={findItem(items, "Heritage Park")} />

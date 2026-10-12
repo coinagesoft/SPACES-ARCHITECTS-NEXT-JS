@@ -93,7 +93,7 @@ export default function AboutPage() {
           ))}
         </div>
         <div className={styles.moreWrap}>
-          <Link href="/teams" className={styles.moreLink}>Meet the full team →</Link>
+          <Link href="/teams" prefetch={true} className={styles.moreLink}>Meet the full team →</Link>
         </div>
       </section>
       <Footer />

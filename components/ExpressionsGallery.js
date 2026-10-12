@@ -93,7 +93,7 @@ export default function ExpressionsGallery({ items = [], menuItems = [] }) {
       {/* ================= header ================= */}
       <header ref={headerRef} className={chrome.header}>
         <div className={`site-container ${chrome.bar}`}>
-          <Link href="/" className={chrome.logo}>
+          <Link href="/" prefetch={true} className={chrome.logo}>
             SPACES ARCHITECTS <span>@ka</span>
           </Link>
 

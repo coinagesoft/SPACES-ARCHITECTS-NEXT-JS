@@ -96,12 +96,15 @@ export default function ProjectsClient({ gallery }) {
       // "instant" overrides the site's `scroll-behavior: smooth`
       window.scrollTo({ top: saved.y, left: 0, behavior: "instant" });
       tries += 1;
-      if (Math.abs(window.scrollY - saved.y) <= 4 || tries >= 40) {
+      const maxScroll = typeof document !== "undefined"
+        ? Math.max(0, document.documentElement.scrollHeight - window.innerHeight)
+        : 0;
+      if (Math.abs(window.scrollY - saved.y) <= 4 || window.scrollY >= maxScroll - 4 || tries >= 8) {
         finish();
         return;
       }
       // page not tall enough yet (gallery still laying out): try again shortly
-      timer = window.setTimeout(restore, 50);
+      timer = window.setTimeout(restore, 40);
     };
     restore();
 

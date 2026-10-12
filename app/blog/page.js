@@ -57,7 +57,7 @@ export default function BlogPage() {
 
             return (
               <article key={post.id} className={styles.blogCard}>
-                <Link href={`/blog/${post.id}`} className={`${styles.cardLink} ${styles.postLink}`}>
+                <Link href={`/blog/${post.id}`} prefetch={true} className={`${styles.cardLink} ${styles.postLink}`}>
                   <div className={styles.imageWrap}>
                     <Image
                       src={post.image}

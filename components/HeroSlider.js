@@ -63,7 +63,7 @@ export default function HeroSlider({ projects }) {
                         src={imageSrc}
                         alt={project.name}
                         fill
-                        priority={index === 0}
+                        priority={index === 0 || index === activeIndex}
                         sizes="100vw"
                         className={`object-cover transition-opacity duration-1000 ${index === activeIndex ? "opacity-100" : "opacity-0"}`}
                     />
@@ -77,6 +77,7 @@ export default function HeroSlider({ projects }) {
             <div className="absolute bottom-10 left-0 right-0 site-container">
                 <Link
                     href={`/projects/${activeProject.id}`}
+                    prefetch={true}
                     className="inline-block transition-opacity duration-200 hover:opacity-80"
                 >
                     <h1

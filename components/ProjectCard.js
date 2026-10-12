@@ -25,5 +25,5 @@ export default function ProjectCard({ id, href, image, name, excerpt, landscape 
 
   const linkHref = href || (id ? (id.startsWith("/") ? id : `/projects/${id}`) : null);
 
-  return linkHref ? <Link href={linkHref} className="group block">{content}</Link> : content;
+  return linkHref ? <Link href={linkHref} prefetch={true} className="group block">{content}</Link> : content;
 }

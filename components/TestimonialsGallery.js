@@ -45,7 +45,7 @@ export default function TestimonialsGallery({ items = [] }) {
               aria-label={`Open ${item.alt}`}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={item.src} alt={item.alt} loading={index < 4 ? "eager" : "lazy"} className={styles.image} />
+              <img src={item.src} alt={item.alt} loading={index < 4 ? "eager" : "lazy"} decoding="async" className={styles.image} />
             </button>
           ))}
         </div>
@@ -92,7 +92,7 @@ export default function TestimonialsGallery({ items = [] }) {
 
           <div className={styles.viewer} onClick={(e) => e.stopPropagation()}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img key={current.src} src={current.src} alt={current.alt} className={styles.preview} />
+            <img key={current.src} src={current.src} alt={current.alt} decoding="async" className={styles.preview} />
           </div>
         </div>
       )}

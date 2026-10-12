@@ -11,7 +11,7 @@ export const site = {
     tagline: "Best Architect in Delhi — Crafting Spaces That Are Experienced, Felt and Remembered.",
 
     contact: {
-        phones: ["+91 11 4310 8540", "+91 11 3568 3993"],
+        phones: ["+91 11 4310 8540", "011 3568 3993"],
         email: "admin@spacesarchitects-ka.com",
         address: "A-21/A, Basement, South Extension II, New Delhi, Delhi 110049",
     },
@@ -161,6 +161,7 @@ export const aboutCopy = {
 
 export const contactCopy = {
     heading: "Contact",
+    phone: "011 3568 3993",
     whatsapp: "+91 93110 13122",
     emails: [
         { label: "Career", value: "career@spacesarchitects-ka.com" },

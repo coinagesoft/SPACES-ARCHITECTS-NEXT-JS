@@ -35,6 +35,7 @@ export default function MoreProjects({ currentId, count = 3 }) {
           <Link
             key={project.id}
             href={`/projects/${project.id}`}
+            prefetch={true}
             className={styles.moreCard}
             aria-label={project.name}
           >

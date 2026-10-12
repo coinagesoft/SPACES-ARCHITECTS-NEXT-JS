@@ -103,6 +103,7 @@ function Row({ items, ghost }) {
         return route ? (
           <Link
             href={route}
+            prefetch={true}
             className={styles.rowTile}
             style={style}
             aria-label={`View ${item.name} project`}

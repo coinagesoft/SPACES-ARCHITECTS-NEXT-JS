@@ -82,7 +82,7 @@ export default function ProjectsMegaMenu({ active = "all", onChange, mobileMenuS
       }}
     >
       <div className={`site-container ${styles.bar}`}>
-        <Link href="/" className={styles.logo} onMouseEnter={() => setOpenKey(null)}>
+        <Link href="/" prefetch={true} className={styles.logo} onMouseEnter={() => setOpenKey(null)}>
           SPACES ARCHITECTS <span>@ka</span>
         </Link>
 
@@ -102,7 +102,7 @@ export default function ProjectsMegaMenu({ active = "all", onChange, mobileMenuS
                   onFocus={() => setOpenKey(sub ? item.key : null)}
                 >
                   {item.href ? (
-                    <Link href={item.href} className={labelClass}>
+                    <Link href={item.href} prefetch={true} className={labelClass}>
                       {item.label}
                     </Link>
                   ) : (
@@ -137,6 +137,7 @@ export default function ProjectsMegaMenu({ active = "all", onChange, mobileMenuS
                         <li key={link.href}>
                           <Link
                             href={link.href}
+                            prefetch={true}
                             tabIndex={open ? 0 : -1}
                             className={styles.sub}
                             onClick={closeAll}
@@ -238,7 +239,7 @@ export default function ProjectsMegaMenu({ active = "all", onChange, mobileMenuS
           return (
             <div className={styles.group} key={item.label}>
               {item.href ? (
-                <Link href={item.href} className={styles.groupLabel} onClick={closeAll}>
+                <Link href={item.href} prefetch={true} className={styles.groupLabel} onClick={closeAll}>
                   {item.label}
                 </Link>
               ) : (
@@ -275,7 +276,7 @@ export default function ProjectsMegaMenu({ active = "all", onChange, mobileMenuS
                   ))}
                   {(item.links || []).map((link) => (
                     <li key={link.href}>
-                      <Link href={link.href} className={styles.sub} onClick={closeAll}>
+                      <Link href={link.href} prefetch={true} className={styles.sub} onClick={closeAll}>
                         {link.label}
                       </Link>
                     </li>

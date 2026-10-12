@@ -848,6 +848,9 @@ export const assets = {
             { name: "UNESCO", image: haveliLogoUnesco },
             { name: "IIID", image: haveliLogoIIID },
             { name: "NDTV-Grohe", image: haveliLogoNdtv },
+            { name: "Divisare", image: featuredInDivisare },
+            { name: "Architects and Interiors India", image: featuredInArchitectsAndInteriorsIndia },
+            { name: "The Telegraph", image: featuredInTelegraph },
         ],
         gallery: [
             { type: "pair", images: [haveli1, haveli2] },

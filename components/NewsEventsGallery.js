@@ -53,7 +53,7 @@ export default function NewsEventsGallery({ items = [] }) {
                   >
                     <div className={styles.imageWrap}>
                       {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={item.src} alt={item.alt} loading={loading} className={styles.image} />
+                      <img src={item.src} alt={item.alt} loading={loading} decoding="async" className={styles.image} />
                     </div>
                     <h2 className={styles.title}>{item.title}</h2>
                     <p className={styles.source}>{item.source}</p>
@@ -73,7 +73,7 @@ export default function NewsEventsGallery({ items = [] }) {
                 >
                   <div className={styles.imageWrap}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={item.src} alt={item.alt} loading={loading} className={styles.image} />
+                    <img src={item.src} alt={item.alt} loading={loading} decoding="async" className={styles.image} />
                   </div>
                 </button>
               </article>

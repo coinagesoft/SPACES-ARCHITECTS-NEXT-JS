@@ -12,10 +12,15 @@ import styles from "./MenuOverlay.module.css";
 const DISABLED_ITEMS = [];
 
 export default function MenuOverlay({ open, onClose }) {
-  if (!open) return null;
-
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto overflow-x-hidden bg-paper">
+    <div
+      className={`fixed inset-0 z-50 overflow-y-auto overflow-x-hidden bg-paper transition-all duration-300 ${
+        open
+          ? "opacity-100 pointer-events-auto visible"
+          : "opacity-0 pointer-events-none invisible"
+      }`}
+      aria-hidden={!open}
+    >
       <div className={`${styles.topBar} ${styles.equalGapTop}`}>
        <span className="text-base md:text-[1.33rem] tracking-widest2 font-medium text-[#6b6b6b]">
   {site.name} <span className="text-accent">{site.handle}</span>
@@ -37,6 +42,7 @@ export default function MenuOverlay({ open, onClose }) {
             src={assetUrl("menu/menu.jpg")}
             alt="Studio courtyard"
             fill
+            priority={false}
             sizes="(min-width: 1500px) 760px, (min-width: 768px) 52vw, 90vw"
             className="object-cover"
           />
@@ -58,6 +64,7 @@ export default function MenuOverlay({ open, onClose }) {
                   <Link
                     key={item.label}
                     href={item.href}
+                    prefetch={true}
                     onClick={onClose}
                     className="nav-link"
                   >

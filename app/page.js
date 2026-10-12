@@ -42,10 +42,6 @@ function renderIntroParagraph(paragraph) {
   });
 }
 
-// Slides for the home hero. `image` = desktop, `mobileImage` = mobile.
-// A slide with only `mobileImage` shows on mobile only; a slide with only
-// `image` shows on desktop only. Mobile files live in:
-//   /assets/home page slider/MOBILE/   (names must match exactly)
 const homeHeroProjects = [
   {
     id: "haveli-dharampura",
@@ -59,7 +55,12 @@ const homeHeroProjects = [
     image: assetImage("home page slider/PC/2. ART HOUSE.webp"),
     mobileImage: assetImage("home page slider/MOBILE/2. ART HOUSE.webp"),
   },
- 
+  {
+    id: "house-of-stepped-garden",
+    name: "House of Stepped Garden",
+    image: assetImage("home page slider/PC/3. HOUSE OF STEPPED GARDEN.webp"),
+    mobileImage: assetImage("home page slider/MOBILE/House of stepped garden.webp"),
+  },
   {
     id: "house-of-dancing-screens",
     name: "House of Dancing Screens",
@@ -78,11 +79,16 @@ const homeHeroProjects = [
     image: assetImage("home page slider/PC/6. GOLDEN HAVELI.webp"),
     mobileImage: assetImage("home page slider/MOBILE/6.GOLDEN HAVELI.webp"),
   },
-  // Mobile-only: second Art House slide
+  // Slides 7, 8 and 12 are desktop-only (no mobileImage), so the mobile slider is unchanged.
+  {
+    id: "house-of-stepped-garden",
+    name: "House of Stepped Garden",
+    image: assetImage("home page slider/PC/7. HOUSE OF STEPPED GARDEN.webp"),
+  },
   {
     id: "art-house",
     name: "Art House",
-    mobileImage: assetImage("home page slider/MOBILE/ART HOUSE.webp"),
+    image: assetImage("home page slider/PC/8. ARTHOUSE 2.webp"),
   },
   {
     id: "swatantra-residence",
@@ -102,11 +108,10 @@ const homeHeroProjects = [
     image: assetImage("home page slider/PC/11. LIBRARY HOUSE.webp"),
     mobileImage: assetImage("home page slider/MOBILE/7. LIBRARY HOUSE.webp"),
   },
-  // Mobile-only: second House of Stepped Garden slide
   {
     id: "house-of-stepped-garden",
     name: "House of Stepped Garden",
-    mobileImage: assetImage("home page slider/MOBILE/Copy of 11.webp"),
+    image: assetImage("home page slider/PC/12. HOUSE OF STEPPED GARDEN.webp"),
   },
   {
     id: "slender-house",
