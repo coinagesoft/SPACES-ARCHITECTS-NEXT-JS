@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./JustifiedGallery.module.css";
 
@@ -204,6 +205,23 @@ function dims(item) {
   return r ? { width: 1000, height: Math.round(1000 / r) } : {};
 }
 
+// Tile photo. Uses next/image so the browser downloads a resized copy that
+// fits the tile instead of the multi-megapixel original.
+const GALLERY_SIZES = "(min-width: 1024px) 40vw, (min-width: 768px) 45vw, 100vw";
+function GalleryImg({ item, className }) {
+  const d = dims(item);
+  return (
+    <Image
+      src={getSrc(item)}
+      alt={item.name || item.file || ""}
+      width={d.width || 1000}
+      height={d.height || 1000}
+      sizes={GALLERY_SIZES}
+      className={className}
+    />
+  );
+}
+
 function Label({ item }) {
   return item?.name ? <span className={styles.label}>{item.name}</span> : null;
 }
@@ -213,7 +231,7 @@ function Tile({ item }) {
   if (!item) return null;
   const content = (
     <>
-      <img src={getSrc(item)} alt={item.name || item.file} loading="lazy" {...dims(item)} />
+      <GalleryImg item={item} />
       <Label item={item} />
     </>
   );
@@ -245,7 +263,7 @@ function StaticImage({ item }) {
   if (!item) return null;
   return (
     <div className={styles.staticImage}>
-      <img src={getSrc(item)} alt={item.name || item.file} loading="lazy" {...dims(item)} />
+      <GalleryImg item={item} />
     </div>
   );
 }
@@ -257,13 +275,7 @@ function MatchedTile({ item }) {
   const aspectRatio = MATCHED_ASPECT[item.name];
   const content = (
     <>
-      <img
-        src={getSrc(item)}
-        alt={item.name || item.file}
-        loading="lazy"
-        {...dims(item)}
-        className={aspectRatio ? styles.crop : undefined}
-      />
+      <GalleryImg item={item} className={aspectRatio ? styles.crop : undefined} />
       <Label item={item} />
     </>
   );
@@ -302,13 +314,7 @@ function FillTile({ item }) {
   const route = item?.name ? PROJECT_ROUTES[item.name] : undefined;
   const content = (
     <>
-      <img
-        src={getSrc(item)}
-        alt={item.name || item.file}
-        loading="lazy"
-        {...dims(item)}
-        className={styles.crop}
-      />
+      <GalleryImg item={item} className={styles.crop} />
       <Label item={item} />
     </>
   );
@@ -380,13 +386,7 @@ function JustifiedRow({ items }) {
 
         const content = (
           <>
-            <img
-              src={getSrc(item)}
-              alt={item.name || item.file}
-              loading="lazy"
-              {...dims(item)}
-              className={override ? styles.crop : undefined}
-            />
+            <GalleryImg item={item} className={override ? styles.crop : undefined} />
             <Label item={item} />
           </>
         );

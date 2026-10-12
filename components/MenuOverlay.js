@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/config/site";
-import { assets } from "@/assets";
+import { assetUrl } from "@/config/assetUrl";
 import Footer from "./Footer";
 import styles from "./MenuOverlay.module.css";
 
@@ -34,7 +34,7 @@ export default function MenuOverlay({ open, onClose }) {
       <div className={`${styles.menuLayout} ${styles.equalGapBottom}`}>
         <div className={styles.menuImage}>
           <Image
-            src={assets.home.menuThumb}
+            src={assetUrl("menu/menu.jpg")}
             alt="Studio courtyard"
             fill
             sizes="(min-width: 1500px) 760px, (min-width: 768px) 52vw, 90vw"

@@ -20,16 +20,10 @@
 
 import assetManifest from "./asset-manifest.json";
 
-// Base URL of the media server that serves everything under /assets.
-// Override with NEXT_PUBLIC_ASSET_BASE_URL in .env.local for local/staging us.
-const ASSET_BASE_URL = (process.env.NEXT_PUBLIC_ASSET_BASE_URL || "https://assets.spacesarchitects-ka.com").replace(/\/$/, "");
-const ASSET_VERSION = process.env.NEXT_PUBLIC_ASSET_VERSION || `v${new Date().toISOString().slice(0, 10)}`;
-
-export function assetUrl(relPath) {
-    const encoded = relPath.split("/").map(encodeURIComponent).join("/");
-    const url = `${ASSET_BASE_URL}/assets/${encoded}`;
-    return `${url}?v=${encodeURIComponent(ASSET_VERSION)}`;
-}
+// assetUrl() lives in ./assetUrl.js so client components can use it without
+// importing this whole file (and the asset manifest) into the browser bundle.
+import { assetUrl } from "./assetUrl";
+export { assetUrl };
 
 // Returns an object shaped like next/image's StaticImageData ({ src, width,
 // height }), so every <Image src={...}> and every `img.width / img.height`
@@ -854,9 +848,6 @@ export const assets = {
             { name: "UNESCO", image: haveliLogoUnesco },
             { name: "IIID", image: haveliLogoIIID },
             { name: "NDTV-Grohe", image: haveliLogoNdtv },
-            { name: "Divisare", image: featuredInDivisare },
-            { name: "The Telegraph", image: featuredInTelegraph },
-            { name: "Architects and Interiors India", image: featuredInArchitectsAndInteriorsIndia },
         ],
         gallery: [
             { type: "pair", images: [haveli1, haveli2] },

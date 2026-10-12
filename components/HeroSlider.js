@@ -20,11 +20,9 @@ export default function HeroSlider({ projects }) {
 
     // Mobile shows only the slides that have a dedicated mobileImage.
     // Desktop keeps the full list. If no slide has a mobileImage, mobile uses the full list too.
-    // Desktop shows only slides that have a desktop `image` (mobile-only slides are skipped).
     const mobileSlides = projects.filter((project) => project.mobileImage);
-    const desktopSlides = projects.filter((project) => project.image);
     const slides =
-        isMobile && mobileSlides.length > 0 ? mobileSlides : desktopSlides;
+        isMobile && mobileSlides.length > 0 ? mobileSlides : projects;
 
     useEffect(() => {
         setActiveIndex(0);
@@ -49,6 +47,14 @@ export default function HeroSlider({ projects }) {
             style={isMobile ? { height: "100dvh", minHeight: "100dvh" } : undefined}
         >
             {slides.map((project, index) => {
+                // Only mount the slide on screen, the one fading out and the next one
+                // (so it is already loaded when it fades in). Mounting all slides made
+                // the browser download every full-screen image on page load.
+                const total = slides.length;
+                const prevIndex = (activeIndex - 1 + total) % total;
+                const nextIndex = (activeIndex + 1) % total;
+                if (index !== activeIndex && index !== prevIndex && index !== nextIndex) return null;
+
                 const imageSrc = isMobile ? project.mobileImage ?? project.image : project.image;
 
                 return (
