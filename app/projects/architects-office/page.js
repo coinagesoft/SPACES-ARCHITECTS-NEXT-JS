@@ -3,25 +3,25 @@ import { assetImage } from "@/config/assets";
 
 const hero = assetImage("projects/ARCHITECTS-OFFICE/cover/COVER IMAGE.webp");
 
-const img1 = assetImage("projects/ARCHITECTS-OFFICE/3_4/1.webp");
-const img2 = assetImage("projects/ARCHITECTS-OFFICE/3_4/2.webp");
-const img3 = assetImage("projects/ARCHITECTS-OFFICE/3_4/3.webp");
-const img4 = assetImage("projects/ARCHITECTS-OFFICE/3_4/4.webp");
-const img5 = assetImage("projects/ARCHITECTS-OFFICE/3_4/5.webp");
-const img6 = assetImage("projects/ARCHITECTS-OFFICE/3_4/6.webp");
-const img7 = assetImage("projects/ARCHITECTS-OFFICE/3_4/7.webp");
-const img8 = assetImage("projects/ARCHITECTS-OFFICE/3_4/8.webp");
-const img9 = assetImage("projects/ARCHITECTS-OFFICE/3_4/9.webp");
-const img10 = assetImage("projects/ARCHITECTS-OFFICE/3_4/10.webp");
-const img11 = assetImage("projects/ARCHITECTS-OFFICE/3_4/11.webp");
-const img12 = assetImage("projects/ARCHITECTS-OFFICE/3_4/12.webp");
-const img13 = assetImage("projects/ARCHITECTS-OFFICE/3_4/13.webp");
-const img14 = assetImage("projects/ARCHITECTS-OFFICE/3_4/14.webp");
-const img15 = assetImage("projects/ARCHITECTS-OFFICE/3_4/15.webp");
-const section1 = assetImage("projects/ARCHITECTS-OFFICE/3_4/section-1.webp");
-const section2 = assetImage("projects/ARCHITECTS-OFFICE/3_4/section-2.webp");
-const sketch4 = assetImage("projects/ARCHITECTS-OFFICE/3_4/sketch_(4).webp");
-const sketch5 = assetImage("projects/ARCHITECTS-OFFICE/3_4/sketch_(5).webp");
+const img1 = assetImage("projects/ARCHITECTS-OFFICE/3_4a/1.webp");
+const img2 = assetImage("projects/ARCHITECTS-OFFICE/3_4a/2.webp");
+const img3 = assetImage("projects/ARCHITECTS-OFFICE/3_4a/3.webp");
+const img4 = assetImage("projects/ARCHITECTS-OFFICE/3_4a/4.webp");
+const img5 = assetImage("projects/ARCHITECTS-OFFICE/3_4a/5.webp");
+const img6 = assetImage("projects/ARCHITECTS-OFFICE/3_4a/6.webp");
+const img7 = assetImage("projects/ARCHITECTS-OFFICE/3_4a/7.webp");
+const img8 = assetImage("projects/ARCHITECTS-OFFICE/3_4a/8.webp");
+const img9 = assetImage("projects/ARCHITECTS-OFFICE/3_4a/9.webp");
+const img10 = assetImage("projects/ARCHITECTS-OFFICE/3_4a/10.webp");
+const img11 = assetImage("projects/ARCHITECTS-OFFICE/3_4a/11.webp");
+const img12 = assetImage("projects/ARCHITECTS-OFFICE/3_4a/12.webp");
+const img13 = assetImage("projects/ARCHITECTS-OFFICE/3_4a/13.webp");
+const img14 = assetImage("projects/ARCHITECTS-OFFICE/3_4a/14.webp");
+const img15 = assetImage("projects/ARCHITECTS-OFFICE/3_4a/15.webp");
+const section1 = assetImage("projects/ARCHITECTS-OFFICE/3_4a/section-1.webp");
+const section2 = assetImage("projects/ARCHITECTS-OFFICE/3_4a/section-2.webp");
+const sketch4 = assetImage("projects/ARCHITECTS-OFFICE/3_4a/sketch_(4).webp");
+const sketch5 = assetImage("projects/ARCHITECTS-OFFICE/3_4a/sketch_(5).webp");
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 

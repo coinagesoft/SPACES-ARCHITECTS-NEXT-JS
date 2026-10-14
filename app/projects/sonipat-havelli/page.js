@@ -1,5 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
-import { assetImage, assetUrl } from "@/config/assets";
+import { assetImage } from "@/config/assets";
 const hero = assetImage("projects/SONIPAT-HAVELLI/cover/Cover Image.webp");
 const photo1 = assetImage("projects/SONIPAT-HAVELLI/3_4/1.webp");
 const photo2 = assetImage("projects/SONIPAT-HAVELLI/3_4/2.webp");

@@ -1,0 +1,213 @@
+# Images that are NOT in config/asset-manifest.json.
+# One path per line, relative to /assets/ on the asset server.
+# Used with:  node scripts/optimize-assets.mjs --remote --extra scripts/extra-images.txt
+# If a file does not exist on the server the script just reports it and moves on.
+
+Testimonials/Ashraya residence.jpg
+Testimonials/House of sculpted screens.jpg
+Testimonials/house of stepped house.jpg
+Testimonials/Screen House.webp
+Testimonials/Swatantra Residence.jpg
+Testimonials/house of curves.webp
+News and Event page/02.Golden Haveli_theprint.webp
+News and Event page/03.goldenhaveli_hindustantimes.webp
+News and Event page/04.goldenhaveli_timeofindia.webp
+News and Event page/06.heritagepark_ndtv.webp
+News and Event page/07.heritagepark_etvbharat.webp
+News and Event page/08. heritagepark_theprint.webp
+News and Event page/09.heritagepark_hindustantimes.webp
+News and Event page/10.heritagepark_timesofindia.webp
+News and Event page/11.heritagepark_thenewindianexpress.webp
+News and Event page/12.hertitagepark_aninews.webp
+News and Event page/15.Krisha_s Residence_indiatoday.webp
+News and Event page/16.Timeless Houses_Newzviewz.webp
+News and Event page/17.Adharshila Vatika Kindergarten_bbc.webp
+News and Event page/18.Adharshila Vatika Kindergarten_ School Construction News.webp
+News and Event page/19.Haveli Dharampura_theasianage.webp
+News and Event page/20.Golden Haveli_Architect and Interiors India.webp
+News and Event page/21.Haveli Dharampura_thetelegraph.webp
+News and Event page/22.Forbes India Design 2019.webp
+News and Event page/23.slenderhouse_The Guardian.webp
+News and Event page/24.Slender House_thehindu.webp
+News and Event page/25.wadeasiajury.webp
+News and Event page/26.slenderhouse_cnn.webp
+News and Event page/27.Gandhi Darshan_hindustantimes.webp
+News and Event page/28.Haveli Dharampura_ndtv.webp
+News and Event page/29.havelidharampura_unesco.webp
+News and Event page/30. Chartilal Goel Heritage Park_hindustantimes.webp
+News and Event page/31.Swatantra Residence_financialtimes.webp
+News and Event page/32.Chartilal Goel Heritage Park_etvbharat.webp
+News and Event page/33.Chartilal Goel Heritage Park_indiatv.webp
+News and Event page/34.goldenhaveli_hotelierindia.webp
+News and Event page/35.The Stepwell_ The Urban Nest_thehindu.webp
+News and Event page/36.heritagepark_theeconomictimes.webp
+News and Event page/37.intersekt_Architectural Digest India.webp
+News and Event page/38. heritagepark_ETTravelWorld.webp
+News and Event page/39.goldenhaveli.businessstandard.webp
+News and Event page/40.goldenhaveli.webp
+News and Event page/41.theurbannest.webp
+News and Event page/42.lahorigatehaveli.webp
+News and Event page/43.heritage_park.webp
+News and Event page/44.heritagepark.webp
+News and Event page/45.heritagepark.webp
+News and Event page/46.heritagepark.webp
+News and Event page/47.heritagepark.webp
+News and Event page/48.haeritagepark.webp
+News and Event page/50.lahorigatehaveli.webp
+News and Event page/51.heritagepark.webp
+News and Event page/52.havelidharampura.webp
+News and Event page/53.havelidharampura.webp
+News and Event page/54.havelidharampura.webp
+News and Event page/55.havelidharampura.webp
+News and Event page/56.havelidharampura.webp
+News and Event page/57.havelidharampura.webp
+News and Event page/58.haveli.webp
+News and Event page/59.haveli.webp
+News and Event page/60.haveli8.webp
+News and Event page/61.haveli dharampura.webp
+News and Event page/62.havelidharampura.webp
+News and Event page/63.havelidharampura.webp
+News and Event page/64.havelidharampura.webp
+News and Event page/65.havelidharampura.webp
+News and Event page/66.goldenhaveli.webp
+News and Event page/67.goldenhaveli.webp
+EXPRESSIONS/LIGHTS/cover/1.webp
+EXPRESSIONS/LIGHTS/details/1.webp
+EXPRESSIONS/LIGHTS/cover/2.webp
+EXPRESSIONS/LIGHTS/details/2.webp
+EXPRESSIONS/LIGHTS/cover/3.webp
+EXPRESSIONS/LIGHTS/details/3.webp
+EXPRESSIONS/LIGHTS/cover/4.webp
+EXPRESSIONS/LIGHTS/details/4.webp
+EXPRESSIONS/LIGHTS/cover/5.webp
+EXPRESSIONS/LIGHTS/details/5.webp
+EXPRESSIONS/LIGHTS/cover/6.webp
+EXPRESSIONS/LIGHTS/details/6.webp
+EXPRESSIONS/LIGHTS/cover/7.webp
+EXPRESSIONS/LIGHTS/details/7.webp
+EXPRESSIONS/LIGHTS/cover/8.webp
+EXPRESSIONS/LIGHTS/details/8.webp
+EXPRESSIONS/LIGHTS/cover/9.webp
+EXPRESSIONS/LIGHTS/details/9.webp
+EXPRESSIONS/LIGHTS/cover/10.webp
+EXPRESSIONS/LIGHTS/details/10.webp
+EXPRESSIONS/LIGHTS/cover/11.webp
+EXPRESSIONS/LIGHTS/details/11.webp
+EXPRESSIONS/LIGHTS/cover/12.webp
+EXPRESSIONS/LIGHTS/details/12.webp
+EXPRESSIONS/LIGHTS/cover/13.webp
+EXPRESSIONS/LIGHTS/details/13.webp
+EXPRESSIONS/LIGHTS/cover/14.webp
+EXPRESSIONS/LIGHTS/details/14.webp
+EXPRESSIONS/LIGHTS/cover/15.webp
+EXPRESSIONS/LIGHTS/details/15.webp
+EXPRESSIONS/LIGHTS/cover/16.webp
+EXPRESSIONS/LIGHTS/details/16.webp
+EXPRESSIONS/LIGHTS/cover/17.webp
+EXPRESSIONS/LIGHTS/details/17.webp
+EXPRESSIONS/LIGHTS/cover/18.webp
+EXPRESSIONS/LIGHTS/details/18.webp
+EXPRESSIONS/LIGHTS/cover/19.webp
+EXPRESSIONS/LIGHTS/details/19.webp
+EXPRESSIONS/LIGHTS/cover/20.webp
+EXPRESSIONS/LIGHTS/details/20.webp
+EXPRESSIONS/LIGHTS/cover/21.webp
+EXPRESSIONS/LIGHTS/details/21.webp
+EXPRESSIONS/LIGHTS/cover/22.webp
+EXPRESSIONS/LIGHTS/details/22.webp
+EXPRESSIONS/LIGHTS/cover/23.webp
+EXPRESSIONS/LIGHTS/details/23.webp
+EXPRESSIONS/LIGHTS/cover/24.webp
+EXPRESSIONS/LIGHTS/details/24.webp
+EXPRESSIONS/LIGHTS/cover/25.webp
+EXPRESSIONS/LIGHTS/details/25.webp
+EXPRESSIONS/LIGHTS/cover/26.webp
+EXPRESSIONS/LIGHTS/details/26.webp
+EXPRESSIONS/LIGHTS/cover/27.webp
+EXPRESSIONS/LIGHTS/details/27.webp
+EXPRESSIONS/LIGHTS/cover/28.webp
+EXPRESSIONS/LIGHTS/details/28.webp
+EXPRESSIONS/ARTWORK/cover/1.webp
+EXPRESSIONS/ARTWORK/details/1.webp
+EXPRESSIONS/ARTWORK/cover/2.webp
+EXPRESSIONS/ARTWORK/details/2.webp
+EXPRESSIONS/ARTWORK/cover/3.webp
+EXPRESSIONS/ARTWORK/details/3.webp
+EXPRESSIONS/ARTWORK/cover/4.webp
+EXPRESSIONS/ARTWORK/details/4.webp
+EXPRESSIONS/ARTWORK/cover/5.webp
+EXPRESSIONS/ARTWORK/details/5.webp
+EXPRESSIONS/ARTWORK/cover/6.webp
+EXPRESSIONS/ARTWORK/details/6.webp
+EXPRESSIONS/ARTWORK/cover/7.webp
+EXPRESSIONS/ARTWORK/details/7.webp
+EXPRESSIONS/ARTWORK/cover/8.webp
+EXPRESSIONS/ARTWORK/details/8.webp
+EXPRESSIONS/ARTWORK/cover/9.webp
+EXPRESSIONS/ARTWORK/details/9.webp
+EXPRESSIONS/ARTWORK/cover/10.webp
+EXPRESSIONS/ARTWORK/details/10.webp
+EXPRESSIONS/ARTWORK/cover/11.webp
+EXPRESSIONS/ARTWORK/details/11.webp
+EXPRESSIONS/ARTWORK/cover/12.webp
+EXPRESSIONS/ARTWORK/details/12.webp
+EXPRESSIONS/ARTWORK/cover/13.webp
+EXPRESSIONS/ARTWORK/details/13.webp
+EXPRESSIONS/ARTWORK/cover/14.webp
+EXPRESSIONS/ARTWORK/details/14.webp
+EXPRESSIONS/ARTWORK/cover/15.webp
+EXPRESSIONS/ARTWORK/details/15.webp
+EXPRESSIONS/ARTWORK/cover/16.webp
+EXPRESSIONS/ARTWORK/details/16.webp
+EXPRESSIONS/ARTWORK/cover/17.webp
+EXPRESSIONS/ARTWORK/details/17.webp
+EXPRESSIONS/ARTWORK/cover/18.webp
+EXPRESSIONS/ARTWORK/details/18.webp
+EXPRESSIONS/FURNITURE/cover/1.webp
+EXPRESSIONS/FURNITURE/details/1.webp
+EXPRESSIONS/FURNITURE/cover/2.webp
+EXPRESSIONS/FURNITURE/details/2.webp
+EXPRESSIONS/FURNITURE/cover/3.webp
+EXPRESSIONS/FURNITURE/details/3.webp
+EXPRESSIONS/FURNITURE/cover/4.webp
+EXPRESSIONS/FURNITURE/details/4.webp
+EXPRESSIONS/FURNITURE/cover/5.webp
+EXPRESSIONS/FURNITURE/details/5.webp
+EXPRESSIONS/FURNITURE/cover/6.webp
+EXPRESSIONS/FURNITURE/details/6.webp
+EXPRESSIONS/FURNITURE/cover/7.webp
+EXPRESSIONS/FURNITURE/details/7.webp
+EXPRESSIONS/FURNITURE/cover/8.webp
+EXPRESSIONS/FURNITURE/details/8.webp
+EXPRESSIONS/FURNITURE/cover/9.webp
+EXPRESSIONS/FURNITURE/details/9.webp
+EXPRESSIONS/FURNITURE/cover/10.webp
+EXPRESSIONS/FURNITURE/details/10.webp
+EXPRESSIONS/FURNITURE/cover/12.webp
+EXPRESSIONS/FURNITURE/details/12.webp
+EXPRESSIONS/FURNITURE/cover/13.webp
+EXPRESSIONS/FURNITURE/details/13.webp
+EXPRESSIONS/FURNITURE/cover/14.webp
+EXPRESSIONS/FURNITURE/details/14.webp
+EXPRESSIONS/FURNITURE/cover/15.webp
+EXPRESSIONS/FURNITURE/details/15.webp
+EXPRESSIONS/SCULPTURE/cover/1.webp
+EXPRESSIONS/SCULPTURE/details/1.webp
+EXPRESSIONS/SCULPTURE/cover/2.webp
+EXPRESSIONS/SCULPTURE/details/2.webp
+EXPRESSIONS/SCULPTURE/cover/3.webp
+EXPRESSIONS/SCULPTURE/details/3.webp
+EXPRESSIONS/SCULPTURE/cover/4.webp
+EXPRESSIONS/SCULPTURE/details/4.webp
+EXPRESSIONS/SCULPTURE/cover/5.webp
+EXPRESSIONS/SCULPTURE/details/5.webp
+EXPRESSIONS/SCULPTURE/cover/6.webp
+EXPRESSIONS/SCULPTURE/details/6.webp
+EXPRESSIONS/SCULPTURE/cover/7.webp
+EXPRESSIONS/SCULPTURE/details/7.webp
+EXPRESSIONS/SCULPTURE/cover/8.webp
+EXPRESSIONS/SCULPTURE/details/8.webp
+EXPRESSIONS/SCULPTURE/cover/9.webp
+EXPRESSIONS/SCULPTURE/details/9.webp
+EXPRESSIONS/SCULPTURE/cover/10.webp
+EXPRESSIONS/SCULPTURE/details/10.webp

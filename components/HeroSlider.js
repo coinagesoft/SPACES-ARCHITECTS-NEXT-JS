@@ -95,14 +95,22 @@ export default function HeroSlider({ projects }) {
             })}
 
             {/* Dark overlay */}
-            <div className="absolute inset-0 bg-black/20" />
+            <div className="pointer-events-none absolute inset-0 bg-black/20" />
+
+            {/* Whole slide is clickable and opens the active project */}
+            <Link
+                href={`/projects/${activeProject.id}`}
+                prefetch={true}
+                aria-label={activeProject.name}
+                className="absolute inset-0 z-10"
+            />
 
             {/* Hero title */}
-            <div className="absolute bottom-10 left-0 right-0 site-container">
+            <div className="pointer-events-none absolute bottom-10 left-0 right-0 z-20 site-container">
                 <Link
                     href={`/projects/${activeProject.id}`}
                     prefetch={true}
-                    className="inline-block transition-opacity duration-200 hover:opacity-80"
+                    className="pointer-events-auto inline-block transition-opacity duration-200 hover:opacity-80"
                 >
                     <h1
                         key={`${activeProject.id}-${activeIndex}`}

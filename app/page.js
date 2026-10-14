@@ -42,6 +42,8 @@ function renderIntroParagraph(paragraph) {
   });
 }
 
+// PC images come from "home page slider/PC/", mobile images from "home page slider/MOBILE/".
+// Slides without a mobileImage are desktop-only (HeroSlider skips them on mobile).
 const homeHeroProjects = [
   {
     id: "haveli-dharampura",
@@ -59,7 +61,7 @@ const homeHeroProjects = [
     id: "house-of-stepped-garden",
     name: "House of Stepped Garden",
     image: assetImage("home page slider/PC/3. HOUSE OF STEPPED GARDEN.webp"),
-    mobileImage: assetImage("home page slider/MOBILE/House of stepped garden.webp"),
+    mobileImage: assetImage("home page slider/MOBILE/3. HOUSE OF STEPPED GARDEN.webp"),
   },
   {
     id: "house-of-dancing-screens",
@@ -79,7 +81,7 @@ const homeHeroProjects = [
     image: assetImage("home page slider/PC/6. GOLDEN HAVELI.webp"),
     mobileImage: assetImage("home page slider/MOBILE/6.GOLDEN HAVELI.webp"),
   },
-  // Slides 7, 8 and 12 are desktop-only (no mobileImage), so the mobile slider is unchanged.
+  // Slide 7 is desktop-only (no mobileImage)
   {
     id: "house-of-stepped-garden",
     name: "House of Stepped Garden",
@@ -89,6 +91,7 @@ const homeHeroProjects = [
     id: "art-house",
     name: "Art House",
     image: assetImage("home page slider/PC/8. ARTHOUSE 2.webp"),
+    mobileImage: assetImage("home page slider/MOBILE/ART HOUSE.webp"),
   },
   {
     id: "swatantra-residence",
@@ -112,6 +115,7 @@ const homeHeroProjects = [
     id: "house-of-stepped-garden",
     name: "House of Stepped Garden",
     image: assetImage("home page slider/PC/12. HOUSE OF STEPPED GARDEN.webp"),
+    mobileImage: assetImage("home page slider/MOBILE/Copy of 11.webp"),
   },
   {
     id: "slender-house",
@@ -133,23 +137,23 @@ export default function HomePage() {
       <SiteChrome dark home />
       <HeroSlider projects={homeHeroProjects} />
       <section className="site-container py-8 md:py-12">
-  <div className="mb-6 flex justify-center">
-    <h2 className="text-center text-[14px] font-medium tracking-[0.16em] text-[#6b6b6b] md:text-[16px]">
-      Architecture that is Experienced, Felt and Remembered
-    </h2>
-  </div>
+        <div className="mb-6 flex justify-center">
+          <h2 className="text-center text-[14px] font-medium tracking-[0.16em] text-[#6b6b6b] md:text-[16px]">
+            Architecture that is Experienced, Felt and Remembered
+          </h2>
+        </div>
 
-  <div className="space-y-3">
-    {homeCopy.intro.map((paragraph, index) => (
-      <p
-        key={index}
-        className="text-[11px] leading-[1.65] tracking-[0.14em] text-[#6b6b6b] md:text-[14px]"
-      >
-        {renderIntroParagraph(paragraph)}
-      </p>
-    ))}
-  </div>
-</section>
+        <div className="space-y-3">
+          {homeCopy.intro.map((paragraph, index) => (
+            <p
+              key={index}
+              className="text-[11px] leading-[1.65] tracking-[0.14em] text-[#6b6b6b] md:text-[14px]"
+            >
+              {renderIntroParagraph(paragraph)}
+            </p>
+          ))}
+        </div>
+      </section>
       <section className="site-container pb-14 md:pb-20">
         <h2 className="mb-4 text-[20px] font-normal uppercase tracking-[0.16em] text-[#6B6B6B] md:mb-4 md:text-[28px]">
           Featured Projects

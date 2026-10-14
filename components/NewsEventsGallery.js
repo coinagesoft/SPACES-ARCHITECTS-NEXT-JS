@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { optimizedImage } from "@/config/assetUrl";
 import styles from "./NewsEventsGallery.module.css";
 
 // items = [{ src, alt, title, source?, href? }]
@@ -53,7 +54,7 @@ export default function NewsEventsGallery({ items = [] }) {
                   >
                     <div className={styles.imageWrap}>
                       {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={item.src} alt={item.alt} loading={loading} decoding="async" className={styles.image} />
+                      <img {...optimizedImage(item.src, { sizes: "(min-width: 1024px) 275px, (min-width: 768px) 45vw, 100vw" })} alt={item.alt} loading={loading} decoding="async" className={styles.image} />
                     </div>
                     <h2 className={styles.title}>{item.title}</h2>
                     <p className={styles.source}>{item.source}</p>
@@ -73,7 +74,7 @@ export default function NewsEventsGallery({ items = [] }) {
                 >
                   <div className={styles.imageWrap}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={item.src} alt={item.alt} loading={loading} decoding="async" className={styles.image} />
+                    <img {...optimizedImage(item.src, { sizes: "(min-width: 1024px) 275px, (min-width: 768px) 45vw, 100vw" })} alt={item.alt} loading={loading} decoding="async" className={styles.image} />
                   </div>
                 </button>
               </article>
@@ -123,7 +124,7 @@ export default function NewsEventsGallery({ items = [] }) {
 
           <div className={styles.viewer} onClick={(e) => e.stopPropagation()}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img key={current.src} src={current.src} alt={current.alt} className={styles.preview} />
+            <img key={current.src} {...optimizedImage(current.src, { sizes: "(min-width: 1280px) 1200px, 100vw" })} alt={current.alt} className={styles.preview} />
           </div>
         </div>
       )}
