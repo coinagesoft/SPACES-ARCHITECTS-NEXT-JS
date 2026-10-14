@@ -5,3 +5,4 @@ out
 npm-debug.log*
 .DS_Store
 public/assets/
+public/assets-optimized/
