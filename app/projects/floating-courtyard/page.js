@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assets } from "@/assets";
 
 const hero = assets.floatingCourtyard.hero;
@@ -15,6 +16,7 @@ export default function FloatingCourtyardPage() {
       title="Floating Courtyard"
       location="Agra"
       hero={hero}
+      mobileHero={mobileCover("floating-courtyard")}
       photos={photos}
       details={{
         Project: "Floating Courtyard",

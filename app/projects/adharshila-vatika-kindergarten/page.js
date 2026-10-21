@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage, assetUrl } from "@/config/assets";
 const hero = assetImage("projects/ADHARSHILA-VATIKA-KINDERGARTEN/cover/COVER IMAGE.webp");
 const photo00 = assetImage("projects/ADHARSHILA-VATIKA-KINDERGARTEN/3_4/00.webp");
@@ -38,6 +39,7 @@ export default function AdharshilaVatikaKindergartenPage() {
       title="Adharshila Vatika Kindergarten"
       location="New Delhi"
       hero={hero}
+      mobileHero={mobileCover("adharshila-vatika-kindergarten")}
       photos={[
         photo00, photo01, photo02, photo03, photo4, photo04, photo05, photo06,
         photo07, photo08, photo09, photo10, photo11, photo12,

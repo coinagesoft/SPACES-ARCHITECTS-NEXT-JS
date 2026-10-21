@@ -504,3 +504,23 @@
     border-radius: 4px;
   }
 }
+/* ---------- Phone cover image (shown whole, below 768px) ---------- */
+.heroMobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .hero {
+    height: auto;
+  }
+
+  .heroDesktop {
+    display: none;
+  }
+
+  .heroMobile {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

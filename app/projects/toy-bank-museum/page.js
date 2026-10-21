@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 
 const hero = assetImage("projects/TOY-BANK-MUSEUM/cover/COVER.webp");
@@ -29,6 +30,7 @@ export default function ToybankMuseumPage() {
       title="Toybank Museum"
       location="ITO, New Delhi"
       hero={hero}
+      mobileHero={mobileCover("toy-bank-museum")}
       photos={[
         photo0, photo1, photo2, photo3, photo4, photo5, photo6, photo7,
         photo8, photo9,

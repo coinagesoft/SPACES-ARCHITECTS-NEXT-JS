@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage, assetUrl } from "@/config/assets";
 const hero = assetImage("projects/SOBHTI-RESIDENCE/cover/COVER.webp");
 const photo1 = assetImage("projects/SOBHTI-RESIDENCE/3_4/1.webp");
@@ -18,6 +19,7 @@ export default function SobtisResidencePage() {
       title="Sobti's Residence"
       location="New Delhi"
       hero={hero}
+      mobileHero={mobileCover("sobhti-residence")}
       photos={[
         photo1, photo2, photo3, photo4, photo5, photo6, photo7,
         heroPhoto,

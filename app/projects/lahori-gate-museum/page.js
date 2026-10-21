@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 
 const hero = assetImage("projects/LAHORI-GATE-MUSEUM/cover/Cover Image.webp");
@@ -26,6 +27,7 @@ export default function LahoriGateMuseumPage() {
       title="Lahori Gate Museum"
       location="Old Delhi"
       hero={hero}
+      mobileHero={mobileCover("lahori-gate-museum")}
       // Same order as the old gallery array
       photos={[
         img1, img3, img4,

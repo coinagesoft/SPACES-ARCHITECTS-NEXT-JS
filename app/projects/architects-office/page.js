@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 
 const hero = assetImage("projects/ARCHITECTS-OFFICE/cover/COVER IMAGE.webp");
@@ -34,6 +35,7 @@ export default function ArchitectsOfficePage() {
       title="Architect's Office"
       location="South Extension, New Delhi"
       hero={hero}
+      mobileHero={mobileCover("architects-office")}
       // Same order as the old gallery array
       photos={[
         img1, img5,

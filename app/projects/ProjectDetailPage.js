@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import ParallaxHeroImage from "@/components/ParallaxHeroImage";
 import MoreProjects from "@/components/MoreProjects";
 import styles from "./slender-house/page.module.css";
+import heroStyles from "@/components/ParallaxHeroImage.module.css";
 import buildProjectGallery from "./buildProjectGallery";
 import ShareIcons from "@/components/ShareIcons";
 
@@ -68,6 +69,7 @@ export default function ProjectDetailPage({
   title,
   location,
   hero,
+  mobileHero,
   photos = [],
   details = {},
   heroVideo,
@@ -93,14 +95,17 @@ export default function ProjectDetailPage({
         <SiteChrome dark />
 
        {heroVideo ? (
-  <section className={styles.hero}>
+  <section
+    className={`${styles.hero} ${mobileHero ? heroStyles.hasMobileCover : ""}`}
+  >
     <video
       src={heroVideo}
       autoPlay
       muted
       loop
       playsInline
-      preload="auto"
+      preload={mobileHero ? "none" : "auto"}
+      className={mobileHero ? heroStyles.desktopOnly : undefined}
       style={{
         position: "absolute",
         inset: 0,
@@ -109,6 +114,15 @@ export default function ProjectDetailPage({
         objectFit: "cover",
       }}
     />
+    {mobileHero && (
+      <Image
+        src={mobileHero}
+        alt={title}
+        sizes="100vw"
+        priority
+        className={heroStyles.mobileOnly}
+      />
+    )}
     {heroText}
   </section>
 ) : (
@@ -116,6 +130,7 @@ export default function ProjectDetailPage({
     className={styles.hero}
     imageClassName={styles.heroImage}
     src={hero}
+    mobileSrc={mobileHero}
     alt={title}
   >
     {heroText}

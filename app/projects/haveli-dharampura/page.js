@@ -5,6 +5,7 @@ import { assets } from "@/assets";
 import styles from "./page.module.css";
 import MoreProjects from "@/components/MoreProjects";
 import ShareIcons from "@/components/ShareIcons";
+import { mobileCover } from "@/config/mobileCovers";
 
 export const metadata = {
   title: "Haveli Dharampura — Spaces Architects@ka",
@@ -88,13 +89,21 @@ export default function HaveliDharampuraPage() {
 
         {/* Hero */}
         <section className={styles.hero}>
+          {/* Desktop / tablet cover (hidden on phones) */}
           <Image
             src={assets.haveliDharampura.hero}
             alt="Haveli Dharampura"
             fill
-            priority
             sizes="100vw"
-            className={styles.heroImage}
+            className={`${styles.heroImage} ${styles.heroDesktop}`}
+          />
+          {/* Phone cover: shown whole, not cropped */}
+          <Image
+            src={mobileCover("haveli-dharampura")}
+            alt="Haveli Dharampura"
+            sizes="100vw"
+            priority
+            className={styles.heroMobile}
           />
           <div className={`site-container ${styles.heroTextWrap}`}>
             <div className={styles.heroText}>

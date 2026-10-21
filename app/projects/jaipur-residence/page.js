@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 
 const hero = assetImage("projects/JAIPUR-RESIDENCE/cover/COVER.webp");
@@ -32,6 +33,7 @@ export default function JaipurResidencePage() {
       title="Jaipur Residence"
       location="Jaipur, Rajasthan"
       hero={hero}
+      mobileHero={mobileCover("jaipur-residence")}
       // Same order as the old gallery array
       photos={[
         img3, img1, img2,

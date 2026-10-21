@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 
 const hero = assetImage("projects/SACHDEVA-FARMHOUSE/cover/COVER.webp");
@@ -31,6 +32,7 @@ export default function SachdevaFarmhousePage() {
       title="Sachdeva Farmhouse"
       location="New Delhi"
       hero={hero}
+      mobileHero={mobileCover("sachdeva-residence")}
       // Portraits pair up two-by-two (same ratio per pair); landscapes run
       // full-width, then pair up by matching ratio, as in the Screen House layout.
       photos={[

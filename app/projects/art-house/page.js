@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 
 const hero = assetImage("projects/ART_HOUSE/cover/HERO.webp");
@@ -22,6 +23,7 @@ export default function ArtHousePage() {
       title="Art House"
       location="New Delhi"
       hero={hero}
+      mobileHero={mobileCover("art-house")}
       photos={photos}
       details={{
         Project: "Art House",

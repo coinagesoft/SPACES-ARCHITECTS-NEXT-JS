@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 const hero = assetImage("projects/IMELDA-INC/cover/Hero Image.webp");
 const photo1 = assetImage("projects/IMELDA-INC/3_4/1.webp");
@@ -25,6 +26,7 @@ export default function ImeldaIncPage() {
       title="Imelda Inc."
       location="New Delhi"
       hero={hero}
+      mobileHero={mobileCover("imelda-inc")}
       photos={[photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10, photo11, photo12, photo13]}
       details={{
         Project: "Imelda Inc.",

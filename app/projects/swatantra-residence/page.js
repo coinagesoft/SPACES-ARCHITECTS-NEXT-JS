@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assets } from "@/assets";
 
 const hero = assets.swatantraResidence.hero;
@@ -15,6 +16,7 @@ export default function SwatantraResidencePage() {
       title="Swatantra Residence"
       location="Agra, Uttar Pradesh"
       hero={hero}
+      mobileHero={mobileCover("swatantra-residence")}
       photos={photos}
       details={{
         Project: "Swatantra Residence",

@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 
 const hero = assetImage("projects/HOUSE-IN-HARMONY/cover/COVER.webp");
@@ -21,6 +22,7 @@ export default function HouseInHarmonyPage() {
       title="The House in Harmony"
       location="New Delhi"
       hero={hero}
+      mobileHero={mobileCover("house-in-harmony")}
       photos={[
         photo2, photo3, photo4, photo5, photo6, photo7,
         

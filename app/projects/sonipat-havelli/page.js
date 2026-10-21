@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 const hero = assetImage("projects/SONIPAT-HAVELLI/cover/Cover Image.webp");
 const photo1 = assetImage("projects/SONIPAT-HAVELLI/3_4/1.webp");
@@ -25,6 +26,7 @@ export default function SonipatHaveliPage() {
       title="Sonipat Haveli"
       location="Sonipat, Haryana"
       hero={hero}
+      mobileHero={mobileCover("sonipat-havelli")}
       photos={[
         photo1, photo2, photo2b, photo3, photo4, photo6, photo7,
         photo8, photo9, photo10, photo12, photo13, photo14,

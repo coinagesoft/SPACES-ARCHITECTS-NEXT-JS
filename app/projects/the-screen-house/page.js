@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 
 const hero = assetImage("projects/SCREEN-HOUSE/cover/COVER.webp");
@@ -27,6 +28,7 @@ export default function TheScreenHousePage() {
       title="The Screen House"
       location="New Delhi"
       hero={hero}
+      mobileHero={mobileCover("the-screen-house")}
       // Same order as the old gallery array
       photos={[
         img1, img4, img5,

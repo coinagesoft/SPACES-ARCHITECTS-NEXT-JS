@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 const hero = assetImage("projects/INTERSEXT-SHOWROOM/cover/HERO IMAGE.webp");
 const photo1 = assetImage("projects/INTERSEXT-SHOWROOM/photographs/1 Juxtaposed tile blocks protruding out depecting the concept of natural weathering of stones.webp");
@@ -32,6 +33,7 @@ export default function IntersextShowroomPage() {
       title="Intersekt Tiles Showroom"
       location="Okhla, New Delhi"
       hero={hero}
+      mobileHero={mobileCover("intersext-showroom")}
       photos={[
         photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10,
         photo11, photo12, photo13, photo14, photo15, photo16, photo17, photo18, photo19, photo20,

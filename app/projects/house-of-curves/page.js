@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 
 const hero = assetImage("projects/HOUSE-OF-CURVES/cover/COVER.webp");
@@ -40,6 +41,7 @@ export default function HouseOfCurvesPage() {
       title="House of Curves"
       location="Agra, Uttar Pradesh"
       hero={hero}
+      mobileHero={mobileCover("house-of-curves")}
       photos={[
         p1, p2, p3, p4, p5, p6, p7,
         p9, extra1, p10, p12, p13,

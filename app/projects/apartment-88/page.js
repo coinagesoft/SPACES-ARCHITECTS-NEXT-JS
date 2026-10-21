@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assets } from "@/assets";
 
 const hero = assets.apartment88.hero;
@@ -14,6 +15,7 @@ export default function Apartment88Page() {
       title="Apartment 88"
       location="New Delhi"
       hero={hero}
+      mobileHero={mobileCover("apartment-88")}
       photos={photos}
       details={{
         Project: "Apartment 88",

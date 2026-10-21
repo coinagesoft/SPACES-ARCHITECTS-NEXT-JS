@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 
 const hero = assetImage("projects/KAVYAM/cover/cover.webp");
@@ -37,6 +38,7 @@ export default function KavyamPage() {
       title="Kavyam"
       location="New Delhi"
       hero={hero}
+      mobileHero={mobileCover("kavyam")}
       // Same order as the old gallery array
       photos={[
         img1, img6, img7,

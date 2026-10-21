@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 
 const hero = assetImage("projects/MARBLE-CITY-EXHIBITION-STALL/cover/COVER (2).webp");
@@ -20,6 +21,7 @@ export default function MarbleCityExhibitionStallPage() {
       title="Marble City Exhibition Stall"
       location="New Delhi"
       hero={hero}
+      mobileHero={mobileCover("marble-city-exhibition-stall")}
       photos={[photo1, photo2, photo3, photo4, photo5, photo7]}
       details={{
         Project: "Marble City ID Stall",

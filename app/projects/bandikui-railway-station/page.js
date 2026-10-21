@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage, assetUrl } from "@/config/assets";
 const hero = assetImage("projects/BANDIKUI-RAILWAY-STATION/cover/COVER.webp");
 const photo1 = assetImage("projects/BANDIKUI-RAILWAY-STATION/3_4/1.webp");
@@ -17,6 +18,7 @@ export default function BandikuiRailwayStationPage() {
       title="Bandikui Railway Station"
       location="Bandikui, Rajasthan"
       hero={hero}
+      mobileHero={mobileCover("bandikui-railway-station")}
       photos={[
         photo1, photo2, photo3, photo4, photo5, photo6,
         coverPhoto2,

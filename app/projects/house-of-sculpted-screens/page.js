@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 
 // No separate cover folder for this project yet, so photographs/1.webp is the hero
@@ -20,6 +21,7 @@ export default function HouseOfSculptedScreensPage() {
       title="House of Sculpted Screens"
       location="New Delhi"
       hero={hero}
+      mobileHero={mobileCover("house-of-sculpted-screens")}
       // Same order as the old gallery array
       photos={[
         photo1, whatsapp2,

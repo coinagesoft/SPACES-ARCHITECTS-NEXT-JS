@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage, assetUrl } from "@/config/assets";
 const hero = assetImage("projects/POETIC-HOUSE/cover/cover.webp");
 const photo1 = assetImage("projects/POETIC-HOUSE/3_4/1.webp");
@@ -23,6 +24,7 @@ export default function ThePoeticHousePage() {
       title="The Poetic House"
       location="Noida, Uttar Pradesh"
       hero={hero}
+      mobileHero={mobileCover("poetic-house")}
       photos={[
         photo1, photo2, photo3, photo4, photo5, photo6,
         photo7, photo8, photo9, photo10, photo11, photo12,

@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 
 const hero = assetImage("projects/GANDHI-DARSHAN-PARK/cover/Cover Image.webp");
@@ -23,6 +24,7 @@ export default function GandhiDarshanParkPage() {
       title="Gandhi Darshan Park"
       location="Delhi"
       hero={hero}
+      mobileHero={mobileCover("gandhi-darshan-park")}
       // Same order as the old gallery array
       photos={[
         img1, img2,

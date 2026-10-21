@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage, assetUrl } from "@/config/assets";
 const hero = assetImage("projects/SAATIVK-MARBLE-SHOWROOM/cover/HERO.webp");
 const photo1 = assetImage("projects/SAATIVK-MARBLE-SHOWROOM/3_4/1.webp");
@@ -26,6 +27,7 @@ export default function SatvikMarbleShowroomPage() {
       title="Satvik Marble Showroom"
       location="Noida"
       hero={coverPhoto1}
+      mobileHero={mobileCover("saativk-marble-showroom")}
       photos={[
          photo2, photo3, photo4, photo5, photo6, photo7, photo8,
         photo9, photo10, photo11, photo12, photo13, photo14, photo15,

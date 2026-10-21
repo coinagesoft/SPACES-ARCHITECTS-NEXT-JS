@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 
 const hero = assetImage("projects/THE-STEPWELL/cover/COVER.webp");
@@ -31,6 +32,7 @@ export default function TheStepwellPage() {
       title="The Stepwell"
       location="Rajasthan"
       hero={hero}
+      mobileHero={mobileCover("oval-the-stepwell")}
       // Same order as the old gallery array
       photos={[
         img1,

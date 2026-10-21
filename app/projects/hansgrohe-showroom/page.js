@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage, assetUrl } from "@/config/assets";
 const hero = assetImage("projects/HANSGROHE-SHOWROOM/cover/cover (1).webp");
 const photo1 = assetImage("projects/HANSGROHE-SHOWROOM/3_4/1.webp");
@@ -23,6 +24,7 @@ export default function HansgroheShowroomPage() {
       title="Hansgrohe Showroom"
       location="New Delhi"
       hero={hero}
+      mobileHero={mobileCover("hansgrohe-showroom")}
       photos={[
         photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8,
         photo9, photo10, photo11, photo12,

@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 
 const hero = assetImage("projects/EXPRESS-OFFICE/cover/Cover Image.webp");
@@ -28,6 +29,7 @@ export default function ExpressOfficePage() {
       title="Express Office"
       location="Noida, Uttar Pradesh"
       hero={hero}
+      mobileHero={mobileCover("express-office")}
       // Same order as the old gallery array
       photos={[
         photo3,

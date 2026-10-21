@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 
 const hero = assetImage("projects/HOUSE-ON-HILL/cover/COVER.webp");
@@ -16,6 +17,7 @@ export default function HouseOnHillPage() {
       currentId="house-on-hill"
       title="House on Hill"
       hero={hero}
+      mobileHero={mobileCover("house-on-hill")}
       photos={[photo1, photo2, photo3, photo4]}
       details={{
         Project: "House on Hill",

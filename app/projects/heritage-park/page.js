@@ -6,6 +6,7 @@ import MoreProjects from "@/components/MoreProjects";
 import ShareIcons from "@/components/ShareIcons";
 import styles from "../slender-house/page.module.css";
 import { assetImage } from "@/config/assets";
+import { mobileCover } from "@/config/mobileCovers";
 
 const hero = assetImage("projects/HERITAGE-PARK/cover/Cover Image.webp");
 
@@ -37,6 +38,7 @@ function HeritageDetail({
   title,
   location,
   hero,
+  mobileHero,
   galleryRows = [],
   details = {},
   awards = [],
@@ -53,6 +55,7 @@ function HeritageDetail({
           className={styles.hero}
           imageClassName={styles.heroImage}
           src={hero}
+          mobileSrc={mobileHero}
           alt={title}
         >
           <div className={`site-container ${styles.heroTextWrap}`}>
@@ -164,6 +167,7 @@ export default function HeritageParkPage() {
       title="Heritage Park"
       location="Old Delhi"
       hero={hero}
+      mobileHero={mobileCover("heritage-park")}
       // Layout follows the file names: the two portraits first as a pair,
       // "full bleed" images full width, everything else in pairs.
       galleryRows={[

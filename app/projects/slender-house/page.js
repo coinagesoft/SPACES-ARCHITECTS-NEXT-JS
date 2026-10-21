@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assets } from "@/assets";
 
 const hero = assets.slenderHouse.hero;
@@ -15,6 +16,7 @@ export default function SlenderHousePage() {
       title="6 X 18 Slender House"
       location="New Delhi"
       hero={hero}
+      mobileHero={mobileCover("slender-house")}
       photos={photos}
       details={{
         Project: "6 X 18 Slender House",

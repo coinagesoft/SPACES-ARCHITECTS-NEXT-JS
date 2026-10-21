@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage, assetUrl } from "@/config/assets";
 const hero = assetImage("projects/LEGEND-VENNER-EXHIBITION-MUMBAI/cover/Cover Image.webp");
 const photo1 = assetImage("projects/LEGEND-VENNER-EXHIBITION-MUMBAI/3_4/1.webp");
@@ -25,6 +26,7 @@ export default function LegendVeneerExhibitionMumbaiPage() {
       title="Legend Veneer Exhibition Stall"
       location="Mumbai, Maharashtra"
       hero={hero}
+      mobileHero={mobileCover("legend-veneer-exhibition-mumbai")}
       photos={[photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10, photo11, photo12, photo13, photo14]}
       details={{
         Project: "Legends Veneer Exhibition Stall",

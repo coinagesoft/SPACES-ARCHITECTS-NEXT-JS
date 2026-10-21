@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 
 // Only one photograph exists for this project, so it doubles as the hero and the gallery image.
@@ -14,6 +15,7 @@ export default function ConcreteHousePage() {
       title="Concrete House"
       location="Kamla Nagar, Agra"
       hero={hero}
+      mobileHero={mobileCover("concrete-house")}
       photos={[photo1]}
       details={{
         Project: "Concrete House",

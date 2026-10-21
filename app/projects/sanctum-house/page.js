@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 
 const hero = assetImage("projects/SANCTUM-HOUSE/cover/COVER.webp");
@@ -27,6 +28,7 @@ export default function SanctumHousePage() {
       title="Sanctum House"
       location="Aligarh, Uttar Pradesh"
       hero={hero}
+      mobileHero={mobileCover("sanctum-house")}
       photos={[
  photo3, photo4, photo5, photo6, photo7,
         photo8, photo9, photo10, photo11, photo12, photo13,

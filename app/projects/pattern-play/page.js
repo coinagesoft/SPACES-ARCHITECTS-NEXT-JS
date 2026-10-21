@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 
 // The file in the folder is named "COVER (1)", so the path keeps the "(1)"
@@ -27,6 +28,7 @@ export default function PatternPlayPage() {
       title="Pattern Play"
       location="New Delhi"
       hero={hero}
+      mobileHero={mobileCover("pattern-play")}
       // Same order as the old gallery array
       photos={[
         img1, img3, img6,

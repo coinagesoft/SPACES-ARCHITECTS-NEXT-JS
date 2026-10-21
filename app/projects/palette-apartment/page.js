@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assets } from "@/assets";
 
 const hero = assets.paletteApartment.hero;
@@ -15,6 +16,7 @@ export default function PaletteApartmentPage() {
       title="Palette Apartment"
       location="Noida, Uttar Pradesh"
       hero={hero}
+      mobileHero={mobileCover("palette-apartment")}
       // Same order as the old gallery array
       photos={[
         photos[0], photos[1],

@@ -3,6 +3,7 @@ import SiteChrome from "@/components/SiteChrome";
 import Footer from "@/components/Footer";
 import MoreProjects from "@/components/MoreProjects";
 import ParallaxHeroImage from "@/components/ParallaxHeroImage";
+import { mobileCover } from "@/config/mobileCovers";
 import styles from "./page.module.css";
 import { assetImage, assetUrl } from "@/config/assets";
 import ShareIcons from "@/components/ShareIcons";
@@ -70,6 +71,7 @@ export default function TilesAndKitchenShowroomPage() {
           className={styles.hero}
           imageClassName={styles.heroImage}
           src={heroImage}
+          mobileSrc={mobileCover("tiles-and-kitchen-showroom")}
           alt="Tiles & Kitchen Showroom"
         >
           <div className={`site-container ${styles.heroTextWrap}`}>

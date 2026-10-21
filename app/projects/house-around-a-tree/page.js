@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage, assetUrl } from "@/config/assets";
 const hero = assetImage("projects/HOUSE-AROUND-A-TREE/3_4/6.webp");
 const photo1 = assetImage("projects/HOUSE-AROUND-A-TREE/3_4/1.webp");
@@ -37,6 +38,7 @@ export default function TheHouseAroundATreePage() {
       title="The House around a Tree"
       location="Vasant Vihar, New Delhi"
       hero={hero}
+      mobileHero={mobileCover("house-around-a-tree")}
       photos={[
         photo1, photo2, photo3, photo4, photo8, photo9, photo10,
         photo11, photo12, photo13, photo14, photo15, photo16, photo17, photo18,

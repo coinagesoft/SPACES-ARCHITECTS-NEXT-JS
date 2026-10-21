@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 
 const hero = assetImage("projects/COLOR-BOX-OFFICE/cover/COVER.webp");
@@ -24,6 +25,7 @@ export default function TheColorBoxOfficePage() {
       title="The Colour Box Office"
       location="Gurgaon"
       hero={hero}
+      mobileHero={mobileCover("the-color-box-office")}
       // Same order as the old gallery array
       photos={[
         img1, img2,

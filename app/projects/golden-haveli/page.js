@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 
 const hero = assetImage("projects/GOLDEN-HAVELL/cover/Hero Image.webp");
@@ -43,6 +44,7 @@ export default function GoldenHaveliPage() {
       title="Golden Haveli"
       location="Old Delhi"
       hero={hero}
+      mobileHero={mobileCover("golden-haveli")}
       photos={[
         construction1, construction2,
         new1, new2, new3, new4, new5, new6, new7, new8, new9, new10,

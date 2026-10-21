@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 
 const hero = assetImage("projects/SOLANCE-APARTMENT/cover/COVER.webp");
@@ -22,6 +23,7 @@ export default function SolanceApartmentPage() {
       title="Solance Apartment"
       location="Noida, Uttar Pradesh"
       hero={hero}
+      mobileHero={mobileCover("solance-apartment")}
       photos={[
         photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8,
         heroPhoto,

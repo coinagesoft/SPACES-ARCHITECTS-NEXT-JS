@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage, assetUrl } from "@/config/assets";
 const hero = assetImage("projects/GREY-APARTMENTS/cover/HERO IMAGE.webp");
 const photo2 = assetImage("projects/GREY-APARTMENTS/3_4/2.webp");
@@ -32,6 +33,7 @@ export default function GreyApartmentPage() {
       title="Grey Apartment"
       location="Gurugram, Haryana"
       hero={hero}
+      mobileHero={mobileCover("grey-apartments")}
       photos={[
         photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10,
         photo11, photo12, photo13, photo14, photo15, photo16, photo17, photo18,

@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 
 const hero = assetImage("projects/STUDIO-ELEMENT/cover/Cover Image.webp");
@@ -24,6 +25,7 @@ export default function StudioElementPage() {
       title="Studio Element"
       location="New Delhi"
       hero={hero}
+      mobileHero={mobileCover("studio-element")}
       // Same order as the old gallery array
       photos={[
         img1, img2, img3,

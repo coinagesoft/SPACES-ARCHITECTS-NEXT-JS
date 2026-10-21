@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 
 const hero = assetImage("projects/THE GARDEN HOUSE/COVER/COVER.webp");
@@ -17,6 +18,7 @@ export default function TheGardenHousePage() {
       title="The Garden House"
       location="Noida, Uttar Pradesh"
       hero={hero}
+      mobileHero={mobileCover("the-garden-house")}
       photos={[photo1, photo2, photo3, photo4]}
       details={{
         Project: "The Garden House",

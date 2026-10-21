@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 
 const hero = assetImage("projects/GLULAM-SHOWROOM/cover/Cover Image.webp");
@@ -29,6 +30,7 @@ export default function GlulamShowroomPage() {
       title="Glulam Showroom"
       location="New Delhi"
       hero={hero}
+      mobileHero={mobileCover("glulam-showroom")}
       // Same order as the old gallery array
       photos={[
         img3, img1, img2,

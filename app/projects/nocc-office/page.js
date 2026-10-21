@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 
 const hero = assetImage("projects/NOCC-OFFICE/cover/COVER IMAGE.webp");
@@ -33,6 +34,7 @@ export default function NoccOfficePage() {
       title="NOCC Office"
       location="New Delhi"
       hero={hero}
+      mobileHero={mobileCover("nocc-office")}
       // Same order as the old gallery array
       photos={[
         img1,

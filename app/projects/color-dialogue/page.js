@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 
 const hero = assetImage("projects/COLOR-DIALOGUE/cover/COVER.webp");
@@ -24,6 +25,7 @@ export default function ColorDialoguePage() {
       title="Colour Dialogue"
       location="Noida, Uttar Pradesh"
       hero={hero}
+      mobileHero={mobileCover("color-dialogue")}
       // Same order as the old gallery array
       photos={[
         img1, img5,

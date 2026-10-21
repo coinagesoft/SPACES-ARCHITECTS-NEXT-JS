@@ -47,3 +47,41 @@
     animation: none;
   }
 }
+
+/* Separate mobile cover image: shown below 768px, desktop image above. */
+.mobileOnly {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .desktopOnly {
+    display: none;
+  }
+
+  /* Show the whole portrait image: the hero takes the image's own height
+     instead of a fixed 100vh, and the crop/zoom/parallax effects are off. */
+  section.hasMobileCover {
+    height: auto;
+  }
+
+  .hasMobileCover .media {
+    position: relative;
+    inset: auto;
+    transform: none !important;
+    will-change: auto;
+  }
+
+  .hasMobileCover .zoom {
+    position: relative;
+    inset: auto;
+    animation: none;
+    transform: none;
+    will-change: auto;
+  }
+
+  .mobileOnly {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

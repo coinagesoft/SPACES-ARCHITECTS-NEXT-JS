@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 
 const hero = assetImage("projects/AMG-OFFICE/cover/COVER IMAGE.webp");
@@ -29,6 +30,7 @@ export default function AmgOfficePage() {
       title="AMG Office"
       location="New Delhi"
       hero={hero}
+      mobileHero={mobileCover("amg-office")}
       photos={[
         recLift, recDesk,
         mirrorBench, stairMirror,

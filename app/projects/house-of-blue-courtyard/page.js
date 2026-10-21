@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 
 const hero = assetImage("projects/THE-BLUE-COURTYARD/cover/cover.webp");
@@ -28,6 +29,7 @@ export default function HouseOfBlueCourtyardPage() {
       title="House of Blue Courtyard"
       location="Vasant Kunj, New Delhi"
       hero={hero}
+      mobileHero={mobileCover("house-of-blue-courtyard")}
       // Same order as the old gallery array
       photos={[
         img1, img2,

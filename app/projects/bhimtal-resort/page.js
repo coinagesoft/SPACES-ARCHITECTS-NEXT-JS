@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 const hero = assetImage("projects/BHIMTAL-RESORT/cover/COVER.webp");
 const photo1 = assetImage("projects/BHIMTAL-RESORT/3_4/1.webp");
@@ -19,6 +20,7 @@ export default function BhimtalResortPage() {
       title="Bhimtal Resort"
       location="Bhimtal, Uttarakhand"
       hero={hero}
+      mobileHero={mobileCover("bhimtal-resort")}
       photos={[
         photo1, photo2, photo3, photo4, photo5, photo6, photo7,
         coverPhoto2,

@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage, assetUrl } from "@/config/assets";
 const hero = assetImage("projects/KRISHAS-RESIDENCE/cover/COVER.webp");
 const photo1 = assetImage("projects/KRISHAS-RESIDENCE/3_4/1.webp");
@@ -20,6 +21,7 @@ export default function KrishasResidencePage() {
       title="Krisha's Residence"
       location="South Extension, New Delhi"
       hero={hero}
+      mobileHero={mobileCover("krishas-residence")}
       photos={[photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10]}
       details={{
         Project: "Krisha's Residence",

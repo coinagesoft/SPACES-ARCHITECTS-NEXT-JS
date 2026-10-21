@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage, assetUrl } from "@/config/assets";
 const hero = assetImage("projects/HERITAGE-PARK-EXTENSION/cover/HERO (2).webp");
 const photo1 = assetImage("projects/HERITAGE-PARK-EXTENSION/3_4/1.webp");
@@ -22,6 +23,7 @@ export default function ExtensionOfHeritageParkPage() {
       title="Extension of Heritage Park"
       location="Chandni Chowk, Old Delhi"
       hero={hero}
+      mobileHero={mobileCover("heritage-park-extension")}
       photos={[
         photo1, photo1a, photo2, photo2a, photo3, photo3a,
         photo4, photo5, photo6, photo7, photo8,

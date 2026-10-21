@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 
 const hero = assetImage("projects/THE-URBAN-NEST/cover/COVER.png");
@@ -24,6 +25,7 @@ export default function TheUrbanNestPage() {
       title="The Urban Nest"
       location="New Delhi"
       hero={hero}
+      mobileHero={mobileCover("the-urban-nest")}
       photos={[
         photo0, photo1, photo2, photo3, photo4, 
         photo6, photo7, photo8, photo9, photo10,

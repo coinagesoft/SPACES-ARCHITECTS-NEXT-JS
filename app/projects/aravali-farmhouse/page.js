@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 
 const hero = assetImage("projects/ARAVALI-FARMHOUSE/cover/COVER.webp");
@@ -27,6 +28,7 @@ export default function AravaliFarmhousePage() {
       title="Aravali Farmhouse"
       location="Gurgaon"
       hero={hero}
+      mobileHero={mobileCover("aravali-farmhouse")}
       photos={[img1, img2, img3, img4,img6, img7, img8, img9, img10, img11, img12]}
       details={{
         Project: "Aravali Farmhouse",

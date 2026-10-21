@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assets } from "@/assets";
 import { assetImage } from "@/config/assets";
 
@@ -21,6 +22,7 @@ export default function StepMazeHousePage() {
       title="The Step Maze House"
       location="Model Town, New Delhi"
       hero={hero}
+      mobileHero={mobileCover("step-maze")}
       // Same order as the old gallery array
       photos={[
         g[0],

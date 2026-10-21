@@ -1,4 +1,5 @@
 import ProjectDetailPage from "../ProjectDetailPage";
+import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
 
 const hero = assetImage("projects/STONEX-INDIA-BUILDING/cover/Cover Image.webp");
@@ -25,6 +26,7 @@ export default function StonexIndiaBuildingPage() {
       title="Stonex India Building"
       location="New Delhi"
       hero={hero}
+      mobileHero={mobileCover("stonex-india-building")}
       // Same order as the old gallery array
       photos={[
         bha2732, bha2774,
