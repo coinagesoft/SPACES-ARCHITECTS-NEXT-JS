@@ -65,7 +65,9 @@
 /* ---------- Details + description ---------- */
 .infoSection {
   display: grid;
-  grid-template-columns: 1fr;
+  /* minmax(0, 1fr) (not plain 1fr) so wide content like the press-logo
+     slider can't stretch the column past the screen on phones. */
+  grid-template-columns: minmax(0, 1fr);
   gap: 40px;
   padding-top: 52px;
   padding-bottom: 64px;
@@ -76,6 +78,11 @@
     grid-template-columns: 370px minmax(0, 1fr);
     gap: 100px;
   }
+}
+
+.infoSidebar,
+.infoBody {
+  min-width: 0;
 }
 
 .infoSidebar {
