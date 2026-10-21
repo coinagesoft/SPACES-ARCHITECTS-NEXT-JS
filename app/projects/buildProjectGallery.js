@@ -1,7 +1,10 @@
 // Preserve the alternating portrait-pair / landscape-row rhythm while both
-// orientations are available. Once one orientation is exhausted, a masonry
-// block prevents the remaining same-orientation images becoming a long stack
-// of single full-width rows.
+// orientations are available.
+//
+// Once the portrait pairs run out, the remaining landscape images keep the same
+// rhythm instead of becoming one long block of pairs: one image full width,
+// then a pair, then one full width, then a pair, and so on.
+// So a project with only landscape photos reads: single, pair, single, pair...
 export default function buildProjectGallery(items) {
   const portraits = items.filter((image) => image.width < image.height);
   const landscapes = items.filter((image) => image.width >= image.height);
@@ -15,11 +18,29 @@ export default function buildProjectGallery(items) {
     portraitIndex += 2;
   }
 
-  const remaining = [
-    ...portraits.slice(portraitIndex),
-    ...landscapes.slice(landscapeIndex),
-  ];
+  // Portraits left over (a single odd one, or several if landscapes ran out).
+  const leftoverPortraits = portraits.slice(portraitIndex);
+  if (leftoverPortraits.length) {
+    // A lone portrait is paired with the next landscape so it is not shown full width.
+    const rowImages =
+      leftoverPortraits.length === 1 && landscapeIndex < landscapes.length
+        ? [leftoverPortraits[0], landscapes[landscapeIndex++]]
+        : leftoverPortraits;
+    gallery.push({ type: "masonry", images: rowImages });
+  }
 
-  if (remaining.length) gallery.push({ type: "masonry", images: remaining });
+  // Remaining landscapes: single, pair, single, pair...
+  // Start with a pair if the row before was already a single image, so two singles never sit together.
+  let asSingle = gallery.length === 0 || gallery[gallery.length - 1].type !== "full";
+  while (landscapeIndex < landscapes.length) {
+    if (asSingle || landscapeIndex + 1 >= landscapes.length) {
+      gallery.push({ type: "full", image: landscapes[landscapeIndex++] });
+    } else {
+      gallery.push({ type: "masonry", images: landscapes.slice(landscapeIndex, landscapeIndex + 2) });
+      landscapeIndex += 2;
+    }
+    asSingle = !asSingle;
+  }
+
   return gallery;
 }
