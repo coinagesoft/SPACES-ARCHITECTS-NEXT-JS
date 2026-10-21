@@ -38,7 +38,7 @@ export default function Footer() {
                       <ul className="space-y-[7px]">
                         {col.links.map((link) => (
                           <li key={link.label}>
-                            <Link href={link.href} className={subLink}>
+                            <Link href={link.href} prefetch={true} className={subLink}>
                               {link.label}
                             </Link>
                           </li>
@@ -49,7 +49,7 @@ export default function Footer() {
                     <ul className="space-y-[21px]">
                       {col.links.map((link) => (
                         <li key={link.label}>
-                          <Link href={link.href} className={mainLink}>
+                          <Link href={link.href} prefetch={true} className={mainLink}>
                             {link.label}
                           </Link>
                         </li>
@@ -83,7 +83,7 @@ export default function Footer() {
             </div>
 
             <div className="mt-8">
-              <Link href="/contact" className={ctaLink}>
+              <Link href="/contact" prefetch={true} className={ctaLink}>
                 Get in Touch
               </Link>
             </div>
@@ -94,9 +94,15 @@ export default function Footer() {
       <div className={container}>
         <div className="grid gap-5 border-t border-line py-6 text-[10px] text-faint md:grid-cols-[1fr_auto_1fr] md:items-start">
           <div>
-            <div className="text-base md:text-[1.33rem] font-medium tracking-widest2 text-[#6b6b6b]">
+            {/* Logo links to the home page */}
+            <Link
+              href="/"
+              prefetch={true}
+              aria-label={`${site.name} — Home`}
+              className="block text-base md:text-[1.33rem] font-medium tracking-widest2 text-[#6b6b6b] no-underline"
+            >
               {site.name} <span className="text-accent">{site.handle}</span>
-            </div>
+            </Link>
             <p className="mt-2">
               © {new Date().getFullYear()} by {site.name}
               {site.handle}

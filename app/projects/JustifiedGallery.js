@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./JustifiedGallery.module.css";
 
@@ -48,7 +49,7 @@ const RATIOS = {
   "Sonipat Havelli": 0.737,
   "Grey Apartments": 0.752,
   "Poetic House": 1.452,
-  "Fuidic Office": 0.889,
+  "Fluidic Office": 0.889,
   "Gupta's Residence": 0.788,
   "Saatvik Marble Showroom": 0.497,
   "The Canvas": 1.369,
@@ -83,12 +84,20 @@ const RATIOS = {
 const MATCHED_ASPECT = {
   "Art House": 2 * RATIOS["Palette Apartment"], // 1.458
   "Heritage Park": 1.263, // manually increased so its bottom reaches Step Maze's bottom
+  "Intersekt Showroom": 0.842,
+  "Intersext Showroom": 0.842,
+  "Alaya Residence": 1.454,
+  "Aravali Farmhouse": 1.259,
 };
 
 // MatchedTile projects that should link out to their own detail page.
 const MATCHED_ROUTES = {
   "Art House": "/projects/art-house",
   "Heritage Park": "/projects/heritage-park",
+  "Intersekt Showroom": "/projects/intersext-showroom",
+  "Intersext Showroom": "/projects/intersext-showroom",
+  "Alaya Residence": "/projects/alaya-residence",
+  "Aravali Farmhouse": "/projects/aravali-farmhouse",
 };
 
 const PROJECT_ROUTES = {
@@ -126,7 +135,8 @@ const PROJECT_ROUTES = {
   "Tiles & Kitchen Showroom": "/projects/tiles-and-kitchen-showroom",
   "Studio Element": "/projects/studio-element",
   "Alaya Residence": "/projects/alaya-residence",
-  "Legend Venner Exhibition - Mumbai": "/projects/legend-venner-exhibition-mumbai",
+  "Legend Veneer Exhibition - Mumbai": "/projects/legend-veneer-exhibition-mumbai",
+  "Legend Venner Exhibition - Mumbai": "/projects/legend-veneer-exhibition-mumbai",
   "Krisha's Residence": "/projects/krishas-residence",
   "Color Court": "/projects/color-court",
   "House of Curves": "/projects/house-of-curves",
@@ -150,7 +160,7 @@ const PROJECT_ROUTES = {
   "Bandikui Railway Station": "/projects/bandikui-railway-station",
   "Extension of Heritage Park": "/projects/heritage-park-extension",
   "Heritage Park Extension": "/projects/heritage-park-extension",
-  "Fuidic Office": "/projects/fuidic-office",
+  "Fluidic Office": "/projects/fluidic-office",
   "Gupta's Residence": "/projects/guptas-residence",
   "House Around a Tree": "/projects/house-around-a-tree",
   "Saatvik Marble Showroom": "/projects/saativk-marble-showroom",
@@ -195,16 +205,34 @@ function dims(item) {
   return r ? { width: 1000, height: Math.round(1000 / r) } : {};
 }
 
+// Tile photo. Uses next/image so the browser downloads a resized copy that
+// fits the tile instead of the multi-megapixel original.
+const GALLERY_SIZES = "(min-width: 1024px) 40vw, (min-width: 768px) 45vw, 100vw";
+function GalleryImg({ item, className, priority = false }) {
+  const d = dims(item);
+  return (
+    <Image
+      src={getSrc(item)}
+      alt={item.name || item.file || ""}
+      width={d.width || 1000}
+      height={d.height || 1000}
+      sizes={GALLERY_SIZES}
+      priority={priority}
+      className={className}
+    />
+  );
+}
+
 function Label({ item }) {
   return item?.name ? <span className={styles.label}>{item.name}</span> : null;
 }
 
 // Natural-ratio tile — no crop, height follows its own real aspect ratio.
-function Tile({ item }) {
+function Tile({ item, priority = false }) {
   if (!item) return null;
   const content = (
     <>
-      <img src={getSrc(item)} alt={item.name || item.file} loading="lazy" {...dims(item)} />
+      <GalleryImg item={item} priority={priority} />
       <Label item={item} />
     </>
   );
@@ -215,6 +243,7 @@ function Tile({ item }) {
     return (
       <Link
         href={route}
+        prefetch={true}
         className={styles.tile}
         aria-label={`View ${item.name} project`}
       >
@@ -236,25 +265,19 @@ function StaticImage({ item }) {
   if (!item) return null;
   return (
     <div className={styles.staticImage}>
-      <img src={getSrc(item)} alt={item.name || item.file} loading="lazy" {...dims(item)} />
+      <GalleryImg item={item} />
     </div>
   );
 }
 
 // A col2 tile whose height is locked (via CSS aspect-ratio) to match
 // its col1 partner exactly.
-function MatchedTile({ item }) {
+function MatchedTile({ item, priority = false }) {
   if (!item) return null;
   const aspectRatio = MATCHED_ASPECT[item.name];
   const content = (
     <>
-      <img
-        src={getSrc(item)}
-        alt={item.name || item.file}
-        loading="lazy"
-        {...dims(item)}
-        className={aspectRatio ? styles.crop : undefined}
-      />
+      <GalleryImg item={item} priority={priority} className={aspectRatio ? styles.crop : undefined} />
       <Label item={item} />
     </>
   );
@@ -265,6 +288,7 @@ function MatchedTile({ item }) {
     return (
       <Link
         href={route}
+        prefetch={true}
         className={styles.tile}
         style={aspectRatio ? { aspectRatio } : undefined}
         aria-label={`View ${item.name} project`}
@@ -287,26 +311,20 @@ function MatchedTile({ item }) {
 // stacked pair and needs to end exactly flush with the stack's bottom
 // edge at any viewport width, not just approximately (unlike a fixed
 // CSS aspect-ratio, which can only target one specific width).
-function FillTile({ item }) {
+function FillTile({ item, priority = false }) {
   if (!item) return null;
 
   const route = item?.name ? PROJECT_ROUTES[item.name] : undefined;
   const content = (
     <>
-      <img
-        src={getSrc(item)}
-        alt={item.name || item.file}
-        loading="lazy"
-        {...dims(item)}
-        className={styles.crop}
-      />
+      <GalleryImg item={item} priority={priority} className={styles.crop} />
       <Label item={item} />
     </>
   );
 
   if (route) {
     return (
-      <Link href={route} className={`${styles.tile} ${styles.fill}`} aria-label={`View ${item.name} project`}>
+      <Link href={route} prefetch={true} className={`${styles.tile} ${styles.fill}`} aria-label={`View ${item.name} project`}>
         {content}
       </Link>
     );
@@ -371,13 +389,7 @@ function JustifiedRow({ items }) {
 
         const content = (
           <>
-            <img
-              src={getSrc(item)}
-              alt={item.name || item.file}
-              loading="lazy"
-              {...dims(item)}
-              className={override ? styles.crop : undefined}
-            />
+            <GalleryImg item={item} className={override ? styles.crop : undefined} />
             <Label item={item} />
           </>
         );
@@ -392,6 +404,7 @@ function JustifiedRow({ items }) {
           return (
             <Link
               href={route}
+              prefetch={true}
               className={styles.rowTile}
               style={style}
               aria-label={`View ${item.name} project`}
@@ -429,13 +442,13 @@ export default function JustifiedGallery({ items }) {
     <div className={styles.gallery}>
       <div className={styles.masonry}>
         <div className={styles.col1}>
-          <Tile item={findItem(items, "Slender House")} />
-          <Tile item={findItem(items, "Floating Courtyard House")} />
+          <Tile item={findItem(items, "Slender House")} priority={true} />
+          <Tile item={findItem(items, "Floating Courtyard House")} priority={true} />
           <Tile item={findItem(items, "Palette Apartment")} />
           <Tile item={findItem(items, "Step Maze")} />
         </div>
         <div className={styles.col2}>
-          <Tile item={findItem(items, "Haveli Dharampura")} />
+          <Tile item={findItem(items, "Haveli Dharampura")} priority={true} />
           <JustifiedRow items={[swatantra, apartment88]} />
           <MatchedTile item={findItem(items, "Art House")} />
           <MatchedTile item={findItem(items, "Heritage Park")} />
@@ -453,7 +466,7 @@ export default function JustifiedGallery({ items }) {
           then the mirrored big-tile/stacked-pair pattern twice more. */}
       <div className={styles.row}>
         <div style={{ flex: "2.1 1 0", minWidth: 0 }}>
-          <FillTile item={findItem(items, "Intersekt Showroom") || findItem(items, "Intersext Showroom")} />
+          <MatchedTile item={findItem(items, "Intersekt Showroom") || findItem(items, "Intersext Showroom")} />
         </div>
         <div
           style={{
@@ -511,12 +524,12 @@ export default function JustifiedGallery({ items }) {
 
       {/* Third block — Alaya Residence through House of Hues, again
           following the Canva reference row-by-row. */}
-      <div className={styles.row} style={{ alignItems: "flex-start" }}>
+      <div className={styles.row}>
         <div style={{ flex: "2.1 1 0", minWidth: 0 }}>
-          <Tile item={findItem(items, "Alaya Residence")} />
+          <MatchedTile item={findItem(items, "Alaya Residence")} />
         </div>
         <div style={{ flex: "1 1 0", minWidth: 0 }}>
-          <Tile item={findItem(items, "Legend Venner Exhibition - Mumbai")} />
+          <Tile item={findItem(items, "Legend Veneer Exhibition - Mumbai")} />
         </div>
       </div>
 
@@ -569,9 +582,9 @@ export default function JustifiedGallery({ items }) {
 
       <Tile item={findItem(items, "The Stepwell")} />
 
-      <div className={styles.row} style={{ alignItems: "flex-start" }}>
+      <div className={styles.row}>
         <div style={{ flex: "2.1 1 0", minWidth: 0 }}>
-          <Tile item={findItem(items, "Aravali Farmhouse")} />
+          <MatchedTile item={findItem(items, "Aravali Farmhouse")} />
         </div>
         <div style={{ flex: "1 1 0", minWidth: 0 }}>
           <Tile item={findItem(items, "House of Hues")} />
@@ -616,7 +629,7 @@ export default function JustifiedGallery({ items }) {
       </div>
 
       <JustifiedRow
-        items={[findItem(items, "Fuidic Office"), findItem(items, "Gupta's Residence")]}
+        items={[findItem(items, "Fluidic Office"), findItem(items, "Gupta's Residence")]}
       />
 
       <Tile item={findItem(items, "House Around a Tree")} />

@@ -31,6 +31,8 @@ export default function AravaliFarmhousePage() {
       details={{
         Project: "Aravali Farmhouse",
         Location: "Gurgaon",
+        "Plot Area": "2 acres",
+        "Built-up Area": "6,000 sq. ft.",
         Client: "Mr. Jan",
         Status: "Completed",
       }}

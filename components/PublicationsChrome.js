@@ -128,7 +128,7 @@ export default function PublicationsChrome({ items = [] }) {
   return (
     <header ref={headerRef} className={styles.header}>
       <div className={`site-container ${styles.bar}`}>
-        <Link href="/" className={styles.logo}>
+        <Link href="/" prefetch={true} className={styles.logo}>
           SPACES ARCHITECTS <span>@ka</span>
         </Link>
 

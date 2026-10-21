@@ -21,6 +21,8 @@ export default function TheGardenHousePage() {
       details={{
         Project: "The Garden House",
         Location: "Noida, Uttar Pradesh",
+        "Plot Area": "8,000 sq. ft.",
+        "Built-up Area": "14,000 sq. ft.",
         Client: "Mr. Gurdeep Singh",
         Status: "On-Going",
       }}

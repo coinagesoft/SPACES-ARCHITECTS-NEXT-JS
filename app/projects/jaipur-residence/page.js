@@ -46,6 +46,8 @@ export default function JaipurResidencePage() {
       details={{
         Project: "Jaipur Residence",
         Location: "Jaipur, Rajasthan",
+        "Plot Area": "3,200 sq. ft.",
+        "Built-up Area": "11,500 sq. ft.",
         Client: "Mrs. Malu",
         Status: "Completed",
       }}

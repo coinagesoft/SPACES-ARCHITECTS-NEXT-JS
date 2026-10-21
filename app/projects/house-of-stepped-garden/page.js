@@ -73,9 +73,16 @@ export default function HouseOfSteppedGardenPage() {
       details={{
         Project: "The House of Stepped Gardens",
         Location: "Kochi, Kerala",
+        "Plot Area": "21,000 sq. ft.",
+        "Built-up Area": "36,500 sq. ft.",
         Client: "Mr. Lynus Kalister",
         Status: "Completed",
       }}
+      publications={[
+        "Habitus Living",
+        "ArchDaily",
+        "Architectural Digest",
+      ]}
       description={[
         <>
           In The House of Stepped Gardens, section becomes the primary generator of architecture. Set on a heavily contoured site in Kochi, the <Orange>3,200 sq. m. residence</Orange> follows the natural terrain rather than flattening it, unfolding through cascading split levels that replace rigid partitions with gradual transitions.

@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { optimizedImage } from "@/config/assetUrl";
 import styles from "./TestimonialsGallery.module.css";
 
 // Testimonials: only the images are shown. Clicking one opens a full-size
@@ -45,7 +46,7 @@ export default function TestimonialsGallery({ items = [] }) {
               aria-label={`Open ${item.alt}`}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={item.src} alt={item.alt} loading={index < 4 ? "eager" : "lazy"} className={styles.image} />
+              <img {...optimizedImage(item.src, { sizes: "(min-width: 1024px) 380px, (min-width: 768px) 45vw, 100vw" })} alt={item.alt} loading={index < 4 ? "eager" : "lazy"} decoding="async" className={styles.image} />
             </button>
           ))}
         </div>
@@ -92,7 +93,7 @@ export default function TestimonialsGallery({ items = [] }) {
 
           <div className={styles.viewer} onClick={(e) => e.stopPropagation()}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img key={current.src} src={current.src} alt={current.alt} className={styles.preview} />
+            <img key={current.src} {...optimizedImage(current.src, { sizes: "(min-width: 1280px) 1200px, 100vw" })} alt={current.alt} decoding="async" className={styles.preview} />
           </div>
         </div>
       )}

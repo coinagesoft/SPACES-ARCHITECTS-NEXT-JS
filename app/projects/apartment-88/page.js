@@ -18,6 +18,7 @@ export default function Apartment88Page() {
       details={{
         Project: "Apartment 88",
         Location: "New Delhi",
+        "Built-up Area": "4,500 sq. ft.",
         Client: "Mr. Ajay Wadhwa",
         Status: "Completed",
       }}

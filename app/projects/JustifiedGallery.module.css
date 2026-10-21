@@ -133,21 +133,53 @@
     .gallery {
         gap: 24px;
     }
+
+    /* Desktop sets align-items: flex-start on .masonry. Once the columns
+       stack vertically that value shrinks each column to its content width
+       (the half-width, left-aligned images on phones), so stretch them. */
     .masonry {
         flex-direction: column;
+        align-items: stretch;
         gap: 24px;
     }
+
     .col1,
     .col2 {
+        flex: 0 0 auto;
+        width: 100%;
         gap: 24px;
     }
+
+    /* Every side-by-side row (and the inline-styled wrappers inside it)
+       becomes one full-width stack. `!important` is needed to beat the
+       inline flex / alignItems / gap values set from JustifiedGallery.js. */
     .row {
         flex-direction: column;
+        align-items: stretch !important;
         gap: 24px;
     }
-  
+
+    .row > div {
+        flex: 0 0 auto !important;
+        width: 100%;
+        gap: 24px !important;
+    }
+
     .rowTile {
         flex: 0 0 auto !important;
         width: 100%;
+    }
+
+    /* The fixed aspect-ratio crops exist only to line tiles up beside a
+       partner on desktop. Stacked on a phone each photo keeps its own
+       natural proportions. */
+    .tile,
+    .rowTile {
+        aspect-ratio: auto !important;
+    }
+
+    .tile img.crop {
+        height: auto;
+        object-fit: fill;
     }
 }

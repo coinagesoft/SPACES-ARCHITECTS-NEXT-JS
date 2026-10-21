@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { optimizedImage } from "@/config/assetUrl";
 import MenuOverlay from "@/components/MenuOverlay";
 import chrome from "./PublicationsChrome.module.css";
 import styles from "./ExpressionsGallery.module.css";
@@ -93,7 +94,7 @@ export default function ExpressionsGallery({ items = [], menuItems = [] }) {
       {/* ================= header ================= */}
       <header ref={headerRef} className={chrome.header}>
         <div className={`site-container ${chrome.bar}`}>
-          <Link href="/" className={chrome.logo}>
+          <Link href="/" prefetch={true} className={chrome.logo}>
             SPACES ARCHITECTS <span>@ka</span>
           </Link>
 
@@ -264,7 +265,7 @@ export default function ExpressionsGallery({ items = [], menuItems = [] }) {
 
           <div className={styles.viewer} onClick={(e) => e.stopPropagation()}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img key={current.id} src={current.details} alt={current.alt} className={styles.detailImage} />
+            <img key={current.id} {...optimizedImage(current.details, { sizes: "(min-width: 1280px) 1200px, 100vw" })} alt={current.alt} className={styles.detailImage} />
           </div>
         </div>
       )}

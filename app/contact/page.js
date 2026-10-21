@@ -320,12 +320,30 @@ export default function ContactPage() {
 
           <div className={styles.studioInfo}>
             <p className={styles.studioName}>
-              {site.name} {site.handle}
+              {site.name} <span style={{ color: "#fea50b" }}>{site.handle}</span>
             </p>
             <p className={styles.address}>{site.contact.address}</p>
 
             <p className={styles.whatsapp}>
-              Whatsapp: {contactCopy.whatsapp}
+              Phone:{" "}
+              <a
+                href={`tel:+91${contactCopy.phone.replace(/\D/g, "").replace(/^0/, "")}`}
+                className={styles.emailValue}
+              >
+                {contactCopy.phone}
+              </a>
+            </p>
+
+            <p className={styles.whatsapp}>
+              Whatsapp:{" "}
+              <a
+                href={`https://wa.me/${contactCopy.whatsapp.replace(/\D/g, "")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.emailValue}
+              >
+                {contactCopy.whatsapp}
+              </a>
             </p>
 
             <p className={styles.emailLabel}>Email:</p>

@@ -44,7 +44,7 @@ export default function AboutPage() {
         <div className={styles.heroShade} />
 
         <div className={`site-container ${styles.heroCaption}`}>
-          <h1>{aboutCopy.heroTitle}</h1>
+          <h1 >{aboutCopy.heroTitle}</h1>
         </div>
       </section>
       <section className={`site-container ${styles.intro}`}>
@@ -93,7 +93,7 @@ export default function AboutPage() {
           ))}
         </div>
         <div className={styles.moreWrap}>
-          <Link href="/teams" className={styles.moreLink}>Meet the full team →</Link>
+          <Link href="/teams" prefetch={true} className={styles.moreLink}>Meet the full team →</Link>
         </div>
       </section>
       <Footer />

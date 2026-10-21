@@ -35,6 +35,7 @@ export default function ColorDialoguePage() {
       details={{
         Project: "Colour Dialogue",
         Location: "Noida, Uttar Pradesh",
+        "Built-up Area": "1,500 sq. ft.",
         Client: "Mr. Vinay Goel",
         Status: "Completed",
       }}

@@ -40,9 +40,15 @@ export default function AshrayaResidencePage() {
       details={{
         Project: "Ashraya Residence",
         Location: "New Delhi",
+        "Plot Area": "5,400 sq. ft.",
+        "Built-up Area": "12,000 sq. ft.",
         Client: "Mr. Kalra",
         Status: "Completed",
       }}
+      publications={[
+        "Volume Zero",
+        "Buildofy",
+      ]}
       description={[
         <>
           Set on a <Orange>600-square-yard</Orange> plot, this single-family residence is shaped by the client&apos;s deep affinity for Indian art, reflected in its planning, architecture and <Orange>material palette.</Orange> Rather than maximising the footprint, the design responds to the sun path, placing the built mass strategically within the site.

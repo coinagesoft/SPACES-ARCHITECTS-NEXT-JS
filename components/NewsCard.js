@@ -19,7 +19,7 @@ export default function NewsCard({ image, name, href = "/news-events", landscape
   );
 
   return href ? (
-    <Link href={href} className="block">
+    <Link href={href} prefetch={true} className="block">
       {content}
     </Link>
   ) : (

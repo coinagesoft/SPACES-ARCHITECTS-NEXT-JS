@@ -29,7 +29,7 @@ export default function JpApartmentPage() {
       hero={hero}
       // Same order as the old gallery array
       photos={[
-        img2, img1, img3,
+        img2, img1, 
         img5, img9,
         img4,
         img6, img7,
@@ -39,6 +39,7 @@ export default function JpApartmentPage() {
       details={{
         Project: "JP Apartment",
         Location: "Noida, Uttar Pradesh",
+        "Built-up Area": "2,000 sq. ft.",
         Client: "Pawar Residence",
         Status: "Completed",
       }}

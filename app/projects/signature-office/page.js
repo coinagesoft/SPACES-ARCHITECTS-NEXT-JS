@@ -24,6 +24,7 @@ export default function TheSignatureOfficePage() {
       details={{
         Project: "The Signature Office",
         Location: "Noida, Uttar Pradesh",
+        "Built-up Area": "2,000 sq. ft.",
         Client: "Express Builders",
         Status: "Completed",
       }}

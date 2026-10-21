@@ -23,6 +23,7 @@ export default function AstraHeightsPage() {
       details={{
         Project: "Astra Height",
         Location: "Noida, Uttar Pradesh",
+        "Built-up Area": "1,500 sq. ft.",
         Client: "Mr. Vinay Goel",
         Status: "Completed",
       }}

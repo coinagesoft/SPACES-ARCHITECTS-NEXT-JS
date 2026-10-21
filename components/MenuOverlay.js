@@ -1,9 +1,10 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/config/site";
-import { assets } from "@/assets";
+import { assetUrl } from "@/config/assetUrl";
 import Footer from "./Footer";
 import styles from "./MenuOverlay.module.css";
 
@@ -12,10 +13,50 @@ import styles from "./MenuOverlay.module.css";
 const DISABLED_ITEMS = [];
 
 export default function MenuOverlay({ open, onClose }) {
-  if (!open) return null;
+  // The overlay is mounted on every page but hidden, so keep it cheap:
+  //  - the menu photo is only requested once the page has finished loading
+  //    (or when the menu is opened), so it never competes with the hero/LCP image
+  //  - the overlay's own Footer (a duplicate of the page footer) is only
+  //    rendered after the menu has been opened at least once
+  //  - nav links are only prefetched while the menu is open
+  const [imageReady, setImageReady] = useState(false);
+  const [hasOpened, setHasOpened] = useState(false);
+
+  useEffect(() => {
+    if (open) setHasOpened(true);
+  }, [open]);
+
+  useEffect(() => {
+    let idleId;
+    let timeoutId;
+    const arm = () => setImageReady(true);
+    const schedule = () => {
+      if ("requestIdleCallback" in window) idleId = window.requestIdleCallback(arm, { timeout: 3000 });
+      else timeoutId = window.setTimeout(arm, 2000);
+    };
+
+    if (document.readyState === "complete") schedule();
+    else window.addEventListener("load", schedule, { once: true });
+
+    return () => {
+      window.removeEventListener("load", schedule);
+      if (idleId !== undefined) window.cancelIdleCallback?.(idleId);
+      if (timeoutId !== undefined) window.clearTimeout(timeoutId);
+    };
+  }, []);
+
+  const showImage = imageReady || open;
+  const showFooter = hasOpened || open;
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto overflow-x-hidden bg-paper">
+    <div
+      className={`fixed inset-0 z-50 overflow-y-auto overflow-x-hidden bg-paper transition-all duration-300 ${
+        open
+          ? "opacity-100 pointer-events-auto visible"
+          : "opacity-0 pointer-events-none invisible"
+      }`}
+      aria-hidden={!open}
+    >
       <div className={`${styles.topBar} ${styles.equalGapTop}`}>
        <span className="text-base md:text-[1.33rem] tracking-widest2 font-medium text-[#6b6b6b]">
   {site.name} <span className="text-accent">{site.handle}</span>
@@ -33,13 +74,15 @@ export default function MenuOverlay({ open, onClose }) {
 
       <div className={`${styles.menuLayout} ${styles.equalGapBottom}`}>
         <div className={styles.menuImage}>
-          <Image
-            src={assets.home.menuThumb}
-            alt="Studio courtyard"
-            fill
-            sizes="(min-width: 1500px) 760px, (min-width: 768px) 52vw, 90vw"
-            className="object-cover"
-          />
+          {showImage && (
+            <Image
+              src={assetUrl("menu/menu.jpg")}
+              alt="Studio courtyard"
+              fill
+              sizes="(min-width: 1500px) 760px, (min-width: 768px) 52vw, 90vw"
+              className="object-cover"
+            />
+          )}
         </div>
 
         <div className={styles.menuNavigation}>
@@ -58,6 +101,7 @@ export default function MenuOverlay({ open, onClose }) {
                   <Link
                     key={item.label}
                     href={item.href}
+                    prefetch={open}
                     onClick={onClose}
                     className="nav-link"
                   >
@@ -70,7 +114,7 @@ export default function MenuOverlay({ open, onClose }) {
         </div>
       </div>
 
-      <Footer />
+      {showFooter && <Footer />}
     </div>
   );
 }

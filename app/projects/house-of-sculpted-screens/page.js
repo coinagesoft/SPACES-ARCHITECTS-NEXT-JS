@@ -29,6 +29,7 @@ export default function HouseOfSculptedScreensPage() {
       details={{
         Project: "House of Sculpted Screens",
         Location: "Janakpuri, New Delhi",
+        "Plot Area": "3,000 sq. ft.",
         Client: "Mr. Namit Ajmani",
         Status: "Completed",
       }}

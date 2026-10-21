@@ -20,16 +20,10 @@
 
 import assetManifest from "./asset-manifest.json";
 
-// Base URL of the media server that serves everything under /assets.
-// Override with NEXT_PUBLIC_ASSET_BASE_URL in .env.local for local/staging us.
-const ASSET_BASE_URL = (process.env.NEXT_PUBLIC_ASSET_BASE_URL || "https://assets.spacesarchitects-ka.com").replace(/\/$/, "");
-const ASSET_VERSION = process.env.NEXT_PUBLIC_ASSET_VERSION || `v${new Date().toISOString().slice(0, 10)}`;
-
-export function assetUrl(relPath) {
-    const encoded = relPath.split("/").map(encodeURIComponent).join("/");
-    const url = `${ASSET_BASE_URL}/assets/${encoded}`;
-    return `${url}?v=${encodeURIComponent(ASSET_VERSION)}`;
-}
+// assetUrl() lives in ./assetUrl.js so client components can use it without
+// importing this whole file (and the asset manifest) into the browser bundle.
+import { assetUrl } from "./assetUrl";
+export { assetUrl };
 
 // Returns an object shaped like next/image's StaticImageData ({ src, width,
 // height }), so every <Image src={...}> and every `img.width / img.height`
@@ -90,7 +84,7 @@ const blogTimeHeldDetail = assetImage("blogs/Time-Held-in-Detail.png");
 const blogArchitectureArt = assetImage("blogs/Architecture-as-Art.png");
 const blogArchitectureMotion = assetImage("blogs/ Architecture-in-Motion.png");
 const blog6x18 = assetImage("blogs/6x18.png");
-const blogCourtyard = assetImage("blogs/The-Courtyard.png");
+const blogCourtyard = assetImage("blogs/Courtyard.webp");
 const projectImg1 = assetImage("projects/1.jpg");
 // ---- Projects gallery page — the 7 named project photos, matching the
 // original Canva reference page 1:1 (same photos, same order, same names). ----
@@ -133,7 +127,8 @@ const galStudioElement = assetImage("projects/STUDIO ELEMENT.png");
 // ---- Continuation of the Canva reference page — Alaya Residence
 // through House of Hues. ----
 const galAlayaResidence = assetImage("projects/ALAYA RESIDENCE.jpg");
-const galLegendVennerExhibitionMumbai = assetImage("projects/LEGEND VENNER EXHIBITION MUMBAI.jpg");
+const galLegendVeneerExhibitionMumbai = assetImage("projects/LEGEND VENNER EXHIBITION MUMBAI.jpg");
+const galLegendVennerExhibitionMumbai = galLegendVeneerExhibitionMumbai;
 const galKrishasResidence = assetImage("projects/KRISHAS RESIDENCE.jpg");
 const galColorCourt = assetImage("projects/COLOR COURT.png");
 const galHouseOfCurves = assetImage("projects/HOUSE OF CURVES.jpg");
@@ -158,18 +153,19 @@ const galBhimtalResort = assetImage("projects/BHIMTAL RESORT.png");
 const galBrickHouse = assetImage("projects/BRICK HOUSE.png");
 const galBandikuiRailwayStation = assetImage("projects/BANDIKUI RAILWAY STATION.png");
 const galHeritageParkExtension = assetImage("projects/HERITAGE PARK EXTENSION.jpg");
-const galFuidicOffice = assetImage("projects/FUIDIC OFFICE.jpg");
+const galFluidicOffice = assetImage("projects/FUIDIC OFFICE.jpg");
+const galFuidicOffice = galFluidicOffice;
 const galGuptasResidence = assetImage("projects/GUPTAS RESIDENCE.jpg");
 const galHouseAroundATree = assetImage("projects/HOUSE AROUND A TREE.png");
 const galJainsResidence = assetImage("projects/JAINS RESIDENCE.jpg");
 const galSaatvikMarbleShowroom = assetImage("projects/SAATIVK MARBLE SHOWROOM.jpg");
 const galTheCanvas = assetImage("projects/THECANVAS.jpg");
-const galSethisResidence = assetImage("projects/SETHIS RESIDENCE.png");
+const galSethisResidence = assetImage("projects/SETHIS-RESIDENCE/cover/HERO.png");
 const galSobhtiResidence = assetImage("projects/SOBHTI RESIDENCE.jpg");
 const galHansgroheShowroom = assetImage("projects/HANSGROHE SHOWROOM.png");
 // ---- Continuation of the Canva reference page — Toy Bank Museum
 // through The Urban Nest. ----
-const galToyBankMuseum = assetImage("projects/TOY BANK MUSEUM.jpg");
+const galToyBankMuseum = assetImage("projects/ToyBank.webp");
 const galConcreteHouse = assetImage("projects/CONCRETE HOUSE.png");
 const galHouseOnHill = assetImage("projects/HOUSE ON HILL.png");
 const galHouseInHarmony = assetImage("projects/HOUSE IN HARMONY.jpg");
@@ -216,11 +212,14 @@ const haveli24 = assetImage("projects/haveli/haveli_24.jpg");
 const haveli25 = assetImage("projects/haveli/haveli_25.jpg");
 const haveli26 = assetImage("projects/haveli/haveli_26.jpg");
 const haveli27 = assetImage("projects/haveli/haveli_27.jpg");
+// Replacement images for former haveli_3, haveli_8, haveli_14 and haveli_17.
+const haveliNew1 = assetImage("projects/haveli/new1.webp");
+const haveliNew2 = assetImage("projects/haveli/new2.webp");
+const haveliNew3 = assetImage("projects/haveli/new3.webp");
+const haveliNew4 = assetImage("projects/haveli/new4.webp");
 const haveli255 = assetImage("projects/haveli/255.jpg");
 const haveliLogoUnesco = assetImage("projects/haveli/unesco.png");
 const haveliLogoNdtv = assetImage("projects/haveli/NDTV.png");
-const haveliLogoArchDaily = assetImage("projects/haveli/arch_daily.png");
-const haveliLogoArchitizer = assetImage("projects/haveli/architizer.png");
 const haveliLogoIIID = assetImage("projects/haveli/institute_of_indian.png");
 const haveli77 = assetImage("projects/haveli/77.jpg");
 const haveli144 = assetImage("projects/haveli/144.jpg");
@@ -289,6 +288,7 @@ const slender15 = assetImage("projects/Slender-House/photographs/15. Entrance (S
 const slender16 = assetImage("projects/Slender-House/photographs/16. Skylight (Second Floor).webp");
 const slender17 = assetImage("projects/Slender-House/photographs/17. Master Bedroom (Second Floor).webp");
 const slender18 = assetImage("projects/Slender-House/photographs/18. Study (Second Floor).webp");
+const slender19 = assetImage("projects/Slender-House/photographs/model.webp");
 // ---- Swatantra Residence — supplied cover and project photography ----
 const swatantraHero = assetImage("projects/SWATANTRA-RESIDENCE/COVER IMAGE/hero.jpg");
 const swatantra1 = assetImage("projects/SWATANTRA-RESIDENCE/PHOTOGRAPH/1 Elevation (2).jpg");
@@ -466,10 +466,10 @@ export const assets = {
         { name: "Architectural Digest India Feature", source: "AD", image: architecturalDigestFeature, href: "https://www.architecturaldigest.in/story/this-34500-square-foot-kochi-home-is-full-of-stepped-gardens-terraces-and-courtyards-spaces-architects-ka/" },
         { name: "Gandhi Darshan Park Inauguration", source: "Press", image: gandhiDarshanInauguration, href: "https://www.hindustantimes.com/photos/news/president-murmu-unveils-12-feet-high-statue-of-mahatma-gandhi-at-gandhi-vatika-101693818208295.html" },
         { name: "Heritage Park Inauguration", source: "Press", image: heritageParkInauguration, href: "https://www.aninews.in/news/national/general-news/president-kovind-inaugurates-charti-lal-goel-heritage-park-in-old-delhi20220320233252/" },
-        { name: "Featured by Habitus Living titled 'A House That Follows the Sun in Kochi'", source: "Habitus Living", image: habitusLivingFeature, href: "https://www.habitusliving.com/projects/house-of-stepped-gardens-spaces-architects" },
+        { name: "Featured by Habitus Living", source: "Habitus Living", image: habitusLivingFeature, href: "https://www.habitusliving.com/projects/house-of-stepped-gardens-spaces-architects" },
         { name: "As one of top 10 firms in Delhi", source: "Rethinking the Future", image: rethinkingFeature, href: "https://www.re-thinkingthefuture.com/article/best-architects-in-delhi-ncr/" },
         { name: "Golden Haveli Inauguration", source: "Press", image: goldenHaveliInauguration, href: "https://www.architectandinteriorsindia.com/news/take-in-chandni-chowk-views-from-the-golden-haveli-with-eam-s-jaishankar" },
-        { name: "Timeless Houses authored by Kapil Aggarwal", source: "Timeless Houses", image: timelessHousesFeature, href: "https://www.stirworld.com/think-books-and-movies-book-release-timeless-houses-promoting-diversity-in-architecture" },
+        { name: "Timeless Houses authored by Kapil Aggarwal", source: "Timeless Houses", image: timelessHousesFeature, fit: "contain", position: "center", href: "https://www.stirworld.com/think-books-and-movies-book-release-timeless-houses-promoting-diversity-in-architecture" },
         { name: "Featured by Financial Times as the 15 dreamiest homes on earth", source: "Financial Times", image: financialTimesFeature, href: "https://www.ft.com/content/3bc01f86-ad16-4901-8782-42a91f9a72ea" },
         { name: "Panellist in Indexplus design debate: Designing for Density", source: "Indexplus", image: indexplusPanel },
         { name: "Featured by Archello as one of the top 25 architecture firms", source: "Archello", image: archelloFeature },
@@ -603,7 +603,7 @@ export const assets = {
         // ---- Continuation of the Canva reference page — Alaya
         // Residence through House of Hues. ----
         { file: "ALAYA RESIDENCE.jpg", name: "Alaya Residence", image: galAlayaResidence, orientation: "portrait" },
-        { file: "LEGEND VENNER EXHIBITION - MUMBAI.jpg", name: "Legend Venner Exhibition - Mumbai", image: galLegendVennerExhibitionMumbai, orientation: "portrait" },
+        { file: "LEGEND VENEER EXHIBITION - MUMBAI.jpg", name: "Legend Veneer Exhibition - Mumbai", image: galLegendVeneerExhibitionMumbai, orientation: "portrait" },
         { file: "KRISHA'S RESIDENCE.jpg", name: "Krisha's Residence", image: galKrishasResidence, orientation: "portrait" },
         { file: "COLOR COURT.png", name: "Color Court", image: galColorCourt, orientation: "portrait" },
         { file: "HOUSE OF CURVES.jpg", name: "House of Curves", image: galHouseOfCurves, orientation: "portrait" },
@@ -628,7 +628,7 @@ export const assets = {
         { file: "BRICK HOUSE.png", name: "Brick House", image: galBrickHouse, orientation: "portrait" },
         { file: "BANDIKUI RAILWAY STATION.png", name: "Bandikui Railway Station", image: galBandikuiRailwayStation, orientation: "landscape" },
         { file: "HERITAGE PARK EXTENSION.jpg", name: "Extension of Heritage Park", image: galHeritageParkExtension, orientation: "landscape" },
-        { file: "FUIDIC OFFICE.jpg", name: "Fuidic Office", image: galFuidicOffice, orientation: "portrait" },
+        { file: "FLUIDIC OFFICE.jpg", name: "Fluidic Office", image: galFluidicOffice, orientation: "portrait" },
         { file: "GUPTA#U2019S RESIDENCE.jpg", name: "Gupta's Residence", image: galGuptasResidence, orientation: "portrait" },
         { file: "HOUSE AROUND A TREE.png", name: "House Around a Tree", image: galHouseAroundATree, orientation: "landscape" },
         { file: "JAIN#U2019S RESIDENCE.jpg", name: "Jain's Residence", image: galJainsResidence, orientation: "landscape" },
@@ -846,22 +846,23 @@ export const assets = {
         hero: haveliHero,
         pressLogos: [
             { name: "UNESCO", image: haveliLogoUnesco },
-            { name: "Architizer", image: haveliLogoArchitizer },
             { name: "IIID", image: haveliLogoIIID },
-            { name: "ArchDaily", image: haveliLogoArchDaily },
             { name: "NDTV-Grohe", image: haveliLogoNdtv },
+            { name: "Divisare", image: featuredInDivisare },
+            { name: "Architects and Interiors India", image: featuredInArchitectsAndInteriorsIndia },
+            { name: "The Telegraph", image: featuredInTelegraph },
         ],
         gallery: [
             { type: "pair", images: [haveli1, haveli2] },
-            { type: "full", image: haveli3 },
+            { type: "full", image: haveliNew1 },
             { type: "pair", images: [haveli4, haveli5] },
             { type: "full", image: haveli6 },
-            { type: "split", large: haveli7, stack: [haveli8, haveli9] },
+            { type: "split", large: haveli7, stack: [haveliNew2, haveli9] },
             { type: "full", image: haveli10 },
             { type: "pair", images: [haveli11, haveli12] },
             { type: "wide", image: haveli255 },
-            { type: "split", large: haveli13, stack: [haveli14, haveli15] },
-            { type: "split", large: haveli16, stack: [haveli17, haveli18] },
+            { type: "split", large: haveli13, stack: [haveliNew3, haveli15] },
+            { type: "split", large: haveli16, stack: [haveliNew4, haveli18] },
             { type: "split", large: haveli19, stack: [haveli20, haveli21] },
             // Full-width landscape
             {
@@ -905,7 +906,7 @@ export const assets = {
         gallery: [
             slender1, slender2, slender3, slender4, slender5, slender6,
             slender7, slender8, slender9, slender10, slender11, slender12,
-            slender15, slender16, slender17, slender18,
+            slender15, slender16, slender17, slender18, slender19,
         ],
     },
     swatantraResidence: {

@@ -31,7 +31,8 @@ export default function HansgroheShowroomPage() {
       details={{
         Project: "Hansgrohe Showroom",
         Location: "New Delhi",
-        Client: "-",
+        "Built-up Area": "2,500 sq. ft.",
+        Client: "Mr. Aggarwal",
         Status: "Completed",
       }}
       description={[

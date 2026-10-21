@@ -31,6 +31,7 @@ export default function Header({
       <div className="site-container flex items-center justify-between gap-6 py-6 md:py-8">
         <Link
           href="/"
+          prefetch={true}
           className="shrink-0 text-base md:text-[1.33rem] tracking-widest2  font-medium"
         >
           {site.name} <span className="text-accent">{site.handle}</span>

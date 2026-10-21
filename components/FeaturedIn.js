@@ -24,6 +24,8 @@ function LogoSet({ logos, hidden = false }) {
         src={typeof logo.image === "string" ? logo.image : logo.image.src}
         alt={hidden ? "" : logo.name}
         className={styles.logoImage}
+        loading="lazy"
+        decoding="async"
         style={{
           display: "block",
           width: "100%",

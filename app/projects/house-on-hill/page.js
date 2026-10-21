@@ -19,6 +19,8 @@ export default function HouseOnHillPage() {
       photos={[photo1, photo2, photo3, photo4]}
       details={{
         Project: "House on Hill",
+        "Plot Area": "1 acre",
+        "Built-up Area": "5,000 sq. ft.",
         Client: "Mr. Nayyar",
         Status: "Completed",
       }}

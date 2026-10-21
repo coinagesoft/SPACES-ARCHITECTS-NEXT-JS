@@ -21,8 +21,9 @@ const testimonials = [
   { file: "Ashraya residence.jpg", name: "Ashraya Residence" },
   { file: "House of sculpted screens.jpg", name: "House of Sculpted Screens" },
   { file: "house of stepped house.jpg", name: "House of Stepped Gardens" },
-  { file: "Screen.jpg", name: "Screen House" },
+  { file: "Screen House.webp", name: "Screen House" },
   { file: "Swatantra Residence.jpg", name: "Swatantra Residence" },
+  { file: "house of curves.webp", name: "House of Curves" },
 ].map(({ file, name }) => ({
   src: assetUrl(`${FOLDER}/${file}`),
   alt: `Client testimonial — ${name}`,

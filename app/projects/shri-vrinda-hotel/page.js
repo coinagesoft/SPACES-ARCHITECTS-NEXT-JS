@@ -39,6 +39,8 @@ export default function ShriVrindaHotelPage() {
       details={{
         Project: "Shri Vrinda Hotel",
         Location: "Vrindavan, Uttar Pradesh",
+        "Plot Area": "6,300 sq. ft.",
+        "Built-up Area": "10,000 sq. ft.",
         Client: "Mr. R.C. Goel",
         Status: "Completed",
       }}

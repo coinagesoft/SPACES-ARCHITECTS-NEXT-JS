@@ -19,9 +19,28 @@ export default function SwatantraResidencePage() {
       details={{
         Project: "Swatantra Residence",
         Location: "Agra, Uttar Pradesh",
+        "Plot Area": "4,500 sq. ft.",
+        "Built-up Area": "11,000 sq. ft.",
         Client: "Mr. Vishal Mittal",
         Status: "Completed",
       }}
+      awards={[
+        "Inside World Festival of Interiors | Finalist – Residential (Single Dwelling) | 2023",
+        "Loop Design Awards | Winner – Design & Concrete | 2023",
+      ]}
+      publications={[
+        "Financial Times",
+        "AD Magazine France",
+        "ArchDaily",
+        "ArchDaily Brasil",
+        "Divisare",
+        "Archello",
+        "World Architecture",
+        "Amazing Architecture",
+        "Volzero",
+        "Concepts",
+        "UNI.xyz",
+      ]}
       description={[
         <>
           Designed for <Orange>three generations</Orange>, this inward-looking residence explores the <Orange>relationship between concrete, art and family life.</Orange> Conceived around a triple-height courtyard, the home maintains visual connections across its levels while balancing shared spaces with increasing privacy.

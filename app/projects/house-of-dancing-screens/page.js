@@ -50,10 +50,21 @@ export default function HouseOfDancingScreensPage() {
       details={{
         Project: "House of Dancing Screens",
         Location: "Ambala, Haryana",
-        "Gross Built Area (m2/ft2)": "11,500 Sq. Ft",
-        "Completion Year": "2024",
+        "Plot Area": "6,300 sq. ft.",
+        "Built-up Area": "12,000 sq. ft.",
         Status: "Completed",
+        "Completion Year": "2024",
       }}
+      publications={[
+        "ArchDaily",
+        "Archilovers",
+        "Archiportale",
+        "Amazing Architecture",
+        "The Architects’ Diary",
+        "Design Essentia Magazine",
+        "Buildofy",
+        "Interior Exterior Magazine",
+      ]}
       description={[
         <>
           True to its name, the House of Dancing Screens is defined by pivoting screens that transform with movement, privacy and light. More than partitions, these fluid elements choreograph the house—rotating effortlessly with the wind to create an ever-changing interplay of <Orange>function, form and movement</Orange>.

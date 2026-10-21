@@ -1,6 +1,6 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { assetImage, assetUrl } from "@/config/assets";
-const hero = assetImage("projects/THECANVAS/cover/COVER(LANDSCAPE.webp");
+const hero = assetImage("projects/THECANVAS/cover/COVER(LANDSCAPE.jpg");
 const photo1 = assetImage("projects/THECANVAS/3_4/1.webp");
 const photo2 = assetImage("projects/THECANVAS/3_4/2.webp");
 const photo3 = assetImage("projects/THECANVAS/3_4/3.webp");
@@ -30,8 +30,9 @@ export default function TheCanvasPage() {
       details={{
         Project: "The Canvas",
         Location: "New Delhi",
+        "Built-up Area": "6,000 sq. ft.",
         Client: "Mr. Pranav Goel",
-        Status: "On-Going",
+        Status: "Completed",
       }}
       description={[
         <>

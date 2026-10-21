@@ -30,7 +30,7 @@ export default function LibraryHousePage() {
     <ProjectDetailPage
       currentId="library-house"
       title="Library House"
-      location="New Delhi"
+      location="Gurgaon"
       hero={hero}
       // Same order as the old gallery array
       photos={[
@@ -46,10 +46,19 @@ export default function LibraryHousePage() {
       ]}
       details={{
         Project: "Library House",
-        Location: "New Delhi",
+        Location: "Gurgaon",
+        "Plot Area": "3,000 sq. ft.",
+        "Built-up Area": "8,000 sq. ft.",
         Client: "Mrs. Rashmi",
         Status: "Completed",
       }}
+      publications={[
+        "Buildofy — Featured Project + House Tour",
+        "Rethinking The Future (RTF) — Project Feature",
+        "Amazing Architecture — Project Feature",
+        "Volzero — Project Feature",
+        "Archinect — Project Listing / Feature",
+      ]}
       description={[
         <>
           Set within a dense residential neighbourhood of Gurugram, The Library House is a <Orange>home for three generations</Orange>, conceived around light, greenery and quiet moments of togetherness. The south-facing residence draws in daylight, while a grove of six mature trees along the western edge shades balconies and terraces and keeps the home closely connected to nature.

@@ -11,7 +11,7 @@
 // ---------------------------------------------------------------------
 
 // Where the "Expressions" link in the header goes. Change if your route differs.
-export const EXPRESSIONS_HREF = "/publications";
+export const EXPRESSIONS_HREF = "/expressions";
 
 // ---------------------------------------------------------------------
 // Header menu
@@ -165,7 +165,7 @@ const CATEGORY_PROJECTS = {
     "The Colour Box Office",
     "Cubix Office",
     "Express Office",
-    "Fuidic Office",
+    "Fluidic Office",
     "Imelda.Inc",
     "Marmo Home Office",
     "NOCC Office",
@@ -179,7 +179,7 @@ const CATEGORY_PROJECTS = {
     "Glulam Showroom",
     "Hansgrohe Showroom",
     "Legend Veneer Exhibition - Delhi",
-    "Legend Venner Exhibition - Mumbai",
+    "Legend Veneer Exhibition - Mumbai",
     "Marble City Exhibition Stall",
     "Saatvik Marble Showroom",
     "Tiles and Kitchen Showroom",

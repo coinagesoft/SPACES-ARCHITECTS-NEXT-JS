@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./CategoryGallery.module.css";
 import { projectMatchesCategory } from "./projectCategories";
@@ -36,6 +37,20 @@ function getRatio(item) {
 // scroll position restores correctly when coming back from a project).
 function dims(item) {
   return { width: 1000, height: Math.round(1000 / getRatio(item)) };
+}
+
+const GALLERY_SIZES = "(min-width: 1024px) 40vw, (min-width: 768px) 45vw, 100vw";
+function GalleryImg({ item }) {
+  const d = dims(item);
+  return (
+    <Image
+      src={getSrc(item)}
+      alt={item.name || item.file || ""}
+      width={d.width}
+      height={d.height}
+      sizes={GALLERY_SIZES}
+    />
+  );
 }
 
 function getRoute(item) {
@@ -79,7 +94,7 @@ function Row({ items, ghost }) {
         const route = getRoute(item);
         const content = (
           <>
-            <img src={getSrc(item)} alt={item.name || item.file} loading="lazy" {...dims(item)} />
+            <GalleryImg item={item} />
             <span className={styles.label}>{item.name}</span>
           </>
         );
@@ -88,6 +103,7 @@ function Row({ items, ghost }) {
         return route ? (
           <Link
             href={route}
+            prefetch={true}
             className={styles.rowTile}
             style={style}
             aria-label={`View ${item.name} project`}

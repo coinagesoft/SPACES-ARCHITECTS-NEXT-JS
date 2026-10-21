@@ -37,7 +37,7 @@ const COVERS = {
     // 7  Slender House
     "6x18": assetImage("projects/SLENDER HOUSE.jpg"),
     // 8  House of Blue Courtyard
-    "the-courtyard": assetImage("projects/THE-BLUE-COURTYARD/cover/cover.webp"),
+    "the-courtyard": assetImage("blogs/Courtyard.webp"),
 };
 
 // ---- Images for the 5 new posts ----
@@ -47,7 +47,7 @@ const NEW_COVERS = {
     // 10 Future of Exposed Concrete -> Swatantra Residence
     "future-of-exposed-concrete": assetImage("projects/SWATANTRA-RESIDENCE/COVER IMAGE/hero.jpg"),
     // 11 Heritage Conservation in India -> Heritage Park
-    "heritage-conservation-in-india": assetImage("projects/HERITAGE-PARK/cover/Cover Image.webp"),
+    "heritage-conservation-in-india": assetImage("blogs/11.webp"),
     // 12 What I Have Learned  (no project named -> Kapil's portrait; CHANGE IF NEEDED)
      "what-i-have-learned": assetImage("projects/project font.png"),
     // 13 Timeless Rather Than Trendy -> House of Stepped Gardens

@@ -8,7 +8,7 @@
  * pages still need to know each image's real pixel dimensions up front, so
  * this script reads them once from the actual files and writes them to a
  * small JSON file that gets committed to the repo (the images themselves
- * don't need to be).
+ * don't need to be)
  *
  * Usage:
  *   1. Make sure the real photography is present locally under public/assets

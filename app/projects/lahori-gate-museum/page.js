@@ -14,7 +14,6 @@ const img8 = assetImage("projects/LAHORI-GATE-MUSEUM/3_4/8.webp");
 const img9 = assetImage("projects/LAHORI-GATE-MUSEUM/3_4/9.webp");
 const img10 = assetImage("projects/LAHORI-GATE-MUSEUM/3_4/10.webp");
 const img11 = assetImage("projects/LAHORI-GATE-MUSEUM/3_4/11.webp");
-const img12 = assetImage("projects/LAHORI-GATE-MUSEUM/3_4/12.webp");
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
@@ -34,14 +33,21 @@ export default function LahoriGateMuseumPage() {
         img6,
         img2, img5, img9,
         img10, img11,
-        img12,
       ]}
       details={{
         Project: "Lahori Gate Museum",
         Location: "Old Delhi",
-        Client: "Mr. Vijay Goel",
+        Client: "MCD",
         Status: "Completed",
       }}
+      publications={[
+        "Times of India",
+        "Hindustan Times",
+        "The Architecture & Planning News",
+        "Tehelka",
+        "Dainik Jagran",
+        "Young Intach",
+      ]}
       description={[
         <>
           Located in the historic fabric of Chandni Chowk, the Museum restores and reimagines a century-old structure as an immersive journey through the cultural memory of Old Delhi. The project preserves the architectural character of the building while transforming it into a space for experiencing the many layers of <Orange>Chandni Chowk’s history, traditions and everyday life</Orange>.

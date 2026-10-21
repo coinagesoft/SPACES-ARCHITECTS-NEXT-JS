@@ -24,9 +24,14 @@ export default function KrishasResidencePage() {
       details={{
         Project: "Krisha's Residence",
         Location: "South Extension, New Delhi",
+        "Built-up Area": "2,000 sq. ft.",
         Client: "Spaces Architects@Ka",
         Status: "Completed",
       }}
+      publications={[
+        "ArchitectureLive!",
+        "Archishots",
+      ]}
       description={[
         <>
           Set within a <Orange>45-year-old home</Orange> for a large family, this interior transformation was conceived, dismantled, redesigned and executed in an extraordinary <Orange>35 days</Orange>. The project balances the old and the new, light and shadow, allowing contrasting ideas to coexist without diminishing either.
