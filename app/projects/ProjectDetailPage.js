@@ -80,104 +80,108 @@ export default function ProjectDetailPage({
 }) {
   const gallery = buildProjectGallery(photos.filter(Boolean));
   const heroText = (
-  <div className={`site-container ${styles.heroTextWrap}`}>
-    <div className={styles.heroText}>
-      <h1>{title}</h1>
-      {location && <p>{location}</p>}
+    <div className={`site-container ${styles.heroTextWrap}`}>
+      <div className={styles.heroText}>
+        <h1>{title}</h1>
+        {location && <p>{location}</p>}
+      </div>
     </div>
-  </div>
-);
-  
+  );
+
 
   return (
     <>
       <main>
         <SiteChrome dark />
 
-       {heroVideo ? (
-  <section
-    className={`${styles.hero} ${mobileHero ? heroStyles.hasMobileCover : ""}`}
-  >
-    <video
-      src={heroVideo}
-      autoPlay
-      muted
-      loop
-      playsInline
-      preload={mobileHero ? "none" : "auto"}
-      className={mobileHero ? heroStyles.desktopOnly : undefined}
-      style={{
-        position: "absolute",
-        inset: 0,
-        width: "100%",
-        height: "100%",
-        objectFit: "cover",
-      }}
-    />
-    {mobileHero && (
-      <Image
-        src={mobileHero}
-        alt={title}
-        sizes="100vw"
-        priority
-        className={heroStyles.mobileOnly}
-      />
-    )}
-    {heroText}
-  </section>
-) : (
-  <ParallaxHeroImage
-    className={styles.hero}
-    imageClassName={styles.heroImage}
-    src={hero}
-    mobileSrc={mobileHero}
-    alt={title}
-  >
-    {heroText}
-  </ParallaxHeroImage>
-)}
+
+        {heroVideo ? (
+          <section
+            className={`${styles.hero} ${mobileHero ? heroStyles.hasMobileCover : ""
+              }`}
+          >
+            <iframe
+              src={heroVideo}
+              title={`${title} project video`}
+              allow="autoplay; encrypted-media; picture-in-picture"
+              allowFullScreen
+              className={mobileHero ? heroStyles.desktopOnly : undefined}
+              style={{
+                position: "absolute",
+                inset: 0,
+                width: "100%",
+                height: "100%",
+                border: 0,
+                pointerEvents: "none",
+              }}
+            />
+
+            {mobileHero && (
+              <Image
+                src={mobileHero}
+                alt={title}
+                sizes="100vw"
+                priority
+                className={heroStyles.mobileOnly}
+              />
+            )}
+
+            {heroText}
+          </section>
+        ) : (
+          <ParallaxHeroImage
+            className={styles.hero}
+            imageClassName={styles.heroImage}
+            src={hero}
+            mobileSrc={mobileHero}
+            alt={title}
+          >
+            {heroText}
+          </ParallaxHeroImage>
+        )}
+
 
         <section className={`site-container ${styles.infoSection}`}>
           <aside className={styles.infoSidebar}>
-  <div>
-    <h3>Project Details</h3>
-    <dl>
-      {Object.entries(details).map(([label, value]) => (
-        <div key={label}>
-          <dt>{label}:</dt> <dd>{value}</dd>
-        </div>
-      ))}
-    </dl>
-  </div>
-  {awards.length > 0 && (
-    <div>
-      <h3>Awards:</h3>
-      <ul>
-        {awards.map((a) => (
-          <li key={a}>{a}</li>
-        ))}
-      </ul>
-    </div>
-  )}
-  {publications.length > 0 && (
-    <div>
-      <h3>Publications:</h3>
-      <ul>
-        {publications.map((p) => (
-          <li key={p}>{p}</li>
-        ))}
-      </ul>
-    </div>
-  )}
-  {recognition && (
-    <div>
-      <h3>Recognition:</h3>
-      <ul>
-        <li>{recognition}</li>
-      </ul>
-    </div>
-  )}
-</aside>
+            <div>
+              <h3>Project Details</h3>
+              <dl>
+                {Object.entries(details).map(([label, value]) => (
+                  <div key={label}>
+                    <dt>{label}:</dt> <dd>{value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+            {awards.length > 0 && (
+              <div>
+                <h3>Awards:</h3>
+                <ul>
+                  {awards.map((a) => (
+                    <li key={a}>{a}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {publications.length > 0 && (
+              <div>
+                <h3>Publications:</h3>
+                <ul>
+                  {publications.map((p) => (
+                    <li key={p}>{p}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {recognition && (
+              <div>
+                <h3>Recognition:</h3>
+                <ul>
+                  <li>{recognition}</li>
+                </ul>
+              </div>
+            )}
+          </aside>
           <div className={styles.infoBody}>
             {description.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
