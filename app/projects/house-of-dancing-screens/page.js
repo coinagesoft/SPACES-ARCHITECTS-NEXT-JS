@@ -1,10 +1,8 @@
 import ProjectDetailPage from "../ProjectDetailPage";
-import { mobileCover } from "@/config/mobileCovers";
-import { assetImage } from "@/config/assets";
+import { assetImage, assetUrl } from "@/config/assets";
 
 // const hero = assetImage("projects/HOUSE-OF-DANCING-SCREENS/cover/COVER.webp");
-const heroVideo =
-  "https://www.youtube.com/embed/lrjgK3c8GWM?autoplay=1&mute=1&loop=1&playlist=lrjgK3c8GWM&controls=0&rel=0&playsinline=1";
+const heroVideo = assetUrl("projects/HOUSE-OF-DANCING-SCREENS/cover/The House Of Dancing Screens.mp4");
 const photo1 = assetImage("projects/HOUSE-OF-DANCING-SCREENS/photographs/BHA_1643.webp");
 const photo2 = assetImage("projects/HOUSE-OF-DANCING-SCREENS/photographs/BHA_1648.webp");
 const photo3 = assetImage("projects/HOUSE-OF-DANCING-SCREENS/photographs/BHA_1659 .webp");
@@ -35,8 +33,8 @@ export default function HouseOfDancingScreensPage() {
       currentId="house-of-dancing-screens"
       title="House of Dancing Screens"
       location="Ambala"
-     heroVideo={heroVideo}
-      mobileHero={mobileCover("house-of-dancing-screens")}
+      heroVideo={heroVideo}
+      // No mobileHero here: phones show the same full-screen video as desktop.
       // Same order as the old gallery array
       photos={[
         photo2, photo3,

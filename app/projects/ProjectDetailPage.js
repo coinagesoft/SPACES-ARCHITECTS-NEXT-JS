@@ -78,6 +78,9 @@ export default function ProjectDetailPage({
   recognition,
   description = [],
 }) {
+  // Direct video files (.mp4/.webm/.mov) play in a native <video> that covers
+  // the hero; anything else (e.g. a YouTube embed URL) stays in an iframe.
+  const isVideoFile = typeof heroVideo === "string" && /\.(mp4|webm|mov)(\?|#|$)/i.test(heroVideo);
   const gallery = buildProjectGallery(photos.filter(Boolean));
   const heroText = (
     <div className={`site-container ${styles.heroTextWrap}`}>
@@ -100,21 +103,42 @@ export default function ProjectDetailPage({
             className={`${styles.hero} ${mobileHero ? heroStyles.hasMobileCover : ""
               }`}
           >
-            <iframe
-              src={heroVideo}
-              title={`${title} project video`}
-              allow="autoplay; encrypted-media; picture-in-picture"
-              allowFullScreen
-              className={mobileHero ? heroStyles.desktopOnly : undefined}
-              style={{
-                position: "absolute",
-                inset: 0,
-                width: "100%",
-                height: "100%",
-                border: 0,
-                pointerEvents: "none",
-              }}
-            />
+            {isVideoFile ? (
+              <video
+                src={heroVideo}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
+                aria-label={`${title} project video`}
+                className={mobileHero ? heroStyles.desktopOnly : undefined}
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  pointerEvents: "none",
+                }}
+              />
+            ) : (
+              <iframe
+                src={heroVideo}
+                title={`${title} project video`}
+                allow="autoplay; encrypted-media; picture-in-picture"
+                allowFullScreen
+                className={mobileHero ? heroStyles.desktopOnly : undefined}
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  width: "100%",
+                  height: "100%",
+                  border: 0,
+                  pointerEvents: "none",
+                }}
+              />
+            )}
 
             {mobileHero && (
               <Image

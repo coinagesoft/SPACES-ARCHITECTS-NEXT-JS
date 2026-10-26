@@ -58,22 +58,27 @@
     display: none;
   }
 
-  /* Show the whole portrait image: the hero takes the image's own height
-     instead of a fixed 100vh, and the crop/zoom/parallax effects are off. */
+  /* Full-screen hero on phones: the section fills the whole viewport
+     height and the cover image is cropped (object-fit: cover) to fill it.
+     100vh is the fallback; svh/dvh follow the visible area when the mobile
+     browser's address bar shows or hides. */
   section.hasMobileCover {
-    height: auto;
+    height: 100vh;
+    height: 100svh;
+    min-height: 100vh;
+    min-height: 100svh;
   }
 
   .hasMobileCover .media {
-    position: relative;
-    inset: auto;
+    position: absolute;
+    inset: 0;
     transform: none !important;
     will-change: auto;
   }
 
   .hasMobileCover .zoom {
-    position: relative;
-    inset: auto;
+    position: absolute;
+    inset: 0;
     animation: none;
     transform: none;
     will-change: auto;
@@ -81,7 +86,11 @@
 
   .mobileOnly {
     display: block;
+    position: absolute;
+    inset: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 }

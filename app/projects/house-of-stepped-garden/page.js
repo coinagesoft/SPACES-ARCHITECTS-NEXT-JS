@@ -1,5 +1,4 @@
 import ProjectDetailPage from "../ProjectDetailPage";
-import { mobileCover } from "@/config/mobileCovers";
 import { assetImage, assetUrl } from "@/config/assets";
 
 const heroVideo = assetUrl("projects/HOUSE-OF-STEPPED-GARDEN/cover/COVER.mp4");
@@ -50,7 +49,7 @@ export default function HouseOfSteppedGardenPage() {
       title="The House of Stepped Gardens"
       location="Kochi"
       heroVideo={heroVideo}
-      mobileHero={mobileCover("house-of-stepped-garden")}
+      // No mobileHero here: phones show the same full-screen video as desktop.
       // Same order as the old gallery array
       photos={[
         photo1,

@@ -57,26 +57,37 @@ export async function POST(request) {
   if (data.phone && !PHONE_RE.test(data.phone)) return bad("Enter a valid 10-digit phone number.");
   if (!data.purpose) return bad("Please select a purpose of enquiry.");
 
-  const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS } = process.env;
-  if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) {
-    console.error("[contact] SMTP_HOST / SMTP_USER / SMTP_PASS are not set in the environment.");
+  const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, SMTP_SERVICE } = process.env;
+  const user = SMTP_USER;
+  const pass = SMTP_PASS;
+
+  if (!user || !pass) {
+    console.error("[contact] SMTP_USER and SMTP_PASS are not set in the environment.");
     return Response.json(
       { ok: false, error: "Email is not configured on the server yet." },
       { status: 500 }
     );
   }
 
-  const port = Number(SMTP_PORT) || 587;
-  const to = process.env.CONTACT_TO || "prasad.a1405@gmail.com";
-  const from = process.env.CONTACT_FROM || SMTP_USER;
+  const port = Number(SMTP_PORT) || 465;
+  const host = SMTP_HOST || "smtp.gmail.com";
+  const to = process.env.CONTACT_TO || "spacesarchitects.ka@gmail.com";
+  const from = process.env.CONTACT_FROM || user;
   const fullName = headerSafe(`${data.firstName} ${data.lastName}`);
 
-  const transporter = nodemailer.createTransport({
-    host: SMTP_HOST,
-    port,
-    secure: port === 465, // 465 = SSL, 587 = STARTTLS
-    auth: { user: SMTP_USER, pass: SMTP_PASS },
-  });
+  const transporterOptions = SMTP_SERVICE
+    ? {
+        service: SMTP_SERVICE,
+        auth: { user, pass },
+      }
+    : {
+        host,
+        port,
+        secure: port === 465, // 465 = SSL, 587 = STARTTLS
+        auth: { user, pass },
+      };
+
+  const transporter = nodemailer.createTransport(transporterOptions);
 
   const rows = [
     ["Name", fullName],
@@ -90,19 +101,31 @@ export async function POST(request) {
 
   const text = rows.map(([label, value]) => `${label}: ${value}`).join("\n");
   const html = `
-    <h2 style="font-family:Arial,sans-serif">New website enquiry</h2>
-    <table style="font-family:Arial,sans-serif;font-size:14px;border-collapse:collapse">
-      ${rows
-        .map(
-          ([label, value]) =>
-            `<tr><td style="padding:6px 16px 6px 0;color:#666;vertical-align:top"><b>${escapeHtml(label)}</b></td><td style="padding:6px 0;white-space:pre-wrap">${escapeHtml(value)}</td></tr>`
-        )
-        .join("")}
-    </table>`;
+    <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; border: 1px solid #e5e5e5; border-radius: 8px;">
+      <h2 style="font-size: 20px; font-weight: 600; color: #111; margin-top: 0; padding-bottom: 12px; border-bottom: 2px solid #fea50b;">
+        New Website Enquiry
+      </h2>
+      <table style="width: 100%; font-size: 14px; border-collapse: collapse; margin-top: 16px;">
+        <tbody>
+          ${rows
+            .map(
+              ([label, value]) =>
+                `<tr>
+                  <td style="padding: 10px 16px 10px 0; color: #666; font-weight: bold; vertical-align: top; width: 35%; border-bottom: 1px solid #f0f0f0;">${escapeHtml(label)}</td>
+                  <td style="padding: 10px 0; color: #111; vertical-align: top; white-space: pre-wrap; border-bottom: 1px solid #f0f0f0;">${escapeHtml(value)}</td>
+                </tr>`
+            )
+            .join("")}
+        </tbody>
+      </table>
+      <p style="margin-top: 24px; font-size: 12px; color: #999;">
+        This email was sent from the Spaces Architects @ka website contact form.
+      </p>
+    </div>`;
 
   try {
     await transporter.sendMail({
-      from: `"Spaces Architects " <${from}>`,
+      from: `"Spaces Architects @ka" <${from}>`,
       to,
       replyTo: `"${fullName}" <${data.email}>`, // hitting Reply answers the enquirer
       subject: headerSafe(`New website enquiry: ${data.purpose} - ${fullName}`),
