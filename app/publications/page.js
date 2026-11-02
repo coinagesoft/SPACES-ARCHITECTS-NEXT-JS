@@ -6,8 +6,11 @@ import BookGallery from "@/components/BookGallery";
 import chromeStyles from "@/components/PublicationsChrome.module.css";
 import { assetImage } from "@/assets";
 import styles from "../blog/page.module.css";
+import { pageMetadata } from "@/config/seo";
 
-export const metadata = { title: "Publications — Spaces Architects@ka" };
+export const metadata = pageMetadata("publications");
+
+
 
 // ============================================================
 //  PUBLICATIONS — built from the "Web Portals" sheet

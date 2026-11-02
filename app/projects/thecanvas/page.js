@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage, assetUrl } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("thecanvas");
 const hero = assetImage("projects/THECANVAS/cover/COVER(LANDSCAPE.jpg");
 const photo1 = assetImage("projects/THECANVAS/3_4/1.webp");
 const photo2 = assetImage("projects/THECANVAS/3_4/2.webp");
@@ -16,7 +19,7 @@ const photo11 = assetImage("projects/THECANVAS/3_4/11.webp");
 const heroPhoto = assetImage("projects/THECANVAS/cover/HERO.webp");
 const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "The Canvas — Spaces Architects@ka" };
+
 export default function TheCanvasPage() {
   return (
     <ProjectDetailPage

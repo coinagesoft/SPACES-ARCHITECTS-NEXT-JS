@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("lahori-gate-museum");
 
 const hero = assetImage("projects/LAHORI-GATE-MUSEUM/cover/Cover Image.webp");
 
@@ -18,7 +21,7 @@ const img11 = assetImage("projects/LAHORI-GATE-MUSEUM/3_4/11.webp");
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Lahori Gate Museum — Spaces Architects@ka" };
+
 
 export default function LahoriGateMuseumPage() {
   return (

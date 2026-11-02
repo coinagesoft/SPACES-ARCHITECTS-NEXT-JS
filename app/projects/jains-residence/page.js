@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage, assetUrl } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("jains-residence");
 const hero = assetImage("projects/JAINS-RESIDENCE/cover/COVER.webp");
 const photo1 = assetImage("projects/JAINS-RESIDENCE/3_4/1.webp");
 const photo2 = assetImage("projects/JAINS-RESIDENCE/3_4/2.webp");
@@ -20,7 +23,7 @@ const photo16 = assetImage("projects/JAINS-RESIDENCE/3_4/16.webp");
 const heroPhoto = assetImage("projects/JAINS-RESIDENCE/cover/HERO.webp");
 const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Jain's Residence — Spaces Architects@ka" };
+
 export default function JainsResidencePage() {
   return (
     <ProjectDetailPage

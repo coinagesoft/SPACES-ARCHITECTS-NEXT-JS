@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("stonex-india-building");
 
 const hero = assetImage("projects/STONEX-INDIA-BUILDING/cover/Cover Image.webp");
 
@@ -17,7 +20,7 @@ const panorama2 = assetImage("projects/STONEX-INDIA-BUILDING/photographs/Panoram
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Stonex India Building — Spaces Architects@ka" };
+
 
 export default function StonexIndiaBuildingPage() {
   return (

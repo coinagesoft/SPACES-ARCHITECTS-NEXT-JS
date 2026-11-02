@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage, assetUrl } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("hansgrohe-showroom");
 const hero = assetImage("projects/HANSGROHE-SHOWROOM/cover/cover (1).webp");
 const photo1 = assetImage("projects/HANSGROHE-SHOWROOM/3_4/1.webp");
 const photo2 = assetImage("projects/HANSGROHE-SHOWROOM/3_4/2.webp");
@@ -17,7 +20,7 @@ const photo12 = assetImage("projects/HANSGROHE-SHOWROOM/3_4/12.webp");
 const heroPhoto = assetImage("projects/HANSGROHE-SHOWROOM/cover/HERO.webp");
 const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Hansgrohe Showroom — Spaces Architects@ka" };
+
 export default function HansgroheShowroomPage() {
   return (
     <ProjectDetailPage

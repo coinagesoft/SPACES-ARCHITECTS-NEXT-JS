@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("brick-house");
 const hero = assetImage("projects/BRICK-HOUSE/cover/COVER.webp");
 const photo1 = assetImage("projects/BRICK-HOUSE/3_4/1.webp");
 const photo2 = assetImage("projects/BRICK-HOUSE/3_4/2.webp");
@@ -19,7 +22,7 @@ const photo14 = assetImage("projects/BRICK-HOUSE/3_4/14.webp");
 const coverPhoto2 = assetImage("projects/BRICK-HOUSE/cover/HERO.webp");
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "The Brick House — Spaces Architects@ka" };
+
 export default function TheBrickHousePage() {
   return (
     <ProjectDetailPage

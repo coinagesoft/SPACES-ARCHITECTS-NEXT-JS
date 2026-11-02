@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("house-of-hues");
 
 const hero = assetImage("projects/HOUSE-OF-HUES/cover/COVER.webp");
 
@@ -32,7 +35,7 @@ const img25 = assetImage("projects/HOUSE-OF-HUES/3_4/25.webp");
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "House of Hues — Spaces Architects@ka" };
+
 
 export default function HouseOfHuesPage() {
   return (

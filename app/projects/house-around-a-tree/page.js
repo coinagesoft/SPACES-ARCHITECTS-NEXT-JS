@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage, assetUrl } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("house-around-a-tree");
 const hero = assetImage("projects/HOUSE-AROUND-A-TREE/3_4/6.webp");
 const photo1 = assetImage("projects/HOUSE-AROUND-A-TREE/3_4/1.webp");
 const photo2 = assetImage("projects/HOUSE-AROUND-A-TREE/3_4/2.webp");
@@ -31,7 +34,7 @@ const coverPhoto1 = assetImage("projects/HOUSE-AROUND-A-TREE/cover/COVER.webp");
 const coverPhoto2 = assetImage("projects/HOUSE-AROUND-A-TREE/cover/HERO.webp");
 const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "The House around a Tree — Spaces Architects@ka" };
+
 export default function TheHouseAroundATreePage() {
   return (
     <ProjectDetailPage

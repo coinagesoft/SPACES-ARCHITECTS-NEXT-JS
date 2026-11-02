@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("glulam-showroom");
 
 const hero = assetImage("projects/GLULAM-SHOWROOM/cover/Cover Image.webp");
 
@@ -21,7 +24,7 @@ const img14 = assetImage("projects/GLULAM-SHOWROOM/3_4/14.webp");
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Glulam Showroom — Spaces Architects@ka" };
+
 
 export default function GlulamShowroomPage() {
   return (

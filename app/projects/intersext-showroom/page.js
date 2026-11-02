@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("intersext-showroom");
 const hero = assetImage("projects/INTERSEXT-SHOWROOM/cover/HERO IMAGE.webp");
 const photo1 = assetImage("projects/INTERSEXT-SHOWROOM/photographs/1 Juxtaposed tile blocks protruding out depecting the concept of natural weathering of stones.webp");
 const photo2 = assetImage("projects/INTERSEXT-SHOWROOM/photographs/1 Transition from daylight to dark interiors.webp");
@@ -24,7 +27,7 @@ const photo19 = assetImage("projects/INTERSEXT-SHOWROOM/photographs/8 Dark inter
 const photo20 = assetImage("projects/INTERSEXT-SHOWROOM/photographs/8 Landscape design created using water jet cut tiles.webp");
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Intersekt Tiles Showroom — Spaces Architects@ka" };
+
 
 export default function IntersextShowroomPage() {
   return (

@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage, assetUrl } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("poetic-house");
 const hero = assetImage("projects/POETIC-HOUSE/cover/cover.webp");
 const photo1 = assetImage("projects/POETIC-HOUSE/3_4/1.webp");
 const photo2 = assetImage("projects/POETIC-HOUSE/3_4/2.webp");
@@ -16,7 +19,7 @@ const photo11 = assetImage("projects/POETIC-HOUSE/3_4/11.webp");
 const photo12 = assetImage("projects/POETIC-HOUSE/3_4/12.webp");
 const coverPhoto2 = assetImage("projects/POETIC-HOUSE/cover/hero image.webp");
 
-export const metadata = { title: "The Poetic House — Spaces Architects@ka" };
+
 export default function ThePoeticHousePage() {
   return (
     <ProjectDetailPage

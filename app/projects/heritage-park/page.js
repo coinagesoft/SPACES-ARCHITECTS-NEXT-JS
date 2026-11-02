@@ -7,6 +7,9 @@ import ShareIcons from "@/components/ShareIcons";
 import styles from "../slender-house/page.module.css";
 import { assetImage } from "@/config/assets";
 import { mobileCover } from "@/config/mobileCovers";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("heritage-park");
 
 const hero = assetImage("projects/HERITAGE-PARK/cover/Cover Image.webp");
 
@@ -158,7 +161,7 @@ function HeritageDetail({
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Heritage Park — Spaces Architects@ka" };
+
 
 export default function HeritageParkPage() {
   return (

@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage, assetUrl } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("guptas-residence");
 const hero = assetImage("projects/GUPTAS-RESIDENCE/3_4/10.webp");
 const photo1 = assetImage("projects/GUPTAS-RESIDENCE/3_4/1.webp");
 const photo2 = assetImage("projects/GUPTAS-RESIDENCE/3_4/2.webp");
@@ -17,7 +20,7 @@ const coverPhoto1 = assetImage("projects/GUPTAS-RESIDENCE/cover/COVER (LANDSCAPE
 const coverPhoto2 = assetImage("projects/GUPTAS-RESIDENCE/cover/HERO.webp");
 const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Gupta's Residence — Spaces Architects@ka" };
+
 export default function GuptasResidencePage() {
   return (
     <ProjectDetailPage

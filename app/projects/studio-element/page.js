@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("studio-element");
 
 const hero = assetImage("projects/STUDIO-ELEMENT/cover/Cover Image.webp");
 const coverHero = assetImage("projects/STUDIO-ELEMENT/cover/Hero Image.webp");
@@ -16,7 +19,7 @@ const img8 = assetImage("projects/STUDIO-ELEMENT/3_4/8.webp");
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Studio Element — Spaces Architects@ka" };
+
 
 export default function StudioElementPage() {
   return (

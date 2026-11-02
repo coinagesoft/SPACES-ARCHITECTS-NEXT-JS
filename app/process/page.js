@@ -3,6 +3,9 @@ import Footer from "@/components/Footer";
 import { assets } from "@/assets";
 import styles from "./page.module.css";
 import ProcessVideo from "./ProcessVideo";
+import { pageMetadata } from "@/config/seo";
+
+export const metadata = pageMetadata("process");
 
 const PROCESS_STEPS = [
     [
@@ -43,9 +46,7 @@ const PROCESS_STEPS = [
     ],
 ];
 
-export const metadata = {
-    title: "Process - Spaces Architects@ka",
-};
+
 
 export default function ProcessPage() {
     return (

@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("express-office");
 
 const hero = assetImage("projects/EXPRESS-OFFICE/cover/Cover Image.webp");
 
@@ -20,7 +23,7 @@ const photo13 = assetImage("projects/EXPRESS-OFFICE/3_4/13.webp");
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Express Office — Spaces Architects@ka" };
+
 
 export default function ExpressOfficePage() {
   return (

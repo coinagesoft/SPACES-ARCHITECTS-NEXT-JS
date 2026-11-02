@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("marble-city-exhibition-stall");
 
 const hero = assetImage("projects/MARBLE-CITY-EXHIBITION-STALL/cover/COVER (2).webp");
 const photo1 = assetImage("projects/MARBLE-CITY-EXHIBITION-STALL/3_4/1.webp");
@@ -12,7 +15,7 @@ const photo5 = assetImage("projects/MARBLE-CITY-EXHIBITION-STALL/3_4/5.webp");
 const photo7 = assetImage("projects/MARBLE-CITY-EXHIBITION-STALL/3_4/7.webp");
 const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Marble City Exhibition Stall — Spaces Architects@ka" };
+
 
 export default function MarbleCityExhibitionStallPage() {
   return (

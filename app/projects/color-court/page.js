@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage, assetUrl } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("color-court");
 const hero = assetImage("projects/COLOR-COURT/cover/Cover Image.webp");
 const photo1 = assetImage("projects/COLOR-COURT/3_4/1.webp");
 const photo2 = assetImage("projects/COLOR-COURT/3_4/2.webp");
@@ -18,7 +21,7 @@ const photo13 = assetImage("projects/COLOR-COURT/3_4/13.webp");
 const photo14 = assetImage("projects/COLOR-COURT/3_4/14.webp");
 const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "The Colour Court — Spaces Architects@ka" };
+
 export default function ColourCourtPage() {
   return (
     <ProjectDetailPage

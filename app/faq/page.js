@@ -1,12 +1,11 @@
 import SiteChrome from "@/components/SiteChrome";
 import Footer from "@/components/Footer";
 import styles from "./page.module.css";
+import { pageMetadata } from "@/config/seo";
 
-export const metadata = {
-  title: "FAQ — Spaces Architects@ka",
-  description:
-    "Answers to common questions about Spaces Architects@ka — how we work, how to get in touch, fees, site visits, process and more.",
-};
+export const metadata = pageMetadata("faq");
+
+
 
 // ============================================================
 //  FAQ — from FAQ1.docx

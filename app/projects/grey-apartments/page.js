@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage, assetUrl } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("grey-apartments");
 const hero = assetImage("projects/GREY-APARTMENTS/cover/HERO IMAGE.webp");
 const photo2 = assetImage("projects/GREY-APARTMENTS/3_4/2.webp");
 const photo3 = assetImage("projects/GREY-APARTMENTS/3_4/3.webp");
@@ -26,7 +29,7 @@ const photo22 = assetImage("projects/GREY-APARTMENTS/3_4/22.webp");
 const coverPhoto1 = assetImage("projects/GREY-APARTMENTS/cover/COVER.webp");
 const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Grey Apartment — Spaces Architects@ka" };
+
 export default function GreyApartmentPage() {
   return (
     <ProjectDetailPage

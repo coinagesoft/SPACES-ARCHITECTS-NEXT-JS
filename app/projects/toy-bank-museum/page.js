@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("toy-bank-museum");
 
 const hero = assetImage("projects/TOY-BANK-MUSEUM/cover/COVER.webp");
 
@@ -21,7 +24,7 @@ const model3 = assetImage("projects/TOY-BANK-MUSEUM/3_4/model image 3.webp");
 
 const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Toybank Museum — Spaces Architects@ka" };
+
 
 export default function ToybankMuseumPage() {
   return (

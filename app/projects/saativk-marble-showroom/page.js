@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage, assetUrl } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("saativk-marble-showroom");
 const hero = assetImage("projects/SAATIVK-MARBLE-SHOWROOM/cover/HERO.webp");
 const photo1 = assetImage("projects/SAATIVK-MARBLE-SHOWROOM/3_4/1.webp");
 const photo2 = assetImage("projects/SAATIVK-MARBLE-SHOWROOM/3_4/2.webp");
@@ -20,7 +23,7 @@ const photo15 = assetImage("projects/SAATIVK-MARBLE-SHOWROOM/3_4/15.webp");
 const coverPhoto1 = assetImage("projects/SAATIVK-MARBLE-SHOWROOM/cover/COVER.webp");
 const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Satvik Marble Showroom — Spaces Architects@ka" };
+
 export default function SatvikMarbleShowroomPage() {
   return (
     <ProjectDetailPage

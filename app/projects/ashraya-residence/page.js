@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("ashraya-residence");
 
 const hero = assetImage("projects/ASHRAYA-RESIDENCE/cover/COVER.webp");
 
@@ -20,7 +23,7 @@ const img13 = assetImage("projects/ASHRAYA-RESIDENCE/3_4/13.webp");
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Ashraya Residence — Spaces Architects@ka" };
+
 
 export default function AshrayaResidencePage() {
   return (

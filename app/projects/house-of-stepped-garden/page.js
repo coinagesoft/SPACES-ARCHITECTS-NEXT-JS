@@ -1,5 +1,8 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { assetImage, assetUrl } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("house-of-stepped-garden");
 
 const heroVideo = assetUrl("projects/HOUSE-OF-STEPPED-GARDEN/cover/COVER.mp4");
 
@@ -40,7 +43,7 @@ const dji0083 = assetImage("projects/HOUSE-OF-STEPPED-GARDEN/photographs/DJI_008
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "The House of Stepped Gardens — Spaces Architects@ka" };
+
 
 export default function HouseOfSteppedGardenPage() {
   return (

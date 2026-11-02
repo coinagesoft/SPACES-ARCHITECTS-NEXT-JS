@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("solance-apartment");
 
 const hero = assetImage("projects/SOLANCE-APARTMENT/cover/COVER.webp");
 const photo1 = assetImage("projects/SOLANCE-APARTMENT/3_4/1.webp");
@@ -14,7 +17,7 @@ const photo8 = assetImage("projects/SOLANCE-APARTMENT/3_4/8.webp");
 const heroPhoto = assetImage("projects/SOLANCE-APARTMENT/cover/HERO.webp");
 const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Solance Apartment — Spaces Architects@ka" };
+
 
 export default function SolanceApartmentPage() {
   return (

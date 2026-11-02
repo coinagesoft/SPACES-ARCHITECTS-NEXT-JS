@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("rasa-farmhouse");
 
 const hero = assetImage("projects/RASA-FARMHOUSE/cover/COVER.webp");
 const photo1 = assetImage("projects/RASA-FARMHOUSE/photographs/Final (1).webp");
@@ -14,7 +17,7 @@ const photo8 = assetImage("projects/RASA-FARMHOUSE/photographs/Final (8).webp");
 const photo9 = assetImage("projects/RASA-FARMHOUSE/photographs/Final (9).webp");
 const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Rasa Farmhouse — Spaces Architects@ka" };
+
 
 export default function RasaFarmhousePage() {
   return (

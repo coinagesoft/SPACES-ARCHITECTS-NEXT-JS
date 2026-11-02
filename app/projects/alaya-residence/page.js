@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage, assetUrl } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("alaya-residence");
 const hero = assetImage("projects/ALAYA-RESIDENCE/cover/COVER.webp");
 const photo1 = assetImage("projects/ALAYA-RESIDENCE/3_4/1_300dpi.webp");
 const photo2 = assetImage("projects/ALAYA-RESIDENCE/3_4/2_300dpi.webp");
@@ -13,7 +16,7 @@ const photo8 = assetImage("projects/ALAYA-RESIDENCE/3_4/8_300dpi.webp");
 const photo9 = assetImage("projects/ALAYA-RESIDENCE/3_4/9_300dpi.webp");
 const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Alaya Residence — Spaces Architects@ka" };
+
 export default function AlayaResidencePage() {
   return (
     <ProjectDetailPage

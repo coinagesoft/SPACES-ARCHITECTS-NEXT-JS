@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("bhimtal-resort");
 const hero = assetImage("projects/BHIMTAL-RESORT/cover/COVER.webp");
 const photo1 = assetImage("projects/BHIMTAL-RESORT/3_4/1.webp");
 const photo2 = assetImage("projects/BHIMTAL-RESORT/3_4/2.webp");
@@ -12,7 +15,7 @@ const photo7 = assetImage("projects/BHIMTAL-RESORT/3_4/7.webp");
 const coverPhoto2 = assetImage("projects/BHIMTAL-RESORT/cover/HERO.webp");
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Bhimtal Resort — Spaces Architects@ka" };
+
 export default function BhimtalResortPage() {
   return (
     <ProjectDetailPage

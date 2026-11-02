@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("amg-office");
 
 const hero = assetImage("projects/AMG-OFFICE/cover/COVER IMAGE.webp");
 
@@ -22,7 +25,7 @@ const section = assetImage("projects/AMG-OFFICE/3_4/SECTION_3x4.webp");
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "AMG Office — Spaces Architects@ka" };
+
 
 export default function AmgOfficePage() {
   return (

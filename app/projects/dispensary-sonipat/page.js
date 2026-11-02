@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("dispensary-sonipat");
 
 const hero = assetImage("projects/DISPENSARY-SONIPAT/3_4/11.webp");
 const photo1 = assetImage("projects/DISPENSARY-SONIPAT/3_4/1.webp");
@@ -17,7 +20,7 @@ const photo11 = assetImage("projects/DISPENSARY-SONIPAT/3_4/11.webp");
 // const photo11 = assetImage("projects/DISPENSARY-SONIPAT/3_4/11.webp");
 const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Dispensary Sonipat — Spaces Architects@ka" };
+
 
 export default function DispensarySonipatPage() {
   return (

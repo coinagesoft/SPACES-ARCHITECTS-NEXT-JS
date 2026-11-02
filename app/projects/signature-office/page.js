@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage, assetUrl } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("signature-office");
 const hero = assetImage("projects/SIGNATURE-OFFICE/cover/COVER.webp");
 const photo1 = assetImage("projects/SIGNATURE-OFFICE/3_4/1.webp");
 const photo2 = assetImage("projects/SIGNATURE-OFFICE/3_4/2.webp");
@@ -11,7 +14,7 @@ const photo6 = assetImage("projects/SIGNATURE-OFFICE/3_4/6.webp");
 const coverPhoto2 = assetImage("projects/SIGNATURE-OFFICE/cover/HERO.webp");
 const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "The Signature Office — Spaces Architects@ka" };
+
 export default function TheSignatureOfficePage() {
   return (
     <ProjectDetailPage

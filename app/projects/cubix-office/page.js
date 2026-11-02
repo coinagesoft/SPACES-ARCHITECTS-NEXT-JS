@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("cubix-office");
 const hero = assetImage("projects/CUBIX-OFFICE/cover/COVER.webp");
 const photo1 = assetImage("projects/CUBIX-OFFICE/3_4/1.webp");
 const photo2 = assetImage("projects/CUBIX-OFFICE/3_4/2.webp");
@@ -20,7 +23,7 @@ const photo15 = assetImage("projects/CUBIX-OFFICE/3_4/Copy of 04 CONCEPT ILLUSTR
 const photo16 = assetImage("projects/CUBIX-OFFICE/3_4/Copy of 4.webp");
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Cubix Office — Spaces Architects@ka" };
+
 
 export default function CubixOfficePage() {
   return (

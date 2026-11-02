@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("jaipur-residence");
 
 const hero = assetImage("projects/JAIPUR-RESIDENCE/cover/COVER.webp");
 
@@ -24,7 +27,7 @@ const img17 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0046.webp");
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Jaipur Residence — Spaces Architects@ka" };
+
 
 export default function JaipurResidencePage() {
   return (

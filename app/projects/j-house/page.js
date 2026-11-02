@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("j-house");
 const hero = assetImage("projects/J-HOUSE/cover/COVER(1).webp");
 const photo1 = assetImage("projects/J-HOUSE/photographs/01 Elevation.webp");
 const photo2 = assetImage("projects/J-HOUSE/photographs/02 Elevation Detail.webp");
@@ -31,7 +34,7 @@ const photo26 = assetImage("projects/J-HOUSE/photographs/Final render.webp");
 const photo27 = assetImage("projects/J-HOUSE/photographs/J House Elevation.webp");
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "J House — Spaces Architects@ka" };
+
 
 export default function JHousePage() {
   return (

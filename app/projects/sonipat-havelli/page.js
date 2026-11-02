@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("sonipat-havelli");
 const hero = assetImage("projects/SONIPAT-HAVELLI/cover/Cover Image.webp");
 const photo1 = assetImage("projects/SONIPAT-HAVELLI/3_4/1.webp");
 const photo2 = assetImage("projects/SONIPAT-HAVELLI/3_4/2.webp");
@@ -18,7 +21,7 @@ const photo14 = assetImage("projects/SONIPAT-HAVELLI/3_4/14.webp");
 const courtyard = assetImage("projects/SONIPAT-HAVELLI/3_4/CENTRAL COURTYARD.webp");
 const coverPhoto2 = assetImage("projects/SONIPAT-HAVELLI/cover/Hero Image.webp");
 
-export const metadata = { title: "Sonipat Haveli — Spaces Architects@ka" };
+
 export default function SonipatHaveliPage() {
   return (
     <ProjectDetailPage

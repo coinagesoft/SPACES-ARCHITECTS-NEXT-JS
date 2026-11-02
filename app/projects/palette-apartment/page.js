@@ -1,13 +1,16 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assets } from "@/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("palette-apartment");
 
 const hero = assets.paletteApartment.hero;
 const photos = assets.paletteApartment.gallery;
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Palette Apartment — Spaces Architects@ka" };
+
 
 export default function PaletteApartmentPage() {
   return (

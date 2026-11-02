@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("sachdeva-residence");
 
 const hero = assetImage("projects/SACHDEVA-FARMHOUSE/cover/COVER.webp");
 
@@ -23,7 +26,7 @@ const staircase15 = assetImage("projects/SACHDEVA-FARMHOUSE/3_4/Copy of STAIRCAS
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Sachdeva Farmhouse — Spaces Architects@ka" };
+
 
 export default function SachdevaFarmhousePage() {
   return (

@@ -1,8 +1,11 @@
 import Footer from "@/components/Footer";
 import ExpressionsGallery from "@/components/ExpressionsGallery";
 import { assetUrl } from "@/assets";
+import { pageMetadata } from "@/config/seo";
 
-export const metadata = { title: "Expressions — Spaces Architects@ka" };
+export const metadata = pageMetadata("expressions");
+
+
 
 // ============================================================
 //  EXPRESSIONS

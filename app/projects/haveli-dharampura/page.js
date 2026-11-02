@@ -6,10 +6,11 @@ import styles from "./page.module.css";
 import MoreProjects from "@/components/MoreProjects";
 import ShareIcons from "@/components/ShareIcons";
 import { mobileCover } from "@/config/mobileCovers";
+import { projectMetadata } from "@/config/seo";
 
-export const metadata = {
-  title: "Haveli Dharampura — Spaces Architects@ka",
-};
+export const metadata = projectMetadata("haveli-dharampura");
+
+
 
 // All content for this project lives right here — edit freely.
 const details = {

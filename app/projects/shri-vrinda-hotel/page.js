@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("shri-vrinda-hotel");
 
 const hero = assetImage("projects/SHRI-VRINDA-HOTEL/cover/COVER.webp");
 const photo1 = assetImage("projects/SHRI-VRINDA-HOTEL/3_4/1.webp");
@@ -23,7 +26,7 @@ const photo17 = assetImage("projects/SHRI-VRINDA-HOTEL/3_4/17.webp");
 const photo18 = assetImage("projects/SHRI-VRINDA-HOTEL/3_4/18.webp");
 const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Shri Vrinda Hotel — Spaces Architects@ka" };
+
 
 export default function ShriVrindaHotelPage() {
   return (

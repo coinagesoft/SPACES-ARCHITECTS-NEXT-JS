@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("legend-veneer-exhibition-delhi");
 const hero = assetImage("projects/LEGEND-VENEER-EXHIBITION-DELHI/cover/HERO.webp");
 const photo1 = assetImage("projects/LEGEND-VENEER-EXHIBITION-DELHI/photographs/BHA_1919.webp");
 const photo2 = assetImage("projects/LEGEND-VENEER-EXHIBITION-DELHI/photographs/BHA_1922.webp");
@@ -14,7 +17,7 @@ const photo9 = assetImage("projects/LEGEND-VENEER-EXHIBITION-DELHI/photographs/B
 const photo10 = assetImage("projects/LEGEND-VENEER-EXHIBITION-DELHI/photographs/BHA_2012.webp");
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Legend Veneer Exhibition Stall — Spaces Architects@ka" };
+
 
 export default function LegendVeneerExhibitionDelhiPage() {
   return (

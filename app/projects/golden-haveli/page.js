@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("golden-haveli");
 
 const hero = assetImage("projects/GOLDEN-HAVELL/cover/Hero Image.webp");
 const construction1 = assetImage("projects/GOLDEN-HAVELL/3_4/construction/1.webp");
@@ -35,7 +38,7 @@ const old3 = assetImage("projects/GOLDEN-HAVELL/old/3.webp");
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Golden Haveli — Spaces Architects@ka" };
+
 
 export default function GoldenHaveliPage() {
   return (

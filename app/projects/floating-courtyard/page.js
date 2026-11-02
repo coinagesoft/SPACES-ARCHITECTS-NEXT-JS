@@ -1,13 +1,16 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assets } from "@/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("floating-courtyard");
 
 const hero = assets.floatingCourtyard.hero;
 const photos = assets.floatingCourtyard.gallery;
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Floating Courtyard — Spaces Architects@ka" };
+
 
 export default function FloatingCourtyardPage() {
   return (

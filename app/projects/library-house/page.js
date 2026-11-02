@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("library-house");
 
 const hero = assetImage("projects/LIBRARY-HOUSE/cover/COVER.webp");
 
@@ -24,7 +27,7 @@ const photo17 = assetImage("projects/LIBRARY-HOUSE/photographs/BHA_3260.webp");
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Library House — Spaces Architects@ka" };
+
 
 export default function LibraryHousePage() {
   return (

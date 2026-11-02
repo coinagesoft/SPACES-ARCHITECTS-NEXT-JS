@@ -1,17 +1,14 @@
 import "./globals.css";
 import { Suspense } from "react";
-import { headers } from "next/headers";
 import { primaryFont } from "@/config/fonts";
-import { metadataForPath } from "@/config/seo";
+import { siteMetadata } from "@/config/seo";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import NavigationProgress from "@/components/NavigationProgress";
 
-// Title, description, keywords, canonical and Open Graph for every page come
-// from config/seo.js. middleware.js passes the URL in these two headers.
-export function generateMetadata() {
-  const h = headers();
-  return metadataForPath(h.get("x-pathname"), h.get("x-search") || "");
-}
+// Site-wide defaults. Every page overrides these with its own title, description,
+// canonical and Open Graph tags from config/seo.js (see each page.js), so the
+// tags are baked into the static HTML that Google crawls.
+export const metadata = siteMetadata;
 
 export default function RootLayout({ children }) {
   return (

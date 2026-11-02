@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("oval-the-stepwell");
 
 const hero = assetImage("projects/THE-STEPWELL/cover/COVER.webp");
 
@@ -23,7 +26,7 @@ const img16 = assetImage("projects/THE-STEPWELL/3_4/16.webp");
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "The Stepwell — Spaces Architects@ka" };
+
 
 export default function TheStepwellPage() {
   return (

@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("architects-office");
 
 const hero = assetImage("projects/ARCHITECTS-OFFICE/cover/COVER IMAGE.webp");
 
@@ -26,7 +29,7 @@ const sketch5 = assetImage("projects/ARCHITECTS-OFFICE/3_4a/sketch_(5).webp");
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Architect's Office — Spaces Architects@ka" };
+
 
 export default function ArchitectsOfficePage() {
   return (

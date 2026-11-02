@@ -1,5 +1,8 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { assetImage, assetUrl } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("house-of-dancing-screens");
 
 // const hero = assetImage("projects/HOUSE-OF-DANCING-SCREENS/cover/COVER.webp");
 const heroVideo = assetUrl("projects/HOUSE-OF-DANCING-SCREENS/cover/The House Of Dancing Screens.mp4");
@@ -25,7 +28,7 @@ const photo19 = assetImage("projects/HOUSE-OF-DANCING-SCREENS/photographs/BHA_18
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "House of Dancing Screens — Spaces Architects@ka" };
+
 
 export default function HouseOfDancingScreensPage() {
   return (

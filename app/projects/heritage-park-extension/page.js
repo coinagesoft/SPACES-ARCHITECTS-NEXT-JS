@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage, assetUrl } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("heritage-park-extension");
 const hero = assetImage("projects/HERITAGE-PARK-EXTENSION/cover/HERO (2).webp");
 const photo1 = assetImage("projects/HERITAGE-PARK-EXTENSION/3_4/1.webp");
 const photo1a = assetImage("projects/HERITAGE-PARK-EXTENSION/3_4/1(1).webp");
@@ -16,7 +19,7 @@ const photo8 = assetImage("projects/HERITAGE-PARK-EXTENSION/3_4/8.webp");
 const coverPhoto1 = assetImage("projects/HERITAGE-PARK-EXTENSION/cover/COVER.webp");
 const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Extension of Heritage Park — Spaces Architects@ka" };
+
 export default function ExtensionOfHeritageParkPage() {
   return (
     <ProjectDetailPage

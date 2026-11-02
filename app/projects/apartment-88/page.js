@@ -1,13 +1,16 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assets } from "@/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("apartment-88");
 
 const hero = assets.apartment88.hero;
 const photos = assets.apartment88.gallery.filter(Boolean);
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Apartment 88 — Spaces Architects@ka" };
+
 
 export default function Apartment88Page() {
   return (

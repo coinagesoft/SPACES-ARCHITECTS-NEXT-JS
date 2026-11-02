@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("gandhi-darshan-park");
 
 const hero = assetImage("projects/GANDHI-DARSHAN-PARK/cover/Cover Image.webp");
 
@@ -15,7 +18,7 @@ const img8 = assetImage("projects/GANDHI-DARSHAN-PARK/3_4/8.webp");
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Gandhi Darshan Park — Spaces Architects@ka" };
+
 
 export default function GandhiDarshanParkPage() {
   return (

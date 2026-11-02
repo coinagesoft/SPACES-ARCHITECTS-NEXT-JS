@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("the-color-box-office");
 
 const hero = assetImage("projects/COLOR-BOX-OFFICE/cover/COVER.webp");
 
@@ -16,7 +19,7 @@ const img9 = assetImage("projects/COLOR-BOX-OFFICE/3_4/9.webp");
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "The Colour Box Office — Spaces Architects@ka" };
+
 
 export default function TheColorBoxOfficePage() {
   return (

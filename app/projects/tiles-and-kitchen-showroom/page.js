@@ -7,6 +7,9 @@ import { mobileCover } from "@/config/mobileCovers";
 import styles from "./page.module.css";
 import { assetImage, assetUrl } from "@/config/assets";
 import ShareIcons from "@/components/ShareIcons";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("tiles-and-kitchen-showroom");
 
 // Hero image from TILES-AND-KITCHEN-SHOWROOM/cover
 const heroImage = assetImage("projects/TILES-AND-KITCHEN-SHOWROOM/cover/COVER IMAGE.webp");
@@ -25,9 +28,7 @@ const img10 = assetImage("projects/TILES-AND-KITCHEN-SHOWROOM/3_4/10.webp");
 const img11 = assetImage("projects/TILES-AND-KITCHEN-SHOWROOM/3_4/11.webp");
 const img12 = assetImage("projects/TILES-AND-KITCHEN-SHOWROOM/3_4/12.webp");
 const img13 = assetImage("projects/TILES-AND-KITCHEN-SHOWROOM/3_4/13.webp");
-export const metadata = {
-  title: "Tiles & Kitchen Showroom — Spaces Architects@ka",
-};
+
 
 // All content for this project lives right here — edit freely.
 const details = {

@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("marmo-home-office");
 
 const hero = assetImage("projects/MARMO-HOME-OFFICE/cover/COVER.webp");
 // const photo1 = assetImage("projects/MARMO-HOME-OFFICE/3_4/1.webp");
@@ -13,7 +16,7 @@ const photo7 = assetImage("projects/MARMO-HOME-OFFICE/3_4/7.webp");
 const photo8 = assetImage("projects/MARMO-HOME-OFFICE/3_4/8.webp");
 const heroPhoto = assetImage("projects/MARMO-HOME-OFFICE/cover/HERO.webp");
 
-export const metadata = { title: "Marmo Home Office — Spaces Architects@ka" };
+
 
 export default function MarmoHomeOfficePage() {
   return (

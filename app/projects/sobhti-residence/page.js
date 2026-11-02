@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage, assetUrl } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("sobhti-residence");
 const hero = assetImage("projects/SOBHTI-RESIDENCE/cover/COVER.webp");
 const photo1 = assetImage("projects/SOBHTI-RESIDENCE/3_4/1.webp");
 const photo2 = assetImage("projects/SOBHTI-RESIDENCE/3_4/2.webp");
@@ -12,7 +15,7 @@ const photo7 = assetImage("projects/SOBHTI-RESIDENCE/3_4/7.webp");
 const heroPhoto = assetImage("projects/SOBHTI-RESIDENCE/cover/HERO.webp");
 const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Sobti's Residence — Spaces Architects@ka" };
+
 export default function SobtisResidencePage() {
   return (
     <ProjectDetailPage

@@ -5,8 +5,11 @@ import Footer from "@/components/Footer";
 import { assetImage } from "@/assets";
 import { aboutCopy } from "@/config/site";
 import styles from "./page.module.css";
+import { pageMetadata } from "@/config/seo";
 
-export const metadata = { title: "Studio — Spaces Architects@ka" };
+export const metadata = pageMetadata("about");
+
+
 
 // ---- Page images (served from the media server via assetImage) ----
 const heroImage = assetImage("About_hero.jpg");

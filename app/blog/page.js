@@ -4,8 +4,11 @@ import SiteChrome from "@/components/SiteChrome";
 import Footer from "@/components/Footer";
 import { blogPosts } from "@/config/blogs";
 import styles from "./page.module.css";
+import { pageMetadata } from "@/config/seo";
 
-export const metadata = { title: "Blog — Spaces Architects@ka" };
+export const metadata = pageMetadata("blog");
+
+
 
 // Listing copy for the 8 original posts is kept separate from the article
 // text (detail pages use the longer editorial titles). The 5 newer posts

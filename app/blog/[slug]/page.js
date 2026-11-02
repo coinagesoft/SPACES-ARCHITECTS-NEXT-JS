@@ -4,25 +4,16 @@ import Footer from "@/components/Footer";
 import SiteChrome from "@/components/SiteChrome";
 import { blogPosts, getBlogPost } from "@/config/blogs";
 import styles from "./page.module.css";
+import { blogMetadata } from "@/config/seo";
 
 export function generateStaticParams() {
   return blogPosts.map(({ id }) => ({ slug: id }));
 }
 
-// "#Architecture #LuxuryHomes" -> ["Architecture", "LuxuryHomes"]
-function getTags(post) {
-  const block = post?.blocks.find((b) => b.type === "tags");
-  return block ? block.text.split(/\s+/).map((t) => t.replace(/^#/, "")).filter(Boolean) : [];
-}
-
 export function generateMetadata({ params }) {
   const post = getBlogPost(params.slug);
-  if (!post) return { title: "Blog — Spaces Architects@ka" };
-  const tags = getTags(post);
-  return {
-    title: `${post.title} — Spaces Architects@ka`,
-    ...(tags.length ? { keywords: tags } : {}),
-  };
+  if (!post) return { title: "Blog | Spaces Architects@ka" };
+  return blogMetadata(params.slug);
 }
 
 function renderBlock(block, index) {

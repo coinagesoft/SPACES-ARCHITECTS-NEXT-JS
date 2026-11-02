@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("nocc-office");
 
 const hero = assetImage("projects/NOCC-OFFICE/cover/COVER IMAGE.webp");
 
@@ -25,7 +28,7 @@ const img16 = assetImage("projects/NOCC-OFFICE/3_4/16.webp");
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "NOCC Office — Spaces Architects@ka" };
+
 
 export default function NoccOfficePage() {
   return (

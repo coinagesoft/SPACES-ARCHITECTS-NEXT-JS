@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("house-of-sculpted-screens");
 
 // No separate cover folder for this project yet, so photographs/1.webp is the hero
 const hero = assetImage("projects/HOUSE-OF-SCULPTED-SCREENS/photographs/1.webp");
@@ -12,7 +15,7 @@ const poeticHouse = assetImage("projects/HOUSE-OF-SCULPTED-SCREENS/photographs/p
 const whatsapp1 = assetImage("projects/HOUSE-OF-SCULPTED-SCREENS/photographs/WhatsApp Image 2026-08-27 at 12.58.08.webp");
 const whatsapp2 = assetImage("projects/HOUSE-OF-SCULPTED-SCREENS/photographs/WhatsApp Image 2026-08-27 at 13.01.12.webp");
 
-export const metadata = { title: "House of Sculpted Screens — Spaces Architects@ka" };
+
 
 export default function HouseOfSculptedScreensPage() {
   return (

@@ -1,13 +1,16 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assets } from "@/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("slender-house");
 
 const hero = assets.slenderHouse.hero;
 const photos = assets.slenderHouse.gallery.filter(Boolean);
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "6 X 18 Slender House — Spaces Architects@ka" };
+
 
 export default function SlenderHousePage() {
   return (

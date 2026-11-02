@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("house-of-blue-courtyard");
 
 const hero = assetImage("projects/THE-BLUE-COURTYARD/cover/cover.webp");
 const skyHero = assetImage("projects/THE-BLUE-COURTYARD/cover/hero (1).webp");
@@ -20,7 +23,7 @@ const img12 = assetImage("projects/THE-BLUE-COURTYARD/3_4/12.webp");
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "House of Blue Courtyard — Spaces Architects@ka" };
+
 
 export default function HouseOfBlueCourtyardPage() {
   return (

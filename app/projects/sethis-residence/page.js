@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage, assetUrl } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("sethis-residence");
 const hero = assetImage("projects/SETHIS-RESIDENCE/cover/COVER.webp");
 const photo1 = assetImage("projects/SETHIS-RESIDENCE/3_4/1.webp");
 const photo2 = assetImage("projects/SETHIS-RESIDENCE/3_4/2.webp");
@@ -17,7 +20,7 @@ const photo12 = assetImage("projects/SETHIS-RESIDENCE/3_4/12.webp");
 const heroPhoto = assetImage("projects/SETHIS-RESIDENCE/cover/HERO.webp");
 const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Sethi's Residence — Spaces Architects@ka" };
+
 export default function SethisResidencePage() {
   return (
     <ProjectDetailPage

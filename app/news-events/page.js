@@ -2,8 +2,11 @@ import SiteChrome from "@/components/SiteChrome";
 import Footer from "@/components/Footer";
 import NewsEventsGallery from "@/components/NewsEventsGallery";
 import { assetUrl } from "@/assets";
+import { pageMetadata } from "@/config/seo";
 
-export const metadata = { title: "News + Events — Spaces Architects@ka" };
+export const metadata = pageMetadata("news-events");
+
+
 
 // ============================================================
 //  NEWS + EVENTS — newspaper cutouts

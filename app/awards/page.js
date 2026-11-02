@@ -3,8 +3,11 @@ import SiteChrome from "@/components/SiteChrome";
 import Footer from "@/components/Footer";
 import { assets } from "@/assets";
 import styles from "./page.module.css";
+import { pageMetadata } from "@/config/seo";
 
-export const metadata = { title: "Awards — Spaces Architects@ka" };
+export const metadata = pageMetadata("awards");
+
+
 
 const awards = [
   [

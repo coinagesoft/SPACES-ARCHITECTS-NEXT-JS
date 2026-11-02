@@ -2,8 +2,11 @@ import SiteChrome from "@/components/SiteChrome";
 import Footer from "@/components/Footer";
 import TestimonialsGallery from "@/components/TestimonialsGallery";
 import { assetUrl } from "@/assets";
+import { pageMetadata } from "@/config/seo";
 
-export const metadata = { title: "Testimonials — Spaces Architects@ka" };
+export const metadata = pageMetadata("testimonials");
+
+
 
 // ============================================================
 //  TESTIMONIALS — images only

@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("sanctum-house");
 
 const hero = assetImage("projects/SANCTUM-HOUSE/cover/COVER.webp");
 // const photo1 = assetImage("projects/SANCTUM-HOUSE/3_4/1.webp");
@@ -19,7 +22,7 @@ const photo13 = assetImage("projects/SANCTUM-HOUSE/3_4/13.webp");
 const heroPhoto = assetImage("projects/SANCTUM-HOUSE/cover/HERO.webp");
 const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Sanctum House — Spaces Architects@ka" };
+
 
 export default function SanctumHousePage() {
   return (

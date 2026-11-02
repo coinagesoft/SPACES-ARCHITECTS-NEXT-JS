@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("pattern-play");
 
 // The file in the folder is named "COVER (1)", so the path keeps the "(1)"
 const hero = assetImage("projects/PATTERN-PLAY/cover/COVER (1).webp");
@@ -19,7 +22,7 @@ const img11 = assetImage("projects/PATTERN-PLAY/3_4/11.webp");
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Pattern Play — Spaces Architects@ka" };
+
 
 export default function PatternPlayPage() {
   return (

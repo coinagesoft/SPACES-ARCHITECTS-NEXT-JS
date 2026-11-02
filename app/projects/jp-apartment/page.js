@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("jp-apartment");
 
 const hero = assetImage("projects/JP-APARTMENT/cover/COVER.webp");
 
@@ -19,7 +22,7 @@ const img12 = assetImage("projects/JP-APARTMENT/3_4/12.webp");
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "JP Apartment — Spaces Architects@ka" };
+
 
 export default function JpApartmentPage() {
   return (

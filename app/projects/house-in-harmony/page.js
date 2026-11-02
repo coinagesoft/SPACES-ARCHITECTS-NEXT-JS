@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("house-in-harmony");
 
 const hero = assetImage("projects/HOUSE-IN-HARMONY/cover/COVER.webp");
 // const photo1 = assetImage("projects/HOUSE-IN-HARMONY/3_4/1.webp");
@@ -13,7 +16,7 @@ const photo7 = assetImage("projects/HOUSE-IN-HARMONY/3_4/7.webp");
 const heroPhoto = assetImage("projects/HOUSE-IN-HARMONY/cover/HERO.webp");
 const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "The House in Harmony — Spaces Architects@ka" };
+
 
 export default function HouseInHarmonyPage() {
   return (

@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("veya-apartment");
 
 const hero = assetImage("projects/VEYA-APARTMENT/cover/COVER.webp");
 
@@ -16,7 +19,7 @@ const img9 = assetImage("projects/VEYA-APARTMENT/photographs/9.webp");
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Veya Apartment — Spaces Architects@ka" };
+
 
 export default function VeyaApartmentPage() {
   return (

@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("the-screen-house");
 
 const hero = assetImage("projects/SCREEN-HOUSE/cover/COVER.webp");
 
@@ -19,7 +22,7 @@ const img12 = assetImage("projects/SCREEN-HOUSE/3_4/12.webp");
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "The Screen House — Spaces Architects@ka" };
+
 
 export default function TheScreenHousePage() {
   return (

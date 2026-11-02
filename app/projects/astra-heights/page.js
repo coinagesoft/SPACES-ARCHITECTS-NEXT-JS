@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage, assetUrl } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("astra-heights");
 const hero = assetImage("projects/ASTRA-HEIGHTS/cover/HERO OP2.webp");
 const photo1 = assetImage("projects/ASTRA-HEIGHTS/3_4/1.webp");
 const photo2 = assetImage("projects/ASTRA-HEIGHTS/3_4/2.webp");
@@ -13,7 +16,7 @@ const photo8 = assetImage("projects/ASTRA-HEIGHTS/3_4/8.webp");
 const photo9 = assetImage("projects/ASTRA-HEIGHTS/3_4/9.webp");
 const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Astra Heights — Spaces Architects@ka" };
+
 export default function AstraHeightsPage() {
   return (
     <ProjectDetailPage

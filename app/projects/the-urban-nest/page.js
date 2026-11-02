@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("the-urban-nest");
 
 const hero = assetImage("projects/THE-URBAN-NEST/cover/COVER.png");
 const photo0 = assetImage("projects/THE-URBAN-NEST/3_4/0.webp");
@@ -16,7 +19,7 @@ const photo9 = assetImage("projects/THE-URBAN-NEST/3_4/9.webp");
 const photo10 = assetImage("projects/THE-URBAN-NEST/3_4/10.webp");
 const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "The Urban Nest — Spaces Architects@ka" };
+
 
 export default function TheUrbanNestPage() {
   return (

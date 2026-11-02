@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("house-of-curves");
 
 const hero = assetImage("projects/HOUSE-OF-CURVES/cover/COVER.webp");
 const p1 = assetImage("projects/HOUSE-OF-CURVES/3_4/1.webp");
@@ -33,7 +36,7 @@ const terrace4Night = assetImage("projects/HOUSE-OF-CURVES/3_4/terrace 4 night.w
 const terrace5 = assetImage("projects/HOUSE-OF-CURVES/3_4/terrace 5.webp");
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "House of Curves — Spaces Architects@ka" };
+
 export default function HouseOfCurvesPage() {
   return (
     <ProjectDetailPage

@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("the-garden-house");
 
 const hero = assetImage("projects/THE GARDEN HOUSE/COVER/COVER.webp");
 const photo1 = assetImage("projects/THE GARDEN HOUSE/3_4/1.webp");
@@ -9,7 +12,7 @@ const photo3 = assetImage("projects/THE GARDEN HOUSE/3_4/3.webp");
 const photo4 = assetImage("projects/THE GARDEN HOUSE/3_4/4.webp");
 const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "The Garden House — Spaces Architects@ka" };
+
 
 export default function TheGardenHousePage() {
   return (

@@ -1,6 +1,9 @@
 import ProjectDetailPage from "../ProjectDetailPage";
 import { mobileCover } from "@/config/mobileCovers";
 import { assetImage, assetUrl } from "@/config/assets";
+import { projectMetadata } from "@/config/seo";
+
+export const metadata = projectMetadata("krishas-residence");
 const hero = assetImage("projects/KRISHAS-RESIDENCE/cover/COVER.webp");
 const photo1 = assetImage("projects/KRISHAS-RESIDENCE/3_4/1.webp");
 const photo2 = assetImage("projects/KRISHAS-RESIDENCE/3_4/2.webp");
@@ -14,7 +17,7 @@ const photo9 = assetImage("projects/KRISHAS-RESIDENCE/3_4/9.webp");
 const photo10 = assetImage("projects/KRISHAS-RESIDENCE/3_4/10.webp");
 const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
-export const metadata = { title: "Krisha's Residence — Spaces Architects@ka" };
+
 export default function KrishasResidencePage() {
   return (
     <ProjectDetailPage
