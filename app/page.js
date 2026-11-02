@@ -7,6 +7,10 @@ import { assets } from "@/assets";
 import { assetImage } from "@/config/assets";
 import { homeCopy } from "@/config/site";
 
+import { pageMetadata } from "@/config/seo";
+
+export const metadata = pageMetadata("home");
+
 // Full phrases that should be highlighted, exactly as they appear in the copy.
 // Order matters if one phrase could be a substring of another (longest first).
 const HIGHLIGHT_PHRASES = [

@@ -1,0 +1,31 @@
+# robots.txt — spacesarchitects-ka.com
+#
+# ---------------------------------------------------------------------------
+# DO NOT add Disallow rules for the injected spam paths left over from the
+# WordPress compromise:  /shop/   /category/   /cate-   /author/   /<digits>/
+#
+# A Disallow stops Google CRAWLING those URLs, which means it never sees the
+# 410 Gone that middleware.ts now returns — and an uncrawlable URL can stay
+# in the index indefinitely ("Indexed, though blocked by robots.txt").
+#
+# They must stay crawlable and answer 410 until they drop out of the index.
+# Once Search Console > Pages shows the count near the real page count
+# (~116), blocking them here is optional and saves a little crawl budget.
+# Until then, leaving this file permissive IS the strategy.
+# ---------------------------------------------------------------------------
+#
+# AI answer engines (GPTBot, ClaudeBot, PerplexityBot, Google-Extended,
+# Applebot-Extended, OAI-SearchBot) are allowed deliberately by the rule
+# below. Blocking them would cost citations in ChatGPT / Perplexity / Gemini
+# answers with no upside for this site. Do not add groups to block them.
+#
+# They are covered by "User-agent: *" — a crawler only needs to not be
+# disallowed. Separate per-bot groups are avoided on purpose: a crawler that
+# matches its own group ignores the "*" group entirely, so each group would
+# have to repeat every Disallow or quietly lose it.
+
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://spacesarchitects-ka.com/sitemap.xml
