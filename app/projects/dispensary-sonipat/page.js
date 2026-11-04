@@ -7,9 +7,7 @@ export const metadata = projectMetadata("dispensary-sonipat");
 
 const hero = assetImage("projects/DISPENSARY-SONIPAT/3_4/11.webp");
 const photo1 = assetImage("projects/DISPENSARY-SONIPAT/3_4/1.webp");
-const photo2 = assetImage("projects/DISPENSARY-SONIPAT/3_4/2.webp");
 const photo3 = assetImage("projects/DISPENSARY-SONIPAT/3_4/3.webp");
-const photo4 = assetImage("projects/DISPENSARY-SONIPAT/3_4/4.webp");
 const photo5 = assetImage("projects/DISPENSARY-SONIPAT/3_4/5.webp");
 const photo6 = assetImage("projects/DISPENSARY-SONIPAT/3_4/6.webp");
 const photo7 = assetImage("projects/DISPENSARY-SONIPAT/3_4/7.webp");
@@ -17,10 +15,8 @@ const photo8 = assetImage("projects/DISPENSARY-SONIPAT/3_4/8.webp");
 const photo9 = assetImage("projects/DISPENSARY-SONIPAT/3_4/9.webp");
 const photo10 = assetImage("projects/DISPENSARY-SONIPAT/3_4/10.webp");
 const photo11 = assetImage("projects/DISPENSARY-SONIPAT/3_4/11.webp");
-// const photo11 = assetImage("projects/DISPENSARY-SONIPAT/3_4/11.webp");
-const Orange = ({ children }) => <span style={{ color: " #FEA50B" }}>{children}</span>;
 
-
+const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
 export default function DispensarySonipatPage() {
   return (
@@ -31,7 +27,7 @@ export default function DispensarySonipatPage() {
       hero={hero}
       mobileHero={mobileCover("dispensary-sonipat")}
       photos={[
-        photo1, photo2, photo3, photo4, photo5, photo6,
+        photo1, photo3, photo5, photo6,
         photo7, photo8, photo9, photo10, photo11,
       ]}
       details={{

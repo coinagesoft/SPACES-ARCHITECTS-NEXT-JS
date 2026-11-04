@@ -5,25 +5,24 @@ import { projectMetadata } from "@/config/seo";
 
 export const metadata = projectMetadata("house-of-blue-courtyard");
 
-const hero = assetImage("projects/THE-BLUE-COURTYARD/cover/cover.webp");
+const hero = assetImage("projects/THE-BLUE-COURTYARD/cover/hero (1).webp");
 const skyHero = assetImage("projects/THE-BLUE-COURTYARD/cover/hero (1).webp");
 
-const img1 = assetImage("projects/THE-BLUE-COURTYARD/3_4/1.webp");
-const img2 = assetImage("projects/THE-BLUE-COURTYARD/3_4/2.webp");
-const img3 = assetImage("projects/THE-BLUE-COURTYARD/3_4/3.webp");
-const img4 = assetImage("projects/THE-BLUE-COURTYARD/3_4/4.webp");
-const img5 = assetImage("projects/THE-BLUE-COURTYARD/3_4/5.webp");
-const img6 = assetImage("projects/THE-BLUE-COURTYARD/3_4/6.webp");
-const img7 = assetImage("projects/THE-BLUE-COURTYARD/3_4/7.webp");
-const img8 = assetImage("projects/THE-BLUE-COURTYARD/3_4/8.webp");
-const img9 = assetImage("projects/THE-BLUE-COURTYARD/3_4/9.webp");
-const img10 = assetImage("projects/THE-BLUE-COURTYARD/3_4/10.webp");
-const img11 = assetImage("projects/THE-BLUE-COURTYARD/3_4/11.webp");
-const img12 = assetImage("projects/THE-BLUE-COURTYARD/3_4/12.webp");
+const facadeFront = assetImage("projects/THE-BLUE-COURTYARD/3_4/Front view of facade.webp");
+const facadeEvening = assetImage("projects/THE-BLUE-COURTYARD/3_4/facade evening view.webp");
+const heroImage = assetImage("projects/THE-BLUE-COURTYARD/3_4/Hero Image.webp");
+const courtyard2 = assetImage("projects/THE-BLUE-COURTYARD/3_4/Courtyard view 2.webp");
+const poolView = assetImage("projects/THE-BLUE-COURTYARD/3_4/pool view from staircase.webp");
+const livingRoom = assetImage("projects/THE-BLUE-COURTYARD/3_4/living room.webp");
+const casualLounge = assetImage("projects/THE-BLUE-COURTYARD/3_4/casual lounge.webp");
+const corridorGround = assetImage("projects/THE-BLUE-COURTYARD/3_4/corridor view-ground floor.webp");
+const staircase = assetImage("projects/THE-BLUE-COURTYARD/3_4/staircase view.webp");
+const staircaseDining = assetImage("projects/THE-BLUE-COURTYARD/3_4/staircase view from dining.webp");
+const corridorFirst = assetImage("projects/THE-BLUE-COURTYARD/3_4/Corridor view-first floor.webp");
+const sonBedroom = assetImage("projects/THE-BLUE-COURTYARD/3_4/Son_s bedroom first floor.webp");
+const guestBedroom = assetImage("projects/THE-BLUE-COURTYARD/3_4/Guest Bedroom-First floor.webp");
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
-
-
 
 export default function HouseOfBlueCourtyardPage() {
   return (
@@ -33,14 +32,21 @@ export default function HouseOfBlueCourtyardPage() {
       location="Vasant Kunj, New Delhi"
       hero={hero}
       mobileHero={mobileCover("house-of-blue-courtyard")}
-      // Same order as the old gallery array
+      // Order: exterior -> courtyard -> living spaces -> circulation -> bedrooms
       photos={[
-        img1, img2,
-        img3, img8, img9,
-        img7,
-        img10, img4, img5,
-         img12,
-        img6, 
+        facadeFront,
+        facadeEvening,
+        heroImage,
+        courtyard2,
+        poolView,
+        livingRoom,
+        casualLounge,
+        corridorGround,
+        staircase,
+        staircaseDining,
+        corridorFirst,
+        sonBedroom,
+        guestBedroom,
       ]}
       details={{
         Project: "House of Blue Courtyard",

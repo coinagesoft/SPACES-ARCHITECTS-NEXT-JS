@@ -84,7 +84,7 @@ export default function HouseOfSteppedGardenPage() {
       }}
       publications={[
         "Habitus Living",
-        "ArchDaily",
+        "TOSTEM AWARDS 2026 (Finalist)",
         "Architectural Digest",
       ]}
       description={[

@@ -74,7 +74,7 @@ const humanize = (slug) =>
 const pageSeo = {
   "home": {
     path: "/",
-    title: "Spaces Architects@ka | Architects in Delhi, Gurgaon & Noida",
+    title: "Spaces Architects@ka | Architects in Delhi, NCR",
     description:
       "Award-winning architects in Delhi, Gurgaon & Noida. A South Delhi studio designing luxury homes, interiors, offices and landscape since 2000.",
     keywords: "architects in delhi, architects in gurgaon, architects in noida, spaces architects, office interior designers in delhi, architects in south delhi, landscape architects in delhi, best architects in delhi, luxury interior designers in delhi",
@@ -95,7 +95,7 @@ const pageSeo = {
   },
   "blog": {
     path: "/blog",
-    title: "Journal | Notes on Architecture, Heritage & Design",
+    title: "Blogs | Journal | notes on Architecture , Heritage & Design",
     description:
       "Essays on haveli restoration, courtyards, screens, exposed concrete and designing for narrow sites — written from 25 years of practice in Delhi.",
     keywords: "architects in delhi, architecture blog india, haveli restoration, courtyard house design india, spaces architects",

@@ -8,8 +8,6 @@ import { pageMetadata } from "@/config/seo";
 
 export const metadata = pageMetadata("blog");
 
-
-
 // Listing copy for the 8 original posts is kept separate from the article
 // text (detail pages use the longer editorial titles). The 5 newer posts
 // carry their own `listing` copy in config/blogs.js.
@@ -48,6 +46,20 @@ const listingCopy = {
   },
 };
 
+// Newest first. Posts with a missing or unparseable date go to the end,
+// keeping their original relative order (Array.sort is stable).
+const toTime = (value) => {
+  const t = Date.parse(value);
+  return Number.isNaN(t) ? -Infinity : t;
+};
+
+const sortedPosts = [...blogPosts].sort((a, b) => {
+  const ta = toTime(a.date);
+  const tb = toTime(b.date);
+  if (ta === tb) return 0;
+  return tb - ta;
+});
+
 export default function BlogPage() {
   return (
     <main>
@@ -55,7 +67,7 @@ export default function BlogPage() {
 
       <section className={styles.blogListing}>
         <div className={styles.blogGrid}>
-          {blogPosts.map((post) => {
+          {sortedPosts.map((post) => {
             const card = listingCopy[post.id] || post.listing || post;
 
             return (
