@@ -41,7 +41,7 @@
   margin: 0;
   color: #6B6B6B;
   font-size: clamp(28px, 3.2vw, 48px);
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: 0.08em;
   line-height: 1.2;
   text-transform: capitalize;
@@ -88,7 +88,7 @@
   margin: 28px 0 10px;
   color: #6B6B6B;
   font-size: 17px;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0.06em;
   line-height: 1.35;
   text-align: left;
@@ -111,7 +111,7 @@
 }
 
 .quote {
-  margin: 28px 0 0;
+  margin: 28px 0 24px;
   padding-left: 20px;
   border-left: 1px solid #fea50b;
   color: #6B6B6B;
@@ -119,6 +119,11 @@
   letter-spacing: 0.05em;
   line-height: 1.5;
   text-align: left;
+}
+/* Small grey lines (byline / sign-off / bio) that follow a paragraph or quote */
+.body .quote + .subtitle,
+.body p + .subtitle {
+  margin-top: 24px;
 }
 
 /* Hashtags: kept in the page for search engines, not visible to visitors */

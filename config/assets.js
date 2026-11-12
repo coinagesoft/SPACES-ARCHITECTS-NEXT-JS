@@ -714,19 +714,61 @@ export const assets = {
 
     // ---- Blog page (editorial / journal entries) ----
     blog: [
-        {
+            {
             id: "a-legacy-restored",
-            title: "Six Years, One Haveli: The Restoration of Haveli Dharampura",
+            title: "Haveli Dharampura: The Art of Restoring Architectural Heritage",
             image: blogLegacyRestored,
-            excerpt: "Restoring a historic haveli is never simply a matter of repairing walls. It is an exercise in understanding memory, craftsmanship and time.",
-            paragraphs: [
-                "Restoring a historic haveli is never simply a matter of repairing walls. It is an exercise in understanding memory, craftsmanship and the way a building has changed through generations.",
-                "Haveli Dharampura presented a particularly compelling challenge. The building carried the character of Old Delhi, but years of neglect had weakened many of its elements. The objective was not to create a new building that merely looked historic. It was to recover the architectural spirit of the existing haveli while allowing it to live again.",
-                "The restoration process therefore began with observation. Proportions, courtyards, openings, ornament, materials and details had to be understood before decisions could be made. Wherever possible, the existing fabric became the starting point for intervention.",
-                "Traditional craftsmanship played a central role. The project demonstrated that conservation is not only about preserving physical material; it is also about preserving knowledge—the ability to work with lime, stone, wood, traditional details and hand-crafted surfaces.",
-                "The most rewarding aspect of such a project is the moment when a neglected structure begins to recover its presence. Architecture becomes a bridge between what a place was and what it can become.",
-                "For me, Haveli Dharampura reinforced a simple belief: restoration should respect the past without turning architecture into a museum. A historic building deserves a future as much as it deserves a history.",
+            excerpt: "A reflection on memory, craftsmanship and giving historic architecture a future.",
+            lead: [
+                { type: "sub", text: "A reflection on memory, craftsmanship and giving historic architecture a future" },
+                { type: "sub", text: "Kapil Aggarwal | Principal Architect" },
+                { type: "quote", text:"A historic building deserves a future as much as it deserves a history." },
+                { type: "p", text: "Restoring a historic building is never merely an exercise in repairing walls or bringing an old structure back to life. It is an exploration of memory, craftsmanship, cultural identity and the passage of time. Every historic building carries stories within its walls—of generations, traditions, changing lifestyles and the communities that have shaped it." },
+                { type: "p", text: "Haveli Dharampura, nestled within the historic fabric of Old Delhi, presented an opportunity to engage with this relationship between architecture and memory." },
+                { type: "p", text: "The haveli retained the distinctive character of Old Delhi, yet years of neglect had taken their toll on its structure and architectural elements. The challenge was not to create something that simply looked historic, but to rediscover the architectural spirit of the original building and allow it to become relevant once again." },
             ],
+            sections: [
+                {
+                    heading: "Understanding Before Intervening",
+                    paragraphs: [
+                        "Our approach to the restoration began with observation rather than intervention.",
+                        "We studied the proportions, spatial relationships, courtyards, openings, ornamentation, materials and architectural details that defined the haveli. Understanding how these elements worked together was essential before making any decisions.",
+                        "The intention was to preserve the existing architectural language wherever possible, allowing the original fabric to guide the restoration process. Rather than imposing a contemporary architectural expression, the project sought to uncover and reinforce the qualities that already existed within the building.",
+                    ],
+                },
+                {
+                    heading: "The Language of Traditional Craftsmanship",
+                    paragraphs: [
+                        "One of the most important aspects of restoring historic architecture is recognising that materials and craftsmanship are inseparable from the building's identity.",
+                        "At Haveli Dharampura, traditional materials and construction techniques played a central role. Lime, stone, wood, handcrafted surfaces and intricate architectural details were approached with an understanding of their historical significance.",
+                        "Conservation, in this sense, extends beyond preserving physical structures. It also involves preserving knowledge—the skills of artisans, the understanding of traditional materials and the techniques that have been passed down through generations.",
+                        "The craftsmanship embedded in historic architecture is not merely decorative. It represents a cultural language that deserves continuity.",
+                    ],
+                },
+                {
+                    heading: "Architecture as a Bridge Between Past and Future",
+                    paragraphs: [
+                        "The most rewarding aspect of a restoration project is witnessing a neglected structure gradually recover its presence.",
+                        "A building that once stood as a fragment of a forgotten past begins to participate in the life of the city again. Its courtyards, spaces and architectural details regain meaning, allowing people to experience a piece of history rather than simply observe it.",
+                        "For us, the objective was to respect the historical identity of Haveli Dharampura while allowing the building to embrace a new chapter. This balance between conservation and contemporary relevance is perhaps the most delicate aspect of architectural restoration.",
+                    ],
+                },
+                {
+                    heading: "Preserving History Without Freezing Time",
+                    paragraphs: [
+                        "I have always believed that restoration should not turn architecture into a museum. Historic buildings deserve to evolve, provided that the interventions respect their original character and cultural significance.",
+                        "The success of conservation lies in knowing what must remain untouched, what can be repaired and where sensitive intervention can help a building find a new purpose.",
+                        "Haveli Dharampura reinforced a simple but enduring belief: architecture is as much about memory as it is about creation.",
+                        "Architecture is not always about creating something new.",
+                        "Sometimes, it is about giving the past a future.",
+                        "At SpacesArchitects@ka, this project remains an important reminder that architecture is not always about making something new. Sometimes, its greatest contribution lies in rediscovering what already exists and allowing it to live again.",
+                    ],
+                },
+            ],
+            signoff: {
+                name: "Kapil Aggarwal",
+                tagline: "Principal Architect, SpacesArchitects@ka",
+            },
         },
         {
             id: "a-pause-in-the-walled-city",
@@ -743,98 +785,425 @@ export const assets = {
                 "The larger lesson is one I continue to carry into my work: architecture can protect memory while simultaneously improving everyday life.",
             ],
         },
-        {
+               {
             id: "house-becomes-a-landscape",
-            title: "House of Stepped Gardens: When a House Becomes a Landscape",
+            title: "House of Stepped Gardens: When Architecture Becomes Landscape",
             image: blogHouseLandscape,
-            excerpt: "The starting point for the House of Stepped Gardens was a simple question: can a house be designed as an extension of the garden rather than as an object?",
-            paragraphs: [
-                "The starting point for the House of Stepped Gardens was a simple question: can a house be designed as an extension of the garden rather than as an object placed beside it?",
-                "The idea of stepping allowed the architecture and landscape to become inseparable. Instead of treating the garden as leftover space around a building, the house was conceived through a sequence of terraces, levels and planted spaces.",
-                "This creates a different experience of domestic life. Moving through the house is also a movement through landscape. Views change, light enters differently at different levels, and private and social spaces acquire their own relationship with greenery.",
-                "The stepped form also gives the residence a vertical rhythm. Each level becomes an opportunity for a garden, a terrace or a moment of pause.",
-                "For me, the project represents a broader approach to residential architecture: a home should not be defined only by rooms and functions. It should create a sequence of experiences.",
-                "The garden is therefore not decoration. It is architecture.",
-                "House of Stepped Gardens is an attempt to make landscape part of everyday living—to allow residents to experience nature not as something seen from a window, but as something continuously encountered as they move through their home.",
+            excerpt: "What if a house was not designed as a building within a garden, but as a garden that one could inhabit?",
+            lead: [
+                { type: "sub", text: "What if a house was not designed as a building within a garden, but as a garden that one could inhabit?" },
+                { type: "p", text: "Most houses are imagined as objects placed upon a piece of land. The landscape is then designed around them, often becoming a beautiful backdrop to architecture." },
+                { type: "p", text: "But what happens when we reverse this relationship?" },
+                { type: "p", text: "At House of Stepped Gardens, we began with a different proposition: what if architecture could grow out of the landscape, becoming an extension of the natural terrain rather than an object imposed upon it? This simple question became the starting point for the design." },
             ],
+            sections: [
+                {
+                    heading: "An Architecture That Grows With the Land",
+                    paragraphs: [
+                        "Set within a contoured site, the 30,000 sq. ft. residence explores the relationship between built form, topography and nature. Instead of creating a singular architectural mass, the house unfolds through a series of stepped volumes, cascading terraces, courtyards and planted spaces.",
+                        "The idea of stepping became the central design language. Each level responds to the terrain, allowing the architecture to settle into the landscape while creating opportunities for gardens at multiple heights.",
+                        "The result is a home where architecture and landscape are not two separate disciplines. They become parts of the same composition.",
+                    ],
+                },
+                {
+                    heading: "A Journey Through Gardens, Light and Space",
+                    paragraphs: [
+                        "At House of Stepped Gardens, moving through the house is also a journey through nature.",
+                        "The experience of domestic life is shaped by changing perspectives, shifting levels and moments of visual connection with greenery. Courtyards bring daylight deep into the interiors, while terraces create transitions between private living spaces and the outdoors.",
+                        "Every level offers a different relationship with nature. Some spaces open towards expansive views, while others create intimate connections with enclosed gardens.",
+                        "The architecture reveals itself gradually. Spaces are discovered rather than simply encountered.",
+                        "Here, circulation is not merely about moving from one room to another. It becomes an experience of light, landscape and changing spatial relationships.",
+                    ],
+                },
+                {
+                    heading: "The Beauty of the In-Between",
+                    paragraphs: [
+                        "We often believe that architecture is defined by its enclosed spaces: the living room, the bedroom, the dining area or the staircase.",
+                        "But some of the most memorable experiences happen in between these spaces.",
+                        "A shaded terrace. A garden overlooking another level. A courtyard that brings the sky into the heart of the house. A quiet corner where architecture gives way to nature.",
+                        "These transitional spaces form the emotional character of House of Stepped Gardens.",
+                        "They allow the house to breathe, creating a dialogue between the built and the unbuilt, the private and the open, the intimate and the expansive.",
+                    ],
+                },
+                {
+                    heading: "Designing With Nature, Not Against It",
+                    paragraphs: [
+                        "The project also explores how a large residence can respond more sensitively to its environment. Passive orientation, shaded openings, cross-ventilation, rainwater harvesting and solar energy are integrated into the architectural approach.",
+                        "The courtyards and planted terraces are not simply aesthetic additions. They contribute to the environmental performance of the residence while enriching the everyday experience of its occupants.",
+                        "Sustainability here is approached as an integral part of design thinking, rather than an additional layer applied after the architecture is complete.",
+                    ],
+                },
+                {
+                    heading: "Beyond Rooms: Creating Experiences",
+                    paragraphs: [
+                        "For us, residential architecture should be about much more than organising functions within a built envelope.",
+                        "A home should create experiences, evoke emotions and establish a lasting relationship with its surroundings.",
+                        "It should offer moments of openness as well as retreat, opportunities for gathering as well as solitude. It should change with the movement of the sun, the seasons and the rhythms of everyday life.",
+                        "The stepped configuration of this residence allows every level to become an opportunity for a garden, a terrace or a moment of pause.",
+                        "The architecture is therefore experienced not just horizontally, through rooms and corridors, but vertically, through an evolving landscape.",
+                    ],
+                },
+                {
+                    heading: "When the Garden Becomes Architecture",
+                    paragraphs: [
+                        "House of Stepped Gardens represents an important idea in our approach to residential design: nature should not be treated as decoration surrounding a building.",
+                        "It should be part of the architecture itself.",
+                        "The terraces become gardens. The courtyards become sources of light and air. The circulation becomes a landscape experience. The building gradually dissolves into a series of spaces where the boundaries between indoors and outdoors become less distinct.",
+                        "Perhaps the most meaningful measure of a home is not how much space it occupies, but how deeply it connects its inhabitants to the world outside.",
+                    ],
+                },
+            ],
+            closing: [
+                { type: "quote", text: "At House of Stepped Gardens, we did not set out to design a house beside a garden. We set out to create a landscape that could be lived in." },
+            ],
+            signoff: {
+                name: "Kapil Aggarwal",
+                tagline: "Principal Architect, SpacesArchitects@ka",
+            },
         },
-        {
+                {
             id: "time-held-in-detail",
             title: "Golden Haveli: Restoring the Memory of Chandni Chowk",
             image: blogTimeHeldDetail,
-            excerpt: "Historic buildings often carry stories that are invisible beneath layers of alteration, neglect and time. Restoring a haveli means trying to uncover those stories.",
-            paragraphs: [
-                "Historic buildings often carry stories that are invisible beneath layers of alteration, neglect and time. Restoring a haveli means trying to uncover those stories without freezing the building in the past.",
-                "Golden Haveli became an exercise in this balance. Its architectural character needed to be understood before deciding what should be repaired, retained, reconstructed or introduced anew.",
-                "The restoration process was therefore guided by respect for the existing building. Traditional proportions and details provided the language, while contemporary requirements determined how the building could function again.",
-                "One of the most important lessons from heritage work is that authenticity is not achieved by making everything look old. Authenticity comes from understanding why a building was made the way it was and allowing that logic to inform its restoration.",
-                "Craftsmanship becomes critical here. Hand-finished details, traditional materials and the accumulated imperfections of an old building contribute to its identity in ways that cannot be reproduced by standardised construction.",
-                "Golden Haveli reinforced my belief that conservation is an act of continuity. We are not simply saving an object from the past. We are giving a piece of architectural memory another chapter.",
-                "That is ultimately what makes restoration meaningful: the old building is allowed to remain itself while becoming relevant to a new generation.",
+            excerpt: "The art of conservation lies not in recreating the past, but in allowing its stories to live on.",
+            lead: [
+                { type: "sub", text: "The art of conservation lies not in recreating the past, but in allowing its stories to live on." },
+                { type: "sub", text: "By Kapil Aggarwal | Principal Architect, SpacesArchitects@ka" },
+                { type: "p", text: "In the historic heart of Old Delhi, where narrow streets carry centuries of commerce, culture and everyday life, the havelis of Chandni Chowk stand as reminders of a remarkably layered architectural heritage. Behind their weathered facades and intricately crafted entrances lie stories of families, craftsmanship, changing lifestyles and a city that has continuously reinvented itself." },
+                { type: "p", text: "Golden Haveli was an opportunity to engage with this history—not simply as an exercise in architectural restoration, but as an exploration of memory, identity and continuity." },
+            ],
+            sections: [
+                {
+                    heading: "Reading the Building Before Restoring It",
+                    paragraphs: [
+                        "Historic buildings often carry stories that remain invisible beneath layers of alteration, neglect and time. Restoring a haveli requires looking beyond its present physical condition to understand the architectural intelligence embedded within it.",
+                        "At Golden Haveli, the first step was to understand the building before deciding what should be repaired, retained, reconstructed or introduced anew. Every surviving element offered a clue. The proportions of an opening, the depth of a courtyard, the relationship between rooms and the craftsmanship of traditional details revealed something about the original architectural language.",
+                        "The process was therefore as much about observation and interpretation as it was about construction.",
+                    ],
+                },
+                {
+                    heading: "Finding a Balance Between Old and New",
+                    paragraphs: [
+                        "One of the central challenges of heritage conservation is negotiating the relationship between historical authenticity and contemporary functionality. A historic building cannot simply be preserved as a frozen artefact. It must be capable of accommodating the needs of the present while retaining the qualities that make it meaningful.",
+                        "At Golden Haveli, the restoration approach was guided by respect for the existing architecture. Traditional proportions, spatial relationships and architectural details provided the language, while contemporary requirements informed how the building could function again. The intention was not to introduce a new architectural identity, but to allow the existing one to emerge with greater clarity.",
+                    ],
+                },
+                {
+                    heading: "Authenticity Lies in Imperfection",
+                    paragraphs: [
+                        "One of the most important lessons from heritage work is that authenticity is not achieved by making everything look old. Authenticity comes from understanding why a building was made the way it was, recognising the intelligence of its original construction and allowing that logic to inform its restoration.",
+                        "The slight irregularities of handmade surfaces, the character of traditional materials and the accumulated imperfections of an ageing building contribute to its identity in ways that standardised construction cannot reproduce.",
+                        "Craftsmanship becomes critical here. Traditional techniques, hand-finished details and sensitivity towards existing materials are not decorative gestures; they are essential to preserving the building's architectural integrity.",
+                    ],
+                },
+                {
+                    heading: "The Courtyard: The Soul of the Haveli",
+                    paragraphs: [
+                        "The traditional haveli was never merely a collection of rooms. Its architecture was organised around a deeper understanding of climate, privacy, family life and social interaction.",
+                        "The courtyard was central to this idea. It acted as a climatic moderator, a source of natural light and ventilation, and an important social space connecting different parts of the house.",
+                        "These spatial relationships are worth preserving because they represent an architectural intelligence developed over generations. In restoring historic buildings, it is important to recognise that sustainability is not always about introducing new technology. Sometimes it is about recovering the passive environmental strategies that traditional architecture already understood.",
+                    ],
+                },
+                {
+                    heading: "Craftsmanship as Cultural Continuity",
+                    paragraphs: [
+                        "The restoration of a heritage structure is also a restoration of the relationship between architecture and craftsmanship. Traditional buildings were shaped by the knowledge of artisans who understood materials through years of practice. Their work was never entirely mechanical. It involved judgement, precision and an intimate understanding of construction.",
+                        "Retaining this spirit of craftsmanship is essential. The objective should not be to imitate historical details superficially, but to understand the methods and material behaviour that gave them their character. Each intervention must be considered carefully so that new work complements the old without competing with it.",
+                    ],
+                },
+                {
+                    heading: "Conservation as an Act of Continuity",
+                    paragraphs: [
+                        "Golden Haveli reinforced a belief that has continued to shape my approach towards architecture: conservation is fundamentally an act of continuity.",
+                        "We are not simply saving an object from the past. We are preserving a fragment of collective memory and making it relevant to another generation. The greatest challenge is knowing when to intervene and when to step back. Sometimes the most meaningful architectural decision is not to add something new, but to reveal something that was always there.",
+                    ],
+                },
+                {
+                    heading: "Giving History a Future",
+                    paragraphs: [
+                        "Chandni Chowk is constantly evolving. Its streets, buildings and communities reflect the changing rhythms of one of India's most historic urban environments. Within this context, the restoration of a haveli becomes part of a larger conversation about the future of historic cities.",
+                        "Heritage should not be understood as an obstacle to progress. It can be an active part of contemporary urban life, provided that development is approached with sensitivity, understanding and respect.",
+                        "For us at SpacesArchitects@ka, Golden Haveli represents this philosophy. Architecture has the ability to create new experiences, but it also carries the responsibility of protecting memories. The most meaningful restoration is one in which the past is neither erased nor artificially recreated, but allowed to coexist naturally with the present.",
+                    ],
+                },
+            ],
+            closing: [
+                { type: "quote", text: "A building's true heritage is not merely what has survived through time, but what it continues to mean to the people who experience it." },
+                { type: "sub", text: "Kapil Aggarwal is the Principal Architect at SpacesArchitects@ka, a multidisciplinary architecture and design practice based in India, working across architecture, interiors, landscape and heritage conservation." },
             ],
         },
-        {
+               {
             id: "architecture-as-art",
-            title: "Architecture as Art: When Buildings Become Canvases",
+            title: "When Buildings Become Canvases: The Art of Turning Architecture into an Experience",
             image: blogArchitectureArt,
-            excerpt: "I have always believed that architecture should do more than solve a functional problem. A successful building should create an emotional response.",
-            paragraphs: [
-                "I have always believed that architecture should do more than solve a functional problem. A successful building should create an emotional response.",
-                "The relationship between architecture and art is therefore important to my practice. Art can introduce surprise, memory, colour, texture and emotion; architecture provides the spatial framework in which those experiences unfold.",
-                "This does not mean that every building needs to contain an artwork. It means that architecture itself can be approached with the sensitivity of an artist.",
-                "A wall can become a canvas. A staircase can become a sculptural movement. Light can become a material. A courtyard can become a composition.",
-                "The strongest projects often emerge when these elements are not added at the end, but considered from the beginning.",
-                "For me, this is particularly relevant in residential architecture. A home is deeply personal. It should reflect the people who inhabit it rather than simply reproduce a fashionable style.",
-                "Architecture becomes more memorable when it has a point of view.",
-                "The goal is therefore not to decorate a building, but to create spaces where art, material, light, landscape and human life reinforce one another.",
+            excerpt: "Architecture, at its most meaningful, is not simply about constructing buildings. It is about creating experiences, evoking emotions and giving physical form to ideas that might otherwise remain abstract.",
+            lead: [
+                { type: "sub", text: "The Art of Turning Architecture into an Experience" },
+                { type: "sub", text: "By Kapil Aggarwal | Principal Architect, SpacesArchitects@ka" },
+                { type: "p", text: "Architecture, at its most meaningful, is not simply about constructing buildings. It is about creating experiences, evoking emotions and giving physical form to ideas that might otherwise remain abstract. I have always believed that a building should do more than serve its purpose. It should make us pause, look again, feel something and, perhaps, remember it long after we have left." },
+                { type: "p", text: "For me, the most fascinating intersection in architecture lies somewhere between art and space. Art has the ability to challenge perception, introduce unexpected moments and create an emotional connection. Architecture, in turn, gives these expressions a physical presence. When the two come together naturally, a building begins to transcend its functional boundaries and becomes something much more personal." },
+                { type: "quote", text: "The canvas does not always need to be a painting. Sometimes, it is the building itself." },
             ],
+            sections: [
+                {
+                    heading: "Beyond Decoration: Designing with an Artistic Sensibility",
+                    paragraphs: [
+                        "Some of the most memorable architectural spaces are those where nothing feels unnecessarily added. Their strength comes from the relationship between elements — the mass and void, solid and transparent, light and shadow, material and form.",
+                        "A sculptural staircase should feel as though it belongs to the architecture, not as though it has been inserted into it. An artwork should have a meaningful relationship with its surroundings. A dramatic stone surface should reveal its natural character rather than merely function as an expensive finish.",
+                        "This requires thinking about art from the very beginning of the design process. The proportions of a wall, the geometry of a ceiling, the positioning of an opening, the direction of natural light and even the way someone approaches a space can all contribute to an artistic experience.",
+                        "The intention is to create a seamless dialogue between architecture, interiors and art — one in which each element strengthens the other.",
+                    ],
+                },
+                {
+                    heading: "The Architecture of Emotion",
+                    paragraphs: [
+                        "I find this approach particularly important in residential architecture. A home is perhaps the most intimate expression of architecture because it is inhabited, experienced and emotionally connected to the lives of the people within it.",
+                        "Unlike a gallery or museum, a home is not designed merely to be observed. It is designed to be lived in.",
+                        "It must accommodate everyday rituals while offering moments of discovery. It should reflect the personality of its inhabitants without becoming a predictable reproduction of a fashionable aesthetic.",
+                        "A carefully framed view, a naturally illuminated corridor, an unexpected double-height volume or a quiet courtyard can sometimes create a stronger emotional impression than an elaborate decorative gesture.",
+                        "The real artistry lies in knowing where to make a statement and where to exercise restraint.",
+                    ],
+                },
+                {
+                    heading: "Materials as an Artistic Language",
+                    paragraphs: [
+                        "Materials have their own vocabulary. Stone carries the memory of geological time. Concrete expresses weight, permanence and rawness. Timber introduces warmth and tactility. Metal can bring precision, reflection and a sense of refinement.",
+                        "When these materials are composed thoughtfully, they create a visual and sensory language that is unique to each project.",
+                        "I am particularly interested in how contrasting materials can coexist without competing — how a raw concrete surface can sit beside warm timber, how a sculptural stone element can become the focal point of an otherwise restrained interior, or how a reflective surface can alter our perception of space.",
+                        "The objective is not to accumulate beautiful materials, but to give each one a purpose within the larger architectural composition.",
+                    ],
+                },
+                {
+                    heading: "Creating Spaces That Leave an Impression",
+                    paragraphs: [
+                        "Architecture is often judged through photographs, drawings and published images. Yet its true success lies in what cannot always be captured in a photograph: the experience of moving through it, the quality of daylight, the feeling of scale, the relationship with nature and the emotions it evokes.",
+                        "A successful building should offer more than a striking first impression. It should reveal itself gradually, through changing perspectives and unexpected spatial encounters.",
+                        "Perhaps that is where architecture and art are closest. Neither should reveal everything at once. Both invite interpretation, curiosity and personal connection.",
+                    ],
+                },
+                {
+                    heading: "A Personal Design Philosophy",
+                    paragraphs: [
+                        "At SpacesArchitects@ka, I see architecture as an opportunity to create something that is both intellectually considered and emotionally engaging.",
+                        "I am drawn to spaces where form, material, landscape, light and art are not treated as separate design decisions, but as parts of a single composition.",
+                        "The ambition is not to make every building monumental or every space dramatic. It is to discover the distinctive character of each project and express it with clarity, sensitivity and imagination.",
+                        "Ultimately, I believe that the most memorable architecture is not necessarily the architecture that speaks the loudest. It is the architecture that makes us feel something.",
+                        "Because when architecture begins to think like art, a building stops being merely a structure. It becomes an experience, an expression and, in its own way, a living canvas.",
+                    ],
+                },
+            ],
+            signoff: {
+                name: "SpacesArchitects@ka",
+                tagline: "",
+            },
         },
-        {
+               {
             id: "architecture-in-motion",
-            title: "The House of Dancing Screens: Architecture in Motion",
+            title: "The House of Dancing Screens: When Architecture Comes Alive Through Light and Shadow",
             image: blogArchitectureMotion,
-            excerpt: "Screens have always been an important part of Indian architecture. They filter light, create privacy and produce changing relationships between inside and outside.",
+            excerpt: "Exploring the timeless Indian architectural screen through movement, light, privacy and the evolving rhythms of contemporary living.",
+            lead: [
+                { type: "sub", text: "Exploring the timeless Indian architectural screen through movement, light, privacy and the evolving rhythms of contemporary living." },
+            ],
+            sections: [
+                {
+                    heading: "Introduction",
+                    paragraphs: [
+                        "Screens have long occupied a fascinating place in Indian architecture. From the intricately carved stone jaalis of traditional havelis to the delicate latticework of historic palaces, they have served purposes far beyond decoration. They filter sunlight, encourage ventilation, establish privacy and create a delicate relationship between the interior and the world outside.",
+                        "Yet perhaps their most remarkable quality lies in their ability to transform the experience of space without completely enclosing it.",
+                        "The House of Dancing Screens, designed by SpacesArchitects@ka, revisits this enduring architectural element through a contemporary lens, exploring how something deeply rooted in tradition can become an instrument for a new way of living.",
+                    ],
+                },
+                {
+                    heading: "Architecture That Responds to Time",
+                    paragraphs: [
+                        "At the heart of the project is the idea that architecture need not remain visually static. While a building may be physically still, its atmosphere is constantly evolving.",
+                        "The screens become active participants in this transformation. As daylight travels across the building, patterns of light and shadow shift, overlap and dissolve. Morning light creates one spatial expression, while the changing intensity of the afternoon sun produces another. By evening, the relationship between illumination, transparency and enclosure takes on an entirely different character.",
+                        "The architecture is therefore experienced not as a fixed composition, but as a sequence of changing moments. The screens introduce a subtle sense of movement into the building, allowing light to become a material in its own right.",
+                    ],
+                },
+                {
+                    heading: "The Art of Concealment and Revelation",
+                    paragraphs: [
+                        "Indian architecture has historically understood privacy as something more nuanced than simply separating one space from another.",
+                        "Traditional jaalis, courtyards and layered thresholds created intermediate conditions between openness and enclosure. They allowed spaces to remain connected while maintaining a sense of separation.",
+                        "The House of Dancing Screens reinterprets this principle for contemporary domestic life. Rather than relying on solid walls and rigid divisions, the screens create layers of visual permeability. They allow glimpses, soften boundaries and establish degrees of privacy. Spaces remain connected, yet retain their individual identities.",
+                        "This interplay between concealment and revelation creates an architecture that is simultaneously open and intimate.",
+                    ],
+                },
+                {
+                    heading: "A House That Adapts to the Rhythms of Family Life",
+                    paragraphs: [
+                        "A contemporary home is more than a collection of rooms. It is an evolving environment that must accommodate different generations, routines, activities and expectations of privacy.",
+                        "Family life is dynamic. Moments of togetherness coexist with the need for solitude, while shared spaces must remain flexible enough to support changing patterns of occupation.",
+                        "The screens become an architectural tool for negotiating these relationships. They allow visual connections without demanding complete openness. They create separation without isolation and offer flexibility without compromising the continuity of the overall spatial experience.",
+                        "In this sense, the project explores adaptability not through complicated mechanisms, but through the thoughtful manipulation of architectural boundaries.",
+                    ],
+                },
+                {
+                    heading: "Reinterpreting Tradition Without Repeating It",
+                    paragraphs: [
+                        "One of the most interesting challenges in contemporary Indian architecture is finding a meaningful relationship between heritage and modernity.",
+                        "Tradition should not necessarily be understood as a visual vocabulary to be replicated. Its deeper value lies in the intelligence of the principles that shaped it.",
+                        "The traditional Indian screen was a response to climate, culture, privacy and the quality of light. Its relevance was never merely ornamental.",
+                        "By bringing this element into a contemporary architectural language, the House of Dancing Screens seeks to preserve its underlying intelligence while allowing its expression to evolve. The result is not an imitation of historic architecture, but a reinterpretation of an idea that continues to hold relevance.",
+                    ],
+                },
+                {
+                    heading: "When Light Becomes an Architectural Material",
+                    paragraphs: [
+                        "Architecture is often discussed through its physical components: walls, floors, roofs, materials and structure. Yet some of its most memorable qualities are created by elements that cannot be touched.",
+                        "Light, shadow, transparency and movement shape how a space is perceived. They influence its mood, reveal its textures and give depth to otherwise ordinary surfaces. In the House of Dancing Screens, these intangible qualities are not incidental effects; they are central to the architectural experience.",
+                        "The screens mediate between the intensity of the outside world and the quieter atmosphere of the interior. They soften daylight, create visual rhythm and allow the building to change character over the course of the day.",
+                    ],
+                },
+                {
+                    heading: "A Living Dialogue Between Past and Present",
+                    paragraphs: [
+                        "The House of Dancing Screens is ultimately an exploration of continuity. It draws from an architectural tradition that understood the value of filtered light, breathable boundaries and layered privacy, while responding to the expectations of contemporary family life.",
+                        "It suggests that innovation does not always require abandoning familiar ideas. Sometimes, it begins by looking again at what already exists and discovering new possibilities within it.",
+                        "Here, the screen is no longer simply a partition or a decorative façade. It becomes an instrument of atmosphere, a mediator of relationships and a device through which the passage of time can be experienced.",
+                        "Through the interplay of light, shadow, privacy and movement, the house becomes an architecture that is never quite the same twice—still in form, yet constantly dancing with the changing world around it.",
+                    ],
+                },
+            ],
+            signoff: {
+                name: "SpacesArchitects@ka",
+                tagline: "Architecture • Interiors • Landscape",
+            },
+        },
+          {
+    id: "6x18",
+    title: "The Slender House: Redefining the Possibilities of a Narrow Plot",
+    image: blog6x18,
+    excerpt: "When space is limited, imagination must expand. The Slender House explores how thoughtful planning, vertical movement and the careful orchestration of light can transform a narrow plot into a generous and meaningful home.",
+    intro: "When space is limited, imagination must expand. The Slender House explores how thoughtful planning, vertical movement and the careful orchestration of light can transform a narrow plot into a generous and meaningful home.",
+    sections: [
+        {
+            heading: "Turning Constraints into Architectural Possibilities",
             paragraphs: [
-                "Screens have always been an important part of Indian architecture. They filter light, create privacy and produce changing relationships between inside and outside.",
-                "The House of Dancing Screens explores these ideas through a contemporary lens.",
-                "The screen is not treated as a fixed decorative surface. It becomes an active architectural element. As daylight changes, shadows move across surfaces and the character of the spaces changes with them.",
-                "This creates a sense of movement even though the building itself remains still.",
-                "The project also explores the relationship between family life and adaptability. A house needs to accommodate different ages, routines and degrees of privacy. Screens can help create these layers without closing spaces completely.",
-                "What interests me most about this approach is that it combines a traditional architectural idea with a contemporary way of living.",
-                "Architecture does not need to choose between heritage and modernity. The more interesting question is how traditional principles can be reinterpreted for present-day life.",
-                "In the House of Dancing Screens, light, shadow, privacy and movement become part of the architecture itself.",
+                "In architecture, limitations are often the starting point of the most compelling ideas. A narrow plot may initially appear restrictive, challenging conventional expectations of space, openness and domestic comfort. Yet it is precisely within these constraints that architecture finds opportunities to become more inventive.",
+                "The Slender House emerged from this premise: how does one create a generous, comfortable family home when the available width is severely limited? Rather than resisting the proportions of the site, the design embraces them. The architecture evolves as a considered response to its dimensions, transforming a physical limitation into the defining character of the residence.",
             ],
         },
         {
-            id: "6x18",
-            title: "The Slender House: Making a Home on a Narrow Plot",
-            image: blog6x18,
-            excerpt: "A narrow site can appear to be a limitation, but constraints often produce some of the most interesting architectural ideas.",
+            heading: "Thinking Vertically, Experiencing Spatially",
             paragraphs: [
-                "A narrow site can appear to be a limitation, but constraints often produce some of the most interesting architectural ideas.",
-                "The Slender House began with the challenge of creating a generous family home within a very restricted width. The response was not to fight the proportions of the site, but to work with them.",
-                "Vertical movement, carefully positioned openings and controlled views became important tools. The house had to feel connected without becoming visually exposed, and compact without feeling compressed.",
-                "Light was equally important. On a narrow site, the architect has to think carefully about how daylight travels through the building. Openings, voids and spatial relationships can make a significant difference to the perceived scale of a home.",
-                "The project reinforced an idea that often guides my residential work: good architecture is not dependent on the size of a plot.",
-                "A well-resolved small or narrow site can produce a stronger architectural experience than a large site where every problem is solved simply by adding space.",
-                "Constraints force decisions. And decisive architecture is often more memorable architecture.",
+                "On a narrow site, conventional horizontal planning can quickly become restrictive. The design therefore explores vertical movement as an essential architectural strategy.",
+                "Spaces unfold across different levels, creating a sequence of interconnected experiences rather than a series of isolated rooms. Carefully positioned openings, voids and visual connections allow the house to feel continuous while maintaining the privacy required for family life.",
+                "The intention is to create a sense of spatial generosity without relying on physical width. The experience of space is expanded through perception, movement and carefully framed views.",
             ],
         },
         {
+            heading: "The Architecture of Light and Openness",
+            paragraphs: [
+                "Light becomes one of the most important architectural materials in a compact residence.",
+                "On a narrow plot, daylight cannot be treated as an afterthought. Its movement through the building must be carefully anticipated and orchestrated. Openings, voids and spatial relationships are therefore conceived as integral elements of the architecture.",
+                "These interventions allow natural light to penetrate deeper into the interiors, creating changing patterns of illumination throughout the day. They also establish visual depth, making spaces feel larger and more connected than their actual dimensions might suggest.",
+                "The result is a home that feels open without being exposed, intimate without being confined.",
+            ],
+        },
+        {
+            heading: "Creating Generosity Within Limited Dimensions",
+            paragraphs: [
+                "The challenge of designing a narrow house extends beyond fitting rooms into a restricted footprint. It is about creating a genuine sense of comfort, identity and belonging.",
+                "Every spatial decision becomes important. Circulation, room proportions, visual connections and the relationship between private and shared spaces must work together as part of a larger architectural composition.",
+                "Instead of simply maximising the built-up area, the project seeks to maximise the quality of everyday experiences. It demonstrates that a carefully designed compact home can offer a richness of spatial experience not necessarily associated with larger residences.",
+            ],
+        },
+        {
+            heading: "Architecture Beyond the Size of a Plot",
+            paragraphs: [
+                "The Slender House reinforces a belief that continues to inform our approach to residential architecture: the quality of a home is not determined by the size of its site, but by the intelligence of the ideas that shape it.",
+                "A large plot offers possibilities, but a restricted site demands precision, imagination and discipline. It encourages architects to question conventional planning strategies and discover alternative ways of organising space.",
+                "For us, the most rewarding aspect of this project lies in how its constraints became its strongest design instrument. The narrow proportions did not diminish the ambition of the house; they gave it clarity, character and a distinctive spatial identity.",
+            ],
+        },
+        {
+            heading: "A Different Measure of Spaciousness",
+            paragraphs: [
+                "Ultimately, The Slender House is an exploration of how architecture can reshape perception. It suggests that spaciousness is not simply a matter of dimensions, but a consequence of light, proportion, movement and connection.",
+                "By working with the site rather than against it, the project turns limitation into opportunity—and a narrow plot into a home with a generous architectural experience.",
+            ],
+        },
+    ],
+    signoff: {
+        name: "SpacesArchitects@ka",
+        tagline: "Architecture shaped by context, clarity and imagination.",
+    },
+},
+               {
             id: "the-courtyard",
             title: "The Courtyard: Rediscovering the Lost Core of the Indian Home",
             image: blogCourtyard,
-            excerpt: "The courtyard was once one of the defining elements of the Indian house. It brought light, air, vegetation and family life into the centre of the home.",
-            paragraphs: [
-                "The courtyard was once one of the defining elements of the Indian house. It brought light, air, vegetation and family life into the centre of the home.",
-                "As urban living changed, the courtyard gradually disappeared from many contemporary houses. In its place came more enclosed rooms, mechanical conditioning and increasingly externalised notions of nature.",
-                "Yet the courtyard remains remarkably relevant.",
-                "It is not simply an open-to-sky space. It is a device for organising relationships. Rooms can face it, circulation can pass around it, family members can occupy it at different times, and the changing sky can become part of everyday life.",
-                "The courtyard also creates a subtle connection between privacy and openness. It can be protected from the outside while remaining visually and physically connected to the interior.",
-                "In contemporary Indian architecture, I believe the courtyard deserves to be reconsidered—not as a nostalgic reference, but as a climate-responsive and socially meaningful spatial idea.",
-                "Many of the principles that made the traditional courtyard successful remain relevant today: shade, ventilation, filtered light, vegetation, privacy and community.",
-                "Perhaps the courtyard is not a lost idea after all. Perhaps it is an idea waiting to be rediscovered.",
+            excerpt: "Reimagining an age-old architectural element as a contemporary response to climate, community and the changing rhythms of domestic life.",
+            lead: [
+                { type: "sub", text: "Reimagining an age-old architectural element as a contemporary response to climate, community and the changing rhythms of domestic life." },
+                { type: "p", text: "There was a time when the courtyard was the heart of the Indian home. More than an architectural feature, it was a living, breathing space around which everyday life unfolded. It welcomed the morning sun, invited the monsoon breeze, held the fragrance of plants and flowers, and brought families together beneath an ever-changing sky." },
+                { type: "p", text: "In traditional Indian architecture, the courtyard was never merely an empty space. It was the soul of the house." },
+                { type: "p", text: "From the intimate aangan of traditional North Indian homes to the grand central courtyards of havelis in Rajasthan, this architectural element established a profound relationship between nature, built form and human life. It allowed architecture to breathe while creating a natural centre for social interaction." },
             ],
+            sections: [
+                {
+                    heading: "The Disappearing Heart of the Home",
+                    paragraphs: [
+                        "As cities expanded and lifestyles evolved, the courtyard gradually began to disappear from contemporary residential architecture. Increasing land pressures, compact urban plots and changing aspirations encouraged more enclosed planning. Air-conditioning replaced natural ventilation, windows became increasingly dependent on mechanical systems, and the connection between the indoors and outdoors became more fragmented.",
+                        "In the pursuit of efficiency and maximum usable floor area, we gradually surrendered something far more valuable: the experience of living with nature.",
+                        "Yet, the courtyard remains remarkably relevant. In fact, its importance may be greater today than ever before.",
+                    ],
+                },
+                {
+                    heading: "Beyond an Open Space: An Organising Principle",
+                    paragraphs: [
+                        "A courtyard is not simply an opening in the roof or a landscaped void within a building. It is an architectural device that gives structure, hierarchy and meaning to the spaces surrounding it.",
+                        "Rooms can open towards it, circulation can flow around it, and transitional spaces can borrow light and views from its presence. It creates a natural focal point without demanding visual dominance.",
+                        "More importantly, it allows different generations and family members to remain connected while enjoying their individual spaces. One may experience the courtyard from a bedroom, another from a passage, and someone else from a shaded verandah. Each encounter is different, yet all remain part of a shared spatial experience.",
+                        "The courtyard quietly becomes the social and emotional centre of the home.",
+                    ],
+                },
+                {
+                    heading: "A Dialogue Between Nature and Architecture",
+                    paragraphs: [
+                        "Perhaps the greatest strength of the courtyard lies in its ability to bring nature into the heart of the built environment.",
+                        "Natural daylight penetrates deep into the interiors, while carefully designed openings encourage cross-ventilation and air movement. Vegetation introduces softness, seasonal change and a sense of calm. The movement of sunlight across walls and floors creates an ever-changing architectural composition throughout the day.",
+                        "In India's diverse climatic conditions, a thoughtfully designed courtyard can also contribute to passive cooling, daylight optimisation and environmental comfort.",
+                        "Its proportions, orientation, planting, water elements and surrounding shaded spaces can be carefully calibrated to respond to the local climate.",
+                        "In this sense, the courtyard is not simply an aesthetic gesture. It is an environmentally intelligent architectural strategy.",
+                    ],
+                },
+                {
+                    heading: "The Balance Between Privacy and Openness",
+                    paragraphs: [
+                        "One of the most compelling qualities of the courtyard is its ability to reconcile two seemingly opposing ideas: privacy and openness.",
+                        "Unlike an exposed garden or an external terrace, a courtyard can remain protected from the outside world while maintaining a strong visual and physical relationship with nature.",
+                        "It creates an inward-looking environment, particularly relevant to contemporary Indian homes where privacy remains an important consideration. The house can open generously towards its own internal landscape without compromising its relationship with the surrounding neighbourhood.",
+                        "This controlled openness creates a sense of retreat within the home.",
+                    ],
+                },
+                {
+                    heading: "Reinterpreting the Courtyard for Contemporary Living",
+                    paragraphs: [
+                        "The courtyard need not be a literal reproduction of traditional architecture. Its contemporary interpretation can take many forms: a double-height landscaped void, a sculptural garden, a shaded internal court, a water court or even a carefully positioned light well.",
+                        "What matters is not its scale or formal expression, but the role it plays in shaping the experience of the house.",
+                        "At SpacesArchitects@ka, we believe that architecture becomes meaningful when it responds to the way people live, feel and connect with their surroundings. The courtyard offers an opportunity to create homes that are not only visually compelling but also environmentally responsive and emotionally enriching.",
+                        "It allows architecture to move beyond the boundaries of walls and roofs, creating spaces where light, air, landscape and everyday life become inseparable.",
+                    ],
+                },
+                {
+                    heading: "Rediscovering What We Never Should Have Lost",
+                    paragraphs: [
+                        "As contemporary residential architecture increasingly explores sustainability, wellness and a deeper connection with nature, perhaps the most meaningful ideas are not always new.",
+                        "Sometimes, they are rooted in architectural traditions that understood the relationship between climate, culture and human habitation long before these became contemporary design priorities.",
+                        "The courtyard is one such idea.",
+                        "It is not a nostalgic reference to the past, but a timeless architectural principle with the potential to redefine the future of Indian homes.",
+                        "Perhaps it is time to bring the courtyard back—not as an addition to the house, but as its very heart.",
+                    ],
+                },
+            ],
+            signoff: {
+                name: "SpacesArchitects@ka",
+                tagline: "Architecture, Landscape & Design",
+            },
         },
     ],
     // ---- Haveli Dharampura project page: hero + full photo gallery ----

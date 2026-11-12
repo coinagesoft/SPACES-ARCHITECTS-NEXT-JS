@@ -72,14 +72,43 @@ const DATES = {
 };
 
 // ---- The 8 existing posts (text untouched) ----
+// ---- The 8 existing posts ----
+// Posts with `sections` (heading + paragraphs) get headings; the rest
+// keep their plain `paragraphs` list exactly as before.
+// ---- The 8 existing posts ----
+// `lead` = optional blocks before the first heading (sub / quote / p).
+// `sections` = headings + paragraphs. `signoff` = closing name lines.
+// Posts without `sections` keep their plain `paragraphs` list.
+// ---- The 8 existing posts ----
+// `lead` = optional blocks before the first heading (sub / quote / p).
+// `sections` = headings + paragraphs. `closing` = optional blocks after
+// the last section (e.g. a pull quote). `signoff` = closing name lines.
+// Posts without `sections` keep their plain `paragraphs` list.
 const existingPosts = assets.blog.map((post) => ({
     id: post.id,
     title: post.title,
     image: COVERS[post.id] ?? post.image,
     date: DATES[post.id] ?? "",
-    blocks: post.paragraphs.map((text) => ({ type: "p", text })),
+    blocks: post.sections
+        ? [
+              ...(post.lead ??
+                  (post.intro ? [{ type: "sub", text: post.intro }] : [])),
+              ...post.sections.flatMap((section) => [
+                  { type: "h", text: section.heading },
+                  ...section.paragraphs.map((text) => ({ type: "p", text })),
+              ]),
+              ...(post.closing ?? []),
+              ...(post.signoff
+                  ? [
+                        { type: "sub", text: post.signoff.name },
+                        ...(post.signoff.tagline
+                            ? [{ type: "sub", text: post.signoff.tagline }]
+                            : []),
+                    ]
+                  : []),
+          ]
+        : post.paragraphs.map((text) => ({ type: "p", text })),
 }));
-
 // ---- The 5 new posts ----
 const newPosts = [
     {
@@ -117,32 +146,71 @@ const newPosts = [
             { type: "tags", text: "#Architecture #ArchitectLife #DesignProcess #ResidentialArchitecture #LuxuryHomes #ArchitectureStudio #Construction #DesignThinking #IndianArchitecture #SpacesArchitectsKA" },
         ],
     },
-    {
+        {
         id: "future-of-exposed-concrete",
         title: "The Future of Exposed Concrete in Luxury Homes",
         listing: {
             title: "Future of Exposed Concrete",
             excerpt:
-                "Exposed concrete is one of the most expressive materials in contemporary architecture. When detailed with precision, it carries a quiet confidence.",
+                "For decades, luxury in residential architecture has been defined by the richness of materials. Perhaps the future of luxury is not about adding more, but about knowing what to leave untouched.",
         },
         blocks: [
-            { type: "p", text: "Luxury in architecture has long been associated with marble, rare woods, and ornate finishes. I believe that definition is changing." },
-            { type: "p", text: "The future of luxury homes may not be about adding more materials—it may be about revealing them honestly." },
-            { type: "p", text: "Exposed concrete is one of the most expressive materials in contemporary architecture. When detailed with precision, it carries a quiet confidence. It ages gracefully, requires little embellishment, and allows light, shadow, and proportion to become the true luxury." },
-            { type: "p", text: "At Swatantra Residence, we explored concrete not as a structural necessity but as an architectural language. Carefully composed concrete planes are balanced with warm timber, natural stone, and landscape, creating spaces that feel both timeless and deeply connected to nature. The material becomes a canvas for changing daylight, textures, and the life that unfolds within the home." },
-            { type: "p", text: "As sustainability and authenticity become increasingly important, exposed concrete will play a larger role in luxury residential architecture because it offers:" },
+            { type: "sub", text: "Redefining Luxury Through Material Honesty, Simplicity and Timeless Architecture" },
+            { type: "sub", text: "By Kapil Aggarwal | Principal Architect, SpacesArchitects@ka" },
+            { type: "p", text: "For decades, luxury in residential architecture has been defined by the richness of materials — polished marble, rare timber, intricate detailing and elaborate finishes. But as architectural sensibilities evolve, so does our understanding of what luxury truly means." },
+            { type: "quote", text: "Perhaps the future of luxury is not about adding more, but about knowing what to leave untouched." },
+
+            { type: "h", text: "The Beauty of Imperfection" },
+            { type: "p", text: "There is something profoundly beautiful about concrete when it is allowed to express its natural character. Its subtle tonal variations, textures, imperfections and traces of construction create a visual language that manufactured finishes often struggle to replicate." },
+            { type: "p", text: "Unlike materials that rely on applied decoration, exposed concrete derives its character from the process of making. Every surface tells a story of formwork, craftsmanship, light and time." },
+            { type: "p", text: "When detailed with precision, concrete possesses a quiet confidence. It does not demand attention; instead, it creates an architectural presence that reveals itself gradually." },
+            { type: "p", text: "Its ability to age gracefully, develop character and interact with changing daylight makes it particularly relevant to the idea of timeless luxury." },
+
+            { type: "h", text: "From Industrial Material to Luxury Expression" },
+            { type: "p", text: "The transformation of exposed concrete in contemporary residential architecture reflects a larger shift in design thinking." },
+            { type: "p", text: "Luxury is increasingly being associated with spatial experience, material authenticity and architectural clarity rather than excessive embellishment." },
+            { type: "p", text: "Concrete offers an opportunity to create powerful architectural compositions through mass, proportion, texture and light. Large structural planes, sculptural volumes, cantilevers and carefully framed openings can become defining elements of a residence." },
+            { type: "p", text: "However, the success of exposed concrete depends greatly on restraint and detailing. Its relationship with other materials is equally important." },
+            { type: "p", text: "Warm timber softens its visual strength. Natural stone introduces depth and richness. Glass creates transparency, while landscape brings movement and organic contrast. The result is an architectural language that feels both powerful and welcoming." },
+
+            { type: "h", text: "Swatantra Residence: Concrete as an Architectural Language" },
+            { type: "p", text: "At Swatantra Residence, we explored exposed concrete not merely as a structural necessity, but as an essential part of the architectural expression." },
+            { type: "p", text: "The intention was to allow the material to define the character of the home while creating a sensitive balance between solidity and warmth." },
+            { type: "p", text: "Carefully composed concrete planes are complemented by warm timber, natural stone and landscape. These contrasting materials establish a dialogue between the built environment and nature." },
+            { type: "p", text: "Rather than concealing the inherent character of concrete beneath layers of applied finishes, we allowed its texture and mass to become part of the architectural experience." },
+            { type: "p", text: "Light plays an equally important role. As daylight moves across the surfaces, shadows reveal subtle variations in texture and depth, allowing the architecture to transform throughout the day." },
+            { type: "p", text: "The house becomes more than a composition of materials; it becomes an evolving experience shaped by light, nature and everyday life." },
+
+            { type: "h", text: "Why Exposed Concrete Belongs in the Future of Luxury Homes" },
+            { type: "p", text: "As homeowners and architects become increasingly conscious of authenticity, sustainability and longevity, exposed concrete offers several compelling possibilities." },
             {
                 type: "ul",
                 items: [
-                    "Timeless aesthetics that outlast trends.",
-                    "Material honesty—celebrating construction rather than concealing it.",
-                    "Reduced dependence on applied finishes and maintenance.",
-                    "Rich spatial experiences through light, shadow, and texture.",
-                    "A strong connection between architecture, craftsmanship, and the surrounding landscape.",
+                    "Timeless aesthetics that are not governed by passing design trends.",
+                    "Material honesty celebrating construction rather than concealing it behind decorative layers.",
+                    "Architectural freedom to explore sculptural forms, cantilevers, dramatic volumes and seamless transitions between interior and exterior spaces.",
+                    "A dialogue with nature using concrete as a visual counterpoint to greenery, water, timber and natural stone.",
+                    "A considered approach to finishes that can reduce dependence on applied finishes and certain maintenance interventions when appropriately detailed and protected.",
                 ],
             },
-            { type: "p", text: "The future of luxury is not about excess. It is about restraint, precision, and materials that become more beautiful with time." },
-            { type: "p", text: "What role do you think exposed concrete will play in shaping the next generation of luxury homes?" },
+            { type: "p", text: "Its environmental performance, however, depends on structural design, mix selection, local climate and construction quality." },
+
+            { type: "h", text: "The Importance of Getting Concrete Right" },
+            { type: "p", text: "Exposed concrete is unforgiving. Unlike conventional finishes, it does not easily conceal construction imperfections." },
+            { type: "p", text: "Its success depends on meticulous planning — from formwork design and mix consistency to reinforcement detailing, pouring techniques and curing." },
+            { type: "p", text: "Every junction, opening, edge and surface transition must be considered from the beginning of the design process." },
+            { type: "p", text: "The challenge is not simply to expose concrete, but to make it beautiful." },
+            { type: "p", text: "Equally important is creating a comfortable living environment. Concrete's thermal mass, insulation requirements, orientation and shading must be carefully addressed, particularly in warmer climates." },
+            { type: "p", text: "True luxury is achieved when material expression and environmental performance work together." },
+
+            { type: "h", text: "A New Definition of Luxury" },
+            { type: "p", text: "The future of residential architecture may belong to homes that are less concerned with displaying wealth and more interested in expressing character." },
+            { type: "p", text: "Homes where materials are allowed to age, where natural light becomes an architectural element, where landscape is integrated into everyday living, and where spaces derive their richness from proportion, texture and atmosphere." },
+            { type: "p", text: "Exposed concrete represents this shift — from decoration to expression, from excess to restraint, and from surface richness to architectural depth." },
+            { type: "p", text: "At SpacesArchitects@ka, we believe that the most enduring architecture is not necessarily the most elaborate. It is architecture that understands its materials, respects its surroundings and creates spaces that become more meaningful with time." },
+            { type: "quote", text: "Perhaps the ultimate expression of luxury is not what we add to a home, but what we have the confidence to leave exposed." },
+
+            { type: "sub", text: "SpacesArchitects@ka" },
             { type: "tags", text: "#Architecture #LuxuryHomes #ExposedConcrete #ContemporaryArchitecture #ResidentialDesign #Materiality #ArchitecturalDesign #IndianArchitecture #ConcreteArchitecture #SpacesArchitectsKA" },
         ],
     },

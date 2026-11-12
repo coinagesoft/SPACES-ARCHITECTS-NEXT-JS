@@ -5,7 +5,7 @@ import { projectMetadata } from "@/config/seo";
 
 export const metadata = projectMetadata("sachdeva-residence");
 
-const hero = assetImage("projects/SACHDEVA-FARMHOUSE/cover/COVER.webp");
+const hero = assetImage("projects/SACHDEVA-FARMHOUSE/3_4/Copy of EVENING VIEW OUTSIDE HOME THEATRE 13.webp");
 
 const img4 = assetImage("projects/SACHDEVA-FARMHOUSE/3_4/4.webp");
 const img6 = assetImage("projects/SACHDEVA-FARMHOUSE/3_4/6.webp");

@@ -74,6 +74,12 @@ const homeHeroProjects = [
     mobileImage: assetImage("home page slider/MOBILE/4. HOUSE OF DANCING SCREENS.webp"),
   },
   {
+    id: "house-of-blue-courtyard",
+    name: "House of Blue Courtyard",
+    image: assetImage("home page slider/PC/BlueCourtyard.webp"),
+    mobileImage: assetImage("home page slider/MOBILE/BLUE COURTYARD.webp"),
+  },
+  {
     id: "intersext-showroom",
     name: "Intersekt Showroom",
     image: assetImage("home page slider/PC/5. INTERSEKT SHOWROOM.webp"),

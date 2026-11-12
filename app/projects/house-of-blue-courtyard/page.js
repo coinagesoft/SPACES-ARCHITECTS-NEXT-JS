@@ -21,6 +21,7 @@ const staircaseDining = assetImage("projects/THE-BLUE-COURTYARD/3_4/staircase vi
 const corridorFirst = assetImage("projects/THE-BLUE-COURTYARD/3_4/Corridor view-first floor.webp");
 const sonBedroom = assetImage("projects/THE-BLUE-COURTYARD/3_4/Son_s bedroom first floor.webp");
 const guestBedroom = assetImage("projects/THE-BLUE-COURTYARD/3_4/Guest Bedroom-First floor.webp");
+const axonometric = assetImage("projects/THE-BLUE-COURTYARD/3_4/AXONOMETRIC VIEW.webp");
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
 
@@ -34,6 +35,7 @@ export default function HouseOfBlueCourtyardPage() {
       mobileHero={mobileCover("house-of-blue-courtyard")}
       // Order: exterior -> courtyard -> living spaces -> circulation -> bedrooms
       photos={[
+         
         facadeFront,
         facadeEvening,
         heroImage,
@@ -44,9 +46,10 @@ export default function HouseOfBlueCourtyardPage() {
         corridorGround,
         staircase,
         staircaseDining,
-        corridorFirst,
+        corridorFirst,axonometric,
         sonBedroom,
         guestBedroom,
+        
       ]}
       details={{
         Project: "House of Blue Courtyard",

@@ -7,27 +7,15 @@ export const metadata = projectMetadata("jaipur-residence");
 
 const hero = assetImage("projects/JAIPUR-RESIDENCE/cover/COVER.webp");
 
-const img1 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0001.webp");
-const img2 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0003.webp");
-const img3 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0004.webp");
-const img4 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0005.webp");
-const img5 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0006.webp");
-const img6 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0007.webp");
-const img7 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0013.webp");
-const img8 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0014.webp");
-const img9 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0019.webp");
-const img10 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0020.webp");
-const img11 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0024.webp");
-const img12 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0025.webp");
-const img13 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0026.webp");
-const img14 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0027.webp");
-const img15 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0038.webp");
-const img16 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0042.webp");
-const img17 = assetImage("projects/JAIPUR-RESIDENCE/photographs/BHA_0046.webp");
+// Gallery images, in display order. Reorder the numbers to change the order.
+// (6, 9 and 11 don't exist on the server, so they're skipped.)
+const photoNumbers = [1, 2, 3, 4, 5, 7, 8, 10, 12, 13, 14, 15, 16, 17];
+
+const photos = photoNumbers.map((n) =>
+  assetImage(`projects/JAIPUR-RESIDENCE/photographs/${n}.webp`)
+);
 
 const Orange = ({ children }) => <span style={{ color: "#FEA50B" }}>{children}</span>;
-
-
 
 export default function JaipurResidencePage() {
   return (
@@ -37,17 +25,7 @@ export default function JaipurResidencePage() {
       location="Jaipur, Rajasthan"
       hero={hero}
       mobileHero={mobileCover("jaipur-residence")}
-      // Same order as the old gallery array
-      photos={[
-        img3, img1, img2,
-        img4, img7,
-        img6,
-        img13, img11, img5,
-        img12, img16,
-        img15,
-        img8, img9, img14,
-        img10, img17,
-      ]}
+      photos={photos}
       details={{
         Project: "Jaipur Residence",
         Location: "Jaipur, Rajasthan",
