@@ -29,7 +29,7 @@ export default function HouseOfBlueCourtyardPage() {
   return (
     <ProjectDetailPage
       currentId="house-of-blue-courtyard"
-      title="House of Blue Courtyard"
+      title="Blue Courtyard House"
       location="Vasant Kunj, New Delhi"
       hero={hero}
       mobileHero={mobileCover("house-of-blue-courtyard")}
@@ -52,7 +52,7 @@ export default function HouseOfBlueCourtyardPage() {
         
       ]}
       details={{
-        Project: "House of Blue Courtyard",
+        Project: "Blue Courtyard House",
         Location: "Vasant Kunj, New Delhi",
         "Plot Area": "10,000 sq. ft.",
         "Built-up Area": "18,000 sq. ft.",

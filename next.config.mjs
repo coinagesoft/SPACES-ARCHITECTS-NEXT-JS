@@ -48,6 +48,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/projects/blue-courtyard-house",
+        destination: "/projects/house-of-blue-courtyard",
+        permanent: true,
+      },
+      {
         source: "/projects/the-heritage-park",
         destination: "/projects/heritage-park",
         permanent: true,

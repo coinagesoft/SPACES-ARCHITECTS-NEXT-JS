@@ -131,6 +131,7 @@ const PROJECT_ROUTES = {
   "The Screen House": "/projects/the-screen-house",
   "The Blue Courtyard": "/projects/house-of-blue-courtyard",
   "House of Blue Courtyard": "/projects/house-of-blue-courtyard",
+  "Blue Courtyard House": "/projects/house-of-blue-courtyard",
   "Tiles and Kitchen Showroom": "/projects/tiles-and-kitchen-showroom",
   "Tiles & Kitchen Showroom": "/projects/tiles-and-kitchen-showroom",
   "Studio Element": "/projects/studio-element",
@@ -506,7 +507,7 @@ export default function JustifiedGallery({ items }) {
 
       <div className={styles.row}>
         <div style={{ flex: "2.1 1 0", minWidth: 0 }}>
-          <FillTile item={findItem(items, "The Blue Courtyard")} />
+          <FillTile item={findItem(items, "Blue Courtyard House")} />
         </div>
         <div
           style={{

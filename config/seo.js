@@ -372,10 +372,10 @@ const projectSeo = {
     keywords: "the screen house, architects in delhi, residential architects delhi, luxury home architects delhi, spaces architects",
   },
   "house-of-blue-courtyard": {
-    title: "House of Blue Courtyard | Private Residence",
+    title: "Blue Courtyard House | Private Residence",
     description:
       "An 18,000 sq ft Vasant Kunj home anchored by a private courtyard, glazing blurring the edge between courtyard, sky and living spaces.",
-    keywords: "house of blue courtyard, architects in south delhi, architects in delhi, residential architects delhi, luxury home architects delhi, spaces architects",
+    keywords: "blue courtyard house, house of blue courtyard, the blue courtyard, architects in south delhi, architects in delhi, residential architects delhi, luxury home architects delhi, spaces architects",
   },
   "tiles-and-kitchen-showroom": {
     title: "Tiles and Kitchen Showroom | Showroom in New Delhi",

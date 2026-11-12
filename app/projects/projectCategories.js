@@ -77,6 +77,7 @@ const CATEGORY_PROJECTS = {
     "Art House",
     "Ashraya Residence",
     "Bhimtal Resort",
+    "Blue Courtyard House",
     "The Blue Courtyard",
     "Concrete House",
     "Floating Courtyard House",

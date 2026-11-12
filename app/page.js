@@ -75,7 +75,7 @@ const homeHeroProjects = [
   },
   {
     id: "house-of-blue-courtyard",
-    name: "House of Blue Courtyard",
+    name: "Blue Courtyard House",
     image: assetImage("home page slider/PC/BlueCourtyard.webp"),
     mobileImage: assetImage("home page slider/MOBILE/BLUE COURTYARD.webp"),
   },

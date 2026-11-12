@@ -597,7 +597,7 @@ export const assets = {
         { file: "IMELDA.png", name: "Imelda.Inc", image: galImeldaInc, orientation: "portrait" },
         { file: "SCREEN HOUSE.jpg", name: "Screen House", image: galScreenHouse, orientation: "portrait" },
         { file: "LAHORI GATE MUSEUM.png", name: "Lahori Gate Museum", image: galLahoriGateMuseum, orientation: "portrait" },
-        { file: "THE BLUE COURTYARD.jpg", name: "The Blue Courtyard", image: galTheBlueCourtyard, orientation: "portrait" },
+        { file: "THE BLUE COURTYARD.jpg", name: "Blue Courtyard House", image: galTheBlueCourtyard, orientation: "portrait" },
         { file: "TILES AND KITCHEN SHOWROOM.png", name: "Tiles and Kitchen Showroom", image: galTilesAndKitchenShowroom, orientation: "portrait" },
         { file: "STUDIO ELEMENT.png", name: "Studio Element", image: galStudioElement, orientation: "portrait" },
         // ---- Continuation of the Canva reference page — Alaya
