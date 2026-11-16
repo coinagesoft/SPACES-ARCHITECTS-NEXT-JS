@@ -111,6 +111,10 @@ const items = [
   cut("65.havelidharampura", "Haveli Dharampura"),
   cut("66.goldenhaveli", "Golden Haveli"),
   cut("67.goldenhaveli", "Golden Haveli"),
+
+  // ---------- new: cutout + link ----------
+  // NOTE: change `source` below to the real publication name
+  cut("68.Ashraya Residence", "Ashraya Residence", { source: "Press", href: "https://share.google/MTPn7XPtKh2Hst3Kh" }),
 ];
 
 // linked news cards first, then the cutouts without a link (same order inside each group)

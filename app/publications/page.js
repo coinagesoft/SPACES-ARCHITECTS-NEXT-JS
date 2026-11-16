@@ -77,8 +77,8 @@ const publicationCards = [
   { title: "Sachdeva Farmhouse", source: "E-Architect", image: webCover("08.Sachdeva Farmhouse_e-architect.webp"), href: "http://www.e-architect.co.uk/india/jaunapur-farmhouse-in-new-delhi" },
   // #9
   { title: "ARCHITECT'S OFFICE", source: "Contemporist", image: webCover("09.ARCHITECT_S OFFICE_Contemporist.webp"), href: "http://www.contemporist.com/2014/05/20/architects-studio-by-spaces-architects/" },
-  // #10
-  // { title: "ARCHITECT'S OFFICE", source: "How Architect Works (HAW) Magazine", image: architectsOffice, href: "http://www.howarchitectworks.com/spaces-architectska-studio-new-delhi/" },
+  // #10  (NEW web cover — NOTE: change `source` to the real publication name)
+  { title: "Swatantra Residence", source: "Press", image: webCover("10. SWATANTRA RESIDENCE.webp"), href: "https://share.google/6ANLxL6oHojBtqUS7" },
   // #11
   { title: "Adharshila Vatika Kindergarten", source: "BBC", image: webCover("11.Adharshila Vatika Kindergarten_bbc.webp"), href: "http://www.bbc.com/news/business-14975270" },
   // #12
@@ -356,6 +356,16 @@ const MAG_BASE = "https://assets.spacesarchitects-ka.com/assets/MAGAZINE_new";
 const magCover = (file) => `${MAG_BASE}/COVER/${encodeURIComponent(file)}`;
 const magPage = (file) => `${MAG_BASE}/internal/${encodeURIComponent(file)}`;
 const magazines = [
+  // NEW — ARCHITECTURE + DESIGN 2026 (kept at the top; 3 internal pages shown stacked top-to-bottom)
+  {
+    title: "ARCHITECTURE + DESIGN 2026",
+    cover: magCover("ARCHITECTURE + DESIGN 2026.webp"),
+    content: [
+      magPage("ARCHITECTURE + DESIGN 20261.webp"),
+      magPage("ARCHITECTURE + DESIGN 20262.webp"),
+      magPage("ARCHITECTURE + DESIGN 20263.webp"),
+    ],
+  },
   { title: "The Design Source", cover: magCover("1. THE DESIGN SOURCE.webp"), content: magPage("1. THE DESIGN SOURCE.webp") },
   { title: "IIA Awards 2016", cover: magCover("2. IIA AWARDS 2016.webp"), content: magPage("2. IIA AWARDS 2016.webp") },
   { title: "Inside Outside", cover: magCover("3. INSIDE OUT_.webp"), content: magPage("3. INSIDE OUT_.webp") },
