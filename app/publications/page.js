@@ -204,7 +204,7 @@ const publicationCards = [
   // #70
   { title: "The House of Dancing Screens", source: "TERRA DESIGN", image: webCover("70. The House of Dancing Screens_terradesign.webp"), href: "https://youtu.be/D3AAvfFWXuY?si=Bo2kz8uoRU3Zyzuy" },
   // #71
-  { title: "The House of Dancing Screens", source: "BUILDOFY", image: houseOfDancingScreens, href: "https://youtu.be/k2KdRRUAmtw?si=C1NLuNXrq1YH7uPp" },
+  { title: "The House of Dancing Screens", source: "BUILDOFY", image: houseOfDancingScreens, href: "https://youtu.be/k2KdmRUAmtw?si=C1NLuNXrq1YH7uPp" },
   // #72
   { title: "TIMELESS HOUSES", source: "STIRWORLD", image: webCover("72. timelesshouses_stirworld.webp"), href: "https://www.stirworld.com/think-books-and-movies-book-release-timeless-houses-promoting-diversity-in-architecture" },
   // #73
@@ -500,12 +500,39 @@ const books = [
   { title: "IAG", cover: bookCover("34 IAG.webp"), content: bookPage("34 IAG.webp") },
 ];
 
+// ---- Visuals (YouTube videos — click a card to open it on YouTube) ----
+// title  = Visual Caption, source = Sub Heading (shown under the title)
+// id     = the bit after v=  (e.g. https://www.youtube.com/watch?v=nGhaG_oPaxo -> "nGhaG_oPaxo")
+// start  = optional start time in seconds (from &t=..s in the link)
+// The thumbnail is taken from YouTube automatically.
+const visuals = [
+  { title: "Inside SpacesArchitects@ka", source: "KOHLER INDIA", id: "nGhaG_oPaxo" },
+  { title: "Embracing the intangibles in Architecture", source: "THE DESIGN STORY", id: "sKYX2BkbEBk" },
+  { title: "Advice for Young Architects", source: "JOURNEY WITH CJ", id: "pljfj9JgmV0" },
+  { title: "What makes SpacesArchitects@ka different?", source: "THE DESIGN STORY", id: "n3Ot60HTDHw", start: 6 },
+  { title: "Viral 20x16 House in Delhi", source: "THE CODE", id: "yb8OlsuUVsU" },
+  { title: "Ashraya Residence", source: "BUILDOFY", id: "iK3yXr1mR1c" },
+  { title: "Screen House", source: "BUILDOFY", id: "pBamZ2He6jg" },
+  { title: "J House", source: "BUILDOFY", id: "pzEvxXN0ijA", start: 71 },
+  { title: "Library House", source: "BUILDOFY", id: "vleYfLGivn8" },
+  { title: "House of Dancing Screens", source: "BUILDOFY", id: "k2KdRRUAmtw", start: 29 },
+  { title: "Step Maze House", source: "BUILDOFY", id: "a34r1r5KbNA" },
+  { title: "Slender House", source: "BUILDOFY", id: "JyIR0obW5wk" },
+  { title: "Haveli Dharampura", source: "BRUT INDIA", id: "ENcok2w10Yc" },
+  { title: "Art House", source: "INTERIOR DESIGN", id: "AyzDLjmpvfQ" },
+];
+
+const youtubeUrl = (id, start) =>
+  `https://www.youtube.com/watch?v=${id}${start ? `&t=${start}s` : ""}`;
+const youtubeThumb = (id) => `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+
 // Upper-menu items (value = the section id below; "all" = top of the page)
 const menuItems = [
   { value: "all", label: "All" },
   { value: "web", label: "Web" },
   { value: "magazines", label: "Magazine" },
   { value: "books", label: "Books" },
+  { value: "visuals", label: "Visuals" },
 ];
 
 export default function PublicationsPage() {
@@ -561,6 +588,61 @@ export default function PublicationsPage() {
 <div id="books" className={`${chromeStyles.anchor} ${chromeStyles.galleryWrap}`}>
   <BookGallery books={books} />
 </div>
+
+        {/* Visuals: YouTube videos. Each card opens the video on YouTube in a new tab. */}
+        <div
+          id="visuals"
+          className={`${styles.blogGrid} ${chromeStyles.webGrid} ${chromeStyles.anchor}`}
+          style={{ marginTop: 80 }}
+        >
+          {visuals.map((video, index) => (
+            <article key={`${video.id}-${index}`} className={styles.blogCard}>
+              <a
+                href={youtubeUrl(video.id, video.start)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.cardLink}
+                aria-label={`${video.title} — watch on YouTube`}
+              >
+                <div className={styles.imageWrap} style={{ aspectRatio: "16 / 9" }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={youtubeThumb(video.id)}
+                    alt={`${video.title} — video thumbnail`}
+                    loading="lazy"
+                    decoding="async"
+                    className={styles.image}
+                    style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}
+                  />
+                  {/* play button */}
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      position: "absolute",
+                      top: "50%",
+                      left: "50%",
+                      width: 56,
+                      height: 56,
+                      transform: "translate(-50%, -50%)",
+                      borderRadius: "50%",
+                      background: "rgba(0, 0, 0, 0.55)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="#fff" style={{ marginLeft: 3 }}>
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </span>
+                </div>
+                <h2 className={styles.title}>{video.title}</h2>
+                <p className={styles.excerpt}>{video.source}</p>
+                <span className={styles.readMore}>Watch on YouTube</span>
+              </a>
+            </article>
+          ))}
+        </div>
       </section>
 
       <Footer />
