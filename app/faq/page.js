@@ -5,10 +5,8 @@ import { pageMetadata } from "@/config/seo";
 
 export const metadata = pageMetadata("faq");
 
-
-
 // ============================================================
-//  FAQ — from FAQ1.docx
+//  FAQ
 //  Each answer is a list of paragraphs. To edit a question, change
 //  it in this list. To move a question to another section, change
 //  the GROUPS list below.
@@ -16,17 +14,19 @@ export const metadata = pageMetadata("faq");
 const faqs = [
   {
     q: "Who are we?",
-    a: ["We are an architectural and interior firm based in New Delhi, founded by principal architect Kapil Aggarwal."],
+    a: [
+      "We are an architectural and interior firm based in New Delhi, founded by principal architect Kapil Aggarwal.",
+    ],
   },
   {
     q: "Since when have we been practicing?",
     a: ["We have been practicing since 2000."],
   },
   {
-    q: "What kinds of projects do we do, or do we specialize in any field?",
+    q: "What kinds of projects do we do, or do we specialise in any field?",
     a: [
-      "We do projects ranging from product designing to residences, schools, retail, interiors, corporates, landscape and conservation. We have completed more than 500 projects to date.",
-      "We do not specialize in any field but rather take each project on its merit and create it. We consider that no two projects are similar, and we follow a similar process to develop each project.",
+      "We do projects ranging from product designing to residences, school, retails, interior, corporates, landscape and conservation. We have completed more than 500 projects till date.",
+      "Our practice is not confined to a single typology or discipline. Instead, we approach every project on its own merit, recognising that each comes with its own context, challenges and opportunities. While our design process remains rooted in a consistent philosophy, the response is always distinct to the project.",
     ],
   },
   {
@@ -39,7 +39,7 @@ const faqs = [
   {
     q: "Can we visit the site?",
     a: [
-      "We share addresses of sites which are under construction, but we discourage visits to projects that are occupied by clients, to respect their privacy. Most completed projects are documented and can be shared through links.",
+      "We share the addresses of sites that are under construction but discourage visits to projects that are occupied by clients, in order to respect their privacy. Most of our completed projects are documented and can be shared through links.",
     ],
   },
   {
@@ -50,7 +50,9 @@ const faqs = [
   },
   {
     q: "What should we get for the meeting?",
-    a: ["A brief project requirement, site dimensions, location and preferably a survey plan."],
+    a: [
+      "A brief project requirement, site dimension, location and preferably a survey plan.",
+    ],
   },
   {
     q: "Do you visit the site before taking up the project?",
@@ -59,19 +61,19 @@ const faqs = [
   {
     q: "Do we charge for the meeting?",
     a: [
-      "We do not charge for office meetings but do charge for outstation meetings according to travel and other expenses.",
+      "We do not charge for meetings at our office but do charge for outstation meetings based on travel and other associated expenses.",
     ],
   },
   {
     q: "How much time do you take to develop a concept?",
     a: [
-      "We take very limited projects to maintain quality. It depends upon the project scale and requirements, but we usually take 3-4 weeks to create the initial concept.",
+      "We take very limited projects to maintain quality. It depends upon the project scale and requirements but we usually take 3-4 weeks to create the initial concept.",
     ],
   },
   {
     q: "Do we give multiple options?",
     a: [
-      "We create options as per the brief of client requirements but discourage the process where the client changes the brief after creating the initial option. A detailed project requirement has to be discussed before creating the project concept. We help clients in creating a brief by understanding their requirements.",
+      "We create design options based on the client's brief and requirements but discourage changes to the brief after the initial options have been developed. Detailed project requirements must be discussed before developing the project concept. We help clients create a brief by understanding their requirements.",
     ],
   },
   {
@@ -81,66 +83,74 @@ const faqs = [
   {
     q: "When do we get the services and fee statement from you?",
     a: [
-      "We send the services and fee statement once we have had a detailed and productive discussion with the prospective client and choose to take it to the next level. It is very important to understand the proper brief of the project to create a statement.",
+      "We send the service and fee statement to prospective clients once we have had a detailed and productive discussion and decide to proceed to the next stage. It is very important to understand the project brief clearly before preparing the statement.",
     ],
   },
   {
     q: "Do you take up construction projects?",
     a: [
-      "We are, primarily, a design-based firm at core, but we take very selected projects for construction.",
+      "We are, primarily, a design-based firm at core but we take very selected projects for construction.",
     ],
   },
   {
     q: "Do you supervise your projects?",
     a: [
-      "Yes, we do supervise our projects regularly. This supervision includes the principal architect and other team members. We do not encourage extensive supervision and encourage the client to appoint a PMC depending on the scale of the project.",
+      "Yes, we supervise our projects regularly. This supervision includes the principal architect and other team members. We do not encourage extensive supervision and recommend that clients appoint a PMC, depending on the scale of the project.",
     ],
   },
   {
     q: "Do you do renovation work?",
     a: [
-      "We do only projects which are designed from scratch. We do renovation and conservation projects only of heritage structures.",
+      "We undertake only projects that are designed from scratch. We take up renovation and conservation projects only for heritage structures.",
     ],
   },
   {
     q: "Do you do elevation solely?",
-    a: ["We do not take up a facade-only project; we believe in taking a project as a whole."],
+    a: [
+      "We do not take up a facade only project, we believe in taking a project as a whole.",
+    ],
   },
   {
     q: "Do you suggest vendors, contractors and suppliers?",
     a: [
-      "Our firm's designers do not promote, endorse, or represent any brand, company, or product. To the best of our ability, our selection of services and products is purely based on technical merits, performance, service and cost.",
-      "We do suggest vendors who have previously worked on our projects and are reliable, but we do not take any responsibility for their charges and work. We advise clients to choose vendors as per their convenience and budget and help them in the process.",
+      "Our firm's designers do not promote, endorse or represent any brand, company or product. To the best of our ability, our selection of products and services is based purely on technical merit, performance, service and cost.",
+      "We do suggest vendors who have previously worked on our projects and have proven to be reliable. However, we do not take responsibility for their charges or workmanship. We advise clients to choose vendors according to their convenience and budget, and assist them throughout the process.",
     ],
   },
   {
     q: "Do you select materials and charge for it?",
     a: [
-      "We do not charge to select materials if the selection is done in NCR, but do charge travel and other expenses, as mutually agreed.",
+      "We do not charge to select materials if the selection is done in NCR but do charge travel and other expenses, as per mutually agreed.",
     ],
   },
   {
     q: "What is your fee structure?",
-    a: ["We charge as per the project and requirements."],
+    a: [
+      "Every project is unique, and so is the scope of our engagement.",
+      "Our professional fees are determined by the nature, scale and complexity of the project, along with the range of architectural and interior design services required.",
+      "Depending on the project, our fees may be structured as a percentage of the project cost or as a mutually agreed fixed professional fee. Before commencing each engagement, we provide a clearly defined scope of services, deliverables and stage-wise fee schedule, ensuring clarity and transparency from the outset.",
+      "We invite you to share your project brief with us for a personalised fee proposal.",
+    ],
   },
   {
     q: "Do you follow vastu?",
     a: [
-      "We follow basic vastu principles (which have scientific reasoning) but prefer a building to have natural daylight and proper ventilation. In our belief, there is no proper scientific documentation of vastu principles, and they differ from person to person, creating unnecessary fear among people. This ends up creating complexity in the project.",
+      "We follow basic vastu principles (which have scientific reasoning) but prefer a building to have natural daylight and proper ventilation in our belief, there is no proper scientific documentation of vastu principles, and they differ from person to person, creating unnecessary fear among people. This ends up creating complexity in the project.",
     ],
   },
   {
     q: "What is the process of designing?",
     a: [
-      "When a client contacts us, we make sure we send them a list of FAQ, website and other social media links.",
-      "If the client is comfortable with the links provided and wants to take it further, we call for a meeting in our office with the principal architect for a detailed discussion regarding the project brief. If agreed mutually, we visit the site and ask for a detailed digital site survey. Accordingly, we create detailed project requirements and discuss all details.",
-      "The next step is to create a core design concept plan with sketches or digital modelling, for better understanding of the project. On approval, in a couple of meetings, as per the changes, we take the project further, get it sanctioned and move forward in creating working drawings.",
+      "When a client contacts us, we make sure to send them a list of FAQs, along with our website and other social media links.",
+      "If the client is comfortable with the information provided and wishes to take the discussion further, we schedule a meeting at our office with the principal architect to discuss the project brief in detail. If both parties mutually agree to proceed, we arrange a site visit and request a detailed digital site survey.",
+      "Based on this, we define the detailed project requirements and discuss all aspects of the project. The next step is to develop a core design concept, presented through plans, sketches or digital models, to help the client understand the proposed design.",
+      "Following the client's approval, and incorporating any agreed changes through subsequent meetings, we formally take the project forward and proceed with the preparation of working drawings.",
     ],
   },
   {
-    q: "Do you do liaisoning work?",
+    q: "Do you do liaising work?",
     a: [
-      "We do not do liaisoning work but can recommend people who do, so that the client can negotiate and proceed as agreed.",
+      "We do not undertake liaison work but can recommend people who provide these services. Clients can negotiate and proceed with them as mutually agreed.",
     ],
   },
 ];
@@ -153,7 +163,7 @@ const GROUPS = [
     questions: [
       "Who are we?",
       "Since when have we been practicing?",
-      "What kinds of projects do we do, or do we specialize in any field?",
+      "What kinds of projects do we do, or do we specialise in any field?",
       "Who designs the projects?",
     ],
   },
@@ -197,7 +207,7 @@ const GROUPS = [
       "Do you do renovation work?",
       "Do you do elevation solely?",
       "Do you suggest vendors, contractors and suppliers?",
-      "Do you do liaisoning work?",
+      "Do you do liaising work?",
     ],
   },
 ].map((group) => ({
