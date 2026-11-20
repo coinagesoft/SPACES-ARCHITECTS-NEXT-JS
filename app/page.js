@@ -73,6 +73,13 @@ const homeHeroProjects = [
     image: assetImage("home page slider/PC/4. HOUSE OF DANCING SCREENS.webp"),
     mobileImage: assetImage("home page slider/MOBILE/4. HOUSE OF DANCING SCREENS.webp"),
   },
+  // Slide 5 — House of Curves (file names on the server have a space before ".webp")
+  {
+    id: "house-of-curves",
+    name: "House of Curves",
+    image: assetImage("home page slider/PC/pc House of Curves .webp"),
+    mobileImage: assetImage("home page slider/MOBILE/Mobile House of Curves .webp"),
+  },
   {
     id: "house-of-blue-courtyard",
     name: "Blue Courtyard House",

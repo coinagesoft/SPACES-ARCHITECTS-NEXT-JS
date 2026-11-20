@@ -519,12 +519,35 @@ const visuals = [
   { title: "Step Maze House", source: "BUILDOFY", id: "a34r1r5KbNA" },
   { title: "Slender House", source: "BUILDOFY", id: "JyIR0obW5wk" },
   { title: "Haveli Dharampura", source: "BRUT INDIA", id: "ENcok2w10Yc" },
-  { title: "Art House", source: "INTERIOR DESIGN", id: "AyzDLjmpvfQ" },
+  // #14 Art House (INTERIOR DESIGN) removed.
+  // #15 Haveli Dharampura, NDTV: the sheet only has a share.google link. Needs a youtube.com / youtu.be link.
+   { title: "Haveli Dharampura", source: "NDTV", id: "EJk-hJGNUqU" },
+  { title: "Haveli of Chandni Chowk", source: "NDTV", id: "qvuA2n8pkIU" },
+  { title: "Haveli Dharampura", source: "AAJ TAK", id: "Y0z1iYkCYV0" },
+  // #17 Haveli Dharampura, AAJ TAK: the ID in the sheet looks 1 character short. Needs the full link.
+  { title: "Gandhi Darshan", source: "PRESIDENT OF INDIA", id: "PhA-RxLeBIk" },
+  { title: "Ground Report: Old Delhi Living Heritage", source: "SANSAD TV", id: "yo5bWKzsgrQ" },
+  { title: "President Kovind inaugurates ‘Charti Lal Goel Heritage Park’ near Red Fort, Delhi", source: "PRESIDENT OF INDIA", id: "uvFxMnekhS8" },
 ];
 
 const youtubeUrl = (id, start) =>
   `https://www.youtube.com/watch?v=${id}${start ? `&t=${start}s` : ""}`;
 const youtubeThumb = (id) => `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+
+// Mobile fix for the Visuals cards: long titles were overlapping the source line
+// and "Watch on YouTube". Cards go single-column and the text blocks flow normally.
+const visualsMobileCss = `
+@media (max-width: 767px) {
+  .visuals-grid { display: grid !important; grid-template-columns: minmax(0, 1fr) !important; row-gap: 32px !important; align-items: start !important; }
+  .visual-card { height: auto !important; min-height: 0 !important; min-width: 0 !important; overflow: visible !important; }
+  .visual-card > a { display: block !important; height: auto !important; }
+  .visual-card h2,
+  .visual-card p { position: static !important; display: block !important; height: auto !important; min-height: 0 !important; max-height: none !important; overflow: visible !important; white-space: normal !important; overflow-wrap: anywhere; -webkit-line-clamp: unset !important; line-clamp: unset !important; }
+  .visual-card h2 { margin: 14px 0 6px !important; line-height: 1.35 !important; }
+  .visual-card p { margin: 0 0 10px !important; line-height: 1.4 !important; }
+  .visual-card > a > span:last-child { display: block !important; position: static !important; margin-top: 4px !important; }
+}
+`;
 
 // Upper-menu items (value = the section id below; "all" = top of the page)
 const menuItems = [
@@ -590,13 +613,14 @@ export default function PublicationsPage() {
 </div>
 
         {/* Visuals: YouTube videos. Each card opens the video on YouTube in a new tab. */}
+        <style>{visualsMobileCss}</style>
         <div
           id="visuals"
-          className={`${styles.blogGrid} ${chromeStyles.webGrid} ${chromeStyles.anchor}`}
+          className={`${styles.blogGrid} ${chromeStyles.webGrid} ${chromeStyles.anchor} visuals-grid`}
           style={{ marginTop: 80 }}
         >
           {visuals.map((video, index) => (
-            <article key={`${video.id}-${index}`} className={styles.blogCard}>
+            <article key={`${video.id}-${index}`} className={`${styles.blogCard} visual-card`}>
               <a
                 href={youtubeUrl(video.id, video.start)}
                 target="_blank"

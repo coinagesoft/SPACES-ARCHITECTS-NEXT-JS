@@ -19,6 +19,10 @@ import styles from "./JustifiedGallery.module.css";
 // fixed number, so it's applied as a plain CSS aspect-ratio (with
 // object-fit: cover) — no JS measurement, no ResizeObserver, no
 // layout-timing flakiness.
+//
+// Page order: opening masonry block, then House of Stepped Garden through
+// Library House, then Blue Courtyard House through House of Curves, then
+// the remaining justified rows.
 // ---------------------------------------------------------------------
 
 // Real aspect ratios (width / height), measured from the source files.
@@ -204,6 +208,16 @@ function dims(item) {
   }
   const r = RATIOS[item?.name];
   return r ? { width: 1000, height: Math.round(1000 / r) } : {};
+}
+
+// Aspect ratio (width / height): measured value if there is one, otherwise
+// the image's own dimensions, otherwise 0 (= unknown).
+function ratioOf(item) {
+  if (!item) return 0;
+  if (item.name && RATIOS[item.name]) return RATIOS[item.name];
+  const img = item.image;
+  if (img && typeof img === "object" && img.width && img.height) return img.width / img.height;
+  return 0;
 }
 
 // Tile photo. Uses next/image so the browser downloads a resized copy that
@@ -426,9 +440,63 @@ function JustifiedRow({ items }) {
   );
 }
 
-const JUSTIFIED_ROWS = [
+// One big tile beside a stacked pair, sized so the big tile and the stack
+// come out the same height with (almost) no cropping — at ANY viewport width.
+//
+// Same trick as JustifiedRow: flex-grow = the share of width each side gets.
+// The big tile gets its own aspect ratio; the stack behaves like one tile
+// whose ratio is 1 / (1/a + 1/b) (two photos of ratio a and b stacked).
+// Equal shares per unit of "ratio" => equal heights. The only leftover is
+// the 34px gap between the stacked photos, which the big tile absorbs by
+// cropping a sliver (FillTile + object-fit: cover), so both bottoms end
+// flush. If a photo's dimensions are unknown it falls back to a fixed split.
+function BigWithStack({ big, stack, bigFirst = true, fallback = [2, 1] }) {
+  const rBig = ratioOf(big);
+  const rStack = stack.map(ratioOf);
+  const known = rBig && rStack.every(Boolean);
+
+  const growBig = known ? rBig : fallback[0];
+  const growStack = known ? 1 / rStack.reduce((sum, r) => sum + 1 / r, 0) : fallback[1];
+
+  const bigCol = (
+    <div style={{ flex: `${growBig} 1 0`, minWidth: 0 }}>
+      <FillTile item={big} />
+    </div>
+  );
+  const stackCol = (
+    <div
+      style={{
+        flex: `${growStack} 1 0`,
+        minWidth: 0,
+        display: "flex",
+        flexDirection: "column",
+        gap: "34px",
+      }}
+    >
+      {stack.map((item, i) => (
+        <Tile item={item} key={item?.name || i} />
+      ))}
+    </div>
+  );
+
+  return (
+    <div className={styles.row}>
+      {bigFirst ? bigCol : stackCol}
+      {bigFirst ? stackCol : bigCol}
+    </div>
+  );
+}
+
+// Page order after the opening masonry block:
+//   1) House of Stepped Garden … Library House   (JUSTIFIED_ROWS_TOP)
+//   2) Blue Courtyard House … House of Curves     (the two BigWithStack rows)
+//   3) House of Sculpted Screens onward           (JUSTIFIED_ROWS_REST)
+const JUSTIFIED_ROWS_TOP = [
   ["House of Stepped Garden", "Stonex India Building"],
   ["House of Dancing Screens", "Library House"],
+];
+
+const JUSTIFIED_ROWS_REST = [
   ["House of Sculpted Screens", "Express Office", "Gandhi Darshan Park"],
   ["Color Box Office", "Ashraya Residence"],
   ["Veya Apartment", "Jaipur Residence", "Architect's Office"],
@@ -456,9 +524,34 @@ export default function JustifiedGallery({ items }) {
         </div>
       </div>
 
-      {/* Justified rows — House of Stepped Garden onward */}
-      {JUSTIFIED_ROWS.map((names, i) => (
-        <JustifiedRow items={names.map((n) => findItem(items, n))} key={i} />
+      {/* House of Stepped Garden through Library House */}
+      {JUSTIFIED_ROWS_TOP.map((names, i) => (
+        <JustifiedRow items={names.map((n) => findItem(items, n))} key={"top" + i} />
+      ))}
+
+      {/* Blue Courtyard House — Blue Courtyard House beside a stacked pair. */}
+      <BigWithStack
+        big={
+          findItem(items, "Blue Courtyard House") ||
+          findItem(items, "House of Blue Courtyard") ||
+          findItem(items, "The Blue Courtyard")
+        }
+        stack={[
+          findItem(items, "Tiles and Kitchen Showroom"),
+          findItem(items, "Studio Element"),
+        ]}
+      />
+
+      {/* House of Curves — stacked pair beside House of Curves (mirrored). */}
+      <BigWithStack
+        bigFirst={false}
+        big={findItem(items, "House of Curves")}
+        stack={[findItem(items, "Krisha's Residence"), findItem(items, "Color Court")]}
+      />
+
+      {/* House of Sculpted Screens onward */}
+      {JUSTIFIED_ROWS_REST.map((names, i) => (
+        <JustifiedRow items={names.map((n) => findItem(items, n))} key={"rest" + i} />
       ))}
 
       {/* Second block — Intersext Showroom through Studio Element, laid
@@ -505,24 +598,6 @@ export default function JustifiedGallery({ items }) {
         </div>
       </div>
 
-      <div className={styles.row}>
-        <div style={{ flex: "2.1 1 0", minWidth: 0 }}>
-          <FillTile item={findItem(items, "Blue Courtyard House")} />
-        </div>
-        <div
-          style={{
-            flex: "1 1 0",
-            minWidth: 0,
-            display: "flex",
-            flexDirection: "column",
-            gap: "34px",
-          }}
-        >
-          <Tile item={findItem(items, "Tiles and Kitchen Showroom")} />
-          <Tile item={findItem(items, "Studio Element")} />
-        </div>
-      </div>
-
       {/* Third block — Alaya Residence through House of Hues, again
           following the Canva reference row-by-row. */}
       <div className={styles.row}>
@@ -531,24 +606,6 @@ export default function JustifiedGallery({ items }) {
         </div>
         <div style={{ flex: "1 1 0", minWidth: 0 }}>
           <Tile item={findItem(items, "Legend Veneer Exhibition - Mumbai")} />
-        </div>
-      </div>
-
-      <div className={styles.row}>
-        <div
-          style={{
-            flex: "1 1 0",
-            minWidth: 0,
-            display: "flex",
-            flexDirection: "column",
-            gap: "34px",
-          }}
-        >
-          <Tile item={findItem(items, "Krisha's Residence")} />
-          <Tile item={findItem(items, "Color Court")} />
-        </div>
-        <div style={{ flex: "2 1 0", minWidth: 0 }}>
-          <FillTile item={findItem(items, "House of Curves")} />
         </div>
       </div>
 
