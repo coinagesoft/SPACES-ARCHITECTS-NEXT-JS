@@ -9,7 +9,7 @@ export const metadata = pageMetadata("faq");
 //  FAQ
 //  Each answer is a list of paragraphs. To edit a question, change
 //  it in this list. To move a question to another section, change
-//  the GROUPS list below.
+//  the GROUPS list below (the question text must match exactly).
 // ============================================================
 const faqs = [
   {
@@ -67,7 +67,7 @@ const faqs = [
   {
     q: "How much time do you take to develop a concept?",
     a: [
-      "We take very limited projects to maintain quality. It depends upon the project scale and requirements but we usually take 3-4 weeks to create the initial concept.",
+      "We take very limited projects to maintain quality. It depends upon the project scale and requirements but we usually take 3–4 weeks to create the initial concept.",
     ],
   },
   {
@@ -120,7 +120,7 @@ const faqs = [
   {
     q: "Do you select materials and charge for it?",
     a: [
-      "We do not charge to select materials if the selection is done in NCR but do charge travel and other expenses, as per mutually agreed.",
+      "We do not charge to select materials if the selection is done in NCR but do charge travel and other expenses, as mutually agreed.",
     ],
   },
   {
@@ -135,7 +135,7 @@ const faqs = [
   {
     q: "Do you follow vastu?",
     a: [
-      "We follow basic vastu principles (which have scientific reasoning) but prefer a building to have natural daylight and proper ventilation in our belief, there is no proper scientific documentation of vastu principles, and they differ from person to person, creating unnecessary fear among people. This ends up creating complexity in the project.",
+      "We follow basic vastu principles (which have scientific reasoning) but prefer a building to have natural daylight and proper ventilation. In our belief, there is no proper scientific documentation of vastu principles, and they differ from person to person, creating unnecessary fear among people. This ends up creating complexity in the project.",
     ],
   },
   {
@@ -165,6 +165,7 @@ const GROUPS = [
       "Since when have we been practicing?",
       "What kinds of projects do we do, or do we specialise in any field?",
       "Who designs the projects?",
+      "Can we visit the site?",
     ],
   },
   {
@@ -175,7 +176,6 @@ const GROUPS = [
       "What should we get for the meeting?",
       "Do we charge for the meeting?",
       "Do you visit the site before taking up the project?",
-      "Can we visit the site?",
     ],
   },
   {
@@ -199,13 +199,19 @@ const GROUPS = [
     ],
   },
   {
-    id: "execution",
-    title: "Execution",
+    id: "scope-of-work",
+    title: "Scope of Work",
     questions: [
       "Do you take up construction projects?",
-      "Do you supervise your projects?",
       "Do you do renovation work?",
       "Do you do elevation solely?",
+    ],
+  },
+  {
+    id: "execution",
+    title: "Execution & Vendors",
+    questions: [
+      "Do you supervise your projects?",
       "Do you suggest vendors, contractors and suppliers?",
       "Do you do liaising work?",
     ],
